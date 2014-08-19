@@ -2,6 +2,7 @@
 
 ##Preliminary directory structure:
 
+```
 manuscripta/
 ├── data/
 │   ├── authority_files/
@@ -20,3 +21,4 @@ manuscripta/
     ├── modules/
     ├── resources/
     └── templates/
+```
