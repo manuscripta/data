@@ -966,7 +966,9 @@
                             <memberOf key="att.transcriptional" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <!--<content allowText="true"/>-->
+                        <!--<content>
+                            <elementRef key="textNode" minOccurs="0" />
+                        </content>-->
                         <content>
                             <rng:text />
                         </content>
@@ -996,8 +998,9 @@
                             <memberOf key="att.personal" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <!--<content allowText="true">
+                        <!--<content>
                             <elementRef key="supplied" />
+                            <elementRef key="textNode" />
                         </content>-->
                         <content>
                             <rng:choice>
@@ -1065,7 +1068,8 @@
                     </elementSpec>
                     <elementSpec ident="author" module="core" mode="change">
                         <!--<content>
-                            <alternate allowText="true">
+                            <alternate>
+                                <elementRef key="textNode" />
                                 <elementRef key="supplied" />
                                 <elementRef key="persName" />
                             </alternate>
@@ -1107,9 +1111,11 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="authority" module="header" mode="change">
-                        <content allowText="true" />
-                        <!--<content>
+                        <content>
                             <rng:text />
+                        </content>
+                        <!--<content>
+                            <elementRef key="textNode" />
                         </content>-->
                         <valList mode="replace" type="closed">
                             <valItem ident="Uppsala University Library" />
@@ -1191,7 +1197,9 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="biblScope" module="core" mode="change">
-                        <!--<content allowText="true"/>-->
+                        <!--<content>
+                            <elementRef key="textNode" minOccurs="0" />
+                        </content>-->
                         <content>
                             <rng:optional>
                                 <rng:text />
@@ -1290,7 +1298,8 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="catchwords" module="msdescription" mode="change">
-                        <!--<content allowText="true">
+                        <!--<content>
+                            <elementRef key="textNode" minOccurs="0" maxOccurs="unbounded" />
                             <elementRef key="term" minOccurs="0" maxOccurs="unbounded" />
                             <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
                         </content>-->
@@ -1316,7 +1325,9 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="change" module="core" mode="change">
-                        <!--<content allowText="true"/>-->
+                        <!--<content>
+                            <elementRef key="textNode" />
+                        </content>-->
                         <content>
                             <rng:text />
                         </content>
