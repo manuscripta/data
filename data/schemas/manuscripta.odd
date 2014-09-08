@@ -1037,15 +1037,19 @@
                             </sequence>                            
                         </content>-->
                         <content>
-                            <rng:group>
-                                <rng:optional>
-                                    <rng:ref name="settlement" />
-                                    <rng:ref name="institution" />
-                                    <rng:ref name="repository" />
-                                    <rng:ref name="collection" />
-                                </rng:optional>
-                                <rng:ref name="idno" />
-                            </rng:group>
+                            <rng:optional>
+                                <rng:ref name="settlement" />
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="institution" />
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="repository" />
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="collection" />
+                            </rng:optional>
+                            <rng:ref name="idno" />
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
@@ -1165,7 +1169,7 @@
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />                            
+                            <attDef ident="type" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                         <exemplum>
@@ -1555,9 +1559,6 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-
-                    <!-- HIT -->
-
                     <elementSpec ident="dimensions" mode="change" module="msdescription">
                         <!--<constraintSpec ident="dimensions.duplicateDim" scheme="isoschematron">
                             <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>width</gi>, <gi>height</gi>, and <gi>depth</gi> elements occur only once inside a <gi>dimension</gi> element.</desc>
