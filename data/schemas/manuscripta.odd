@@ -925,7 +925,7 @@
                         </classes>
                         <!--<content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <elementRef key="textNode" minOccurs="0" />
+                                <textNode />
                                 <elementRef key="country" minOccurs="0" />
                                 <elementRef key="date" minOccurs="0" />
                                 <elementRef key="foreign" minOccurs="0" />
@@ -967,7 +967,7 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <!--<content>
-                            <elementRef key="textNode" minOccurs="0" />
+                            <textNode />
                         </content>-->
                         <content>
                             <rng:text />
@@ -999,8 +999,10 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <!--<content>
-                            <elementRef key="supplied" />
-                            <elementRef key="textNode" />
+                            <alternate>
+                                <elementRef key="supplied" />
+                                <textNode />
+                            </alternate>
                         </content>-->
                         <content>
                             <rng:choice>
@@ -1015,7 +1017,7 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="additional" module="msdescription" mode="change">
-                        <!--<content allowText="false">
+                        <!--<content>
                             <elementRef key="listBibl" minOccurs="1" maxOccurs="1" />
                         </content>-->
                         <content>
@@ -1069,7 +1071,7 @@
                     <elementSpec ident="author" module="core" mode="change">
                         <!--<content>
                             <alternate>
-                                <elementRef key="textNode" />
+                                <textNode />
                                 <elementRef key="supplied" />
                                 <elementRef key="persName" />
                             </alternate>
@@ -1115,7 +1117,7 @@
                             <rng:text />
                         </content>
                         <!--<content>
-                            <elementRef key="textNode" />
+                            <textNode />
                         </content>-->
                         <valList mode="replace" type="closed">
                             <valItem ident="Uppsala University Library" />
@@ -1198,7 +1200,7 @@
                     </elementSpec>
                     <elementSpec ident="biblScope" module="core" mode="change">
                         <!--<content>
-                            <elementRef key="textNode" minOccurs="0" />
+                            <textNode />
                         </content>-->
                         <content>
                             <rng:optional>
@@ -1244,7 +1246,7 @@
                     </elementSpec>
                     <elementSpec ident="bindingDesc" module="msdescription" mode="change">
                         <!--<content>
-                            <sequence allowText="false">
+                            <sequence>
                                 <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
                                 <elementRef key="decoNote" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="condition" minOccurs="0" maxOccurs="1" />
@@ -1285,7 +1287,7 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="body" module="textstructure" mode="change">
-                        <!--<content allowText="false">
+                        <!--<content>
                             <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
                         </content>-->
                         <content>
@@ -1299,9 +1301,11 @@
                     </elementSpec>
                     <elementSpec ident="catchwords" module="msdescription" mode="change">
                         <!--<content>
-                            <elementRef key="textNode" minOccurs="0" maxOccurs="unbounded" />
-                            <elementRef key="term" minOccurs="0" maxOccurs="unbounded" />
-                            <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
+                            <interleave minOccurs="0" maxOccurs="unlimited">
+                                <textNode />
+                                <elementRef key="term" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
+                           </interleave>
                         </content>-->
                         <content>
                             <rng:zeroOrMore>
@@ -1326,7 +1330,7 @@
                     </elementSpec>
                     <elementSpec ident="change" module="core" mode="change">
                         <!--<content>
-                            <elementRef key="textNode" />
+                            <textNode />
                         </content>-->
                         <content>
                             <rng:text />
@@ -1352,7 +1356,7 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="citedRange" mode="change" module="core">
-                        <!--<content allowText="false"/>-->
+                        <!--<content/>-->
                         <content>
                             <rng:empty />
                         </content>
