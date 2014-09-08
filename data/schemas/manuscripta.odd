@@ -1575,18 +1575,45 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="dimensions" mode="change" module="msdescription">
-                        <!--<constraintSpec ident="dimensions.duplicateDim" scheme="isoschematron">
-                            <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>width</gi>, <gi>height</gi>, and <gi>depth</gi> elements occur only once inside a <gi>dimension</gi> element.</desc>
-                            <constraint>
-                                <sch:pattern>
-                                    <sch:rule context="tei:dimensions">
-                                        <sch:report test="count(tei:width) &gt; 1">The element <sch:name /> may appear once only</sch:report>
-                                        <sch:report test="count(tei:height) &gt; 1">The element <sch:name /> may appear once only</sch:report>
-                                        <sch:report test="count(tei:depth) &gt; 1">The element <sch:name /> may appear once only</sch:report>
-                                    </sch:rule>
-                                </sch:pattern>
-                            </constraint>
-                        </constraintSpec>-->
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="height" />
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="width" />
+                            </rng:optional>
+                            <rng:optional>
+                                <rng:ref name="depth" />
+                            </rng:optional>
+                        </content>
+                        <attList>
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="binding" />
+                                    <valItem ident="chain-lines" />
+                                    <valItem ident="leaf" />
+                                    <valItem ident="wm" />
+                                    <valItem ident="written" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="mm" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="atLeast" mode="delete" />
+                            <attDef ident="atMost" mode="delete" />
+                            <attDef ident="extent" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="min" mode="delete" />
+                            <attDef ident="max" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="precision" mode="delete" />
+                            <attDef ident="quantity" mode="delete" />
+                            <attDef ident="scope" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
                     </elementSpec>
                     <elementSpec ident="editor" mode="change" module="core">
                         <content>
