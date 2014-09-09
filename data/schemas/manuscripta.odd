@@ -1610,6 +1610,32 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="decoNote" mode="change" module="msdescription">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text />
+                                    <rng:ref name="date" />                                    
+                                    <rng:ref name="dimensions" />
+                                    <rng:ref name="foreign" />
+                                    <rng:ref name="locus" />
+                                    <rng:ref name="locusGrp" />
+                                    <rng:ref name="material" />
+                                    <rng:ref name="measure" />
+                                    <rng:ref name="note" />
+                                    <rng:ref name="p" />
+                                    <rng:ref name="term" />                                    
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                        <attList>
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="type" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="dimensions" mode="change" module="msdescription">
                         <content>
                             <rng:optional>
