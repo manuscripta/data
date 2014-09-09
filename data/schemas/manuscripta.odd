@@ -1631,7 +1631,7 @@
                                     <valItem ident="wm" />
                                     <valItem ident="written" />
                                 </valList>
-                            </attDef>                            
+                            </attDef>
                             <attDef ident="atLeast" mode="delete" />
                             <attDef ident="atMost" mode="delete" />
                             <attDef ident="extent" mode="delete" />
@@ -1648,8 +1648,17 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="depth" mode="change" module="msdescription">
+                        <constraintSpec ident="depth.attributes" scheme="isoschematron">
+                            <desc versionDate="2014-09-09" xml:lang="en">checks that the <gi>depth</gi> element has either a <att>quantity</att> or <att>min</att>/<att>max</att> attributes.</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:depth">
+                                        <sch:assert test="@quantity or (@min and @max)">The depth element must have either @quantity or @min/@max. </sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
-                            <attDef ident="quantity" mode="change" usage="req" />
                             <attDef ident="unit" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="mm" />
@@ -1812,8 +1821,17 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="height" mode="change" module="msdescription">
+                        <constraintSpec ident="height.attributes" scheme="isoschematron">
+                            <desc versionDate="2014-09-09" xml:lang="en">checks that the <gi>height</gi> element has either a <att>quantity</att> or <att>min</att>/<att>max</att> attributes.</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:height">
+                                        <sch:assert test="@quantity or (@min and @max)">The height element must have either @quantity or @min/@max. </sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
-                            <attDef ident="quantity" mode="change" usage="req" />
                             <attDef ident="unit" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="mm" />
@@ -2995,8 +3013,17 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="width" mode="change" module="msdescription">
+                        <constraintSpec ident="width.attributes" scheme="isoschematron">
+                            <desc versionDate="2014-09-09" xml:lang="en">checks that the <gi>width</gi> element has either a <att>quantity</att> or <att>min</att>/<att>max</att> attributes.</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:width">
+                                        <sch:assert test="@quantity or (@min and @max)">The width element must have either @quantity or @min/@max. </sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
-                            <attDef ident="quantity" mode="change" usage="req" />
                             <attDef ident="unit" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="mm" />
