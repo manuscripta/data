@@ -1647,6 +1647,26 @@
                             <attDef ident="unit" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="depth" mode="change" module="msdescription">
+                        <attList>
+                            <attDef ident="quantity" mode="change" usage="req" />
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="mm" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="atLeast" mode="delete" />
+                            <attDef ident="atMost" mode="delete" />
+                            <attDef ident="extent" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="min" mode="delete" />
+                            <attDef ident="max" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="precision" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="editor" mode="change" module="core">
                         <content>
                             <rng:ref name="persName" />
@@ -1791,6 +1811,26 @@
                                 </valList>
                             </attDef>
                             <attDef ident="script" mode="delete" />
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="height" mode="change" module="msdescription">
+                        <attList>
+                            <attDef ident="quantity" mode="change" usage="req" />
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="mm" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="atLeast" mode="delete" />
+                            <attDef ident="atMost" mode="delete" />
+                            <attDef ident="extent" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="min" mode="delete" />
+                            <attDef ident="max" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="precision" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
                     <elementSpec ident="history" mode="change" module="msdescription">
@@ -2954,6 +2994,26 @@
                         </constraintSpec>
                         <attList>
                             <attDef ident="n" mode="change" usage="req" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="width" mode="change" module="msdescription">
+                        <attList>
+                            <attDef ident="quantity" mode="change" usage="req" />
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="mm" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="atLeast" mode="delete" />
+                            <attDef ident="atMost" mode="delete" />
+                            <attDef ident="extent" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="min" mode="delete" />
+                            <attDef ident="max" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="precision" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
