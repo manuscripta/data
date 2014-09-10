@@ -1043,6 +1043,9 @@
                         </content>-->
                         <content>
                             <rng:optional>
+                                <rng:ref name="country" />
+                            </rng:optional>
+                            <rng:optional>
                                 <rng:ref name="settlement" />
                             </rng:optional>
                             <rng:optional>
@@ -1050,23 +1053,9 @@
                             </rng:optional>
                             <rng:optional>
                                 <rng:ref name="repository" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="collection" />
-                            </rng:optional>
+                            </rng:optional>                            
                             <rng:ref name="idno" />
-                        </content>
-                        <attList>
-                            <attDef ident="type" mode="change" usage="req">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="bookblock" />
-                                    <valItem ident="codicological_unit" />
-                                    <valItem ident="former_shelfmark" />
-                                    <valItem ident="volume" />
-                                    <valItem ident="other" />
-                                </valList>
-                            </attDef>
-                        </attList>
+                        </content>                        
                     </elementSpec>
                     <elementSpec ident="author" module="core" mode="change">
                         <!--<content>
@@ -1884,6 +1873,16 @@
                         <classes mode="change">
                             <memberOf key="att.global.linking" mode="delete" />
                         </classes>
+                        <attList>
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="replace" type="closed">                                    
+                                    <valItem ident="codicological_unit" />
+                                    <valItem ident="former_shelfmark" />
+                                    <valItem ident="volume" />
+                                    <valItem ident="other" />
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
                     <elementSpec ident="incipit" mode="change" module="msdescription">
                         <attList>
@@ -1898,8 +1897,7 @@
                                 </valList>
                             </attDef>
                             <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />
+                            <attDef ident="n" mode="delete" />                            
                             <attDef ident="subtype" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
