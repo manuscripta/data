@@ -1053,9 +1053,16 @@
                             </rng:optional>
                             <rng:optional>
                                 <rng:ref name="repository" />
-                            </rng:optional>                            
+                            </rng:optional>
                             <rng:ref name="idno" />
-                        </content>                        
+                        </content>
+                        <attList>
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="type" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
                     </elementSpec>
                     <elementSpec ident="author" module="core" mode="change">
                         <!--<content>
@@ -1875,7 +1882,7 @@
                         </classes>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
-                                <valList mode="replace" type="closed">                                    
+                                <valList mode="replace" type="closed">
                                     <valItem ident="codicological_unit" />
                                     <valItem ident="former_shelfmark" />
                                     <valItem ident="ms_ref" />
@@ -1885,7 +1892,7 @@
                                 </valList>
                             </attDef>
                             <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />                            
+                            <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
@@ -1903,7 +1910,7 @@
                                 </valList>
                             </attDef>
                             <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />                            
+                            <attDef ident="n" mode="delete" />
                             <attDef ident="subtype" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
@@ -2112,7 +2119,7 @@
                                     </rng:optional>
                                     <rng:optional>
                                         <rng:ref name="repository" />
-                                    </rng:optional>                                    
+                                    </rng:optional>
                                     <rng:ref name="idno" />
                                 </rng:group>
                                 <rng:zeroOrMore>
