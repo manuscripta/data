@@ -486,7 +486,11 @@
                             </div>
                             <div xml:id="note">
                                 <head>Note</head>
-                                <p>In the note element additional information about the text may be given, e.g. a table of contents for longer texts in a <gi>list</gi> element with <att>type</att> attribute (value: <val>toc</val>). In this case use record each chapter/section in a separate paragraph inside a <gi>note</gi> element with <att>type</att> attribute (value: <val>toc</val>). 
+                                <p>In the note element additional information about the text may be given, e.g. if the text contains scholia.
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <note><!-- ADD EXAMPLE --></note>
+                                    </egXML></p>                                
+                                <p>For longer texts a table of contents should be given in a <gi>list</gi> element with <att>type</att> attribute (value: <val>toc</val>). In this case use record each chapter/section in a separate paragraph inside a <gi>note</gi> element with <att>type</att> attribute (value: <val>toc</val>). 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <note>
                                             <list type="toc">
