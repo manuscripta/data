@@ -150,8 +150,8 @@
             </div>
             <div xml:id="msdescription">
                 <head>Manuscript Description</head>
-                <p>The manuscript descriptions are structured around the notion of codicological units: the intellectual content, physical description, and history, where applicable, of each unit is described in separate <gi>msPart</gi> elements, whereas information common to all units, e.g. the binding, provenance, and bibliography, is described outside the <gi>msPart</gi> elements, directly under the <gi>msDesc</gi> element using the following elements:
-                        <specList>
+                <p>The manuscript descriptions are structured around the notion of codicological units: the intellectual content, physical description, and history, where applicable, of each unit is described in separate <gi>msPart</gi> elements, whereas information common to all units, e.g. the binding, provenance, and bibliography, is described directly under the <gi>msDesc</gi> element using the following elements:
+                    <specList>
                         <specDesc key="msIdentifier" />
                         <specDesc key="msContents" />
                         <specDesc key="physDesc" />
@@ -173,7 +173,7 @@
                 <div xml:id="msidentifier">
                     <head>The Manuscript Identifier</head>
                     <p>Information about the identity of the manuscripts should be given in the <gi>msIdentifier</gi> element in the following elements and in the following order: <gi>country</gi>, <gi>settlement</gi>, <gi>institution</gi>, <gi>repository</gi>, <gi>idno</gi>. Former shelfmarks should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>former_shelfmark</val>). If the manuscript has a reference number in other catalogues, e.g. Nestle-Aland, this should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>other</val>).  
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msIdentifier>
                                 <country>Sweden</country>
                                 <settlement>Uppsala</settlement>
@@ -204,7 +204,7 @@
                                     </msItem>
                                     <msItem class="endleaf">
                                         <locus from="R1r" to="RCI" scheme="folios" />
-                                        <!-- RCI = Right cover inside. R = right endleaves -->
+                                        <!-- R = right endleaves, RCI = Right cover inside -->
                                         <note>Blank endleaves</note>
                                     </msItem>
                                 </msContents>
@@ -223,7 +223,7 @@
                     </p>
                     <div xml:id="common_objectdesc">
                         <head>Object Description</head>
-                        <p>In the <gi>objectDesc</gi> element the <ptr target="#support" />, <ptr target="#extent" /> and <ptr target="#collation" /> of the endleaves should be decribed. The <ptr target="#foliation" /> of the whole manuscript should also be recorded here.
+                        <p>In the <gi>objectDesc</gi> element the support, extent, and collation of the endleaves should be decribed, see <ptr target="#support" />, <ptr target="#extent" /> and <ptr target="#collation" />. The foliation of the whole manuscript should also be recorded here, see <ptr target="#foliation" />.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msPart>
                                     <physDesc>
@@ -266,7 +266,7 @@
                     </div>
                     <div xml:id="bindingdesc">
                         <head>Binding Description</head>
-                        <p>The binding should be described in the <gi>msPart</gi> element containing the bookblock part. one or more paragraphs inside the <gi>bindingDesc</gi> element. Use <gi>term</gi> and <gi>material</gi> elements where applicable. The first paragraph should contain a brief description of the binding type, the structure, cover material, etc. Give the height, width and depth of the binding in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>binding</val>). A description of decorative features on the binding should be recorded in one or more <gi>decoNote</gi> elements. The overall condition and restaurations to the binding should be recorded in the <gi>condition</gi> element.
+                        <p>The binding should be described in one or more paragraphs inside the <gi>bindingDesc</gi> element. Use <gi>term</gi> and <gi>material</gi> elements where applicable. The first paragraph should contain a brief description of the binding type, the structure, cover material, etc. Give the height, width and depth of the binding in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>binding</val>). A description of decorative features on the binding should be recorded in one or more <gi>decoNote</gi> elements. The overall condition and restaurations to the binding should be recorded in the <gi>condition</gi> element.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
                                     <p><term><material>Parchment</material> cover</term> over <term><material>paper</material> boards</term> with gold tooling. Sewn on three supports.</p>
@@ -486,10 +486,10 @@
                             </div>
                             <div xml:id="note">
                                 <head>Note</head>
-                                <p>In the note element additional information about the text may be given, e.g. if the text contains scholia.
+                                <p>In the note element additional information about the text may be given, e.g. if the text contains anonymous scholia or glosses. Authored scholia should be recorded in a separate <gi>msItem</gi>.
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <note><!-- ADD EXAMPLE --></note>
-                                    </egXML></p>                                
+                                    </egXML></p>
                                 <p>For longer texts a table of contents should be given in a <gi>list</gi> element with <att>type</att> attribute (value: <val>toc</val>). In this case use record each chapter/section in a separate paragraph inside a <gi>note</gi> element with <att>type</att> attribute (value: <val>toc</val>). 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <note>
@@ -849,12 +849,8 @@
                             <p>The <gi>additions</gi> element is not used. Marginalia, notes, and other additions of interest should be recorded either in the <gi>handDesc</gi> or the <gi>provenance</gi> element.</p>
                         </div>
                     </div>
-                    <div xml:id="history">
-                        
-                    </div>
-                    <div xml:id="additional">
-                        
-                    </div>
+                    <div xml:id="history"> </div>
+                    <div xml:id="additional"> </div>
                 </div>
             </div>
             <div xml:id="schema">
@@ -1840,8 +1836,7 @@
                                     <valItem ident="codicological_unit" />
                                     <valItem ident="former_shelfmark" />
                                     <valItem ident="ms_ref" />
-                                    <valItem ident="shelfmark" />
-                                    <valItem ident="volume" />
+                                    <valItem ident="shelfmark" />                                    
                                     <valItem ident="other" />
                                 </valList>
                             </attDef>
