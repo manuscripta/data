@@ -416,7 +416,7 @@
                                 <head>Author</head>
                                 <p>The author name should be recorded inside the <gi>author</gi> element in a <gi>presName</gi> element. The name should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref>. A VIAF ID or PLP (Prosopographisches Lexikon der Palaiologenzeit) number should be given in the <att>key</att> attribute. If the author name is missing in the manuscript and can be supplied, the this should be indicated with the <gi>supplied</gi> element with the <att>reason</att> attribute and the value <val>omitted</val>. The <gi>author</gi> element should be omitted for anonymous works.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <author xml:lang="la" key="VIAF_100219416">
+                                        <author xml:lang="la" key="VIAF 100219416">
                                             <supplied reason="omitted">
                                                 <persName>
                                                     <forename>Claudius</forename>
@@ -433,7 +433,7 @@
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <author>Aelius Aristides</author>
                                         <title ref="http://pinakes.irht.cnrs.fr/rech_oeuvre/resultOeuvre/filter_auteur/3185/filter_oeuvre/1000" type="uniform" xml:lang="la">In Apellam</title>
-                                        <title key="TLG_0284.010" type="alt" xml:lang="gr">Ἀπελλᾶ γενεθλιακός</title>
+                                        <title key="TLG 0284.010" type="alt" xml:lang="gr">Ἀπελλᾶ γενεθλιακός</title>
                                     </egXML>
                                 </p>
                                 <p>For works not included in Pinakes a descriptive title in English should be provided and the <att>type</att> attribute should then be set with the value <val>desc</val>.    
@@ -477,8 +477,8 @@
                                 <head>Final rubric</head>
                                 <p>The final rubric should be given only when it differs from the rubric. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <title key="pinakes_3362.1949" ref="http://pinakes.irht.cnrs.fr/rech_oeuvre/resultOeuvre/filter_auteur/3362/filter_oeuvre/1949" xml:lang="la">De Constructione Bellicarum Machinarum et Catapultarum</title>
-                                        <title key="TLG_1226.001" xml:lang="grc" type="alt">Κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπαλτικῶν</title>
+                                        <title key="pinakes 3362.1949" ref="http://pinakes.irht.cnrs.fr/rech_oeuvre/resultOeuvre/filter_auteur/3362/filter_oeuvre/1949" xml:lang="la">De Constructione Bellicarum Machinarum et Catapultarum</title>
+                                        <title key="TLG 1226.001" xml:lang="grc" type="alt">Κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπαλτικῶν</title>
                                         <rubric xml:lang="grc">Βίτωνος κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπελτιστῶν</rubric>
                                         <finalRubric xml:lang="grc">Βίτωνος κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπελτικῶν</finalRubric>
                                     </egXML>
@@ -1097,6 +1097,7 @@
                             </sequence>
                         </content>-->
                         <content>
+                            <rng:ref name="ref" />
                             <rng:optional>
                                 <rng:ref name="date" />
                             </rng:optional>                            
