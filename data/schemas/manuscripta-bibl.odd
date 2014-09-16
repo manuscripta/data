@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:lang="en" xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Schema for the bibliography</title>
+            <author xml:id="PG">Patrik Granholm</author>
+            <author xml:id="EN">Eva Nyström</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Released under GNU GPL 3.0</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>created electronically</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2014-09-15" who="#PG">Created bare ODD from ODD by example</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <schemaSpec ident="manuscripta-bibliography" start="TEI" xml:lang="en">
+
+            <!--       MODULES USED BY THE SCHEMA       -->
+
+            <moduleRef key="tei" />
+            <moduleRef key="core" include="author bibl biblScope date editor listBibl p pubPlace q title" />
+            <moduleRef key="header" include="fileDesc publicationStmt sourceDesc teiHeader titleStmt" />
+            <moduleRef key="namesdates" include="addName forename persName surname" />
+            <moduleRef key="textstructure" include="TEI body text" />
+            <moduleRef key="transcr" include="supplied" />
+
+            <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
+
+            <elementSpec ident="addName" module="namesdates" mode="change">
+               <classes mode="change">
+                  <memberOf key="att.personal" mode="delete" />
+                  <memberOf key="att.typed" mode="delete" />
+               </classes>               
+               <content>
+                  <rng:choice>
+                     <rng:ref name="supplied" />
+                     <rng:text />
+                  </rng:choice>
+               </content>
+               <attList>
+                  <attDef ident="facs" mode="delete" />
+                  <attDef ident="n" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="author" module="core" mode="change">               
+               <content>
+                  <rng:choice>
+                     <rng:text />
+                     <rng:ref name="supplied" />
+                     <rng:ref name="persName" />
+                  </rng:choice>
+               </content>
+               <constraintSpec ident="anonymousauthor.check" scheme="isoschematron">
+                  <desc versionDate="2014-08-04" xml:lang="en">checks that <gi>author</gi> only contains <q>Anonymous</q> if <gi>supplied</gi> or <gi>persName</gi> is not used</desc>
+                  <constraint>
+                     <sch:pattern>
+                        <sch:rule context="tei:author">
+                           <sch:assert test="text()='Anonymous' or tei:supplied or tei:persName">The author element may only contain the value "Anonymous" when not using a supplied or persName element.</sch:assert>
+                        </sch:rule>
+                     </sch:pattern>
+                  </constraint>
+               </constraintSpec>
+               <attList>
+                  <attDef ident="facs" mode="delete" />
+                  <attDef ident="n" mode="delete" />
+                  <attDef ident="ref" mode="delete" />
+                  <attDef ident="role" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="bibl" module="core" mode="change">               
+               <content>
+                  <rng:zeroOrMore>
+                     <rng:ref name="author" />
+                  </rng:zeroOrMore>
+                  <rng:zeroOrMore>
+                     <rng:ref name="editor" />
+                  </rng:zeroOrMore>
+                  <rng:oneOrMore>
+                     <rng:ref name="title" />
+                  </rng:oneOrMore>
+                  <rng:optional>
+                     <rng:ref name="pubPlace" />
+                  </rng:optional>
+                  <rng:ref name="date" />
+                  <rng:optional>
+                     <rng:ref name="edition" />
+                  </rng:optional>
+                  <rng:zeroOrMore>
+                     <rng:ref name="biblScope" />
+                  </rng:zeroOrMore>
+                  <rng:zeroOrMore>
+                     <rng:ref name="citedRange" />
+                  </rng:zeroOrMore>
+               </content>
+               <constraintSpec ident="xmlid.check" scheme="isoschematron">
+                  <desc versionDate="2014-09-14" xml:lang="en">checks that the xml:id is made up of the surname of the first author or editor and the publication date</desc>
+                  <constraint>
+                     <sch:pattern>
+                        <sch:rule context="tei:bibl">
+                           <sch:assert test="@xml:id=concat(tei:author[1]//tei:surname[1]/text(),tei:date/@when) or @xml:id=concat(tei:author[1]//tei:surname[1]/text(),tei:date/@from) or @xml:id=concat(tei:editor[1]//tei:surname[1]/text(),tei:date/@when) or @xml:id=concat(tei:editor[1]//tei:surname[1]/text(),tei:date/@from)">The xml:id must consist of the surname of the first author or editor and the publication date.</sch:assert>
+                        </sch:rule>
+                     </sch:pattern>
+                  </constraint>
+               </constraintSpec>
+               <attList>
+                  <attDef ident="xml:id" mode="change" usage="req" />
+                  <attDef ident="facs" mode="delete" />
+                  <attDef ident="n" mode="delete" />
+                  <attDef ident="type" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+               <exemplum>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <bibl>
+                        <author>
+                           <persName>
+                              <forename>Friedrich</forename>
+                              <surname>Jacobs</surname>
+                           </persName>
+                        </author>
+                        <title level="m">Aeliani de natura animalium libri xvii</title>
+                        <pubPlace>Jena</pubPlace>
+                        <date when="1832" />
+                        <citedRange unit="volume" from="1" to="1" />
+                        <citedRange unit="page" from="lxxvi" to="lxxvii" />
+                     </bibl>
+                  </egXML>
+               </exemplum>
+            </elementSpec>
+            <elementSpec ident="biblScope" module="core" mode="change">
+               <!--<content>
+                            <textNode />
+                        </content>-->
+               <content>
+                  <rng:optional>
+                     <rng:text />
+                  </rng:optional>
+               </content>
+               <constraintSpec ident="biblscope.text.check" scheme="isoschematron">
+                  <desc versionDate="2014-08-04" xml:lang="en">checks that <gi>biblScope</gi> only contains <q>N.F.</q></desc>
+                  <constraint>
+                     <sch:pattern>
+                        <sch:rule context="tei:biblScope/text()">
+                           <sch:assert test="matches(., 'N.F.')">The biblScope element may only contain N.F.</sch:assert>
+                        </sch:rule>
+                     </sch:pattern>
+                  </constraint>
+               </constraintSpec>
+               <attList>
+                  <attDef ident="facs" mode="delete" />
+                  <attDef ident="n" mode="delete" />
+                  <attDef ident="type" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+               <exemplum>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <bibl>
+                        <author>
+                           <persName>
+                              <forename>Eduardo</forename>
+                              <forename>Luigi</forename>
+                              <surname>De Stefani</surname>
+                           </persName>
+                        </author>
+                        <title level="a">I manoscritti della Historia Animalium di Eliano</title>
+                        <title level="j">Studi italiani di filologia classica</title>
+                        <date when="1902" />
+                        <biblScope unit="volume" from="10" to="10" />
+                        <biblScope unit="page" from="175" to="222" />
+                        <citedRange unit="page" from="209" to="210" />
+                     </bibl>
+                  </egXML>
+               </exemplum>
+            </elementSpec>
+            <elementSpec ident="body" mode="change">
+               <content>
+                  <rng:ref name="listBibl" />
+               </content>
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="date" mode="change" module="core">
+               <classes mode="change">
+                  <memberOf key="att.editLike" mode="delete" />
+                  <memberOf key="att.dimensions" mode="delete" />
+                  <memberOf key="att.ranging" mode="delete" />
+                  <memberOf key="att.responsibility" mode="delete" />
+                  <memberOf key="att.typed" mode="delete" />
+               </classes>
+               <content>
+                  <rng:empty />
+               </content>
+               <constraintSpec ident="date.attributes" scheme="isoschematron">
+                  <desc versionDate="2014-09-15" xml:lang="en">checks that the <gi>date</gi> element has either a <att>when</att> or <att>to</att>/<att>from</att> attributes.</desc>
+                  <constraint>
+                     <sch:pattern>
+                        <sch:rule context="tei:date">
+                           <sch:assert test="@when or (@from and @to)">The date element must have either @when or @to/@from. </sch:assert>
+                        </sch:rule>
+                     </sch:pattern>
+                  </constraint>
+               </constraintSpec>
+               <attList>
+                  <attDef ident="facs" mode="delete" />
+                  <attDef ident="n" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="editor" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="fileDesc" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="forename" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="listBibl" mode="change">
+               <content>
+                  <rng:oneOrMore>
+                     <rng:ref name="bibl" />
+                  </rng:oneOrMore>
+               </content>
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="p" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="persName" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+                  <attDef ident="when" mode="delete" />
+                  <attDef ident="from" mode="delete" />
+                  <attDef ident="to" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="publicationStmt" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="pubPlace" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="q" mode="change">
+               <attList>
+                  <attDef ident="type" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="sourceDesc" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="supplied" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="surname" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="TEI" mode="change">
+               <attList>
+                  <attDef ident="version" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="teiHeader" mode="change">
+               <attList>
+                  <attDef ident="type" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="text" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="title" mode="change">
+               <content>
+                  <rng:zeroOrMore>
+                     <rng:choice>
+                        <rng:text />
+                        <rng:ref name="q" />
+                     </rng:choice>
+                  </rng:zeroOrMore>
+               </content>
+               <attList>
+                  <attDef ident="xml:lang" mode="change" usage="req" />
+                  <attDef ident="type" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
+               </attList>
+            </elementSpec>
+            <elementSpec ident="titleStmt" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="delete" />
+                  <attDef ident="xml:lang" mode="delete" />
+               </attList>
+            </elementSpec>
+
+
+
+            <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+
+            <classSpec ident="att.milestoneUnit" module="core" type="atts" mode="delete" />
+            <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete" />
+            <classSpec ident="att.datable.custom" module="namesdates" type="atts" mode="delete" />
+            <classSpec ident="att.datable.iso" module="namesdates" type="atts" mode="delete" />
+            <classSpec ident="att.ascribed" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.canonical" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.citing" module="tei" type="atts" mode="change">
+               <attList>
+                  <attDef ident="from" mode="change" usage="req" />
+                  <attDef ident="to" mode="change" usage="req" />
+                  <attDef ident="unit" mode="change" usage="req">
+                     <valList mode="replace" type="closed">
+                        <valItem ident="volume" />
+                        <valItem ident="issue" />
+                        <valItem ident="page" />
+                        <valItem ident="footnote" />
+                        <valItem ident="line" />
+                        <valItem ident="chapter" />
+                        <valItem ident="column" />
+                        <valItem ident="folio" />
+                     </valList>
+                  </attDef>
+               </attList>
+            </classSpec>
+            <classSpec ident="att.ranging" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.dimensions" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.damaged" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.cReferencing" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.datable" module="tei" type="atts" mode="change">
+               <attList>
+                  <attDef ident="calendar" mode="delete" />
+                  <attDef ident="period" mode="delete" />
+               </attList>
+            </classSpec>
+            <classSpec ident="att.datable.w3c" module="tei" type="atts" mode="change">
+               <attList>
+                  <attDef ident="notBefore" mode="delete" />
+                  <attDef ident="notAfter" mode="delete" />
+               </attList>
+            </classSpec>
+            <classSpec ident="att.datcat" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.declarable" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.declaring" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.fragmentable" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.divLike" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.docStatus" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.duration.w3c" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.duration.iso" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.responsibility" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.editLike" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.global" module="tei" type="atts" mode="change">
+               <attList>
+                  <attDef ident="xml:lang" mode="change" usage="opt">
+                     <valList mode="replace" type="closed">
+                        <valItem ident="grc">
+                           <desc>Ancient Greek (to 1453)</desc>
+                        </valItem>
+                        <valItem ident="en">
+                           <desc>English</desc>
+                        </valItem>
+                        <valItem ident="fr">
+                           <desc>French</desc>
+                        </valItem>
+                        <valItem ident="de">
+                           <desc>German</desc>
+                        </valItem>
+                        <valItem ident="el">
+                           <desc>Modern Greek</desc>
+                        </valItem>
+                        <valItem ident="it">
+                           <desc>Italian</desc>
+                        </valItem>
+                        <valItem ident="la">
+                           <desc>Latin</desc>
+                        </valItem>
+                        <valItem ident="nl">
+                           <desc>Dutch</desc>
+                        </valItem>
+                        <valItem ident="sp">
+                           <desc>Spanish</desc>
+                        </valItem>
+                        <valItem ident="sv">
+                           <desc>Swedish</desc>
+                        </valItem>
+                     </valList>
+                  </attDef>
+                  <attDef ident="n" mode="delete" />
+                  <attDef ident="rend" mode="delete" />
+                  <attDef ident="style" mode="delete" />
+                  <attDef ident="rendition" mode="delete" />
+                  <attDef ident="xml:base" mode="delete" />
+                  <attDef ident="xml:space" mode="delete" />
+               </attList>
+            </classSpec>
+            <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.media" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.resourced" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.interpLike" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.measurement" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.naming" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.pointing" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.pointing.group" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.scoping" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.segLike" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.sortable" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.edition" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.spanning" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.styleDef" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.tableDecoration" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.timed" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.transcriptional" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.translatable" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.source" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.personal" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.global.facs" module="transcr" type="atts" mode="delete" />
+            <classSpec ident="att.global.change" module="transcr" type="atts" mode="delete" />
+            <classSpec ident="att.coordinated" module="transcr" type="atts" mode="delete" />
+         </schemaSpec>
+      </body>
+   </text>
+</TEI>
