@@ -2461,28 +2461,7 @@
                     </elementSpec>
                     <elementSpec ident="persName" mode="change" module="namesdates">
                         <content>
-                            <rng:choice>
-                                <rng:optional>
-                                    <rng:ref name="supplied" />
-                                </rng:optional>
-                                <rng:group>
-                                    <rng:zeroOrMore>
-                                        <rng:ref name="forename" />
-                                    </rng:zeroOrMore>
-                                    <rng:optional>
-                                        <rng:ref name="nameLink" />
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="surname" />
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="addName" />
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="roleName" />
-                                    </rng:optional>
-                                </rng:group>
-                            </rng:choice>
+                            <rng:ref name="ref" />
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
