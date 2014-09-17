@@ -348,8 +348,7 @@
             <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete" />
             <classSpec ident="att.datable.custom" module="namesdates" type="atts" mode="delete" />
             <classSpec ident="att.datable.iso" module="namesdates" type="atts" mode="delete" />
-            <classSpec ident="att.ascribed" module="tei" type="atts" mode="delete" />
-            <classSpec ident="att.canonical" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.ascribed" module="tei" type="atts" mode="delete" />            
             <classSpec ident="att.citing" module="tei" type="atts" mode="change">
                <attList>
                   <attDef ident="from" mode="change" usage="req" />
@@ -372,6 +371,11 @@
             <classSpec ident="att.dimensions" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.damaged" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.canonical" module="tei" type="atts" mode="change">
+               <attList>
+                  <attDef ident="ref" mode="delete"/>
+               </attList>
+            </classSpec>            
             <classSpec ident="att.cReferencing" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.datable" module="tei" type="atts" mode="change">
                <attList>
@@ -445,7 +449,12 @@
             <classSpec ident="att.resourced" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.interpLike" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.measurement" module="tei" type="atts" mode="delete" />
-            <classSpec ident="att.naming" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.naming" module="tei" type="atts" mode="change">
+               <attList>
+                  <attDef ident="role" mode="delete"/>
+                  <attDef ident="nymRef" mode="delete"/>
+               </attList>
+            </classSpec>
             <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.pointing" module="tei" type="atts" mode="delete" />
@@ -462,7 +471,12 @@
             <classSpec ident="att.transcriptional" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.translatable" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.source" module="tei" type="atts" mode="delete" />
-            <classSpec ident="att.personal" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.personal" module="tei" type="atts" mode="change">
+               <attList>
+                  <attDef ident="full" mode="delete"/>
+                  <attDef ident="sort" mode="delete"/>
+               </attList>
+            </classSpec>
             <classSpec ident="att.global.facs" module="transcr" type="atts" mode="delete" />
             <classSpec ident="att.global.change" module="transcr" type="atts" mode="delete" />
             <classSpec ident="att.coordinated" module="transcr" type="atts" mode="delete" />
