@@ -2,14 +2,13 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader xml:lang="en">
         <fileDesc>
-            <titleStmt>
+            <titleStmt>                
                 <title>Uppsala University Library, Gr. 27</title>
                 <respStmt xml:id="PG">
                     <resp key="cataloguer" />
                     <resp key="encoder" />
                     <persName>
-                        <forename>Patrik</forename>
-                        <surname>Granholm</surname>
+                        <ref target="#PatGra" />
                     </persName>
                 </respStmt>
             </titleStmt>
@@ -77,8 +76,7 @@
                                 <author key="VIAF_100219416" xml:lang="la">
                                     <supplied reason="omitted">
                                         <persName>
-                                            <forename>Claudius</forename>
-                                            <surname>Aelianus</surname>
+                                            <ref target="#ClaAel" />
                                         </persName>
                                     </supplied>
                                 </author>
@@ -241,26 +239,26 @@
                                     </colophon>
                                 <filiation type="protograph"><idno type="ms_ref">Codex Vaticanus Palatinus Graecus 267</idno> (15th cent.), cf. 
                                     <bibl>
-                                        <ref target="DeStefani1902" />
+                                        <ref target="#DeStefani1902" />
                                         <citedRange from="209" to="210" unit="page" />
                                     </bibl>
                                     , 
                                     <bibl>
-                                        <ref target="GarcíaValdés2009" />
+                                        <ref target="#GarcíaValdés2009" />
                                         <citedRange from="viii" to="viii" unit="page" />
                                     </bibl>
                                 </filiation>
                                 <filiation type="siglum">U (
                                     <bibl>
-                                        <ref target="DeStefani1902" />
+                                        <ref target="#DeStefani1902" />
                                     </bibl>, 
                                     <bibl>
-                                        <ref target="GarcíaValdés2009" />
+                                        <ref target="#GarcíaValdés2009" />
                                     </bibl>
                                     ).</filiation>
                                 <listBibl>
                                     <bibl>
-                                        <ref target="GarcíaValdés2009" />
+                                        <ref target="#GarcíaValdés2009" />
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -468,9 +466,8 @@
                             <handDesc>
                                 <handNote xml:id="hand_A" n="A" scope="sole">
                                     <locus from="1r" to="119r" scheme="folios" />
-                                    <persName role="scribe" cert="high" xml:lang="grc">
-                                        <forename xml:lang="grc">Μιχαὴλ</forename>
-                                        <surname xml:lang="grc">Σουλιάρδος</surname>
+                                    <persName role="scribe" cert="high">
+                                        <ref target="#MicSou" />
                                     </persName>
                                         based on subscription <locus from="119r" to="119r" scheme="folios" />. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out. 
                                     </handNote>
@@ -510,8 +507,7 @@
                         </physDesc>
                         <history>
                             <origin>Written by <persName>
-                                    <forename>Michael </forename>
-                                    <surname>Souliardos</surname>
+                                    <ref target="#MicSou" />
                                 </persName> in <origPlace>Bologna</origPlace>, probably in the <origDate from="1475" to="1499">late 15th century</origDate>, cf. colophon <locus from="119r" to="119r" scheme="folios" />.</origin>
                             <provenance />
                             <acquisition />
@@ -519,110 +515,47 @@
                         <additional>
                             <listBibl>
                                 <bibl>
-                                    <ref target="Aurivillius1806" />
+                                    <ref target="#Aurivillius1806" />
                                     <citedRange unit="page" from="12" to="14" />
                                 </bibl>
                                 <bibl>
-                                    <ref target="Jacobs1832a" />
+                                    <ref target="#Jacobs1832a" />
                                     <citedRange unit="volume" from="1" to="1" />
                                     <citedRange unit="page" from="lxxvi" to="lxxvii" />
                                 </bibl>
                                 <bibl>
-                                    <ref target="Jacobs1832b"/>
+                                    <ref target="#Jacobs1832b" />
                                     <citedRange unit="volume" from="1" to="1" />
                                     <citedRange unit="page" from="95" to="132" />
                                 </bibl>
                                 <bibl>
-                                    <ref target="DeStefani1902"/>
+                                    <ref target="#DeStefani1902" />
                                     <citedRange unit="page" from="209" to="210" />
                                 </bibl>
                                 <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename xml:lang="el">Σπυρίδων</forename>
-                                            <surname xml:lang="el">Λάμπρος</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="a" xml:lang="el">Προσθῆκαι εἰς τοὐς Λακεδαιμονίους βιβλιογράφους καὶ κτήτορας κωδίκων</title>
-                                    <title level="j" xml:lang="el">Νέος Ἑλληνομνήμων</title>
-                                    <date when="1907" />
-                                    <biblScope unit="volume" from="4" to="4" />
-                                    <biblScope unit="page" from="492" to="494" />
+                                    <ref target="#Lampros1907" />
                                     <citedRange unit="page" from="492" to="492" />
                                 </bibl>
                                 <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename xml:lang="el">Σπυρίδων</forename>
-                                            <surname xml:lang="el">Λάμπρος</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="a" xml:lang="el">Ναυπλιακὸν ἔγγραφον τοῦ οἴκου Πουλομάτη ἐν ἔτει 1509 καὶ ὁ βιβλιογράφος Μιχαὴλ Σουλιάρδος</title>
-                                    <title level="j" xml:lang="el">Νέος Ἑλληνομνήμων</title>
-                                    <date when="1909" />
-                                    <biblScope unit="volume" from="6" to="6" />
-                                    <biblScope unit="page" from="273" to="283" />
+                                    <ref target="#Lampros1909" />
                                     <citedRange unit="page" from="280" to="280" />
                                     <citedRange unit="footnote" from="2" to="2" />
                                 </bibl>
                                 <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename>Edgar</forename>
-                                            <surname>Lobel</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="m">The Greek Manuscripts of Aristotle’s Poetics</title>
-                                    <pubPlace>
-                                        <supplied reason="omitted">London</supplied>
-                                    </pubPlace>
-                                    <date when="1933" />
+                                    <ref target="#Lobel1933" />
                                     <citedRange from="54" to="56" unit="page" />
                                 </bibl>
                                 <bibl>
-                                    <editor>
-                                        <persName>
-                                            <forename>Manuela</forename>
-                                            <surname>García Valdés</surname>
-                                        </persName>
-                                    </editor>
-                                    <editor>
-                                        <persName>
-                                            <forename>Luis</forename>
-                                            <forename>Alfonso</forename>
-                                            <surname>Llera Fueyo</surname>
-                                        </persName>
-                                    </editor>
-                                    <editor>
-                                        <persName>
-                                            <forename>Lucía</forename>
-                                            <surname>Rodríguez-Noriega Guillén</surname>
-                                        </persName>
-                                    </editor>
-                                    <title level="m" xml:lang="la">De natura animalium</title>
-                                    <title level="s" xml:lang="la">Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</title>
-                                    <pubPlace>Berlin</pubPlace>
-                                    <date when="2009" />
+                                    <ref target="#GarcíaValdés2009" />
                                     <citedRange from="vii" to="viii" unit="page" />
                                 </bibl>
                                 <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename>David</forename>
-                                            <surname>Speranzi</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="a" xml:lang="it">Michele Trivoli e Giano Lascari. Appunti su copisti e manoscritti greci tra Corfù e Firenze</title>
-                                    <title level="j" xml:lang="it">Studi Slavistici</title>
-                                    <date when="2010" />
-                                    <biblScope from="7" to="7" unit="volume" />
-                                    <biblScope from="263" to="297" unit="page" />
+                                    <ref target="#Speranzi2010" />
                                     <citedRange from="283" to="283" unit="page" />
                                 </bibl>
                             </listBibl>
                         </additional>
                     </msPart>
-
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -630,12 +563,7 @@
             <change when="2013-06-26" who="#PG">First draft</change>
             <change when="2014-06-11" who="#PG">Changes to modified ODD</change>
         </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <p><xi:include href="../../authority_files/bibliography.xml" /></p>
-        </body>
-    </text>
+    </teiHeader>    
     <facsimile>
         <surface xml:id="UGr-027-0001r">
             <desc>f. 1r</desc>
