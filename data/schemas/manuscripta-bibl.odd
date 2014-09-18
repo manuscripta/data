@@ -71,8 +71,10 @@
                <attList>
                   <attDef ident="facs" mode="delete" />
                   <attDef ident="n" mode="delete" />
+                  <attDef ident="key" mode="delete" />
                   <attDef ident="ref" mode="delete" />
                   <attDef ident="role" mode="delete" />
+                  <attDef ident="xml:id" mode="delete" />
                </attList>
             </elementSpec>
             <elementSpec ident="bibl" module="core" mode="change">               
@@ -254,7 +256,7 @@
                </attList>
             </elementSpec>
             <elementSpec ident="persName" mode="change">
-               <attList>                  
+               <attList>                                    
                   <attDef ident="xml:lang" mode="delete" />
                   <attDef ident="when" mode="delete" />
                   <attDef ident="from" mode="delete" />
@@ -371,7 +373,7 @@
             <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.canonical" module="tei" type="atts" mode="change">
                <attList>
-                  <attDef ident="ref" mode="delete"/>
+                  <attDef ident="key" mode="delete"/>
                </attList>
             </classSpec>            
             <classSpec ident="att.cReferencing" module="tei" type="atts" mode="delete" />
