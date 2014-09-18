@@ -2719,7 +2719,7 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="TEI" module="textstructure" mode="change">
-                        <content>
+                       <!-- <content>
                             <rng:group>
                                 <rng:ref name="teiHeader" />
                                 <rng:choice>
@@ -2731,7 +2731,7 @@
                                     </rng:group>
                                 </rng:choice>
                             </rng:group>
-                        </content>
+                        </content>-->
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -2741,10 +2741,10 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="teiHeader" mode="change" module="header">
-                        <content>
+                        <!--<content>
                             <rng:ref name="fileDesc" />
                             <rng:ref name="revisionDesc" />
-                        </content>
+                        </content>-->
                         <constraintSpec ident="greek.check" scheme="isoschematron">
                             <constraint>
                                 <sch:pattern>
@@ -2995,6 +2995,92 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
+                    
+                    <!-- ADDED INCLUDE ELEMENT FOR XINCLUDE -->
+                    
+                    <elementSpec 
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                        ident="include" 
+                        ns="http://www.w3.org/2001/XInclude" 
+                        mode="add">
+                        <desc  xml:lang="en" versionDate="2014-01-12">The W3C XInclude element</desc>
+                        <classes>
+                            <memberOf key="model.common"/>
+                            <memberOf key="model.teiHeaderPart"/>
+                        </classes>
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="fallback"/>
+                            </rng:optional>
+                        </content>
+                        <attList>
+                            <attDef ident="href">
+                                <desc  xml:lang="en" versionDate="2014-01-12">pointer to the resource being included</desc>
+                                <datatype>
+                                    <rng:ref name="data.pointer"/>
+                                </datatype>
+                            </attDef>
+                            
+                            <attDef ident="parse"  usage="opt">
+                                <defaultVal>xml</defaultVal>
+                                <valList type="closed">
+                                    <valItem ident="xml"/>
+                                    <valItem ident="text"/>
+                                </valList>
+                            </attDef>
+                            
+                            <attDef ident="xpointer" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            
+                            <attDef ident="encoding"  usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            
+                            <attDef ident="accept" usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            
+                            <attDef ident="accept-charset"  usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                            
+                            <attDef ident="accept-language"  usage="opt">
+                                <datatype>
+                                    <rng:text/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    
+                    <elementSpec 
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                        ident="fallback" 
+                        ns="http://www.w3.org/2001/XInclude" 
+                        mode="add">
+                        <desc  xml:lang="en" versionDate="2014-01-12">Wrapper for fallback elements if an XInclude fails</desc>
+                        <content>
+                            <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0">
+                                <choice>
+                                    <text/>
+                                    <ref name="macro.anyThing"/>
+                                </choice>
+                            </oneOrMore>
+                        </content>
+                    </elementSpec>
+                    <macroSpec ident="macro.anyThing" mode="add">
+                        <content>
+                            <?NameList?>
+                        </content>
+                    </macroSpec>
 
                     <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
 
