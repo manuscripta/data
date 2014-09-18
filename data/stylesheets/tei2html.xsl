@@ -725,5 +725,7 @@
     <xsl:template match="msIdentifier"> </xsl:template>
 
     <xsl:template match="revisionDesc"> </xsl:template>
+    
+    <xsl:template match="facsimile"> </xsl:template>
 
 </xsl:stylesheet>
