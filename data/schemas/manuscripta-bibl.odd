@@ -81,7 +81,7 @@
                <moduleRef key="tei" />
                <moduleRef key="core" include="author bibl biblScope date editor listBibl p pubPlace q title" />
                <moduleRef key="header" include="fileDesc publicationStmt sourceDesc teiHeader titleStmt" />
-               <moduleRef key="namesdates" include="addName forename listPerson nameLink persName person surname" />
+               <moduleRef key="namesdates" include="addName forename nameLink persName surname" />
                <moduleRef key="textstructure" include="TEI body text" />
                <moduleRef key="transcr" include="supplied" />
 
@@ -229,8 +229,7 @@
                   </exemplum>
                </elementSpec>
                <elementSpec ident="body" mode="change">
-                  <content>
-                     <rng:ref name="listPerson" />
+                  <content>                     
                      <rng:ref name="listBibl" />
                   </content>
                   <attList>
