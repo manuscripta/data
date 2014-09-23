@@ -37,7 +37,7 @@
                <classes mode="change">
                   <memberOf key="att.personal" mode="delete" />
                   <memberOf key="att.typed" mode="delete" />
-               </classes>               
+               </classes>
                <content>
                   <rng:choice>
                      <rng:ref name="supplied" />
@@ -50,34 +50,25 @@
                   <attDef ident="xml:id" mode="delete" />
                </attList>
             </elementSpec>
-            <elementSpec ident="author" module="core" mode="change">               
+            <elementSpec ident="author" module="core" mode="change">
                <content>
                   <rng:choice>
-                     <rng:text />
-                     <rng:ref name="supplied" />
-                     <rng:ref name="persName" />
+                     <rng:empty />
+                     <rng:optional>
+                        <rng:ref name="supplied" />
+                     </rng:optional>
                   </rng:choice>
                </content>
-               <constraintSpec ident="anonymousauthor.check" scheme="isoschematron">
-                  <desc versionDate="2014-08-04" xml:lang="en">checks that <gi>author</gi> only contains <q>Anonymous</q> if <gi>supplied</gi> or <gi>persName</gi> is not used</desc>
-                  <constraint>
-                     <sch:pattern>
-                        <sch:rule context="tei:author">
-                           <sch:assert test="text()='Anonymous' or tei:supplied or tei:persName">The author element may only contain the value "Anonymous" when not using a supplied or persName element.</sch:assert>
-                        </sch:rule>
-                     </sch:pattern>
-                  </constraint>
-               </constraintSpec>
                <attList>
+                  <attDef ident="ref" mode="change" usage="req" />
                   <attDef ident="facs" mode="delete" />
                   <attDef ident="n" mode="delete" />
                   <attDef ident="key" mode="delete" />
-                  <attDef ident="ref" mode="delete" />
                   <attDef ident="role" mode="delete" />
                   <attDef ident="xml:id" mode="delete" />
                </attList>
             </elementSpec>
-            <elementSpec ident="bibl" module="core" mode="change">               
+            <elementSpec ident="bibl" module="core" mode="change">
                <content>
                   <rng:zeroOrMore>
                      <rng:ref name="author" />
@@ -222,7 +213,11 @@
                </attList>
             </elementSpec>
             <elementSpec ident="editor" mode="change">
+               <content>
+                  <rng:empty />
+               </content>
                <attList>
+                  <attDef ident="ref" mode="change" usage="req" />
                   <attDef ident="xml:id" mode="delete" />
                   <attDef ident="xml:lang" mode="delete" />
                </attList>
@@ -235,7 +230,7 @@
             </elementSpec>
             <elementSpec ident="forename" mode="change">
                <attList>
-                  <attDef ident="xml:id" mode="delete" />                  
+                  <attDef ident="xml:id" mode="delete" />
                </attList>
             </elementSpec>
             <elementSpec ident="listBibl" mode="change">
@@ -296,7 +291,7 @@
             </elementSpec>
             <elementSpec ident="surname" mode="change">
                <attList>
-                  <attDef ident="xml:id" mode="delete" />                  
+                  <attDef ident="xml:id" mode="delete" />
                </attList>
             </elementSpec>
             <elementSpec ident="TEI" mode="change">
@@ -349,7 +344,7 @@
             <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete" />
             <classSpec ident="att.datable.custom" module="namesdates" type="atts" mode="delete" />
             <classSpec ident="att.datable.iso" module="namesdates" type="atts" mode="delete" />
-            <classSpec ident="att.ascribed" module="tei" type="atts" mode="delete" />            
+            <classSpec ident="att.ascribed" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.citing" module="tei" type="atts" mode="change">
                <attList>
                   <attDef ident="from" mode="change" usage="req" />
@@ -374,9 +369,9 @@
             <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.canonical" module="tei" type="atts" mode="change">
                <attList>
-                  <attDef ident="key" mode="delete"/>
+                  <attDef ident="key" mode="delete" />
                </attList>
-            </classSpec>            
+            </classSpec>
             <classSpec ident="att.cReferencing" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.datable" module="tei" type="atts" mode="change">
                <attList>
@@ -452,8 +447,8 @@
             <classSpec ident="att.measurement" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.naming" module="tei" type="atts" mode="change">
                <attList>
-                  <attDef ident="role" mode="delete"/>
-                  <attDef ident="nymRef" mode="delete"/>
+                  <attDef ident="role" mode="delete" />
+                  <attDef ident="nymRef" mode="delete" />
                </attList>
             </classSpec>
             <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
@@ -474,8 +469,8 @@
             <classSpec ident="att.source" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.personal" module="tei" type="atts" mode="change">
                <attList>
-                  <attDef ident="full" mode="delete"/>
-                  <attDef ident="sort" mode="delete"/>
+                  <attDef ident="full" mode="delete" />
+                  <attDef ident="sort" mode="delete" />
                </attList>
             </classSpec>
             <classSpec ident="att.global.facs" module="transcr" type="atts" mode="delete" />
