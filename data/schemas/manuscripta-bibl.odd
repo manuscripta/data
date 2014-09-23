@@ -324,8 +324,18 @@
                   </rng:zeroOrMore>
                </content>
                <attList>
+                  <attDef ident="level" mode="change" usage="req" />
                   <attDef ident="xml:lang" mode="change" usage="req" />
-                  <attDef ident="type" mode="delete" />
+                  <attDef ident="type" mode="change">
+                     <valList mode="replace" type="closed">
+                        <valItem ident="main">
+                           <desc>main title</desc>
+                        </valItem>
+                        <valItem ident="short">
+                           <desc>abbreviated form of title</desc>
+                        </valItem>
+                     </valList>
+                  </attDef>
                   <attDef ident="xml:id" mode="delete" />
                </attList>
             </elementSpec>
@@ -452,7 +462,11 @@
                </attList>
             </classSpec>
             <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
-            <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />
+            <classSpec ident="att.typed" module="tei" type="atts" mode="change">
+               <attList>                  
+                  <attDef ident="subtype" mode="delete" />
+               </attList>
+            </classSpec>
             <classSpec ident="att.pointing" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.pointing.group" module="tei" type="atts" mode="delete" />
             <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
