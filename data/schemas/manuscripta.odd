@@ -1077,28 +1077,18 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="bibl" module="core" mode="change">
-                        <!--<content>
-                            <sequence>
-                                <elementRef key="author" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="editor" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="title" minOccurs="1" maxOccurs="unbounded" />
-                                <elementRef key="pubPlace" minOccurs="0" />
-                                <elementRef key="date" />
-                                <elementRef key="edition" minOccurs="0" />
-                                <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded" />
-                            </sequence>
-                        </content>-->
                         <content>
                             <rng:ref name="ref" />
                             <rng:optional>
                                 <rng:ref name="date" />
                             </rng:optional>
                             <rng:zeroOrMore>
-                                <rng:ref name="biblScope" />
-                            </rng:zeroOrMore>
-                            <rng:zeroOrMore>
-                                <rng:ref name="citedRange" />
+                                <rng:zeroOrMore>
+                                    <rng:ref name="biblScope" />
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="citedRange" />
+                                </rng:zeroOrMore>
                             </rng:zeroOrMore>
                         </content>
                         <attList>
