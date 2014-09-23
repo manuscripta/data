@@ -442,13 +442,6 @@
                                         <rubric xml:lang="gr">ἐκ τῆς ὀκτατεύχου</rubric>
                                     </egXML>
                                 </p>
-                                <p>If the title is missing in the manuscript and can be supplied, this should be indicated with the <gi>supplied</gi> element with the <att>reason</att> attribute and the value <val>omitted</val>.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <title type="uniform" xml:lang="la" key="TLG 0545.001">
-                                            <supplied reason="omitted">De natura animalium libri XVII</supplied>
-                                        </title>
-                                    </egXML>
-                                </p>
                             </div>
                             <div xml:id="rubric">
                                 <head>Rubric</head>
@@ -1100,7 +1093,7 @@
                             <rng:ref name="ref" />
                             <rng:optional>
                                 <rng:ref name="date" />
-                            </rng:optional>                            
+                            </rng:optional>
                             <rng:zeroOrMore>
                                 <rng:ref name="biblScope" />
                             </rng:zeroOrMore>
@@ -2719,7 +2712,7 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="TEI" module="textstructure" mode="change">
-                       <!-- <content>
+                        <!-- <content>
                             <rng:group>
                                 <rng:ref name="teiHeader" />
                                 <rng:choice>
@@ -2914,6 +2907,14 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="title" mode="change" module="core">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text />
+                                    <rng:ref name="q" />
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
                                 <defaultVal>uniform</defaultVal>
@@ -2995,83 +2996,75 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-                    
+
                     <!-- ADDED INCLUDE ELEMENT FOR XINCLUDE -->
-                    
-                    <elementSpec 
-                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                        ident="include" 
-                        ns="http://www.w3.org/2001/XInclude" 
-                        mode="add">
-                        <desc  xml:lang="en" versionDate="2014-01-12">The W3C XInclude element</desc>
+
+                    <elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="include" ns="http://www.w3.org/2001/XInclude" mode="add">
+                        <desc xml:lang="en" versionDate="2014-01-12">The W3C XInclude element</desc>
                         <classes>
-                            <memberOf key="model.common"/>
-                            <memberOf key="model.teiHeaderPart"/>
+                            <memberOf key="model.common" />
+                            <memberOf key="model.teiHeaderPart" />
                         </classes>
                         <content>
                             <rng:optional>
-                                <rng:ref name="fallback"/>
+                                <rng:ref name="fallback" />
                             </rng:optional>
                         </content>
                         <attList>
                             <attDef ident="href">
-                                <desc  xml:lang="en" versionDate="2014-01-12">pointer to the resource being included</desc>
+                                <desc xml:lang="en" versionDate="2014-01-12">pointer to the resource being included</desc>
                                 <datatype>
-                                    <rng:ref name="data.pointer"/>
+                                    <rng:ref name="data.pointer" />
                                 </datatype>
                             </attDef>
-                            
-                            <attDef ident="parse"  usage="opt">
+
+                            <attDef ident="parse" usage="opt">
                                 <defaultVal>xml</defaultVal>
                                 <valList type="closed">
-                                    <valItem ident="xml"/>
-                                    <valItem ident="text"/>
+                                    <valItem ident="xml" />
+                                    <valItem ident="text" />
                                 </valList>
                             </attDef>
-                            
+
                             <attDef ident="xpointer" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <rng:text />
                                 </datatype>
                             </attDef>
-                            
-                            <attDef ident="encoding"  usage="opt">
+
+                            <attDef ident="encoding" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <rng:text />
                                 </datatype>
                             </attDef>
-                            
+
                             <attDef ident="accept" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <rng:text />
                                 </datatype>
                             </attDef>
-                            
-                            <attDef ident="accept-charset"  usage="opt">
+
+                            <attDef ident="accept-charset" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <rng:text />
                                 </datatype>
                             </attDef>
-                            
-                            <attDef ident="accept-language"  usage="opt">
+
+                            <attDef ident="accept-language" usage="opt">
                                 <datatype>
-                                    <rng:text/>
+                                    <rng:text />
                                 </datatype>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    
-                    <elementSpec 
-                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                        ident="fallback" 
-                        ns="http://www.w3.org/2001/XInclude" 
-                        mode="add">
-                        <desc  xml:lang="en" versionDate="2014-01-12">Wrapper for fallback elements if an XInclude fails</desc>
+
+                    <elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="fallback" ns="http://www.w3.org/2001/XInclude" mode="add">
+                        <desc xml:lang="en" versionDate="2014-01-12">Wrapper for fallback elements if an XInclude fails</desc>
                         <content>
                             <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0">
                                 <choice>
-                                    <text/>
-                                    <ref name="macro.anyThing"/>
+                                    <text />
+                                    <ref name="macro.anyThing" />
                                 </choice>
                             </oneOrMore>
                         </content>
