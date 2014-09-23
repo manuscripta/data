@@ -430,7 +430,7 @@
                <classSpec ident="att.dimensions" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.damaged" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
-               <classSpec ident="att.canonical" module="tei" type="atts" mode="change">
+               <classSpec ident="att.canonical" module="tei" type="atts" mode="change">                  
                   <attList>
                      <attDef ident="key" mode="delete" />
                   </attList>
@@ -459,6 +459,16 @@
                <classSpec ident="att.responsibility" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.editLike" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.global" module="tei" type="atts" mode="change">
+                  <constraintSpec ident="xmlid.text.check" scheme="isoschematron">
+                     <desc versionDate="2014-09-23" xml:lang="en">checks that <att>xml:id</att> does not contain underscore or hyphen.</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="tei:*/@xml:id">
+                              <sch:report test="contains(., '_') or contains(., '-')">The xml:id cannot contain underscores or hyphens</sch:report>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="xml:lang" mode="change" usage="opt">
                         <valList mode="replace" type="closed">
