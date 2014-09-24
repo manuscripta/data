@@ -93,11 +93,8 @@
                      <memberOf key="att.typed" mode="delete" />
                   </classes>
                   <content>
-                     <rng:choice>
-                        <rng:ref name="supplied" />
-                        <rng:text />
-                     </rng:choice>
-                  </content>
+                     <rng:text />
+                  </content>                  
                   <attList>
                      <attDef ident="facs" mode="delete" />
                      <attDef ident="n" mode="delete" />
@@ -282,6 +279,9 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="forename" mode="change">
+                  <content>
+                     <rng:text />
+                  </content>
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
@@ -297,6 +297,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
+               <elementSpec ident="nameLink" mode="change" module="namesdates" />
                <elementSpec ident="p" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
@@ -316,6 +317,13 @@
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="publisher" mode="change" module="core">
+                  <attList>
+                     <attDef ident="facs" mode="delete" />
+                     <attDef ident="n" mode="delete" />
+                     <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
                <elementSpec ident="pubPlace" mode="change">
