@@ -853,10 +853,10 @@
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <moduleRef key="tei" />
-                    <moduleRef key="core" include="add author bibl biblScope citedRange date del desc editor foreign gap graphic item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
-                    <moduleRef key="header" include="authority change edition extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
+                    <moduleRef key="core" include="add author bibl biblScope citedRange date del desc editor foreign gap graphic item lb list listBibl measure note num p q quote ref resp respStmt sic term textLang title unclear" />
+                    <moduleRef key="header" include="authority change extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
-                    <moduleRef key="namesdates" include="addName country forename nameLink persName placeName region roleName settlement surname" />
+                    <moduleRef key="namesdates" include="country persName placeName region settlement" />
                     <moduleRef key="textstructure" include="TEI body text" />
                     <moduleRef key="transcr" include="ex facsimile supplied surface" />
 
@@ -935,29 +935,6 @@
                                 </rubric>
                             </egXML>
                         </exemplum>
-                    </elementSpec>
-                    <elementSpec ident="addName" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.personal" mode="delete" />
-                            <memberOf key="att.typed" mode="delete" />
-                        </classes>
-                        <!--<content>
-                            <alternate>
-                                <elementRef key="supplied" />
-                                <textNode />
-                            </alternate>
-                        </content>-->
-                        <content>
-                            <rng:choice>
-                                <rng:ref name="supplied" />
-                                <rng:text />
-                            </rng:choice>
-                        </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                        </attList>
                     </elementSpec>
                     <elementSpec ident="additional" module="msdescription" mode="change">
                         <!--<content>
@@ -1369,7 +1346,7 @@
                                 </collation>
                             </egXML>
                         </exemplum>
-                    </elementSpec>                   
+                    </elementSpec>
                     <elementSpec ident="colophon" module="msdescription" mode="change">
                         <content>
                             <rng:zeroOrMore>
@@ -1529,6 +1506,35 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="del" mode="change" module="core" />
+                    <elementSpec ident="depth" mode="change" module="msdescription">
+                        <constraintSpec ident="depth.attributes" scheme="isoschematron">
+                            <desc versionDate="2014-09-09" xml:lang="en">checks that the <gi>depth</gi> element has either a <att>quantity</att> or <att>min</att>/<att>max</att> attributes.</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:depth">
+                                        <sch:assert test="@quantity or (@min and @max)">The depth element must have either @quantity or @min/@max. </sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
+                        <attList>
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="mm" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="atLeast" mode="delete" />
+                            <attDef ident="atMost" mode="delete" />
+                            <attDef ident="extent" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="precision" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="desc" mode="change" module="core" />
                     <elementSpec ident="dimensions" mode="change" module="msdescription">
                         <content>
                             <rng:optional>
@@ -1566,33 +1572,6 @@
                             <attDef ident="unit" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="depth" mode="change" module="msdescription">
-                        <constraintSpec ident="depth.attributes" scheme="isoschematron">
-                            <desc versionDate="2014-09-09" xml:lang="en">checks that the <gi>depth</gi> element has either a <att>quantity</att> or <att>min</att>/<att>max</att> attributes.</desc>
-                            <constraint>
-                                <sch:pattern>
-                                    <sch:rule context="tei:depth">
-                                        <sch:assert test="@quantity or (@min and @max)">The depth element must have either @quantity or @min/@max. </sch:assert>
-                                    </sch:rule>
-                                </sch:pattern>
-                            </constraint>
-                        </constraintSpec>
-                        <attList>
-                            <attDef ident="unit" mode="change" usage="req">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="mm" />
-                                </valList>
-                            </attDef>
-                            <attDef ident="atLeast" mode="delete" />
-                            <attDef ident="atMost" mode="delete" />
-                            <attDef ident="extent" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="precision" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
-                    </elementSpec>
                     <elementSpec ident="editor" mode="change" module="core">
                         <content>
                             <rng:ref name="persName" />
@@ -1607,6 +1586,7 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="ex" mode="change" module="transcr" />
                     <elementSpec ident="explicit" mode="change" module="msdescription">
                         <attList>
                             <attDef ident="defective" mode="change" usage="req" />
@@ -1658,6 +1638,7 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="fileDesc" mode="change" module="header" />
                     <elementSpec ident="filiation" mode="change" module="msdescription">
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
@@ -1693,6 +1674,7 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="foliation" mode="change" module="msdescription" />
                     <elementSpec ident="foreign" mode="change" module="core">
                         <attList>
                             <attDef ident="xml:id" mode="delete" />
@@ -1700,21 +1682,9 @@
                             <attDef ident="facs" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="forename" mode="change">
-                        <content>
-                            <rng:text />
-                        </content>
-                        <attList>
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="role" mode="delete" />
-                            <attDef ident="key" mode="delete" />
-                            <attDef ident="ref" mode="delete" />
-                            <attDef ident="subtype" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                        </attList>
-                    </elementSpec>
+                    <elementSpec ident="gap" mode="change" module="core" />
+                    <elementSpec ident="graphic" mode="change" module="core" />
+                    <elementSpec ident="handDesc" mode="change" module="msdescription" />
                     <!--       handNote attributes   WORK IN PROGRESS    -->
                     <elementSpec ident="handNote" mode="change" module="msdescription">
                         <constraintSpec ident="handNote.n" scheme="isoschematron">
@@ -1839,6 +1809,7 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="item" mode="change" module="core" />
                     <elementSpec ident="layout" mode="change" module="msdescription">
                         <constraintSpec ident="layout.proximity" scheme="isoschematron">
                             <constraint>
@@ -1848,6 +1819,8 @@
                             </constraint>
                         </constraintSpec>
                     </elementSpec>
+                    <elementSpec ident="layoutDesc" mode="change" module="msdescription" />
+                    <elementSpec ident="lb" mode="change" module="core" />
                     <elementSpec ident="list" module="core" mode="change">
                         <!--<content>
                             <elementRef key="item" minOccurs="1" maxOccurs="unbounded" />
@@ -1992,6 +1965,8 @@
                             </constraint>
                         </constraintSpec>
                     </elementSpec>
+                    <elementSpec ident="measure" mode="change" module="core" />
+                    <elementSpec ident="msContents" mode="change" module="msdescription" />
                     <elementSpec ident="msDesc" mode="change" module="msdescription">
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req" />
@@ -2372,6 +2347,9 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="msName" mode="change" module="msdescription" />
+                    <elementSpec ident="msPart" mode="change" module="msdescription" />
+                    <elementSpec ident="musicNotation" mode="change" module="msdescription" />
                     <elementSpec ident="note" mode="change" module="core">
                         <attList>
                             <attDef ident="anchored" mode="delete" />
@@ -2386,6 +2364,7 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="num" mode="change" module="core" />
                     <elementSpec ident="objectDesc" mode="change" module="msdescription">
                         <attList>
                             <attDef ident="form" mode="change" usage="req">
@@ -2410,6 +2389,8 @@
                             </constraint>
                         </constraintSpec>
                     </elementSpec>
+                    <elementSpec ident="origPlace" mode="change" module="msdescription" />
+                    <elementSpec ident="origin" mode="change" module="msdescription" />
                     <elementSpec ident="p" mode="change" module="core">
                         <attList>
                             <attDef ident="xml:id" mode="delete" />
@@ -2450,6 +2431,9 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
+                    <elementSpec ident="physDesc" mode="change" module="msdescription" />
+                    <elementSpec ident="placeName" mode="change" module="namesdates" />
+                    <elementSpec ident="provenance" mode="change" module="msdescription" />
                     <elementSpec ident="publicationStmt" mode="change" module="header">
                         <content>
                             <rng:ref name="authority" />
@@ -2462,23 +2446,7 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="publisher" mode="change" module="core">
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="pubPlace" mode="change" module="core">
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="key" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="ref" mode="delete" />
-                            <attDef ident="role" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                        </attList>
-                    </elementSpec>
+                    <elementSpec ident="q" mode="change" module="core" />
                     <elementSpec ident="quote" mode="change" module="core">
                         <attList>
                             <attDef ident="xml:lang" mode="change" usage="opt">
@@ -2499,6 +2467,8 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="ref" mode="change" module="core" />
+                    <elementSpec ident="region" mode="change" module="namesdates" />
                     <elementSpec ident="repository" mode="change" module="namesdates">
                         <classes mode="change">
                             <memberOf key="att.canonical" mode="delete" />
@@ -2559,7 +2529,7 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="revisionDesc" module="tei" mode="change">
+                    <elementSpec ident="revisionDesc" mode="change" module="header">
                         <content>
                             <rng:oneOrMore>
                                 <rng:ref name="change" />
@@ -2627,6 +2597,10 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="sic" mode="change" module="core" />
+                    <elementSpec ident="signatures" mode="change" module="msdescription" />
+                    <elementSpec ident="sourceDesc" mode="change" module="header" />
+                    <elementSpec ident="summary" mode="change" module="msdescription" />
                     <elementSpec ident="supplied" mode="change" module="transcr">
                         <attList>
                             <attDef ident="reason" mode="change" usage="req">
@@ -2918,6 +2892,7 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="unclear" mode="change" module="core" />
                     <elementSpec ident="watermark" mode="change" module="msdescription">
                         <constraintSpec ident="watermark.n.check" scheme="isoschematron">
                             <constraint>
@@ -2962,84 +2937,6 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-
-                    <!-- ADDED INCLUDE ELEMENT FOR XINCLUDE -->
-
-                    <elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="include" ns="http://www.w3.org/2001/XInclude" mode="add">
-                        <desc xml:lang="en" versionDate="2014-01-12">The W3C XInclude element</desc>
-                        <classes>
-                            <memberOf key="model.common" />
-                            <memberOf key="model.teiHeaderPart" />
-                        </classes>
-                        <content>
-                            <rng:optional>
-                                <rng:ref name="fallback" />
-                            </rng:optional>
-                        </content>
-                        <attList>
-                            <attDef ident="href">
-                                <desc xml:lang="en" versionDate="2014-01-12">pointer to the resource being included</desc>
-                                <datatype>
-                                    <rng:ref name="data.pointer" />
-                                </datatype>
-                            </attDef>
-
-                            <attDef ident="parse" usage="opt">
-                                <defaultVal>xml</defaultVal>
-                                <valList type="closed">
-                                    <valItem ident="xml" />
-                                    <valItem ident="text" />
-                                </valList>
-                            </attDef>
-
-                            <attDef ident="xpointer" usage="opt">
-                                <datatype>
-                                    <rng:text />
-                                </datatype>
-                            </attDef>
-
-                            <attDef ident="encoding" usage="opt">
-                                <datatype>
-                                    <rng:text />
-                                </datatype>
-                            </attDef>
-
-                            <attDef ident="accept" usage="opt">
-                                <datatype>
-                                    <rng:text />
-                                </datatype>
-                            </attDef>
-
-                            <attDef ident="accept-charset" usage="opt">
-                                <datatype>
-                                    <rng:text />
-                                </datatype>
-                            </attDef>
-
-                            <attDef ident="accept-language" usage="opt">
-                                <datatype>
-                                    <rng:text />
-                                </datatype>
-                            </attDef>
-                        </attList>
-                    </elementSpec>
-
-                    <elementSpec xmlns:rng="http://relaxng.org/ns/structure/1.0" ident="fallback" ns="http://www.w3.org/2001/XInclude" mode="add">
-                        <desc xml:lang="en" versionDate="2014-01-12">Wrapper for fallback elements if an XInclude fails</desc>
-                        <content>
-                            <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0">
-                                <choice>
-                                    <text />
-                                    <ref name="macro.anyThing" />
-                                </choice>
-                            </oneOrMore>
-                        </content>
-                    </elementSpec>
-                    <macroSpec ident="macro.anyThing" mode="add">
-                        <content>
-                            <?NameList?>
-                        </content>
-                    </macroSpec>
 
                     <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
 
