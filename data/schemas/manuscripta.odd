@@ -628,7 +628,7 @@
                                         <specDesc key="collation" />
                                     </specList>
                                 </p>
-                                <p>The support material should be recorded in the <att>material</att> attribute (values: <val>paper</val>, <val>parchment</val> or <val>mixed</val>). Further description of the support should be added in the <gi>support</gi> element.</p>
+                                <p>The support material for the codicological unit(s) should be recorded in the <att>material</att> attribute (values: <val>paper</val>, <val>parchment</val> or <val>mixed</val>) but not for the bookblock. Further description of the support should be added in the <gi>support</gi> element.</p>
                                 <div xml:id="support">
                                     <head>Support</head>
                                     <p>For each kind of support material record the extent inside a paragraph, with the <gi>locus</gi> element. Give the height and width of the leaves in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>leaf</val>).  Specify the support material in one or more <gi>material</gi> elements. (values: Western paper, Western paper without watermark, Arabic paper, Parchment).
@@ -2432,7 +2432,7 @@
                     </elementSpec>
                     <elementSpec ident="physDesc" mode="change" module="msdescription" />
                     <elementSpec ident="placeName" mode="change" module="namesdates" />
-                    <elementSpec ident="provenance" mode="change" module="msdescription" />                    
+                    <elementSpec ident="provenance" mode="change" module="msdescription" />
                     <elementSpec ident="publicationStmt" mode="change" module="header">
                         <content>
                             <rng:ref name="authority" />
@@ -2469,9 +2469,10 @@
                     </elementSpec>
                     <elementSpec ident="ref" mode="change" module="core">
                         <content>
-                            <rng:empty/>
+                            <rng:empty />
                         </content>
                         <constraintSpec ident="ref.content.check" scheme="isoschematron">
+                            <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>target</att> attribute in the <gi>ref</gi> element starts with #</desc>
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:ref/@target">
@@ -2644,8 +2645,31 @@
                         </content>
                     </elementSpec>
                     <elementSpec ident="supportDesc" mode="change" module="msdescription">
+                        <content>
+                            <rng:optional>
+                                <rng:ref name="support" />
+                            </rng:optional>
+                            <rng:ref name="extent" />
+                            <rng:ref name="foliation" />
+                            <rng:optional>
+                                <rng:ref name="collation" />
+                            </rng:optional>
+                        </content>
+                        <constraintSpec ident="material.support.check" scheme="isoschematron">
+                            <desc versionDate="2014-09-25" xml:lang="en">checks that the <gi>supportDesc</gi> element only has a <att>material</att> attribute when it is a descendant of <gi>msPart</gi></desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:msPart//tei:supportDesc">
+                                        <sch:assert test="@material">Use the material attribute for supportDesc for codicological units.</sch:assert>
+                                    </sch:rule>
+                                    <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc">
+                                        <sch:report test="@material">Do not use the material attribute for supportDesc for the bookblock.</sch:report>
+                                    </sch:rule>
+                                </sch:pattern>                                
+                            </constraint>
+                        </constraintSpec>
                         <attList>
-                            <attDef ident="material" mode="change" usage="req">
+                            <attDef ident="material" mode="change" usage="opt">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="paper" />
                                     <valItem ident="parchment" />
