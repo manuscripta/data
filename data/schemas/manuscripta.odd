@@ -2467,7 +2467,28 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="ref" mode="change" module="core" />
+                    <elementSpec ident="ref" mode="change" module="core">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <constraintSpec ident="ref.content.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:ref/@target">
+                                        <sch:assert test="starts-with(., '#')">The target value must start with #</sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
+                        <attList>
+                            <attDef ident="target" mode="change" usage="req" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="type" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="region" mode="change" module="namesdates" />
                     <elementSpec ident="repository" mode="change" module="namesdates">
                         <classes mode="change">
