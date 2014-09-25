@@ -2400,7 +2400,7 @@
                     </elementSpec>
                     <elementSpec ident="persName" mode="change" module="namesdates">
                         <content>
-                            <rng:ref name="ref" />
+                            <rng:empty />
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
@@ -2469,7 +2469,7 @@
                     </elementSpec>
                     <elementSpec ident="ref" mode="change" module="core">
                         <content>
-                            <rng:empty />
+                            <rng:text />
                         </content>
                         <constraintSpec ident="ref.content.check" scheme="isoschematron">
                             <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>target</att> attribute in the <gi>ref</gi> element starts with #</desc>
@@ -2650,7 +2650,9 @@
                                 <rng:ref name="support" />
                             </rng:optional>
                             <rng:ref name="extent" />
-                            <rng:ref name="foliation" />
+                            <rng:optional>
+                                <rng:ref name="foliation" />
+                            </rng:optional>
                             <rng:optional>
                                 <rng:ref name="collation" />
                             </rng:optional>
@@ -2665,7 +2667,7 @@
                                     <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc">
                                         <sch:report test="@material">Do not use the material attribute for supportDesc for the bookblock.</sch:report>
                                     </sch:rule>
-                                </sch:pattern>                                
+                                </sch:pattern>
                             </constraint>
                         </constraintSpec>
                         <attList>
