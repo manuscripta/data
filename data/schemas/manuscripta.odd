@@ -1967,6 +1967,16 @@
                     <elementSpec ident="measure" mode="change" module="core" />
                     <elementSpec ident="msContents" mode="change" module="msdescription" />
                     <elementSpec ident="msDesc" mode="change" module="msdescription">
+                        <constraintSpec ident="folio.ref.check" scheme="isoschematron">
+                            <desc versionDate="2014-09-26" xml:lang="en">Checks that folio references are only given in <gi>locus</gi> elements and not in the running text.</desc>
+                            <constraint>
+                                <sch:pattern>                                    
+                                    <sch:rule context="tei:msDesc//*">
+                                        <sch:report test="text()[matches(., 'f. \p{N}|ff. \p{N}')]"> Do not use f./ff. in the running text for folio references. Use the locus element instead.</sch:report>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req" />
                             <attDef ident="xml:lang" mode="delete" />
@@ -2790,8 +2800,7 @@
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
-                        </constraintSpec>
-
+                        </constraintSpec>                        
                         <attList>
                             <attDef ident="xml:lang" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
