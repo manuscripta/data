@@ -1902,7 +1902,7 @@
                                         <sch:report test="count(tei:locus[following::element()]) &gt; 1"> Use locusGrp when grouping together more than one locus.</sch:report>
                                     </sch:rule>-->
                                     <sch:rule context="//tei:locusGrp">
-                                        <sch:report test="count(tei:locus)&lt; 2"> Use locusGrp when grouping together more than one locus.</sch:report>
+                                        <sch:report test="count(tei:locus) &lt; 2"> Only use locusGrp when grouping together more than one locus.</sch:report>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
