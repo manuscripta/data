@@ -752,14 +752,17 @@
                                 <p>Give the number of columns and ruled lines in the <gi>layout</gi> element using the <att>columns</att> and <att>ruledLines</att> attributes (or the <att>writtenLines</att> attribute for unruled manuscripts). The <att>writtenLines</att> can be added also in the description of ruled manuscripts, especially when this number differs from the number of ruled lines. If the number of ruled lines varies give the minimum and maximum values with whitespace in-between. Give the extent in the <gi>locus</gi> element and use the <gi>term</gi> elements to specify patterns in accordance with Leroy-Sautel where applicable. Give the height and width of the writing area in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>written</val>)
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <layoutDesc>
-                                            <layout columns="2" ruledLines="30 31">
-                                                <locus from="1r" to="120v" scheme="folios" />
+                                            <layout columns="1" ruledLines="20" writtenLines="38 39">
+                                                <locus from="1r" to="91v" scheme="folios" />
                                                 <term type="layout">ruling pattern</term>
                                                 <term type="proximity">identical with</term>
-                                                <ref target="bibliography.xml#sautel2005">Sautel 14C2</ref>
+                                                <bibl>
+                                                    <ref target="#Sautel1995" />
+                                                    <citedRange unit="number" from="20D1" to="20D1" />
+                                                </bibl>
                                                 <dimensions type="written">
-                                                    <height quantity="175" unit="mm" />
-                                                    <width quantity="105" unit="mm" />
+                                                    <height min="185" max="190" unit="mm" />
+                                                    <width min="125" max="130" unit="mm" />
                                                 </dimensions>
                                             </layout>
                                             <layout column="1" ruledLines="20 24" writtenLines="38 44">
