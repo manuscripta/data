@@ -1470,7 +1470,9 @@
                     </elementSpec>
                     <elementSpec ident="decoDesc" mode="change" module="msdescription">
                         <content>
-                            <rng:ref name="p" />
+                            <rng:oneOrMore>
+                                <rng:ref name="p" />
+                            </rng:oneOrMore>
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
@@ -1970,7 +1972,7 @@
                         <constraintSpec ident="folio.ref.check" scheme="isoschematron">
                             <desc versionDate="2014-09-26" xml:lang="en">Checks that folio references are only given in <gi>locus</gi> elements and not in the running text.</desc>
                             <constraint>
-                                <sch:pattern>                                    
+                                <sch:pattern>
                                     <sch:rule context="tei:msDesc//*">
                                         <sch:report test="text()[matches(., 'f. \p{N}|ff. \p{N}')]"> Do not use f./ff. in the running text for folio references. Use the locus element instead.</sch:report>
                                     </sch:rule>
@@ -2482,11 +2484,11 @@
                             <rng:text />
                         </content>
                         <constraintSpec ident="ref.content.check" scheme="isoschematron">
-                            <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>target</att> attribute in the <gi>ref</gi> element starts with #</desc>
+                            <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>target</att> attribute in the <gi>ref</gi> element starts with # or http</desc>
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., '#')">The target value must start with #</sch:assert>
+                                        <sch:assert test="starts-with(., '#') or starts-with(., 'http')">The target value must start with # or http</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -2800,7 +2802,7 @@
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
-                        </constraintSpec>                        
+                        </constraintSpec>
                         <attList>
                             <attDef ident="xml:lang" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
