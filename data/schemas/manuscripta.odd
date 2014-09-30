@@ -2374,7 +2374,24 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="msName" mode="change" module="msdescription" />
-                    <elementSpec ident="msPart" mode="change" module="msdescription" />
+                    <elementSpec ident="msPart" mode="change" module="msdescription">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="msIdentifier" />
+                                <rng:ref name="msContents" />
+                                <rng:ref name="physDesc" />
+                                <rng:optional>
+                                    <rng:ref name="history" />
+                                </rng:optional>
+                                <rng:optional>
+                                    <rng:ref name="additional" />
+                                </rng:optional>
+                                <rng:zeroOrMore>
+                                    <rng:ref name="msPart" />
+                                </rng:zeroOrMore>
+                            </rng:group>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="musicNotation" mode="change" module="msdescription" />
                     <elementSpec ident="note" mode="change" module="core">
                         <attList>
