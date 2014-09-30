@@ -997,17 +997,16 @@
                         </content>-->
                         <content>
                             <rng:choice>
-                                <rng:text />
-                                <rng:ref name="supplied" />
+                                <rng:text />                                
                                 <rng:ref name="persName" />
                             </rng:choice>
                         </content>
                         <constraintSpec ident="anonymousauthor.check" scheme="isoschematron">
-                            <desc versionDate="2014-08-04" xml:lang="en">checks that <gi>author</gi> only contains <q>Anonymous</q> if <gi>supplied</gi> or <gi>persName</gi> is not used</desc>
+                            <desc versionDate="2014-09-30" xml:lang="en">checks that <gi>author</gi> only contains <q>Anonymous</q> if <gi>persName</gi> is not used</desc>
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:author">
-                                        <sch:assert test="text()='Anonymous' or tei:supplied or tei:persName">The author element may only contain the value "Anonymous" when not using a supplied or persName element.</sch:assert>
+                                        <sch:assert test="text()='Anonymous' or tei:supplied or tei:persName">The author element may only contain the value "Anonymous" when not using a persName element.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -1985,11 +1984,12 @@
                             </rng:group>
                         </content>
                         <constraintSpec ident="folio.ref.check" scheme="isoschematron">
-                            <desc versionDate="2014-09-26" xml:lang="en">Checks that folio references are only given in <gi>locus</gi> elements and not in the running text.</desc>
+                            <desc versionDate="2014-09-26" xml:lang="en">Checks that folio and page references are only given in <gi>locus</gi> elements and not in the running text.</desc>
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:msDesc//*">
                                         <sch:report test="text()[matches(., 'f. \p{N}|ff. \p{N}')]"> Do not use f./ff. in the running text for folio references. Use the locus element instead.</sch:report>
+                                        <sch:report test="text()[matches(., 'p. \p{N}|pp. \p{N}')]"> Do not use p./pp. in the running text for page references. Use the locus element instead.</sch:report>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
