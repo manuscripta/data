@@ -1972,6 +1972,18 @@
                     <elementSpec ident="measure" mode="change" module="core" />
                     <elementSpec ident="msContents" mode="change" module="msdescription" />
                     <elementSpec ident="msDesc" mode="change" module="msdescription">
+                        <content>
+                            <rng:group>
+                                <rng:ref name="msIdentifier" />
+                                <rng:ref name="msContents" />
+                                <rng:ref name="physDesc" />
+                                <rng:ref name="history" />
+                                <rng:ref name="additional" />
+                                <rng:oneOrMore>
+                                    <rng:ref name="msPart" />
+                                </rng:oneOrMore>
+                            </rng:group>
+                        </content>
                         <constraintSpec ident="folio.ref.check" scheme="isoschematron">
                             <desc versionDate="2014-09-26" xml:lang="en">Checks that folio references are only given in <gi>locus</gi> elements and not in the running text.</desc>
                             <constraint>
