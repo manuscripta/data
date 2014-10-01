@@ -81,9 +81,8 @@
                <moduleRef key="tei" />
                <moduleRef key="core" include="author bibl biblScope date editor listBibl p pubPlace q title" />
                <moduleRef key="header" include="fileDesc publicationStmt sourceDesc teiHeader titleStmt" />
-               <moduleRef key="namesdates" include="addName forename nameLink persName surname" />
-               <moduleRef key="textstructure" include="TEI body text" />
-               <moduleRef key="transcr" include="supplied" />
+               <moduleRef key="namesdates" include="addName forename nameLink persName placeName surname" />
+               <moduleRef key="textstructure" include="TEI body text" />               
 
                <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
@@ -106,10 +105,20 @@
                      <rng:choice>
                         <rng:empty />
                         <rng:optional>
-                           <rng:ref name="supplied" />
+                           <rng:ref name="persName" />
                         </rng:optional>
                      </rng:choice>
                   </content>
+                  <constraintSpec ident="persname.check" scheme="isoschematron">
+                     <desc versionDate="2014-10-01" xml:lang="en">checks that <gi>persName</gi> only has the <att>evidence</att> attribute with the value conjecture or external</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="tei:author/tei:persName">
+                              <sch:assert test="@evidence[matches(., 'conjecture') or matches(., 'external')]">The persName element must have the evidence attribute with the value conjecture or external</sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="ref" mode="change" usage="req" />
                      <attDef ident="facs" mode="delete" />
@@ -225,7 +234,7 @@
                      </egXML>
                   </exemplum>
                </elementSpec>
-               <elementSpec ident="body" mode="change">
+               <elementSpec ident="body" module="textstructure" mode="change">
                   <content>                     
                      <rng:ref name="listBibl" />
                   </content>
@@ -262,7 +271,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="editor" mode="change">
+               <elementSpec ident="editor" module="core" mode="change">
                   <content>
                      <rng:empty />
                   </content>
@@ -272,13 +281,13 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="fileDesc" mode="change">
+               <elementSpec ident="fileDesc" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="forename" mode="change">
+               <elementSpec ident="forename" module="namesdates" mode="change">
                   <content>
                      <rng:text />
                   </content>
@@ -286,7 +295,7 @@
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="listBibl" mode="change">
+               <elementSpec ident="listBibl" module="core" mode="change">
                   <content>
                      <rng:oneOrMore>
                         <rng:ref name="bibl" />
@@ -298,22 +307,35 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="nameLink" mode="change" module="namesdates" />
-               <elementSpec ident="p" mode="change">
+               <elementSpec ident="p" module="core" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="persName" mode="change">
+               <elementSpec ident="persName" module="namesdates" mode="change">
                   <attList>
-                     <attDef ident="ref" mode="change" usage="req" />
-                     <attDef ident="xml:lang" mode="delete" />
-                     <attDef ident="when" mode="delete" />
+                     <attDef ident="ref" mode="delete" />
                      <attDef ident="from" mode="delete" />
                      <attDef ident="to" mode="delete" />
+                     <attDef ident="type" mode="delete" />
+                     <attDef ident="when" mode="delete" />
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />                     
                   </attList>
                </elementSpec>
-               <elementSpec ident="publicationStmt" mode="change">
+               <elementSpec ident="placeName" module="namesdates" mode="change">
+                  <attList>
+                     <attDef ident="ref" mode="delete" />
+                     <attDef ident="from" mode="delete" />
+                     <attDef ident="to" mode="delete" />
+                     <attDef ident="type" mode="delete" />
+                     <attDef ident="when" mode="delete" />
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />                     
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="publicationStmt" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
@@ -326,56 +348,66 @@
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="pubPlace" mode="change">
+               <elementSpec ident="pubPlace" module="core" mode="change">
+                  <content>
+                     <rng:choice>
+                        <rng:text/>
+                        <rng:ref name="placeName"/>
+                     </rng:choice>
+                  </content>
+                  <constraintSpec ident="placename.check" scheme="isoschematron">
+                     <desc versionDate="2014-10-01" xml:lang="en">checks that <gi>placeName</gi> only has the <att>evidence</att> attribute with the value conjecture or external</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="tei:pubPlace/tei:placeName">
+                              <sch:assert test="@evidence[matches(., 'conjecture') or matches(., 'external')]">The placeName element must have the evidence attribute with the value conjecture or external</sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="q" mode="change">
+               <elementSpec ident="q" module="core" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="sourceDesc" mode="change">
+               <elementSpec ident="sourceDesc" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
-               </elementSpec>
-               <elementSpec ident="supplied" mode="change">
-                  <attList>
-                     <attDef ident="xml:id" mode="delete" />
-                     <attDef ident="xml:lang" mode="delete" />
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="surname" mode="change">
+               </elementSpec>               
+               <elementSpec ident="surname" module="namesdates" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="TEI" mode="change">
+               <elementSpec ident="TEI" module="textstructure" mode="change">
                   <attList>
                      <attDef ident="version" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="teiHeader" mode="change">
+               <elementSpec ident="teiHeader" module="header" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="text" mode="change">
+               <elementSpec ident="text" module="textstructure" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="title" mode="change">
+               <elementSpec ident="title" module="core" mode="change">
                   <content>
                      <rng:zeroOrMore>
                         <rng:choice>
@@ -400,7 +432,7 @@
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="titleStmt" mode="change">
+               <elementSpec ident="titleStmt" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
@@ -465,7 +497,11 @@
                <classSpec ident="att.duration.w3c" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.duration.iso" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.responsibility" module="tei" type="atts" mode="delete" />
-               <classSpec ident="att.editLike" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.editLike" module="tei" type="atts" mode="change">
+                  <attList>
+                  <attDef ident="instant" mode="delete" />
+                  </attList>
+               </classSpec>
                <classSpec ident="att.global" module="tei" type="atts" mode="change">
                   <constraintSpec ident="xmlid.text.check" scheme="isoschematron">
                      <desc versionDate="2014-09-23" xml:lang="en">checks that <att>xml:id</att> does not contain underscore or hyphen.</desc>
@@ -557,10 +593,7 @@
                      <attDef ident="full" mode="delete" />
                      <attDef ident="sort" mode="delete" />
                   </attList>
-               </classSpec>
-               <classSpec ident="att.global.facs" module="transcr" type="atts" mode="delete" />
-               <classSpec ident="att.global.change" module="transcr" type="atts" mode="delete" />
-               <classSpec ident="att.coordinated" module="transcr" type="atts" mode="delete" />
+               </classSpec>               
             </schemaSpec>
          </div>
       </body>
