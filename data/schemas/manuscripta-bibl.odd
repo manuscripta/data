@@ -367,6 +367,7 @@
                   </constraintSpec>
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
                <elementSpec ident="q" module="core" mode="change">
@@ -418,7 +419,16 @@
                   </content>
                   <attList>
                      <attDef ident="level" mode="change" usage="req" />
-                     <attDef ident="xml:lang" mode="change" usage="req" />
+                     <attDef ident="xml:lang" mode="change">
+                        <valList mode="replace" type="closed">
+                           <valItem ident="grc">
+                              <desc>Ancient Greek (to 1453)</desc>
+                           </valItem>                           
+                           <valItem ident="el">
+                              <desc>Modern Greek</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
                      <attDef ident="type" mode="change">
                         <valList mode="replace" type="closed">
                            <valItem ident="main">
