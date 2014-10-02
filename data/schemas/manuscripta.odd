@@ -707,36 +707,18 @@
                                 </div>
                                 <div xml:id="collation">
                                     <head>Collation</head>
-                                    <p>Describe the quires using a list of <gi>item</gi> elements inside the <gi>collation</gi> element. The <gi>list</gi> element should have a <att>type</att> attribute with value <val>collation_formula</val>. Use Roman numerals to indicate the number of bifolia (I = singulion, II = binion, III = ternion, etc.). The extent of each quire is recorded in a <gi>locus</gi> element. For added or missing leaves give these in a <gi>term</gi> element with + or -, and a locus specification. If the first leaf of a quire is missing use <hi rend="italic">ante</hi> in a <gi>term</gi> element to indicate its place. For other positions in the quire use <hi rend="italic">post</hi> in a <gi>term</gi> element. (Endleaves are described in the <ptr target="#endleaves" /> and should not be included here.)</p>
+                                    <p>Describe the quires according to Andrist et al. (2013) in a <gi>formula</gi> element inside the <gi>collation</gi> element. Quire numbers should be given in subscript (<gi>hi</gi> element with the <att>rend</att> attribute and value <val>sub</val>), e.g. Q1–3. Use Roman numerals to indicate the number of bifolia in the quire (I = singulion, II = binion, III = ternion, IV = quaternion, etc.). Quires with the same number of bifolia should be grouped together and numbered, e.g. 4.IV = 4 quires containing quaternions. The last folio in the quire or group of quires should be given in superscript (<gi>hi</gi> element with <att>rend</att> attribute and value <val>super</val>). There should be no space between f. (or p.) and the number, cf. Andrist (2007) 28 n. 48. Added leaves should be recorded with +1 and the folio reference in superscript. Missing leaves should be recorded with -1, the term post, and a folio reference to the folio preceding the
+                                        missing leaf. If the first leaf of a quire is missing use the term ante to indicate its place.</p>
+                                    <p>Example: <hi rend="subscript"><!-- The TEI stylesheet only recognizes rend="subscript" but not rend="sub" -->Q1–2</hi>2.II<hi rend="sup"><!-- The TEI stylesheet only recognizes rend="sup" but not rend="super" -->f.8</hi> + <hi rend="subscript">Q3</hi>(III+1<hi rend="sup">f.11</hi>+1<hi rend="sup">f.15</hi>)<hi rend="sup">f.16</hi> + <hi rend="subscript">Q4</hi>III<hi rend="sup">f.22</hi> + <hi rend="subscript">Q5</hi>(III+1<hi rend="sup">f.26</hi>)<hi rend="sup">f.29</hi> + <hi rend="subscript">Q6–9</hi>4.IV<hi rend="sup">f.61</hi> + <hi rend="subscript">Q10</hi>(V-1<hi rend="sup">post f.64</hi>)<hi rend="sup">f.70</hi> + <hi rend="subscript">Q11</hi>IV<hi rend="supra">f.78</hi></p>
+                                    <p>(Endleaves are described in the <ptr target="#endleaves" /> and should not be included here.)</p>
                                     <p>Record the quire signatures in the <gi>signatures</gi> element using relevant <gi>term</gi> elements (possible choices: "lower left margin", "lower center margin", "lower right margin", "upper left margin", "upper center margin", "upper right margin", "last verso", "first recto", "none"). If only a few are visible, record these with <gi>num</gi> and <gi>locus</gi> elements.</p>
                                     <p>Record the catchwords in the <gi>catchwords</gi> element using relevant <gi>term</gi> elements (possible choices: "horizontal", "vertical", "lower left margin", "lower center margin", "lower right margin", "upper left margin", "upper center margin", "upper right margin", "last verso", "first recto", "none").
-                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                             <collation>
-                                                <list type="collation_formula">
-                                                    <item>II<locus from="1" to="4" scheme="folios" /></item>
-                                                    <item>II<locus from="5" to="8" scheme="folios" /></item>
-                                                    <item>III
-                                                <term>+1<locus from="11" to="11" scheme="folios" /></term>
-                                                        <term>+1<locus from="15" to="15" scheme="folios" /></term>
-                                                        <locus from="9" to="16" scheme="folios" />
-                                                    </item>
-                                                    <item>III<locus from="17" to="22" scheme="folios" /></item>
-                                                    <item>III
-                                                <term>+1<locus from="26" to="26" scheme="folios" /></term>
-                                                        <locus from="23" to="29" scheme="folios" />
-                                                    </item>
-                                                    <item>IV<locus from="30" to="37" scheme="folios" /></item>
-                                                    <item>IV<locus from="38" to="45" scheme="folios" /></item>
-                                                    <item>IV<locus from="46" to="53" scheme="folios" /></item>
-                                                    <item>IV<locus from="54" to="61" scheme="folios" /></item>
-                                                    <item>V
-                                                <term>-1<term>post</term><locus from="64" to="64" scheme="folios" /></term>
-                                                        <locus from="62" to="70" scheme="folios" />
-                                                    </item>
-                                                    <item>IV<locus from="71" to="78" scheme="folios" /></item>
-                                                </list>
+                                                <formula><hi rend="sub">Q1–6</hi>6.VIII<hi rend="super">f.96</hi> + <hi rend="sub">Q7</hi>IX<hi rend="super">f.114</hi> + <hi rend="sub">Q8</hi>III<hi rend="super">f.120</hi></formula>
+                                                <p>In Q7 <locus from="105" to="106" scheme="folios" /> are loose.</p>
                                                 <signatures>In the <term>lower left margin</term> of the <term>last verso</term>, mostly trimmed, but the following are visible:
-                                            <num xml:lang="grc" type="cardinal" value="2">βʹ</num><locus from="8v" to="8v" scheme="folios" />
+                                                    <num xml:lang="grc" type="cardinal" value="2">βʹ</num><locus from="8v" to="8v" scheme="folios" />
                                                     <num xml:lang="grc" type="cardinal" value="6">Ϛʹ</num><locus from="37v" to="37v" scheme="folios" />
                                                     <num xml:lang="grc" type="cardinal" value="7">ζʹ</num><locus from="45v" to="45v" scheme="folios" />
                                                 </signatures>
@@ -744,7 +726,6 @@
                                             </collation>
                                         </egXML>
                                     </p>
-                                    <p>The list items will be transformed with XSLT into a formula which may then look like this: 2 II<hi rend="sup">f.8</hi> + (III+1<hi rend="sup">f.11</hi>+1<hi rend="sup">f.15</hi>)<hi rend="sup">f.16</hi> + III<hi rend="sup">f.22</hi> + (III+1<hi rend="sup">f.26</hi>)<hi rend="sup">f.29</hi> + 4 IV<hi rend="sup">f.61</hi> + (V-1<hi rend="sup">post f.64</hi>)<hi rend="sup">f.70</hi> + IV <hi rend="sup">f.78</hi> (there should be no space between f. (or p.) and the number, cf. Andrist (2007) 28 n. 48).</p>
                                 </div>
                             </div>
                             <div xml:id="layoutdesc">
@@ -856,8 +837,9 @@
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <moduleRef key="tei" />
-                    <moduleRef key="core" include="add author bibl biblScope citedRange date del desc editor foreign gap graphic item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
+                    <moduleRef key="core" include="add author bibl biblScope citedRange date del desc editor foreign gap graphic hi item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
                     <moduleRef key="header" include="authority change extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
+                    <moduleRef key="figures" include="formula" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
                     <moduleRef key="namesdates" include="country persName placeName region settlement" />
                     <moduleRef key="textstructure" include="TEI body text" />
@@ -882,7 +864,7 @@
                                 <elementRef key="quote" minOccurs="0" />
                             </alternate>
                         </content>-->
-                        <content>
+                        <!--<content>
                             <rng:zeroOrMore>
                                 <rng:choice>
                                     <rng:text />
@@ -896,7 +878,7 @@
                                     <rng:ref name="quote" />
                                 </rng:choice>
                             </rng:zeroOrMore>
-                        </content>
+                        </content>-->
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -997,7 +979,7 @@
                         </content>-->
                         <content>
                             <rng:choice>
-                                <rng:text />                                
+                                <rng:text />
                                 <rng:ref name="persName" />
                             </rng:choice>
                         </content>
@@ -1282,30 +1264,14 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="collation" module="msdescription" mode="change">
-                        <!--<content>
-                            <elementRef key="list" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="note" minOccurs="0" maxOccurs="1" />
-                            <elementRef key="signatures" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="catchwords" minOccurs="1" maxOccurs="1" />
-                        </content>-->
                         <content>
-                            <rng:ref name="list" />
+                            <rng:ref name="formula" />
                             <rng:optional>
-                                <rng:ref name="note" />
+                                <rng:ref name="p" />
                             </rng:optional>
                             <rng:ref name="signatures" />
                             <rng:ref name="catchwords" />
                         </content>
-                        <constraintSpec ident="list.collation_formula.check" scheme="isoschematron">
-                            <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>list</gi> element has a <att>type</att> attribute with value <val>collation_formula</val> when used in the <gi>collation</gi> element</desc>
-                            <constraint>
-                                <sch:pattern>
-                                    <sch:rule context="tei:collation/tei:list">
-                                        <sch:assert test="@type='collation_formula'">Use collation_formula for the type attribute.</sch:assert>
-                                    </sch:rule>
-                                </sch:pattern>
-                            </constraint>
-                        </constraintSpec>
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -1315,29 +1281,8 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <collation>
-                                    <list type="collation_formula">
-                                        <item>II<locus from="1" to="4" scheme="folios" /></item>
-                                        <item>II<locus from="5" to="8" scheme="folios" /></item>
-                                        <item>III
-                                            <term>+1<locus from="11" to="11" scheme="folios" /></term>
-                                            <term>+1<locus from="15" to="15" scheme="folios" /></term>
-                                            <locus from="9" to="16" scheme="folios" />
-                                        </item>
-                                        <item>III<locus from="17" to="22" scheme="folios" /></item>
-                                        <item>III
-                                            <term>+1<locus from="26" to="26" scheme="folios" /></term>
-                                            <locus from="23" to="29" scheme="folios" />
-                                        </item>
-                                        <item>IV<locus from="30" to="37" scheme="folios" /></item>
-                                        <item>IV<locus from="38" to="45" scheme="folios" /></item>
-                                        <item>IV<locus from="46" to="53" scheme="folios" /></item>
-                                        <item>IV<locus from="54" to="61" scheme="folios" /></item>
-                                        <item>V
-                                            <term>-1<term>post</term><locus from="64" to="64" scheme="folios" /></term>
-                                            <locus from="62" to="70" scheme="folios" />
-                                        </item>
-                                        <item>IV<locus from="71" to="78" scheme="folios" /></item>
-                                    </list>
+                                    <formula><hi rend="sub">Q1–6</hi>6.VIII<hi rend="super">f.96</hi> + <hi rend="sub">Q7</hi>IX<hi rend="super">f.114</hi> + <hi rend="sub">Q8</hi>III<hi rend="super">f.120</hi></formula>
+                                    <p>In Q7 <locus from="105" to="106" scheme="folios" /> are loose.</p>
                                     <signatures>In the <term>lower left margin</term> of the <term>last verso</term>, mostly trimmed, but the following are visible:
                                 <num xml:lang="grc" type="cardinal" value="2">βʹ</num><locus from="8v" to="8v" scheme="folios" />
                                         <num xml:lang="grc" type="cardinal" value="6">Ϛʹ</num><locus from="37v" to="37v" scheme="folios" />
@@ -1685,6 +1630,24 @@
                             <attDef ident="facs" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="formula" mode="change" module="figures">
+                        <content>
+                            <rng:zeroOrMore>
+                                <rng:choice>
+                                    <rng:text />
+                                    <rng:ref name="hi" />
+                                </rng:choice>
+                            </rng:zeroOrMore>
+                        </content>
+                        <attList>
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="notation" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="gap" mode="change" module="core" />
                     <elementSpec ident="graphic" mode="change" module="core" />
                     <elementSpec ident="handDesc" mode="change" module="msdescription" />
@@ -1741,10 +1704,37 @@
                     </elementSpec>
                     <elementSpec ident="history" mode="change" module="msdescription">
                         <content>
-                            <rng:ref name="origin" />
-                            <rng:ref name="provenance" />
-                            <rng:ref name="acquisition" />
+                            <rng:optional>
+                                <rng:ref name="origin" />
+                            </rng:optional>
+                            <rng:zeroOrMore>
+                                <rng:ref name="provenance" />
+                            </rng:zeroOrMore>
+                            <rng:optional>
+                                <rng:ref name="acquisition" />
+                            </rng:optional>
                         </content>
+                    </elementSpec>
+                    <elementSpec ident="hi" mode="change" module="core">
+                        <content>
+                            <rng:text />
+                        </content>
+                        <attList>
+                            <attDef ident="rend" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="sub">
+                                        <desc>subscript</desc>
+                                    </valItem>
+                                    <valItem ident="super">
+                                        <desc>superscript</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
                     </elementSpec>
                     <elementSpec ident="idno" mode="change" module="header">
                         <classes mode="change">
@@ -3131,7 +3121,6 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="rend" mode="delete" />
                             <attDef ident="rendition" mode="delete" />
                             <attDef ident="style" mode="delete" />
                             <attDef ident="xml:base" mode="delete" />
