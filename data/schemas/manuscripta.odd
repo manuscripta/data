@@ -227,7 +227,7 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msPart>
                                     <physDesc>
-                                        <objectDesc form="codex">
+                                        <objectDesc>
                                             <supportDesc material="paper">
                                                 <support>
                                                     <p> </p>
@@ -611,12 +611,7 @@
                             </specList>
                         </p>
                         <div xml:id="objectdesc">
-                            <head>Object Description</head>
-                            <p>Note in the <att>form</att> attribute whether the manuscript is a codex or fragment (default value is <val>codex</val>). 
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                    <objectDesc form="codex" />
-                                </egXML>
-                            </p>
+                            <head>Object Description</head>                            
                             <p>The <gi>objectDesc</gi> element must contain the <gi>supportDesc</gi> and <gi>layoutDesc</gi> elements.</p>
                             <div xml:id="supportdesc">
                                 <head>Support Description</head>
@@ -2399,14 +2394,8 @@
                     </elementSpec>
                     <elementSpec ident="num" mode="change" module="core" />
                     <elementSpec ident="objectDesc" mode="change" module="msdescription">
-                        <attList>
-                            <attDef ident="form" mode="change" usage="req">
-                                <defaultVal>codex</defaultVal>
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="codex" />
-                                    <valItem ident="fragment" />
-                                </valList>
-                            </attDef>
+                        <attList>                            
+                            <attDef ident="form" mode="delete" />
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
