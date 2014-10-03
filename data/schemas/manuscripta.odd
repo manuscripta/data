@@ -841,7 +841,7 @@
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <moduleRef key="tei" />
-                    <moduleRef key="core" include="add author bibl biblScope citedRange date del desc editor foreign gap graphic hi item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
+                    <moduleRef key="core" include="add author bibl biblScope citedRange date del desc editor foreign gap graphic head hi item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
                     <moduleRef key="header" include="authority change extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="figures" include="formula" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
@@ -1693,6 +1693,19 @@
                             <attDef ident="script" mode="delete" />
                         </attList>
                     </elementSpec>
+                    <elementSpec ident="head" mode="change" module="core">
+                        <content>
+                            <rng:text/>
+                        </content>
+                        <attList>
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />                            
+                            <attDef ident="rend" mode="delete" />
+                            <attDef ident="type" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="height" mode="change" module="msdescription">
                         <constraintSpec ident="height.attributes" scheme="isoschematron">
                             <desc versionDate="2014-09-09" xml:lang="en">checks that the <gi>height</gi> element has either a <att>quantity</att> or <att>min</att>/<att>max</att> attributes.</desc>
@@ -1982,6 +1995,7 @@
                         <content>
                             <rng:group>
                                 <rng:ref name="msIdentifier" />
+                                <rng:ref name="model.headLike"/>
                                 <rng:ref name="msContents" />
                                 <rng:ref name="physDesc" />
                                 <rng:ref name="history" />
