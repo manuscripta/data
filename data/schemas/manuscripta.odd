@@ -187,8 +187,8 @@
                         </egXML>
                     </p>
                 </div>
-                <div xml:id="endleaves">
-                    <head>Endleaves</head>
+                <div xml:id="mscontents_book">
+                    <head>Contents of the bookblock</head>
                     <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>endleaf</val>. If the endleaves have content this should be recorded in a <gi>note</gi> element.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msPart>
@@ -271,7 +271,7 @@
                             </p>
                         </div>
                     </div>
-                    <div xml:id="bookblock_handdesc">
+                    <div xml:id="handdesc_book">
                         <head>Description of Hands</head>
                         <p>Hands belonging to the bookblock should be described here according to <ptr target="#handdesc" />.</p>
                     </div>
@@ -295,7 +295,7 @@
                         </p>
                     </div>
                 </div>
-                <div xml:id="common_history">
+                <div xml:id="history_book">
                     <head>History</head>
                     <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In a paragraph inside the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Record the different stages in the provenance in one or more paragraphs inside the <gi>provenance</gi> element. The <gi>acquisition</gi> element should include one or more paragraphs describing the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -356,7 +356,7 @@
                         </egXML>
                     </p>
                 </div>
-                <div xml:id="common_additional">
+                <div xml:id="additional_book">
                     <head>Additional Information</head>
                     <p>The <gi>additional</gi> element should contain a bibliography of works referring to the manuscript in <gi>bibl</gi> elements inside a <gi>listBibl</gi> element. The works should be listed in a chronological order, with the oldest item first.</p>
                 </div>
@@ -378,14 +378,14 @@
                             </msPart>
                         </egXML>
                     </p>
-                    <div xml:id="mscontent">
+                    <div xml:id="mscontent_unit">
                         <head>Intellectual Content</head>
                         <p>The intellectual content of the codicological unit should be listed in the <gi>msContent</gi> element.</p>
-                        <div xml:id="summary">
+                        <div xml:id="summary_unit">
                             <head>Summary</head>
                             <p>Give a brief descriptive title in English in the <gi>summary</gi> element which summarizes the intellectual content of the codicological unit.</p>
                         </div>
-                        <div xml:id="msitem">
+                        <div xml:id="msitem_unit">
                             <head>Manuscript Item</head>
                             <p>Each item in the manuscript should be descibed in a distinct <gi>msItem</gi> with the <att>class</att> attribute identifying the text type(s) or classification(s) applicable to this item. Multiple values may be selected separated with whitespace. The values derive from the <ref target="http://www.tlg.uci.edu/help/class.html">TLG Canon of Authors and Works</ref>. 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -394,7 +394,7 @@
                             </p>
                             <p>The items should not be numbered with the <att>n</att> attribute. The numbering will be generated automatically in the XSLT transformation. If the manuscript item is incomplete through loss or damage use the <att>defective</att> attribute with value <val>true</val> (default value is <val>false</val>).</p>
                             <p>Blank pages should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>blank_page</val> (this will be automatically be tranformed into eg. (f. 119v–120v) blank). Pages containing short notes or scribbles by later hands should be categorized as blank. Give a brief description in a <gi>note</gi> element with a reference to the <gi>handNote</gi> element containing the quote. Table of contents may be quoted under <gi>handNote</gi> in <gi>handDesc</gi>.</p>
-                            <div xml:id="locus">
+                            <div xml:id="msitem_unit_locus">
                                 <head>Locus</head>
                                 <p>Give start and end folio of each item. If there are several items on a single folio give line numbers. The foliation scheme should be specified in the <att>scheme</att>attribute with the value <val>folios</val> or <val>pages</val>.   
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -410,7 +410,7 @@
                                     </egXML>
                                 </p>
                             </div>
-                            <div xml:id="textlanguage">
+                            <div xml:id="msitem_unit_textlanguage">
                                 <head>Text Language</head>
                                 <p>Give the text language for each <gi>msItem</gi> in the <att>mainLang</att> attribute (default value is Greek).  
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -423,7 +423,7 @@
                                     </egXML>
                                 </p>
                             </div>
-                            <div xml:id="author">
+                            <div xml:id="msitem_unit_author">
                                 <head>Author</head>
                                 <p>The author name should be recorded inside the <gi>author</gi> element in a <gi>presName</gi> element. The name should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref>. A VIAF ID or PLP (Prosopographisches Lexikon der Palaiologenzeit) number should be given in the <att>key</att> attribute. If the author name is missing in the manuscript and can be supplied, the this should be indicated with the <gi>supplied</gi> element with the <att>reason</att> attribute and the value <val>omitted</val>. The <gi>author</gi> element should be omitted for anonymous works.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -610,7 +610,7 @@
                             </div>
                         </div>
                     </div>
-                    <div xml:id="physdesc">
+                    <div xml:id="physdesc_unit">
                         <head>Physical Description</head>
                         <p>The Physical Description may contain the following elements:
                     <specList>
@@ -702,7 +702,7 @@
                                 </div>
                                 <div xml:id="foliation">
                                     <head>Foliation</head>
-                                    <p>The foliation should be recorded in the <gi>foliation</gi> element. If the manuscript consists of multiple codicological units give the foliation formula in the <gi>physDesc</gi> common to the whole manuscript <ptr target="#endleaves" />. Use the <gi>term</gi> element when describing the foliation (suggested choices: "foliation", "pagination", "in pencil", "in ink", "modern hand", "by the scribe")
+                                    <p>The foliation should be recorded in the <gi>foliation</gi> element. If the manuscript consists of multiple codicological units give the foliation formula in the <gi>physDesc</gi> common to the whole manuscript <ptr target="#mscontents_book" />. Use the <gi>term</gi> element when describing the foliation (suggested choices: "foliation", "pagination", "in pencil", "in ink", "modern hand", "by the scribe")
                                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                             <foliation><term>foliation</term>
                                                 <term>in pencil</term> by a <term>modern hand</term>: <supplied reason="omitted">i–iii</supplied>, I–III, 1–34, 34a, 35–46, 47bis, 48–123, <supplied reason="omitted">i´–iii´</supplied>. Older foliation <term>in ink</term> on every tenth leaf.</foliation>
@@ -714,7 +714,7 @@
                                     <p>Describe the quires according to Andrist et al. (2013) in a <gi>formula</gi> element inside the <gi>collation</gi> element. Quire numbers should be given in subscript (<gi>hi</gi> element with the <att>rend</att> attribute and value <val>sub</val>), e.g. Q1–3. Use Roman numerals to indicate the number of bifolia in the quire (I = singulion, II = binion, III = ternion, IV = quaternion, etc.). Quires with the same number of bifolia should be grouped together and numbered, e.g. 4.IV = 4 quires containing quaternions. The last folio in the quire or group of quires should be given in superscript (<gi>hi</gi> element with <att>rend</att> attribute and value <val>super</val>). There should be no space between f. (or p.) and the number, cf. Andrist (2007) 28 n. 48. Added leaves should be recorded with +1 and the folio reference in superscript. Missing leaves should be recorded with -1, the term post, and a folio reference to the folio preceding the
                                         missing leaf. If the first leaf of a quire is missing use the term ante to indicate its place.</p>
                                     <p>Example: <hi rend="subscript"><!-- The TEI stylesheet only recognizes rend="subscript" but not rend="sub" -->Q1–2</hi>2.II<hi rend="sup"><!-- The TEI stylesheet only recognizes rend="sup" but not rend="super" -->f.8</hi> + <hi rend="subscript">Q3</hi>(III+1<hi rend="sup">f.11</hi>+1<hi rend="sup">f.15</hi>)<hi rend="sup">f.16</hi> + <hi rend="subscript">Q4</hi>III<hi rend="sup">f.22</hi> + <hi rend="subscript">Q5</hi>(III+1<hi rend="sup">f.26</hi>)<hi rend="sup">f.29</hi> + <hi rend="subscript">Q6–9</hi>4.IV<hi rend="sup">f.61</hi> + <hi rend="subscript">Q10</hi>(V-1<hi rend="sup">post f.64</hi>)<hi rend="sup">f.70</hi> + <hi rend="subscript">Q11</hi>IV<hi rend="supra">f.78</hi></p>
-                                    <p>(Endleaves are described in the <ptr target="#endleaves" /> and should not be included here.)</p>
+                                    <p>(Endleaves are described in the <ptr target="#mscontents_book" /> and should not be included here.)</p>
                                     <p>Record the quire signatures in the <gi>signatures</gi> element using relevant <gi>term</gi> elements (possible choices: "lower left margin", "lower center margin", "lower right margin", "upper left margin", "upper center margin", "upper right margin", "last verso", "first recto", "none"). If only a few are visible, record these with <gi>num</gi> and <gi>locus</gi> elements.</p>
                                     <p>Record the catchwords in the <gi>catchwords</gi> element using relevant <gi>term</gi> elements (possible choices: "horizontal", "vertical", "lower left margin", "lower center margin", "lower right margin", "upper left margin", "upper center margin", "upper right margin", "last verso", "first recto", "none").
                                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -830,8 +830,8 @@
                             <p>The <gi>additions</gi> element is not used. Marginalia, notes, and other additions of interest should be recorded either in the <gi>handDesc</gi> or the <gi>provenance</gi> element.</p>
                         </div>
                     </div>
-                    <div xml:id="history"> </div>
-                    <div xml:id="additional"> </div>
+                    <div xml:id="history_unit"> </div>
+                    
                 </div>
             </div>
             <div xml:id="schema">
