@@ -212,7 +212,7 @@
                         </egXML>
                     </p>
                 </div>
-                <div xml:id="common_physdesc">
+                <div xml:id="physdesc_book">
                     <head>Physical description</head>
                     <p>The physical description common to the whole manuscript should be recorded in the <gi>physDesc</gi> element using following elements: 
                         <specList>
@@ -221,7 +221,7 @@
                             <specDesc key="bindingDesc" />
                         </specList>
                     </p>
-                    <div xml:id="common_objectdesc">
+                    <div xml:id="objectdesc_book">
                         <head>Object Description</head>
                         <p>In the <gi>objectDesc</gi> element the support, extent, and collation of the endleaves should be decribed, see <ptr target="#support" />, <ptr target="#extent" /> and <ptr target="#collation" />. The foliation of the whole manuscript should also be recorded here, see <ptr target="#foliation" />.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -259,6 +259,17 @@
                                 </msDesc>
                             </egXML>
                         </p>
+                        <div xml:id="extent_book">
+                            <head>Extent</head>
+                            <p>Give the number of folia of left and right flyleaves in the <gi>extent</gi> element with num elements (<att>type</att> attribute with values <val>left_flyleaves</val> and <val>right_flyleaves</val>). The extent for each unit should be given under each respective msPart, see <ptr target="#extent_unit" />
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <extent>
+                                        <num type="left_flyleaves" value="3" />
+                                        <num type="right_flyleaves" value="3" />
+                                    </extent>
+                                </egXML>
+                            </p>
+                        </div>
                     </div>
                     <div xml:id="bookblock_handdesc">
                         <head>Description of Hands</head>
@@ -611,7 +622,7 @@
                             </specList>
                         </p>
                         <div xml:id="objectdesc">
-                            <head>Object Description</head>                            
+                            <head>Object Description</head>
                             <p>The <gi>objectDesc</gi> element must contain the <gi>supportDesc</gi> and <gi>layoutDesc</gi> elements.</p>
                             <div xml:id="supportdesc">
                                 <head>Support Description</head>
@@ -679,14 +690,12 @@
                                         </egXML>
                                     </p>
                                 </div>
-                                <div xml:id="extent">
+                                <div xml:id="extent_unit">
                                     <head>Extent</head>
-                                    <p>Give the number of folia or pages of the manuscript in the <gi>extent</gi> element with num elements (<att>type</att> attribute with values <val>left_flyleaves</val>, <val>textblock_leaves</val> or <val>textblock_pages</val>, and <val>right_flyleaves</val>).
+                                    <p>Give the number of folia of the codicological unit in the <gi>extent</gi> element in a <gi>num</gi> element (<att>type</att> attribute with value <val>textblock_leaves</val>). The extent of flyleaves should be given under the bookblock part, see <ptr target="#extent_book" />.
                                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                             <extent>
-                                                <num type="left_flyleaves" value="3" />
                                                 <num type="textblock_leaves" value="128" />
-                                                <num type="right_flyleaves" value="3" />
                                             </extent>
                                         </egXML>
                                     </p>
@@ -1556,7 +1565,6 @@
                                         <rng:choice>
                                             <rng:value>left_flyleaves</rng:value>
                                             <rng:value>textblock_leaves</rng:value>
-                                            <rng:value>textblock_pages</rng:value>
                                             <rng:value>right_flyleaves</rng:value>
                                         </rng:choice>
                                     </rng:attribute>
@@ -1566,6 +1574,21 @@
                                 </rng:element>
                             </rng:oneOrMore>
                         </content>
+                        <constraintSpec ident="extent.check" scheme="isoschematron">
+                            <desc versionDate="2014-10-03" xml:lang="en">checks that <gi>extent</gi> only contains <att>num</att> with type value <val>textblock_leaves</val> for the codicological unit, and values <val>left_flyleaves</val> and <val>right_flyleaves</val> for the bookblock.</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:msPart/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
+                                        <sch:assert test="tei:num[@type='textblock_leaves']">Only the extent of the unit should be recorded here. The extent of the flyleaves should be recorded in the bookblock part.</sch:assert>
+                                    </sch:rule>
+                                    <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
+                                        <sch:assert test="tei:num[@type='left_flyleaves'][following-sibling::tei:num[@type='right_flyleaves']]">Both the left and right flyleaves should be recorded here, even if there are none.</sch:assert>
+                                        <sch:report test="tei:num[@type='textblock_leaves']">Only the extent of the flyleaves should be recorded here. The extent of the textblock should be recorded under respective msPart.</sch:report>
+                                        
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -2394,7 +2417,7 @@
                     </elementSpec>
                     <elementSpec ident="num" mode="change" module="core" />
                     <elementSpec ident="objectDesc" mode="change" module="msdescription">
-                        <attList>                            
+                        <attList>
                             <attDef ident="form" mode="delete" />
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
