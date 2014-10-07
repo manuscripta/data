@@ -79,7 +79,7 @@
                <!--       MODULES USED BY THE SCHEMA       -->
 
                <moduleRef key="tei" />
-               <moduleRef key="core" include="author bibl biblScope date editor listBibl p pubPlace q title" />
+               <moduleRef key="core" include="author bibl biblScope date editor foreign listBibl p pubPlace q title" />
                <moduleRef key="header" include="edition fileDesc publicationStmt sourceDesc teiHeader titleStmt" />
                <moduleRef key="namesdates" include="addName forename nameLink persName placeName surname" />
                <moduleRef key="textstructure" include="TEI body text" />               
@@ -288,6 +288,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
+               <elementSpec ident="foreign" module="core" mode="change"/>
                <elementSpec ident="forename" module="namesdates" mode="change">
                   <content>
                      <rng:text />
@@ -415,6 +416,7 @@
                         <rng:choice>
                            <rng:text />
                            <rng:ref name="q" />
+                           <rng:ref name="foreign" />
                         </rng:choice>
                      </rng:zeroOrMore>
                   </content>
