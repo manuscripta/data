@@ -2042,7 +2042,10 @@
                                     <rng:ref name="idno" />
                                 </rng:group>
                                 <rng:zeroOrMore>
-                                    <rng:ref name="altIdentifier" />
+                                    <rng:choice>
+                                        <rng:ref name="msName" />
+                                        <rng:ref name="altIdentifier" />
+                                    </rng:choice>
                                 </rng:zeroOrMore>
                             </rng:group>
                         </content>
