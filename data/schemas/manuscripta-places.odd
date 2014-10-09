@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:lang="en" xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Schema for the place names authority file</title>
+            <author xml:id="PG">Patrik Granholm</author>
+            <author xml:id="EN">Eva Nyström</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Released under GNU GPL 3.0</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>created electronically</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2014-10-01" who="#PG">Created manuscripta-persons ODD</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div xml:id="guidelines">
+            <head>Guidelines for the place names authority files</head>
+            
+         </div>
+         <div xml:id="schema">
+            <schemaSpec ident="manuscripta-places" start="TEI" xml:lang="en">
+
+               <!--       MODULES USED BY THE SCHEMA       -->
+
+               <moduleRef key="tei" />
+               <moduleRef key="core" include="author p title" />
+               <moduleRef key="header" include="fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
+               <moduleRef key="namesdates" include="country forename listPlace persName place placeName region settlement surname" />
+               <moduleRef key="textstructure" include="TEI body text" />
+
+               <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
+
+               
+               <elementSpec ident="author" module="core" mode="change">
+                  <content>
+                     <rng:choice>
+                        <rng:ref name="persName" />
+                     </rng:choice>
+                  </content>
+                  <attList>
+                     <attDef ident="facs" mode="delete" />
+                     <attDef ident="n" mode="delete" />
+                     <attDef ident="ref" mode="delete" />
+                     <attDef ident="role" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="body" module="textstructure" mode="change">
+                  <content>
+                     <rng:ref name="listPlace" />
+                  </content>
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+                <elementSpec ident="country" module="namesdates" mode="change"/>
+               <elementSpec ident="fileDesc" module="header" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="forename" module="namesdates" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+                <elementSpec ident="idno" module="header" mode="change"/>
+                <elementSpec ident="listPlace" module="namesdates" mode="change"/>
+               <elementSpec ident="p" module="core" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>               
+               <elementSpec ident="persName" module="namesdates" mode="change">
+                  <content>
+                     <rng:group>
+                        <rng:zeroOrMore>
+                           <rng:ref name="forename" />
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                           <rng:ref name="nameLink" />
+                        </rng:optional>
+                        <rng:zeroOrMore>
+                           <rng:ref name="surname" />
+                        </rng:zeroOrMore>
+                        <rng:optional>
+                           <rng:ref name="addName" />
+                        </rng:optional>
+                        <rng:optional>
+                           <rng:ref name="roleName" />
+                        </rng:optional>
+                     </rng:group>
+                  </content>
+                  <!--FIXA-->
+                  <constraintSpec scheme="isoschematron" ident="ref.whitespace.check">
+                     <desc versionDate="2014-09-23" xml:lang="en">checks for whitespace at the beginning of the value of <att>ref</att>.</desc>
+                     <constraint>
+                        <sch:rule context="tei:persName">
+                           <sch:report test="@ref[matches(.,'^\s')]">whitespace at the beginning of the ref value</sch:report>
+                        </sch:rule>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="when" mode="delete" />
+                     <attDef ident="from" mode="delete" />
+                     <attDef ident="to" mode="delete" />
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+                <elementSpec ident="place" module="namesdates" mode="change"/>
+                <elementSpec ident="placeName" module="namesdates" mode="change">
+                    <content>
+                        <rng:choice>
+                            <rng:ref name="country"/>
+                            <rng:ref name="region"/>
+                            <rng:ref name="settlement"/>
+                        </rng:choice>
+                    </content>
+                </elementSpec>
+               <elementSpec ident="publicationStmt" module="header" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+                <elementSpec ident="region" module="namesdates" mode="change"/>
+                <elementSpec ident="settlement" module="namesdates" mode="change"/>
+                <elementSpec ident="sourceDesc" module="header" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="surname" module="namesdates" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="TEI" module="textstructure" mode="change">
+                  <attList>
+                     <attDef ident="version" mode="delete" />
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="teiHeader" module="header" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete" />
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="text" module="textstructure" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="title" module="core" mode="change">
+                  <content>
+                     <rng:zeroOrMore>
+                        <rng:choice>
+                           <rng:text />
+                           <rng:ref name="q" />
+                        </rng:choice>
+                     </rng:zeroOrMore>
+                  </content>
+                  <attList>
+                     <attDef ident="xml:lang" mode="change" usage="req" />
+                     <attDef ident="type" mode="delete" />
+                     <attDef ident="xml:id" mode="delete" />
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="titleStmt" module="header" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="delete" />
+                     <attDef ident="xml:lang" mode="delete" />
+                  </attList>
+               </elementSpec>
+
+
+
+               <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+
+               <classSpec ident="att.milestoneUnit" module="core" type="atts" mode="delete" />
+               <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete" />
+               <classSpec ident="att.datable.custom" module="namesdates" type="atts" mode="delete" />
+               <classSpec ident="att.datable.iso" module="namesdates" type="atts" mode="delete" />
+               <classSpec ident="att.ascribed" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.citing" module="tei" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="from" mode="change" usage="req" />
+                     <attDef ident="to" mode="change" usage="req" />
+                     <attDef ident="unit" mode="change" usage="req">
+                        <valList mode="replace" type="closed">
+                           <valItem ident="volume" />
+                           <valItem ident="issue" />
+                           <valItem ident="page" />
+                           <valItem ident="footnote" />
+                           <valItem ident="line" />
+                           <valItem ident="chapter" />
+                           <valItem ident="column" />
+                           <valItem ident="folio" />
+                        </valList>
+                     </attDef>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.ranging" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.dimensions" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.damaged" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.canonical" module="tei" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete" />
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.cReferencing" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.datable" module="tei" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete" />
+                     <attDef ident="period" mode="delete" />
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.datable.w3c" module="tei" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="notBefore" mode="delete" />
+                     <attDef ident="notAfter" mode="delete" />
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.datcat" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.declarable" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.declaring" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.fragmentable" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.divLike" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.docStatus" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.duration.w3c" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.duration.iso" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.responsibility" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.editLike" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.global" module="tei" type="atts" mode="change">
+                  <constraintSpec ident="xmlid.text.check" scheme="isoschematron">
+                     <desc versionDate="2014-09-23" xml:lang="en">checks that <att>xml:id</att> does not contain underscore or hyphen.</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="tei:*/@xml:id">
+                              <sch:report test="contains(., '_') or contains(., '-')">The xml:id cannot contain underscores or hyphens</sch:report>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <attList>
+                     <attDef ident="xml:lang" mode="change" usage="opt">
+                        <valList mode="replace" type="closed">
+                           <valItem ident="grc">
+                              <desc>Ancient Greek (to 1453)</desc>
+                           </valItem>
+                           <valItem ident="en">
+                              <desc>English</desc>
+                           </valItem>
+                           <valItem ident="fr">
+                              <desc>French</desc>
+                           </valItem>
+                           <valItem ident="de">
+                              <desc>German</desc>
+                           </valItem>
+                           <valItem ident="el">
+                              <desc>Modern Greek</desc>
+                           </valItem>
+                           <valItem ident="it">
+                              <desc>Italian</desc>
+                           </valItem>
+                           <valItem ident="la">
+                              <desc>Latin</desc>
+                           </valItem>
+                           <valItem ident="nl">
+                              <desc>Dutch</desc>
+                           </valItem>
+                           <valItem ident="sp">
+                              <desc>Spanish</desc>
+                           </valItem>
+                           <valItem ident="sv">
+                              <desc>Swedish</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                     <attDef ident="n" mode="delete" />
+                     <attDef ident="rend" mode="delete" />
+                     <attDef ident="style" mode="delete" />
+                     <attDef ident="rendition" mode="delete" />
+                     <attDef ident="xml:base" mode="delete" />
+                     <attDef ident="xml:space" mode="delete" />
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.media" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.resourced" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.interpLike" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.measurement" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.naming" module="tei" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="role" mode="delete" />
+                     <attDef ident="nymRef" mode="delete" />
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.pointing" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.pointing.group" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.scoping" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.segLike" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.sortable" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.edition" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.spanning" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.styleDef" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.tableDecoration" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.timed" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.transcriptional" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.translatable" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.source" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.personal" module="tei" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="full" mode="delete" />
+                     <attDef ident="sort" mode="delete" />
+                  </attList>
+               </classSpec>
+            </schemaSpec>
+         </div>
+      </body>
+   </text>
+</TEI>
