@@ -38,7 +38,7 @@
 
                <moduleRef key="tei" />
                <moduleRef key="core" include="author p title" />
-               <moduleRef key="header" include="fileDesc publicationStmt sourceDesc teiHeader titleStmt" />
+               <moduleRef key="header" include="fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
                <moduleRef key="namesdates" include="addName forename genName listPerson nameLink persName person roleName surname" />
                <moduleRef key="textstructure" include="TEI body text" />
 
@@ -132,6 +132,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
+               <elementSpec ident="idno" module="header" mode="change"/>
                <elementSpec ident="person" module="namesdates" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="change" usage="req" />
