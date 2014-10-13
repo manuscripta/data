@@ -4,13 +4,15 @@
         <fileDesc>
             <titleStmt>
                 <title xml:lang="sv">Uppsala universitetsbibliotek, Gr. 17</title>
+                <respStmt xml:id="EN">
+                    <resp key="cataloguer" />
+                    <resp key="encoder" />
+                    <persName ref="#EvaNys" />
+                </respStmt>
                 <respStmt xml:id="PG">
                     <resp key="cataloguer" />
                     <resp key="encoder" />
-                    <persName>
-                        <forename>Patrik</forename>
-                        <surname>Granholm</surname>
-                    </persName>
+                    <persName ref="#PatGra" />
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -29,229 +31,197 @@
                             <idno type="former_shelfmark">Björnståhl 7</idno>
                         </altIdentifier>
                     </msIdentifier>
+                    <head>Lexicographical manuscript</head>
+                    <msContents />
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <extent>
+                                    <num type="left_flyleaves" value="2" />
+                                    <num type="right_flyleaves" value="2" />
+                                </extent>
+                                <foliation>
+                                    <p>Older foliation in the top right corner of every tenth recto page giving the total number of 190 folios, which is incorrect. This is due to a miscalculation in the intervals <locusGrp>
+                                            <locus from="21" to="30" scheme="folios" />
+                                            <locus from="61" to="70" scheme="folios" />
+                                            <locus from="101" to="110" scheme="folios" />
+                                        </locusGrp>.</p>
+                                    <p>Modern foliation in the top right corner of every recto page giving the total number of 187 folios.</p>
+                                </foliation>
+                            </supportDesc>
+                        </objectDesc>
+                        <bindingDesc>
+                            <condition>Damage from worms on the first and last folia.</condition>
+                        </bindingDesc>
+                    </physDesc>
+                    <history>
+                        <origin />
+                        <provenance />
+                        <acquisition />
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <ref target="#Aurivillius1821" />
+                                <citedRange from="18" to="21" unit="page" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#Graux1889" />
+                                <citedRange from="48" to="48" unit="page" />
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicological_unit">1</idno>
                         </msIdentifier>
                         <msContents>
-                            <summary>Lexicographical manuscript</summary>
                             <msItem class="lexicogr" defective="true">
                                 <locusGrp>
                                     <locus from="1r" to="176v" scheme="folios" />
                                     <locus from="178r" to="184r" scheme="folios" />
                                 </locusGrp>
                                 <textLang mainLang="grc" />
-                                <author xml:lang="la">
-                                    <supplied reason="omitted">
-                                        <persName>
-                                            <forename>Ioannes</forename>
-                                            <surname>Zonaras</surname>
-                                        </persName>
-                                    </supplied>
+                                <author ref="http://pinakes.irht.cnrs.fr/notices/auteur/id/2842">
+                                    <persName ref="#IoaZon" evidence="external" />
                                 </author>
-                                <title key="TLG3136.001" type="uniform" xml:lang="la">Lexicon</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/9132" type="uniform" xml:lang="la">Lexicon</title>
                                 <rubric xml:lang="grc">None</rubric>
                                 <incipit defective="true" xml:lang="grc"><gap extent="20" reason="damage" unit="mm" /><unclear extent="60" reason="faded" unit="mm" /> ἰορδάνης ἰορδάνης ἰορδάνου <unclear xml:lang="grc" extent="30" reason="faded" unit="mm">τελ</unclear> αἰδέσιμος, ἀξιοτίμητος</incipit>
                                 <explicit defective="true" xml:lang="grc">ὡς· ἀντὶ τοῦ ὅπως καὶ ὅτι</explicit>
-                                <note type="toc">
+                                <note>
                                     <p>The order of the folios is wrong. The correct order is: 1, 11–16, 2, 3, 6, 7, 10, 8, 4, 5, 8, 17–.</p>
-                                    <p>
-                                        <locus from="1r" to="31r" scheme="folios" />
-                                        <title xml:lang="grc">Α</title>
-                                    </p>
-                                    <p>
-                                        <locus from="31r" to="37r" scheme="folios" />
-                                        <title xml:lang="grc">Β</title>
-                                    </p>
-                                    <p>
-                                        <locus from="37r" to="42r" scheme="folios" />
-                                        <title xml:lang="grc">Γ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="42r" to="52v" scheme="folios" />
-                                        <title xml:lang="grc">Δ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="52v" to="85v" scheme="folios" />
-                                        <title xml:lang="grc">Ε</title>
-                                    </p>
-                                    <p>
-                                        <locus from="85v" to="88r" scheme="folios" />
-                                        <title xml:lang="grc">Ζ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="88r" to="94r" scheme="folios" />
-                                        <title xml:lang="grc">Η</title>
-                                    </p>
-                                    <p>
-                                        <locus from="94r" to="99r" scheme="folios" />
-                                        <title xml:lang="grc">Θ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="99r" to="104v" scheme="folios" />
-                                        <title xml:lang="grc">Ι</title>
-                                    </p>
-                                    <p>
-                                        <locus from="104v" to="114v" scheme="folios" />
-                                        <title xml:lang="grc">Κ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="114v" to="118v" scheme="folios" />
-                                        <title xml:lang="grc">Λ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="119r" to="124v" scheme="folios" />
-                                        <title xml:lang="grc">Μ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="124v" to="127v" scheme="folios" />
-                                        <title xml:lang="grc">Ν</title>
-                                    </p>
-                                    <p>
-                                        <locus from="127v" to="128v" scheme="folios" />
-                                        <title xml:lang="grc">Ξ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="128v" to="138v" scheme="folios" />
-                                        <title xml:lang="grc">Ο</title>
-                                    </p>
-                                    <p>
-                                        <locus from="139r" to="151v" scheme="folios" />
-                                        <title xml:lang="grc">Π</title>
-                                    </p>
-                                    <p>
-                                        <locus from="151v" to="154v" scheme="folios" />
-                                        <title xml:lang="grc">Ρ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="154v" to="163v" scheme="folios" />
-                                        <title xml:lang="grc">Σ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="163v" to="169r" scheme="folios" />
-                                        <title xml:lang="grc">Τ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="169r" to="171v" scheme="folios" />
-                                        <title xml:lang="grc">Υ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="171v" to="175v" scheme="folios" />
-                                        <title xml:lang="grc">Φ</title>
-                                    </p>
-                                    <p>
-                                        <locusGrp>
-                                            <locus from="175v" to="176v" scheme="folios" />
-                                            <locus from="178r" to="179v" scheme="folios" />
-                                        </locusGrp>
-                                        <title xml:lang="grc">Χ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="179v" to="181r" scheme="folios" />
-                                        <title xml:lang="grc">Ψ</title>
-                                    </p>
-                                    <p>
-                                        <locus from="181r" to="184r" scheme="folios" />
-                                        <title xml:lang="grc">Ω</title>
-                                    </p>
+                                    <list type="toc">
+                                        <item>
+                                            <locus from="1r" to="31r" scheme="folios" />
+                                            <title xml:lang="grc">Α</title>
+                                        </item>
+
+                                        <item>
+                                            <locus from="31r" to="37r" scheme="folios" />
+                                            <title xml:lang="grc">Β</title>
+                                        </item>
+                                        <item>
+                                            <locus from="37r" to="42r" scheme="folios" />
+                                            <title xml:lang="grc">Γ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="42r" to="52v" scheme="folios" />
+                                            <title xml:lang="grc">Δ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="52v" to="85v" scheme="folios" />
+                                            <title xml:lang="grc">Ε</title>
+                                        </item>
+                                        <item>
+                                            <locus from="85v" to="88r" scheme="folios" />
+                                            <title xml:lang="grc">Ζ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="88r" to="94r" scheme="folios" />
+                                            <title xml:lang="grc">Η</title>
+                                        </item>
+                                        <item>
+                                            <locus from="94r" to="99r" scheme="folios" />
+                                            <title xml:lang="grc">Θ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="99r" to="104v" scheme="folios" />
+                                            <title xml:lang="grc">Ι</title>
+                                        </item>
+                                        <item>
+                                            <locus from="104v" to="114v" scheme="folios" />
+                                            <title xml:lang="grc">Κ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="114v" to="118v" scheme="folios" />
+                                            <title xml:lang="grc">Λ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="119r" to="124v" scheme="folios" />
+                                            <title xml:lang="grc">Μ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="124v" to="127v" scheme="folios" />
+                                            <title xml:lang="grc">Ν</title>
+                                        </item>
+                                        <item>
+                                            <locus from="127v" to="128v" scheme="folios" />
+                                            <title xml:lang="grc">Ξ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="128v" to="138v" scheme="folios" />
+                                            <title xml:lang="grc">Ο</title>
+                                        </item>
+                                        <item>
+                                            <locus from="139r" to="151v" scheme="folios" />
+                                            <title xml:lang="grc">Π</title>
+                                        </item>
+                                        <item>
+                                            <locus from="151v" to="154v" scheme="folios" />
+                                            <title xml:lang="grc">Ρ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="154v" to="163v" scheme="folios" />
+                                            <title xml:lang="grc">Σ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="163v" to="169r" scheme="folios" />
+                                            <title xml:lang="grc">Τ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="169r" to="171v" scheme="folios" />
+                                            <title xml:lang="grc">Υ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="171v" to="175v" scheme="folios" />
+                                            <title xml:lang="grc">Φ</title>
+                                        </item>
+                                        <item>
+                                            <locusGrp>
+                                                <locus from="175v" to="176v" scheme="folios" />
+                                                <locus from="178r" to="179v" scheme="folios" />
+                                            </locusGrp>
+                                            <title xml:lang="grc">Χ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="179v" to="181r" scheme="folios" />
+                                            <title xml:lang="grc">Ψ</title>
+                                        </item>
+                                        <item>
+                                            <locus from="181r" to="184r" scheme="folios" />
+                                            <title xml:lang="grc">Ω</title>
+                                        </item>
+                                    </list>
                                 </note>
                                 <listBibl>
                                     <bibl>
-                                        <author xml:lang="la">
-                                            <persName>
-                                                <forename>Ioannes</forename>
-                                                <surname>Zonaras</surname>
-                                            </persName>
-                                        </author>
-                                        <editor>
-                                            <persName>
-                                                <forename>Johann</forename>
-                                                <forename>August</forename>
-                                                <forename>Heinrich</forename>
-                                                <surname>Tittmann</surname>
-                                            </persName>
-                                        </editor>
-                                        <title level="m" xml:lang="la">Iohannis Zonarae lexicon ex tribus codicibus manuscriptis</title>
-                                        <pubPlace>Leipzig</pubPlace>
-                                        <date when="1808" />
-                                        <biblScope from="1" to="1" unit="volume" />
-                                        <biblScope from="1" to="1070" unit="page" />
-                                        <biblScope from="2" to="2" unit="volume" />
-                                        <biblScope from="1077" to="1900" unit="page" />
+                                        <ref target="#Tittmann1808" />
                                     </bibl>
                                     <bibl>
-                                        <author>
-                                            <persName>
-                                                <forename>Mark</forename>
-                                                <surname>Naoumides</surname>
-                                            </persName>
-                                        </author>
-                                        <editor>
-                                            <persName>
-                                                <forename>John</forename>
-                                                <forename>Lewis</forename>
-                                                <surname>Heller</surname>
-                                            </persName>
-                                        </editor>
-                                        <title level="a">The Shorter Version of Pseudo-Zonaras, Lexicon</title>
-                                        <title level="m">Serta Turyniana. Studies in Greek Literature and Palaeography in honor of Alexander Turyn</title>
-                                        <pubPlace>Urbana</pubPlace>
-                                        <date when="1974" />
-                                        <biblScope from="436" to="488" unit="page" />
+                                        <ref target="#Naoumides1974" />
                                     </bibl>
                                     <bibl>
-                                        <author>
-                                            <persName>
-                                                <forename>Klaus</forename>
-                                                <surname>Alpers</surname>
-                                            </persName>
-                                        </author>
-                                        <title level="m" xml:lang="de">Das attizistische Lexikon des Oros</title>
-                                        <title level="s" xml:lang="de">Sammlung griechischer und lateinischer Grammatiker</title>
-                                        <pubPlace>Berlin</pubPlace>
-                                        <date when="1981" />
-                                        <biblScope from="4" to="4" unit="volume" />
-                                        <biblScope from="149" to="193" unit="page" />
+                                        <ref target="#Alpers1981" />
+                                        <citedRange from="149" to="193" unit="page" />
                                     </bibl>
                                     <bibl>
-                                        <author>
-                                            <persName>
-                                                <forename>Carl</forename>
-                                                <forename>Emanuel</forename>
-                                                <surname>Aurivillius</surname>
-                                            </persName>
-                                        </author>
-                                        <title level="m" xml:lang="la">De glossariis Græcis manuscriptis in bibliotheca reg. acad. Upsaliensis asservatis disquisitio</title>
-                                        <pubPlace>Uppsala</pubPlace>
-                                        <date from="1821" to="1822" />
-                                        <biblScope from="20" to="21" unit="page" />
+                                        <ref target="#Aurivillius1821" />
+                                        <citedRange from="20" to="21" unit="page" />
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem class="lexicogr" defective="true">
                                 <locus from="177v" to="177v" scheme="folios" />
                                 <textLang mainLang="grc" />
-                                <author>
-                                    <supplied reason="omitted">Anonymous</supplied>
-                                </author>
                                 <title xml:lang="la">Glossae in Psalmos</title>
                                 <rubric xml:lang="grc">ἀρχὴ τῶν λέξεων τῶν ρν´ ψαλμῶν</rubric>
                                 <incipit defective="false" xml:lang="grc">Ἀλληλούια· αἰνείτε τὸν ὄντα ἤτοι τὸν Κύριον</incipit>
                                 <explicit defective="true" xml:lang="grc">καὶ μετὰ τῆς συνουσίας, ἑτέρας τεσσαράκοντα· ἔνθα ἡγεῖται</explicit>
                                 <listBibl>
                                     <bibl>
-                                        <author>
-                                            <persName>
-                                                <forename>Johann</forename>
-                                                <forename>Christian</forename>
-                                                <forename>Gottlieb</forename>
-                                                <surname>Ernesti</surname>
-                                            </persName>
-                                        </author>
-                                        <title level="m" xml:lang="la">Glossae Sacrae Hesychii Graece ex universo illius opere in usum interpretationis libr. sacr. excepsit, emendavit, notisque illustravit</title>
-                                        <pubPlace xml:lang="la">Lipsiae</pubPlace>
-                                        <date when="1785" />
-                                        <biblScope from="291" to="306" unit="page" />
+                                        <ref target="#Ernesti1785" />
+                                        <citedRange from="291" to="306" unit="page" />
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -266,17 +236,8 @@
                                 <explicit defective="true" xml:lang="grc">χυτρόγαυλον· λέβητας ἢ λουτῆρας</explicit>
                                 <listBibl>
                                     <bibl>
-                                        <author>
-                                            <persName>
-                                                <forename>Jakob</forename>
-                                                <surname>Benediktsson</surname>
-                                            </persName>
-                                        </author>
-                                        <title level="a" xml:lang="de">Ein Frühbyzantinisches Bibellexikon, <foreign xml:lang="grc">λέξεις τῆς ὀκτατεύχου</foreign></title>
-                                        <title level="j" xml:lang="la">Classica et Mediaevalia</title>
-                                        <date when="1938" />
-                                        <biblScope from="1" to="1" unit="volume" />
-                                        <biblScope from="260" to="280" unit="page" />
+                                        <ref target="#Benediktsson1938" />
+                                        <citedRange from="260" to="280" unit="page" />
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -291,18 +252,9 @@
                                 <explicit defective="true" xml:lang="grc"><locus from="184v" to="184v" scheme="folios" /> ὡς ἀντίον ὑφαινόντων· ἀντίον ἐνταῦθα λέγει τὸ κανόνιον· τὸ μέσον τοῦ ἵστου βαλλόμενον· ὅπερ καί<locus from="177v" to="177v" scheme="folios" /> ἥνπερ Ἕλληνες καλοῦσιν Ἀφροδίτην</explicit>
                                 <listBibl>
                                     <bibl>
-                                        <author>
-                                            <persName>
-                                                <forename>Johann</forename>
-                                                <forename>Albert</forename>
-                                                <surname>Fabricius</surname>
-                                            </persName>
-                                        </author>
-                                        <title level="m">Bibliotheca Graeca</title>
-                                        <pubPlace>Hamburg</pubPlace>
-                                        <date when="1798" />
-                                        <biblScope from="6" to="6" unit="volume" />
-                                        <biblScope from="646" to="648" unit="page" />
+                                        <ref target="#Fabricius1790" />
+                                        <citedRange from="6" to="6" unit="volume" />
+                                        <citedRange from="646" to="648" unit="page" />
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -313,17 +265,8 @@
                                 <explicit defective="true" xml:lang="grc">Φαρισαῖος</explicit>
                                 <listBibl>
                                     <bibl>
-                                        <author>
-                                            <persName>
-                                                <forename>Paul</forename>
-                                                <surname>de Lagarde</surname>
-                                            </persName>
-                                        </author>
-                                        <title level="m">Onomastica sacra</title>
-                                        <pubPlace>Göttingen</pubPlace>
-                                        <date when="1887" />
-                                        <edition n="2" />
-                                        <biblScope from="176" to="176" unit="page" />
+                                        <ref target="#Lagarde1887" />
+                                        <citedRange from="176" to="176" unit="page" />
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -347,18 +290,9 @@
                                 <explicit xml:lang="grc" defective="false">Ὦ τίς φυλάξει ταῦτα, καὶ σωθήσεται</explicit>
                                 <listBibl>
                                     <bibl>
-                                        <editor>
-                                            <persName>
-                                                <forename>Jacques</forename>
-                                                <forename>Paul </forename>
-                                                <surname>Migne</surname>
-                                            </persName>
-                                        </editor>
-                                        <title level="m" xml:lang="la">Patrologiae cursus completus, series Graeca</title>
-                                        <pubPlace>Paris </pubPlace>
-                                        <date when="1857" />
-                                        <biblScope from="37" to="37" unit="volume" />
-                                        <biblScope from="908" to="910" unit="page" />
+                                        <ref target="#Migne1857" />
+                                        <citedRange from="37" to="37" unit="volume" />
+                                        <citedRange from="908" to="910" unit="page" />
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -416,7 +350,7 @@
                             </msItem>
                         </msContents>
                         <physDesc>
-                            <objectDesc form="codex">
+                            <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
@@ -445,25 +379,17 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <num type="left_flyleaves" value="2" />
                                         <num type="textblock_leaves" value="187" />
-                                        <num type="right_flyleaves" value="2" />
                                     </extent>
-                                    <foliation>
-                                        <p>Older foliation in the top right corner of every tenth recto page giving the total number of 190 folios, which is incorrect. This is due to a miscalculation in the intervals ff. 21–30, 61–70 and 101–110.</p>
-                                        <p>Modern foliation in the top right corner of every recto page giving the total number of 187 folios.</p>
-                                    </foliation>
                                     <collation>
+                                        <formula><hi rend="sub">1</hi></formula>
                                         <!--<p> 1 × 2<hi rend="sup">ii</hi>, 1 × 1 (1), 1 × 6 (7), 3 × 1 (10), 1 × 6 (16), 2 × 8<hi rend="sup">32</hi>, 1 × 8 (<locus facs="33r.jpg" from="33r" to="33v">f. 33</locus> glued to <locus from="34r" to="34v">f. 34</locus>, f. 40 glued to f. 41; 40), 11 × 8 (128), 1 × 9<hi rend="sup">137</hi> (8 - 3, first, seventh and eight leaf missing; 1 x 2 sewn into quire after f. 129, 1 x 2 sewn into quire after f. 135), 3 × 8 (161), 1 × 8 (last leaf sewn into the following quire with the help of a guard; 169), 1 × 8 (f. 177 sewn to a guard; 178), 1 × 6 (184), 3 × 1 (187), 1 × 2 (ii'). </p>-->
                                         <!--<p>I<hi rend="sup">ii</hi>, 1 leaf<hi rend="sup">1</hi>, III<hi rend="sup">7</hi>, 3 leaves<hi rend="sup">10</hi>, III<hi rend="sup">16</hi>, 2IV<hi rend="sup">32</hi>, IV<hi rend="sup">40</hi> (<locus facs="33r.jpg" from="33r" to="33v">f. 33</locus> glued to <locus from="34r" to="34v">f. 34</locus>, f. 40 glued to f. 41), 11IV<hi rend="sup">128</hi>, IV<hi rend="sup">137</hi> (first, seventh and eight leaf missing; 1 x 2 sewn into quire after f. 129, 1 x 2 sewn into quire after f. 135), 3IV<hi rend="sup">161</hi>, IV<hi rend="sup">169</hi> (last leaf sewn into the following quire with the help of a guard), IV<hi rend="sup">178</hi> (f. 177 sewn to a guard), III<hi rend="sup">184</hi>, 3 leaves<hi rend="sup">187</hi>, I<hi rend="sup">ii'</hi>. </p>-->
                                         <!-- <p> Single Bifolium (ii), Singleton (1), Ternion (7), 3 Singletons (10), Ternion (16), 2 Quaternions (32), Quaternion (<locus from="33r" to="33v" scheme="folios">f. 33</locus> glued to <locus from="34r" to="34v" scheme="folios">f. 34</locus>, f. 40 glued to f. 41; 40), 11 Quaternions (128), Quaternion (8 - 3, first, seventh and eight leaf missing; 1 x 2 sewn into quire after f. 129, 1 x 2 sewn into quire after f. 135; 137), 3 Quaternions (161), Quaternion (last leaf sewn into the following quire with the help of a guard; 169), Quaternion (f. 177 sewn to a guard; 178), Ternion (184), 3 Singletons (187), Single Bifolium (ii'). </p>-->
-                                        <list type="collation_formula" />
-                                        <note>F. 177, which is sewn to a guard, has been misplaced. The Correct order is: 1-176, 178-184, 177, 185-187.</note>
+                                        <p>F. 177, which is sewn to a guard, has been misplaced. The Correct order is: 1-176, 178-184, 177, 185-187.</p>
                                         <signatures />
                                         <catchwords>None</catchwords>
-
                                     </collation>
-                                    <condition>Damage from worms on the first and last folia.</condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="18 31">
@@ -493,9 +419,6 @@
                                 <summary />
                                 <handNote n="A" scope="sole" />
                             </handDesc>
-                            <bindingDesc>
-                                <p />
-                            </bindingDesc>
                         </physDesc>
                         <history>
                             <origin>
@@ -503,58 +426,19 @@
                             </origin>
                             <provenance>
                                 <p>Belonged to the <placeName>Dousikon monastery</placeName> in <region type="county">Thessaly</region>, south of the Meteora monastaries.</p>
-                                <p>Owners note written upside down in the right bottom corner of the page on ff. <locus from="185v" to="170v" scheme="folios" />: <foreign xml:lang="grc">βι|βλί|ον | τῆς | μονῆς | τοῦ | κ<ex xml:lang="grc">υρίο</ex>υ | σ<ex xml:lang="grc">ωτῆ</ex>ρ<ex xml:lang="grc">ο</ex>ς | ἡμῶν | ἰ<ex xml:lang="grc">ησο</ex>ῦ | χ<ex xml:lang="grc">ριστο</ex>ῦ | τῶν με|γά|λων | πυλῶν.</foreign></p>
+                                <p>Owners note written upside down in the right bottom corner of the page on <locus from="185v" to="170v" scheme="folios" />: <foreign xml:lang="grc">βι|βλί|ον | τῆς | μονῆς | τοῦ | κ<ex xml:lang="grc">υρίο</ex>υ | σ<ex xml:lang="grc">ωτῆ</ex>ρ<ex xml:lang="grc">ο</ex>ς | ἡμῶν | ἰ<ex xml:lang="grc">ησο</ex>ῦ | χ<ex xml:lang="grc">ριστο</ex>ῦ | τῶν με|γά|λων | πυλῶν.</foreign></p>
                             </provenance>
-                            <acquisition>The manuscript was probably acquired by <persName>
-                                    <forename>Jacob</forename>
-                                    <forename>Jonas</forename>
-                                    <surname>Björnståhl</surname>
-                                </persName> (1731–79) and came to Uppsala University Library in <date when="1784" /> as part of a donation by consisting of 13 Greek manuscripts.
+                            <acquisition>The manuscript was probably acquired by <persName ref="#JacBjö" /> and came to Uppsala University Library in <date when="1784" /> as part of a donation by consisting of 13 Greek manuscripts.
                                 </acquisition>
                         </history>
-                        <additional>
-                            <listBibl>
-                                <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename>Carl</forename>
-                                            <forename>Emanuel</forename>
-                                            <surname>Aurivillius</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="m">De glossariis Græcis manuscriptis in bibliotheca reg. acad. Upsaliensis asservatis disquisitio</title>
-                                    <pubPlace>Uppsala</pubPlace>
-                                    <date from="1821" to="1822" />
-                                    <biblScope from="18" to="21" unit="page" />
-                                </bibl>
-                                <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename>Charles</forename>
-                                            <surname>Graux</surname>
-                                        </persName>
-                                    </author>
-                                    <author>
-                                        <persName>
-                                            <forename>Albert</forename>
-                                            <surname>Martin</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="m">Notices Sommaires des Manuscrits grecs de Suède</title>
-                                    <pubPlace>Paris</pubPlace>
-                                    <date when="1889" />
-                                    <biblScope from="48" to="48" unit="page" />
-                                </bibl>
-                            </listBibl>
-                        </additional>
                     </msPart>
-
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
             <change when="2012-11-12" who="#PG">First draft</change>
             <change when="2014-06-11" who="#PG">Changes to modified ODD</change>
+            <change when="2014-10-01" who="#PG">Changes to modified ODD</change>
         </revisionDesc>
     </teiHeader>
     <facsimile>

@@ -7,16 +7,12 @@
                 <respStmt xml:id="EN">
                     <resp key="cataloguer" />
                     <resp key="encoder" />
-                    <persName>
-                        <ref target="#EvaNys" />
-                    </persName>
+                    <persName ref="#EvaNys" />
                 </respStmt>
                 <respStmt xml:id="PG">
                     <resp key="cataloguer" />
                     <resp key="encoder" />
-                    <persName>
-                        <ref target="#PatGra" />
-                    </persName>
+                    <persName ref="#PatGra" />
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -32,31 +28,31 @@
                         <repository>Uppsala University Library</repository>
                         <idno type="shelfmark">Gr. 27</idno>
                     </msIdentifier>
+                    <head>Aelian, On Animals</head>
                     <msContents>
+                        <msItem class="endleaf">
+                            <locus from="LCI" to="LCI" scheme="folios" />
+                            <note>Blank pastedown</note>
+                        </msItem>
                         <msItem class="endleaf">
                             <locus from="R1r" to="RCI" scheme="folios" />
                             <note>Blank endleaves</note>
                         </msItem>
                     </msContents>
                     <physDesc>
-                        <objectDesc form="codex">
-                            <supportDesc material="paper">
-                                <support>
-                                    <p> </p>
-                                </support>
+                        <objectDesc>
+                            <supportDesc>
                                 <extent>
                                     <num type="left_flyleaves" value="0" />
-                                    <num type="right_flyleaves" value="2" />
+                                <num type="right_flyleaves" value="2" />
                                 </extent>
-                                <foliation />
-                                <collation>
-                                    <list type="collation_formula">
-                                        <item />
-                                    </list>
-                                    <signatures />
-                                    <catchwords />
-                                </collation>
-                            </supportDesc>
+                                <foliation>
+                                    <term>Foliation</term>
+                                    <term>in pencil</term> 
+                                    by a 
+                                    <term>modern hand</term>: 1–119, <supplied reason="omitted">120</supplied>.
+                                </foliation>
+                                </supportDesc>
                         </objectDesc>
                         <bindingDesc>
                             <p><term><material>Parchment</material> cover</term> over <term><material>paper</material> boards</term>.</p>
@@ -68,31 +64,75 @@
                                 </dimensions>
                             </p>
                             <p>1 right flyleaf and a pastedown<locus from="R1r" to="RCI" scheme="folios" /></p>
-                            <condition>There is a 20 mm tear on left cover.</condition>
+                            <!--Lägg till något pastedown på LCI-->
+                        <condition>Left cover has a 20 mm tear.</condition>
                         </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>Written by <persName ref="#MicSou" role="scribe" evidence="internal" /> in <origPlace><placeName ref="#Bologna" /></origPlace>, probably in the <origDate from="1475" to="1499">late 15th century</origDate>, cf. subscription on <locus from="119r" to="119r" scheme="folios" />.</origin>
+                        <provenance />
+                        <acquisition />
+                        </history>
+                <additional>
+                        <listBibl>
+                            <bibl>
+                                <ref target="#Aurivillius1806" />
+                                <citedRange unit="page" from="12" to="14" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#Jacobs1832a" />
+                                <citedRange unit="volume" from="1" to="1" />
+                                <citedRange unit="page" from="lxxvi" to="lxxvii" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#Jacobs1832b" />
+                                <citedRange unit="volume" from="1" to="1" />
+                                <citedRange unit="page" from="95" to="132" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#DeStefani1902" />
+                                <citedRange unit="page" from="209" to="210" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#Lampros1907" />
+                                <citedRange unit="page" from="492" to="492" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#Lampros1909" />
+                                <citedRange unit="page" from="280" to="280" />
+                                <citedRange unit="footnote" from="2" to="2" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#Lobel1933" />
+                                <citedRange from="54" to="56" unit="page" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#GarcíaValdés2009" />
+                                <citedRange from="vii" to="viii" unit="page" />
+                            </bibl>
+                            <bibl>
+                                <ref target="#Speranzi2010" />
+                                <citedRange from="283" to="283" unit="page" />
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicological_unit">1</idno>
                         </msIdentifier>
-                        <msContents>
-                            <summary>Aelian, On Animals</summary>
+                        <msContents>                            
                             <msItem class="nat_hist paradox" defective="false">
                                 <locus from="1r" to="119r" scheme="folios" />
                                 <textLang mainLang="grc" />
                                 <author ref="http://pinakes.irht.cnrs.fr/notices/auteur/id/37">
-                                    <supplied reason="omitted">
-                                        <persName>
-                                            <ref target="#ClaAel" />
-                                        </persName>
-                                    </supplied>
+                                    <persName ref="#ClaAel" evidence="external" />
                                 </author>
                                 <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/3267" type="uniform" xml:lang="la">De natura animalium libri XVII</title>
                                 <rubric>None</rubric>
                                 <note>
                                     <list type="toc">
                                         <item>
-                                            <locus from="1r:4" to="1r:19" facs="#UGr-027-0001r" scheme="folios" />
+                                            <locus from="1r:4" to="1r:19" scheme="folios" />
                                             <title xml:lang="la">Prooemium</title>
                                         </item>
                                         <item>
@@ -277,7 +317,7 @@
                             </msItem>
                         </msContents>
                         <physDesc>
-                            <objectDesc form="codex">
+                            <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
@@ -347,7 +387,7 @@
                                                 <term type="folding">Quarto</term>
                                                 <term type="wm_motif">Eagle</term>
                                                 <term type="proximity">identical with</term>
-                                                <ref target="bibliography.xml#Harlfinger1974-1980">Harlfinger <term xml:lang="fr" type="wm_term">Aigle</term> 22 (top, from this manuscript)</ref>
+                                                <ref target="#Harlfinger1974" /><term xml:lang="fr" type="wm_term">Aigle</term> 22 (top, from this manuscript)
                                             </watermark>
                                             <watermark n="1b">
                                                 <locusGrp>
@@ -397,7 +437,7 @@
                                                 <term type="folding">Quarto</term>
                                                 <term type="wm_motif">Eagle</term>
                                                 <term type="proximity">identical with</term>
-                                                <ref target="bibliography.xml#Harlfinger1974-1980">Harlfinger <term xml:lang="fr" type="wm_term">Aigle</term> 22 (bottom, from this manuscript)</ref>
+                                                <ref target="#Harlfinger1974" />Harlfinger <term xml:lang="fr" type="wm_term">Aigle</term> 22 (bottom, from this manuscript)
                                             </watermark>
                                             <watermark n="2a">
                                                 <locusGrp>
@@ -415,7 +455,7 @@
                                                 <term type="folding">Quarto</term>
                                                 <term type="wm_motif">Hat</term>
                                                 <term type="proximity">identical with</term>
-                                                <ref target="bibliography.xml#Harlfinger1974-1980">Harlfinger <term xml:lang="fr" type="wm_term">Chapeau</term> 28 (left, from this manuscript)</ref>
+                                                <ref target="#Harlfinger1974" />Harlfinger <term xml:lang="fr" type="wm_term">Chapeau</term> 28 (left, from this manuscript)
                                             </watermark>
                                             <watermark n="2b">
                                                 <locusGrp>
@@ -429,35 +469,29 @@
                                                 <term type="folding">Quarto</term>
                                                 <term type="wm_motif">Hat</term>
                                                 <term type="proximity">identical with</term>
-                                                <ref target="bibliography.xml#Harlfinger1974-1980">Harlfinger <term xml:lang="fr" type="wm_term">Chapeau</term> 28 (right, from this manuscript)</ref>
+                                                <ref target="#Harlfinger1974" />Harlfinger <term xml:lang="fr" type="wm_term">Chapeau</term> 28 (right, from this manuscript)
                                             </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <num type="textblock_leaves" value="120" />
                                     </extent>
-                                    <foliation>
-                                        <term>Foliation</term>
-                                        <term>in pencil</term> 
-                                            by a 
-                                            <term>modern hand</term>.
-                                        </foliation>
                                     <collation>
-                                        <list type="collation_formula">
+                                        <formula><hi rend="sub">Q1–6</hi>6.VIII<hi rend="super">f.96</hi> + <hi rend="sub">Q7</hi>IX<hi rend="super">f.114</hi> + <hi rend="sub">Q8</hi>III<hi rend="super">f.120</hi></formula>
+                                        <p>In Q7 <locus from="105" to="106" scheme="folios" /> are loose.</p>
+                                        <!--<list type="collation_formula">
                                             <item>VIII<locus from="1" to="16" scheme="folios" /></item>
                                             <item>VIII<locus from="17" to="32" scheme="folios" /></item>
                                             <item>VIII<locus from="33" to="48" scheme="folios" /></item>
                                             <item>VIII<locus from="49" to="64" scheme="folios" /></item>
                                             <item>VIII<locus from="65" to="80" scheme="folios" /></item>
                                             <item>VIII<locus from="81" to="96" scheme="folios" /></item>
-                                            <item>IX (ff. 105–106 loose)<locus from="97" to="114" scheme="folios" /></item>
+                                            <item>IX (<locus from="105" to="106" scheme="folios" /> loose)<locus from="97" to="114" scheme="folios" /></item>
                                             <item>III<locus from="115" to="120" scheme="folios" /></item>
-                                        </list>
+                                        </list>-->
                                         <signatures />
                                         <catchwords />
                                     </collation>
-
-                                    <condition />
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="34">
@@ -471,10 +505,7 @@
                             <handDesc>
                                 <handNote xml:id="hand_A" n="A" scope="sole">
                                     <locus from="1r" to="119r" scheme="folios" />
-                                    <persName role="scribe" cert="high">
-                                        <ref target="#MicSou" />
-                                    </persName>
-                                        based on subscription <locus from="119r" to="119r" scheme="folios" />. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out. 
+                                    <persName ref="#MicSou" role="scribe" cert="high" evidence="internal" /> based on subscription <locus from="119r" to="119r" scheme="folios" />. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out. 
                                     </handNote>
                                 <handNote xml:id="hand_a" n="a" scope="minor">
                                     <locusGrp>
@@ -510,56 +541,6 @@
                                     </handNote>
                             </handDesc>
                         </physDesc>
-                        <history>
-                            <origin>Written by <persName>
-                                    <ref target="#MicSou" />
-                                </persName> in <origPlace>Bologna</origPlace>, probably in the <origDate from="1475" to="1499">late 15th century</origDate>, cf. colophon <locus from="119r" to="119r" scheme="folios" />.</origin>
-                            <provenance />
-                            <acquisition />
-                        </history>
-                        <additional>
-                            <listBibl>
-                                <bibl>
-                                    <ref target="#Aurivillius1806" />
-                                    <citedRange unit="page" from="12" to="14" />
-                                </bibl>
-                                <bibl>
-                                    <ref target="#Jacobs1832a" />
-                                    <citedRange unit="volume" from="1" to="1" />
-                                    <citedRange unit="page" from="lxxvi" to="lxxvii" />                                    
-                                </bibl>
-                                <bibl>
-                                    <ref target="#Jacobs1832b" />
-                                    <citedRange unit="volume" from="1" to="1" />
-                                    <citedRange unit="page" from="95" to="132" />
-                                </bibl>
-                                <bibl>
-                                    <ref target="#DeStefani1902" />
-                                    <citedRange unit="page" from="209" to="210" />
-                                </bibl>
-                                <bibl>
-                                    <ref target="#Lampros1907" />
-                                    <citedRange unit="page" from="492" to="492" />
-                                </bibl>
-                                <bibl>
-                                    <ref target="#Lampros1909" />
-                                    <citedRange unit="page" from="280" to="280" />
-                                    <citedRange unit="footnote" from="2" to="2" />
-                                </bibl>
-                                <bibl>
-                                    <ref target="#Lobel1933" />
-                                    <citedRange from="54" to="56" unit="page" />
-                                </bibl>
-                                <bibl>
-                                    <ref target="#GarcíaValdés2009" />
-                                    <citedRange from="vii" to="viii" unit="page" />
-                                </bibl>
-                                <bibl>
-                                    <ref target="#Speranzi2010" />
-                                    <citedRange from="283" to="283" unit="page" />
-                                </bibl>
-                            </listBibl>
-                        </additional>
                     </msPart>
                 </msDesc>
             </sourceDesc>
@@ -570,13 +551,17 @@
         </revisionDesc>
     </teiHeader>    
     <facsimile>
-        <surface xml:id="UGr-027-0001r">
+        <surface xml:id="UGr-027-1r">
             <desc>f. 1r</desc>
             <graphic url="UGr-027-0003.jp2" />
         </surface>
-        <surface xml:id="UGr-027-0001v">
+        <surface xml:id="UGr-027-1v">
             <desc>f. 1v</desc>
             <graphic url="UGr-027-0004.jp2" />
+        </surface>
+    <surface xml:id="UGr-027-120v">
+            <desc>f. 120v</desc>
+            <graphic url="UGr-027-0242.jp2" />
         </surface>
     </facsimile>
 </TEI>
