@@ -164,10 +164,25 @@
                   </constraint>
                </constraintSpec>-->
                   <attList>
+                     <attDef ident="type" mode="change" usage="rec">
+                        <valList mode="replace" type="closed">
+                           <valItem ident="article-journal"/>
+                           <valItem ident="book">
+                              <desc>Monograph</desc>
+                           </valItem>
+                           <valItem ident="chapter">
+                              <desc>Chapter in book</desc>
+                           </valItem>
+                           <valItem ident="edition">
+                              <desc>Critial edition</desc>
+                           </valItem>                           
+                           <valItem ident="manuscript"/>
+                           <valItem ident="thesis"/>
+                        </valList>
+                     </attDef>
                      <attDef ident="xml:id" mode="change" usage="req" />
                      <attDef ident="facs" mode="delete" />
-                     <attDef ident="n" mode="delete" />
-                     <attDef ident="type" mode="delete" />
+                     <attDef ident="n" mode="delete" />                     
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                   <exemplum>
