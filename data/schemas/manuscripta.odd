@@ -898,12 +898,12 @@
                             <memberOf key="att.transcriptional" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <!--<content>
-                            <textNode />
-                        </content>-->
                         <content>
-                            <rng:text />
+                            <textNode />
                         </content>
+                        <!--<content>
+                            <rng:text />
+                        </content>-->
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -1318,6 +1318,7 @@
                                     <rng:ref name="unclear" />
                                 </rng:choice>
                             </rng:zeroOrMore>
+                            <!--Make a class called model.colophonLike (e.g.) and add elements to it -->
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
