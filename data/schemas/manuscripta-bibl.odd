@@ -35,6 +35,17 @@
                      <biblScope unit="volume" from="10" to="10" />
                      <biblScope unit="page" from="175" to="222" />
                   </bibl>
+                  <bibl xml:id="Schneider1912">
+                     <author ref="#AthMec" />
+                     <editor ref="#RudSch" />
+                     <title level="a">Griechische Poliorketiker III</title>
+                     <title level="s">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse, N.F.</title>
+                     <pubPlace>Berlin</pubPlace>
+                     <date when="1912" />
+                     <biblScope from="12" to="12" unit="volume"/>
+                     <biblScope from="5" to="5" unit="issue" />
+                     <biblScope from="8" to="36" unit="page" />
+                  </bibl>
                </egXML>
                </p>
             </div>
@@ -204,24 +215,9 @@
                   </exemplum>
                </elementSpec>
                <elementSpec ident="biblScope" module="core" mode="change">
-                  <!--<content>
-                            <textNode />
-                        </content>-->
                   <content>
-                     <rng:optional>
-                        <rng:text />
-                     </rng:optional>
+                     <rng:empty/>
                   </content>
-                  <constraintSpec ident="biblscope.text.check" scheme="isoschematron">
-                     <desc versionDate="2014-08-04" xml:lang="en">checks that <gi>biblScope</gi> only contains <q>N.F.</q></desc>
-                     <constraint>
-                        <sch:pattern>
-                           <sch:rule context="tei:biblScope/text()">
-                              <sch:assert test="matches(., 'N.F.')">The biblScope element may only contain N.F.</sch:assert>
-                           </sch:rule>
-                        </sch:pattern>
-                     </constraint>
-                  </constraintSpec>
                   <attList>
                      <attDef ident="facs" mode="delete" />
                      <attDef ident="n" mode="delete" />
