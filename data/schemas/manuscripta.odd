@@ -831,7 +831,7 @@
                         </div>
                     </div>
                     <div xml:id="history_unit"> </div>
-                    
+
                 </div>
             </div>
             <div xml:id="schema">
@@ -855,10 +855,9 @@
                         <classes mode="change">
                             <memberOf key="att.datable" mode="delete" />
                         </classes>
-                        <!--<content>
+                        <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
-                                <elementRef key="country" minOccurs="0" />
                                 <elementRef key="date" minOccurs="0" />
                                 <elementRef key="foreign" minOccurs="0" />
                                 <elementRef key="idno" minOccurs="0" />
@@ -867,22 +866,7 @@
                                 <elementRef key="placeName" minOccurs="0" />
                                 <elementRef key="quote" minOccurs="0" />
                             </alternate>
-                        </content>-->
-                        <!--<content>
-                            <rng:zeroOrMore>
-                                <rng:choice>
-                                    <rng:text />
-                                    <rng:ref name="country" />
-                                    <rng:ref name="date" />
-                                    <rng:ref name="foreign" />
-                                    <rng:ref name="idno" />
-                                    <rng:ref name="locus" />
-                                    <rng:ref name="persName" />
-                                    <rng:ref name="placeName" />
-                                    <rng:ref name="quote" />
-                                </rng:choice>
-                            </rng:zeroOrMore>
-                        </content>-->
+                        </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -901,9 +885,6 @@
                         <content>
                             <textNode />
                         </content>
-                        <!--<content>
-                            <rng:text />
-                        </content>-->
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -926,11 +907,8 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="additional" module="msdescription" mode="change">
-                        <!--<content>
-                            <elementRef key="listBibl" minOccurs="1" maxOccurs="1" />
-                        </content>-->
                         <content>
-                            <rng:ref name="listBibl" />
+                            <elementRef key="listBibl" minOccurs="1" maxOccurs="1" />
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
@@ -940,7 +918,7 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="altIdentifier" module="msdescription" mode="change">
-                        <!--<content>
+                        <content>
                             <sequence>
                                 <elementRef key="country" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="settlement" minOccurs="0" maxOccurs="1" />
@@ -948,22 +926,7 @@
                                 <elementRef key="repository" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="collection" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="idno" />
-                            </sequence>                            
-                        </content>-->
-                        <content>
-                            <rng:optional>
-                                <rng:ref name="country" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="settlement" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="institution" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="repository" />
-                            </rng:optional>
-                            <rng:ref name="idno" />
+                            </sequence>
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
@@ -974,29 +937,19 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="author" module="core" mode="change">
-                        <!--<content>
-                            <alternate>
-                                <textNode />
-                                <elementRef key="supplied" />
-                                <elementRef key="persName" />
-                            </alternate>
-                        </content>-->
                         <content>
-                            <rng:choice>
-                                <rng:text />
-                                <rng:ref name="persName" />
-                            </rng:choice>
+                            <elementRef key="persName" />
                         </content>
-                        <constraintSpec ident="anonymousauthor.check" scheme="isoschematron">
+                        <!--<constraintSpec ident="anonymousauthor.check" scheme="isoschematron">
                             <desc versionDate="2014-09-30" xml:lang="en">checks that <gi>author</gi> only contains <q>Anonymous</q> if <gi>persName</gi> is not used</desc>
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:author">
-                                        <sch:assert test="text()='Anonymous' or tei:supplied or tei:persName">The author element may only contain the value "Anonymous" when not using a persName element.</sch:assert>
+                                        <sch:assert test="text()='Anonymous' or tei:persName">The author element may only contain the value "Anonymous" when not using a persName element.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -1017,11 +970,8 @@
                     </elementSpec>
                     <elementSpec ident="authority" module="header" mode="change">
                         <content>
-                            <rng:text />
-                        </content>
-                        <!--<content>
                             <textNode />
-                        </content>-->
+                        </content>
                         <valList mode="replace" type="closed">
                             <valItem ident="Uppsala University Library" />
                         </valList>
@@ -1042,7 +992,13 @@
                     </elementSpec>
                     <elementSpec ident="bibl" module="core" mode="change">
                         <content>
-                            <rng:ref name="ref" />
+                            <elementRef key="ref" />
+                            <elementRef key="date" minOccurs="0" maxOccurs="1" />
+                            <sequence minOccurs="0" maxOccurs="unbounded">
+                                <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
+                            <!--<rng:ref name="ref" />
                             <rng:optional>
                                 <rng:ref name="date" />
                             </rng:optional>
@@ -1053,7 +1009,7 @@
                                 <rng:zeroOrMore>
                                     <rng:ref name="citedRange" />
                                 </rng:zeroOrMore>
-                            </rng:zeroOrMore>
+                            </rng:zeroOrMore>-->
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
@@ -1080,24 +1036,9 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="biblScope" module="core" mode="change">
-                        <!--<content>
-                            <textNode />
-                        </content>-->
                         <content>
-                            <rng:optional>
-                                <rng:text />
-                            </rng:optional>
+                            <rng:empty />
                         </content>
-                        <constraintSpec ident="biblscope.text.check" scheme="isoschematron">
-                            <desc versionDate="2014-08-04" xml:lang="en">checks that <gi>biblScope</gi> only contains <q>N.F.</q></desc>
-                            <constraint>
-                                <sch:pattern>
-                                    <sch:rule context="tei:biblScope/text()">
-                                        <sch:assert test="matches(., 'N.F.')">The biblScope element may only contain N.F.</sch:assert>
-                                    </sch:rule>
-                                </sch:pattern>
-                            </constraint>
-                        </constraintSpec>
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -1584,9 +1525,7 @@
                                     </sch:rule>
                                     <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
                                         <sch:assert test="tei:num[@type='left_flyleaves'][following-sibling::tei:num[@type='right_flyleaves']]">Both the left and right flyleaves should be recorded here, even if there are none.</sch:assert>
-                                        <sch:report test="tei:num[@type='textblock_leaves']">Only the extent of the flyleaves should be recorded here. The extent of the textblock should be recorded under respective msPart.</sch:report>
-                                        
-                                    </sch:rule>
+                                        <sch:report test="tei:num[@type='textblock_leaves']">Only the extent of the flyleaves should be recorded here. The extent of the textblock should be recorded under respective msPart.</sch:report> </sch:rule>
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
@@ -1696,11 +1635,11 @@
                     </elementSpec>
                     <elementSpec ident="head" mode="change" module="core">
                         <content>
-                            <rng:text/>
+                            <rng:text />
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />                            
+                            <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
                             <attDef ident="type" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
@@ -1843,7 +1782,7 @@
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
-                        <attList>                            
+                        <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
@@ -1997,13 +1936,26 @@
                             </constraint>
                         </constraintSpec>
                     </elementSpec>
-                    <elementSpec ident="measure" mode="change" module="core" />
+                    <elementSpec ident="measure" mode="change" module="core">
+                        <content>
+                            <rng:empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList type="closed">
+                                    <valItem ident="laid-lines_in_20mm">
+                                        <desc>Number of laid lines in 20 mm</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="msContents" mode="change" module="msdescription" />
                     <elementSpec ident="msDesc" mode="change" module="msdescription">
                         <content>
                             <rng:group>
                                 <rng:ref name="msIdentifier" />
-                                <rng:ref name="model.headLike"/>
+                                <rng:ref name="model.headLike" />
                                 <rng:ref name="msContents" />
                                 <rng:ref name="physDesc" />
                                 <rng:ref name="history" />
@@ -2418,7 +2370,7 @@
                                 <rng:ref name="physDesc" />
                                 <rng:optional>
                                     <rng:ref name="history" />
-                                </rng:optional>                                
+                                </rng:optional>
                             </rng:group>
                         </content>
                     </elementSpec>
@@ -2512,7 +2464,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
-                    </elementSpec>                    
+                    </elementSpec>
                     <elementSpec ident="pubPlace" mode="change" module="core">
                         <attList>
                             <attDef ident="facs" mode="delete" />
@@ -2669,7 +2621,7 @@
                         </classes>
                         <content>
                             <rng:text />
-                        </content>                        
+                        </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
