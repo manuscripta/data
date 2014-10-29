@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Schema and Encoding Guidelines for Greek Manuscripts in Sweden</title>
+                <title>TEI P5 Customization and Encoding Guidelines for Greek Manuscripts in Sweden</title>
                 <author xml:id="PG">Patrik Granholm</author>
                 <author xml:id="EN">Eva Nyström</author>
             </titleStmt>
@@ -19,133 +19,142 @@
         </revisionDesc>
     </teiHeader>
     <text>
-        <front>
-            <div>
-                <head>Schema and Encoding Guidelines for Greek Manuscripts in Sweden</head>
-            </div>
-            <divGen type="toc" />
-        </front>
         <body>
+            <divGen type="toc" xml:id="toc" />
             <div xml:id="introduction">
                 <head>Introduction</head>
-                <div xml:id="titlestatement">
-                    <head>Title Statement</head>
-                    <p>The <gi>titleStmt</gi> element must contain two elements: a <gi>title</gi> element containing the name of the library and the siglum for the manuscript being described, and one or more <gi>respStmt</gi> element(s) listing the person(s) responsible for the cataloguing and encoding.</p>
-                    <p>
+            </div>
+            <div xml:id="titlestatement">
+                <head>Title Statement</head>
+                <p>The <gi>titleStmt</gi> element must contain two elements: a <gi>title</gi> element containing the name of the library and the siglum for the manuscript being described, and one or more <gi>respStmt</gi> element(s) listing the person(s) responsible for the cataloguing and encoding.                
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+                        <titleStmt>
+                            <title>Uppsala University Library, Gr. 27</title>
+                            <respStmt xml:id="EN">
+                                <resp key="cataloguer" />
+                                <resp key="encoder" />
+                                <persName ref="#EvaNys" />
+                            </respStmt>
+                            <respStmt xml:id="PG">
+                                <resp key="cataloguer" />
+                                <resp key="encoder" />
+                                <persName ref="#PatGra" />
+                            </respStmt>
+                        </titleStmt>
+                    </egXML>
+                    <specList>
+                        <specDesc key="titleStmt" />
+                        <specDesc key="title" />
+                        <specDesc key="respStmt" atts="xml:id" />
+                        <specDesc key="resp" atts="key" />
+                        <specDesc key="persName" atts="ref" />
+                    </specList>
+                </p>
+            </div>
+            <div xml:id="publicationstatement">
+                <head>Publication Statement</head>
+                <p>The <gi>publicationStmt</gi> element must contain an <gi>authority</gi> element and <gi>pubPlace</gi> element.</p>
+                <p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <publicationStmt>
+                            <authority>Uppsala University Library</authority>
+                            <pubPlace>Uppsala</pubPlace>
+                        </publicationStmt>
+                    </egXML>
+                </p>
+            </div>
+            <div xml:id="revisiondescription">
+                <head>Revision Description</head>
+                <p>Updates or corrections should be logged in the <gi>revisionDesc</gi> element, which must contain at least one change element giving the date when the file was created and the person responsible. The <att>who</att> attribute should be linked to the xml:id of the person in the <gi>respStmt</gi> element in <ptr target="#titlestatement" />.</p>
+                <p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <revisionDesc>
+                            <change when="2013-06-26" who="#PG">First draft</change>
+                        </revisionDesc>
+                    </egXML>
+                </p>
+            </div>
+            <div xml:id="names">
+                <head>Names of Persons and Places</head>
+                <div xml:id="personalnames">
+                    <head>Personal Names</head>
+                    <p>Should be recorded within a <gi>persName</gi> element which can contain the following elements: <gi>forename</gi>, <gi>nameLink</gi>, <gi>surname</gi>, <gi>addName</gi> and <gi>roleName</gi>.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <titleStmt>
-                                <title>Uppsala University Library, Gr. 27</title>
-                                <respStmt xml:id="PG">
-                                    <resp key="cataloguer" />
-                                    <resp key="encoder" />
-                                    <persName>
-                                        <forename>Patrik</forename>
-                                        <surname>Granholm</surname>
-                                    </persName>
-                                </respStmt>
-                            </titleStmt>
+                            <persName>
+                                <forename>Luis</forename>
+                                <forename>Alfonso</forename>
+                                <surname>Llera Fueyo</surname>
+                            </persName>
+                            <persName>
+                                <forename>Nicholas</forename>
+                                <nameLink>de la</nameLink>
+                                <surname>Torre</surname>
+                            </persName>
+                            <persName>
+                                <foreName>Athenaeus</foreName>
+                                <addName>Mechanicus</addName>
+                            </persName>
+                            <persName>
+                                <foreName>Philip</foreName>
+                                <genName>II</genName>
+                                <roleName>King of Spain</roleName>
+                            </persName>
                         </egXML>
                     </p>
                 </div>
-                <div xml:id="publicationstatement">
-                    <head>Publication Statement</head>
-                    <p>The <gi>publicationStmt</gi> element must contain an <gi>authority</gi> element and <gi>pubPlace</gi> element.</p>
-                    <p>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <publicationStmt>
-                                <authority>Uppsala University Library</authority>
-                                <pubPlace>Uppsala</pubPlace>
-                            </publicationStmt>
-                        </egXML>
-                    </p>
+                <div xml:id="placenames">
+                    <head>Place names</head>
+                    <p>The English name form should be used wherever possible. A useful resource for identifying Latin place names is <ref target="http://www.columbia.edu/acis/ets/Graesse/contents.html">Orbis Latinus</ref>. See also the <ref target="http://thesaurus.cerl.org/">CERL Thesaurus</ref>.</p>
                 </div>
-                <div xml:id="revisiondescription">
-                    <head>Revision Description</head>
-                    <p>Updates or corrections should be logged in the <gi>revisionDesc</gi> element, which must contain at least one change element giving the date when the file was created and the person responsible. The <att>who</att> attribute should be linked to the xml:id of the person in the <gi>respStmt</gi> element in <ptr target="#titlestatement" />.</p>
-                    <p>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <revisionDesc>
-                                <change when="2013-06-26" who="#PG">First draft</change>
-                            </revisionDesc>
-                        </egXML>
-                    </p>
-                </div>
-                <div xml:id="names">
-                    <head>Names of Persons and Places</head>
-                    <div xml:id="personalnames">
-                        <head>Personal Names</head>
-                        <p>Should be recorded within a <gi>persName</gi> element which can contain the following elements: <gi>forename</gi>, <gi>nameLink</gi>, <gi>surname</gi>, <gi>addName</gi> and <gi>roleName</gi>.
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <persName>
-                                    <forename>Luis</forename>
-                                    <forename>Alfonso</forename>
-                                    <surname>Llera Fueyo</surname>
-                                </persName>
-                                <persName>
-                                    <forename>Nicholas</forename>
-                                    <nameLink>de la</nameLink>
-                                    <surname>Torre</surname>
-                                </persName>
-                                <persName>
-                                    <foreName>Athenaeus</foreName>
-                                    <addName>Mechanicus</addName>
-                                </persName>
-                                <persName>
-                                    <foreName>Philip</foreName>
-                                    <genName>II</genName>
-                                    <roleName>King of Spain</roleName>
-                                </persName>
-                            </egXML>
-                        </p>
-                    </div>
-                    <div xml:id="placenames">
-                        <head>Place names</head>
-                        <p>The English name form should be used wherever possible. A useful resource for identifying Latin place names is <ref target="http://www.columbia.edu/acis/ets/Graesse/contents.html">Orbis Latinus</ref>. See also the <ref target="http://thesaurus.cerl.org/">CERL Thesaurus</ref>.</p>
-                    </div>
-                </div>
-                <div xml:id="greekcharacters">
-                    <head>Notation of Greek characters</head>
-                    <div xml:id="greeknumbers">
-                        <head>Greek numerals and ordinals</head>
-                        <p>Greek numerals and ordinals should be noted in the following way:
+            </div>
+            <div xml:id="greekcharacters">
+                <head>Notation of Greek characters</head>
+                <div xml:id="greeknumbers">
+                    <head>Greek numerals and ordinals</head>
+                    <p>Greek numerals and ordinals should be noted in the following way:
                             αʹ (Greek Numeral Sign, U+0374) 
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <num xml:lang="grc" type="cardinal" value="1">αʹ</num>
-                            </egXML>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+<num xml:lang="grc" type="cardinal" value="1">αʹ</num>
+                        </egXML>
                             ͵α (Greek Lower Numeral Sign, U+0375)
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <num xml:lang="grc" type="cardinal" value="1000">͵α</num>
-                            </egXML>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+<num xml:lang="grc" type="cardinal" value="1000">͵α</num>
+                        </egXML>
                             δου (abbreviation for τετάρτου)
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+<num xml:lang="grc" type="ordinal" value="4">δ<hi rend="sup">ου</hi></num>
+                        </egXML>
+                    </p>
+                </div>
+                <div xml:id="interpunction">
+                    <head>Interpunction</head>
+                    <p>For the Greek question mark the semicolon (U+003B ;) should be used instead of the erotimatiko (U+037E ;).</p>
+                    <p>For the Greek semicolon the middle dot (U+00B7 ·) should be used instead of the Greek ano teleia (U+0387 ·).</p>
+                    <p>For the Greek apostrophe the right single quotation mark (U+2019 ’) should be used instead of the apostrophe (U+0027 ') or the Greek psili (U+1FBF ᾿), cf. <ref target="http://www.tlg.uci.edu/encoding/BCM2013.pdf#page=7">TLG Beta Code Manual, p. 7</ref> and <ref target="http://www.unicode.org/versions/Unicode6.2.0/ch06.pdf#page=15">The Unicode Standard, Version 6.2, p. 200</ref>. The Greek apostophe should be transformed to a Greek psili (U+1FBF ᾿) with XSLT for display purposes.</p>
+                    <p>Use the <gi>q</gi> element instead of quotation marks, e.g. in titles.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <num xml:lang="grc" type="ordinal" value="4">δ<hi rend="sup">ου</hi></num>
-                            </egXML>
-                        </p>
-                    </div>
-                    <div xml:id="interpunction">
-                        <head>Interpunction</head>
-                        <p>For the Greek question mark the semicolon (U+003B ;) should be used instead of the erotimatiko (U+037E ;).</p>
-                        <p>For the Greek semicolon the middle dot (U+00B7 ·) should be used instead of the Greek ano teleia (U+0387 ·).</p>
-                        <p>For the Greek apostrophe the right single quotation mark (U+2019 ’) should be used instead of the apostrophe (U+0027 ') or the Greek psili (U+1FBF ᾿), cf. <ref target="http://www.tlg.uci.edu/encoding/BCM2013.pdf#page=7">TLG Beta Code Manual, p. 7</ref> and <ref target="http://www.unicode.org/versions/Unicode6.2.0/ch06.pdf#page=15">The Unicode Standard, Version 6.2, p. 200</ref>. The Greek apostophe should be transformed to a Greek psili (U+1FBF ᾿) with XSLT for display purposes.</p>
-                        <p>Use the <gi>q</gi> element instead of quotation marks, e.g. in titles.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <title level="m" xml:lang="fr">Les <q>Cestes</q> de Julius Africanus: étude sur l’ensemble des fragments avec édition, traduction et commentaire</title>
-                            </egXML>
-                        </p>
-                    </div>
-                    <div xml:id="transcription">
-                        <head>Transcription of Greek</head>
-                        <p>In most cases the Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>.</p>
-                        <p>The <gi>supplied</gi> element should be used for editorial additions, the <gi>ex</gi> element for expansions of abbreviations, and the <gi>sic</gi> element for indicating that the word has been transcribed exactly as found in the original source even though it might be erroneous or nonstandard. Additions and deletions should be recorded using the <gi>add</gi> and <gi>del</gi> elements. If the addition is made by another hand which is described in a <gi>handNote</gi> element, a reference can be made in a <att>hand</att> attribute to this description. Line breaks should be indicated with <gi>lb</gi> elements. Punctuations marks like : and + should be noted. Lower and upper case letters should be kept as they are in the manuscript. Note that the Greek should in most cases be normalized, the exceptions being the colophon and text quoted within the physical description.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <colophon xml:lang="grc">
-                                    <locus from="119r" to="119r" scheme="folios" />
-                                    <supplied reason="omitted">θ</supplied><ex>εο</ex>ῦ τὸ δῶρ<ex>ον</ex>, <ex>καὶ</ex> πόνος μιχαήλου <supplied reason="omitted">ἀ</supplied>ργείου λακώνου : <supplied reason="omitted">ἐ</supplied>ν βουνωνία πόλ<ex>ει</ex>
-                                    <supplied>ἰ</supplied>ταλί<ex>ας</ex>, <supplied reason="omitted">κ</supplied>αὶ ταύτ<ex>ην</ex> ἀμυστὶ <lb /> τὴν βίβλον σὺν πολλοῖς ἄλλοις τὸν ἀριθμ<ex>ὸν</ex>· <num xml:lang="grc" type="cardinal" value="150">ρνʹ</num>· ἐξέγραψα, ὑπὲρ π<ex>ατ</ex>ρίδος καὶ γένους : + <lb /> γραφεὺς ἐλεύθερος καὶ χρημάτ<ex>ων</ex> ἀνώ<ex>τερος</ex> :
-                                </colophon>
-                            </egXML>
-                        </p>
-                    </div>
+                            <title level="m" xml:lang="fr">Les <q>Cestes</q> de Julius Africanus: étude sur l’ensemble des fragments avec édition, traduction et commentaire</title>
+                        </egXML>
+                    </p>
+                </div>
+                <div xml:id="transcription">
+                    <head>Transcription of Greek</head>
+                    <p>In most cases the Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>.</p>
+                    <p>The <gi>supplied</gi> element should be used for editorial additions, the <gi>ex</gi> element for expansions of abbreviations, and the <gi>sic</gi> element for indicating that the word has been transcribed exactly as found in the original source even though it might be erroneous or nonstandard.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+<supplied reason="omitted">θ</supplied><ex>εο</ex>ῦ τὸ δῶρ<ex>ον</ex>
+                    </egXML>
+                    </p>
+                    <p>Additions and deletions should be recorded using the <gi>add</gi> and <gi>del</gi> elements. If the addition is made by another hand which is described in a <gi>handNote</gi> element, a reference can be made in a <att>hand</att> attribute to this description.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+<rubric xml:lang="grc">
+    <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
+    <add place="above" xml:lang="grc">Βίτωνος Μηχανικά</add>
+</rubric>
+                        </egXML>
+                    </p>
+                    <p>Line breaks should be indicated with <gi>lb</gi> elements. Punctuations marks like : and + should be noted. Lower and upper case letters should be kept as they are in the manuscript. Note that the Greek should in most cases be normalized, the exceptions being the colophon and text quoted within the physical description.                            
+                    </p>
                 </div>
             </div>
             <div xml:id="msdescription">
@@ -264,8 +273,8 @@
                             <p>Give the number of folia of left and right flyleaves in the <gi>extent</gi> element with <gi>measure</gi> elements (<att>type</att> attribute with values <val>left_flyleaves</val> and <val>right_flyleaves</val>). The extent for each unit should be given under each respective msPart, see <ptr target="#extent_unit" />
                                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                     <extent>
-                                        <measure type="left_flyleaves" value="3" />
-                                        <measure type="right_flyleaves" value="3" />
+                                        <measure type="left_flyleaves" quantity="3" />
+                                        <measure type="right_flyleaves" quantity="3" />
                                     </extent>
                                 </egXML>
                             </p>
@@ -695,7 +704,7 @@
                                     <p>Give the number of folia of the codicological unit in the <gi>extent</gi> element in a <gi>measure</gi> element (<att>type</att> attribute with value <val>textblock_leaves</val>). The extent of flyleaves should be given under the bookblock part, see <ptr target="#extent_book" />.
                                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                             <extent>
-                                                <measure type="textblock_leaves" value="128" />
+                                                <measure type="textblock_leaves" quantity="128" />
                                             </extent>
                                         </egXML>
                                     </p>
@@ -855,18 +864,18 @@
                         <classes mode="change">
                             <memberOf key="att.datable" mode="delete" />
                         </classes>
-                        <content>
+                        <!--<content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode />
-                                <elementRef key="date" minOccurs="0" />
-                                <elementRef key="foreign" minOccurs="0" />
-                                <elementRef key="idno" minOccurs="0" />
-                                <elementRef key="locus" minOccurs="0" />
-                                <elementRef key="persName" minOccurs="0" />
-                                <elementRef key="placeName" minOccurs="0" />
-                                <elementRef key="quote" minOccurs="0" />
+                                <elementRef key="textNode" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
-                        </content>
+                        </content>-->
                         <attList>
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
@@ -995,8 +1004,8 @@
                             <elementRef key="ref" />
                             <elementRef key="date" minOccurs="0" maxOccurs="1" />
                             <sequence minOccurs="0" maxOccurs="unbounded">
-                                <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded" />
                             </sequence>
                             <!--<rng:ref name="ref" />
                             <rng:optional>
@@ -1510,7 +1519,7 @@
                                             <rng:value>right_flyleaves</rng:value>
                                         </rng:choice>
                                     </rng:attribute>
-                                    <rng:attribute name="value">
+                                    <rng:attribute name="quantity">
                                         <rng:ref name="data.numeric" />
                                     </rng:attribute>
                                 </rng:element>
@@ -1525,7 +1534,8 @@
                                     </sch:rule>
                                     <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
                                         <sch:assert test="tei:measure[@type='left_flyleaves'][following-sibling::tei:measure[@type='right_flyleaves']]">Both the left and right flyleaves should be recorded here, even if there are none.</sch:assert>
-                                        <sch:report test="tei:measure[@type='textblock_leaves']">Only the extent of the flyleaves should be recorded here. The extent of the textblock should be recorded under respective msPart.</sch:report> </sch:rule>
+                                        <sch:report test="tei:measure[@type='textblock_leaves']">Only the extent of the flyleaves should be recorded here. The extent of the textblock should be recorded under respective msPart.</sch:report>
+                                    </sch:rule>
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
@@ -1938,7 +1948,7 @@
                     </elementSpec>
                     <elementSpec ident="measure" mode="change" module="core">
                         <content>
-                            <rng:empty/>
+                            <rng:empty />
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
@@ -2020,23 +2030,28 @@
                         <!--<content>
                             <sequence preserveOrder="true">
                                 <alternate>
-                                    <elementRef key="locus" minOccurs="1" maxOccurs="unbounded" />
-                                    <elementRef key="locusGrp" minOccurs="1" maxOccurs="unbounded" />
+                                    <elementRef key="locus" minOccurs="1" maxOccurs="1" />
+                                    <elementRef key="locusGrp" minOccurs="1" maxOccurs="1" />
                                 </alternate>
-                                <elementRef key="textLang" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="author" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="title" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="rubric" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="incipit" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="explicit" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="finalRubric" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="note" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="colophon" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="filiation" minOccurs="0" maxOccurs="unbounded" />
                                 <alternate>
-                                    <elementRef key="listBibl" minOccurs="0" maxOccurs="1" />
-                                    <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded" />
+                                    <sequence preserveOrder="true">
+                                        <elementRef key="textLang" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="author" minOccurs="0" maxOccurs="unbounded" />
+                                        <elementRef key="title" minOccurs="0" maxOccurs="unbounded" />
+                                        <elementRef key="rubric" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded" />
+                                        <elementRef key="incipit" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="explicit" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="finalRubric" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="note" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="colophon" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="filiation" minOccurs="0" maxOccurs="unbounded" />
+                                        <alternate>
+                                            <elementRef key="listBibl" minOccurs="0" maxOccurs="1" />
+                                            <elementRef key="bibl" minOccurs="0" maxOccurs="1" />
+                                        </alternate>
+                                    </sequence>
+                                    <elementRef key="note" />
                                 </alternate>
                             </sequence>
                         </content>-->
@@ -2047,49 +2062,65 @@
                                     <rng:ref name="locusGrp" />
                                 </rng:choice>
                             </rng:group>
-                            <rng:optional>
-                                <rng:ref name="textLang" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="author" />
-                            </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="title" />
-                            </rng:zeroOrMore>
-                            <rng:optional>
-                                <rng:ref name="rubric" />
-                            </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="msItem" />
-                            </rng:zeroOrMore>
-                            <rng:optional>
-                                <rng:ref name="incipit" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="quote" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="explicit" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="finalRubric" />
-                            </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="note" />
-                            </rng:zeroOrMore>
-                            <rng:optional>
-                                <rng:ref name="colophon" />
-                            </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:ref name="filiation" />
-                            </rng:zeroOrMore>
-                            <rng:optional>
+                            <rng:group>
                                 <rng:choice>
-                                    <rng:ref name="listBibl" />
-                                    <rng:ref name="bibl" />
+                                    <rng:group>
+                                        <rng:optional>
+                                            <rng:ref name="textLang" />
+                                        </rng:optional>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="author" />
+                                        </rng:zeroOrMore>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="title" />
+                                        </rng:zeroOrMore>
+                                        <rng:optional>
+                                            <rng:ref name="rubric" />
+                                        </rng:optional>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="msItem" />
+                                        </rng:zeroOrMore>
+                                        <rng:optional>
+                                            <rng:ref name="incipit" />
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="quote" />
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="explicit" />
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="finalRubric" />
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="note" />
+                                        </rng:optional>
+                                        <rng:optional>
+                                            <rng:ref name="colophon" />
+                                        </rng:optional>
+                                        <rng:zeroOrMore>
+                                            <rng:ref name="filiation" />
+                                        </rng:zeroOrMore>
+                                        <rng:optional>
+                                            <rng:choice>
+                                                <rng:ref name="listBibl" />
+                                                <rng:ref name="bibl" />
+                                            </rng:choice>
+                                        </rng:optional>
+                                    </rng:group>
+                                    <rng:ref name="note" />
                                 </rng:choice>
-                            </rng:optional>
+                            </rng:group>
                         </content>
+                        <constraintSpec ident="msItem.note.check" scheme="isoschematron">
+                            <desc versionDate="2014-10-29" xml:lang="en">checks that the <gi>meItem</gi> element contains at least a <gi>locus</gi> or <gi>locusGrp</gi> and a <gi>note</gi>.</desc>
+                            <!-- Needed to validate against tei_all -->
+                            <constraint>
+                                <sch:rule context="tei:msItem">
+                                    <sch:assert test="tei:note or (tei:textLang or tei:author or tei:title or tei:rubric or tei:msItem or tei:incipit or tei:quote or tei:explicit or tei:finalRubric or tei:colophon or tei:filiation or tei:listBibl or tei:bibl)">The msItem element must contain at least a locus or locusGrp and a note element.</sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="class" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
