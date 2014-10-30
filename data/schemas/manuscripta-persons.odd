@@ -26,7 +26,25 @@
                <head>Personal Names</head>
                <p>Should be recorded within a <gi>persName</gi> element which can contain the following elements: <gi>forename</gi>, <gi>nameLink</gi>, <gi>surname</gi>, <gi>addName</gi> and <gi>roleName</gi>.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     
+                     <persName>
+                        <forename>Luis</forename>
+                        <forename>Alfonso</forename>
+                        <surname>Llera Fueyo</surname>
+                     </persName>
+                     <persName>
+                        <forename>Nicholas</forename>
+                        <nameLink>de la</nameLink>
+                        <surname>Torre</surname>
+                     </persName>
+                     <persName>
+                        <foreName>Athenaeus</foreName>
+                        <addName>Mechanicus</addName>
+                     </persName>
+                     <persName>
+                        <foreName>Philip</foreName>
+                        <genName>II</genName>
+                        <roleName>King of Spain</roleName>
+                     </persName>
                   </egXML>
                </p>
             </div>
@@ -125,14 +143,14 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="genName" module="namesdates" mode="change"/>
+               <elementSpec ident="genName" module="namesdates" mode="change" />
                <elementSpec ident="p" module="core" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="idno" module="header" mode="change"/>
+               <elementSpec ident="idno" module="header" mode="change" />
                <elementSpec ident="person" module="namesdates" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="change" usage="req" />
@@ -198,7 +216,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="roleName" module="namesdates" mode="change"/>
+               <elementSpec ident="roleName" module="namesdates" mode="change" />
                <elementSpec ident="sourceDesc" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
