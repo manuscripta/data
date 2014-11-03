@@ -300,63 +300,20 @@
                 </div>
                 <div xml:id="history_book">
                     <head>History</head>
-                    <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In a paragraph inside the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Record the different stages in the provenance in one or more paragraphs inside the <gi>provenance</gi> element. The <gi>acquisition</gi> element should include one or more paragraphs describing the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
+                    <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Record the different stages in the provenance in one or more <gi>provenance</gi> elements. The <gi>acquisition</gi> element should describe the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <history>
-                                <origin>
-                                    <p>The codex was written by 
-                                            <supplied>
-                                            <persName>
-                                                <forename>Theodoros</forename>
-                                            </persName>
-                                        </supplied> 
-                                            in the 
-                                            <origDate notBefore="1480" notAfter="1489">1480s</origDate>, 
-                                            possibly in <origPlace>Crete</origPlace>, according to the watermark evidence.</p>
-                                </origin>
-                                <provenance>
-                                    <p>Based on marginal notes, it was owned by various Greek-speaking persons at least until the 
-                                            <date notBefore="1540" notAfter="1570">mid 16th century</date>. 
-                                        </p>
-                                    <p>Probably purchased in Venice in the 
-                                            <date notBefore="1570" notAfter="1576">1570s</date> 
-                                            on behalf of 
-                                            <persName>
-                                            <foreName>Philip</foreName>
-                                            <genName>II</genName>, 
-                                                <roleName>King of Spain</roleName>
-                                        </persName>. 
-                                        </p>
-                                    <p>Donated to 
-                                            <placeName>El Escorial</placeName> 
-                                            in 
-                                            <date when="1576">1576</date>. 
-                                            Number 16 on the fore-edge is probably part of the old Escorial shelfmark Α-VI-16. 
-                                            The manuscript went missing after the fire in <placeName>El Escorial</placeName> in <date when="1671">1671</date>. </p>
-                                    <p>Acquired in 
-                                            <placeName>Spain</placeName> 
-                                            by 
-                                            <persName>
-                                            <forename>Johan</forename>
-                                            <forename>Gabriel </forename>
-                                            <surname>Sparwenfeld</surname>
-                                        </persName>
-                                        <date notBefore="1689" notAfter="1694">around 1690</date> 
-                                            and brought to <placeName>Sweden</placeName>.</p>
-                                </provenance>
-                                <acquisition>
-                                    <p>Donated by 
-                                            <persName>
-                                            <surname>Sparwenfeld</surname>
-                                        </persName> 
-                                            to 
-                                            <orgName>Uppsala University Library</orgName> 
-                                            in 
-                                            <date when="1705">1705</date>.
-                                        </p>
-                                </acquisition>
+                                <origin>Probably written in the <origDate evidence="internal" from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                                <provenance>At sometime the volume came to <placeName>Venice</placeName>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
+                                <acquisition>It was acquired there by <persName ref="#JohSpa" />
+                                        , who was staying in Venice <date from="1692" to="1693">from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios" />: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705" />.</acquisition>
                             </history>
                         </egXML>
+                        <specList>
+                            <specDesc key="origin" />
+                            <specDesc key="provenance" />
+                            <specDesc key="acquisition" />
+                        </specList>
                     </p>
                 </div>
                 <div xml:id="additional_book">
@@ -864,17 +821,21 @@
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>                                
+                                <textNode />
                                 <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="p" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <acquisition>It was acquired there by <persName ref="#JohSpa" />, who was staying in Venice <date from="1692" to="1693">from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios" />: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705" />.</acquisition>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="add" module="core" mode="change">
                         <classes mode="change">
@@ -888,11 +849,11 @@
                             <textNode />
                         </content>
                         <attList>
-                            <!-- Attributes deleted from att.global -->                            
+                            <!-- Attributes deleted from att.global -->
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
-                            
+
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="above" />
@@ -1156,8 +1117,8 @@
                     </elementSpec>
                     <elementSpec ident="change" module="header" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
                             <textNode />
@@ -1166,13 +1127,13 @@
                             <rng:text />
                         </content>-->
                         <attList>
-                            <attDef ident="target" mode="delete" />                                                    
+                            <attDef ident="target" mode="delete" />
                             <!-- Attributes changed and deleted from att.datable.w3c -->
                             <attDef ident="when" mode="change" usage="req" />
                             <attDef ident="notAfter" mode="delete" />
                             <attDef ident="notBefore" mode="delete" />
                             <attDef ident="from" mode="delete" />
-                            <attDef ident="to" mode="delete" />                            
+                            <attDef ident="to" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1685,6 +1646,9 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="history" mode="change" module="msdescription">
+                        <classes>
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
                             <rng:optional>
                                 <rng:ref name="origin" />
@@ -1696,6 +1660,15 @@
                                 <rng:ref name="acquisition" />
                             </rng:optional>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <history>
+                                    <origin>Probably written in the <origDate evidence="internal" from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                                    <provenance>At sometime the volume came to <placeName>Venice</placeName>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
+                                    <acquisition>It was acquired there by <persName ref="#JohSpa" />, who was staying in Venice <date from="1692" to="1693">from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios" />: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705" />.</acquisition>
+                                </history>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="hi" mode="change" module="core">
                         <content>
@@ -2441,7 +2414,32 @@
                         </constraintSpec>
                     </elementSpec>
                     <elementSpec ident="origPlace" mode="change" module="msdescription" />
-                    <elementSpec ident="origin" mode="change" module="msdescription" />
+                    <elementSpec ident="origin" mode="change" module="msdescription">
+                        <classes>
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.dimensions" mode="delete" />
+                            <memberOf key="att.ranging" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                            <memberOf key="att.datable" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="origDate" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />                                
+                                <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
+                            </alternate>
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <origin>Probably written in the <origDate evidence="internal" from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="p" mode="change" module="core">
                         <attList>
                             <attDef ident="xml:id" mode="delete" />
@@ -2498,7 +2496,31 @@
                     </elementSpec>
                     <elementSpec ident="physDesc" mode="change" module="msdescription" />
                     <elementSpec ident="placeName" mode="change" module="namesdates" />
-                    <elementSpec ident="provenance" mode="change" module="msdescription" />
+                    <elementSpec ident="provenance" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.datable" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
+                            </alternate>
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <provenance>At sometime the volume came to <placeName>Venice</placeName>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="publicationStmt" mode="change" module="header">
                         <content>
                             <rng:ref name="authority" />
