@@ -859,26 +859,22 @@
 
                     <elementSpec ident="acquisition" module="msdescription" mode="change">
                         <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
                             <memberOf key="att.datable" mode="delete" />
                         </classes>
-                        <!--<content>
+                        <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <elementRef key="textNode" minOccurs="0" maxOccurs="unbounded" />
+                                <textNode/>                                
                                 <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="p" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
-                        </content>-->
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
+                        </content>
                     </elementSpec>
                     <elementSpec ident="add" module="core" mode="change">
                         <classes mode="change">
@@ -892,9 +888,11 @@
                             <textNode />
                         </content>
                         <attList>
+                            <!-- Attributes deleted from att.global -->                            
+                            <attDef ident="xml:id" mode="delete" />
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
+                            
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="above" />
@@ -1157,27 +1155,24 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="change" module="header" mode="change">
-                        <!--<content>
-                            <textNode />
-                        </content>-->
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
                         <content>
-                            <rng:text />
+                            <textNode />
                         </content>
+                        <!--<content>
+                            <rng:text />
+                        </content>-->
                         <attList>
-                            <attDef ident="target" mode="delete" />
-                            <!-- Attributes removed from att.global -->
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                            <!-- Attributes removed from att.global.facs -->
-                            <attDef ident="facs" mode="delete" />
-                            <!-- Attributes removed from att.datable.w3c -->
+                            <attDef ident="target" mode="delete" />                                                    
+                            <!-- Attributes changed and deleted from att.datable.w3c -->
+                            <attDef ident="when" mode="change" usage="req" />
                             <attDef ident="notAfter" mode="delete" />
                             <attDef ident="notBefore" mode="delete" />
                             <attDef ident="from" mode="delete" />
-                            <attDef ident="to" mode="delete" />
-                            <!-- Attributes removed from att.typed -->
-                            <attDef ident="type" mode="delete" />
+                            <attDef ident="to" mode="delete" />                            
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1186,6 +1181,11 @@
                                 </revisionDesc>
                             </egXML>
                         </exemplum>
+                        <remarks versionDate="2014-11-03" xml:lang="en">
+                            <p>The <att>who</att> attribute should point to the <att>xml:id</att> of the <gi>respStmt</gi> in the header, identifying
+                                the person responsible for the change and their role in making it. Changes should be recorded with the most recent
+                                first.</p>
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="citedRange" mode="change" module="core">
                         <!--<content/>-->
