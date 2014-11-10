@@ -192,7 +192,7 @@
                 </div>
                 <div xml:id="mscontents_book">
                     <head>Contents of the bookblock</head>
-                    <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>endleaf</val>. If the endleaves have content this should be recorded in a <gi>note</gi> element.
+                    <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msPart>
                                 <msContents>
@@ -203,7 +203,7 @@
                                     </msItem>
                                     <msItem class="endleaf">
                                         <locus from="L3r" to="L3v" scheme="folios" />
-                                        <title>Table of contents</title>
+                                        <note>Table of contents</note>
                                     </msItem>
                                     <msItem class="endleaf">
                                         <locus from="R1r" to="RCI" scheme="folios" />
@@ -353,7 +353,7 @@
                                 </egXML>
                             </p>
                             <p>The items should not be numbered with the <att>n</att> attribute. The numbering will be generated automatically in the XSLT transformation. If the manuscript item is incomplete through loss or damage use the <att>defective</att> attribute with value <val>true</val> (default value is <val>false</val>).</p>
-                            <p>Blank pages should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>blank_page</val> (this will be automatically be tranformed into eg. (f. 119v–120v) blank). Pages containing short notes or scribbles by later hands should be categorized as blank. Give a brief description in a <gi>note</gi> element with a reference to the <gi>handNote</gi> element containing the quote. Table of contents may be quoted under <gi>handNote</gi> in <gi>handDesc</gi>.</p>
+                            <p>Blank pages should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>blank_page</val>. The <gi>msItem</gi> element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element with the text <quote>Blank page/s</quote>. Pages containing short notes or scribbles by later hands should be categorized as blank. Give a brief description in a <gi>note</gi> element with a reference to the <gi>handNote</gi> element containing the quote. Table of contents may be quoted under <gi>handNote</gi> in <gi>handDesc</gi>.</p>
                             <div xml:id="msitem_unit_locus">
                                 <head>Locus</head>
                                 <p>Give start and end folio of each item. If there are several items on a single folio give line numbers. The foliation scheme should be specified in the <att>scheme</att>attribute with the value <val>folios</val> or <val>pages</val>.   
