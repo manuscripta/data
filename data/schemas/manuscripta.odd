@@ -2597,8 +2597,18 @@
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
+                        <constraintSpec ident="ref.target.check" scheme="isoschematron">
+                            <desc versionDate="2014-11-10" xml:lang="en">checks that the <gi>ref</gi> element has a <att>target</att> attribute when it is a child of the <gi>bibl</gi> element</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:bibl/tei:ref">
+                                        <sch:assert test="@target">The ref element must have a target attribute</sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
-                            <attDef ident="target" mode="change" usage="req" />
+                            <attDef ident="target" mode="change" usage="rec" />
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="type" mode="delete" />
