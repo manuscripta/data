@@ -1165,10 +1165,9 @@
                                 first.</p>
                         </remarks>
                     </elementSpec>
-                    <elementSpec ident="citedRange" mode="change" module="core">
-                        <!--<content/>-->
+                    <elementSpec ident="citedRange" mode="change" module="core">                        
                         <content>
-                            <rng:empty />
+                            <textNode/>
                         </content>
                         <attList>
                             <attDef ident="facs" mode="delete" />
@@ -3113,9 +3112,9 @@
                     <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.citing" module="tei" type="atts" mode="change">
                         <attList>
-                            <attDef ident="from" mode="change" usage="req" />
-                            <attDef ident="to" mode="change" usage="req" />
-                            <attDef ident="unit" mode="change" usage="req">
+                            <attDef ident="from" mode="change" usage="rec" />
+                            <attDef ident="to" mode="change" usage="rec" />
+                            <attDef ident="unit" mode="change" usage="rec">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="volume" />
                                     <valItem ident="issue" />
