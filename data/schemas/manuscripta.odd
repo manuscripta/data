@@ -2595,9 +2595,12 @@
                     </elementSpec>
                     <elementSpec ident="ref" mode="change" module="core">
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
+                            <alternate minOccurs="0" maxOccurs="unbounded">                                
+                                <textNode/>                      
                                 <elementRef key="bibl"/>
-                                <textNode/>                                
+                                <elementRef key="date"/>
+                                <elementRef key="placeName"/>
+                                <elementRef key="persName"/>
                             </alternate>                            
                         </content>
                         <constraintSpec ident="ref.content.check" scheme="isoschematron">
@@ -3093,6 +3096,7 @@
                                 <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="dimensions" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="measure" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="note" minOccurs="0" maxOccurs="1"/>
                             </sequence>
                         </content>
                         <constraintSpec ident="watermark.n.check" scheme="isoschematron">
