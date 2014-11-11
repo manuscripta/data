@@ -26,27 +26,32 @@
             <div xml:id="articles">
                <head>Articles</head>
                <p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <bibl xml:id="DeStefani1902">
+                        <author ref="#EduDeS" />
+                        <title level="a" xml:lang="it">I manoscritti della Historia Animalium di Eliano</title>
+                        <title level="j" xml:lang="it">Studi italiani di filologia classica</title>
+                        <date when="1902" />
+                        <biblScope unit="volume" from="10" to="10" />
+                        <biblScope unit="page" from="175" to="222" />
+                     </bibl>
+                     <bibl xml:id="Schneider1912">
+                        <author ref="#AthMec" />
+                        <editor ref="#RudSch" />
+                        <title level="a">Griechische Poliorketiker III</title>
+                        <title level="s">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse, N.F.</title>
+                        <pubPlace>Berlin</pubPlace>
+                        <date when="1912" />
+                        <biblScope from="12" to="12" unit="volume" />
+                        <biblScope from="5" to="5" unit="issue" />
+                        <biblScope from="8" to="36" unit="page" />
+                     </bibl>
+                  </egXML>
+               </p>
+               <p>Use the <gi>q</gi> element instead of quotation marks, e.g. in titles.
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <bibl xml:id="DeStefani1902">
-                     <author ref="#EduDeS" />
-                     <title level="a" xml:lang="it">I manoscritti della Historia Animalium di Eliano</title>
-                     <title level="j" xml:lang="it">Studi italiani di filologia classica</title>
-                     <date when="1902" />
-                     <biblScope unit="volume" from="10" to="10" />
-                     <biblScope unit="page" from="175" to="222" />
-                  </bibl>
-                  <bibl xml:id="Schneider1912">
-                     <author ref="#AthMec" />
-                     <editor ref="#RudSch" />
-                     <title level="a">Griechische Poliorketiker III</title>
-                     <title level="s">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse, N.F.</title>
-                     <pubPlace>Berlin</pubPlace>
-                     <date when="1912" />
-                     <biblScope from="12" to="12" unit="volume"/>
-                     <biblScope from="5" to="5" unit="issue" />
-                     <biblScope from="8" to="36" unit="page" />
-                  </bibl>
-               </egXML>
+                     <title level="m" xml:lang="fr">Les <q>Cestes</q> de Julius Africanus: étude sur l’ensemble des fragments avec édition, traduction et commentaire</title>
+                  </egXML>
                </p>
             </div>
             <div xml:id="monographs">
@@ -84,7 +89,7 @@
          </div>
          <div xml:id="schema">
             <head>Schema for the Bibliography</head>
-            
+
             <schemaSpec ident="manuscripta-bibliography" start="TEI" xml:lang="en">
 
                <!--       MODULES USED BY THE SCHEMA       -->
@@ -93,7 +98,7 @@
                <moduleRef key="core" include="author bibl biblScope date editor foreign listBibl p pubPlace q title" />
                <moduleRef key="header" include="edition fileDesc publicationStmt sourceDesc teiHeader titleStmt" />
                <moduleRef key="namesdates" include="addName forename nameLink persName placeName surname" />
-               <moduleRef key="textstructure" include="TEI body text" />               
+               <moduleRef key="textstructure" include="TEI body text" />
 
                <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
@@ -104,7 +109,7 @@
                   </classes>
                   <content>
                      <rng:text />
-                  </content>                  
+                  </content>
                   <attList>
                      <attDef ident="facs" mode="delete" />
                      <attDef ident="n" mode="delete" />
@@ -177,7 +182,7 @@
                   <attList>
                      <attDef ident="type" mode="change" usage="rec">
                         <valList mode="replace" type="closed">
-                           <valItem ident="article-journal"/>
+                           <valItem ident="article-journal" />
                            <valItem ident="book">
                               <desc>Monograph</desc>
                            </valItem>
@@ -186,14 +191,14 @@
                            </valItem>
                            <valItem ident="edition">
                               <desc>Critial edition</desc>
-                           </valItem>                           
-                           <valItem ident="manuscript"/>
-                           <valItem ident="thesis"/>
+                           </valItem>
+                           <valItem ident="manuscript" />
+                           <valItem ident="thesis" />
                         </valList>
                      </attDef>
                      <attDef ident="xml:id" mode="change" usage="req" />
                      <attDef ident="facs" mode="delete" />
-                     <attDef ident="n" mode="delete" />                     
+                     <attDef ident="n" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                   <exemplum>
@@ -216,7 +221,7 @@
                </elementSpec>
                <elementSpec ident="biblScope" module="core" mode="change">
                   <content>
-                     <rng:empty/>
+                     <rng:empty />
                   </content>
                   <attList>
                      <attDef ident="facs" mode="delete" />
@@ -246,7 +251,7 @@
                   </exemplum>
                </elementSpec>
                <elementSpec ident="body" module="textstructure" mode="change">
-                  <content>                     
+                  <content>
                      <rng:ref name="listBibl" />
                   </content>
                   <attList>
@@ -282,7 +287,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="edition" module="header" mode="change"/>
+               <elementSpec ident="edition" module="header" mode="change" />
                <elementSpec ident="editor" module="core" mode="change">
                   <content>
                      <rng:empty />
@@ -299,7 +304,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="foreign" module="core" mode="change"/>
+               <elementSpec ident="foreign" module="core" mode="change" />
                <elementSpec ident="forename" module="namesdates" mode="change">
                   <content>
                      <rng:text />
@@ -334,7 +339,7 @@
                      <attDef ident="type" mode="delete" />
                      <attDef ident="when" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
-                     <attDef ident="xml:lang" mode="delete" />                     
+                     <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
                <elementSpec ident="placeName" module="namesdates" mode="change">
@@ -345,7 +350,7 @@
                      <attDef ident="type" mode="delete" />
                      <attDef ident="when" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
-                     <attDef ident="xml:lang" mode="delete" />                     
+                     <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
                <elementSpec ident="publicationStmt" module="header" mode="change">
@@ -353,12 +358,12 @@
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
-               </elementSpec>               
+               </elementSpec>
                <elementSpec ident="pubPlace" module="core" mode="change">
                   <content>
                      <rng:choice>
-                        <rng:text/>
-                        <rng:ref name="placeName"/>
+                        <rng:text />
+                        <rng:ref name="placeName" />
                      </rng:choice>
                   </content>
                   <constraintSpec ident="placename.check" scheme="isoschematron">
@@ -388,7 +393,7 @@
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
-               </elementSpec>               
+               </elementSpec>
                <elementSpec ident="surname" module="namesdates" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
@@ -430,7 +435,7 @@
                         <valList mode="replace" type="closed">
                            <valItem ident="grc">
                               <desc>Ancient Greek (to 1453)</desc>
-                           </valItem>                           
+                           </valItem>
                            <valItem ident="el">
                               <desc>Modern Greek</desc>
                            </valItem>
@@ -487,7 +492,7 @@
                <classSpec ident="att.dimensions" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.damaged" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.breaking" module="tei" type="atts" mode="delete" />
-               <classSpec ident="att.canonical" module="tei" type="atts" mode="change">                  
+               <classSpec ident="att.canonical" module="tei" type="atts" mode="change">
                   <attList>
                      <attDef ident="key" mode="delete" />
                   </attList>
@@ -516,7 +521,7 @@
                <classSpec ident="att.responsibility" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.editLike" module="tei" type="atts" mode="change">
                   <attList>
-                  <attDef ident="instant" mode="delete" />
+                     <attDef ident="instant" mode="delete" />
                   </attList>
                </classSpec>
                <classSpec ident="att.global" module="tei" type="atts" mode="change">
@@ -564,7 +569,7 @@
                               <desc>Swedish</desc>
                            </valItem>
                         </valList>
-                     </attDef>                     
+                     </attDef>
                      <attDef ident="rend" mode="delete" />
                      <attDef ident="style" mode="delete" />
                      <attDef ident="rendition" mode="delete" />
@@ -609,7 +614,7 @@
                      <attDef ident="full" mode="delete" />
                      <attDef ident="sort" mode="delete" />
                   </attList>
-               </classSpec>               
+               </classSpec>
             </schemaSpec>
          </div>
       </body>
