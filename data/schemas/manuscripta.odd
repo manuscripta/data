@@ -24,6 +24,110 @@
             <div xml:id="introduction">
                 <head>Introduction</head>
             </div>
+            <div xml:id="phraselevel">
+                <head>Phrase-level Elements</head>
+                <div xml:id="foreign">
+                    <head>Foreign Phrases and Words</head>
+                    <p>Phrases or words in other languages than English must be tagged by adding the <att>xml:lang</att> attribute to the element enclosing the text, or where no other element is available with a <gi>foreign</gi> element and a <att>xml:lang</att> attribute. 
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        The total amount paid for the two volumes was 84 <foreign xml:lang="sv">Daler kopparmynt</foreign>.
+                    </egXML>
+                        <specList>
+                            <specDesc key="foreign" atts="xml:lang" />
+                        </specList>
+                    </p>
+                </div>
+                <div xml:id="personalnames">
+                    <head>Personal Names</head>
+                    <p>Should be referred to the persons authority file in a <gi>persName</gi> element with the <att>ref</att> attribute. If the name is supplied the <att>evidence</att> attribute should be used (possible values: <val>internal</val>, <val>external</val>, or <val>conjecture</val>). The certainty can be indicated with the <att>cert</att> attribute (possible values: <val>high</val>, <val>medium</val>, <val>low</val>, or <val>unknown</val>). The role of the person referred to can be indicated in the <att>role</att> attribute (possible values: <val>cataloguer</val>, <val>librarian</val>, or <val>scribe</val>).
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <persName ref="#PehAur" role="librarian" evidence="conjecture" cert="medium" />
+                        </egXML>
+                        <specList>
+                            <specDesc key="persName" atts="evidence cert role" />
+                        </specList>
+                    </p>
+                </div>
+                <div xml:id="placenames">
+                    <head>Place names</head>
+                    <p>Should be referred to the persons authority file in a <gi>placeName</gi> element with the <att>ref</att> attribute, see <ref target="manuscripta-places.html">Guidelines for places</ref>.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <placeName ref="#Bologna" />
+                        </egXML>
+                        <specList>
+                            <specDesc key="placeName" atts="ref" />
+                        </specList>
+                    </p>
+                </div>
+                <div xml:id="greekcharacters">
+                    <head>Notation of Greek characters</head>
+                    <div xml:id="greeknumbers">
+                        <head>Greek numerals and ordinals</head>
+                        <p>Greek numerals and ordinals should be noted using the <gi>num</gi> element in the following way:
+                            αʹ (Greek Numeral Sign, U+0374) 
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <num xml:lang="grc" type="cardinal" value="1">αʹ</num>
+                            </egXML>
+                            ͵α (Greek Lower Numeral Sign, U+0375)
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <num xml:lang="grc" type="cardinal" value="1000">͵α</num>
+                            </egXML>
+                            δου (abbreviation for τετάρτου)
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <num xml:lang="grc" type="ordinal" value="4">δ<hi rend="sup">ου</hi></num>
+                            </egXML>
+                            <specList>
+                                <specDesc key="num" atts="xml:lang type value" />
+                            </specList>
+                        </p>
+                    </div>
+                    <div xml:id="interpunction">
+                        <head>Interpunction</head>
+                        <p>For the Greek question mark the semicolon (U+003B ;) should be used instead of the erotimatiko (U+037E ;).</p>
+                        <p>For the Greek semicolon the middle dot (U+00B7 ·) should be used instead of the Greek ano teleia (U+0387 ·).</p>
+                        <p>For the Greek apostrophe the right single quotation mark (U+2019 ’) should be used instead of the apostrophe (U+0027 ') or the Greek psili (U+1FBF ᾿), cf. <ref target="http://www.tlg.uci.edu/encoding/BCM2013.pdf#page=7">TLG Beta Code Manual, p. 7</ref> and <ref target="http://www.unicode.org/versions/Unicode6.2.0/ch06.pdf#page=15">The Unicode Standard, Version 6.2, p. 200</ref>. The Greek apostophe should be transformed to a Greek psili (U+1FBF ᾿) with XSLT for display purposes.                        
+                        </p>
+                    </div>
+                    <div xml:id="transcription">
+                        <head>Transcription of Greek</head>
+                        <p>In most cases the Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>. However, the <ptr target="#colophon" /> and text quoted within the physical description should be transcribed as accurately as possible.</p>
+                        <p />
+                        <p>The <gi>supplied</gi> element should be used for editorial additions, the <gi>ex</gi> element for expansions of abbreviations, and the <gi>sic</gi> element for indicating that the word has been transcribed exactly as found in the original source even though it might be erroneous or nonstandard.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <supplied reason="omitted">θ</supplied><ex>εο</ex>ῦ τὸ δῶρ<ex>ον</ex>
+                            </egXML>
+                            <specList>
+                                <specDesc key="supplied" atts="reason" />
+                                <specDesc key="ex" />
+                                <specDesc key="sic" />
+                            </specList>
+                        </p>
+                        <p>Additions and deletions should be recorded using the <gi>add</gi> and <gi>del</gi> elements. If the addition is made by another hand which is described in a <gi>handNote</gi> element, a reference can be made in a <att>hand</att> attribute to this description.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <rubric xml:lang="grc">
+                                    <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
+                                    <add place="above" xml:lang="grc">Βίτωνος Μηχανικά</add>
+                                </rubric>
+                            </egXML>
+                            <specList>
+                                <specDesc key="add" atts="place" />
+                                <specDesc key="del" />
+                            </specList>
+                        </p>
+                        <p>Gaps and illegible characters should be marked with <gi>gap</gi> and <gi>unclear</gi>.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <gap extent="20" reason="damage" unit="mm" /><unclear extent="60" reason="faded" unit="mm" /> ἰορδάνης ἰορδάνης ἰορδάνου <unclear xml:lang="grc" extent="30" reason="faded" unit="mm">τελ</unclear> αἰδέσιμος, ἀξιοτίμητος
+                        </egXML>
+                            <specList>
+                                <specDesc key="gap" atts="reason extent unit" />
+                                <specDesc key="unclear" atts="reason extent unit" />
+                            </specList>
+                        </p>
+                        <p>Line breaks should be indicated with <gi>lb</gi> elements. Punctuations marks like : and + should be noted. Lower and upper case letters should be kept as they are in the manuscript.                            
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div xml:id="header">
                 <head>The TEI Header</head>
                 <p>The TEI root element must always contain a declaration of the TEI namespace, a <att>version</att> attribute with the value <val>5.0</val>, and a <att>xml:id</att> consisting of an abbreviation of the library and shelfmark. The TEI element must have a <gi>teiHeader</gi> element and a <gi>facsimile</gi> element. The <gi>teiHeader</gi> element in turn must have an <att>xml:lang</att> attribute defining the language of the description, and a <gi>fileDesc</gi> and <gi>revisionDesc</gi> element. The <gi>fileDesc</gi> element contains a <gi>titleStmt</gi>, <gi>publicationStmt</gi>, and <gi>sourceDesc</gi> element.
@@ -45,7 +149,9 @@
                                     <!-- Revision history -->
                                 </revisionDesc>
                             </teiHeader>
-                            <facsimile />
+                            <facsimile>
+                                <!-- Image information -->
+                            </facsimile>
                         </TEI>
                     </egXML>
                     <specList>
@@ -111,81 +217,16 @@
                             <specDesc key="pubPlace" />
                         </specList>
                     </p>
-                </div>                
-            </div>
-            <div xml:id="names">
-                <head>Names of Persons and Places</head>
-                <div xml:id="personalnames">
-                    <head>Personal Names</head>
-                    <p>Should be referred to the persons authority file in a <gi>persName</gi> element with the <att>ref</att> attribute. If the name is supplied the <att>evidence</att> attribute should be used (possible values: <val>internal</val>, <val>external</val>, or <val>conjecture</val>). The certainty can be indicated with the cert attribute (possible values: <val>high</val>, <val>medium</val>, <val>low</val>, or <val>unknown</val>). The role of the person referred to can be indicated in the role attribute (possible values: <val>cataloguer</val>, <val>librarian</val>, or <val>scribe</val>).
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <persName ref="#PehAur" role="librarian" evidence="conjecture" cert="medium" />
-                        </egXML>
-                        <specList>
-                            <specDesc key="persName" atts="role" />
-                        </specList>
-                    </p>
-                </div>
-                <div xml:id="placenames">
-                    <head>Place names</head>
-                    <p>The English name form should be used wherever possible. A useful resource for identifying Latin place names is <ref target="http://www.columbia.edu/acis/ets/Graesse/contents.html">Orbis Latinus</ref>. See also the <ref target="http://thesaurus.cerl.org/">CERL Thesaurus</ref>.</p>
                 </div>
             </div>
-            <div xml:id="greekcharacters">
-                <head>Notation of Greek characters</head>
-                <div xml:id="greeknumbers">
-                    <head>Greek numerals and ordinals</head>
-                    <p>Greek numerals and ordinals should be noted in the following way:
-                            αʹ (Greek Numeral Sign, U+0374) 
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-<num xml:lang="grc" type="cardinal" value="1">αʹ</num>
-                        </egXML>
-                            ͵α (Greek Lower Numeral Sign, U+0375)
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-<num xml:lang="grc" type="cardinal" value="1000">͵α</num>
-                        </egXML>
-                            δου (abbreviation for τετάρτου)
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-<num xml:lang="grc" type="ordinal" value="4">δ<hi rend="sup">ου</hi></num>
-                        </egXML>
-                    </p>
-                </div>
-                <div xml:id="interpunction">
-                    <head>Interpunction</head>
-                    <p>For the Greek question mark the semicolon (U+003B ;) should be used instead of the erotimatiko (U+037E ;).</p>
-                    <p>For the Greek semicolon the middle dot (U+00B7 ·) should be used instead of the Greek ano teleia (U+0387 ·).</p>
-                    <p>For the Greek apostrophe the right single quotation mark (U+2019 ’) should be used instead of the apostrophe (U+0027 ') or the Greek psili (U+1FBF ᾿), cf. <ref target="http://www.tlg.uci.edu/encoding/BCM2013.pdf#page=7">TLG Beta Code Manual, p. 7</ref> and <ref target="http://www.unicode.org/versions/Unicode6.2.0/ch06.pdf#page=15">The Unicode Standard, Version 6.2, p. 200</ref>. The Greek apostophe should be transformed to a Greek psili (U+1FBF ᾿) with XSLT for display purposes.</p>
-                    <p>Use the <gi>q</gi> element instead of quotation marks, e.g. in titles.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <title level="m" xml:lang="fr">Les <q>Cestes</q> de Julius Africanus: étude sur l’ensemble des fragments avec édition, traduction et commentaire</title>
-                        </egXML>
-                    </p>
-                </div>
-                <div xml:id="transcription">
-                    <head>Transcription of Greek</head>
-                    <p>In most cases the Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>.</p>
-                    <p>The <gi>supplied</gi> element should be used for editorial additions, the <gi>ex</gi> element for expansions of abbreviations, and the <gi>sic</gi> element for indicating that the word has been transcribed exactly as found in the original source even though it might be erroneous or nonstandard.
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-<supplied reason="omitted">θ</supplied><ex>εο</ex>ῦ τὸ δῶρ<ex>ον</ex>
-                    </egXML>
-                    </p>
-                    <p>Additions and deletions should be recorded using the <gi>add</gi> and <gi>del</gi> elements. If the addition is made by another hand which is described in a <gi>handNote</gi> element, a reference can be made in a <att>hand</att> attribute to this description.
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-<rubric xml:lang="grc">
-    <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
-    <add place="above" xml:lang="grc">Βίτωνος Μηχανικά</add>
-</rubric>
-                        </egXML>
-                    </p>
-                    <p>Line breaks should be indicated with <gi>lb</gi> elements. Punctuations marks like : and + should be noted. Lower and upper case letters should be kept as they are in the manuscript. Note that the Greek should in most cases be normalized, the exceptions being the colophon and text quoted within the physical description.                            
-                    </p>
-                </div>
-            </div>
+
+
             <div xml:id="msdescription">
                 <head>Manuscript Description</head>
                 <p>The manuscript descriptions are structured around the notion of codicological units: the intellectual content, physical description, and history, where applicable, of each unit is described in separate <gi>msPart</gi> elements, whereas information common to all units, e.g. the binding, provenance, and bibliography, is described directly under the <gi>msDesc</gi> element using the following elements:
                     <specList>
                         <specDesc key="msIdentifier" />
+                        <specDesc key="head" />
                         <specDesc key="msContents" />
                         <specDesc key="physDesc" />
                         <specDesc key="history" />
@@ -205,18 +246,37 @@
                 </p>
                 <div xml:id="msidentifier">
                     <head>The Manuscript Identifier</head>
-                    <p>Information about the identity of the manuscripts should be given in the <gi>msIdentifier</gi> element in the following elements and in the following order: <gi>country</gi>, <gi>settlement</gi>, <gi>institution</gi>, <gi>repository</gi>, <gi>idno</gi>. Former shelfmarks should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>former_shelfmark</val>). If the manuscript has a reference number in other catalogues, e.g. Nestle-Aland, this should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>other</val>).  
+                    <p>Information about the identity of the manuscripts should be given in the <gi>msIdentifier</gi> element in the following elements and in the following order: <gi>country</gi>, <gi>settlement</gi>, <gi>institution</gi>, <gi>repository</gi>, <gi>idno</gi>. If the manuscript is known by a another name this should be recorded in a <gi>msName</gi> element. Former shelfmarks should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>former_shelfmark</val>). If the manuscript has a reference number in other catalogues, e.g. Nestle-Aland, this should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>other</val>).  
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msIdentifier>
                                 <country>Sweden</country>
                                 <settlement>Uppsala</settlement>
                                 <institution>Uppsala University</institution>
                                 <repository>Uppsala University Library</repository>
-                                <idno type="shelfmark">Gr. 17</idno>
+                                <idno type="shelfmark">Gr. 28A</idno>
+                                <msName>Codex Rolambianus</msName>
                                 <altIdentifier>
-                                    <idno type="former_shelfmark">Björnståhl 7</idno>
+                                    <idno type="former_shelfmark">Benzelius 2</idno>
                                 </altIdentifier>
                             </msIdentifier>
+                        </egXML>
+                        <specList>
+                            <specDesc key="msIdentifier" />
+                            <specDesc key="country" />
+                            <specDesc key="settlement" />
+                            <specDesc key="institution" />
+                            <specDesc key="repository" />
+                            <specDesc key="idno" atts="type" />
+                            <specDesc key="msName" />
+                            <specDesc key="altIdentifier" />
+                        </specList>
+                    </p>
+                </div>
+                <div xml:id="heading">
+                    <head>The Heading</head>
+                    <p>Give a brief descriptive title in English in the <gi>head</gi> element which summarizes the intellectual content of the whole manuscript. For descriptive titles summarizing the intellectual content of each codicological see <ptr target="#summary_unit" />.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <head>Aelian, On Animals</head>
                         </egXML>
                     </p>
                 </div>
@@ -346,9 +406,31 @@
                         </specList>
                     </p>
                 </div>
-                <div xml:id="additional_book">
-                    <head>Additional Information</head>
-                    <p>The <gi>additional</gi> element should contain a bibliography of works referring to the manuscript in <gi>bibl</gi> elements inside a <gi>listBibl</gi> element. The works should be listed in a chronological order, with the oldest item first.</p>
+                <div xml:id="bibliography">
+                    <head>Bibliography</head>
+                    <p>The bibliography of works referring to the manuscript should be recorded in the <gi>additional</gi> element in a <gi>listBibl</gi> element. Each item should be enclosed in a <gi>bibl</gi> element with a <gi>ref</gi> element referring to the bibliography authority file. The works should be listed in a chronological order, with the oldest item first.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <additional>
+                                <listBibl>
+                                    <bibl>
+                                        <ref target="#Graux1889" />
+                                        <citedRange unit="page" from="64" to="65" />
+                                    </bibl>
+                                    <bibl>
+                                        <ref target="#TorallasTovar1994" />
+                                        <citedRange unit="page" from="248" to="252" />
+                                    </bibl>
+                                </listBibl>
+                            </additional>
+                        </egXML>
+                        <specList>
+                            <specDesc key="additional" />
+                            <specDesc key="listBibl" />
+                            <specDesc key="bibl" />
+                            <specDesc key="ref" atts="target" />
+                            <specDesc key="citedRange" atts="from to unit" />
+                        </specList>
+                    </p>
                 </div>
                 <div xml:id="codicological_unit">
                     <head>Codicological Unit(s)</head>
@@ -373,7 +455,11 @@
                         <p>The intellectual content of the codicological unit should be listed in the <gi>msContent</gi> element.</p>
                         <div xml:id="summary_unit">
                             <head>Summary</head>
-                            <p>Give a brief descriptive title in English in the <gi>summary</gi> element which summarizes the intellectual content of the codicological unit.</p>
+                            <p>Give a brief descriptive title in English in the <gi>summary</gi> element which summarizes the intellectual content of the codicological unit. For the descriptive title summarizing the intellectual content of the whole manuscript, see <ptr target="#heading" />.
+                            <specList>
+                                    <specDesc key="summary" />
+                                </specList>
+                            </p>
                         </div>
                         <div xml:id="msitem_unit">
                             <head>Manuscript Item</head>
@@ -512,17 +598,20 @@
                             </div>
                             <div xml:id="colophon">
                                 <head>Colophon</head>
-                                <p>Subscription should be given in the <gi>colophon</gi> element in the <gi>msItem</gi> element of the text to which it belongs in the manuscript. The text should be transcribed as accurately as possible with the help of <gi>supplied</gi>, <gi>ex</gi> and <gi>sic</gi> elements. Line breaks should be indicated with <gi>lb</gi> elements. Punctuations marks like : and + should be noted. See also discussion on <ref target="http://tei.markmail.org/thread/orswpj5rn4nspngg">TEI-list</ref>. 
+                                <p>Subscription should be given in the <gi>colophon</gi> element in the <gi>msItem</gi> element of the text to which it belongs in the manuscript. The text should be transcribed as accurately as possible using the transcription rules described at <ptr target="#transcription" />. See also discussion on <ref target="http://tei.markmail.org/thread/orswpj5rn4nspngg">TEI-list</ref>. 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <colophon xml:lang="grc">
                                             <locus from="119r" to="119r" scheme="folios" />
-                                            <supplied reason="omitted">θ</supplied><ex>εο</ex>ῦ τὸ δῶρ<ex>ον</ex>, <ex>καὶ</ex> πόνος μιχαήλου <supplied reason="omitted">ἀ</supplied>ργείου λακώνου : <supplied reason="omitted">ἐ</supplied>ν βουνωνία πόλ<ex>ει</ex>
-                                            <supplied>ἰ</supplied>ταλί<ex>ας</ex>, <supplied reason="omitted">κ</supplied>αὶ ταύτ<ex>ην</ex> ἀμυστὶ <lb /> 
-                                    τὴν βίβλον σὺν πολλοῖς ἄλλοις τὸν ἀριθμ<ex>ὸν</ex>· <num xml:lang="grc" type="cardinal" value="150">ρνʹ</num>·
-                                    ἐξέγραψα, ὑπὲρ π<ex>ατ</ex>ρίδος καὶ γένους : + <lb /> γραφεὺς ἐλεύθερος καὶ χρημάτ<ex>ων</ex>
-                                    ἀνώ<ex>τερος</ex> :
-                                </colophon>
+                                            <supplied xml:lang="grc" reason="omitted">θ</supplied><ex xml:lang="grc">ε</ex>ῷ 
+                                            χάρις :· 
+                                            <supplied xml:lang="grc" reason="omitted">κ</supplied>ε<ex xml:lang="grc">φάλαι</ex>α 
+                                            ἅπαντα 
+                                            <num xml:lang="grc" type="cardinal" value="606">χϛʹ</num> : +<lb />
+                                        </colophon>
                                     </egXML>
+                                    <specList>
+                                        <specDesc key="colophon" />
+                                    </specList>
                                 </p>
                             </div>
                             <div xml:id="filiation">
@@ -909,11 +998,13 @@
                             <textNode />
                         </content>
                         <attList>
-                            <!-- Attributes deleted from att.global -->
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
-
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Closed value list for @place -->
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="above" />
@@ -994,18 +1085,15 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="authority" module="header" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
                             <textNode />
                         </content>
                         <valList mode="replace" type="closed">
                             <valItem ident="Uppsala University Library" />
                         </valList>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
@@ -1209,32 +1297,27 @@
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="citedRange" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.pointing" mode="delete" />                            
+                        </classes>
                         <content>
                             <textNode />
                         </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename>Eduardo</forename>
-                                            <forename>Luigi</forename>
-                                            <surname>De Stefani</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="a">I manoscritti della Historia Animalium di Eliano</title>
-                                    <title level="j">Studi italiani di filologia classica</title>
-                                    <date when="1902" />
-                                    <biblScope unit="volume" from="10" to="10" />
-                                    <biblScope unit="page" from="175" to="222" />
-                                    <citedRange unit="page" from="209" to="210" />
-                                </bibl>
+                                <additional>
+                                    <listBibl>
+                                        <bibl>
+                                            <ref target="#Graux1889" />
+                                            <citedRange unit="page" from="64" to="65" />
+                                        </bibl>
+                                        <bibl>
+                                            <ref target="#TorallasTovar1994" />
+                                            <citedRange unit="page" from="248" to="252" />
+                                        </bibl>
+                                    </listBibl>
+                                </additional>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1430,7 +1513,31 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="del" mode="change" module="core" />
+                    <elementSpec ident="del" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.transcriptional" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <rubric xml:lang="grc">
+                                    <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
+                                    <add place="above" xml:lang="grc">Βίτωνος Μηχανικά</add>
+                                </rubric>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="depth" mode="change" module="msdescription">
                         <constraintSpec ident="depth.attributes" scheme="isoschematron">
                             <desc versionDate="2014-09-09" xml:lang="en">checks that the <gi>depth</gi> element has either a <att>quantity</att> or <att>min</att>/<att>max</att> attributes.</desc>
@@ -1510,7 +1617,27 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="ex" mode="change" module="transcr" />
+                    <elementSpec ident="ex" mode="change" module="transcr">
+                        <classes mode="change">
+                            <memberOf key="att.editLike" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                        </classes>
+                        <attList>
+                            <!-- Attributes deleted from att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attributes deleted from att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                δῶρ<ex xml:lang="grc">ον</ex>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="explicit" mode="change" module="msdescription">
                         <attList>
                             <attDef ident="defective" mode="change" usage="req" />
@@ -1622,11 +1749,23 @@
                     </elementSpec>
                     <elementSpec ident="foliation" mode="change" module="msdescription" />
                     <elementSpec ident="foreign" mode="change" module="core">
+                        <content>
+                            <textNode />
+                        </content>
                         <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="req" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                The total amount paid for the two volumes was 84 <foreign xml:lang="sv">Daler kopparmynt</foreign>.
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="formula" mode="change" module="figures">
                         <content>
@@ -1646,10 +1785,56 @@
                             <attDef ident="xml:lang" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="gap" mode="change" module="core" />
+                    <elementSpec ident="gap" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                        </classes>
+                        <content>
+                            <rng:empty />
+                        </content>
+                        <attList>
+                            <attDef ident="reason" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="damage" />
+                                </valList>
+                            </attDef>
+                            <!-- Attributes deleted -->
+                            <attDef ident="hand" mode="delete" />
+                            <attDef ident="agent" mode="delete" />
+                            <!-- Attributes changed in att.dimensions -->
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="chars">
+                                        <desc>characters</desc>
+                                    </valItem>
+                                    <valItem ident="lines" />
+                                    <valItem ident="mm" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="quantity" mode="change" usage="req" />
+                            <attDef ident="extent" mode="delete" />
+                            <!-- Attributes changed and deleted in att.ranging-->
+                            <attDef ident="atLeast" mode="change" usage="opt" />
+                            <attDef ident="atMost" mode="change" usage="opt" />
+                            <attDef ident="min" mode="delete" />
+                            <attDef ident="max" mode="delete" />
+                            <!-- Attributes deleted from att.editLike -->
+                            <attDef ident="evidence" mode="delete" />
+                            <!-- Attributes deleted from att.responsibility -->
+                            <attDef ident="cert" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <gap reason="damage" quantity="20" unit="mm" /><unclear reason="illegible" quantity="60" unit="mm" /> ἰορδάνης ἰορδάνης ἰορδάνου τελ<unclear reason="illegible" quantity="30" unit="mm" /> αἰδέσιμος, ἀξιοτίμητος
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
+                    </elementSpec>
                     <elementSpec ident="graphic" mode="change" module="core" />
                     <elementSpec ident="handDesc" mode="change" module="msdescription" />
-                    <!--       handNote attributes   WORK IN PROGRESS    -->
                     <elementSpec ident="handNote" mode="change" module="msdescription">
                         <constraintSpec ident="handNote.n" scheme="isoschematron">
                             <constraint>
@@ -1674,17 +1859,21 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="head" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:text />
+                            <textNode />
                         </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="rend" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <head>Aelian, On Animals</head>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="height" mode="change" module="msdescription">
                         <constraintSpec ident="height.attributes" scheme="isoschematron">
@@ -2028,46 +2217,64 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <!-- Deleted attribute in att.global -->
+                            <!-- Changed and deleted attributes in att.global -->
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
                             <!-- Deleted attribute in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msDesc>
+                                    <msIdentifier>
+                                        <country>Sweden</country>
+                                        <settlement>Uppsala</settlement>
+                                        <institution>Uppsala University</institution>
+                                        <repository>Uppsala University Library</repository>
+                                        <idno type="shelfmark">Gr. 27</idno>
+                                    </msIdentifier>
+                                    <head>Aelian, On Animals</head>
+                                    <!-- MS description -->
+                                </msDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="msIdentifier" module="msdescription" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:group>
-                                <rng:group>
-                                    <rng:optional>
-                                        <rng:ref name="country" />
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="settlement" />
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="institution" />
-                                    </rng:optional>
-                                    <rng:optional>
-                                        <rng:ref name="repository" />
-                                    </rng:optional>
-                                    <rng:ref name="idno" />
-                                </rng:group>
-                                <rng:zeroOrMore>
-                                    <rng:choice>
-                                        <rng:ref name="msName" />
-                                        <rng:ref name="altIdentifier" />
-                                    </rng:choice>
-                                </rng:zeroOrMore>
-                            </rng:group>
+                            <sequence>
+                                <sequence>
+                                    <elementRef key="country" minOccurs="0" maxOccurs="1" />
+                                    <elementRef key="settlement" minOccurs="0" maxOccurs="1" />
+                                    <elementRef key="institution" minOccurs="0" maxOccurs="1" />
+                                    <elementRef key="repository" minOccurs="0" maxOccurs="1" />
+                                    <elementRef key="idno" minOccurs="1" maxOccurs="1" />
+                                </sequence>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <elementRef key="msName" />
+                                    <elementRef key="altIdentifier" />
+                                </alternate>
+                            </sequence>
                         </content>
-                        <attList>
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msIdentifier>
+                                    <country>Sweden</country>
+                                    <settlement>Uppsala</settlement>
+                                    <institution>Uppsala University</institution>
+                                    <repository>Uppsala University Library</repository>
+                                    <idno type="shelfmark">Gr. 28A</idno>
+                                    <msName>Codex Rolambianus</msName>
+                                    <altIdentifier>
+                                        <idno type="former_shelfmark">Benzelius 2</idno>
+                                    </altIdentifier>
+                                </msIdentifier>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="msItem" mode="change" module="msdescription">
                         <!--<content>
@@ -2463,7 +2670,49 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="num" mode="change" module="core" />
+                    <elementSpec ident="num" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.ranging" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <elementRef key="hi" />
+                                <textNode />
+                            </alternate>
+                        </content>
+                        <attList>
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="change" type="closed">
+                                    <valItem ident="cardinal">
+                                        <desc versionDate="2007-06-27" xml:lang="en">absolute number, e.g. 21, 21.5</desc>
+                                    </valItem>
+                                    <valItem ident="ordinal">
+                                        <desc versionDate="2007-06-27" xml:lang="en">ordinal number, e.g. 21st</desc>
+                                    </valItem>
+                                    <valItem ident="fraction">
+                                        <desc versionDate="2007-06-27" xml:lang="en">fraction, e.g. one half or three-quarters</desc>
+                                    </valItem>
+                                    <valItem ident="percentage">
+                                        <desc versionDate="2007-06-27" xml:lang="en">a percentage</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                            <!-- Deleted attributes in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="req" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Deleted attributes in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <num xml:lang="grc" type="cardinal" value="1">αʹ</num>
+                                <num xml:lang="grc" type="cardinal" value="1000">͵α</num>
+                                <num xml:lang="grc" type="ordinal" value="4">δ<hi rend="sup">ου</hi></num>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="objectDesc" mode="change" module="msdescription">
                         <attList>
                             <attDef ident="form" mode="delete" />
@@ -2526,46 +2775,69 @@
                         <content>
                             <rng:empty />
                         </content>
+                        <constraintSpec ident="evidence.cert.check" scheme="isoschematron">
+                            <desc versionDate="2014-11-11">Check that <att>cert</att> is used when <att>evidence</att> is <val>external</val> or <val>conjecture</val>.</desc>
+                            <constraint>
+                                <sch:rule context="tei:persName[@evidence='external' or @evidence='conjecture']">
+                                    <sch:assert test="@cert"> Use the cert attribute when the evidence attribute has the value external or conjecture. </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
-                            <!-- Deleted attributes from att.dimensions class -->
+                            <!-- Changed and deleted attributes in att.dimensions -->
+                            <attDef ident="precision" mode="change" usage="opt" />
                             <attDef ident="unit" mode="delete" />
                             <attDef ident="quantity" mode="delete" />
                             <attDef ident="extent" mode="delete" />
-                            <!-- Deleted attributes from att.ranging class -->
+                            <!-- Changed attribute in att.editLike  -->
+                            <attDef ident="evidence" mode="change" usage="opt" />
+                            <!-- Changed and deleted attributes in att.ranging  -->
                             <attDef ident="atLeast" mode="delete" />
                             <attDef ident="atMost" mode="delete" />
                             <attDef ident="min" mode="delete" />
                             <attDef ident="max" mode="delete" />
-                            <!-- Modified and eleted attributes from att.canonical class -->
+                            <!-- Changed and deleted attributes in att.responsibility  -->
+                            <attDef ident="cert" mode="change" usage="opt" />
+                            <!-- Changed attribute in att.naming -->
+                            <attDef ident="role" mode="change" usage="opt" />
+                            <!-- Modified and deleted attributes in att.canonical -->
                             <attDef ident="ref" mode="change" usage="req" />
                             <attDef ident="key" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <persName>
-                                    <forename>Luis</forename>
-                                    <forename>Alfonso</forename>
-                                    <surname>Llera Fueyo</surname>
-                                </persName>
-                                <persName>
-                                    <forename>Nicholas</forename>
-                                    <nameLink>de la</nameLink>
-                                    <surname>Torre</surname>
-                                </persName>
-                                <persName>
-                                    <foreName>Athenaeus</foreName>
-                                    <addName>Mechanicus</addName>
-                                </persName>
-                                <persName>
-                                    <foreName>Philip</foreName>
-                                    <genName>II</genName>
-                                    <roleName>King of Spain</roleName>
-                                </persName>
+                                <persName ref="#PehAur" role="librarian" evidence="conjecture" cert="medium" />
                             </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="physDesc" mode="change" module="msdescription" />
-                    <elementSpec ident="placeName" mode="change" module="namesdates" />
+                    <elementSpec ident="placeName" mode="change" module="namesdates">
+                        <classes mode="change">
+                            <memberOf key="att.datable" mode="delete" />
+                            <memberOf key="att.editLike" mode="delete" />
+                            <memberOf key="att.dimensions" mode="delete" />
+                            <memberOf key="att.ranging" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.naming" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <rng:empty />
+                        </content>
+                        <attList>
+                            <!-- Deleted attribute in att.naming -->
+                            <attDef ident="role" mode="delete" />
+                            <!-- Changed and deleted attributes in att.canonical -->
+                            <attDef ident="ref" mode="change" usage="req" />
+                            <attDef ident="key" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <placeName ref="#Bologna" />
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="provenance" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -2592,26 +2864,47 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="publicationStmt" mode="change" module="header">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:ref name="authority" />
-                            <rng:ref name="pubPlace" />
+                            <elementRef key="authority" />
+                            <elementRef key="pubPlace" />
                         </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publicationStmt>
+                                    <authority>Uppsala University Library</authority>
+                                    <pubPlace>Uppsala</pubPlace>
+                                </publicationStmt>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="pubPlace" mode="change" module="core">
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="key" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="ref" mode="delete" />
-                            <attDef ident="role" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                        </attList>
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.naming" mode="delete" />
+                            <memberOf key="att.canonical" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
+                        <constraintSpec ident="publication.place.check" scheme="isoschematron">
+                            <desc versionDate="2014-11-11">Check that Uppsala is used in <gi>pubPlace</gi> under <gi>publicationStmt</gi>.</desc>
+                            <constraint>
+                                <sch:rule context="tei:publicationStmt/tei:pubPlace">
+                                    <sch:assert test="text()='Uppsala'"> Uppsala should be used for pubPlace. </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publicationStmt>
+                                    <authority>Uppsala University Library</authority>
+                                    <pubPlace>Uppsala</pubPlace>
+                                </publicationStmt>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="q" mode="change" module="core" />
                     <elementSpec ident="quote" mode="change" module="core">
@@ -2819,11 +3112,63 @@
                             <attDef ident="xml:id" mode="delete" />
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="sic" mode="change" module="core" />
+                    <elementSpec ident="sic" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.responsibility" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted from att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attributes deleted from att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <sic xml:lang="grc">γραφεὶς</sic>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="signatures" mode="change" module="msdescription" />
-                    <elementSpec ident="sourceDesc" mode="change" module="header" />
-                    <elementSpec ident="summary" mode="change" module="msdescription" />
+                    <elementSpec ident="sourceDesc" mode="change" module="header">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <elementRef key="msDesc" />
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <sourceDesc>
+                                    <msDesc>
+                                        <!-- MS description -->
+                                    </msDesc>
+                                </sourceDesc>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="summary" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="supplied" mode="change" module="transcr">
+                        <classes mode="change">
+                            <memberOf key="att.editLike" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
                         <attList>
                             <attDef ident="reason" mode="change" usage="req">
                                 <defaultVal>unknown</defaultVal>
@@ -2834,8 +3179,22 @@
                                     <valItem ident="unknown" />
                                 </valList>
                             </attDef>
-
+                            <!-- Changed and deleted attributes in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Deleted attributes in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <supplied xml:lang="grc" reason="omitted">τ</supplied>ῷ συντελεστῇ
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="support" mode="change" module="msdescription">
                         <content>
@@ -3153,7 +3512,54 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="unclear" mode="change" module="core" />
+                    <elementSpec ident="unclear" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                        </classes>
+                        <content>
+                            <rng:empty />
+                        </content>
+                        <attList>
+                            <attDef ident="reason" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="illegible" />
+                                </valList>
+                            </attDef>
+                            <!-- Attributes deleted -->
+                            <attDef ident="hand" mode="delete" />
+                            <attDef ident="agent" mode="delete" />
+                            <!-- Attributes changed in att.dimensions -->
+                            <attDef ident="unit" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="chars">
+                                        <desc>characters</desc>
+                                    </valItem>
+                                    <valItem ident="lines" />
+                                    <valItem ident="mm" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="quantity" mode="change" usage="req" />
+                            <attDef ident="extent" mode="delete" />
+                            <!-- Attributes changed and deleted in att.ranging-->
+                            <attDef ident="atLeast" mode="change" usage="opt" />
+                            <attDef ident="atMost" mode="change" usage="opt" />
+                            <attDef ident="min" mode="delete" />
+                            <attDef ident="max" mode="delete" />
+                            <!-- Attributes deleted from att.editLike -->
+                            <attDef ident="evidence" mode="delete" />
+                            <!-- Attributes deleted from att.responsibility -->
+                            <attDef ident="cert" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <gap reason="damage" quantity="20" unit="mm" /><unclear reason="illegible" quantity="60" unit="mm" /> ἰορδάνης ἰορδάνης ἰορδάνου τελ<unclear reason="illegible" quantity="30" unit="mm" /> αἰδέσιμος, ἀξιοτίμητος
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
+                    </elementSpec>
                     <elementSpec ident="watermark" mode="change" module="msdescription">
                         <content>
                             <sequence>
@@ -3407,6 +3813,14 @@
                     <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.responsibility" module="tei" type="atts" mode="change">
                         <attList>
+                            <attDef ident="cert" mode="change">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="high" />
+                                    <valItem ident="medium" />
+                                    <valItem ident="low" />
+                                    <valItem ident="unknown" />
+                                </valList>
+                            </attDef>
                             <attDef ident="resp" mode="delete" />
                         </attList>
                     </classSpec>
