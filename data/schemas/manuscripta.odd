@@ -246,7 +246,16 @@
                 </p>
                 <div xml:id="msidentifier">
                     <head>The Manuscript Identifier</head>
-                    <p>Information about the identity of the manuscripts should be given in the <gi>msIdentifier</gi> element in the following elements and in the following order: <gi>country</gi>, <gi>settlement</gi>, <gi>institution</gi>, <gi>repository</gi>, <gi>idno</gi>. If the manuscript is known by a another name this should be recorded in a <gi>msName</gi> element. Former shelfmarks should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>former_shelfmark</val>). If the manuscript has a reference number in other catalogues, e.g. Nestle-Aland, this should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>other</val>).  
+                    <p>Information about the identity of the manuscripts should be given in the <gi>msIdentifier</gi> element in the following elements and in the following order:
+                        <specList>
+                            <specDesc key="country" />
+                            <specDesc key="settlement" />
+                            <specDesc key="institution" />
+                            <specDesc key="repository" />
+                            <specDesc key="idno" />
+                        </specList>
+                    </p>
+                    <p>If the manuscript is known by a another name this should be recorded in a <gi>msName</gi> element. Former shelfmarks should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>former_shelfmark</val>). If the manuscript has a reference number in other catalogues, e.g. Nestle-Aland, this should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>other</val>).  
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msIdentifier>
                                 <country>Sweden</country>
@@ -278,10 +287,13 @@
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <head>Aelian, On Animals</head>
                         </egXML>
+                        <specList>
+                            <specDesc key="head" />
+                        </specList>
                     </p>
                 </div>
-                <div xml:id="mscontents_book">
-                    <head>Contents of the bookblock</head>
+                <div xml:id="endleaves">
+                    <head>Endleaves</head>
                     <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msPart>
@@ -303,6 +315,12 @@
                                 </msContents>
                             </msPart>
                         </egXML>
+                        <specList>
+                            <specDesc key="msContents" />
+                            <specDesc key="msItem" atts="class" />
+                            <specDesc key="locus" atts="from to scheme" />
+                            <specDesc key="note" />
+                        </specList>
                     </p>
                 </div>
                 <div xml:id="physdesc_book">
@@ -811,7 +829,7 @@
                                 </div>
                                 <div xml:id="foliation">
                                     <head>Foliation</head>
-                                    <p>The foliation should be recorded in the <gi>foliation</gi> element. If the manuscript consists of multiple codicological units give the foliation formula in the <gi>physDesc</gi> common to the whole manuscript <ptr target="#mscontents_book" />. Use the <gi>term</gi> element when describing the foliation (suggested choices: "foliation", "pagination", "in pencil", "in ink", "modern hand", "by the scribe")
+                                    <p>The foliation should be recorded in the <gi>foliation</gi> element. If the manuscript consists of multiple codicological units give the foliation formula in the <gi>physDesc</gi> common to the whole manuscript <ptr target="#endleaves" />. Use the <gi>term</gi> element when describing the foliation (suggested choices: "foliation", "pagination", "in pencil", "in ink", "modern hand", "by the scribe")
                                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                             <foliation><term>foliation</term>
                                                 <term>in pencil</term> by a <term>modern hand</term>: <supplied reason="omitted">i–iii</supplied>, I–III, 1–34, 34a, 35–46, 47bis, 48–123, <supplied reason="omitted">i´–iii´</supplied>. Older foliation <term>in ink</term> on every tenth leaf.</foliation>
@@ -823,7 +841,7 @@
                                     <p>Describe the quires according to Andrist et al. (2013) in a <gi>formula</gi> element inside the <gi>collation</gi> element. Quire numbers should be given in subscript (<gi>hi</gi> element with the <att>rend</att> attribute and value <val>sub</val>), e.g. Q1–3. Use Roman numerals to indicate the number of bifolia in the quire (I = singulion, II = binion, III = ternion, IV = quaternion, etc.). Quires with the same number of bifolia should be grouped together and numbered, e.g. 4.IV = 4 quires containing quaternions. The last folio in the quire or group of quires should be given in superscript (<gi>hi</gi> element with <att>rend</att> attribute and value <val>super</val>). There should be no space between f. (or p.) and the number, cf. Andrist (2007) 28 n. 48. Added leaves should be recorded with +1 and the folio reference in superscript. Missing leaves should be recorded with -1, the term post, and a folio reference to the folio preceding the
                                         missing leaf. If the first leaf of a quire is missing use the term ante to indicate its place.</p>
                                     <p>Example: <hi rend="subscript"><!-- The TEI stylesheet only recognizes rend="subscript" but not rend="sub" -->Q1–2</hi>2.II<hi rend="sup"><!-- The TEI stylesheet only recognizes rend="sup" but not rend="super" -->f.8</hi> + <hi rend="subscript">Q3</hi>(III+1<hi rend="sup">f.11</hi>+1<hi rend="sup">f.15</hi>)<hi rend="sup">f.16</hi> + <hi rend="subscript">Q4</hi>III<hi rend="sup">f.22</hi> + <hi rend="subscript">Q5</hi>(III+1<hi rend="sup">f.26</hi>)<hi rend="sup">f.29</hi> + <hi rend="subscript">Q6–9</hi>4.IV<hi rend="sup">f.61</hi> + <hi rend="subscript">Q10</hi>(V-1<hi rend="sup">post f.64</hi>)<hi rend="sup">f.70</hi> + <hi rend="subscript">Q11</hi>IV<hi rend="supra">f.78</hi></p>
-                                    <p>(Endleaves are described in the <ptr target="#mscontents_book" /> and should not be included here.)</p>
+                                    <p>(Endleaves are described in the <ptr target="#endleaves" /> and should not be included here.)</p>
                                     <p>Record the quire signatures in the <gi>signatures</gi> element using relevant <gi>term</gi> elements (possible choices: "lower left margin", "lower center margin", "lower right margin", "upper left margin", "upper center margin", "upper right margin", "last verso", "first recto", "none"). If only a few are visible, record these with <gi>num</gi> and <gi>locus</gi> elements.</p>
                                     <p>Record the catchwords in the <gi>catchwords</gi> element using relevant <gi>term</gi> elements (possible choices: "horizontal", "vertical", "lower left margin", "lower center margin", "lower right margin", "upper left margin", "upper center margin", "upper right margin", "last verso", "first recto", "none").
                                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1299,7 +1317,7 @@
                     <elementSpec ident="citedRange" mode="change" module="core">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.pointing" mode="delete" />                            
+                            <memberOf key="att.pointing" mode="delete" />
                         </classes>
                         <content>
                             <textNode />
@@ -2749,6 +2767,7 @@
                                 <elementRef key="origDate" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="q" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
                         </content>
