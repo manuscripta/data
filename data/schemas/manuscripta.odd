@@ -61,9 +61,7 @@
                 </div>
                 <div xml:id="citation">
                     <head>Bibliographic citations</head>
-                    <p>
-                        
-                    </p>
+                    <p> </p>
                 </div>
                 <div xml:id="greekcharacters">
                     <head>Notation of Greek characters</head>
@@ -108,7 +106,7 @@
                                 <specDesc key="sic" />
                             </specList>
                         </p>
-                        <p>Additions and deletions should be recorded using the <gi>add</gi> and <gi>del</gi> elements. If the addition is made by another hand which is described in a <gi>handNote</gi> element, a reference can be made in a <att>hand</att> attribute to this description.
+                        <p>Additions and deletions should be recorded using the <gi>add</gi> and <gi>del</gi> elements.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <rubric xml:lang="grc">
                                     <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
@@ -899,37 +897,38 @@
                         </div>
                         <div xml:id="handdesc">
                             <head>Description of Hands</head>
-                            <p>Each distinct hand should be described in a separate <gi>handNote</gi> element in the <gi>handDesc</gi> element. The scope of the hand should be recorded in the <att>scope</att> attribute (possible values: <val>major</val>, <val>minor</val>, or <val>sole</val>). Give the extent for this hand in a <gi>locus</gi> or <gi>locusGrp</gi> element.  Use the value <val>major</val> for hands which have made substantial contributions. If there is only one major hand represented use the value <val>sole</val>. Use the value <val>minor</val> for hands represented in marginal notes, page fillers, etc. The first major or sole hand is numbered as <val>A</val> in the <att>n</att> attribute, and further major scribes numbered <val>B</val>, <val>C</val>, etc. Minor hands are numbered with values <val>a</val>, <val>b</val>, <val>c</val>, etc.</p>
-                            <p>Where the scribe is identifiable, either from the writing or a subscription, give the name (according to <hi rend="italics">Repertorium der Griechischen Kopisten</hi> or other relevant authority files, e.g. VIAF) in a <gi>persName</gi> element using the <att>role</att> attribute with value <val>scribe</val>. Specify the certainty of the attribution in the <att>cert</att> attribute (values: <val>high</val>, <val>middle</val>, <val>low</val>, <val>unknown</val>) and the evidence for this in the <att>evidence</att> attribute (values: <val>conjecture</val>, <val>internal</val>, <val>external</val>). If the evidence is internal (e.g. a subscription) use the <att>source</att> attribute with a pointer to the <att>xml:id</att> of the subscription.                
+                            <p>Each distinct hand should be described in a separate <gi>handNote</gi> element in the <gi>handDesc</gi> element. Give the extent for this hand in a <gi>locus</gi> or <gi>locusGrp</gi> element. Where the scribe is identifiable, either from the writing or a subscription, give the name (according to <hi rend="italics">Repertorium der Griechischen Kopisten</hi> or other relevant authority files, e.g. VIAF) in a <gi>persName</gi> element using the <att>role</att> attribute with value <val>scribe</val>. Specify the certainty of the attribution in the <att>cert</att> attribute (values: <val>high</val>, <val>middle</val>, <val>low</val>, <val>unknown</val>) and the evidence for this in the <att>evidence</att> attribute (values: <val>internal</val>, <val>external</val>, <val>conjecture</val>).                
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                     <handDesc>
-                                        <handNote n="A" scope="sole">
+                                        <handNote>
                                             <locus from="1r" to="119r" scheme="folios" />
-                                            <persName role="scribe" cert="high" evidence="internal" source="#cug27colophon" xml:lang="grc">
-                                                <forename>Μιχαὴλ</forename>
-                                                <surname>Σουλιάρδος</surname>
-                                            </persName>
-                                based on subscription <locus from="119r" to="119r" scheme="folios" />.
-                                </handNote>
-                                        <handNote n="a" scope="minor">
-                                            <locusGrp>
-                                                <locus from="1r" to="119r" scheme="folios" />
-                                            </locusGrp>
-                                Chapter divisions in Latin by unknown hand.
-                                </handNote>
+                                            <persName ref="#MicSou" role="scribe" cert="high" evidence="internal" /> based on subscription <locus from="119r" to="119r" scheme="folios" />. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out.
+                                        </handNote>
+                                        <handNote>
+                                            <locus from="1r" to="119r" scheme="folios" />
+                                            Chapter divisions in Latin by unknown hand.
+                                        </handNote>
                                     </handDesc>
                                 </egXML>
                             </p>
-                            <p>For unidentified hands describe the script and, if possible, classify it using the <gi>term</gi> element with the <att>type</att> attribute (value: <val>script</val>). Minor notes which cannot be attributed to a scribe should be summarized in an additional <gi>handNote</gi> element without <att>n</att> attribute. Give some examples with locus.
+                            <p>For unidentified hands describe the script and, if possible, classify it using the <gi>term</gi> element with the <att>type</att> attribute (value: <val>script</val>). Minor notes which cannot be attributed to a scribe should be summarized in an separate <gi>handNote</gi> element with a few <gi>locus</gi> as examples.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                     <handDesc>
-                                        <handNote n="A" scope="major">
+                                        <handNote>
                                             <locus from="1r" to="223v" scheme="folios" />
-                                Slightly right-sloping <term type="script">minuscule</term>, <term type="script" xml:lang="de">Perlschrift</term>. Rubrics in <term type="script" xml:lang="de">alexandrinischer Auszeichnungsmajuskel</term>.
-                                </handNote>
-                                        <handNote scope="minor">Occasional <term>notes</term> and <term>pen trials</term> by later hands, e.g. <locus from="10r" to="10r" scheme="folios" />, <locus from="18v" to="18v" scheme="folios" />, <locus from="193r" to="193r" scheme="folios" />.</handNote>
+                                            Slightly right-sloping <term type="script">minuscule</term>, <term type="script" xml:lang="de">Perlschrift</term>. Rubrics in <term type="script" xml:lang="de">alexandrinischer Auszeichnungsmajuskel</term>.
+                                        </handNote>
+                                        <handNote>Occasional <term>notes</term> and <term>pen trials</term> by later hands, e.g. <locus from="10r" to="10r" scheme="folios" />, <locus from="18v" to="18v" scheme="folios" />, <locus from="193r" to="193r" scheme="folios" />.
+                                        </handNote>
                                     </handDesc>
                                 </egXML>
+                                <specList>
+                                    <specDesc key="handDesc" />
+                                    <specDesc key="handNote" />
+                                    <specDesc key="locus" atts="from to scheme" />
+                                    <specDesc key="locusGrp" atts="from to scheme" />
+                                    <specDesc key="term" atts="type" />
+                                </specList>
                             </p>
                         </div>
                         <div xml:id="musicnotation">
@@ -1174,18 +1173,18 @@
                     </elementSpec>
                     <elementSpec ident="biblScope" module="core" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
                             <rng:empty />
                         </content>
                         <attList>
-                            <attDef ident="type" mode="delete" />                            
+                            <attDef ident="type" mode="delete" />
                         </attList>
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">                                
-                                    <biblScope unit="volume" from="10" to="10" />
-                                    <biblScope unit="page" from="175" to="222" />
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <biblScope unit="volume" from="10" to="10" />
+                                <biblScope unit="page" from="175" to="222" />
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1846,7 +1845,22 @@
                     <elementSpec ident="graphic" mode="change" module="core" />
                     <elementSpec ident="handDesc" mode="change" module="msdescription" />
                     <elementSpec ident="handNote" mode="change" module="msdescription">
-                        <constraintSpec ident="handNote.n" scheme="isoschematron">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <attList>
+                            <attDef ident="scope" mode="delete" />
+                            <attDef ident="script" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <handNote>
+                                    <locus from="1r" to="119r" scheme="folios" />
+                                    <persName ref="#MicSou" role="scribe" cert="high" evidence="internal" /> based on subscription <locus from="119r" to="119r" scheme="folios" />. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out.
+                                </handNote>
+                            </egXML>
+                        </exemplum>
+                        <!--<constraintSpec ident="handNote.n" scheme="isoschematron">
                             <constraint>
                                 <sch:pattern>
                                     <sch:title>Check that n contains a letter</sch:title>
@@ -1855,18 +1869,8 @@
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
-                        </constraintSpec>
-                        <attList>
-                            <attDef ident="scope" mode="change" usage="req">
-                                <defaultVal>sole</defaultVal>
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="sole" />
-                                    <valItem ident="major" />
-                                    <valItem ident="minor" />
-                                </valList>
-                            </attDef>
-                            <attDef ident="script" mode="delete" />
-                        </attList>
+                        </constraintSpec>-->
+
                     </elementSpec>
                     <elementSpec ident="head" mode="change" module="core">
                         <classes mode="change">
@@ -2168,12 +2172,21 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="locusGrp" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"></memberOf>
+                        </classes>
                         <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
+                            <attDef ident="scheme" mode="delete" />                            
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <locusGrp>
+                                    <locus scheme="folios" from="24r" to="29v" />
+                                    <locus scheme="folios" from="32r" to="32v" />
+                                    <locus scheme="folios" from="31r" to="31v" />
+                                </locusGrp>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="material" mode="change" module="msdescription">
                         <content>
@@ -2203,15 +2216,15 @@
                     </elementSpec>
                     <elementSpec ident="msContents" mode="change" module="msdescription">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.msExcerpt" mode="delete"/>
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.msExcerpt" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="msItem" minOccurs="1" maxOccurs="unbounded"/>
+                            <elementRef key="summary" minOccurs="0" maxOccurs="1" />
+                            <elementRef key="msItem" minOccurs="1" maxOccurs="unbounded" />
                         </content>
                         <attList>
-                            <attDef ident="class" mode="delete"/>
+                            <attDef ident="class" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
