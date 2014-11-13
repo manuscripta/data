@@ -59,6 +59,12 @@
                         </specList>
                     </p>
                 </div>
+                <div xml:id="citation">
+                    <head>Bibliographic citations</head>
+                    <p>
+                        
+                    </p>
+                </div>
                 <div xml:id="greekcharacters">
                     <head>Notation of Greek characters</head>
                     <div xml:id="greeknumbers">
@@ -470,7 +476,7 @@
                     </p>
                     <div xml:id="mscontent_unit">
                         <head>Intellectual Content</head>
-                        <p>The intellectual content of the codicological unit should be listed in the <gi>msContent</gi> element.</p>
+                        <p>The intellectual content of the codicological unit should be listed in the <gi>msContents</gi> element.</p>
                         <div xml:id="summary_unit">
                             <head>Summary</head>
                             <p>Give a brief descriptive title in English in the <gi>summary</gi> element which summarizes the intellectual content of the codicological unit. For the descriptive title summarizing the intellectual content of the whole manuscript, see <ptr target="#heading" />.
@@ -1167,33 +1173,19 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="biblScope" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                        </classes>
                         <content>
                             <rng:empty />
                         </content>
                         <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
+                            <attDef ident="type" mode="delete" />                            
                         </attList>
                         <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename>Eduardo</forename>
-                                            <forename>Luigi</forename>
-                                            <surname>De Stefani</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="a">I manoscritti della Historia Animalium di Eliano</title>
-                                    <title level="j">Studi italiani di filologia classica</title>
-                                    <date when="1902" />
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">                                
                                     <biblScope unit="volume" from="10" to="10" />
                                     <biblScope unit="page" from="175" to="222" />
-                                    <citedRange unit="page" from="209" to="210" />
-                                </bibl>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -2209,7 +2201,35 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="msContents" mode="change" module="msdescription" />
+                    <elementSpec ident="msContents" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.msExcerpt" mode="delete"/>
+                        </classes>
+                        <content>
+                            <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="msItem" minOccurs="1" maxOccurs="unbounded"/>
+                        </content>
+                        <attList>
+                            <attDef ident="class" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msContents>
+                                    <msItem class="schol">
+                                        <locus from="27v:12" to="27v:31" scheme="folios" />
+                                        <author>
+                                            <persName ref="#ManHol" />
+                                        </author>
+                                        <title ref="http://pinakes.irht.cnrs.fr/rech_oeuvre/resultOeuvre/filter_auteur/4147/filter_oeuvre/5451" type="uniform" xml:lang="la">Commentarius in securim</title>
+                                        <rubric xml:lang="grc">Τοῦ Ὁλοβόλου εἰς τὸν Πέλεκυν ἐξήγησις συνοπτική</rubric>
+                                        <incipit xml:lang="grc" defective="false">Ὁ πέλεκυς οὐχ <supplied reason="omitted" xml:lang="grc">ὡς</supplied> ὁ Σύριγξ καὶ οἱ Βωμοὶ</incipit>
+                                        <explicit xml:lang="grc" defective="false">ὄλβιος καὶ εὐτυχὴς ἀεὶ πνεῖ καὶ ζῇ</explicit>
+                                    </msItem>
+                                </msContents>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="msDesc" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.typed" mode="delete" />
