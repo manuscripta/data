@@ -37,6 +37,33 @@
                         </specList>
                     </p>
                 </div>
+                <div xml:id="locus">
+                    <head>References to Locations within a Manuscript</head>
+                    <p>References to a specific location or range within a manuscripts should ge given in a locus element with <att>from</att> and <att>to</att> attributes. When referring to a specific folio or page the <att>from</att> and <att>to</att> attributes should be used with identical values. The foliation scheme should be specified in the <att>scheme</att> attribute with the value <val>folios</val> or <val>pages</val>. 
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <locus from="119v" to="120r" scheme="folios" />
+                        </egXML>
+                        If needed line numbers can be provided using the colon followed by the line number. 
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <locus from="22r:1" to="22r:10" scheme="folios" />
+                        </egXML>
+                        For references to the spine and covers the <att>scheme</att> attribute with the value <val>other</val> should be used. Use the abbreviations LCO (= left cover outside), LCI (= left cover inside), RCI (= right cover inside), RCO (= right cover outside), L1r (= i<hi rend="sup">r</hi>), R1r (= i'<hi rend="sup">r</hi>)).
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <locus from="spine" to="spine" scheme="other" />
+                        </egXML>
+                        In cases where it is necessary to use different values for the scheme <att>attribute</att>, e.g. when referring to the left or right inside covers and the flyleaves, use <gi>locusGrp</gi>.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <locusGrp>
+                                <locus from="R1r" to="R2v" scheme="folios" />
+                                <locus from="RCI" to="RCI" scheme="other" />
+                            </locusGrp>
+                        </egXML>
+                        <specList>
+                            <specDesc key="locus" atts="from to scheme" />
+                            <specDesc key="locusGrp" />
+                        </specList>
+                    </p>
+                </div>
                 <div xml:id="personalnames">
                     <head>Personal Names</head>
                     <p>Should be referred to the persons authority file in a <gi>persName</gi> element with the <att>ref</att> attribute. If the name is supplied the <att>evidence</att> attribute should be used (possible values: <val>internal</val>, <val>external</val>, or <val>conjecture</val>). The certainty can be indicated with the <att>cert</att> attribute (possible values: <val>high</val>, <val>medium</val>, <val>low</val>, or <val>unknown</val>). The role of the person referred to can be indicated in the <att>role</att> attribute (possible values: <val>cataloguer</val>, <val>librarian</val>, or <val>scribe</val>).
@@ -56,6 +83,15 @@
                         </egXML>
                         <specList>
                             <specDesc key="placeName" atts="ref" />
+                        </specList>
+                    </p>
+                </div>
+                <div xml:id="terms">
+                    <head>Technical Terms</head>
+                    <p>Technical terms should be marked up using the <gi>term</gi> element and the <att>type</att> attribute. 
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                        <specList>
+                            <specDesc key="term" atts="type" />
                         </specList>
                     </p>
                 </div>
@@ -298,13 +334,15 @@
                 </div>
                 <div xml:id="endleaves">
                     <head>Endleaves</head>
-                    <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. 
+                    <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. For the guidelines on locus see <ptr target="#locus" />.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msPart>
                                 <msContents>
                                     <msItem class="endleaf">
-                                        <locus from="LCI" to="L2v" scheme="folios" />
-                                        <!-- LCI = Left cover inside. L = left endleaves -->
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other" />
+                                            <locus from="L1r" to="L2v" scheme="folios" />
+                                        </locusGrp>
                                         <note>Blank endleaves</note>
                                     </msItem>
                                     <msItem class="endleaf">
@@ -312,8 +350,10 @@
                                         <note>Table of contents</note>
                                     </msItem>
                                     <msItem class="endleaf">
-                                        <locus from="R1r" to="RCI" scheme="folios" />
-                                        <!-- R = right endleaves, RCI = Right cover inside -->
+                                        <locusGrp>
+                                            <locus from="R1r" to="R2v" scheme="folios" />
+                                            <locus from="RCI" to="RCI" scheme="other" />
+                                        </locusGrp>
                                         <note>Blank endleaves</note>
                                     </msItem>
                                 </msContents>
@@ -338,7 +378,7 @@
                     </p>
                     <div xml:id="objectdesc_book">
                         <head>Object Description</head>
-                        <p>In the <gi>objectDesc</gi> element the support, extent, and collation of the endleaves should be decribed, see <ptr target="#support" />, <ptr target="#extent" /> and <ptr target="#collation" />. The foliation of the whole manuscript should also be recorded here, see <ptr target="#foliation" />.
+                        <p>In the <gi>objectDesc</gi> element the support, extent, and collation of the endleaves should be decribed, see <ptr target="#support" />, <ptr target="#extent_unit" /> and <ptr target="#collation" />. The foliation of the whole manuscript should also be recorded here, see <ptr target="#foliation" />.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msPart>
                                     <physDesc>
@@ -494,11 +534,7 @@
                             <p>Blank pages should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>blank_page</val>. The <gi>msItem</gi> element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element with the text <quote>Blank page/s</quote>. Pages containing short notes or scribbles by later hands should be categorized as blank. Give a brief description in a <gi>note</gi> element with a reference to the <gi>handNote</gi> element containing the quote. Table of contents may be quoted under <gi>handNote</gi> in <gi>handDesc</gi>.</p>
                             <div xml:id="msitem_unit_locus">
                                 <head>Locus</head>
-                                <p>Give start and end folio of each item. If there are several items on a single folio give line numbers. The foliation scheme should be specified in the <att>scheme</att>attribute with the value <val>folios</val> or <val>pages</val>.   
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <locus from="22r:1" to="22r:10" />
-                                    </egXML>
-                            For texts scattered over more than one location in the manuscript the <gi>locusGrp</gi> element should be used.
+                                <p>Give start and end folio of each item according to the guidelines specified in <ptr target="#locus" />. If there are several items on a single folio specify on which line the text starts and ends. For texts scattered over more than one location in the manuscript the <gi>locusGrp</gi> element should be used.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <locusGrp>
                                             <locus from="178r" to="178v" scheme="folios" />
@@ -665,65 +701,24 @@
                             </div>
                             <div xml:id="edition">
                                 <head>Editions</head>
-                                <p>The standard edition should be listed in a <gi>bibl</gi> element with references to the relevant pages/columns of the edition. When listing multiple editions use the <gi>listBibl</gi> element. If the text is found in Patrologia Graeca (PG) this should be listed first. For editions the <gi>author</gi> element should be omitted and the name of the critical editor given in the <gi>editor</gi> element. For personal names see <ptr target="#personalnames" />; for the publication place see <ptr target="#placenames" />. If there are more than one publication place only the first one should be included. In the <gi>date</gi> element the <att>when</att> attribute or the <att>from</att>/<att>to</att> attributes are required. In the <gi>biblScope</gi> element the <att>from</att>, <att>to</att> and <att>unit</att> attributes are required.
+                                <p>The standard edition should be enclosed in a <gi>bibl</gi> element with a <gi>ref</gi> element referring to the bibliography authority file. References to the relevant pages/columns of the edition should be made using the <gi>citedRange</gi> element. When listing multiple editions use the <gi>listBibl</gi> element. If the text is found in Patrologia Graeca (PG) this should be listed first. 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <bibl>
-                                            <editor>
-                                                <persName>
-                                                    <forename>Rudolf</forename>
-                                                    <surname>Schneider</surname>
-                                                </persName>
-                                            </editor>
-                                            <title level="a" xml:lang="de">Griechische Poliorketiker mit den handschriftlichen Bildern herausgegeben und übersetzt III</title>
-                                            <title level="s" xml:lang="de">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse</title>
-                                            <pubPlace>Berlin</pubPlace>
-                                            <date when="1912" />
-                                            <biblScope from="12" to="12" unit="volume">N.F.</biblScope>
-                                            <biblScope from="5" to="5" unit="issue" />
-                                            <biblScope from="8" to="36" unit="page" />
-                                        </bibl>
-                                    </egXML>
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <listBibl>
                                             <bibl>
-                                                <editor>
-                                                    <persName>
-                                                        <forename>Johann</forename>
-                                                        <forename>August</forename>
-                                                        <forename>Heinrich</forename>
-                                                        <surname>Tittmann</surname>
-                                                    </persName>
-                                                </editor>
-                                                <title level="m" xml:lang="la">Iohannis Zonarae lexicon ex tribus codicibus manuscriptis</title>
-                                                <pubPlace>Leipzig</pubPlace>
-                                                <date when="1808" />
-                                                <biblScope from="1" to="1" unit="volume" />
-                                                <biblScope from="1" to="1070" unit="page" />
-                                                <biblScope from="2" to="2" unit="volume" />
-                                                <biblScope from="1077" to="1900" unit="page" />
+                                                <ref target="#Marsden1971" />
+                                                <citedRange from="66" to="103" unit="page" />
                                             </bibl>
                                             <bibl>
-                                                <author>
-                                                    <persName>
-                                                        <forename>Mark</forename>
-                                                        <surname>Naoumides</surname>
-                                                    </persName>
-                                                </author>
-                                                <editor>
-                                                    <persName>
-                                                        <forename>John</forename>
-                                                        <forename>Lewis</forename>
-                                                        <surname>Heller</surname>
-                                                    </persName>
-                                                </editor>
-                                                <title level="a">The Shorter Version of Pseudo-Zonaras, Lexicon</title>
-                                                <title level="m">Serta Turyniana. Studies in Greek Literature and Palaeography in honor of Alexander Turyn</title>
-                                                <pubPlace>Urbana</pubPlace>
-                                                <date when="1974" />
-                                                <biblScope from="436" to="488" unit="page" />
+                                                <ref target="#Rehm1929" />
                                             </bibl>
                                         </listBibl>
                                     </egXML>
+                                    <specList>
+                                        <specDesc key="bibl" />
+                                        <specDesc key="listBibl" />
+                                        <specDesc key="ref" atts="target" />
+                                        <specDesc key="citedRange" atts="from to unit" />
+                                    </specList>
                                 </p>
                             </div>
                         </div>
@@ -741,14 +736,20 @@
                         </p>
                         <div xml:id="objectdesc">
                             <head>Object Description</head>
-                            <p>The <gi>objectDesc</gi> element must contain the <gi>supportDesc</gi> and <gi>layoutDesc</gi> elements.</p>
+                            <p>The <gi>objectDesc</gi> element should contain the follwing elements: 
+                                <specList>
+                                    <specDesc key="supportDesc" />
+                                    <specDesc key="layoutDesc" />
+                                </specList>
+                            </p>
                             <div xml:id="supportdesc">
                                 <head>Support Description</head>
-                                <p>Should contain the following elements:
+                                <p>The <gi>supportDesc</gi> element should contain the following elements:
                             <specList>
                                         <specDesc key="support" />
                                         <specDesc key="extent" />
                                         <specDesc key="foliation" />
+                                        <specDesc key="collation" />
                                         <specDesc key="collation" />
                                     </specList>
                                 </p>
@@ -976,12 +977,12 @@
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <moduleRef key="tei" />
-                    <moduleRef key="core" include="add author bibl biblScope citedRange date del desc editor foreign gap graphic head hi item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
+                    <moduleRef key="core" include="add author bibl citedRange date del desc editor foreign gap graphic head hi item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
                     <moduleRef key="header" include="authority change extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="figures" include="formula" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
                     <moduleRef key="namesdates" include="country persName placeName region settlement" />
-                    <moduleRef key="textstructure" include="TEI body text" />
+                    <moduleRef key="textstructure" include="TEI body" />
                     <moduleRef key="transcr" include="ex facsimile supplied surface" />
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
@@ -1127,66 +1128,24 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="bibl" module="core" mode="change">
-                        <content>
-                            <elementRef key="ref" />
-                            <elementRef key="date" minOccurs="0" maxOccurs="1" />
-                            <sequence minOccurs="0" maxOccurs="unbounded">
-                                <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded" />
-                            </sequence>
-                            <!--<rng:ref name="ref" />
-                            <rng:optional>
-                                <rng:ref name="date" />
-                            </rng:optional>
-                            <rng:zeroOrMore>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="biblScope" />
-                                </rng:zeroOrMore>
-                                <rng:zeroOrMore>
-                                    <rng:ref name="citedRange" />
-                                </rng:zeroOrMore>
-                            </rng:zeroOrMore>-->
-                        </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
-                        <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <bibl>
-                                    <author>
-                                        <persName>
-                                            <forename>Friedrich</forename>
-                                            <surname>Jacobs</surname>
-                                        </persName>
-                                    </author>
-                                    <title level="m">Aeliani de natura animalium libri xvii</title>
-                                    <pubPlace>Jena</pubPlace>
-                                    <date when="1832" />
-                                    <citedRange unit="volume" from="1" to="1" />
-                                    <citedRange unit="page" from="lxxvi" to="lxxvii" />
-                                </bibl>
-                            </egXML>
-                        </exemplum>
-                    </elementSpec>
-                    <elementSpec ident="biblScope" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <rng:empty />
+                            <elementRef key="ref" />
+                            <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded" />
                         </content>
-                        <attList>
-                            <attDef ident="type" mode="delete" />
-                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <biblScope unit="volume" from="10" to="10" />
-                                <biblScope unit="page" from="175" to="222" />
+                                <bibl>
+                                    <ref target="#DeStefani1902" />
+                                    <citedRange from="209" to="210" unit="page" />
+                                </bibl>
                             </egXML>
                         </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="bindingDesc" module="msdescription" mode="change">
                         <!--<content>
@@ -1848,10 +1807,34 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
                         </classes>
-                        <attList>
-                            <attDef ident="scope" mode="delete" />
-                            <attDef ident="script" mode="delete" />
-                        </attList>
+                        <content>
+                            <sequence>
+                                <alternate>
+                                    <elementRef key="locus" />
+                                    <elementRef key="locusGrp" />
+                                </alternate>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <textNode />
+                                    <elementRef key="bibl" />
+                                    <elementRef key="foreign" />
+                                    <elementRef key="idno" />
+                                    <elementRef key="locus" />
+                                    <elementRef key="locusGrp" />
+                                    <elementRef key="term" />
+                                    <elementRef key="persName" />
+                                    <elementRef key="quote" />
+                                </alternate>
+                            </sequence>
+                        </content>
+                        <constraintSpec ident="term.type.script" scheme="isoschematron">
+                            <desc versionDate="2014-11-17">Check that the <gi>handNote</gi> element contains at least one <gi>term</gi> element with <att>type</att>
+                                <val>script</val>.</desc>
+                            <constraint>
+                                <sch:rule context="tei:handNote">
+                                    <sch:assert test="tei:term[@type='script']"> The handNote element must contain at least one term element with @type script. </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <handNote>
@@ -2002,11 +1985,12 @@
                     </elementSpec>
                     <elementSpec ident="institution" mode="change" module="namesdates">
                         <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
                             <memberOf key="att.canonical" mode="delete" />
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <valList type="closed">
+                        <valList mode="replace" type="closed">
                             <valItem ident="Uppsala University" />
                             <valItem ident="Gothenburg University" />
                             <valItem ident="Linköping Diocesan Library" />
@@ -2022,11 +2006,17 @@
                             </valItem>
                             <valItem ident="Skokloster Castle" />
                         </valList>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msIdentifier>
+                                    <country>Sweden</country>
+                                    <settlement>Uppsala</settlement>
+                                    <institution>Uppsala University</institution>
+                                    <repository>Uppsala University Library</repository>
+                                    <idno type="shelfmark">Gr. 27</idno>
+                                </msIdentifier>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="item" mode="change" module="core" />
                     <elementSpec ident="layout" mode="change" module="msdescription">
@@ -2108,11 +2098,26 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="listBibl" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:oneOrMore>
-                                <rng:ref name="bibl" />
-                            </rng:oneOrMore>
+                            <elementRef key="bibl" minOccurs="2" maxOccurs="unbounded" />
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <listBibl>
+                                    <bibl>
+                                        <ref target="#Marsden1971" />
+                                        <citedRange from="66" to="103" unit="page" />
+                                    </bibl>
+                                    <bibl>
+                                        <ref target="#Rehm1929" />
+                                    </bibl>
+                                </listBibl>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="locus" mode="change" module="msdescription">
                         <!--FIXA-->
@@ -2130,28 +2135,33 @@
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="locus.check" scheme="isoschematron">
+                            <desc versionDate="2014-11-17">Check for prohibited values in the from and to attributes</desc>
                             <constraint>
-                                <sch:pattern>
-                                    <sch:title>Check for prohibited values in the from and to attributes</sch:title>
-                                    <sch:rule context="tei:locus">
-                                        <sch:report test="@from[starts-with(., 'i') or starts-with(., 'v') or starts-with(., 'x')] or @to[starts-with(., 'i') or starts-with(., 'v') or starts-with(., 'x')]"> The use of roman numerals is not allowed. Use L1r for left endleaves and R1r for right endleaves.</sch:report>
-                                        <sch:report test="@from[matches(., 'lco')] or @to[matches(., 'lco')]"> Use LCO for left cover outside.</sch:report>
-                                        <sch:report test="@from[matches(., 'lci')] or @to[matches(., 'lci')]"> Use LCI for left cover inside.</sch:report>
-                                        <sch:report test="@from[matches(., 'rci')] or @to[matches(., 'rci')]"> Use RCI for right cover inside.</sch:report>
-                                        <sch:report test="@from[matches(., 'rco')] or @to[matches(., 'rco')]"> Use RCO for right cover outside.</sch:report>
-                                        <sch:report test="@from[matches(., 'Spine')] or @to[matches(., 'Spine')]"> Use spine with lower-case.</sch:report>
-                                    </sch:rule>
-                                </sch:pattern>
+                                <sch:rule context="tei:locus">
+                                    <sch:report test="@from[starts-with(., 'i') or starts-with(., 'v') or starts-with(., 'x')] or @to[starts-with(., 'i') or starts-with(., 'v') or starts-with(., 'x')]"> The use of roman numerals is not allowed. Use L1r or L1v for left endleaves and R1r or R1v for right endleaves.</sch:report>
+                                    <sch:report test="@from[matches(., 'lco')] or @to[matches(., 'lco')]"> Use LCO for left cover outside.</sch:report>
+                                    <sch:report test="@from[matches(., 'lci')] or @to[matches(., 'lci')]"> Use LCI for left cover inside.</sch:report>
+                                    <sch:report test="@from[matches(., 'rci')] or @to[matches(., 'rci')]"> Use RCI for right cover inside.</sch:report>
+                                    <sch:report test="@from[matches(., 'rco')] or @to[matches(., 'rco')]"> Use RCO for right cover outside.</sch:report>
+                                    <sch:report test="@from[matches(., 'Spine')] or @to[matches(., 'Spine')]"> Use spine with lower-case.</sch:report>
+                                </sch:rule>
                             </constraint>
                         </constraintSpec>
-                        <constraintSpec ident="locus.scheme" scheme="isoschematron">
+                        <constraintSpec ident="locus.scheme.pages" scheme="isoschematron">
+                            <desc versionDate="2014-11-17">Check that the <att>scheme</att> attribute has the value <val>folios</val> when referring to folios.</desc>
                             <constraint>
-                                <sch:pattern>
-                                    <sch:title>Check that the correct scheme is used for locus</sch:title>
-                                    <sch:rule context="tei:locus[@scheme='pages']">
-                                        <sch:report test="@from[contains(., 'r') or contains(., 'v')]"> Use folios scheme.</sch:report>
-                                    </sch:rule>
-                                </sch:pattern>
+                                <sch:rule context="tei:locus[@scheme='pages' or @scheme='other']">
+                                    <sch:report test="@from[contains(., 'r') or contains(., 'v')]"> Use the scheme attribute with the value folios when referring to folios.</sch:report>
+                                    <sch:report test="@to[contains(., 'r') or contains(., 'v')]"> Use the scheme attribute with the value folios when referring to folios.</sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <constraintSpec ident="locus.scheme.other" scheme="isoschematron">
+                            <desc versionDate="2014-11-17">Check that the <att>scheme</att> attribute has the value <val>other</val> when referring to the spine och covers.</desc>
+                            <constraint>
+                                <sch:rule context="tei:locus[@scheme='folios' or @scheme='pages']">
+                                    <sch:report test="@from[matches(., 'spine')] or @from[matches(., 'LCO')] or @from[matches(., 'LCI')] or @to[matches(., 'spine')] or @to[matches(., 'RCO')] or @to[matches(., 'RCI')]"> Use the scheme attribute with the value other when referring to the spine or covers.</sch:report>
+                                </sch:rule>
                             </constraint>
                         </constraintSpec>
                         <attList>
@@ -2173,42 +2183,68 @@
                     </elementSpec>
                     <elementSpec ident="locusGrp" mode="change" module="msdescription">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"></memberOf>
+                            <memberOf key="att.global" mode="delete" />
                         </classes>
                         <attList>
-                            <attDef ident="scheme" mode="delete" />                            
+                            <attDef ident="scheme" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <locusGrp>
-                                    <locus scheme="folios" from="24r" to="29v" />
-                                    <locus scheme="folios" from="32r" to="32v" />
-                                    <locus scheme="folios" from="31r" to="31v" />
+                                    <locus from="24r" to="29v" scheme="folios" />
+                                    <locus from="32r" to="32v" scheme="folios" />
+                                    <locus from="31r" to="31v" scheme="folios" />
                                 </locusGrp>
                             </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="material" mode="change" module="msdescription">
-                        <content>
-                            <rng:text />
-                        </content>
-                        <constraintSpec ident="support.material" scheme="isoschematron">
-                            <constraint>
-                                <sch:rule context="tei:support//tei:material">
-                                    <sch:assert test="text()='Western paper' or text()='Western paper without watermarks' or text()='Arabic paper' or text()='Parchment'">Permitted values are "Western paper", "Western paper without watermarks", "Arabic paper", or "Parchment".</sch:assert>
-                                </sch:rule>
-                            </constraint>
-                        </constraintSpec>
-                    </elementSpec>
-                    <elementSpec ident="measure" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.canonical" mode="delete" />
+                        </classes>
                         <content>
                             <textNode />
                         </content>
+                        <constraintSpec ident="support.material" scheme="isoschematron">
+                            <desc versionDate="2014-11-17">Check that <gi>material</gi> for <gi>support</gi>only contains the permitted values "Western paper", "Western paper without watermarks", "Arabic paper", or "Parchment".</desc>
+                            <constraint>
+                                <sch:rule context="tei:support//tei:material">
+                                    <sch:assert test="text()='Western paper' or text()='Western paper without watermarks' or text()='Arabic paper' or text()='Parchment'"> Permitted values are "Western paper", "Western paper without watermarks", "Arabic paper", or "Parchment".</sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <material>Western paper</material>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
+                    </elementSpec>
+                    <elementSpec ident="measure" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
+                        <constraintSpec ident="measure.folding" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="//tei:measure[@type='folding']">
+                                    <sch:assert test="text()='Folio' or text()='Quarto' or text()='Octavo'"> Permitted values are "Folio", "Quarto", or "Octavo".</sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
-                                <valList type="closed">
+                                <valList mode="replace" type="closed">
                                     <valItem ident="laid-lines_in_20mm">
                                         <desc>Number of laid lines in 20 mm</desc>
+                                    </valItem>
+                                    <valItem ident="folding">
+                                        <desc>The folding of the sheets: Folio, Quarto, Octavo</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -2765,13 +2801,66 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="objectDesc" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <sequence>
+                                <elementRef key="supportDesc" />
+                                <elementRef key="layoutDesc" minOccurs="0" maxOccurs="1" />
+                            </sequence>
+                        </content>
                         <attList>
                             <attDef ident="form" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <objectDesc>
+                                    <supportDesc material="parchment">
+                                        <support>
+                                            <p>
+                                                <locus from="92r" to="220v" scheme="folios" />
+                                                <dimensions type="leaf">
+                                                    <height quantity="225" unit="mm" />
+                                                    <width quantity="170" unit="mm" />
+                                                </dimensions>
+                                            </p>
+                                        </support>
+                                        <extent>
+                                            <measure type="textblock_leaves" quantity="129" />
+                                        </extent>
+                                        <collation>
+                                            <formula>
+                                                <hi rend="sub">Q17–29</hi>13.IV<hi rend="super">f.195</hi> + 
+                                                <hi rend="sub">Q30</hi>(IV + 3f.<hi rend="super">f.196–198</hi>)<hi rend="super">f.206</hi>: 
+                                                3 single leaves pasted together and onto the following quaternion + <hi rend="sub">Q31</hi>IV<hi rend="super">f.214</hi> + <hi rend="sub">Q32</hi>III<hi rend="super">f.220</hi>
+                                            </formula>
+                                            <signatures><term>none</term></signatures>
+                                            <catchwords><term>none</term></catchwords>
+                                        </collation>
+                                    </supportDesc>
+                                    <layoutDesc>
+                                        <layout columns="1" ruledLines="21" writtenLines="39 41">
+                                            <locus from="92r" to="220v" scheme="folios" />
+                                            <term type="layout">ruling pattern</term>
+                                            <term type="proximity">identical with</term>
+                                            <bibl>
+                                                <ref target="#Sautel1995" />
+                                                <citedRange unit="number" from="20D1" to="20D1" />
+                                            </bibl>
+                                            <note>On some pages the <term type="layout">ruling pattern</term> is closer to <bibl>
+                                                    <ref target="#Sautel1995" />
+                                                    <citedRange unit="number" from="20A1" to="20A1" />
+                                                </bibl>, although this may be due to the scribe being less accurate in the execution.</note>
+                                            <dimensions type="written">
+                                                <height min="195" max="200" unit="mm" />
+                                                <width min="130" max="135" unit="mm" />
+                                            </dimensions>
+                                        </layout>
+                                    </layoutDesc>
+                                </objectDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="origDate" mode="change" module="msdescription">
                         <constraintSpec ident="date.values" scheme="isoschematron">
@@ -2980,6 +3069,10 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="ref" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
@@ -3011,12 +3104,17 @@
                         </constraintSpec>
                         <attList>
                             <attDef ident="target" mode="change" usage="rec" />
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bibl>
+                                    <ref target="#DeStefani1902" />
+                                </bibl>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="region" mode="change" module="namesdates" />
                     <elementSpec ident="repository" mode="change" module="namesdates">
@@ -3256,17 +3354,17 @@
                         </content>
                     </elementSpec>
                     <elementSpec ident="supportDesc" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:optional>
-                                <rng:ref name="support" />
-                            </rng:optional>
-                            <rng:ref name="extent" />
-                            <rng:optional>
-                                <rng:ref name="foliation" />
-                            </rng:optional>
-                            <rng:optional>
-                                <rng:ref name="collation" />
-                            </rng:optional>
+                            <sequence>
+                                <elementRef key="support" />
+                                <elementRef key="extent" />
+                                <elementRef key="foliation" />
+                                <elementRef key="collation" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="condition" minOccurs="0" maxOccurs="1" />
+                            </sequence>
                         </content>
                         <constraintSpec ident="material.support.check" scheme="isoschematron">
                             <desc versionDate="2014-09-25" xml:lang="en">checks that the <gi>supportDesc</gi> element only has a <att>material</att> attribute when it is a descendant of <gi>msPart</gi></desc>
@@ -3289,11 +3387,12 @@
                                     <valItem ident="mixed" />
                                 </valList>
                             </attDef>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <!-- ADD EXAMPLE -->
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="surface" mode="change" module="transcr">
                         <content>
@@ -3403,7 +3502,7 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <!-- Modified and deleted attributes in att.global -->
+                            <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="en" />
@@ -3417,29 +3516,33 @@
                         </attList>
                     </elementSpec>
                     <elementSpec ident="term" mode="change" module="core">
-                        <constraintSpec ident="term.folding" scheme="isoschematron">
-                            <constraint>
-                                <sch:rule context="//tei:term[@type='folding']">
-                                    <sch:assert test="text()='Folio' or text()='Quarto' or text()='Octavo'"> Permitted values are "Folio", "Quarto", or "Octavo".</sch:assert>
-                                </sch:rule>
-                            </constraint>
-                        </constraintSpec>
-                        <constraintSpec ident="term.proximity" scheme="isoschematron">
-                            <constraint>
-                                <sch:rule context="//tei:term[@type='proximity']">
-                                    <sch:assert test="text()='similar to' or text()='very similar to' or text()='identical with'"> Permitted values are "similar to", "very similar to", or "identical with".</sch:assert>
-                                </sch:rule>
-                            </constraint>
-                        </constraintSpec>
+                        <classes mode="change">
+                            <memberOf key="att.pointing" mode="delete" />
+                            <memberOf key="att.canonical" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <elementRef key="material" />
+                                <textNode />
+                            </alternate>
+                        </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
+                                <constraintSpec ident="term.proximity" scheme="isoschematron">
+                                    <constraint>
+                                        <sch:rule context="//tei:term[@type='proximity']">
+                                            <sch:assert test="text()='similar to' or text()='very similar to' or text()='identical with'"> Permitted values are "similar to", "very similar to", or "identical with".</sch:assert>
+                                        </sch:rule>
+                                    </constraint>
+                                </constraintSpec>
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="folding">
-                                        <desc>The folding of the sheets: Folio, Quarto, Octavo</desc>
-                                    </valItem>
                                     <valItem ident="layout" />
-                                    <valItem ident="proximity" />
-                                    <valItem ident="script" />
+                                    <valItem ident="proximity">
+                                        <desc>Terms used to describe proximity: "similar to", "very similar to", or "identical with" </desc>
+                                    </valItem>
+                                    <valItem ident="script">
+                                        <desc>Description of script</desc>
+                                    </valItem>
                                     <valItem ident="wm_motif">
                                         <desc>Watermark motif, in English</desc>
                                     </valItem>
@@ -3448,32 +3551,27 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="cRef" mode="delete" />
-                            <attDef ident="decls" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="key" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="sortKey" mode="delete" />
-                            <attDef ident="ref" mode="delete" />
-                            <attDef ident="target" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
                             <attDef ident="xml:id" mode="delete" />
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="text" mode="change" module="textstructure">
-                        <!--<content>
-                            <elementRef key="body" />
-                        </content>-->
-                        <content>
-                            <rng:ref name="body" />
-                        </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attributes deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <term type="wm_motif">Hat</term>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="textLang" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
                             <rng:empty />
                         </content>
@@ -3499,11 +3597,12 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <textLang mainLang="grc" />
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="title" mode="change" module="core">
                         <content>
@@ -3796,15 +3895,7 @@
                         </attList>
                     </classSpec>
                     <classSpec ident="att.global.change" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.handFeatures" module="tei" type="atts" mode="change">
-                        <attList>
-                            <attDef ident="scribe" mode="delete" />
-                            <attDef ident="scribeRef" mode="delete" />
-                            <attDef ident="script" mode="delete" />
-                            <attDef ident="scriptRef" mode="delete" />
-                            <attDef ident="medium" mode="delete" />
-                        </attList>
-                    </classSpec>
+                    <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.media" module="tei" type="atts" mode="change">
                         <attList>
