@@ -32,6 +32,7 @@
                <moduleRef key="tei" />
                <moduleRef key="core" include="author p title" />
                <moduleRef key="header" include="fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
+               <moduleRef key="msdescription" include="repository" />
                <moduleRef key="namesdates" include="country forename listPlace persName place placeName region settlement surname" />
                <moduleRef key="textstructure" include="TEI body text" />
 
@@ -125,6 +126,7 @@
                             <rng:ref name="country"/>
                             <rng:ref name="region"/>
                             <rng:ref name="settlement"/>
+                           <rng:ref name="repository"/>
                         </rng:choice>
                     </content>
                 </elementSpec>
@@ -134,7 +136,8 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-                <elementSpec ident="region" module="namesdates" mode="change"/>
+                <elementSpec ident="region" module="namesdates" mode="change"/>               
+               <elementSpec ident="repository" module="msdescription" mode="change"/>
                 <elementSpec ident="settlement" module="namesdates" mode="change"/>
                 <elementSpec ident="sourceDesc" module="header" mode="change">
                   <attList>
