@@ -20,14 +20,13 @@
    </teiHeader>
    <text>
       <body>
-
          <div xml:id="guidelines">
             <head>Guidelines for the Bibliography</head>
             <div xml:id="articles">
                <head>Articles</head>
-               <p>
+               <p>Use the <att>type</att> attribute with the value <val>article-journal</val> for journal articles.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <bibl xml:id="DeStefani1902">
+                     <bibl type="article-journal" xml:id="DeStefani1902">
                         <author ref="#EduDeS" />
                         <title level="a" xml:lang="it">I manoscritti della Historia Animalium di Eliano</title>
                         <title level="j" xml:lang="it">Studi italiani di filologia classica</title>
@@ -35,7 +34,7 @@
                         <biblScope unit="volume" from="10" to="10" />
                         <biblScope unit="page" from="175" to="222" />
                      </bibl>
-                     <bibl xml:id="Schneider1912">
+                     <bibl type="article-journal" xml:id="Schneider1912">
                         <author ref="#AthMec" />
                         <editor ref="#RudSch" />
                         <title level="a">Griechische Poliorketiker III</title>
@@ -56,9 +55,9 @@
             </div>
             <div xml:id="monographs">
                <head>Monographs</head>
-               <p>
+               <p>Use the <att>type</att> attribute with the value <val>book</val> for monographs.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <bibl xml:id="Karlsson1981">
+                     <bibl type="book" xml:id="Karlsson1981">
                         <editor ref="#GusKar" />
                         <title level="m" xml:lang="de">Codex Upsaliensis Graecus 28: Geschichte und Beschreibung der Handschrift nebst einer Nachlese von Texten</title>
                         <title level="s" xml:lang="la">Bibliotheca Ekmaniana Universitatis Upsaliensis</title>
@@ -71,9 +70,9 @@
             </div>
             <div xml:id="editions">
                <head>Editions</head>
-               <p>
+               <p>Use the <att>type</att> attribute with value <val>edition</val> for editions. The author of the work should be given in the <gi>author</gi> element and the name of the critical editor in the <gi>editor</gi> element. If there are more than one publication place only the first one should be included. In the <gi>date</gi> element the <att>when</att> attribute or the <att>from</att>/<att>to</att> attributes are required.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <bibl xml:id="GarcíaValdés2009">
+                     <bibl  type="edition" xml:id="GarcíaValdés2009">
                         <author ref="#ClaAel" />
                         <editor ref="#ManGar" />
                         <editor ref="#LuiLle" />
