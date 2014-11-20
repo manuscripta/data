@@ -455,7 +455,7 @@
                     <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Record the different stages in the provenance in one or more <gi>provenance</gi> elements. The <gi>acquisition</gi> element should describe the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <history>
-                                <origin>Probably written in the <origDate evidence="internal" from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                                <origin>Probably written in the <origDate from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
                                 <provenance>At sometime the volume came to <placeName>Venice</placeName>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
                                 <acquisition>It was acquired there by <persName ref="#JohSpa" />
                                         , who was staying in Venice <date from="1692" to="1693">from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios" />: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705" />.</acquisition>
@@ -2540,7 +2540,9 @@
                             <textNode />
                         </content>
                         <constraintSpec ident="measure.folding" scheme="isoschematron">
-                            <desc versionDate="2014-11-19">Check that <gi>measure</gi> <att>type</att> <val>folding</val> only contains the permitted values "Folio", "Quarto", or "Octavo".</desc>
+                            <desc versionDate="2014-11-19">Check that <gi>measure</gi>
+                                <att>type</att>
+                                <val>folding</val> only contains the permitted values "Folio", "Quarto", or "Octavo".</desc>
                             <constraint>
                                 <sch:rule context="//tei:measure[@type='folding']">
                                     <sch:assert test="text()='Folio' or text()='Quarto' or text()='Octavo'"> Permitted values are "Folio", "Quarto", or "Octavo".</sch:assert>
@@ -2710,6 +2712,7 @@
                                         <elementRef key="rubric" minOccurs="0" maxOccurs="1" />
                                         <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded" />
                                         <elementRef key="incipit" minOccurs="0" maxOccurs="1" />
+                                        <elementRef key="quote" minOccurs="0" maxOccurs="1" />
                                         <elementRef key="explicit" minOccurs="0" maxOccurs="1" />
                                         <elementRef key="finalRubric" minOccurs="0" maxOccurs="1" />
                                         <elementRef key="note" minOccurs="0" maxOccurs="1" />
@@ -2723,7 +2726,7 @@
                                     <elementRef key="note" />
                                 </alternate>
                             </sequence>
-                        </content>                      
+                        </content>
                         <constraintSpec ident="msItem.note.check" scheme="isoschematron">
                             <desc versionDate="2014-10-29" xml:lang="en">checks that the <gi>meItem</gi> element contains at least a <gi>locus</gi> or <gi>locusGrp</gi> and a <gi>note</gi>.</desc>
                             <!-- Needed to validate against tei_all -->
@@ -2997,7 +3000,7 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="defective" mode="change" usage="opt" />                            
+                            <attDef ident="defective" mode="change" usage="opt" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3011,33 +3014,102 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="msName" mode="change" module="msdescription" />
+                    <elementSpec ident="msName" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msName xml:lang="la">Codex Rolambianus</msName>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="msPart" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:group>
-                                <rng:ref name="msIdentifier" />
-                                <rng:ref name="msContents" />
-                                <rng:ref name="physDesc" />
-                                <rng:optional>
-                                    <rng:ref name="history" />
-                                </rng:optional>
-                            </rng:group>
+                            <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1" />
+                            <elementRef key="msContents" minOccurs="1" maxOccurs="1" />
+                            <elementRef key="physDesc" minOccurs="1" maxOccurs="1" />
+                            <elementRef key="history" minOccurs="0" maxOccurs="1" />
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msDesc>
+                                    <!-- Common information -->
+                                    <msPart>
+                                        <!-- Codicological unit 1 -->
+                                    </msPart>
+                                    <msPart>
+                                        <!-- Codicological unit 2 -->
+                                    </msPart>
+                                </msDesc>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
+                    </elementSpec>
+                    <elementSpec ident="musicNotation" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="term" />
+                            </alternate>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="musicNotation" mode="change" module="msdescription" />
                     <elementSpec ident="note" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.placement" mode="delete" />
+                            <memberOf key="att.pointing" mode="delete" />
+                            <memberOf key="att.responsibility" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="bibl" />
+                                <elementRef key="date" />
+                                <elementRef key="foreign" />
+                                <elementRef key="idno" />
+                                <elementRef key="list" />
+                                <elementRef key="locus" />
+                                <elementRef key="locusGrp" />
+                                <elementRef key="persName" />
+                                <elementRef key="placeName" />
+                                <elementRef key="q" />
+                                <elementRef key="term" />
+                            </alternate>
+                        </content>
                         <attList>
                             <attDef ident="anchored" mode="delete" />
-                            <attDef ident="cert" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="place" mode="delete" />
-                            <attDef ident="resp" mode="delete" />
-                            <attDef ident="subtype" mode="delete" />
-                            <attDef ident="target" mode="delete" />
                             <attDef ident="targetEnd" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <note>With interlinear glosses and a few longer scholia. Following the main text, 
+                                    there are on <locus from="24v" to="25v" scheme="folios" /> also sketches and diagrams 
+                                    relating to it (illustrating e.g. the four elements, agricultural implements, celestial bodies, the
+                                    zodiac). The sketches may be compared to the illustrations in the Venice print edition from 1537: <bibl>
+                                        <ref target="#Trincavelli1537" />
+                                        <citedRange unit="folio" from="CXIIv" to="CXIIv" />
+                                    </bibl>.</note>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="num" mode="change" module="core">
                         <classes mode="change">
@@ -3145,6 +3217,14 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="origDate" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.editLike" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
                         <constraintSpec ident="date.values" scheme="isoschematron">
                             <constraint>
                                 <sch:rule context="tei:origDate">
@@ -3152,19 +3232,44 @@
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <origDate notBefore="1535" notAfter="1555">1540s</origDate>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
-                    <elementSpec ident="origPlace" mode="change" module="msdescription" />
+                    <elementSpec ident="origPlace" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.naming" mode="delete" />
+                            <memberOf key="att.datable" mode="delete" />
+                            <memberOf key="att.editLike" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <elementRef key="placeName" />
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <origPlace>
+                                    <placeName ref="#Bologna" />
+                                </origPlace>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
+                    </elementSpec>
                     <elementSpec ident="origin" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.dimensions" mode="delete" />
-                            <memberOf key="att.ranging" mode="delete" />
-                            <memberOf key="att.responsibility" mode="delete" />
+                            <memberOf key="att.editLike" mode="delete" />
                             <memberOf key="att.datable" mode="delete" />
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
+                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
@@ -3177,17 +3282,24 @@
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <origin>Probably written in the <origDate evidence="internal" from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                                <origin>Probably written in the <origDate from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
                             </egXML>
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="p" mode="change" module="core">
-                        <attList>
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                        </attList>
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <bindingDesc>
+                                    <p>Light yellow <term>parchment</term>
+                                        <term>case binding</term> over pasteboard created from manuscript waste paper with Spanish
+                                        text on it. Sewn on four supports; only the endband slips are laced through the cover and turn-ins.
+                                        Endbands in pink and green with front bead; Two pairs of ties at foredge. Red mottled edges.</p>
+                                </bindingDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="persName" mode="change" module="namesdates">
                         <classes mode="change">
@@ -3233,7 +3345,35 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="physDesc" mode="change" module="msdescription" />
+                    <elementSpec ident="physDesc" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <sequence>
+                                <elementRef key="objectDesc" />
+                                <elementRef key="handDesc" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="musicNotation" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="decoDesc" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="bindingDesc" />
+                            </sequence>
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <physDesc>
+                                    <objectDesc>
+                                        <!-- Object description -->
+                                    </objectDesc>
+                                    <handDesc>
+                                        <!-- Hand description -->
+                                    </handDesc>
+                                    <bindingDesc>
+                                        <!-- Binding description -->
+                                    </bindingDesc>
+                                </physDesc>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="placeName" mode="change" module="namesdates">
                         <classes mode="change">
                             <memberOf key="att.datable" mode="delete" />
@@ -3282,24 +3422,8 @@
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <provenance>At sometime the volume came to <placeName>Venice</placeName>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
-                            </egXML>
-                        </exemplum>
-                    </elementSpec>
-                    <elementSpec ident="publicationStmt" mode="change" module="header">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                        </classes>
-                        <content>
-                            <elementRef key="authority" />
-                            <elementRef key="pubPlace" />
-                        </content>
-                        <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>
-                                    <authority>Uppsala University Library</authority>
-                                    <pubPlace>Uppsala</pubPlace>
-                                </publicationStmt>
+                                <provenance>At sometime the volume came to <placeName ref="#Venice" />, where it 
+                                    came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -3329,7 +3453,38 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="q" mode="change" module="core" />
+                    <elementSpec ident="publicationStmt" mode="change" module="header">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <elementRef key="authority" />
+                            <elementRef key="pubPlace" />
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publicationStmt>
+                                    <authority>Uppsala University Library</authority>
+                                    <pubPlace>Uppsala</pubPlace>
+                                </publicationStmt>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
+                    </elementSpec>
+                    <elementSpec ident="q" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.ascribed" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode />
+                        </content>
+                        <attList>
+                            <attDef ident="type" mode="delete" />
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="quote" mode="change" module="core">
                         <attList>
                             <attDef ident="xml:lang" mode="change" usage="opt">
@@ -3357,7 +3512,6 @@
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode />
                                 <elementRef key="bibl" />
                                 <elementRef key="date" />
                                 <elementRef key="placeName" />
