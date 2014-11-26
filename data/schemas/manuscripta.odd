@@ -997,7 +997,7 @@
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <moduleRef key="tei" />
-                    <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p pubPlace q quote ref resp respStmt sic term textLang title unclear" />
+                    <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p pubPlace quote ref resp respStmt sic term textLang title unclear" />
                     <moduleRef key="header" include="authority change extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="figures" include="formula" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
@@ -1744,7 +1744,7 @@
                                 <elementRef key="bibl" />
                                 <elementRef key="foreign" />
                                 <elementRef key="idno" />
-                                <elementRef key="q" />
+                                <elementRef key="quote" />                                
                             </alternate>
                         </content>
                         <attList>
@@ -3091,7 +3091,7 @@
                                 <elementRef key="locusGrp" />
                                 <elementRef key="persName" />
                                 <elementRef key="placeName" />
-                                <elementRef key="q" />
+                                <elementRef key="quote" />                                
                                 <elementRef key="term" />
                             </alternate>
                         </content>
@@ -3275,8 +3275,7 @@
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="origDate" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="q" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />                                
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
                         </content>
@@ -3290,6 +3289,33 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
                         </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <elementRef key="bibl" />
+                                <elementRef key="date"/>
+                                <elementRef key="dimensions"/>
+                                <elementRef key="foreign"/>
+                                <elementRef key="locus"/>
+                                <elementRef key="locusGrp"/>
+                                <elementRef key="material"/>
+                                <elementRef key="measure"/>
+                                <elementRef key="note"/>
+                                <elementRef key="persName"/>
+                                <elementRef key="placeName"/>
+                                <elementRef key="quote"/>
+                                <elementRef key="term"/>
+                                <elementRef key="watermark"/>
+                            </alternate>
+                        </content>
+                        <constraintSpec ident="watermark.check" scheme="isoschematron">
+                            <desc versionDate="2014-11-26">Check if <gi>watermark</gi> is used in <gi>bindingDesc</gi></desc>
+                            <constraint>
+                                <sch:rule context="tei:bindingDesc">
+                                    <sch:report test="*//tei:watermark"> Describe watermarks for the flyleaves in the support element. </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
@@ -3389,9 +3415,9 @@
                             <rng:empty />
                         </content>
                         <attList>
-                            <!-- Deleted attribute in att.naming -->
+                            <!-- Attribute deleted in att.naming -->
                             <attDef ident="role" mode="delete" />
-                            <!-- Changed and deleted attributes in att.canonical -->
+                            <!-- Attributes changed and deleted in att.canonical -->
                             <attDef ident="ref" mode="change" usage="req" />
                             <attDef ident="key" mode="delete" />
                         </attList>
@@ -3472,38 +3498,30 @@
                         <remarks>
                             <p />
                         </remarks>
-                    </elementSpec>
-                    <elementSpec ident="q" mode="change" module="core">
+                    </elementSpec>                    
+                    <elementSpec ident="quote" mode="change" module="core">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.ascribed" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                            <memberOf key="att.msExcerpt" mode="delete" />
+                            <memberOf key="att.source" mode="delete" />
                         </classes>
                         <content>
-                            <textNode />
+                            <textNode/>
                         </content>
                         <attList>
-                            <attDef ident="type" mode="delete" />
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="quote" mode="change" module="core">
-                        <attList>
-                            <attDef ident="xml:lang" mode="change" usage="opt">
-                                <defaultVal>grc</defaultVal>
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="grc">
-                                        <desc><!-- FIXA --></desc>
-                                    </valItem>
-                                    <valItem ident="la" />
-                                </valList>
-                            </attDef>
-                            <attDef ident="defective" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="source" mode="delete" />
-                            <attDef ident="subtype" mode="delete" />
-                            <attDef ident="type" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global -->                            
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="n" mode="delete" />                            
                             <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <quote xml:lang="la">Theodorus samius primo clavem mostravit</quote>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="ref" mode="change" module="core">
                         <classes mode="change">
@@ -4042,10 +4060,7 @@
                     </elementSpec>
                     <elementSpec ident="title" mode="change" module="core">
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode />
-                                <elementRef key="q" />
-                            </alternate>
+                            <textNode />
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
