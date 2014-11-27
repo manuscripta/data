@@ -1001,12 +1001,34 @@
                     <moduleRef key="header" include="authority change extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="figures" include="formula" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
-                    <moduleRef key="namesdates" include="country persName placeName region settlement" />
+                    <moduleRef key="namesdates" include="country persName placeName settlement" />
                     <moduleRef key="textstructure" include="TEI" />
                     <moduleRef key="transcr" include="ex facsimile supplied surface" />
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
+                    <elementSpec ident="TEI" module="textstructure" mode="change">
+                        <content>
+                            <elementRef key="teiHeader" />
+                            <elementRef key="facsimile" />
+                        </content>
+                        <attList>
+                            <!-- Modified and deleted attributes in att.global -->
+                            <attDef ident="xml:id" mode="change" usage="req" />
+                            <attDef ident="version" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="5.0">
+                                        <desc>TEI P5</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="xml:lang" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Deleted attribute in att.global -->
+                            <attDef ident="facs" mode="delete" />
+                        </attList>
+                    </elementSpec>
                     <elementSpec ident="acquisition" module="msdescription" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -1744,7 +1766,7 @@
                                 <elementRef key="bibl" />
                                 <elementRef key="foreign" />
                                 <elementRef key="idno" />
-                                <elementRef key="quote" />                                
+                                <elementRef key="quote" />
                             </alternate>
                         </content>
                         <attList>
@@ -1826,6 +1848,7 @@
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="locus" />
+                                <elementRef key="locusGrp" />
                                 <elementRef key="num" />
                                 <elementRef key="persName" />
                                 <elementRef key="supplied" />
@@ -1843,7 +1866,10 @@
                     </elementSpec>
                     <elementSpec ident="foreign" mode="change" module="core">
                         <content>
-                            <textNode />
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="ex" minOccurs="0" maxOccurs="unbounded" />
+                            </alternate>                            
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
@@ -3091,7 +3117,7 @@
                                 <elementRef key="locusGrp" />
                                 <elementRef key="persName" />
                                 <elementRef key="placeName" />
-                                <elementRef key="quote" />                                
+                                <elementRef key="quote" />
                                 <elementRef key="term" />
                             </alternate>
                         </content>
@@ -3275,7 +3301,7 @@
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="origDate" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />                                
+                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
                         </content>
@@ -3291,21 +3317,21 @@
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
+                                <textNode />
                                 <elementRef key="bibl" />
-                                <elementRef key="date"/>
-                                <elementRef key="dimensions"/>
-                                <elementRef key="foreign"/>
-                                <elementRef key="locus"/>
-                                <elementRef key="locusGrp"/>
-                                <elementRef key="material"/>
-                                <elementRef key="measure"/>
-                                <elementRef key="note"/>
-                                <elementRef key="persName"/>
-                                <elementRef key="placeName"/>
-                                <elementRef key="quote"/>
-                                <elementRef key="term"/>
-                                <elementRef key="watermark"/>
+                                <elementRef key="date" />
+                                <elementRef key="dimensions" />
+                                <elementRef key="foreign" />
+                                <elementRef key="locus" />
+                                <elementRef key="locusGrp" />
+                                <elementRef key="material" />
+                                <elementRef key="measure" />
+                                <elementRef key="note" />
+                                <elementRef key="persName" />
+                                <elementRef key="placeName" />
+                                <elementRef key="quote" />
+                                <elementRef key="term" />
+                                <elementRef key="watermark" />
                             </alternate>
                         </content>
                         <constraintSpec ident="watermark.check" scheme="isoschematron">
@@ -3381,7 +3407,7 @@
                                 <elementRef key="handDesc" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="musicNotation" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="decoDesc" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="bindingDesc" />
+                                <elementRef key="bindingDesc" minOccurs="0" maxOccurs="1" />
                             </sequence>
                         </content>
                         <exemplum>
@@ -3437,7 +3463,7 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
-                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />                                
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
@@ -3498,7 +3524,7 @@
                         <remarks>
                             <p />
                         </remarks>
-                    </elementSpec>                    
+                    </elementSpec>
                     <elementSpec ident="quote" mode="change" module="core">
                         <classes mode="change">
                             <memberOf key="att.typed" mode="delete" />
@@ -3506,12 +3532,12 @@
                             <memberOf key="att.source" mode="delete" />
                         </classes>
                         <content>
-                            <textNode/>
+                            <textNode />
                         </content>
                         <attList>
-                            <!-- Attributes changed and deleted in att.global -->                            
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
-                            <attDef ident="n" mode="delete" />                            
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
@@ -3570,9 +3596,9 @@
                             <p />
                         </remarks>
                     </elementSpec>
-                    <elementSpec ident="region" mode="change" module="namesdates" />
                     <elementSpec ident="repository" mode="change" module="namesdates">
                         <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
                             <memberOf key="att.canonical" mode="delete" />
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
@@ -3593,11 +3619,17 @@
                             </valItem>
                             <valItem ident="Skokloster Castle Library" />
                         </valList>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msIdentifier>
+                                    <country>Sweden</country>
+                                    <settlement>Uppsala</settlement>
+                                    <institution>Uppsala University</institution>
+                                    <repository>Uppsala University Library</repository>
+                                    <idno type="shelfmark">Gr. 27</idno>
+                                </msIdentifier>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="resp" module="core" mode="change">
                         <classes mode="change">
@@ -3669,52 +3701,85 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="revisionDesc" mode="change" module="header">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:oneOrMore>
-                                <rng:ref name="change" />
-                            </rng:oneOrMore>
+                            <elementRef key="change" minOccurs="1" maxOccurs="unbounded" />
                         </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <revisionDesc>
+                                    <change when="2013-06-26" who="#PG">First draft</change>
+                                    <change when="2014-06-11" who="#PG">Changes to modified ODD</change>
+                                </revisionDesc>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="rubric" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="add" />
+                                <elementRef key="del" />
+                                <elementRef key="sic" />
+                                <elementRef key="supplied" />
+                            </alternate>
+                        </content>
                         <attList>
+                            <!-- Attributes changed and deleted from att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt">
                                 <defaultVal>grc</defaultVal>
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="en" />
                                     <valItem ident="grc">
                                         <desc>Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</desc>
                                     </valItem>
                                     <valItem ident="la" />
                                 </valList>
                             </attDef>
-                            <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                            <attDef ident="subtype" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attribute deleted from att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <rubric xml:lang="grc">
+                                    <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
+                                    <add place="above" xml:lang="grc">Βίτωνος Μηχανικά</add>
+                                </rubric>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="settlement" mode="change" module="namesdates">
                         <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
                             <memberOf key="att.canonical" mode="delete" />
                             <memberOf key="att.datable" mode="delete" />
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <rng:text />
+                            <textNode />
                         </content>
-                        <attList>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:id" mode="delete" />
-                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msIdentifier>
+                                    <country>Sweden</country>
+                                    <settlement>Uppsala</settlement>
+                                    <institution>Uppsala University</institution>
+                                    <repository>Uppsala University Library</repository>
+                                    <idno type="shelfmark">Gr. 27</idno>
+                                </msIdentifier>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="sic" mode="change" module="core">
                         <classes mode="change">
@@ -3739,7 +3804,29 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="signatures" mode="change" module="msdescription" />
+                    <elementSpec ident="signatures" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="locus" />
+                                <elementRef key="locusGrp" />
+                                <elementRef key="num" />
+                                <elementRef key="term" />
+                            </alternate>
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <signatures>In the <term>lower left margin</term> of the <term>last verso</term>, mostly trimmed, but the following are visible:
+                                    <num xml:lang="grc" type="cardinal" value="2">βʹ</num><locus from="8v" to="8v" scheme="folios" />
+                                    <num xml:lang="grc" type="cardinal" value="6">Ϛʹ</num><locus from="37v" to="37v" scheme="folios" />
+                                    <num xml:lang="grc" type="cardinal" value="7">ζʹ</num><locus from="45v" to="45v" scheme="folios" />
+                                </signatures>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="sourceDesc" mode="change" module="header">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -3764,6 +3851,11 @@
                         <content>
                             <textNode />
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <!-- ADD EXAMPLE -->
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="supplied" mode="change" module="transcr">
                         <classes mode="change">
@@ -3801,11 +3893,35 @@
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="support" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:oneOrMore>
-                                <rng:ref name="p" />
-                            </rng:oneOrMore>
+                            <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <support>
+                                    <p>
+                                        <locus from="1r" to="10v" scheme="folios" />
+                                        <dimensions type="leaf">
+                                            <height quantity="230" unit="mm" />
+                                            <width quantity="165" unit="mm" />
+                                        </dimensions>
+                                        <material>Western paper</material>
+                                        <measure type="folding">Quarto</measure>
+                                    </p>
+                                    <p>
+                                        <locus from="11r" to="120v" scheme="folios" />
+                                        <dimensions type="leaf">
+                                            <height quantity="230" unit="mm" />
+                                            <width quantity="165" unit="mm" />
+                                        </dimensions>
+                                        <material>Parchment</material>
+                                    </p>
+                                </support>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="supportDesc" mode="change" module="msdescription">
                         <classes mode="change">
@@ -3849,40 +3965,36 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="surface" mode="change" module="transcr">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
                         <content>
-                            <rng:ref name="desc" />
-                            <rng:ref name="graphic" />
+                            <elementRef key="desc" />
+                            <elementRef key="graphic" />
                         </content>
                         <attList>
-                            <attDef ident="attachment" mode="delete" />
-                            <attDef ident="decls" mode="delete" />
-                            <attDef ident="flipping" mode="delete" />
-                            <attDef ident="subtype" mode="delete" />
-                            <attDef ident="type" mode="delete" />
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="TEI" module="textstructure" mode="change">
-                        <content>
-                            <elementRef key="teiHeader" />
-                            <elementRef key="facsimile" />
-                        </content>
-                        <attList>
-                            <!-- Modified and deleted attributes in att.global -->
+                            <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:id" mode="change" usage="req" />
-                            <attDef ident="version" mode="change" usage="req">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="5.0">
-                                        <desc>TEI P5</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
-                            <attDef ident="n" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
+                            <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
-                            <!-- Deleted attribute in att.global -->
+                            <!-- Attribute deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
+                            <!-- Attributes deleted  -->
+                            <attDef ident="attachment" mode="delete" />
+                            <attDef ident="flipping" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <surface xml:id="UGr-027-1r">
+                                    <desc>f. 1r</desc>
+                                    <graphic url="UGr-027-0003.jp2" />
+                                </surface>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p />
+                        </remarks>
                     </elementSpec>
                     <elementSpec ident="teiHeader" mode="change" module="header">
                         <content>
@@ -3903,7 +4015,6 @@
                             <desc versionDate="2014-08-01">Checks that <att>xml:lang</att> with <val>grc</val> is not used for Latin characters</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:title>Check that xml:lang="grc" is not used for Latin characters</sch:title>
                                     <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
                                         <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
                                     </sch:rule>
@@ -3911,9 +4022,9 @@
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="check.forbidden.Greek.charcters" scheme="isoschematron">
+                            <desc versionDate="2014-08-01">Check for forbidden Greek characters</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:title>Check for forbidden Greek characters</sch:title>
                                     <sch:rule context="//*[(@xml:lang='grc' or @xml:lang='el')]">
                                         <sch:assert test="not(contains(., 'Ϛ'))"> Use Greek Small Letter Stigma (U+03DB).</sch:assert>
                                         <sch:assert test="not(contains(., 'Ϟ'))"> Use Greek Small Letter Koppa (U+03DF).</sch:assert>
@@ -3926,9 +4037,9 @@
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="apostrophe.check" scheme="isoschematron">
+                            <desc versionDate="2014-08-01">Check for the apostrophe U+0027</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:title>Check for the apostrophe U+0027</sch:title>
                                     <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
                                         <sch:assert test="not(contains(., &quot;&apos;&quot;))"> Use the right single quotation mark (U+2019) for apostrophe.</sch:assert>
                                     </sch:rule>
@@ -3936,9 +4047,9 @@
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="quotationmark.check" scheme="isoschematron">
+                            <desc versionDate="2014-08-01">Check for the straight double quotation mark (U+0022)</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:title>Check for the straight double quotation mark (U+0022)</sch:title>
                                     <sch:rule context="text()">
                                         <sch:assert test="not(contains(., '&quot;'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
                                     </sch:rule>
@@ -3946,9 +4057,9 @@
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="left.quotationmark.check" scheme="isoschematron">
+                            <desc versionDate="2014-08-01">Check for the left single quotation mark (U+2018)</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:title>Check for the left single quotation mark (U+2018)</sch:title>
                                     <sch:rule context="text()">
                                         <sch:assert test="not(contains(., '‘'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
                                     </sch:rule>
@@ -3961,13 +4072,43 @@
                                 <valList mode="replace" type="closed">
                                     <valItem ident="en" />
                                 </valList>
-                            </attDef>
-                            <attDef ident="facs" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="type" mode="delete" />
+                            </attDef>                            
+                            <attDef ident="n" mode="delete" />                            
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <!-- Attribute deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                            <!-- Attribute deleted -->
+                            <attDef ident="type" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <teiHeader xml:lang="en">
+                                    <fileDesc>
+                                        <titleStmt>
+                                            <title>Uppsala University Library, Gr. 27</title>
+                                            <respStmt xml:id="EN">
+                                                <persName ref="#EvaNys" />
+                                                <resp key="cataloguer" />
+                                                <resp key="encoder" />
+                                            </respStmt>
+                                            <respStmt xml:id="PG">
+                                                <persName ref="#PatGra" />
+                                                <resp key="cataloguer" />
+                                                <resp key="encoder" />
+                                            </respStmt>
+                                        </titleStmt>
+                                        <publicationStmt>
+                                            <authority>Uppsala University Library</authority>
+                                            <pubPlace>Uppsala</pubPlace>
+                                        </publicationStmt>
+                                        <sourceDesc> 
+                                        <!-- Source description -->
+                                        </sourceDesc>
+                                    </fileDesc>
+                                </teiHeader>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="term" mode="change" module="core">
                         <classes mode="change">
@@ -4077,16 +4218,24 @@
                                     </valItem>
                                 </valList>
                             </attDef>
+                            <!-- Attributes deleted -->
                             <attDef ident="level" mode="delete" />
-                            <!-- Attributes deleted from att.global -->
+                            <!-- Attributes changed in att.canonical -->
+                            <attDef ident="key" mode="change" usage="opt" />
+                            <attDef ident="ref" mode="change" usage="opt" />
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
                             <!-- Attributes deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete" />
-                            <!-- Attributes deleted from att.typed -->
-                            <attDef ident="subtype" mode="delete" />
+                            <attDef ident="facs" mode="delete" />                            
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/3267" type="uniform" xml:lang="la">De natura animalium libri XVII</title>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="titleStmt" module="header" mode="change">
                         <classes mode="change">
@@ -4174,25 +4323,50 @@
                             </sequence>
                         </content>
                         <constraintSpec ident="watermark.n.check" scheme="isoschematron">
+                            <desc versionDate="2014-11-27">Check that <att>n</att> starts with a digit</desc>
                             <constraint>
-                                <sch:pattern>
-                                    <sch:title>Check that n starts with a digit</sch:title>
+                                <sch:pattern>                                    
                                     <sch:rule context="tei:watermark">
                                         <sch:assert test="@n[matches(., '\p{N}|\p{N}\p{Ll}')]"> The n attribute should contain digits, or digits and lower-case letters.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
-                        <attList>
-                            <!-- @n is required -->
+                        <attList>                            
+                            <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="n" mode="change" usage="req" />
-                            <!-- Attributes deleted from att.global -->
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                             <attDef ident="rend" mode="delete" />
                             <!-- Attribute deleted from att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <watermark n="2a">
+                                    <locusGrp>
+                                        <locus from="97" to="97" scheme="folios" />
+                                        <locus from="114" to="114" scheme="folios" />
+                                    </locusGrp>
+                                    <locusGrp>
+                                        <locus from="98" to="98" scheme="folios" />
+                                        <locus from="113" to="113" scheme="folios" />
+                                    </locusGrp>
+                                    <locusGrp>
+                                        <locus from="100" to="100" scheme="folios" />
+                                        <locus from="111" to="111" scheme="folios" />
+                                    </locusGrp>
+                                    <term type="wm_motif">Hat</term>
+                                    <term type="proximity">identical with</term>
+                                    <ref>
+                                        <bibl>
+                                            <ref target="#Harlfinger1974" />
+                                            <citedRange>Chapeau 28 (left, from this manuscript)</citedRange>
+                                        </bibl>
+                                    </ref>
+                                </watermark>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="width" mode="change" module="msdescription">
                         <classes mode="change">
