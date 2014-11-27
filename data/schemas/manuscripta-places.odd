@@ -32,13 +32,13 @@
                <moduleRef key="tei" />
                <moduleRef key="core" include="author p title" />
                <moduleRef key="header" include="fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
-               <moduleRef key="msdescription" include="repository" />
+               <moduleRef key="msdescription" include="institution repository" />
                <moduleRef key="namesdates" include="country forename listPlace persName place placeName region settlement surname" />
                <moduleRef key="textstructure" include="TEI body text" />
 
                <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
-               
+
                <elementSpec ident="author" module="core" mode="change">
                   <content>
                      <rng:choice>
@@ -61,7 +61,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-                <elementSpec ident="country" module="namesdates" mode="change"/>
+               <elementSpec ident="country" module="namesdates" mode="change" />
                <elementSpec ident="fileDesc" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
@@ -74,14 +74,14 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-                <elementSpec ident="idno" module="header" mode="change"/>
-                <elementSpec ident="listPlace" module="namesdates" mode="change"/>
+               <elementSpec ident="idno" module="header" mode="change" />
+               <elementSpec ident="listPlace" module="namesdates" mode="change" />
                <elementSpec ident="p" module="core" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
-               </elementSpec>               
+               </elementSpec>
                <elementSpec ident="persName" module="namesdates" mode="change">
                   <content>
                      <rng:group>
@@ -119,27 +119,28 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-                <elementSpec ident="place" module="namesdates" mode="change"/>
-                <elementSpec ident="placeName" module="namesdates" mode="change">
-                    <content>
-                        <rng:choice>
-                            <rng:ref name="country"/>
-                            <rng:ref name="region"/>
-                            <rng:ref name="settlement"/>
-                           <rng:ref name="repository"/>
-                        </rng:choice>
-                    </content>
-                </elementSpec>
+               <elementSpec ident="place" module="namesdates" mode="change" />
+               <elementSpec ident="placeName" module="namesdates" mode="change">
+                  <content>
+                     <rng:choice>
+                        <rng:ref name="country" />
+                        <rng:ref name="institution" />
+                        <rng:ref name="region" />
+                        <rng:ref name="settlement" />
+                        <rng:ref name="repository" />
+                     </rng:choice>
+                  </content>
+               </elementSpec>
                <elementSpec ident="publicationStmt" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-                <elementSpec ident="region" module="namesdates" mode="change"/>               
-               <elementSpec ident="repository" module="msdescription" mode="change"/>
-                <elementSpec ident="settlement" module="namesdates" mode="change"/>
-                <elementSpec ident="sourceDesc" module="header" mode="change">
+               <elementSpec ident="region" module="namesdates" mode="change" />
+               <elementSpec ident="repository" module="msdescription" mode="change" />
+               <elementSpec ident="settlement" module="namesdates" mode="change" />
+               <elementSpec ident="sourceDesc" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
