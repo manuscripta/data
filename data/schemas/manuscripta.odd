@@ -8,13 +8,18 @@
                 <author xml:id="EN">Eva Nyström</author>
             </titleStmt>
             <publicationStmt>
-                <p>Released under GNU GPL 3.0</p>
+                <authority>Patrik Granholm and Eva Nyström</authority>
+                <availability status="free">
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+                        Attribution 4.0 International</licence>
+                </availability>                
             </publicationStmt>
             <sourceDesc>
-                <p>created electronically</p>
+                <p>Born digital</p>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc>
+        <revisionDesc status="draft">
+            <change when="2014-11-27" who="#PG">Completed schema specifications</change>
             <change when="2013-09-19" who="#PG">Created bare ODD from Roma</change>
         </revisionDesc>
     </teiHeader>
@@ -1232,12 +1237,15 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
                         </classes>
-                        <content>
+                        <!--<content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="term" />
                                 <elementRef key="locus" />
                             </alternate>
+                        </content>-->
+                        <content>
+                            
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
