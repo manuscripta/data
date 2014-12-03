@@ -103,7 +103,19 @@
                 </div>
                 <div xml:id="citation">
                     <head>Bibliographic citations</head>
-                    <p> </p>
+                    <p>Bibliographic citations should be made using the <gi>bibl</gi> element with a <gi>ref</gi> element referring to the bibliography authority file with the target attribute. References to the relevant pages/columns should be made using the <gi>citedRange</gi> element.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <note>Note that this explicit is situated at the bottom of <locus from="83v" to="83v" scheme="folios" />, not on <locus from="91v" to="91v" scheme="folios" /> as one could have expected. Cf. <bibl>
+                                    <ref target="#Migne1857" />
+                                    <citedRange from="118" to="118" unit="volume" />
+                                    <citedRange from="873A" to="873A" unit="column" />
+                                </bibl></note>
+                        </egXML>
+                        <specList>
+                            <specDesc key="bibl" />
+                            <specDesc key="ref" atts="target" />
+                        </specList>
+                    </p>
                 </div>
                 <div xml:id="greekcharacters">
                     <head>Notation of Greek characters</head>
@@ -255,7 +267,7 @@
                             <publicationStmt>
                                 <authority>Uppsala University Library</authority>
                                 <pubPlace>Uppsala</pubPlace>
-                                <date when="2014"></date>
+                                <date when="2014" />
                                 <availability status="free">
                                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                 </availability>
@@ -762,7 +774,7 @@
                                         <specDesc key="extent" />
                                         <specDesc key="foliation" />
                                         <specDesc key="collation" />
-                                        <specDesc key="collation" />
+                                        <specDesc key="condition" />
                                     </specList>
                                 </p>
                                 <p>The support material for the codicological unit(s) should be recorded in the <att>material</att> attribute (values: <val>paper</val>, <val>parchment</val> or <val>mixed</val>) but not for the bookblock. Further description of the support should be added in the <gi>support</gi> element.</p>
@@ -855,7 +867,8 @@
                                 </div>
                                 <div xml:id="collation">
                                     <head>Collation</head>
-                                    <p>Describe the quires according to Andrist et al. (2013) in a <gi>formula</gi> element inside the <gi>collation</gi> element. Quire numbers should be given in subscript (<gi>hi</gi> element with the <att>rend</att> attribute and value <val>sub</val>), e.g. Q1–3. Use Roman numerals to indicate the number of bifolia in the quire (I = singulion, II = binion, III = ternion, IV = quaternion, etc.). Quires with the same number of bifolia should be grouped together and numbered, e.g. 4.IV = 4 quires containing quaternions. The last folio in the quire or group of quires should be given in superscript (<gi>hi</gi> element with <att>rend</att> attribute and value <val>super</val>). There should be no space between f. (or p.) and the number, cf. Andrist (2007) 28 n. 48. Added leaves should be recorded with +1 and the folio reference in superscript. Missing leaves should be recorded with -1, the term post, and a folio reference to the folio preceding the
+                                    <p>Describe the quires according to <ref target="#Andrist2013">Andrist et al. (2013)</ref> 150–169 in a <gi>formula</gi> element inside the <gi>collation</gi> element. Quire numbers should be given in subscript (<gi>hi</gi> element with the <att>rend</att> attribute and value <val>sub</val>), e.g. Q1–3. Use Roman numerals to indicate the number of bifolia in the quire (I = singulion, II = binion, III = ternion, IV = quaternion, etc.). Quires with the same number of bifolia should be grouped together and numbered, e.g. 4.IV = 4 quires containing quaternions. The last folio in the quire or group of quires should be given in superscript (<gi>hi</gi> element with <att>rend</att> attribute and value <val>super</val>). There should be no space between f. (or p.) and the number, cf. <ref target="#Andrist2007"
+                                        >Andrist (2007)</ref> 28 n. 48. Added leaves should be recorded with +1 and the folio reference in superscript. Missing leaves should be recorded with -1, the term post, and a folio reference to the folio preceding the
                                         missing leaf. If the first leaf of a quire is missing use the term ante to indicate its place.</p>
                                     <p>Example: <hi rend="subscript"><!-- The TEI stylesheet only recognizes rend="subscript" but not rend="sub" -->Q1–2</hi>2.II<hi rend="sup"><!-- The TEI stylesheet only recognizes rend="sup" but not rend="super" -->f.8</hi> + <hi rend="subscript">Q3</hi>(III+1<hi rend="sup">f.11</hi>+1<hi rend="sup">f.15</hi>)<hi rend="sup">f.16</hi> + <hi rend="subscript">Q4</hi>III<hi rend="sup">f.22</hi> + <hi rend="subscript">Q5</hi>(III+1<hi rend="sup">f.26</hi>)<hi rend="sup">f.29</hi> + <hi rend="subscript">Q6–9</hi>4.IV<hi rend="sup">f.61</hi> + <hi rend="subscript">Q10</hi>(V-1<hi rend="sup">post f.64</hi>)<hi rend="sup">f.70</hi> + <hi rend="subscript">Q11</hi>IV<hi rend="supra">f.78</hi></p>
                                     <p>(Endleaves are described in the <ptr target="#endleaves" /> and should not be included here.)</p>
@@ -996,10 +1009,19 @@
                         </div>
                     </div>
                     <div xml:id="history_unit"> </div>
-
+                    <div xml:id="works_cited">
+                        <head>Works cited in the Guidelines</head>
+                        <listBibl>
+                            <bibl xml:id="Andrist2007">
+                                <author>Patrick Andrist</author>, <title level="m">Règles de catalogage</title> (<pubPlace>Bern </pubPlace><date>2007</date>)
+                            </bibl>
+                            <bibl xml:id="Andrist2013">
+                                <author>Patrick Andrist et al.</author>, <title level="m">La syntaxe du codex : essai de codicologie structural</title> (<pubPlace>Turnhout </pubPlace><date>2013</date>)
+                            </bibl>
+                        </listBibl>
+                    </div>
                 </div>
             </div>
-
         </body>
         <back>
             <div xml:id="schema">
@@ -1197,7 +1219,7 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="licence"/>
+                            <elementRef key="licence" />
                         </content>
                         <attList>
                             <attDef ident="status" mode="change" usage="req">
@@ -1209,7 +1231,7 @@
                                 <publicationStmt>
                                     <authority>Uppsala University Library</authority>
                                     <pubPlace>Uppsala</pubPlace>
-                                    <date when="2014"></date>
+                                    <date when="2014" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -1217,7 +1239,7 @@
                             </egXML>
                         </exemplum>
                         <remarks>
-                            <p></p>
+                            <p />
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="bibl" module="core" mode="change">
@@ -1346,11 +1368,22 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="formula" />
-                            <elementRef key="p" minOccurs="0" maxOccurs="1" />
-                            <elementRef key="signatures" />
-                            <elementRef key="catchwords" />
+                            <sequence minOccurs="1" maxOccurs="unbounded">
+                                <elementRef key="formula" />
+                                <elementRef key="p" minOccurs="0" maxOccurs="1" />
+                            </sequence>
+                            <elementRef key="signatures" minOccurs="0" maxOccurs="1" />
+                            <elementRef key="catchwords" minOccurs="0" maxOccurs="1" />
                         </content>
+                        <constraintSpec ident="signatures.catchwords.check" scheme="isoschematron">
+                            <desc versionDate="2014-12-03">Check that <gi>signatures</gi> and <gi>catchwords</gi> are used in <gi>collation</gi> for <gi>msPart</gi>.</desc>
+                            <constraint>
+                                <sch:rule context="tei:msPart//tei:collation">
+                                    <sch:assert test="tei:signatures"> The signatures element must be used in collation for msPart</sch:assert>
+                                    <sch:assert test="tei:catchwords"> The catchwords element must be used in collation for msPart</sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <collation>
@@ -2468,17 +2501,17 @@
                             <memberOf key="att.datable" mode="delete" />
                         </classes>
                         <content>
-                            <textNode/>
+                            <textNode />
                         </content>
                         <attList>
-                            <attDef ident="target" mode="change" usage="req"/>
+                            <attDef ident="target" mode="change" usage="req" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
                                     <authority>Uppsala University Library</authority>
                                     <pubPlace>Uppsala</pubPlace>
-                                    <date when="2014"></date>
+                                    <date when="2014" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -2486,7 +2519,7 @@
                             </egXML>
                         </exemplum>
                         <remarks>
-                            <p></p>
+                            <p />
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="listBibl" mode="change" module="core">
