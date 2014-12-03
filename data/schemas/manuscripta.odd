@@ -10,9 +10,9 @@
             <publicationStmt>
                 <authority>Patrik Granholm and Eva Nyström</authority>
                 <availability status="free">
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons
                         Attribution 4.0 International</licence>
-                </availability>                
+                </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>Born digital</p>
@@ -28,6 +28,7 @@
             <divGen type="toc" xml:id="toc" />
             <div xml:id="introduction">
                 <head>Introduction</head>
+                <p>This TEI P5 ODD Customization for the cataloguing project <hi rend="italic">Greek Manuscripts in Sweden</hi> was created by Patrik Granholm and Eva Nyström, and is released under a <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</ref>.</p>
             </div>
             <div xml:id="phraselevel">
                 <head>Phrase-level Elements</head>
@@ -248,18 +249,24 @@
                 </div>
                 <div xml:id="publicationstatement">
                     <head>Publication Statement</head>
-                    <p>The <gi>publicationStmt</gi> element must contain an <gi>authority</gi> element and <gi>pubPlace</gi> element.</p>
+                    <p>The <gi>publicationStmt</gi> element must contain the follwing elements: <gi>authority</gi>,  <gi>pubPlace</gi>, <gi>date</gi>, and <gi>availability</gi>.</p>
                     <p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <publicationStmt>
                                 <authority>Uppsala University Library</authority>
                                 <pubPlace>Uppsala</pubPlace>
+                                <date when="2014"></date>
+                                <availability status="free">
+                                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                </availability>
                             </publicationStmt>
                         </egXML>
                         <specList>
                             <specDesc key="publicationStmt" />
                             <specDesc key="authority" />
                             <specDesc key="pubPlace" />
+                            <specDesc key="date" atts="when" />
+                            <specDesc key="availability" atts="status" />
                         </specList>
                     </p>
                 </div>
@@ -1003,7 +1010,7 @@
 
                     <moduleRef key="tei" />
                     <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p pubPlace quote ref resp respStmt sic term textLang title unclear" />
-                    <moduleRef key="header" include="authority change extent fileDesc handNote idno publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
+                    <moduleRef key="header" include="authority availability change extent fileDesc handNote idno licence publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="figures" include="formula" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
                     <moduleRef key="namesdates" include="country persName placeName settlement" />
@@ -1185,6 +1192,34 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
+                    <elementSpec ident="availability" module="header" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <elementRef key="licence"/>
+                        </content>
+                        <attList>
+                            <attDef ident="status" mode="change" usage="req">
+                                <defaultVal>free</defaultVal>
+                            </attDef>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publicationStmt>
+                                    <authority>Uppsala University Library</authority>
+                                    <pubPlace>Uppsala</pubPlace>
+                                    <date when="2014"></date>
+                                    <availability status="free">
+                                        <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                    </availability>
+                                </publicationStmt>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p></p>
+                        </remarks>
+                    </elementSpec>
                     <elementSpec ident="bibl" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -1244,9 +1279,7 @@
                                 <elementRef key="locus" />
                             </alternate>
                         </content>-->
-                        <content>
-                            
-                        </content>
+                        <content> </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <catchwords><term>vertical</term>, in the <term>lower right margin</term> of the <term>last verso</term>.</catchwords>
@@ -1877,7 +1910,7 @@
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="ex" minOccurs="0" maxOccurs="unbounded" />
-                            </alternate>                            
+                            </alternate>
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
@@ -2427,6 +2460,33 @@
                         </exemplum>
                         <remarks>
                             <p />
+                        </remarks>
+                    </elementSpec>
+                    <elementSpec ident="licence" mode="change" module="header">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.datable" mode="delete" />
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <attDef ident="target" mode="change" usage="req"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publicationStmt>
+                                    <authority>Uppsala University Library</authority>
+                                    <pubPlace>Uppsala</pubPlace>
+                                    <date when="2014"></date>
+                                    <availability status="free">
+                                        <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                    </availability>
+                                </publicationStmt>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p></p>
                         </remarks>
                     </elementSpec>
                     <elementSpec ident="listBibl" mode="change" module="core">
@@ -3471,7 +3531,7 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
-                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />                                
+                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
@@ -3520,12 +3580,15 @@
                         <content>
                             <elementRef key="authority" />
                             <elementRef key="pubPlace" />
+                            <elementRef key="date" />
+                            <elementRef key="availability" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
                                     <authority>Uppsala University Library</authority>
                                     <pubPlace>Uppsala</pubPlace>
+                                    <date when="2014" />
                                 </publicationStmt>
                             </egXML>
                         </exemplum>
@@ -4080,8 +4143,8 @@
                                 <valList mode="replace" type="closed">
                                     <valItem ident="en" />
                                 </valList>
-                            </attDef>                            
-                            <attDef ident="n" mode="delete" />                            
+                            </attDef>
+                            <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
                             <!-- Attribute deleted in att.global.facs -->
@@ -4110,8 +4173,8 @@
                                             <authority>Uppsala University Library</authority>
                                             <pubPlace>Uppsala</pubPlace>
                                         </publicationStmt>
-                                        <sourceDesc> 
-                                        <!-- Source description -->
+                                        <sourceDesc>
+                                            <!-- Source description -->
                                         </sourceDesc>
                                     </fileDesc>
                                 </teiHeader>
@@ -4237,7 +4300,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
                             <!-- Attributes deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete" />                            
+                            <attDef ident="facs" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4333,14 +4396,14 @@
                         <constraintSpec ident="watermark.n.check" scheme="isoschematron">
                             <desc versionDate="2014-11-27">Check that <att>n</att> starts with a digit</desc>
                             <constraint>
-                                <sch:pattern>                                    
+                                <sch:pattern>
                                     <sch:rule context="tei:watermark">
                                         <sch:assert test="@n[matches(., '\p{N}|\p{N}\p{Ll}')]"> The n attribute should contain digits, or digits and lower-case letters.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
-                        <attList>                            
+                        <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="n" mode="change" usage="req" />
                             <attDef ident="xml:id" mode="delete" />
