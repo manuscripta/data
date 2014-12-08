@@ -3660,6 +3660,7 @@
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
                                 <elementRef key="bibl" />
                                 <elementRef key="date" />
                                 <elementRef key="placeName" />
@@ -4417,7 +4418,7 @@
                     </elementSpec>
                     <elementSpec ident="watermark" mode="change" module="msdescription">
                         <content>
-                            <sequence>
+                            <sequence minOccurs="0" maxOccurs="unbounded">
                                 <elementRef key="locusGrp" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="term" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="ref" minOccurs="0" maxOccurs="unbounded" />
