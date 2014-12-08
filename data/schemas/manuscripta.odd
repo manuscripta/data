@@ -3660,7 +3660,7 @@
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
+                                <textNode />
                                 <elementRef key="bibl" />
                                 <elementRef key="date" />
                                 <elementRef key="placeName" />
@@ -4536,6 +4536,7 @@
                                     <valItem ident="chapter" />
                                     <valItem ident="column" />
                                     <valItem ident="folio" />
+                                    <valItem ident="plate" />
                                     <valItem ident="number">
                                         <desc>Use e.g. for RGK numbers or ruling patterns i Leroy-Sautel</desc>
                                     </valItem>
@@ -4649,13 +4650,18 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="rendition" mode="delete" />
                             <attDef ident="style" mode="delete" />
                             <attDef ident="xml:base" mode="delete" />
                             <attDef ident="xml:space" mode="delete" />
                         </attList>
                     </classSpec>
                     <classSpec ident="att.global.change" module="tei" type="atts" mode="delete" />
+                    <classSpec ident="att.global.rendition" module="tei" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="rendition" mode="delete" />
+                            <attDef ident="style" mode="delete" />
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.media" module="tei" type="atts" mode="change">
