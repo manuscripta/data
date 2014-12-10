@@ -32,8 +32,7 @@
                <moduleRef key="tei" />
                <moduleRef key="core" include="author p title" />
                <moduleRef key="header" include="fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
-               <moduleRef key="msdescription" include="institution repository" />
-               <moduleRef key="namesdates" include="country forename listPlace persName place placeName region settlement surname" />
+               <moduleRef key="namesdates" include="forename listPlace persName place placeName surname" />
                <moduleRef key="textstructure" include="TEI body text" />
 
                <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
@@ -61,7 +60,6 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="country" module="namesdates" mode="change" />
                <elementSpec ident="fileDesc" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
@@ -122,14 +120,20 @@
                <elementSpec ident="place" module="namesdates" mode="change" />
                <elementSpec ident="placeName" module="namesdates" mode="change">
                   <content>
-                     <rng:choice>
-                        <rng:ref name="country" />
-                        <rng:ref name="institution" />
-                        <rng:ref name="region" />
-                        <rng:ref name="settlement" />
-                        <rng:ref name="repository" />
-                     </rng:choice>
+                     <textNode />
                   </content>
+                  <attList>
+                     <attDef ident="type" mode="change" usage="req">
+                        <valList mode="replace" type="closed">
+                           <valItem ident="country" />
+                           <valItem ident="library" />
+                           <valItem ident="monastery" />
+                           <valItem ident="region" />
+                           <valItem ident="settlement" />
+                        </valList>
+                     </attDef>
+                     <attDef ident="subtype" mode="delete" />
+                  </attList>
                </elementSpec>
                <elementSpec ident="publicationStmt" module="header" mode="change">
                   <attList>
@@ -137,9 +141,6 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="region" module="namesdates" mode="change" />
-               <elementSpec ident="repository" module="msdescription" mode="change" />
-               <elementSpec ident="settlement" module="namesdates" mode="change" />
                <elementSpec ident="sourceDesc" module="header" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
@@ -300,13 +301,11 @@
                         </valList>
                      </attDef>
                      <attDef ident="n" mode="delete" />
-                     <attDef ident="rend" mode="delete" />
-                     <attDef ident="style" mode="delete" />
-                     <attDef ident="rendition" mode="delete" />
                      <attDef ident="xml:base" mode="delete" />
                      <attDef ident="xml:space" mode="delete" />
                   </attList>
                </classSpec>
+               <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.media" module="tei" type="atts" mode="delete" />
@@ -320,7 +319,6 @@
                   </attList>
                </classSpec>
                <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
-               <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.pointing" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.pointing.group" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
