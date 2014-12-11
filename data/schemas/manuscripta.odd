@@ -780,71 +780,73 @@
                                 <p>The support material for the codicological unit(s) should be recorded in the <att>material</att> attribute (values: <val>paper</val>, <val>parchment</val> or <val>mixed</val>) but not for the bookblock. Further description of the support should be added in the <gi>support</gi> element.</p>
                                 <div xml:id="support">
                                     <head>Support</head>
-                                    <p>For each kind of support material record the extent inside a paragraph, with the <gi>locus</gi> element. Give the height and width of the leaves in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>leaf</val>).  Specify the support material in one or more <gi>material</gi> elements. (values: Western paper, Western paper without watermark, Arabic paper, Parchment). Note if the folding is Folio, Quarto or Octavo in a <gi>measure</gi> element with the <att>type</att> attribute (value: <val>folding</val>).
+                                    <p>For each kind of support material record the extent inside a paragraph, with the <gi>locus</gi> element. Specify the support material in a <gi>material</gi> element. (values: Western paper, Western paper without watermark, Arabic paper, Parchment). For paper note if the folding is Folio, Quarto or Octavo in a <gi>measure</gi> element with the <att>type</att> attribute (value: <val>folding</val>). Give the height and width of the leaves in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>leaf</val>).</p>
+                                    <p>Describe each watermark in the <gi>watermark</gi> element, numbered with the <att>n</att> attribute (values: <val>1</val>, <val>2</val>, <val>3</val>, etc.; twin marks should be numbered <val>1a</val>, <val>1b</val>, etc.) Each bifolium containing the watermark should be recorded in <gi>locusGrp</gi> elements with <gi>locus</gi> elements for the front and back leaf. Describe the watermark using the <gi>term</gi> element with the <att>type</att> attribute (values: <val>wm_motif</val> and <val>proximity</val>) and the <gi>ref</gi> element which may contain <gi>bibl</gi>, <gi>placeName</gi>, <gi>date</gi> and <gi>persName</gi> elements in accordance with the standard repertories. If the date is approximate use the <att>precision</att> attribute with the value <val>low</val>. If possible, give the dimensions of the watermark, chain-lines, and the number of laid-lines per 20 mm.
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                             <support>
                                                 <p>
-                                                    <locus from="1r" to="10v" scheme="folios" />
-                                                    <dimensions type="leaf">
-                                                        <height quantity="230" unit="mm" />
-                                                        <width quantity="165" unit="mm" />
-                                                    </dimensions>
+                                                    <locus from="14" to="24" scheme="folios" />
                                                     <material>Western paper</material>
                                                     <measure type="folding">Quarto</measure>
-                                                </p>
-                                                <p>
-                                                    <locus from="11r" to="120v" scheme="folios" />
                                                     <dimensions type="leaf">
-                                                        <height quantity="230" unit="mm" />
-                                                        <width quantity="165" unit="mm" />
-                                                    </dimensions>
-                                                    <material>Parchment</material>
+                                                        <height quantity="220" unit="mm" />
+                                                        <width quantity="160" unit="mm" />
+                                                    </dimensions>                                                    
+                                                    <watermark n="2a">
+                                                        <locusGrp>
+                                                            <locus from="15" to="15" scheme="folios" />
+                                                            <locus from="20" to="20" scheme="folios" />
+                                                        </locusGrp>
+                                                        <term type="wm_motif">Hand; flower</term>
+                                                        <term type="proximity">similar to</term>
+                                                        <ref>
+                                                            <bibl>
+                                                                <ref target="#Briquet1968" />
+                                                                <citedRange>Main 10720</citedRange>
+                                                            </bibl>
+                                                            <placeName ref="#Perpignan" />
+                                                            <date when="1528" />
+                                                        </ref>
+                                                        <dimensions type="chain-lines">
+                                                            <width quantity="38" unit="mm" />
+                                                        </dimensions>
+                                                        <measure type="laid-lines_in_20mm" quantity="22" unit="lines" />
+                                                    </watermark>
+                                                    <watermark n="2b">
+                                                        <locusGrp>
+                                                            <locus from="23" to="23" scheme="folios" />
+                                                            <locus from="24" to="24" scheme="folios" />
+                                                        </locusGrp>
+                                                        <term type="wm_motif">Hand; flower</term>
+                                                        <dimensions type="chain-lines">
+                                                            <width quantity="38" unit="mm" />
+                                                        </dimensions>
+                                                        <measure type="laid-lines_in_20mm" quantity="22" unit="lines" />
+                                                    </watermark>
+                                                    <watermark n="3">
+                                                        <locusGrp>
+                                                            <locus from="17" to="17" scheme="folios" />
+                                                            <locus from="18" to="18" scheme="folios" />
+                                                        </locusGrp>
+                                                        <term type="wm_motif">Hand; flower</term>
+                                                        <term type="proximity">similar to</term>
+                                                        <ref>
+                                                            <bibl>
+                                                                <ref target="#Piccard1997" />
+                                                                <citedRange>Hand V, 1571</citedRange>
+                                                            </bibl>
+                                                            <placeName ref="#Madrid" />
+                                                            <date when="1541" />
+                                                        </ref>
+                                                        <dimensions type="chain-lines">
+                                                            <width quantity="39" unit="mm" />
+                                                        </dimensions>
+                                                        <measure type="laid-lines_in_20mm" quantity="22" unit="lines" />
+                                                    </watermark>
                                                 </p>
                                             </support>
                                         </egXML>
-                                    </p>
-                                    <p>Describe each watermark in the <gi>watermark</gi> element, numbered with the <att>n</att> attribute (values: <val>1</val>, <val>2</val>, <val>3</val>, etc.; twin marks should be numbered <val>1a</val>, <val>1b</val>, etc.) Each bifolium containing the watermark should be recorded in <gi>locusGrp</gi> elements with <gi>locus</gi> elements for the front and back leaf. Describe the watermark using the <gi>term</gi> element with the <att>type</att> attribute (values: <val>wm_motif</val> and <val>proximity</val>) and the <gi>ref</gi> element which may contain <gi>bibl</gi>, <gi>placeName</gi>, <gi>date</gi> and <gi>persName</gi> elements in accordance with the standard repertories. If the date is approximate use the <att>precision</att> attribute with the value <val>low</val>. Give the dimensions of the watermark, 
-                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                            <support>
-                                                <watermark n="1">
-                                                    <locusGrp>
-                                                        <locus from="1" to="1" scheme="folios" />
-                                                        <locus from="8" to="8" scheme="folios" />
-                                                    </locusGrp>
-                                                    <locusGrp>
-                                                        <locus from="3" to="3" scheme="folios" />
-                                                        <locus from="6" to="6" scheme="folios" />
-                                                    </locusGrp>
-                                                    <term type="wm_motif">Hat</term>
-                                                    <term type="proximity">similar to</term>
-                                                    <ref>
-                                                        <bibl>
-                                                            <ref target="#Sosower2004" />
-                                                            <citedRange>Chapeau 1</citedRange>
-                                                        </bibl>
-                                                        <placeName>
-                                                            <ref target="#Rome" />
-                                                        </placeName>
-                                                        <date when="1552" />
-                                                        <persName>
-                                                            <ref target="JohMau" />
-                                                        </persName>
-                                                    </ref>
-                                                    <dimensions type="watermark">
-                                                        <height quantity="30" unit="mm" />
-                                                        <width quantity="42" unit="mm" />
-                                                    </dimensions>
-                                                    <dimensions type="chain-lines">
-                                                        <width quantity="28" unit="mm" />
-                                                    </dimensions>
-                                                    <dimensions type="chain-lines">
-                                                        <width quantity="29" unit="mm" />
-                                                    </dimensions>
-                                                    <measure type="laid-lines_in_20mm" quantity="22" unit="lines" />
-                                                </watermark>
-                                            </support>
-                                        </egXML>
-                                    </p>
+                                    </p>                                    
                                 </div>
                                 <div xml:id="extent_unit">
                                     <head>Extent</head>
@@ -3435,15 +3437,7 @@
                                 <elementRef key="term" />
                                 <elementRef key="watermark" />
                             </alternate>
-                        </content>
-                        <constraintSpec ident="watermark.check" scheme="isoschematron">
-                            <desc versionDate="2014-11-26">Check if <gi>watermark</gi> is used in <gi>bindingDesc</gi></desc>
-                            <constraint>
-                                <sch:rule context="tei:bindingDesc">
-                                    <sch:report test="*//tei:watermark"> Describe watermarks for the flyleaves in the support element. </sch:report>
-                                </sch:rule>
-                            </constraint>
-                        </constraintSpec>
+                        </content>                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
@@ -4005,25 +3999,76 @@
                         <content>
                             <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
                         </content>
+                        <constraintSpec ident="support.check" scheme="isoschematron">
+                            <desc versionDate="2014-12-10">Checks that <gi>support</gi> has <gi>material</gi></desc>
+                            <constraint>
+                                <sch:rule context="tei:support/tei:p">
+                                    <sch:assert test="tei:locus[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']] or tei:locusGrp[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']]"> The locus, material, and dimensions elements must be used</sch:assert>                                    
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <support>
                                     <p>
-                                        <locus from="1r" to="10v" scheme="folios" />
-                                        <dimensions type="leaf">
-                                            <height quantity="230" unit="mm" />
-                                            <width quantity="165" unit="mm" />
-                                        </dimensions>
+                                        <locus from="14" to="24" scheme="folios" />
                                         <material>Western paper</material>
                                         <measure type="folding">Quarto</measure>
-                                    </p>
-                                    <p>
-                                        <locus from="11r" to="120v" scheme="folios" />
                                         <dimensions type="leaf">
-                                            <height quantity="230" unit="mm" />
-                                            <width quantity="165" unit="mm" />
-                                        </dimensions>
-                                        <material>Parchment</material>
+                                            <height quantity="220" unit="mm" />
+                                            <width quantity="160" unit="mm" />
+                                        </dimensions>                                        
+                                        <watermark n="2a">
+                                            <locusGrp>
+                                                <locus from="15" to="15" scheme="folios" />
+                                                <locus from="20" to="20" scheme="folios" />
+                                            </locusGrp>
+                                            <term type="wm_motif">Hand; flower</term>
+                                            <term type="proximity">similar to</term>
+                                            <ref>
+                                                <bibl>
+                                                    <ref target="#Briquet1968" />
+                                                    <citedRange>Main 10720</citedRange>
+                                                </bibl>
+                                                <placeName ref="#Perpignan" />
+                                                <date when="1528" />
+                                            </ref>
+                                            <dimensions type="chain-lines">
+                                                <width quantity="38" unit="mm" />
+                                            </dimensions>
+                                            <measure type="laid-lines_in_20mm" quantity="22" unit="lines" />
+                                        </watermark>
+                                        <watermark n="2b">
+                                            <locusGrp>
+                                                <locus from="23" to="23" scheme="folios" />
+                                                <locus from="24" to="24" scheme="folios" />
+                                            </locusGrp>
+                                            <term type="wm_motif">Hand; flower</term>
+                                            <dimensions type="chain-lines">
+                                                <width quantity="38" unit="mm" />
+                                            </dimensions>
+                                            <measure type="laid-lines_in_20mm" quantity="22" unit="lines" />
+                                        </watermark>
+                                        <watermark n="3">
+                                            <locusGrp>
+                                                <locus from="17" to="17" scheme="folios" />
+                                                <locus from="18" to="18" scheme="folios" />
+                                            </locusGrp>
+                                            <term type="wm_motif">Hand; flower</term>
+                                            <term type="proximity">similar to</term>
+                                            <ref>
+                                                <bibl>
+                                                    <ref target="#Piccard1997" />
+                                                    <citedRange>Hand V, 1571</citedRange>
+                                                </bibl>
+                                                <placeName ref="#Madrid" />
+                                                <date when="1541" />
+                                            </ref>
+                                            <dimensions type="chain-lines">
+                                                <width quantity="39" unit="mm" />
+                                            </dimensions>
+                                            <measure type="laid-lines_in_20mm" quantity="22" unit="lines" />
+                                        </watermark>
                                     </p>
                                 </support>
                             </egXML>
@@ -4428,6 +4473,14 @@
                                 <elementRef key="note" minOccurs="0" maxOccurs="1" />
                             </sequence>
                         </content>
+                        <constraintSpec ident="watermark.check" scheme="isoschematron">
+                            <desc versionDate="2014-11-26">Check if <gi>watermark</gi> is used in <gi>bindingDesc</gi></desc>
+                            <constraint>
+                                <sch:rule context="tei:bindingDesc">
+                                    <sch:report test="*//tei:watermark"> Describe watermarks for the flyleaves in the support element. </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <constraintSpec ident="watermark.n.check" scheme="isoschematron">
                             <desc versionDate="2014-11-27">Check that <att>n</att> starts with a digit</desc>
                             <constraint>
