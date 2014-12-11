@@ -782,7 +782,8 @@
                                     <head>Support</head>
                                     <p>For each kind of support material record the extent inside a paragraph, with the <gi>locus</gi> element. Specify the support material in a <gi>material</gi> element. (values: Western paper, Western paper without watermark, Arabic paper, Parchment). For paper note if the folding is Folio, Quarto or Octavo in a <gi>measure</gi> element with the <att>type</att> attribute (value: <val>folding</val>). Give the height and width of the leaves in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>leaf</val>).</p>
                                     <p>Describe each watermark in the <gi>watermark</gi> element, numbered with the <att>n</att> attribute (values: <val>1</val>, <val>2</val>, <val>3</val>, etc.; twin marks should be numbered <val>1a</val>, <val>1b</val>, etc.) Each bifolium containing the watermark should be recorded in <gi>locusGrp</gi> elements with <gi>locus</gi> elements for the front and back leaf. Describe the watermark using the <gi>term</gi> element with the <att>type</att> attribute (values: <val>wm_motif</val> and <val>proximity</val>) and the <gi>ref</gi> element which may contain <gi>bibl</gi>, <gi>placeName</gi>, <gi>date</gi> and <gi>persName</gi> elements in accordance with the standard repertories. If the date is approximate use the <att>precision</att> attribute with the value <val>low</val>. If possible, give the dimensions of the watermark, chain-lines, and the number of laid-lines per 20 mm.
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <egXML
+                                            xmlns="http://www.tei-c.org/ns/Examples">
                                             <support>
                                                 <p>
                                                     <locus from="14" to="24" scheme="folios" />
@@ -791,7 +792,7 @@
                                                     <dimensions type="leaf">
                                                         <height quantity="220" unit="mm" />
                                                         <width quantity="160" unit="mm" />
-                                                    </dimensions>                                                    
+                                                    </dimensions>
                                                     <watermark n="2a">
                                                         <locusGrp>
                                                             <locus from="15" to="15" scheme="folios" />
@@ -846,7 +847,7 @@
                                                 </p>
                                             </support>
                                         </egXML>
-                                    </p>                                    
+                                    </p>
                                 </div>
                                 <div xml:id="extent_unit">
                                     <head>Extent</head>
@@ -1061,6 +1062,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Deleted attribute in att.global -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -1106,6 +1108,8 @@
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
+
                             <!-- Closed value list for @place -->
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
@@ -1427,6 +1431,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1586,6 +1591,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -1707,6 +1713,7 @@
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes deleted from att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -1746,6 +1753,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -1906,6 +1914,7 @@
                             </attDef>
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
@@ -1954,6 +1963,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -2300,6 +2310,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -2769,6 +2780,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <attDef ident="xml:lang" mode="change" usage="opt" />
                             <!-- Deleted attribute in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
@@ -3154,6 +3166,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -3268,11 +3281,12 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <!-- Deleted attributes in att.global -->
+                            <!-- Changed and deleted attributes in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="req" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Deleted attributes in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -3437,7 +3451,7 @@
                                 <elementRef key="term" />
                                 <elementRef key="watermark" />
                             </alternate>
-                        </content>                        
+                        </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
@@ -3450,8 +3464,7 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="persName" mode="change" module="namesdates">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
+                        <classes mode="change">                            
                             <memberOf key="att.datable" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
@@ -3467,6 +3480,16 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
+                            <!-- Changed and deleted attributes in att.global -->
+                            <attDef ident="xml:lang" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
+                            <!-- Deleted attributes in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                            <!-- Changed and deleted attributes in att.responsibility  -->
+                            <attDef ident="cert" mode="change" usage="opt" />
                             <!-- Changed and deleted attributes in att.dimensions -->
                             <attDef ident="precision" mode="change" usage="opt" />
                             <attDef ident="unit" mode="delete" />
@@ -3478,9 +3501,7 @@
                             <attDef ident="atLeast" mode="delete" />
                             <attDef ident="atMost" mode="delete" />
                             <attDef ident="min" mode="delete" />
-                            <attDef ident="max" mode="delete" />
-                            <!-- Changed and deleted attributes in att.responsibility  -->
-                            <attDef ident="cert" mode="change" usage="opt" />
+                            <attDef ident="max" mode="delete" />                            
                             <!-- Changed attribute in att.naming -->
                             <attDef ident="role" mode="change" usage="opt" />
                             <!-- Modified and deleted attributes in att.canonical -->
@@ -3639,6 +3660,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -3787,6 +3809,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes deleted from att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -3846,6 +3869,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attribute deleted from att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -3895,6 +3919,7 @@
                             <attDef ident="facs" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes deleted from att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -3980,6 +4005,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Deleted attributes in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -4003,7 +4029,7 @@
                             <desc versionDate="2014-12-10">Checks that <gi>support</gi> has <gi>material</gi></desc>
                             <constraint>
                                 <sch:rule context="tei:support/tei:p">
-                                    <sch:assert test="tei:locus[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']] or tei:locusGrp[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']]"> The locus, material, and dimensions elements must be used</sch:assert>                                    
+                                    <sch:assert test="tei:locus[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']] or tei:locusGrp[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']]"> The locus, material, and dimensions elements must be used</sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -4017,7 +4043,7 @@
                                         <dimensions type="leaf">
                                             <height quantity="220" unit="mm" />
                                             <width quantity="160" unit="mm" />
-                                        </dimensions>                                        
+                                        </dimensions>
                                         <watermark n="2a">
                                             <locusGrp>
                                                 <locus from="15" to="15" scheme="folios" />
@@ -4129,6 +4155,7 @@
                             <attDef ident="xml:lang" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attribute deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                             <!-- Attributes deleted  -->
@@ -4227,6 +4254,7 @@
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attribute deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                             <!-- Attribute deleted -->
@@ -4302,6 +4330,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -4352,7 +4381,10 @@
                     </elementSpec>
                     <elementSpec ident="title" mode="change" module="core">
                         <content>
-                            <textNode />
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="supplied" />
+                            </alternate>
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
@@ -4379,6 +4411,7 @@
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attributes deleted from att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -4493,10 +4526,11 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="change" usage="req" />
+                            <attDef ident="n" mode="change" usage="opt" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
                             <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
                             <!-- Attribute deleted from att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                         </attList>
@@ -4703,8 +4737,7 @@
                                         <desc>Swedish</desc>
                                     </valItem>
                                 </valList>
-                            </attDef>
-                            <attDef ident="style" mode="delete" />
+                            </attDef>                            
                             <attDef ident="xml:base" mode="delete" />
                             <attDef ident="xml:space" mode="delete" />
                         </attList>
