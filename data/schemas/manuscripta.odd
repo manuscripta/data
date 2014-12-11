@@ -358,22 +358,22 @@
                 </div>
                 <div xml:id="endleaves">
                     <head>Endleaves</head>
-                    <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. For the guidelines on locus see <ptr target="#locus" />.
+                    <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>left_endleaf</val> or <val>right_endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. For the guidelines on locus see <ptr target="#locus" />.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msPart>
                                 <msContents>
-                                    <msItem class="endleaf">
+                                    <msItem class="left_endleaf">
                                         <locusGrp>
                                             <locus from="LCI" to="LCI" scheme="other" />
                                             <locus from="L1r" to="L2v" scheme="folios" />
                                         </locusGrp>
                                         <note>Blank endleaves</note>
                                     </msItem>
-                                    <msItem class="endleaf">
+                                    <msItem class="left_endleaf">
                                         <locus from="L3r" to="L3v" scheme="folios" />
                                         <note>Table of contents</note>
                                     </msItem>
-                                    <msItem class="endleaf">
+                                    <msItem class="right_endleaf">
                                         <locusGrp>
                                             <locus from="R1r" to="R2v" scheme="folios" />
                                             <locus from="RCI" to="RCI" scheme="other" />
@@ -2881,6 +2881,15 @@
                         <attList>
                             <attDef ident="class" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
+                                    <valItem ident="blank_page">
+                                        <gloss>Blank page</gloss>
+                                    </valItem>
+                                    <valItem ident="left_endleaf">
+                                        <gloss>Left endleaf</gloss>
+                                    </valItem>
+                                    <valItem ident="right_endleaf">
+                                        <gloss>Right endleaf</gloss>
+                                    </valItem>
                                     <valItem ident="acta">
                                         <gloss>Acta</gloss>
                                     </valItem>
@@ -2909,10 +2918,7 @@
                                     <valItem ident="biogr">
                                         <gloss>Biographa</gloss>
                                         <desc>indicates both biographical and autobiographical writings.</desc>
-                                    </valItem>
-                                    <valItem ident="blank_page">
-                                        <gloss>Blank page</gloss>
-                                    </valItem>
+                                    </valItem>                                    
                                     <valItem ident="bucol">
                                         <gloss>Bucolica</gloss>
                                     </valItem>
@@ -2959,10 +2965,7 @@
                                     <valItem ident="encom">
                                         <gloss>Encomiastica</gloss>
                                         <desc>is used for eulogy, panegyric, laudationes or any kind of work (poetry or prose) that falls under the general variety of laudatory literature.</desc>
-                                    </valItem>
-                                    <valItem ident="endleaf">
-                                        <gloss>Endleaf</gloss>
-                                    </valItem>
+                                    </valItem>                                    
                                     <valItem ident="exeget">
                                         <gloss>Exegetica</gloss>
                                         <desc>distinguishes writings that interpret the texts of the Old and New Testaments from the commentaries that focus upon secular literature.</desc>
