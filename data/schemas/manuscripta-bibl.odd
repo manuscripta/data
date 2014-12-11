@@ -134,6 +134,16 @@
                         </sch:pattern>
                      </constraint>
                   </constraintSpec>
+                  <constraintSpec ident="ref.content.check" scheme="isoschematron">
+                     <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>ref</att> attribute starts with # or http</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="tei:author">
+                              <sch:assert test="@ref[starts-with(., '#')]">The @ref value must start with #</sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="ref" mode="change" usage="req" />
                      <attDef ident="facs" mode="delete" />
@@ -291,6 +301,16 @@
                   <content>
                      <rng:empty />
                   </content>
+                  <constraintSpec ident="ref.content.check" scheme="isoschematron">
+                     <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>ref</att> attribute starts with # or http</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="tei:editor">
+                              <sch:assert test="@ref[starts-with(., '#')]">The @ref value must start with #</sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="ref" mode="change" usage="req" />
                      <attDef ident="xml:id" mode="delete" />
@@ -569,13 +589,11 @@
                            </valItem>
                         </valList>
                      </attDef>
-                     <attDef ident="rend" mode="delete" />
-                     <attDef ident="style" mode="delete" />
-                     <attDef ident="rendition" mode="delete" />
                      <attDef ident="xml:base" mode="delete" />
                      <attDef ident="xml:space" mode="delete" />
                   </attList>
                </classSpec>
+               <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.media" module="tei" type="atts" mode="delete" />
