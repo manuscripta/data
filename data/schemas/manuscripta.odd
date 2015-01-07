@@ -95,7 +95,9 @@
                 <div xml:id="terms">
                     <head>Technical Terms</head>
                     <p>Technical terms should be marked up using the <gi>term</gi> element and the <att>type</att> attribute. 
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <term type="wm_motif">Hat</term>
+                        </egXML>
                         <specList>
                             <specDesc key="term" atts="type" />
                         </specList>
@@ -188,7 +190,7 @@
             </div>
             <div xml:id="header">
                 <head>The TEI Header</head>
-                <p>The TEI root element must always contain a declaration of the TEI namespace, a <att>version</att> attribute with the value <val>5.0</val>, and a <att>xml:id</att> consisting of an abbreviation of the library and shelfmark. The TEI element must have a <gi>teiHeader</gi> element and a <gi>facsimile</gi> element. The <gi>teiHeader</gi> element in turn must have an <att>xml:lang</att> attribute defining the language of the description, and a <gi>fileDesc</gi> and <gi>revisionDesc</gi> element. The <gi>fileDesc</gi> element contains a <gi>titleStmt</gi>, <gi>publicationStmt</gi>, and <gi>sourceDesc</gi> element.
+                <p>The TEI root element must always contain a declaration of the TEI namespace, a <att>version</att> attribute with the value <val>5.0</val>, and a <att>xml:id</att> consisting of an abbreviation of the library and shelfmark. The TEI element must have a <gi>teiHeader</gi> element and a <gi>facsimile</gi> element. The <gi>teiHeader</gi> element in turn must have an <att>xml:lang</att> attribute defining the language of the description, and a <gi>fileDesc</gi> and <gi>revisionDesc</gi> element.
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <TEI version="5.0" xml:id="uub-gr-027">
                             <teiHeader xml:lang="en">
@@ -217,6 +219,66 @@
                         <specDesc key="fileDesc" />
                     </specList>
                 </p>
+                <div xml:id="filedescription">
+                    <head>File Description</head>
+                    <p>The <gi>fileDesc</gi> element contains a <gi>titleStmt</gi>, <gi>publicationStmt</gi>, and <gi>sourceDesc</gi> element.
+                        <specList>
+                            <specDesc key="titleStmt" />
+                            <specDesc key="publicationStmt" />
+                            <specDesc key="sourceDesc" />
+                        </specList>
+                    </p>
+                    <div xml:id="titlestatement">
+                        <head>Title Statement</head>
+                        <p>The <gi>titleStmt</gi> element must contain a <gi>title</gi> element containing the name of the library and the siglum for the manuscript being described, and one or more <gi>respStmt</gi> element(s) listing the person(s) responsible for the cataloguing and encoding. The <gi>respStmt</gi> element must have a <att>xml:id</att> attribute containing the initials of the person responsible for the cataloguing and/or encoding. The name should be recorded in a persName element (see <ptr target="#personalnames" />) and the role of the person responsible in <gi>resp</gi> elements with the <att>key</att> attribute (possible values: <val>cataloguer</val> or <val>encoder</val>). 
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <titleStmt>
+                                    <title>Uppsala University Library, Gr. 27</title>
+                                    <respStmt xml:id="EN">
+                                        <persName ref="#EvaNys" />
+                                        <resp key="cataloguer" />
+                                        <resp key="encoder" />
+                                    </respStmt>
+                                    <respStmt xml:id="PG">
+                                        <persName ref="#PatGra" />
+                                        <resp key="cataloguer" />
+                                        <resp key="encoder" />
+                                    </respStmt>
+                                </titleStmt>
+                            </egXML>
+                            <specList>
+                                <specDesc key="titleStmt" />
+                                <specDesc key="title" />
+                                <specDesc key="respStmt" atts="xml:id" />
+                                <specDesc key="persName" atts="ref" />
+                                <specDesc key="resp" atts="key" />
+                            </specList>
+                        </p>
+                    </div>
+                    <div xml:id="publicationstatement">
+                        <head>Publication Statement</head>
+                        <p>The <gi>publicationStmt</gi> element must contain the follwing elements: <gi>authority</gi>,  <gi>pubPlace</gi>, <gi>date</gi>, and <gi>availability</gi>.</p>
+                        <p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <publicationStmt>
+                                    <authority>Uppsala University Library</authority>
+                                    <pubPlace>Uppsala</pubPlace>
+                                    <date when="2014" />
+                                    <availability status="free">
+                                        <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                    </availability>
+                                </publicationStmt>
+                            </egXML>
+                            <specList>
+                                <specDesc key="publicationStmt" />
+                                <specDesc key="authority" />
+                                <specDesc key="pubPlace" />
+                                <specDesc key="date" atts="when" />
+                                <specDesc key="availability" atts="status" />
+                            </specList>
+                        </p>
+                    </div>
+                </div>
                 <div xml:id="revisiondescription">
                     <head>Revision Description</head>
                     <p>Updates or corrections should be logged in the <gi>revisionDesc</gi> element, which must contain at least one change element giving the date when the file was created and the person responsible. The <att>who</att> attribute should be linked to the xml:id of the person in the <gi>respStmt</gi> element in <ptr target="#header" />.</p>
@@ -232,58 +294,7 @@
                         </specList>
                     </p>
                 </div>
-                <div xml:id="titlestatement">
-                    <head>Title Statement</head>
-                    <p>The <gi>titleStmt</gi> element must contain a <gi>title</gi> element containing the name of the library and the siglum for the manuscript being described, and one or more <gi>respStmt</gi> element(s) listing the person(s) responsible for the cataloguing and encoding. The <gi>respStmt</gi> element must have a <att>xml:id</att> attribute containing the initials of the person responsible for the cataloguing and/or encoding. The name should be recorded in a persName element (see <ptr target="#personalnames" />) and the role of the person responsible in <gi>resp</gi> elements with the <att>key</att> attribute (possible values: <val>cataloguer</val> or <val>encoder</val>). 
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <titleStmt>
-                                <title>Uppsala University Library, Gr. 27</title>
-                                <respStmt xml:id="EN">
-                                    <persName ref="#EvaNys" />
-                                    <resp key="cataloguer" />
-                                    <resp key="encoder" />
-                                </respStmt>
-                                <respStmt xml:id="PG">
-                                    <persName ref="#PatGra" />
-                                    <resp key="cataloguer" />
-                                    <resp key="encoder" />
-                                </respStmt>
-                            </titleStmt>
-                        </egXML>
-                        <specList>
-                            <specDesc key="titleStmt" />
-                            <specDesc key="title" />
-                            <specDesc key="respStmt" atts="xml:id" />
-                            <specDesc key="persName" atts="ref" />
-                            <specDesc key="resp" atts="key" />
-                        </specList>
-                    </p>
-                </div>
-                <div xml:id="publicationstatement">
-                    <head>Publication Statement</head>
-                    <p>The <gi>publicationStmt</gi> element must contain the follwing elements: <gi>authority</gi>,  <gi>pubPlace</gi>, <gi>date</gi>, and <gi>availability</gi>.</p>
-                    <p>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <publicationStmt>
-                                <authority>Uppsala University Library</authority>
-                                <pubPlace>Uppsala</pubPlace>
-                                <date when="2014" />
-                                <availability status="free">
-                                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
-                                </availability>
-                            </publicationStmt>
-                        </egXML>
-                        <specList>
-                            <specDesc key="publicationStmt" />
-                            <specDesc key="authority" />
-                            <specDesc key="pubPlace" />
-                            <specDesc key="date" atts="when" />
-                            <specDesc key="availability" atts="status" />
-                        </specList>
-                    </p>
-                </div>
             </div>
-
 
             <div xml:id="msdescription">
                 <head>Manuscript Description</head>
@@ -316,7 +327,7 @@
                             <specDesc key="settlement" />
                             <specDesc key="institution" />
                             <specDesc key="repository" />
-                            <specDesc key="idno" />
+                            <specDesc key="idno" atts="type" />
                         </specList>
                     </p>
                     <p>If the manuscript is known by a another name this should be recorded in a <gi>msName</gi> element. Former shelfmarks should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>former_shelfmark</val>). If the manuscript has a reference number in other catalogues, e.g. Nestle-Aland, this should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>other</val>).  
