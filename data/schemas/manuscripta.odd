@@ -338,7 +338,7 @@
                                 <institution>Uppsala University</institution>
                                 <repository>Uppsala University Library</repository>
                                 <idno type="shelfmark">Gr. 28A</idno>
-                                <msName>Codex Rolambianus</msName>
+                                <msName xml:lang="la">Codex Rolambianus</msName>
                                 <altIdentifier>
                                     <idno type="former_shelfmark">Benzelius 2</idno>
                                 </altIdentifier>
@@ -351,7 +351,7 @@
                             <specDesc key="institution" />
                             <specDesc key="repository" />
                             <specDesc key="idno" atts="type" />
-                            <specDesc key="msName" />
+                            <specDesc key="msName" atts="xml:lang" />
                             <specDesc key="altIdentifier" />
                         </specList>
                     </p>
@@ -448,6 +448,13 @@
                                     </msPart>
                                 </msDesc>
                             </egXML>
+                            <specList>
+                                <specDesc key="supportDesc" atts="material" />
+                                <specDesc key="support" />
+                                <specDesc key="extent" />
+                                <specDesc key="collation" />
+                                <specDesc key="foliation" />
+                            </specList>
                         </p>
                         <div xml:id="extent_book">
                             <head>Extent</head>
@@ -957,7 +964,7 @@
                         </div>
                         <div xml:id="handdesc">
                             <head>Description of Hands</head>
-                            <p>Each distinct hand should be described in a separate <gi>handNote</gi> element in the <gi>handDesc</gi> element. Give the extent for this hand in a <gi>locus</gi> or <gi>locusGrp</gi> element. Where the scribe is identifiable, either from the writing or a subscription, give the name (according to <hi rend="italics">Repertorium der Griechischen Kopisten</hi> or other relevant authority files, e.g. VIAF) in a <gi>persName</gi> element using the <att>role</att> attribute with value <val>scribe</val>. Specify the certainty of the attribution in the <att>cert</att> attribute (values: <val>high</val>, <val>middle</val>, <val>low</val>, <val>unknown</val>) and the evidence for this in the <att>evidence</att> attribute (values: <val>internal</val>, <val>external</val>, <val>conjecture</val>).                
+                            <p>Each distinct hand should be described in a separate <gi>handNote</gi> element in the <gi>handDesc</gi> element. Give the extent for this hand in a <gi>locus</gi> or <gi>locusGrp</gi> element. Where the scribe is identifiable, either from the writing or a subscription, give the name (according to <hi rend="italics">Repertorium der Griechischen Kopisten</hi> or other relevant authority files, e.g. VIAF) in a <gi>persName</gi> element using a <att>ref</att> attribute pointing to the persons authority file, and the <att>role</att> attribute with value <val>scribe</val>. Specify the certainty of the attribution in the <att>cert</att> attribute (values: <val>high</val>, <val>middle</val>, <val>low</val>, <val>unknown</val>) and the evidence for this in the <att>evidence</att> attribute (values: <val>internal</val>, <val>external</val>, <val>conjecture</val>).                
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                     <handDesc>
                                         <handNote>
