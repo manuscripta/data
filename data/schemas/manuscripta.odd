@@ -1057,7 +1057,7 @@
                     <moduleRef key="figures" include="formula" />
                     <moduleRef key="msdescription" include="acquisition additional altIdentifier bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
                     <moduleRef key="namesdates" include="country persName placeName settlement" />
-                    <moduleRef key="textstructure" include="TEI" />
+                    <moduleRef key="textstructure" include="body div TEI text" />
                     <moduleRef key="transcr" include="ex facsimile supplied surface" />
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
@@ -1065,6 +1065,7 @@
                     <elementSpec ident="TEI" module="textstructure" mode="change">
                         <content>
                             <elementRef key="teiHeader" />
+                            <elementRef key="text" minOccurs="0" maxOccurs="1" />
                             <elementRef key="facsimile" />
                         </content>
                         <attList>
@@ -1320,6 +1321,14 @@
                                 </bindingDesc>
                             </egXML>
                         </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="body" module="textstructure" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <elementRef key="div" minOccurs="1" maxOccurs="unbounded" />
+                        </content>
                     </elementSpec>
                     <elementSpec ident="catchwords" module="msdescription" mode="change">
                         <classes mode="change">
@@ -1725,6 +1734,46 @@
                                     <width quantity="185" unit="mm" />
                                     <depth quantity="65" unit="mm" />
                                 </dimensions>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+                    <elementSpec ident="div" module="textstructure" mode="change">
+                        <classes mode="change">                            
+                            <memberOf key="att.divLike" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <elementRef key="head" minOccurs="1" maxOccurs="1" />
+                            <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
+                        </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:id" mode="change" usage="opt" />
+                            <attDef ident="xml:lang" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
+                            <attDef ident="style" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                        </attList>                        
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <text>
+                                    <body>
+                                        <div xml:id="text_65b">
+                                            <head>
+                                                <title>65b: Chronicon breve</title>
+                                                <locus scheme="folios" from="283v" to="283v" />
+                                            </head>
+                                            <p xml:lang="grc">ὁ ἔννατος ὁ σουλ<lb />τα Παγιάζητη <lb />ὃς ἐπῆρε τη Μεθωκορωνι. 
+                                                <lb />δέκατος υἱός του <lb />ὁ Σελημης ὃς εδουλεσε <lb />Περσια  και Σι<lb />ρια ὃλη. 
+                                                <lb />δέκατος πρῶτος <lb />υἱός του ὁ Σουλεημαν <lb />σούλτανος ὁς ἐπηραι 
+                                                <lb />τὴν Ροδο καὶ ἑαλοσι <lb />καὶ τὴν Οὐγκρία το <lb />α φ κ ϛ  ετος ἀπο χῦ 
+                                                <lb />ἀγουστου  κθ <lb />...    ὁ πολεμος</p>
+                                        </div>
+                                    </body>
+                                </text>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -2167,7 +2216,16 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <textNode />
+                            <alternate>
+                                <textNode />
+                                <sequence>
+                                    <elementRef key="title" minOccurs="1" maxOccurs="1" />
+                                    <alternate>
+                                        <elementRef key="locus" />
+                                        <elementRef key="locusGrp" />
+                                    </alternate>
+                                </sequence>
+                            </alternate>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3272,6 +3330,7 @@
                                 <elementRef key="persName" />
                                 <elementRef key="placeName" />
                                 <elementRef key="quote" />
+                                <elementRef key="ref" />
                                 <elementRef key="term" />
                             </alternate>
                         </content>
@@ -3467,10 +3526,7 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="p" mode="change" module="core">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                        </classes>
+                    <elementSpec ident="p" mode="change" module="core">                        
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
@@ -3478,6 +3534,7 @@
                                 <elementRef key="date" />
                                 <elementRef key="dimensions" />
                                 <elementRef key="foreign" />
+                                <elementRef key="lb" />
                                 <elementRef key="locus" />
                                 <elementRef key="locusGrp" />
                                 <elementRef key="material" />
@@ -3490,6 +3547,17 @@
                                 <elementRef key="watermark" />
                             </alternate>
                         </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="rend" mode="delete" />
+                            <attDef ident="rendition" mode="delete" />
+                            <attDef ident="style" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
@@ -4389,6 +4457,34 @@
                         <remarks>
                             <p />
                         </remarks>
+                    </elementSpec>
+                    <elementSpec ident="text" module="textstructure" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
+                        <content>
+                            <elementRef key="body" />
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <text>
+                                    <body>
+                                        <div xml:id="text_65b">
+                                            <head>
+                                                <title>65b: Chronicon breve</title>
+                                                <locus scheme="folios" from="283v" to="283v" />
+                                            </head>
+                                            <p xml:lang="grc">ὁ ἔννατος ὁ σουλ<lb />τα Παγιάζητη <lb />ὃς ἐπῆρε τη Μεθωκορωνι. 
+                                                <lb />δέκατος υἱός του <lb />ὁ Σελημης ὃς εδουλεσε <lb />Περσια  και Σι<lb />ρια ὃλη. 
+                                                <lb />δέκατος πρῶτος <lb />υἱός του ὁ Σουλεημαν <lb />σούλτανος ὁς ἐπηραι 
+                                                <lb />τὴν Ροδο καὶ ἑαλοσι <lb />καὶ τὴν Οὐγκρία το <lb />α φ κ ϛ  ετος ἀπο χῦ 
+                                                <lb />ἀγουστου  κθ <lb />...    ὁ πολεμος</p>
+                                        </div>
+                                    </body>
+                                </text>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="textLang" mode="change" module="core">
                         <classes mode="change">
