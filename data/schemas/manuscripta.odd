@@ -1738,7 +1738,7 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="div" module="textstructure" mode="change">
-                        <classes mode="change">                            
+                        <classes mode="change">
                             <memberOf key="att.divLike" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
@@ -1756,7 +1756,7 @@
                             <attDef ident="style" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
-                        </attList>                        
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <text>
@@ -3528,7 +3528,7 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="p" mode="change" module="core">                        
+                    <elementSpec ident="p" mode="change" module="core">
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
@@ -3577,7 +3577,7 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <rng:empty />
+                            <textNode />
                         </content>
                         <constraintSpec ident="evidence.cert.check" scheme="isoschematron">
                             <desc versionDate="2014-11-11">Check that <att>cert</att> is used when <att>evidence</att> is <val>external</val> or <val>conjecture</val>.</desc>
@@ -4530,6 +4530,7 @@
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="supplied" />
+                                <elementRef key="persName" />
                             </alternate>
                         </content>
                         <attList>
