@@ -55,7 +55,7 @@
                <!--       MODULES USED BY THE SCHEMA       -->
 
                <moduleRef key="tei" />
-               <moduleRef key="core" include="author p title" />
+               <moduleRef key="core" include="author note p title" />
                <moduleRef key="header" include="fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
                <moduleRef key="namesdates" include="addName forename genName listPerson nameLink persName person roleName surname" />
                <moduleRef key="textstructure" include="TEI body text" />
@@ -144,13 +144,14 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="genName" module="namesdates" mode="change" />
+               <elementSpec ident="idno" module="header" mode="change" />
+               <elementSpec ident="note" module="core" mode="change" />
                <elementSpec ident="p" module="core" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="idno" module="header" mode="change" />
                <elementSpec ident="person" module="namesdates" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="change" usage="req" />
@@ -343,6 +344,8 @@
                      </constraint>
                   </constraintSpec>
                   <attList>
+                     <attDef ident="xml:lang" mode="change" usage="opt" />
+                     <attDef ident="n" mode="delete" />
                      <attDef ident="xml:lang" mode="change" usage="opt">
                         <valList mode="replace" type="closed">
                            <valItem ident="grc">
@@ -377,12 +380,15 @@
                            </valItem>
                         </valList>
                      </attDef>
-                     <attDef ident="n" mode="delete" />
+                     <attDef ident="xml:base" mode="delete" />
+                     <attDef ident="xml:space" mode="delete" />
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.global.rendition" module="tei" type="atts" mode="change">
+                  <attList>
                      <attDef ident="rend" mode="delete" />
                      <attDef ident="style" mode="delete" />
                      <attDef ident="rendition" mode="delete" />
-                     <attDef ident="xml:base" mode="delete" />
-                     <attDef ident="xml:space" mode="delete" />
                   </attList>
                </classSpec>
                <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
