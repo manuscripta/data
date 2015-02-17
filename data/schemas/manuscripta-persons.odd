@@ -55,7 +55,7 @@
                <!--       MODULES USED BY THE SCHEMA       -->
 
                <moduleRef key="tei" />
-               <moduleRef key="core" include="author note p title" />
+               <moduleRef key="core" include="author bibl citedRange note p ref title" />
                <moduleRef key="header" include="fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
                <moduleRef key="namesdates" include="addName forename genName listPerson nameLink persName person roleName surname" />
                <moduleRef key="textstructure" include="TEI body text" />
@@ -92,8 +92,7 @@
                      <attDef ident="role" mode="delete" />
                   </attList>
                </elementSpec>
-
-
+               <elementSpec ident="bibl" module="core" mode="change" />
                <elementSpec ident="body" module="textstructure" mode="change">
                   <content>
                      <rng:ref name="listPerson" />
@@ -103,6 +102,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
+               <elementSpec ident="citedRange" module="core" mode="change" />
                <elementSpec ident="date" mode="change" module="core">
                   <classes mode="change">
                      <memberOf key="att.editLike" mode="delete" />
@@ -217,6 +217,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
+               <elementSpec ident="ref" module="core" mode="change" />
                <elementSpec ident="roleName" module="namesdates" mode="change" />
                <elementSpec ident="sourceDesc" module="header" mode="change">
                   <attList>
