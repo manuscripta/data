@@ -3516,8 +3516,8 @@
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="origDate" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="origDate" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="origPlace" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
@@ -3689,6 +3689,7 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
+                                <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
