@@ -619,7 +619,7 @@
                                 <p>The title should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref> and the <att>type</att> attribute should then be set with the (default) value <val>uniform</val>. Give the URI for the text in Pinakes in a <att>ref</att> attribute. If the work is known under an alternative title, this may be given in a separate <gi>title</gi> element with a <att>key</att> attribute containing the TLG or CPG number for the text, and the <att>type</att> attribute with the value <val>alt</val>.                            
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <author>Aelius Aristides</author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/7462" type="uniform" xml:lang="la">In Apellam</title>
+                                        <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/7462" type="uniform" xml:lang="la">In Apellam</title>
                                         <title key="TLG 0284.010" type="alt" xml:lang="gr">Ἀπελλᾶ γενεθλιακός</title>
                                     </egXML>
                                 </p>
@@ -657,7 +657,7 @@
                                 <head>Final rubric</head>
                                 <p>The final rubric should be given only when it differs from the rubric. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/2308" xml:lang="la">De Constructione Bellicarum Machinarum et Catapultarum</title>
+                                        <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/2308" xml:lang="la">De Constructione Bellicarum Machinarum et Catapultarum</title>
                                         <title key="TLG 1226.001" xml:lang="grc" type="alt">Κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπαλτικῶν</title>
                                         <rubric xml:lang="grc">Βίτωνος κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπελτιστῶν</rubric>
                                         <finalRubric xml:lang="grc">Βίτωνος κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπελτικῶν</finalRubric>
@@ -1277,6 +1277,7 @@
                     <elementSpec ident="bibl" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.docStatus" mode="delete" />
                         </classes>
                         <content>
                             <elementRef key="ref" />
@@ -1358,12 +1359,16 @@
                         </content>
                         <attList>
                             <attDef ident="target" mode="delete" />
+                            <!-- Attributes changed in att.ascribed -->
+                            <attDef ident="who" mode="change" usage="req" />
                             <!-- Attributes changed and deleted from att.datable.w3c -->
                             <attDef ident="when" mode="change" usage="req" />
                             <attDef ident="notAfter" mode="delete" />
                             <attDef ident="notBefore" mode="delete" />
                             <attDef ident="from" mode="delete" />
                             <attDef ident="to" mode="delete" />
+                            <!-- Attributes changed in att.docStatus -->
+                            <attDef ident="status" mode="change" usage="req" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3942,6 +3947,10 @@
                         <content>
                             <elementRef key="change" minOccurs="1" maxOccurs="unbounded" />
                         </content>
+                        <attList>
+                            <!-- Attributes changed in att.docStatus -->
+                            <attDef ident="status" mode="change" usage="req" />
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <revisionDesc>
@@ -4828,7 +4837,21 @@
                             <attDef ident="sample" mode="delete" />
                         </attList>
                     </classSpec>
-                    <classSpec ident="att.docStatus" module="tei" type="atts" mode="delete" />
+                    <classSpec ident="att.docStatus" module="tei" type="atts" mode="change">
+                        <attList>
+                            <!-- Closed value list for @status -->
+                            <attDef ident="status" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="draft">
+                                        <desc>working draft</desc>
+                                    </valItem>
+                                    <valItem ident="published">
+                                        <desc>published version</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.duration.w3c" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.duration.iso" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.edition" module="tei" type="atts" mode="delete" />
