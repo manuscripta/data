@@ -19,8 +19,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change when="2014-11-27" who="#PG">Completed schema specifications</change>
-            <change when="2013-09-19" who="#PG">Created bare ODD from Roma</change>
+            <change status="draft" when="2014-11-27" who="#PG">Completed schema specifications</change>
+            <change status="draft" when="2013-09-19" who="#PG">Created bare ODD from Roma</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -281,16 +281,18 @@
                 </div>
                 <div xml:id="revisiondescription">
                     <head>Revision Description</head>
-                    <p>Updates or corrections should be logged in the <gi>revisionDesc</gi> element, which must contain at least one change element giving the date when the file was created and the person responsible. The <att>who</att> attribute should be linked to the xml:id of the person in the <gi>respStmt</gi> element in <ptr target="#header" />.</p>
+                    <p>Updates or corrections should be logged in the <gi>revisionDesc</gi> element, which must contain at least one change element giving the date when the file was created in a <att>when</att> attribute and the person responsible in an <att>who</att> attribute. The <att>who</att> attribute should be linked to the xml:id of the person in the <gi>respStmt</gi> element in <ptr target="#header" />. The <gi>revisionDesc</gi> and <gi>change</gi> elements must have a status attribute (possible values: draft, published). The changes should be recorded in a reverse chronological order with the most recent change first.</p>
                     <p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <revisionDesc>
-                                <change when="2013-06-26" who="#PG">First draft</change>
+                            <revisionDesc status="draft">
+                                <change status="draft" when="2015-01-12" who="#PG">Added facsimile</change>
+                                <change status="draft" when="2014-06-11" who="#PG">Changes to modified ODD</change>
+                                <change status="draft" when="2012-11-12" who="#PG">First draft</change>
                             </revisionDesc>
                         </egXML>
                         <specList>
-                            <specDesc key="revisionDesc" />
-                            <specDesc key="change" atts="when who" />
+                            <specDesc key="revisionDesc" atts="status" />
+                            <specDesc key="change" atts="status when who" />
                         </specList>
                     </p>
                 </div>
@@ -1372,8 +1374,10 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <revisionDesc>
-                                    <change when="2013-06-26" who="#PG">First draft</change>
+                                <revisionDesc status="draft">
+                                    <change status="draft" when="2015-01-12" who="#PG">Added facsimile</change>
+                                    <change status="draft" when="2014-06-11" who="#PG">Changes to modified ODD</change>
+                                    <change status="draft" when="2012-11-12" who="#PG">First draft</change>
                                 </revisionDesc>
                             </egXML>
                         </exemplum>
@@ -3953,9 +3957,10 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <revisionDesc>
-                                    <change when="2013-06-26" who="#PG">First draft</change>
-                                    <change when="2014-06-11" who="#PG">Changes to modified ODD</change>
+                                <revisionDesc status="draft">
+                                    <change status="draft" when="2015-01-12" who="#PG">Added facsimile</change>
+                                    <change status="draft" when="2014-06-11" who="#PG">Changes to modified ODD</change>
+                                    <change status="draft" when="2012-11-12" who="#PG">First draft</change>
                                 </revisionDesc>
                             </egXML>
                         </exemplum>
