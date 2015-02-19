@@ -3771,7 +3771,10 @@
                             <memberOf key="att.source" mode="delete" />
                         </classes>
                         <content>
-                            <textNode />
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="lb" />
+                            </alternate>
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
@@ -4321,11 +4324,11 @@
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="latin.check" scheme="isoschematron">
-                            <desc versionDate="2014-08-01">Checks that <att>xml:lang</att> with <val>grc</val> is not used for Latin characters</desc>
+                            <desc versionDate="2014-08-01">Checks that <att>xml:lang</att> with <val>grc</val> is not used for Latin letters or numbers</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
-                                        <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
+                                    <sch:rule context="//*[@xml:lang='grc' or @xml:lang='el']">
+                                        <sch:report test="text()[matches(., '[(\p{N}|\p{L})-[\p{IsGreek}\p{IsGreekExtended}]]')]"> Only characters from Greek and Greek extended chart range are allowed in elements with the xml:lang="grc" or xml:lang="el".</sch:report>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -4340,7 +4343,7 @@
                                         <sch:assert test="not(contains(., 'Ϡ'))"> Use Greek Small Letter Sampi (U+03E1).</sch:assert>
                                         <sch:assert test="not(contains(., ';'))"> Use the semicolon (U+003B) for the Greek question mark.</sch:assert>
                                         <sch:assert test="not(contains(., '·'))"> Use the middle dot (U+00B7) for the Greek semicolon.</sch:assert>
-                                        <sch:assert test="not(contains(., &quot;&apos;&quot;))"> Use the right single quotation mark (U+2019) for the Greek apostrophe.</sch:assert>
+                                        <sch:assert test="not(contains(., &quot;&apos;&quot;))"> Use the right single quotation mark (U+2019) for the Greek apostrophe.</sch:assert>                                        
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
