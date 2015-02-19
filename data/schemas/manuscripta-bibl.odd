@@ -415,11 +415,83 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="teiHeader" module="header" mode="change">
+                  <constraintSpec ident="greek.check" scheme="isoschematron">
+                     <desc versionDate="2014-08-01">Check that <att>xml:lang</att> with <val>grc</val> is used for Greek characters</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
+                              <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <constraintSpec ident="latin.check" scheme="isoschematron">
+                     <desc versionDate="2014-08-01">Checks that <att>xml:lang</att> with <val>grc</val> is not used for Latin letters or numbers</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="//*[@xml:lang='grc' or @xml:lang='el']">
+                              <sch:report test="text()[matches(., '[(\p{N}|\p{L})-[\p{IsGreek}\p{IsGreekExtended}]]')]"> Only characters from Greek and Greek extended chart range are allowed in elements with the xml:lang="grc" or xml:lang="el".</sch:report>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <constraintSpec ident="check.forbidden.Greek.charcters" scheme="isoschematron">
+                     <desc versionDate="2014-08-01">Check for forbidden Greek characters</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="//*[(@xml:lang='grc' or @xml:lang='el')]">
+                              <sch:report test="contains(., 'Ϛ')"> Use Greek Small Letter Stigma (U+03DB).</sch:report>
+                              <sch:report test="contains(., 'Ϟ')"> Use Greek Small Letter Koppa (U+03DF).</sch:report>
+                              <sch:report test="contains(., 'Ϡ')"> Use Greek Small Letter Sampi (U+03E1).</sch:report>
+                              <sch:report test="contains(., ';')"> Use the semicolon (U+003B) for the Greek question mark.</sch:report>
+                              <sch:report test="contains(., '·')"> Use the middle dot (U+00B7) for the Greek semicolon.</sch:report>
+                              <sch:report test="contains(., &quot;&apos;&quot;)"> Use the right single quotation mark (U+2019) for the Greek apostrophe.</sch:report>
+                              <sch:report test="contains(., 'ά')"> Use Greek Small Letter Alpha with tonos (U+03AC).</sch:report>
+                              <sch:report test="contains(., 'έ')"> Use Greek Small Letter Epsilon with tonos (U+03AD).</sch:report>
+                              <sch:report test="contains(., 'ή')"> Use Greek Small Letter Eta with tonos (U+03AE).</sch:report>
+                              <sch:report test="contains(., 'ί')"> Use Greek Small Letter Iota with tonos (U+03AF).</sch:report>
+                              <sch:report test="contains(., 'ό')"> Use Greek Small Letter Omikron with tonos (U+03CC).</sch:report>
+                              <sch:report test="contains(., 'ύ')"> Use Greek Small Letter Upsilon with tonos (U+03CD).</sch:report>
+                              <sch:report test="contains(., 'ώ')"> Use Greek Small Letter Omega with tonos (U+03CE).</sch:report>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <constraintSpec ident="apostrophe.check" scheme="isoschematron">
+                     <desc versionDate="2014-08-01">Check for the apostrophe U+0027</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
+                              <sch:assert test="not(contains(., &quot;&apos;&quot;))"> Use the right single quotation mark (U+2019) for apostrophe.</sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <constraintSpec ident="quotationmark.check" scheme="isoschematron">
+                     <desc versionDate="2014-08-01">Check for the straight double quotation mark (U+0022)</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="text()">
+                              <sch:assert test="not(contains(., '&quot;'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
+                  <constraintSpec ident="left.quotationmark.check" scheme="isoschematron">
+                     <desc versionDate="2014-08-01">Check for the left single quotation mark (U+2018)</desc>
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="text()">
+                              <sch:assert test="not(contains(., '‘'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="type" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
-                  </attList>
+                  </attList>                  
                </elementSpec>
                <elementSpec ident="text" module="textstructure" mode="change">
                   <attList>
