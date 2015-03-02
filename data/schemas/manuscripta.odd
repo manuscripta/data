@@ -618,11 +618,11 @@
                             </div>
                             <div xml:id="title">
                                 <head>Title</head>
-                                <p>The title should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref> and the <att>type</att> attribute should then be set with the (default) value <val>uniform</val>. Give the URI for the text in Pinakes in a <att>ref</att> attribute. If the work is known under an alternative title, this may be given in a separate <gi>title</gi> element with a <att>key</att> attribute containing the TLG or CPG number for the text, and the <att>type</att> attribute with the value <val>alt</val>.                            
+                                <p>The title should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref> and the <att>type</att> attribute should then be set with the (default) value <val>uniform</val>. Give the URI for the text in Pinakes in a <att>ref</att> attribute. A BHG or CPG reference may also be give in the <att>key</att> attribute. If the work is known under an alternative title, this may be given in a separate <gi>title</gi> element with a <att>key</att> attribute containing the TLG, BHG, or CPG number for the text, and the <att>type</att> attribute with the value <val>alt</val>.                 
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <author>Aelius Aristides</author>
                                         <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/7462" type="uniform" xml:lang="la">In Apellam</title>
-                                        <title key="TLG 0284.010" type="alt" xml:lang="gr">Ἀπελλᾶ γενεθλιακός</title>
+                                        <title key="TLG0284.010" type="alt" xml:lang="gr">Ἀπελλᾶ γενεθλιακός</title>
                                     </egXML>
                                 </p>
                                 <p>For works not included in Pinakes a descriptive title in English should be provided and the <att>type</att> attribute should then be set with the value <val>desc</val>.    
@@ -4562,6 +4562,15 @@
                                 <elementRef key="persName" />
                             </alternate>
                         </content>
+                        <constraintSpec ident="title.key.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="tei:title/@key">
+                                    <sch:report test="matches(., 'TLG \p{N}') or matches(., 'TLG_\p{N}')"> Do not use space or underscore between TLG and the number </sch:report>
+                                    <sch:report test="matches(., 'BHG \p{N}') or matches(., 'BHG_\p{N}')"> Do not use space or underscore between BHG and the number </sch:report>
+                                    <sch:report test="matches(., 'CPG \p{N}') or matches(., 'CPG_\p{N}')"> Do not use space or underscore between CPG and the number </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
                                 <defaultVal>uniform</defaultVal>
