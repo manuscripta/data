@@ -145,7 +145,15 @@
                </elementSpec>
                <elementSpec ident="genName" module="namesdates" mode="change" />
                <elementSpec ident="idno" module="header" mode="change" />
-               <elementSpec ident="note" module="core" mode="change" />
+               <elementSpec ident="note" module="core" mode="change">
+                  <content>
+                     <alternate minOccurs="0" maxOccurs="unbounded">
+                        <textNode />
+                        <elementRef key="bibl" />                        
+                        <elementRef key="ref" />                                                
+                     </alternate>
+                  </content>
+               </elementSpec>
                <elementSpec ident="p" module="core" mode="change">
                   <attList>
                      <attDef ident="xml:id" mode="delete" />
@@ -405,8 +413,7 @@
                   </attList>
                </classSpec>
                <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
-               <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />
-               <classSpec ident="att.pointing" module="tei" type="atts" mode="delete" />
+               <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />               
                <classSpec ident="att.pointing.group" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.scoping" module="tei" type="atts" mode="delete" />
