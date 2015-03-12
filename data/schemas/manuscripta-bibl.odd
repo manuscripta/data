@@ -84,7 +84,7 @@
 
                <moduleRef key="tei" />
                <moduleRef key="core" include="author bibl biblScope date editor foreign listBibl p pubPlace q title" />
-               <moduleRef key="header" include="edition fileDesc publicationStmt sourceDesc teiHeader titleStmt" />
+               <moduleRef key="header" include="edition fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
                <moduleRef key="namesdates" include="addName forename nameLink persName placeName surname" />
                <moduleRef key="textstructure" include="TEI body text" />
 
@@ -166,6 +166,9 @@
                      <rng:zeroOrMore>
                         <rng:ref name="citedRange" />
                      </rng:zeroOrMore>
+                     <rng:zeroOrMore>
+                        <rng:ref name="idno" />
+                     </rng:zeroOrMore>
                   </content>
                   <!--<constraintSpec ident="xmlid.check" scheme="isoschematron">
                   <desc versionDate="2014-09-14" xml:lang="en">checks that the xml:id is made up of the surname of the first author or editor and the publication date</desc>
@@ -178,7 +181,7 @@
                   </constraint>
                </constraintSpec>-->
                   <attList>
-                     <attDef ident="type" mode="change" usage="req">
+                     <!--<attDef ident="type" mode="change" usage="req">
                         <valList mode="replace" type="closed">
                            <valItem ident="article-journal" />
                            <valItem ident="book">
@@ -193,7 +196,7 @@
                            <valItem ident="manuscript" />
                            <valItem ident="thesis" />
                         </valList>
-                     </attDef>
+                     </attDef>-->
                      <attDef ident="xml:id" mode="change" usage="req" />
                      <attDef ident="facs" mode="delete" />
                      <attDef ident="n" mode="delete" />
@@ -301,6 +304,16 @@
                      </constraint>
                   </constraintSpec>
                   <attList>
+                     <attDef ident="role" mode="change" usage="req">
+                        <valList mode="replace" type="closed">
+                           <valItem ident="critical">
+                              <desc>Editor of a critical edition</desc>
+                           </valItem>
+                           <valItem ident="editorial">
+                              <desc>General editor</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
                      <attDef ident="ref" mode="change" usage="req" />
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
@@ -321,6 +334,7 @@
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
+               <elementSpec ident="idno" module="header" mode="change" />
                <elementSpec ident="listBibl" module="core" mode="change">
                   <content>
                      <rng:oneOrMore>
@@ -662,8 +676,7 @@
                <classSpec ident="att.interpLike" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.measurement" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.naming" module="tei" type="atts" mode="change">
-                  <attList>
-                     <attDef ident="role" mode="delete" />
+                  <attList>                     
                      <attDef ident="nymRef" mode="delete" />
                   </attList>
                </classSpec>
