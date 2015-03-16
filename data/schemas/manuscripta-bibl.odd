@@ -33,7 +33,7 @@
                         <date when="1902" />
                         <biblScope unit="volume" from="10" to="10" />
                         <biblScope unit="page" from="175" to="222" />
-                     </bibl>                     
+                     </bibl>
                   </egXML>
                </p>
                <p>Use the <gi>q</gi> element instead of quotation marks, e.g. in titles.
@@ -61,7 +61,7 @@
                <head>Editions</head>
                <p>Use the <att>type</att> attribute with value <val>edition</val> for editions. The author of the work should be given in the <gi>author</gi> element and the name of the critical editor in the <gi>editor</gi> element. If there are more than one publication place only the first one should be included. In the <gi>date</gi> element the <att>when</att> attribute or the <att>from</att>/<att>to</att> attributes are required.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <bibl  type="edition" xml:id="GarcíaValdés2009">
+                     <bibl type="edition" xml:id="GarcíaValdés2009">
                         <author ref="#ClaAel" />
                         <editor ref="#ManGar" />
                         <editor ref="#LuiLle" />
@@ -84,26 +84,11 @@
 
                <moduleRef key="tei" />
                <moduleRef key="core" include="author bibl biblScope date editor foreign listBibl p pubPlace q title" />
-               <moduleRef key="header" include="edition fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />
-               <moduleRef key="namesdates" include="addName forename nameLink persName placeName surname" />
+               <moduleRef key="header" include="edition fileDesc idno publicationStmt sourceDesc teiHeader titleStmt" />               
                <moduleRef key="textstructure" include="TEI body text" />
 
                <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
-               <elementSpec ident="addName" module="namesdates" mode="change">
-                  <classes mode="change">
-                     <memberOf key="att.personal" mode="delete" />
-                     <memberOf key="att.typed" mode="delete" />
-                  </classes>
-                  <content>
-                     <rng:text />
-                  </content>
-                  <attList>
-                     <attDef ident="facs" mode="delete" />
-                     <attDef ident="n" mode="delete" />
-                     <attDef ident="xml:id" mode="delete" />
-                  </attList>
-               </elementSpec>
                <elementSpec ident="author" module="core" mode="change">
                   <content>
                      <rng:choice>
@@ -134,11 +119,20 @@
                      </constraint>
                   </constraintSpec>
                   <attList>
+                     <attDef ident="role" mode="change" usage="opt">
+                        <valList mode="replace" type="closed">
+                           <valItem ident="critEd">
+                              <desc>Editor of a critical edition</desc>
+                           </valItem>
+                           <valItem ident="origAuth">
+                              <desc>Original author of critical edition</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
                      <attDef ident="ref" mode="change" usage="req" />
                      <attDef ident="facs" mode="delete" />
                      <attDef ident="n" mode="delete" />
-                     <attDef ident="key" mode="delete" />
-                     <attDef ident="role" mode="delete" />
+                     <attDef ident="key" mode="delete" />                     
                      <attDef ident="xml:id" mode="delete" />
                   </attList>
                </elementSpec>
@@ -146,13 +140,13 @@
                   <content>
                      <rng:zeroOrMore>
                         <rng:ref name="author" />
-                     </rng:zeroOrMore>
+                     </rng:zeroOrMore>                     
                      <rng:zeroOrMore>
                         <rng:ref name="editor" />
                      </rng:zeroOrMore>
-                     <rng:oneOrMore>
+                     <rng:zeroOrMore>
                         <rng:ref name="title" />
-                     </rng:oneOrMore>
+                     </rng:zeroOrMore>
                      <rng:optional>
                         <rng:ref name="pubPlace" />
                      </rng:optional>
@@ -162,9 +156,6 @@
                      </rng:optional>
                      <rng:zeroOrMore>
                         <rng:ref name="biblScope" />
-                     </rng:zeroOrMore>
-                     <rng:zeroOrMore>
-                        <rng:ref name="citedRange" />
                      </rng:zeroOrMore>
                      <rng:zeroOrMore>
                         <rng:ref name="idno" />
@@ -180,6 +171,15 @@
                      </sch:pattern>
                   </constraint>
                </constraintSpec>-->
+                  <constraintSpec ident="editor.check" scheme="isoschematron">
+                     <constraint>
+                        <sch:pattern>
+                           <sch:rule context="tei:bibl/tei:title[@level='a'][following-sibling::tei:title[@level='m']]">
+                              <sch:assert test="tei:editor"> The editor of the volume is missing. </sch:assert>
+                           </sch:rule>
+                        </sch:pattern>
+                     </constraint>
+                  </constraintSpec>
                   <attList>
                      <!--<attDef ident="type" mode="change" usage="req">
                         <valList mode="replace" type="closed">
@@ -204,19 +204,7 @@
                   </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <bibl>
-                           <author>
-                              <persName>
-                                 <forename>Friedrich</forename>
-                                 <surname>Jacobs</surname>
-                              </persName>
-                           </author>
-                           <title level="m">Aeliani de natura animalium libri xvii</title>
-                           <pubPlace>Jena</pubPlace>
-                           <date when="1832" />
-                           <citedRange unit="volume" from="1" to="1" />
-                           <citedRange unit="page" from="lxxvi" to="lxxvii" />
-                        </bibl>
+                        <!-- Nytt exempel -->
                      </egXML>
                   </exemplum>
                </elementSpec>
@@ -233,21 +221,7 @@
                   </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <bibl>
-                           <author>
-                              <persName>
-                                 <forename>Eduardo</forename>
-                                 <forename>Luigi</forename>
-                                 <surname>De Stefani</surname>
-                              </persName>
-                           </author>
-                           <title level="a">I manoscritti della Historia Animalium di Eliano</title>
-                           <title level="j">Studi italiani di filologia classica</title>
-                           <date when="1902" />
-                           <biblScope unit="volume" from="10" to="10" />
-                           <biblScope unit="page" from="175" to="222" />
-                           <citedRange unit="page" from="209" to="210" />
-                        </bibl>
+                        <!-- Nytt exempel -->
                      </egXML>
                   </exemplum>
                </elementSpec>
@@ -290,6 +264,7 @@
                </elementSpec>
                <elementSpec ident="edition" module="header" mode="change" />
                <elementSpec ident="editor" module="core" mode="change">
+                  
                   <content>
                      <rng:empty />
                   </content>
@@ -303,20 +278,8 @@
                         </sch:pattern>
                      </constraint>
                   </constraintSpec>
-                  <attList>
-                     <attDef ident="role" mode="change" usage="req">
-                        <valList mode="replace" type="closed">
-                           <valItem ident="critical">
-                              <desc>Editor of a critical edition</desc>
-                           </valItem>
-                           <valItem ident="editorial">
-                              <desc>General editor</desc>
-                           </valItem>
-                        </valList>
-                     </attDef>
-                     <attDef ident="ref" mode="change" usage="req" />
-                     <attDef ident="xml:id" mode="delete" />
-                     <attDef ident="xml:lang" mode="delete" />
+                  <attList>                     
+                     <attDef ident="ref" mode="change" usage="req" />                     
                   </attList>
                </elementSpec>
                <elementSpec ident="fileDesc" module="header" mode="change">
@@ -325,15 +288,7 @@
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
                </elementSpec>
-               <elementSpec ident="foreign" module="core" mode="change" />
-               <elementSpec ident="forename" module="namesdates" mode="change">
-                  <content>
-                     <rng:text />
-                  </content>
-                  <attList>
-                     <attDef ident="xml:id" mode="delete" />
-                  </attList>
-               </elementSpec>
+               <elementSpec ident="foreign" module="core" mode="change" />               
                <elementSpec ident="idno" module="header" mode="change" />
                <elementSpec ident="listBibl" module="core" mode="change">
                   <content>
@@ -345,32 +300,9 @@
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
-               </elementSpec>
-               <elementSpec ident="nameLink" mode="change" module="namesdates" />
+               </elementSpec>               
                <elementSpec ident="p" module="core" mode="change">
                   <attList>
-                     <attDef ident="xml:id" mode="delete" />
-                     <attDef ident="xml:lang" mode="delete" />
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="persName" module="namesdates" mode="change">
-                  <attList>
-                     <attDef ident="ref" mode="delete" />
-                     <attDef ident="from" mode="delete" />
-                     <attDef ident="to" mode="delete" />
-                     <attDef ident="type" mode="delete" />
-                     <attDef ident="when" mode="delete" />
-                     <attDef ident="xml:id" mode="delete" />
-                     <attDef ident="xml:lang" mode="delete" />
-                  </attList>
-               </elementSpec>
-               <elementSpec ident="placeName" module="namesdates" mode="change">
-                  <attList>
-                     <attDef ident="ref" mode="delete" />
-                     <attDef ident="from" mode="delete" />
-                     <attDef ident="to" mode="delete" />
-                     <attDef ident="type" mode="delete" />
-                     <attDef ident="when" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
@@ -415,12 +347,7 @@
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
                   </attList>
-               </elementSpec>
-               <elementSpec ident="surname" module="namesdates" mode="change">
-                  <attList>
-                     <attDef ident="xml:id" mode="delete" />
-                  </attList>
-               </elementSpec>
+               </elementSpec>               
                <elementSpec ident="TEI" module="textstructure" mode="change">
                   <attList>
                      <attDef ident="version" mode="delete" />
@@ -505,7 +432,7 @@
                      <attDef ident="type" mode="delete" />
                      <attDef ident="xml:id" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
-                  </attList>                  
+                  </attList>
                </elementSpec>
                <elementSpec ident="text" module="textstructure" mode="change">
                   <attList>
@@ -560,9 +487,7 @@
                <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
 
                <classSpec ident="att.milestoneUnit" module="core" type="atts" mode="delete" />
-               <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete" />
-               <classSpec ident="att.datable.custom" module="namesdates" type="atts" mode="delete" />
-               <classSpec ident="att.datable.iso" module="namesdates" type="atts" mode="delete" />
+               <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete" />               
                <classSpec ident="att.ascribed" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.citing" module="tei" type="atts" mode="change">
                   <attList>
@@ -676,7 +601,7 @@
                <classSpec ident="att.interpLike" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.measurement" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.naming" module="tei" type="atts" mode="change">
-                  <attList>                     
+                  <attList>
                      <attDef ident="nymRef" mode="delete" />
                   </attList>
                </classSpec>
