@@ -3,19 +3,9 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en">Bibliography for Greek Manuscripts in Sweden</title>
-            <author>
-               <persName>
-                  <forename>Eva</forename>
-                  <surname>Nyström</surname>
-               </persName>
-            </author>
-            <author>
-               <persName>
-                  <forename>Patrik</forename>
-                  <surname>Granholm</surname>
-               </persName>
-            </author>
+            <title level="m">Bibliography for Greek Manuscripts in Sweden</title>
+            <author ref="#EvaNys" />
+            <author ref="#PatGra" />
          </titleStmt>
          <publicationStmt>
             <p>Released under GNU GPL 3.0</p>
@@ -27,890 +17,1162 @@
    </teiHeader>
    <text>
       <body>
-         <listPerson>
-            <person>
-               <persName xml:id="ClaAel" key="VIAF 100219416">
-                  <forename>Claudius</forename>
-                  <surname>Aelianus</surname>
-               </persName>
-            </person>
-            <person>
-               <persName xml:id="EvaNys" key="VIAF 88588751">
-                  <forename>Eva</forename>
-                  <surname>Nyström</surname>
-               </persName>
-            </person>
-            <person>
-               <persName xml:id="MicSou" key="VIAF 88232718">
-                  <forename>Michael</forename>
-                  <surname>Souliardos</surname>                  
-               </persName>
-            </person>
-            <person>
-               <persName xml:id="NicGre" key="VIAF 64014428">
-                  <forename>Nicephorus</forename>
-                  <addName>Gregoras</addName>
-               </persName>
-            </person>
-            <person>
-               <persName xml:id="PatGra" key="VIAF 297322043">
-                  <forename>Patrik</forename>
-                  <surname>Granholm</surname>
-               </persName>
-            </person>
-            <person>
-               <persName xml:id="ThoMag" key="VIAF 54959195">
-                  <forename>Thomas</forename>
-                  <addName>Magister</addName>
-               </persName>
-            </person>
-         </listPerson>
          <listBibl>
             <bibl xml:id="Aland1994">
-               <author>
-                  <persName key="VIAF 68943908 ">
-                     <forename>Kurt</forename>
-                     <surname>Aland</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="de">Kurzgefasste Liste der griechischen Handschriften des Neuen Testaments</title>
+               <author ref="#KurAla" />
+               <title level="m">Kurzgefasste Liste der griechischen Handschriften des Neuen Testaments</title>
                <pubPlace>Berlin</pubPlace>
                <date when="1994" />
             </bibl>
-            <bibl xml:id="Aurivillius1835">
-               <author>
-                  <persName key="VIAF 86426665 ">
-                     <forename>Carl</forename>
-                     <forename>Emanuel</forename>
-                     <surname>Aurivillius</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="la">Codices Manuscriptos Graecos Bibliothecae Acad. Upsaliensis (handwritten catalogue)</title>
-               <date when="1835" />
+            <bibl xml:id="Alpers1981">
+               <author role="origAuth" ref="#Orus" />
+               <author role="critEd" ref="#KlaAlp" />
+               <title level="m">Das attizistische Lexikon des Oros</title>               
+               <title level="s">Sammlung griechischer und lateinischer Grammatiker</title>
+               <pubPlace>Berlin</pubPlace>
+               <date when="1981" />
+            </bibl>
+            <bibl xml:id="Asulanus1524">
+               <author role="origAuth" ref="#ManMos" />
+               <author role="critEd" ref="#AndAsu" />
+               <title level="m">Dictionarium Graecum etc. Emanuelis Moschopuli eclogae atticarum dictionum nunc primum impressae</title>
+               <pubPlace>Venice</pubPlace>
+               <date when="1524" />
+               <biblScope from="135r" to="164r" unit="folio" />
             </bibl>
             <bibl xml:id="Aurivillius1783">
-               <author>
-                  <persName key="VIAF 76670119">
-                     <forename>Pehr</forename>
-                     <forename>Fabian</forename>
-                     <surname>Aurivillius</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="la">Codex Græcus novi foederis e biblioth. acad. Upsal. descriptus et collatus, etc.</title>
+               <author ref="#PehAur" />
+               <title level="m">Codex Græcus novi foederis e biblioth. acad. Upsal. descriptus et collatus, etc.</title>
                <pubPlace>Uppsala</pubPlace>
                <date from="1783" to="1786" />
                <biblScope unit="volume" from="1" to="5" />
             </bibl>
             <bibl xml:id="Aurivillius1806">
-               <author>
-                  <persName key="VIAF 76670119">
-                     <forename>Pehr</forename>
-                     <forename>Fabian</forename>
-                     <surname>Aurivillius</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="la">Notitia codicum manuscriptorum Graecorum biblioth. acad. Upsaliensis</title>
+               <author ref="#PehAur" />
+               <title level="m">Notitia codicum manuscriptorum Graecorum biblioth. acad. Upsaliensis</title>
                <pubPlace>Uppsala</pubPlace>
                <date when="1806" />
             </bibl>
-            <bibl xml:id="Benzelius1706">
-               <author>
-                  <supplied reason="omitted">
-                     <persName>
-                        <forename>Erik</forename>
-                        <surname>Benzelius</surname>
-                     </persName>
-                  </supplied>
-               </author>
-               <title level="m" xml:lang="la">Catalogus centuriae librorum rarissimorum manuscript. et partim impressorum, arabicorum, persicorum, turcicorum, græcorum, latinorum, etc.</title>
+            <bibl xml:id="Aurivillius1780">
+               <author ref="#PehAur" />
+               <title level="m">Prolegomena ad librum: Stefanitēs kai Ichnelatēs e cod. mscr. biblioth. acad. Upsal. edita et latine versa, dissertatione academica, quam, venia ampl. fac. philos. Upsal. præside mag. Johanne Flodero ... publico examini modeste submittit Petrus Fabian. Aurivillius</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date when="1780" />
+            </bibl>
+            <bibl xml:id="Aurivillius1821">
+               <author ref="#CarAur" />
+               <title level="m">De glossariis Græcis manuscriptis in bibliotheca reg. acad. Upsaliensis asservatis disquisitio</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date from="1821" to="1822" />
+            </bibl>
+            <bibl xml:id="Aurivillius1835">
+               <author ref="#CarAur" />
+               <title level="m">Codices Manuscriptos Graecos Bibliothecae Acad. Upsaliensis (handwritten catalogue)</title>
+               <date when="1835" />
+            </bibl>
+            <bibl xml:id="Beckby1965">
+               <author role="critEd" ref="#HerBec" />
+               <title level="m">Anthologia Graeca</title>
+               <pubPlace>Munich</pubPlace>
+               <date when="1965" />
+               <biblScope from="1" to="4" unit="volume" />
+            </bibl>
+            <bibl xml:id="Benediktsson1938">
+               <author ref="#JakBen" />
+               <title level="a">Ein Frühbyzantinisches Bibellexikon, <foreign xml:lang="grc">λέξεις τῆς ὀκτατεύχου</foreign></title>
+               <title level="j">Classica et Mediaevalia</title>
+               <date when="1938" />
+               <biblScope from="1" to="1" unit="volume" />
+               <biblScope from="243" to="280" unit="page" />
+            </bibl>
+            <bibl xml:id="Benzelius1706">               
+               <author ref="#EriBen" />
+               <title level="m">Catalogus centuriae librorum rarissimorum manuscript. et partim impressorum, arabicorum, persicorum, turcicorum, græcorum, latinorum, etc.</title>
                <pubPlace>Uppsala</pubPlace>
                <date when="1706" />
             </bibl>
+            <bibl xml:id="Beyer1989">
+               <author ref="#HanBey" />
+               <title level="a">Demetrios Kabasilas, Freund und späterer Gegner des Nikephoros Gregoras</title>
+               <title level="j">Jahrbuch der Österreichischen Byzantinistik</title>
+               <date when="1989" />
+               <biblScope from="39" to="39" unit="volume" />
+               <biblScope from="135" to="170" unit="page" />
+            </bibl>
+            <bibl xml:id="Bezdeki1924">
+               <author role="origAuth" ref="#NicGre" />
+               <author role="critEd" ref="#StBez" />
+               <title level="a">Nicephori Gregorae Epistulae XC</title>
+               <title level="j">Ephemeris Dacoromana</title>
+               <date when="1924" />
+               <biblScope from="2" to="2" unit="volume" />
+               <biblScope from="239" to="377" unit="page" />
+            </bibl>
+            <bibl xml:id="Boissonade1829">
+               <author role="critEd" ref="#JeaFBoi" />
+               <title level="m">Anecdota Graeca e codicibus regiis</title>
+               <pubPlace>Paris</pubPlace>
+               <date from="1829" to="1833" />
+               <biblScope unit="volume" from="1" to="5" />
+            </bibl>
             <bibl xml:id="Briquet1968">
-               <author>
-                  <persName>
-                     <forename>Charles-Moïse</forename>
-                     <surname>Briquet</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="fr">Les filigranes: dictionnaire historique des marques du papier dès leur apparition vers 1282 jusqu’en 1600</title>
+               <author ref="#ChaBri" />
+               <title level="m" type="main">Les filigranes: dictionnaire historique des marques du papier dès leur apparition vers 1282 jusqu’en 1600</title>
+               <title level="m" type="short">Briquet</title>
                <pubPlace>Amsterdam</pubPlace>
                <date when="1968" />
                <biblScope from="1" to="4" unit="volume" />
             </bibl>
+            <bibl xml:id="Brodersen1992">
+               <author role="critEd" ref="#KaiBro" />
+               <title level="m">Reiseführer zu den Sieben Weltwundern</title>
+               <pubPlace>Frankfurt am Main</pubPlace>
+               <date when="1992" />
+            </bibl>
+            <bibl xml:id="Candal1950">
+               <author ref="#EmmCan" />
+               <title level="a">Fuentes Palamíticas. Diálogo de Jorge Facrasí sobre el contradictorio de Pálamas con Nicéforo Grégoras</title>
+               <title level="j">Orientalia Christiana Periodica </title>
+               <date when="1950" />
+               <biblScope from="16" to="16" unit="volume" />
+               <biblScope from="303" to="357" unit="page" />
+            </bibl>
+            <bibl xml:id="Canivet1958">
+               <author role="origAuth" ref="#TheCyr" />
+               <author role="critEd" ref="#PieCan" />
+               <title level="m">Théodoret de Cyr. Thérapeutique des maladies helléniques</title>
+               <pubPlace>Paris</pubPlace>
+               <date when="1958" />
+            </bibl>
+            <bibl xml:id="Ciccolella1989">
+               <author role="origAuth" ref="#Leo" />
+               <author role="critEd" ref="#FedCic" />
+               <title level="a">Il carme anacreontico di Leone VI</title>
+               <title level="j">Bollettino dei classici</title>
+               <date when="1989" />
+               <biblScope unit="volume" from="10" to="10" />
+               <biblScope unit="page" from="17" to="37" />
+            </bibl>
+            <bibl xml:id="Clausen1966">
+               <author role="origAuth" ref="#DecAus" />
+               <author role="critEd" ref="#WenCla" />
+               <author role="critEd" ref="#FraGoo" />
+               <author role="critEd" ref="#EdwKen" />
+               <author role="critEd" ref="#JohRic" />
+               <title level="m">Appendix Vergiliana</title>
+               <pubPlace>Oxford</pubPlace>
+               <date when="1966" />
+            </bibl>
+            <bibl xml:id="Courtonne1957">
+               <author role="origAuth" ref="#BasCes" />
+               <author role="critEd" ref="#YveCou" />
+               <title level="m">Saint Basile. Lettres</title>
+               <pubPlace>Paris</pubPlace>
+               <date from="1957" to="1966" />
+               <biblScope unit="volume" from="1" to="3" />
+            </bibl>
+            <bibl xml:id="Cramer1839">
+               <author role="critEd" ref="#JohCra" />
+               <title level="m">Anecdota Graeca e codd. manuscriptis bibliothecae regiae Parisiensis</title>
+               <pubPlace>Oxford</pubPlace>
+               <date from="1839" to="1841" />
+               <biblScope from="1" to="4" unit="volume" />
+            </bibl>
+            <bibl xml:id="Cramer1840">
+               <author role="critEd" ref="#JohCra" />
+               <title level="m">Catenae Graecorum patrum in Novum Testamentum</title>
+               <pubPlace>Oxford</pubPlace>
+               <date when="1840" />
+               <biblScope unit="volume" from="1" to="8" />
+            </bibl>
+            <bibl type="thesis" xml:id="Danezis1987">
+               <author ref="#GeoDan" />
+               <title level="m">Spaneas: Vorlage, Quellen, Versionen</title>
+               <title level="s">Miscellanea Byzantina Monacensia</title>
+               <pubPlace>München</pubPlace>
+               <date when="1987" />
+               <biblScope from="31" to="31" unit="volume" />
+            </bibl>
+            <bibl xml:id="Darrouzès1981">
+               <author role="critEd" ref="#JeaDar" />
+               <title level="m">Notitiae episcopatuum ecclesiae Constantinopolitanae</title>
+               <pubPlace>Paris</pubPlace>
+               <date when="1981" />
+            </bibl>
             <bibl xml:id="DeStefani1902">
-               <author>
-                  <persName>
-                     <forename>Eduardo</forename>
-                     <forename>Luigi</forename>                     
-                     <surname>De Stefani</surname>
-                  </persName>
-               </author>
-               <title level="a" xml:lang="it">I manoscritti della Historia Animalium di Eliano</title>
-               <title level="j" xml:lang="it">Studi italiani di filologia classica</title>
+               <author ref="#EduDeS" />
+               <title level="a">I manoscritti della Historia Animalium di Eliano</title>
+               <title level="j">Studi italiani di filologia classica</title>
                <date when="1902" />
                <biblScope unit="volume" from="10" to="10" />
                <biblScope unit="page" from="175" to="222" />
             </bibl>
             <bibl xml:id="Diels1918a">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Heron</forename>
-                     <addName>Alexandrinus</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Hermann</forename>
-                     <surname>Diels</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Erwin</forename>
-                     <surname>Schramm</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="de">Herons Belopoiika</title>
-               <title level="s" xml:lang="de">Abhandlungen der königlich preussischen Akademie der Wissenschaften, Phil.-hist. Kl.</title>
+               <author role="origAuth" ref="#HerAle" />
+               <author role="critEd" ref="#HerDie" />
+               <author role="critEd" ref="#ErwSch" />
+               <title level="a">Herons Belopoiika</title>
+               <title level="s">Abhandlungen der königlich preussischen Akademie der Wissenschaften, Phil.-hist. Kl.</title>
                <pubPlace>Berlin</pubPlace>
                <date when="1918" />
                <biblScope from="2" to="2" unit="volume" />
                <biblScope from="5" to="55" unit="page" />
             </bibl>
             <bibl xml:id="Diels1918b">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Philo</forename>
-                     <addName>Byzantius</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Hermann</forename>
-                     <surname>Diels</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Erwin</forename>
-                     <surname>Schramm</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="de">Philons Belopoiika</title>
-               <title level="s" xml:lang="de">Abhandlungen der königlich preussischen Akademie der Wissenschaften, Phil.-hist. Kl.</title>
-               <pubPlace xml:lang="de">Berlin</pubPlace>
+               <author role="origAuth" ref="#PhiByz" />
+               <author role="critEd" ref="#HerDie" />
+               <author role="critEd" ref="#ErwSch" />
+               <title level="a">Philons Belopoiika</title>
+               <title level="s">Abhandlungen der königlich preussischen Akademie der Wissenschaften, Phil.-hist. Kl.</title>
+               <pubPlace>Berlin</pubPlace>
                <date when="1918" />
                <biblScope from="16" to="16" unit="volume" />
                <biblScope from="7" to="68" unit="page" />
             </bibl>
             <bibl xml:id="Diels1919">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Philo</forename>
-                     <addName>Byzantius</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Hermann</forename>
-                     <surname>Diels</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Erwin</forename>
-                     <surname>Schramm</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="de">Exzerpte aus Philons Mechanik B. VII und VIII</title>
-               <title level="s" xml:lang="de">Abhandlungen der königlich preussischen Akademie der Wissenschaften, Phil.-hist. Kl.</title>
-               <pubPlace xml:lang="de">Berlin</pubPlace>
+               <author role="origAuth" ref="#PhiByz" />
+               <author role="critEd" ref="#HerDie" />
+               <author role="critEd" ref="#ErwSch" />
+               <title level="a">Exzerpte aus Philons Mechanik B. VII und VIII</title>
+               <title level="s">Abhandlungen der königlich preussischen Akademie der Wissenschaften, Phil.-hist. Kl.</title>
+               <pubPlace>Berlin</pubPlace>
                <date when="1919" />
                <biblScope from="12" to="12" unit="volume" />
                <biblScope from="17" to="84" unit="page" />
             </bibl>
             <bibl xml:id="Dindorf1829">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Aelius</forename>
-                     <addName>Aristides</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Wilhelm</forename>
-                     <surname>Dindorf</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Aristides</title>
+               <author role="origAuth" ref="#AelAri" />
+               <author role="critEd" ref="#WilDin" />
+               <title level="m">Aristides</title>
                <pubPlace>Leipzig</pubPlace>
                <date when="1829" />
                <biblScope from="1" to="3" unit="volume" />
             </bibl>
+            <bibl xml:id="Dindorf1832">
+               <author role="critEd" ref="#LudDin" />
+               <title level="m">Chronicon Paschale</title>
+               <title level="s">Corpus scriptorum historiae Byzantinae</title>
+               <pubPlace>Bonn</pubPlace>
+               <date when="1832" />
+               <biblScope from="1" to="2" unit="volume" />
+            </bibl>
             <bibl xml:id="Dübner1849">
-               <editor>
-                  <persName>
-                     <forename>Jean-Frédéric</forename>
-                     <surname>Dübner</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Ulco</forename>
-                     <forename>Cats</forename>
-                     <surname>Bussemaker</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Scholia in Theocritum</title>
+               <author role="critEd" ref="#JeaDüb" />
+               <author role="critEd" ref="#UlcBus" />
+               <title level="m">Scholia in Theocritum</title>
                <pubPlace>Paris</pubPlace>
                <date when="1849" />
             </bibl>
+            <bibl xml:id="Eberhard1872">
+               <author role="critEd" ref="#AlfEbe" />
+               <title level="m">Fabulae romanenses Graece conscriptae</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1872" />
+               <biblScope unit="volume" from="1" to="1" />
+            </bibl>
+            <bibl xml:id="Ehrhard1936">
+               <author ref="#AlbEhr" />
+               <title level="m">Überlieferung und Bestand der hagiographischen und homiletischen Literatur der griechischen Kirche von den Anfängen bis zum Ende des 16. Jahrhunderts</title>
+               <date from="1936" to="1952" />
+               <biblScope from="1" to="3" unit="volume" />
+            </bibl>
+            <bibl xml:id="Ernesti1785">
+               <author ref="#JohErn" />
+               <title level="m">Glossae Sacrae Hesychii Graece ex universo illius opere in usum interpretationis libr. sacr. excepsit, emendavit, notisque illustravit</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1785" />
+            </bibl>
+            <bibl xml:id="Fabricius1790">
+               <author ref="#JohFab" />
+               <title level="m">Bibliotheca Graeca</title>
+               <pubPlace>Hamburg</pubPlace>
+               <date from="1790" to="1802" />
+               <!-- Kolla publiceringsår för serien -->
+               <edition n="4" />
+               <biblScope from="1" to="12" unit="volume" />
+            </bibl>
             <bibl xml:id="Foerster1877">
-               <author>
-                  <persName>
-                     <forename>Richard</forename>
-                     <surname>Foerster</surname>
-                  </persName>
-               </author>
-               <title level="a" xml:lang="la">Inclutae Academiae Regiae Upsaliensi sacra saecularia quarta die V mensis Septembris a. MDCCCLXXVII celebranti congratulantur Universitatis Rostochiensis rector et concilium. Inest Richardi Foersteri De Libanii libris manuscriptis Upsaliensibus et Lincopiensibus commentatio</title>
-
+               <author ref="#RicFoe" />
+               <title level="m">Inclutae Academiae Regiae Upsaliensi sacra saecularia quarta die V mensis Septembris a. MDCCCLXXVII celebranti congratulantur Universitatis Rostochiensis rector et concilium. Inest Richardi Foersteri De Libanii libris manuscriptis Upsaliensibus et Lincopiensibus commentatio</title>
                <!-- Kan titeln förkortas? Borde artikeln digitaliseras eller finns den redan tillgänglig? -->
-
                <pubPlace>Rostock</pubPlace>
                <date when="1877" />
             </bibl>
-            <bibl xml:id="Foerster1927">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Libanius</forename>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Richard</forename>
-                     <surname>Foerster</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Libanii opera</title>
+            <bibl xml:id="Foerster1903">
+               <author role="origAuth" ref="#Libanius" />
+               <author role="critEd" ref="#RicFoe" />
+               <title level="m">Libanii opera</title>
                <pubPlace>Leipzig</pubPlace>
                <date from="1903" to="1927" />
                <biblScope from="1" to="12" unit="volume" />
             </bibl>
+            <bibl xml:id="Gaisford1823">
+               <author role="critEd" ref="#ThoGai" />
+               <title level="m">Poetae minores Graeci</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1823" />
+               <biblScope unit="volume" from="1" to="5" />
+            </bibl>
+            <bibl xml:id="Gallay1964">
+               <author role="origAuth" ref="#GreNaz" />
+               <author role="critEd" ref="#PauGal" />
+               <title level="m">Saint Grégoire de Nazianze. Lettres</title>
+               <pubPlace>Paris</pubPlace>
+               <date from="1964" to="1967" />
+               <biblScope unit="volume" from="1" to="2" />
+            </bibl>
+            <bibl xml:id="Gamillscheg1981">
+               <author ref="#ErnGam" />
+               <author ref="#DieHar" />
+               <author ref="#PaoEle" />
+               <title level="m" type="main">Repertorium der griechischen Kopisten 800–1600</title>
+               <title level="m" type="short">RGK</title>
+               <date from="1981" to="1997" />
+               <biblScope from="1" to="3" unit="volume" />
+            </bibl>
             <bibl xml:id="GarcíaValdés2009">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Claudius</forename>
-                     <surname>Aelianus</surname>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Manuela</forename>
-                     <surname>García</surname>
-                     <surname>Valdés</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Luis</forename>
-                     <forename>Alfonso</forename>
-                     <surname>Llera</surname>
-                     <surname>Fueyo</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Lucía</forename>
-                     <surname>Rodríguez-Noriega</surname>
-                     <surname>Guillén</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">De natura animalium</title>
-               <title level="s" xml:lang="la">Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</title>
+               <author role="origAuth" ref="#ClaAel" />
+               <author role="critEd" ref="#ManGar" />
+               <author role="critEd" ref="#LuiLle" />
+               <author role="critEd" ref="#LucRod" />
+               <title level="m">De natura animalium</title>
+               <title level="s">Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</title>
                <pubPlace>Berlin</pubPlace>
                <date when="2009" />
             </bibl>
             <bibl xml:id="Garzya1979">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Synesius</forename>
-                     <addName>Cyrenensis</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Antonio</forename>
-                     <surname>Garzya</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Synesii Cyrenensis epistulae</title>
+               <author role="origAuth" ref="#SynCyr" />
+               <author role="critEd" ref="#AntGar" />
+               <title level="m">Synesii Cyrenensis epistulae</title>
                <pubPlace>Rome</pubPlace>
                <date when="1979" />
             </bibl>
+            <bibl xml:id="Gaul2011">
+               <author ref="#NieGau" />
+               <title level="m">Thomas Magistros und die spätbyzantinische Sophistik: Studien zum Humanismus urbaner Eliten in der frühen Palaiologenzeit</title>
+               <pubPlace>Wiesbaden</pubPlace>
+               <date when="2011" />
+            </bibl>
+            <bibl xml:id="Giangrande1956">
+               <author role="origAuth" ref="#Eunapius" />
+               <author role="critEd" ref="#GiuGia" />
+               <title level="m">Eunapii Vitae sophistarum</title>
+               <pubPlace>Rome</pubPlace>
+               <date when="1956" />
+            </bibl>
             <bibl xml:id="Gow1952">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Theocritus</forename>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Andrew</forename>
-                     <forename>Sydenham</forename>
-                     <forename>Farrar</forename>
-                     <surname>Gow</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Theocritus</title>
+               <author role="origAuth" ref="#Theocritus" />
+               <author role="critEd" ref="#AndGow" />
+               <title level="m">Theocritus</title>
                <pubPlace>Cambridge</pubPlace>
                <date when="1952" />
                <biblScope unit="volume" from="1" to="2" />
             </bibl>
             <bibl xml:id="Graux1889">
-               <author>
-                  <persName>
-                     <forename>Charles</forename>
-                     <surname>Graux</surname>
-                  </persName>
-               </author>
-               <author>
-                  <persName>
-                     <forename>Albert</forename>
-                     <surname>Martin</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="fr">Notices sommaires des manuscrits grecs de Suède</title>
+               <author ref="#ChaGra" />
+               <author ref="#AlbMar" />
+               <title level="m">Notices sommaires des manuscrits grecs de Suède</title>
                <pubPlace>Paris</pubPlace>
                <date when="1889" />
             </bibl>
             <bibl xml:id="Gregory1909">
-               <author>
-                  <persName>
-                     <forename>Caspar</forename>
-                     <forename>René</forename>
-                     <surname>Gregory</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="de">Textkritik des Neuen Testamentes</title>
+               <author ref="#CasGre" />
+               <title level="m">Textkritik des Neuen Testamentes</title>
                <pubPlace>Leipzig</pubPlace>
                <date when="1909" />
                <biblScope unit="volume" from="1" to="3" />
             </bibl>
+            <bibl xml:id="Guilland1927">
+               <author role="origAuth" ref="#NicGre" />
+               <author role="critEd" ref="#RodGui" />
+               <title level="m">Correspondance de Nicéphore Grégoras: texte édité et traduit par R. Guilland</title>
+               <pubPlace>Paris</pubPlace>
+               <date when="1927" />
+            </bibl>
+            <bibl xml:id="Harlfinger1971">
+               <author ref="#DieHar" />
+               <title level="m">Die Textgeschichte der pseudo-aristotelischen Schrift Peri atomōn grammōn. Ein kodikologisch-kulturgeschichtlicher Beitrag zur Klärung der Überlieferungsverhältnisse im Corpus Aristotelicum</title>
+               <pubPlace>Amsterdam</pubPlace>
+               <date when="1971" />
+            </bibl>
             <bibl xml:id="Harlfinger1974">
-               <author>
-                  <persName>
-                     <forename>Dieter</forename>
-                     <surname>Harlfinger</surname>
-                  </persName>
-               </author>
-               <author>
-                  <persName>
-                     <forename>Johanna</forename>
-                     <surname>Harlfinger</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="de">Wasserzeichen aus griechischen Handschriften</title>
+               <author ref="#DieHar" />
+               <author ref="#JohHar" />
+               <title level="m" type="main">Wasserzeichen aus griechischen Handschriften</title>
+               <title level="m" type="short">Harlfinger</title>
                <pubPlace>Berlin</pubPlace>
-               <date when="1974" />
+               <date from="1974" to="1980" />
                <biblScope unit="volume" from="1" to="2" />
             </bibl>
+            <bibl xml:id="Harlfinger1977">
+               <author ref="#DieHar" />
+               <title level="a">Zu griechischen Kopisten und Schriftstilen des 15. und 16. Jahrhunderts</title>
+               <title level="m">La Paléographie grecque et byzantine</title>
+               <pubPlace>Paris</pubPlace>
+               <date when="1977" />
+            </bibl>
+            <bibl xml:id="Hausrath1956">
+               <author role="origAuth" ref="#Aesopus" />
+               <author role="critEd" ref="#AugHau" />
+               <author role="critEd" ref="#HerHun" />
+               <title level="m">Aesopus. Corpus fabularum Aesopicarum</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date from="1956" to="1970" />
+            </bibl>
+            <bibl xml:id="Hayduck1897">
+               <author role="origAuth" ref="#IohPhi" />
+               <author role="critEd" ref="#MicHay" />
+               <title level="m">Ioannis Philoponi in Aristotelis De anima libros commentaria</title>
+               <title level="s">Commentaria in Aristotelem Graeca</title>
+               <pubPlace>Berlin</pubPlace>
+               <date when="1897" />
+               <biblScope from="15" to="15" unit="volume" />
+            </bibl>
+            <bibl xml:id="Heawood1950">
+               <author ref="#EdwHea" />
+               <title level="m" type="main">Watermarks, mainly of the 17th and 18th centuries</title>
+               <title level="m" type="short">Heawood</title>
+               <pubPlace>Hilversum</pubPlace>
+               <date when="1950" />
+            </bibl>
+            <bibl xml:id="Hedberg1949">
+               <author ref="#ArvHed" />
+               <title level="m">Stockholms bokbindare 1460–1880: anteckningar</title>
+               <pubPlace>Stockholm</pubPlace>
+               <date from="1949" to="1960" />
+               <biblScope from="1" to="2" unit="volume" />
+            </bibl>
+            <bibl xml:id="Heiberg1921">
+               <author role="origAuth" ref="#PauAeg" />
+               <author role="critEd" ref="#JohHei" />
+               <title level="m">Paulus Aegineta edidit I. L. Heiberg</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date from="1921" to="1924" />
+               <biblScope from="1" to="2" unit="volume" />
+            </bibl>
             <bibl xml:id="Heijbroek1994">
-               <author>
-                  <persName>
-                     <forename>Jan</forename>
-                     <forename>Frederik</forename>
-                     <surname>Heijbroek</surname>
-                  </persName>
-               </author>
-               <author>
-                  <persName>
-                     <forename>T.</forename>
-                     <forename>Carina</forename>
-                     <surname>Greven</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="nl">Sierpapier: marmer-, brocaat- en sitspapier in Nederland</title>
+               <author ref="#JanHei" />
+               <author ref="#TCaGre" />
+               <title level="m">Sierpapier: marmer-, brocaat- en sitspapier in Nederland</title>
                <pubPlace>Amsterdam</pubPlace>
                <date when="1994" />
             </bibl>
-            <bibl xml:id="Hermelin1934">
-               <author>
-                  <persName>
-                     <forename>Ingeborg</forename>
-                     <surname>Hermelin</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="de">Zu den Briefen des Bischofs Synesios</title>
+            <bibl xml:id="Hermann1801">
+               <author ref="#GotHer" />
+               <title level="m">De emendanda ratione græcæ grammaticæ</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1801" />
+               <biblScope from="1" to="1" unit="volume" />
+            </bibl>
+            <bibl type="thesis" xml:id="Hermelin1934">
+               <author ref="#IngHer" />
+               <title level="m">Zu den Briefen des Bischofs Synesios</title>
                <pubPlace>Uppsala</pubPlace>
                <date when="1934" />
             </bibl>
             <bibl xml:id="Jacobs1832a">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Claudius</forename>
-                     <addName>Aelianus</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Friedrich</forename>
-                     <surname>Jacobs</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Aeliani de natura animalium libri xvii</title>
+               <author role="origAuth" ref="#ClaAel" />
+               <author role="critEd" ref="#FriJac" />
+               <title level="m">Aeliani de natura animalium libri xvii</title>
                <pubPlace>Jena</pubPlace>
                <date when="1832" />
-               <biblScope from="1" to="2" unit="volume"></biblScope>
+               <biblScope from="1" to="2" unit="volume" />
             </bibl>
             <bibl xml:id="Jacobs1832b">
-               <author>
-                  <persName>
-                     <forename>Friedrich</forename>
-                     <surname>Jacobs</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="la">Aeliani de natura animalium libri xvii. Annotationes</title>
-               
+               <author ref="#FriJac" />
+               <title level="m">Aeliani de natura animalium libri xvii. Annotationes</title>
+
                <!-- Är detta egentligen volym 2 av ovanstående titel??? -->
-               
+
                <pubPlace>Jena</pubPlace>
                <date when="1832" />
             </bibl>
             <bibl xml:id="Karlsson1981">
-               <editor>
-                  <persName>
-                     <forename>Gustav</forename>
-                     <forename>H.</forename>
-                     <surname>Karlsson</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="de">Codex Upsaliensis Graecus 28: Geschichte und Beschreibung der Handschrift nebst einer Nachlese von Texten</title>
-               <title level="s" xml:lang="la">Bibliotheca Ekmaniana Universitatis Upsaliensis</title>
+               <editor ref="#GusKar" />
+               <title level="m">Codex Upsaliensis Graecus 28: Geschichte und Beschreibung der Handschrift nebst einer Nachlese von Texten</title>
+               <title level="s">Bibliotheca Ekmaniana Universitatis Upsaliensis</title>
                <pubPlace>Uppsala</pubPlace>
                <date when="1981" />
                <biblScope unit="volume" from="69" to="69" />
             </bibl>
+            <bibl xml:id="Keil1898">
+               <author role="origAuth" ref="#AelAri" />
+               <author role="critEd" ref="#BruKei" />
+               <title level="m">P. Aelii Aristidis Smyrnaei qvae supersunt omnia</title>
+               <pubPlace>Berlin</pubPlace>
+               <date when="1898" />
+               <biblScope unit="volume" from="2" to="2" />
+            </bibl>
+            <bibl xml:id="Koster1974">
+               <author role="origAuth" ref="#Aristophanes" />
+               <author role="critEd" ref="#WilKos" />
+               <title level="m">Prolegomena de comoedia. Scholia in Acharnenses, Equites, Nubes</title>
+               <pubPlace>Groningen</pubPlace>
+               <date when="1974" />
+            </bibl>
             <bibl xml:id="Kwapisz2013">
-               <author>
-                  <persName>
-                     <forename>Jan</forename>
-                     <surname>Kwapisz</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="en">The Greek Figure Poems</title>
-               <title level="j" xml:lang="la">Hellenistica Groningana</title>
+               <author ref="#JanKwa" />
+               <title level="m">The Greek Figure Poems</title>
+               <title level="s">Hellenistica Groningana</title>
                <pubPlace>Leuven</pubPlace>
                <date when="2013" />
                <biblScope unit="volume" from="19" to="19" />
             </bibl>
+            <bibl xml:id="Lagarde1887">
+               <author role="critEd" ref="#PauLag" />
+               <title level="m">Onomastica sacra</title>
+               <pubPlace>Göttingen</pubPlace>
+               <date when="1887" />
+               <edition n="2" />
+            </bibl>
+            <bibl xml:id="Lampros1880">
+               <author role="origAuth" ref="#MicCho" />
+               <author role="critEd" ref="#SpyLam" />
+               <title level="m" xml:lang="grc">Μιχαὴλ Ἀκομινάτου τοῦ Χωνιάτου τὰ σωζόμενα</title>
+               <pubPlace>Athens</pubPlace>
+               <date when="1880" />
+               <biblScope unit="volume" from="1" to="2" />
+            </bibl>
             <bibl xml:id="Lampros1907">
-               <author>
-                  <persName>
-                     <forename xml:lang="el">Σπυρίδων</forename>
-                     <surname xml:lang="el">Λάμπρος</surname>
-                  </persName>
-               </author>
-               <title level="a" xml:lang="el">Προσθῆκαι εἰς τοὐς Λακεδαιμονίους βιβλιογράφους καὶ κτήτορας κωδίκων</title>
-               <title level="j" xml:lang="el">Νέος Ἑλληνομνήμων</title>
+               <author ref="#SpyLam" />
+               <title level="a" xml:lang="el">Προσθῆκαι εἰς τοὺς Λακεδαιμονίους βιβλιογράφους καὶ κτήτορας κωδίκων</title>
+               <title level="j" xml:lang="el">Νέος Ἑλληνομνήμων</title>
                <date when="1907" />
                <biblScope unit="volume" from="4" to="4" />
-               <biblScope unit="page" from="492" to="494" />               
+               <biblScope unit="page" from="492" to="494" />
+            </bibl>
+            <bibl xml:id="Lampros1908">
+               <author role="critEd" ref="#SpyLam" />
+               <title level="a" xml:lang="grc">Μονῳδίαι καὶ θρῆνοι ἐπὶ τῇ ἁλώσει Κωνσταντινουπόλεως</title>
+               <title level="j" xml:lang="grc">Νέος Ἑλληνομνήμων</title>
+               <date when="1908" />
+               <biblScope unit="volume" from="5" to="5" />
+               <biblScope unit="page" from="190" to="269" />
             </bibl>
             <bibl xml:id="Lampros1909">
-               <author>
-                  <persName>
-                     <forename xml:lang="el">Σπυρίδων</forename>
-                     <surname xml:lang="el">Λάμπρος</surname>
-                  </persName>
-               </author>
-               <title level="a" xml:lang="el">Ναυπλιακὸν ἔγγραφον τοῦ οἴκου Πουλομάτη ἐν ἔτει 1509 καὶ ὁ βιβλιογράφος Μιχαὴλ Σουλιάρδος</title>
-               <title level="j" xml:lang="el">Νέος Ἑλληνομνήμων</title>
+               <author ref="#SpyLam" />
+               <title level="a" xml:lang="el">Ναυπλιακὸν ἔγγραφον τοῦ οἴκου Πουλομάτη ἐν ἔτει <foreign xml:lang="la">1509</foreign> καὶ ὁ βιβλιογράφος Μιχαὴλ Σουλιάρδος</title>
+               <title level="j" xml:lang="el">Νέος Ἑλληνομνήμων</title>
                <date when="1909" />
                <biblScope unit="volume" from="6" to="6" />
-               <biblScope unit="page" from="273" to="283" />               
+               <biblScope unit="page" from="273" to="283" />
+            </bibl>
+            <bibl xml:id="Lampsidis1985">
+               <author ref="#OdyLam" />
+               <title level="a">Les <q>Gnomologia</q> tirés de la Chronique de K. Manassès</title>
+               <title level="j">Byzantion</title>
+               <date when="1985" />
+               <biblScope from="55" to="55" unit="volume" />
+               <biblScope from="118" to="145" unit="page" />
+            </bibl>
+            <bibl xml:id="Lampsidis1996">
+               <author role="origAuth" ref="#ConMan" />
+               <author role="critEd" ref="#OdyLam" />
+               <title level="m">Constantini Manassis Breviarium chronicum</title>
+               <title level="s">Corpus fontium historiae Byzantinae</title>
+               <pubPlace>Athens</pubPlace>
+               <date when="1996" />
+               <biblScope unit="volume" from="36" to="36" />
             </bibl>
             <bibl xml:id="Lenz1976">
-               <author>
-                  <persName>
-                     <forename>Aelius</forename>
-                     <addName>Aristides</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Friedrich</forename>
-                     <forename>Walter</forename>
-                     <surname>Lenz</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Charles</forename>
-                     <forename>Allison</forename>
-                     <surname>Behr</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">P. Aelii Aristidis opera quae exstant omnia</title>
+               <author role="origAuth" ref="#AelAri" />
+               <author role="critEd" ref="#FriLen" />
+               <author role="critEd" ref="#ChaBeh" />
+               <title level="m">P. Aelii Aristidis opera quae exstant omnia</title>
                <pubPlace>Leiden</pubPlace>
                <date when="1976" />
-               <biblScope unit="volume" from="1" to="1" />               
+               <biblScope unit="volume" from="1" to="1" />
+            </bibl>
+            <bibl xml:id="Leone1968">
+               <author role="origAuth" ref="#JohTze" />
+               <author role="critEd" ref="#PieLeo" />
+               <title level="m">Ioannis Tzetzae historiae</title>
+               <pubPlace>Naples</pubPlace>
+               <date when="1968" />
+            </bibl>
+            <bibl xml:id="Leone1975">
+               <author role="origAuth" ref="#NicGre" />
+               <author role="critEd" ref="#PieLeo" />
+               <title level="a">Fiorenzo o Intorno alla sapienza</title>
+               <title level="j">Byzantina et neo-hellenica neapolitana</title>
+               <date when="1975" />
+               <biblScope from="4" to="4" unit="volume" />
+               <!-- sidnummer här? -->
+            </bibl>
+            <bibl xml:id="Leone1981">
+               <author role="origAuth" ref="#NicGre" />
+               <author role="critEd" ref="#PieLeo" />
+               <title level="a">L’encomio di Niceforo Gregora per il re di Cipro (Ugo IV di Lusignano)</title>
+               <title level="j">Byzantion</title>
+               <date when="1981" />
+               <biblScope from="51" to="51" unit="volume" />
+               <biblScope from="211" to="224" unit="page" />
             </bibl>
             <bibl xml:id="Leone1982">
-               <author key="VIAF 64014428">
-                  <persName>
-                     <forename>Nicephorus</forename>
-                     <addName>Gregoras</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName key="VIAF 7439152">
-                     <forename>Pietro</forename>
-                     <forename>Luigi</forename>
-                     <forename>M.</forename>
-                     <surname>Leone</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Nicephori Gregorae epistulae</title>
+               <author role="origAuth" ref="#NicGre" />
+               <author role="critEd" ref="#PieLeo" />
+               <title level="m">Nicephori Gregorae epistulae</title>
                <pubPlace>Matino</pubPlace>
                <date from="1982" to="1983" />
-               <biblScope from="1" to="2" unit="volume"></biblScope>
+               <biblScope from="1" to="2" unit="volume" />
             </bibl>
-            <bibl xml:id="Lobel1933">
-               <author>
-                  <persName>
-                     <forename>Edgar</forename>
-                     <surname>Lobel</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="en">The Greek Manuscripts of Aristotle’s Poetics</title>
-               <pubPlace>
-                  <supplied reason="omitted">London</supplied>
-               </pubPlace>
-               <date when="1933" />               
+            <bibl xml:id="Lindstam1910">
+               <author role="origAuth" ref="#geoLac" />
+               <author role="critEd" ref="#SigLin" />
+               <title level="m">Georgii Lacapeni Epistulae X priores cum epimerismis editae</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date when="1910" />
+            </bibl>
+            <bibl xml:id="Lindstam1919">
+               <author ref="#SigLin" />
+               <title level="a">Senbysantinska epimerismsamlingar och ordböcker</title>
+               <title level="j">Eranos</title>
+               <date from="1919" to="1920" />
+               <biblScope from="19" to="19" unit="volume" />
+               <biblScope from="57" to="92" unit="page" />
+            </bibl>
+            <bibl xml:id="Lindstam1924">
+               <author role="origAuth" ref="#GeoLac" />
+               <author role="origAuth" ref="#AndZar" />
+               <author role="critEd" ref="#SigLin" />
+               <title level="m">Georgii Lacapeni et Andronici Zaridae epistulae XXXII cum epimerismis Lacapeni</title>
+               <title level="s">Collectio scriptorum veterum upsaliensis</title>
+               <pubPlace>Göteborg</pubPlace>
+               <date when="1924" />
             </bibl>
             <bibl xml:id="Lindstam1931">
-               <author>
-                  <persName>
-                     <forename>Sigfrid</forename>
-                     <surname>Lindstam</surname>
-                  </persName>
-               </author>
-               <title level="a" xml:lang="la">Codex Upsaliensis Graecus 21</title>
-               <title level="j" xml:lang="la">Eranos: acta philologica Suecana</title>
+               <author ref="#SigLin" />
+               <title level="a">Codex Upsaliensis Graecus 21</title>
+               <title level="j">Eranos</title>
                <date when="1931" />
                <biblScope unit="volume" from="29" to="29" />
                <biblScope unit="page" from="116" to="154" />
             </bibl>
+            <bibl xml:id="Lobel1933">
+               <author ref="#EdgLob" />
+               <title level="m">The Greek Manuscripts of Aristotle’s Poetics</title>
+               <pubPlace>London</pubPlace>
+               <date when="1933" />
+            </bibl>
+            <bibl xml:id="Loenertz1956">
+               <author role="origAuth" ref="#DemCyd" />
+               <author role="critEd" ref="#RayLoe" />
+               <title level="m">Démétrius Cydonès, Correspondance</title>
+               <title level="s">Studi e testi</title>
+               <pubPlace>Vatican City</pubPlace>
+               <date from="1956" to="1960" />
+               <biblScope from="1" to="2" unit="volume" />
+            </bibl>
+            <bibl xml:id="Lundström1896">
+               <author ref="#VilLun" />
+               <title level="a">Studien zu spätgriechichen und byzantinen Chroniken</title>
+               <title level="j">Eranos</title>
+               <date when="1896" />
+               <biblScope unit="volume" from="1" to="1" />
+               <biblScope unit="page" from="150" to="168" />
+            </bibl>
+            <bibl xml:id="Lundström1902">
+               <author role="critEd" ref="#VilLun" />
+               <title level="a">Anecdota byzantina e codicibus Upsaliensibus</title>
+               <title level="s">Collectio scriptorum veterum Upsaliensis</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date when="1902" />
+               <biblScope unit="volume" from="1" to="1" />
+            </bibl>
+            <bibl xml:id="Maltese1988">
+               <author role="origAuth" ref="#GeoPle" />
+               <author role="critEd" ref="#EnrMal" />
+               <title level="m">Georgii Gemisti Plethonis Contra Scholarii pro Aristotele obiectiones</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1988" />
+            </bibl>
+            <bibl xml:id="Mandēlaras2003">
+               <author role="origAuth" ref="#Isocrates" />
+               <author role="critEd" ref="#BasMan" />
+               <title level="m">Opera omnia</title>
+               <pubPlace>Munich</pubPlace>
+               <date when="2003" />
+               <biblScope unit="volume" from="1" to="3" />
+            </bibl>
             <bibl xml:id="Marsden1971">
-               <editor>
-                  <persName>
-                     <forename>Eric</forename>
-                     <forename>William</forename>
-                     <surname>Marsden</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="en">Greek and Roman Artillery: Technical Treatises</title>
+               <author role="critEd" ref="#EriMar" />
+               <title level="m">Greek and Roman Artillery: Technical Treatises</title>
                <pubPlace>Oxford</pubPlace>
                <date when="1971" />
             </bibl>
+            <bibl xml:id="Matranga1850">
+               <author role="critEd" ref="#PieMat" />
+               <title level="m">Anecdota Graeca e MSS. Bibliothecis Vaticana, Angelica,
+                  Barberiniana, Vallicelliana, Medicea, Vindobonensi deprompta</title>
+               <date when="1850" />
+               <biblScope unit="volume" from="1" to="2" />
+            </bibl>
             <bibl xml:id="Mecella2009">
-               <author>
-                  <persName>
-                     <forename>Laura</forename>
-                     <surname>Mecella</surname>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Martin</forename>
-                     <surname>Wallraff</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Laura</forename>
-                     <surname>Mecella</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="de">Die Überlieferung der Kestoi des Iulius Africanus in den byzantinischen Textsammlungen zur Militärtechnik</title>
-               <title level="m" xml:lang="de">Die Kestoi des Julius Africanus und ihre Überlieferung</title>
+               <author role="origAuth" ref="#LauMec" />
+               <author role="critEd" ref="#MarWal" />
+               <author role="critEd" ref="#LauMec" />
+               <title level="a">Die Überlieferung der Kestoi des Iulius Africanus in den byzantinischen Textsammlungen zur Militärtechnik</title>
+               <title level="m">Die Kestoi des Julius Africanus und ihre Überlieferung</title>
                <pubPlace>Berlin</pubPlace>
                <date when="2009" />
                <biblScope unit="page" from="85" to="144" />
             </bibl>
-            <bibl xml:id="Naoumides1974">
-               <author>
-                  <persName>
-                     <forename>Mark</forename>
-                     <surname>Naoumides</surname>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>John</forename>
-                     <forename>Lewis</forename>
-                     <surname>Heller</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="en">The Shorter Version of Pseudo-Zonaras, Lexicon</title>
-               <title level="m" xml:lang="en">Serta Turyniana. Studies in Greek Literature and Palaeography in honor of Alexander Turyn</title>
+            <bibl xml:id="Mercati1935">
+               <author role="origAuth" ref="#MicCho" />
+               <author role="critEd" ref="#GioMer" />
+               <title level="a">Intorno alla elegia di Michele Acominato sulla decadenza della citta di Atene</title>
+               <title level="m" xml:lang="grc">Εἰς μνήμην Σπυρίδωνος Λαμπροῦ</title>
+               <pubPlace>Athens</pubPlace>
+               <date when="1935" />
+               <biblScope unit="page" from="423" to="427" />
+            </bibl>
+            <bibl xml:id="Migne1857">
+               <author role="critEd" ref="#JacMig" />
+               <title level="m" type="main">Patrologiae cursus completus. Series graeca</title>
+               <title level="m" type="short">PG</title>
+               <pubPlace>Paris</pubPlace>
+               <date from="1857" to="1866" />
+            </bibl>
+            <bibl xml:id="Miller1857">
+               <author role="origAuth" ref="#ManPhi" />
+               <author role="critEd" ref="#EmmMil" />
+               <title level="m">Manuelis Philae Carmina: ex codicibus Escurialensibus, Florentinis, Parisinis et Vaticanis</title>
+               <pubPlace>Paris</pubPlace>
+               <date from="1855" to="1857" />
+               <biblScope from="1" to="2" unit="volume" />
+            </bibl>
+            <bibl xml:id="Mohler1942">
+               <author role="origAuth" ref="#Bessarion" />
+               <author role="critEd" ref="#LudMoh" />
+               <title level="m">Kardinal Bessarion als Theologe, Humanist und Staatsman, Bd. 3: Aus Bessarions Gelehrtenkreis</title>
+               <title level="s">Quellen und Forschungen</title>
+               <pubPlace>Paderborn</pubPlace>
+               <date when="1942" />
+               <biblScope unit="volume" from="24" to="24" />
+            </bibl>
+            <bibl xml:id="Monaco1951">
+               <author role="critEd" ref="#GiuMon" />
+               <title level="a">Constantini Siculi anacreonticum carmen <foreign xml:lang="grc">Ἀπὸ μουσικῶν μελάθρων</foreign></title>
+               <title level="j">La parola del passato</title>
+               <date when="1951" />
+               <biblScope unit="volume" from="6" to="6" />
+               <biblScope unit="page" from="457" to="463" />
+            </bibl>
+            <bibl xml:id="Mošin1957">
+               <author ref="#VlaMoš" />
+               <author ref="#SeiTra" />
+               <title level="m" type="main">Vodeni znakovi XIII. i XIV. vijeka (Filigranes des XIIIe et XIVe ss)</title>
+               <title level="m" type="short">Mošin-Traljić</title>
+               <pubPlace>Zagreb</pubPlace>
+               <date when="1957" />
+               <biblScope from="1" to="2" unit="volume" />
+            </bibl>
+            <bibl xml:id="Moulakis1986">
+               <author role="origAuth" ref="#LeoBru" />
+               <author role="critEd" ref="#AthMou" />
+               <title level="a">Leonardo Bruni’s Constitution of Florence</title>
+               <title level="j">Rinascimento</title>
+               <date when="1986" />
+               <biblScope unit="volume" from="26" to="26" />
+               <biblScope unit="page" from="141" to="190" />
+            </bibl>
+            <bibl type="chapter" xml:id="Naoumides1974">
+               <author ref="#MarNao" />
+               <editor ref="#JohHel" />
+               <title level="a">The Shorter Version of Pseudo-Zonaras, Lexicon</title>
+               <title level="m">Serta Turyniana. Studies in Greek Literature and Palaeography in honor of Alexander Turyn</title>
                <pubPlace>Urbana</pubPlace>
                <date when="1974" />
                <biblScope from="436" to="488" unit="page" />
             </bibl>
-            <bibl xml:id="Piccard1997">
-               <title level="m" xml:lang="de">Die Wasserzeichenkartei Piccard im Hauptstaatsarchiv Stuttgart: Findbuch. 17, Wasserzeichen Hand und Handschuh</title>
+            <bibl xml:id="Niehoff2003">
+               <author ref="#JohNie" />
+               <title level="m">Übersetzung und Rezeption: die byzantisch-neugriechischen und spanischen Adaptionen von Kalīla wa-Dimna</title>
+               <title level="s">Serta Graeca</title>
+               <pubPlace>Berlin</pubPlace>
+               <date when="2003" />
+               <biblScope from="18" to="18" unit="volume" />
+            </bibl>
+            <bibl xml:id="Norrmann1691">
+               <author role="origAuth" ref="#ThoMag" />
+               <author role="critEd" ref="#LarNor" />
+               <title level="m">Theodoulou Monachou ētoi Thōma tou Magistrou ... Hoc est Theoduli Monachi, sive Thomae Magistri, laudatio Gregorii theologi, Nazianzeni. Ejusdem orationes gratulatoriae IV et epistolae VIII</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date from="1691" to="1694" />
+            </bibl>
+            <bibl type="thesis" xml:id="Nyström2009">
+               <author ref="#EvaNys" />
+               <title level="m">Containing Multitudes: Codex Upsaliensis Graecus 8 in Perspective</title>
+               <title level="s">Studia Byzantina Upsaliensia</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date when="2009" />
+               <biblScope from="11" to="11" unit="volume" />
+            </bibl>
+            <bibl xml:id="Pelletier1975">
+               <author role="origAuth" ref="#FlaJos" />
+               <author role="critEd" ref="#AndPel" />
+               <title level="m">Flavius Josèphe. Guerre des juifs</title>
+               <pubPlace>Paris</pubPlace>
+               <date from="1975" to="1982" />
+               <biblScope from="1" to="3" unit="volume" />
+            </bibl>
+            <bibl xml:id="Perry1952">
+               <author role="origAuth" ref="#Aesopus" />
+               <author role="critEd" ref="#BenPer" />
+               <title level="m">Aesopica: A Series of Texts Relating to Aesop or Ascribed to Him</title>
+               <pubPlace>Urbana</pubPlace>
+               <date when="1952" />
+               <biblScope unit="volume" from="1" to="1" />
+            </bibl>
+            <bibl xml:id="Pertusi1955">
+               <author role="origAuth" ref="#Hesiodus" />
+               <author role="critEd" ref="#AgoPer" />
+               <title level="m">Scholia vetera in Hesiodi Opera et dies</title>
+               <pubPlace>Milano</pubPlace>
+               <date when="1955" />
+            </bibl>
+            <bibl xml:id="Piccard1961">
+               <author ref="#GerPic" />
+               <title level="m" type="main">Die Wasserzeichenkartei Piccard im Hauptstaatsarchiv Stuttgart</title>
+               <title level="m" type="short">Piccard</title>
                <pubPlace>Stuttgart</pubPlace>
-               <date when="1997" />
-               <biblScope unit="volume" from="17" to="17" />
+               <date from="1961" to="1997" />
+               <biblScope unit="volume" from="1" to="17" />
+            </bibl>
+            <bibl xml:id="Pietrosanti1999">
+               <author role="origAuth" ref="#NicGre" />
+               <!--<author ref="#SynCyr" /> Ska han verkligen stå som författare? -->
+               <author role="critEd" ref="#PaoPie" />
+               <title level="m">Nicephori Gregorae Explicatio in librum Synesii De insomniis: Scholia cum glossis</title>
+               <title level="s">Pinakes</title>
+               <pubPlace>Bari</pubPlace>
+               <date when="1999" />
+            </bibl>
+            <bibl xml:id="Philippidis1979">
+               <author ref="#AnnPhi" />
+               <title level="a">La captivité de Palamas chez les Turcs: Dossier et commentaire</title>
+               <title level="j">Travaux et Mémoires</title>
+               <date when="1979" />
+               <biblScope from="7" to="7" unit="volume" />
+               <biblScope from="109" to="222" unit="page" />
+            </bibl>
+            <bibl xml:id="Prete1978">
+               <author role="origAuth" ref="#DecAus" />
+               <author role="critEd" ref="#SesPre" />
+               <title level="m">Decimi Magni Ausonii Burdigalensis Opuscula</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1978" />
             </bibl>
             <bibl xml:id="Prou1877">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Heron</forename>
-                     <addName>Alexandrinus</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Victor</forename>
-                     <surname>Prou</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="fr">La chirobaliste d’Héron d’Alexandrie</title>
-               <title level="s" xml:lang="fr">Notices et extraits des manuscrits de la Bibliothèque Nationale</title>
+               <author role="origAuth" ref="#HerAle" />
+               <author role="critEd" ref="#VicPro" />
+               <title level="a">La chirobaliste d’Héron d’Alexandrie</title>
+               <title level="s">Notices et extraits des manuscrits de la Bibliothèque Nationale</title>
                <pubPlace>Paris</pubPlace>
                <date when="1877" />
                <biblScope from="26" to="26" unit="volume" />
                <biblScope from="2" to="2" unit="issue" />
                <biblScope from="116" to="149" unit="page" />
             </bibl>
+            <bibl xml:id="Puntoni1889">
+               <author role="critEd" ref="#VitPun" />
+               <title level="m">Stephanitēs kai Ichnēlatēs: quattro recensioni della versione greca del Kitāb Kalīla wa-Dimna</title>
+               <title level="s">Pubblicazioni della Società asiatica italiana</title>
+               <pubPlace>Florence</pubPlace>
+               <date when="1889" />
+               <biblScope from="2" to="2" unit="volume" />
+            </bibl>
             <bibl xml:id="Rehm1929">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Biton</forename>
-                     <addName>Mechanicus</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Albert</forename>
-                     <surname>Rehm</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Erwin</forename>
-                     <surname>Schramm</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="de">Bitons Bau von Belagerungsmaschinen und Geschützen</title>
-               <title level="s" xml:lang="de">Abhandlungen der Bayerischen Akademie der Wissenschaften, Phil.-hist. Kl.</title>
+               <author role="origAuth" ref="#BitMec" />
+               <author role="critEd" ref="#AlbReh" />
+               <author role="critEd" ref="#ErwSch" />
+               <title level="a">Bitons Bau von Belagerungsmaschinen und Geschützen</title>
+               <title level="s">Abhandlungen der Bayerischen Akademie der Wissenschaften, Phil.-hist. Kl., N.F.</title>
                <pubPlace>Munich</pubPlace>
                <date when="1929" />
-               <biblScope from="2" to="2" unit="volume">N.F.</biblScope>
+               <biblScope from="2" to="2" unit="volume" />
+            </bibl>
+            <bibl xml:id="Reuters1957">
+               <author role="origAuth" ref="#Anacharsis" />
+               <author role="critEd" ref="#FraReu" />
+               <title level="m">De Anacharsidis epistulis</title>
+               <pubPlace>Bonn</pubPlace>
+               <date when="1957" />
+            </bibl>
+            <bibl xml:id="Roscher1913">
+               <author role="origAuth" ref="#Hippocrates" />
+               <author role="critEd" ref="#WilRos" />
+               <title level="m">Die hippokratische Schrift von der Siebenzahl</title>
+               <pubPlace>Paderborn</pubPlace>
+               <date when="1913" />
+            </bibl>
+            <bibl xml:id="Rudberg1960">
+               <author ref="#StiRud" />
+               <title level="a">Der Codex Upsaliensis Graecus 8, eine inhaltsreiche Miszellanhandschrift</title>
+               <title level="j">Berliner Byzantinistische Arbeiten</title>
+               <date when="1960" />
+               <biblScope from="16" to="16" unit="volume" />
+               <biblScope from="3" to="9" unit="page" />
+            </bibl>
+            <bibl xml:id="Sakalis1989">
+               <author role="origAuth" ref="#Hippocrates" />
+               <author role="critEd" ref="#DēmSak" />
+               <title level="m" xml:lang="el">Ιπποκράτους επιστολαί: Έκδοση κριτική και ερμηνευτική</title>
+               <pubPlace>Ioannina</pubPlace>
+               <date when="1989" />
+            </bibl>
+            <bibl xml:id="Sakkeliōn1890">
+               <author ref="#IōaSak" />
+               <title level="m" xml:lang="el">Πατμιακὴ βιβλιοθήκη ἤτοι ἀναγραφὴ τῶν ἐν τῇ βιβλιοθήκῃ τῆς κατὰ τὴν νῆσον Πάτμον γεραρᾶς καὶ βασιλικῆς μονῆς τοῦ Ἁγίου Ἀποστόλου καὶ Εὐαγγελιστοῦ Ἰωάννου τοῦ Θεολόγου τεθησαυρισμένων χειρογράφων τευχῶν</title>
+               <pubPlace>Athens</pubPlace>
+               <date when="1890" />
+            </bibl>
+            <bibl xml:id="Sakkeliōn1892">
+               <author role="origAuth" ref="#GrePal" />
+               <author role="critEd" ref="#AlkSak" />
+               <title level="a" xml:lang="el">Γρηγορίου του Παλάμα ’Προς τους αθέους Χιόνας διάλεξις, συγγραφείσα παρά ιατρού του Ταρωνείτου, παρόντος και αυτηκόου γεγονότος’</title>
+               <title level="j" xml:lang="el">Σωτήρ</title>
+               <date when="1892" />
+               <biblScope from="15" to="15" unit="volume" />
+               <biblScope from="240" to="246" unit="page" />
+            </bibl>
+            <bibl xml:id="Sathas1872">
+               <author role="critEd" ref="#KōnSat" />
+               <title level="m">Mesaiōnikē bibliothēkē</title>
+               <pubPlace>Venice</pubPlace>
+               <date from="1872" to="1894" />
+               <biblScope from="1" to="7" unit="volume" />
+               <idno type="URI">http://catalog.hathitrust.org/Record/100332960</idno>
             </bibl>
             <bibl xml:id="Sautel1995">
-               <author>
-                  <persName>
-                     <forename>Jacques-Hubert</forename>
-                     <surname>Sautel</surname>
-                  </persName>
-               </author>
-               <author>
-                  <persName>
-                     <forename>Julien</forename>
-                     <surname>Leroy</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="fr">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
-               <title level="j" xml:lang="la">Bibliologia</title>
+               <author ref="#JacSau" />
+               <author ref="#JulLer" />
+               <title level="m" type="main">Répertoire de réglures dans les manuscrits grecs sur parchemin: base de données</title>
+               <title level="m" type="short">Sautel</title>
+               <title level="j">Bibliologia</title>
                <pubPlace>Turnhout</pubPlace>
                <date when="1995" />
                <biblScope unit="volume" from="13" to="13" />
             </bibl>
             <bibl xml:id="Schneider1908">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Apollodorus</forename>
-                     <addName>Damascenus</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Rudolf</forename>
-                     <surname>Schneider</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="de">Griechische Poliorketiker I</title>
-               <title level="s" xml:lang="de">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse</title>
+               <author role="origAuth" ref="#ApoDam" />
+               <author role="critEd" ref="#RudSch" />
+               <title level="a">Griechische Poliorketiker I</title>
+               <title level="s">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse, N.F.</title>
                <pubPlace>Berlin</pubPlace>
                <date when="1908" />
-               <biblScope from="10" to="10" unit="volume">N.F.</biblScope>
+               <biblScope from="10" to="10" unit="volume" />
                <biblScope from="1" to="1" unit="issue" />
                <biblScope from="8" to="50" unit="page" />
             </bibl>
             <bibl xml:id="Schneider1912">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Athenaeus</forename>
-                     <addName>Mechanicus</addName>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Rudolf</forename>
-                     <surname>Schneider</surname>
-                  </persName>
-               </editor>
-               <title level="a" xml:lang="de">Griechische Poliorketiker III</title>
-               <title level="s" xml:lang="de">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse</title>
+               <author role="origAuth" ref="#AthMec" />
+               <author role="critEd" ref="#RudSch" />
+               <title level="a">Griechische Poliorketiker III</title>
+               <title level="s">Abhandlungen der königlichen Gesellschaft der Wissenschaften zu Göttingen, Philol.-hist. Klasse, N.F.</title>
                <pubPlace>Berlin</pubPlace>
                <date when="1912" />
-               <biblScope from="12" to="12" unit="volume">N.F.</biblScope>
+               <biblScope from="12" to="12" unit="volume" />
                <biblScope from="5" to="5" unit="issue" />
                <biblScope from="8" to="36" unit="page" />
             </bibl>
+            <bibl xml:id="Schopen1829">
+               <author role="origAuth" ref="#NicGre" />
+               <author role="critEd" ref="#LudSch" />
+               <author role="critEd" ref="#ImmBek" />
+               <title level="m">Nicephori Gregorae Historiae Byzantinae</title>
+               <title level="s">Corpus scriptorum historiae Byzantinae</title>
+               <pubPlace>Bonn</pubPlace>
+               <date from="1829" to="1855" />
+               <biblScope from="1" to="3" unit="volume" />
+            </bibl>
+            <bibl xml:id="Searby2003a">
+               <author ref="#DenSea" />
+               <title level="a">A Collection of Mathematical Problems in Cod. Ups. Gr. 8</title>
+               <title level="s">Byzantinische Zeitschrift</title>
+               <date when="2003" />
+               <biblScope unit="volume" from="96" to="96" />
+               <biblScope unit="page" from="689" to="702" />
+            </bibl>
+            <bibl xml:id="Searby2003b">
+               <author role="origAuth" ref="#GreNaz" />
+               <author role="critEd" ref="#DenSea" />
+               <title level="a">A Paraphrase of Gregory of Nazianz’ Carmen De Virtute 2.9 in an Uppsala MS</title>
+               <title level="j">Orientalia Christiana Periodica</title>
+               <date when="2003" />
+               <biblScope unit="volume" from="69" to="69" />
+               <biblScope unit="page" from="341" to="353" />
+            </bibl>
+            <bibl xml:id="Ševčenko1975">
+               <author ref="#IhoŠev" />
+               <title level="a">Theodore Metochites, the Chora, and the Intellectual Trends of His Time</title>
+               <title level="j">The Kariye Djami</title>
+               <pubPlace>Princeton</pubPlace>
+               <date when="1975" />
+               <biblScope from="4" to="4" unit="volume" />
+               <biblScope from="19" to="91" unit="page" />
+            </bibl>
+            <bibl xml:id="Sjöberg1960">
+               <author ref="#LarSjö" />
+               <title level="a">Codices Upsalienses graeci 6 et 8</title>
+               <title level="j">Eranos</title>
+               <date when="1960" />
+               <biblScope from="58" to="58" unit="volume" />
+               <biblScope from="29" to="35" unit="page" />
+            </bibl>
+            <bibl xml:id="Sjöberg1962">
+               <author role="critEd" ref="#LarSjö" />
+               <title level="m">Stephanites und Ichnelates: Überlieferungsgeschichte und Text</title>
+               <title level="s">Studia Graeca Upsaliensia</title>
+               <pubPlace>Uppsala</pubPlace>
+               <date when="1962" />
+               <biblScope from="2" to="2" unit="volume" />
+            </bibl>
+            <bibl xml:id="Smith1990">
+               <author role="origAuth" ref="#Hippocrates" />
+               <author role="critEd" ref="#WesSmi" />
+               <title level="m">Pseudepigraphic Writings: Letters, Embassy, Speech from the Altar, Decree</title>
+               <pubPlace>Leiden</pubPlace>
+               <date when="1990" />
+            </bibl>
             <bibl xml:id="Solmsen1990">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Hesiodus</forename>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Friedrich</forename>
-                     <surname>Solmsen</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Hesiodi Theogonia, Opera et Dies, Scutum</title>
+               <author role="origAuth" ref="#Hesiodus" />
+               <author role="critEd" ref="#FriSol" />
+               <title level="m">Hesiodi Theogonia, Opera et Dies, Scutum</title>
                <pubPlace>Oxford</pubPlace>
                <date when="1990" />
             </bibl>
             <bibl xml:id="Sosower2004">
-               <author>
-                  <persName>
-                     <forename>Mark</forename>
-                     <forename>Lawrence</forename>
-                     <surname>Sosower</surname>
-                  </persName>
-               </author>
-               <title xml:lang="la">Signa officinarum chartariarum in codicibus graecis saeculo sexto decimo fabricatis in bibliothecis Hispaniae</title>
+               <author ref="#MarSos" />
+               <title level="m" type="main">Signa officinarum chartariarum in codicibus graecis saeculo sexto decimo fabricatis in bibliothecis Hispaniae</title>
+               <title level="m" type="short">Sosower</title>
                <pubPlace>Amsterdam</pubPlace>
                <date when="2004" />
             </bibl>
             <bibl xml:id="Speranzi2010">
-               <author>
-                  <persName>
-                     <forename>David</forename>
-                     <surname>Speranzi</surname>
-                  </persName>
-               </author>
-               <title level="a" xml:lang="it">Michele Trivoli e Giano Lascari. Appunti su copisti e manoscritti greci tra Corfù e Firenze</title>
-               <title level="j" xml:lang="it">Studi Slavistici</title>
+               <author ref="#DavSpe" />
+               <title level="a">Michele Trivoli e Giano Lascari. Appunti su copisti e manoscritti greci tra Corfù e Firenze</title>
+               <title level="j">Studi Slavistici</title>
                <date when="2010" />
                <biblScope from="7" to="7" unit="volume" />
-               <biblScope from="263" to="297" unit="page" />               
+               <biblScope from="263" to="297" unit="page" />
             </bibl>
             <bibl xml:id="Strodel2002">
-               <author>
-                  <persName>
-                     <forename>Silvia</forename>
-                     <surname>Strodel</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="de">Zur Überlieferung und zum Verständnis der hellenistischen Technopaignien</title>
-               <title level="s" xml:lang="de">Studien zur klassischen Philologie</title>
+               <author ref="#SilStr" />
+               <title level="m">Zur Überlieferung und zum Verständnis der hellenistischen Technopaignien</title>
+               <title level="s">Studien zur klassischen Philologie</title>
                <pubPlace>Munich</pubPlace>
                <date when="2002" />
                <biblScope unit="volume" from="132" to="132" />
             </bibl>
+            <bibl xml:id="Tambrun1987">
+               <author role="origAuth" ref="#GeoPle" />
+               <author role="critEd" ref="#BriTam" />
+               <title level="m"><foreign xml:lang="grc">Γεωργίου Γεμιστοῦ Πλήθωνος Περὶ ἀρετῶν</foreign>. Georges Gémiste Pléthon. Traité des vertus</title>
+               <pubPlace>Athens</pubPlace>
+               <date when="1987" />
+            </bibl>
+            <bibl xml:id="Terzaghi1944">
+               <author role="origAuth" ref="#SynCyr" />
+               <author role="critEd" ref="#NicTer" />
+               <title level="m">Synesii Cyrenensis Hymni et opuscula</title>
+               <pubPlace>Rome</pubPlace>
+               <date from="1944" to="1949" />
+               <biblScope from="1" to="2" unit="volume" />
+            </bibl>
             <bibl xml:id="Thevenot1693">
-               <editor>
-                  <persName>
-                     <forename>Melchisédech</forename>
-                     <surname>Thevenot</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName>
-                     <forename>Jean</forename>
-                     <surname>Boivin</surname>
-                  </persName>
-               </editor>
-               <editor>
-                  <persName >
-                     <forename>Philippe</forename>
-                     <nameLink>de</nameLink>
-                     <surname>La Hire</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Veterum mathematicorum Athenæi, Bitonis, Apollodori, Heronis, Philonis et aliorum opera, græce et latine pleraque nunc primum edita. Ex manuscriptis codicibus Bibliothecæ regiæ</title>
+               <author role="critEd" ref="#MelThe" />
+               <author role="critEd" ref="#JeaBoi" />
+               <author role="critEd" ref="#PhiLaH" />
+               <title level="m">Veterum mathematicorum Athenæi, Bitonis, Apollodori, Heronis, Philonis et aliorum opera, græce et latine pleraque nunc primum edita. Ex manuscriptis codicibus Bibliothecæ regiæ</title>
                <pubPlace>Paris</pubPlace>
                <date when="1693" />
             </bibl>
+            <bibl xml:id="Thiel1959">
+               <author role="origAuth" ref="#PseCal" />
+               <author role="critEd" ref="#HelThi" />
+               <title level="m">Die Rezension <foreign xml:lang="grc">λ</foreign> des Pseudo-Kallisthenes</title>
+               <pubPlace>Bonn</pubPlace>
+               <date when="1959" />
+            </bibl>
             <bibl xml:id="Thom1995">
-               <author>
-                  <persName>
-                     <forename>Johan</forename>
-                     <forename>Carl</forename>
-                     <surname>Thom</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="en">The Pythagorean golden verses: with introduction and commentary</title>
-               <title level="s" xml:lang="en">Religions in the Graeco-Roman world</title>
+               <author ref="#JohTho" />
+               <title level="m">The Pythagorean golden verses: with introduction and commentary</title>
+               <title level="s">Religions in the Graeco-Roman world</title>
                <pubPlace>Leiden</pubPlace>
                <date when="1995" />
                <biblScope unit="volume" from="123" to="123" />
             </bibl>
+            <bibl xml:id="Tinnefeld2000">
+               <author ref="#FraTin" />
+               <title level="a">Zur Entstehung von Briefsammlungen in der Palaiologenzeit</title>
+               <title level="m">Polypleuros nous: Miscellanea für Peter Schreiner zu seinem 60. Geburtstag</title>
+               <!-- eds. Cordula Scholz and Georgios Makris -->
+               <pubPlace>München</pubPlace>
+               <date when="2000" />
+               <biblScope from="365" to="381" unit="page" />
+            </bibl>
             <bibl xml:id="Tittmann1808">
-               <author xml:lang="la">
-                  <persName>
-                     <forename>Ioannes</forename>
-                     <surname>Zonaras</surname>
-                  </persName>
-               </author>
-               <editor>
-                  <persName>
-                     <forename>Johann</forename>
-                     <forename>August</forename>
-                     <forename>Heinrich</forename>
-                     <surname>Tittmann</surname>
-                  </persName>
-               </editor>
-               <title level="m" xml:lang="la">Iohannis Zonarae lexicon ex tribus codicibus manuscriptis</title>
+               <author role="origAuth" ref="#IoaZon" />
+               <author role="critEd" ref="#JohTit" />
+               <title level="m">Iohannis Zonarae lexicon ex tribus codicibus manuscriptis</title>
                <pubPlace>Leipzig</pubPlace>
                <date when="1808" />
-               <biblScope from="1" to="1" unit="volume" />
-               <biblScope from="1" to="1070" unit="page" />
-               <biblScope from="2" to="2" unit="volume" />
-               <biblScope from="1077" to="1900" unit="page" />
+               <biblScope from="1" to="2" unit="volume" />
             </bibl>
-            <bibl xml:id="Torallas_Tovar1994">
-               <author>
-                  <persName>
-                     <forename>Sofía</forename>
-                     <surname>Torallas Tovar</surname>
-                  </persName>
-               </author>
-               <title level="a" xml:lang="la">De codicibus Graecis Upsaliensibus olim Escurialensibus</title>
-               <title level="j" xml:lang="sp">Erytheia</title>
+            <bibl xml:id="TorallasTovar1994">
+               <author ref="#SofTor" />
+               <title level="a">De codicibus Graecis Upsaliensibus olim Escurialensibus</title>
+               <title level="j">Erytheia</title>
                <pubPlace>Madrid</pubPlace>
                <date when="1994" />
                <biblScope unit="volume" from="15" to="15" />
                <biblScope unit="page" from="191" to="258" />
             </bibl>
+            <bibl xml:id="Trapp1976">
+               <editor role="editorial" ref="#EriTra" />
+               <title type="main" level="m">Prosopographisches Lexikon der Palaiologenzeit</title>
+               <title type="short" level="m">PLP</title>
+               <pubPlace>Wien</pubPlace>
+               <date from="1976" to="1998" />
+               <biblScope from="1" to="15" unit="volume" />
+            </bibl>
+            <bibl xml:id="Trincavelli1537">
+               <author role="critEd" ref="#GioTri" />
+               <author role="critEd" ref="#BarZan" />
+               <title level="m" xml:lang="grc">Ἡσιόδου τοῦ Ἀσκραίου Ἔργα καὶ Ἡμέραι. Θεογονία. Ἀσπὶς Ἡρακλέους.</title>
+               <pubPlace>Venice</pubPlace>
+               <date when="1537" />
+            </bibl>
+            <bibl xml:id="Tziatzi1994">
+               <author ref="#MarTzi" />
+               <title level="m">Die Sprüche der sieben Weisen: zwei byzantinische Sammlungen</title>
+               <title level="s">Beiträge zur Altertumskunde</title>
+               <pubPlace>Stuttgart</pubPlace>
+               <date when="1994" />
+               <biblScope unit="volume" from="51" to="51" />
+            </bibl>
             <bibl xml:id="Vieillefond1970">
-               <author>
-                  <persName>
-                     <forename>Jean-René</forename>
-                     <surname>Vieillefond</surname>
-                  </persName>
-               </author>
-               <title level="m" xml:lang="fr">Les <q>Cestes</q> de Julius Africanus: étude sur l’ensemble des fragments avec édition, traduction et commentaire</title>
+               <author ref="#JeaVie" />
+               <title level="m">Les <q>Cestes</q> de Julius Africanus: étude sur l’ensemble des fragments avec édition, traduction et commentaire</title>
                <pubPlace>Florence</pubPlace>
                <date when="1970" />
+            </bibl>
+            <bibl xml:id="Zanetto1985">
+               <author role="origAuth" ref="#TheSim" />
+               <author role="critEd" ref="#GiuZan" />
+               <title level="m">Theophylacti Simocatae epistulae</title>
+               <pubPlace>Leipzig</pubPlace>
+               <date when="1985" />
+            </bibl>
+            <bibl xml:id="Zervos1909">
+               <author role="origAuth" ref="#AetAmi" />
+               <author role="critEd" ref="#SkeZer" />
+               <title level="a" xml:lang="grc">Ἀετίου Ἀμιδηνοῦ λόγος δέκατος πέμπτος</title>
+               <title level="j" />
+               <date when="1909" />
+               <biblScope from="21" to="21" unit="volume" />
+               <biblScope from="7" to="138" unit="page" />
             </bibl>
          </listBibl>
       </body>
