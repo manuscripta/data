@@ -117,6 +117,14 @@
                            </sch:rule>
                         </sch:pattern>
                      </constraint>
+                  </constraintSpec>                  
+                  <constraintSpec scheme="isoschematron" ident="ref.whitespace.check">
+                     <desc versionDate="2014-09-23" xml:lang="en">checks for whitespace at the beginning of the value of <att>ref</att>.</desc>
+                     <constraint>
+                        <sch:rule context="tei:author">
+                           <sch:report test="@ref[matches(.,'\s$')]">whitespace at the end of the ref value</sch:report>
+                        </sch:rule>
+                     </constraint>
                   </constraintSpec>
                   <attList>
                      <attDef ident="role" mode="change" usage="opt">
@@ -140,6 +148,9 @@
                   <content>
                      <rng:zeroOrMore>
                         <rng:ref name="author" />
+                     </rng:zeroOrMore>
+                     <rng:zeroOrMore>
+                        <rng:ref name="title" />
                      </rng:zeroOrMore>                     
                      <rng:zeroOrMore>
                         <rng:ref name="editor" />
@@ -160,26 +171,16 @@
                      <rng:zeroOrMore>
                         <rng:ref name="idno" />
                      </rng:zeroOrMore>
-                  </content>
-                  <!--<constraintSpec ident="xmlid.check" scheme="isoschematron">
-                  <desc versionDate="2014-09-14" xml:lang="en">checks that the xml:id is made up of the surname of the first author or editor and the publication date</desc>
-                  <constraint>
-                     <sch:pattern>
-                        <sch:rule context="tei:bibl">
-                           <sch:assert test="@xml:id=concat(tei:author[1]//tei:surname[1]/text(),tei:date/@when) or @xml:id=concat(tei:author[1]//tei:surname[1]/text(),tei:date/@from) or @xml:id=concat(tei:editor[1]//tei:surname[1]/text(),tei:date/@when) or @xml:id=concat(tei:editor[1]//tei:surname[1]/text(),tei:date/@from)">The xml:id must consist of the surname of the first author or editor and the publication date.</sch:assert>
-                        </sch:rule>
-                     </sch:pattern>
-                  </constraint>
-               </constraintSpec>-->
-                  <constraintSpec ident="editor.check" scheme="isoschematron">
+                  </content>                  
+                  <!--<constraintSpec ident="editor.check" scheme="isoschematron">
                      <constraint>
                         <sch:pattern>
-                           <sch:rule context="tei:bibl/tei:title[@level='a'][following-sibling::tei:title[@level='m']]">
-                              <sch:assert test="tei:editor"> The editor of the volume is missing. </sch:assert>
+                           <sch:rule context="tei:bibl">
+                              <sch:assert test="tei:editor[preceding-sibling::tei:title[@level='a']][following-sibling::tei:title[@level='m']]"> The editor of the volume is missing. </sch:assert>
                            </sch:rule>
                         </sch:pattern>
                      </constraint>
-                  </constraintSpec>
+                  </constraintSpec>-->
                   <attList>
                      <!--<attDef ident="type" mode="change" usage="req">
                         <valList mode="replace" type="closed">
@@ -289,7 +290,11 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="foreign" module="core" mode="change" />               
-               <elementSpec ident="idno" module="header" mode="change" />
+               <elementSpec ident="idno" module="header" mode="change">
+                  <content>
+                     <textNode />
+                  </content>
+               </elementSpec>
                <elementSpec ident="listBibl" module="core" mode="change">
                   <content>
                      <rng:oneOrMore>
@@ -549,7 +554,8 @@
                      <constraint>
                         <sch:pattern>
                            <sch:rule context="tei:*/@xml:id">
-                              <sch:report test="contains(., '_') or contains(., '-')">The xml:id cannot contain underscores or hyphens</sch:report>
+                              <sch:report test="contains(., '_') or contains(., '-')">The xml:id cannot contain underscores or hyphens. </sch:report>
+                              <!--<sch:assert test="text()[matches(., '\p{IsBasicLatin}')]">The xml:id must only contain basic latin scharacters and numbers.</sch:assert>-->
                            </sch:rule>
                         </sch:pattern>
                      </constraint>
