@@ -334,17 +334,16 @@
                <classSpec ident="att.editLike" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.global" module="tei" type="atts" mode="change">
                   <constraintSpec ident="xmlid.text.check" scheme="isoschematron">
-                     <desc versionDate="2014-09-23" xml:lang="en">checks that <att>xml:id</att> does not contain underscore or hyphen.</desc>
+                     <desc versionDate="2015-03-17" xml:lang="en">checks that <att>xml:id</att> only contains basic latin characters, and optionally of numbers.</desc>
                      <constraint>
                         <sch:pattern>
-                           <sch:rule context="tei:*/@xml:id">
-                              <sch:report test="contains(., '_') or contains(., '-')">The xml:id cannot contain underscores or hyphens</sch:report>
+                           <sch:rule context="tei:*/@xml:id">                              
+                              <sch:assert test="matches(.,'^[A-Za-z]+\d*$')">The xml:id should only consist of basic latin characters, and optionally of numbers.</sch:assert>
                            </sch:rule>
                         </sch:pattern>
                      </constraint>
                   </constraintSpec>
-                  <attList>
-                     <attDef ident="xml:lang" mode="change" usage="opt" />
+                  <attList>                     
                      <attDef ident="n" mode="delete" />
                      <attDef ident="xml:lang" mode="change" usage="opt">
                         <valList mode="replace" type="closed">
