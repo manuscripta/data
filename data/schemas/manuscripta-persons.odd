@@ -189,16 +189,7 @@
                            <rng:ref name="roleName" />
                         </rng:optional>
                      </rng:group>
-                  </content>
-                  <!--FIXA-->
-                  <constraintSpec scheme="isoschematron" ident="ref.whitespace.check">
-                     <desc versionDate="2014-09-23" xml:lang="en">checks for whitespace at the beginning of the value of <att>ref</att>.</desc>
-                     <constraint>
-                        <sch:rule context="tei:persName">
-                           <sch:report test="@ref[matches(.,'^\s')]">whitespace at the beginning of the ref value</sch:report>
-                        </sch:rule>
-                     </constraint>
-                  </constraintSpec>
+                  </content>                  
                   <attList>
                      <attDef ident="when" mode="delete" />
                      <attDef ident="from" mode="delete" />
