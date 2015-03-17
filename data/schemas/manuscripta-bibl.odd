@@ -22,54 +22,107 @@
       <body>
          <div xml:id="guidelines">
             <head>Guidelines for the Bibliography</head>
-            <div xml:id="articles">
-               <head>Articles</head>
-               <p>Use the <att>type</att> attribute with the value <val>article-journal</val> for journal articles.
+            <div xml:id="journal-articles">
+               <head>Articles in journals</head>
+               <p>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <bibl type="article-journal" xml:id="DeStefani1902">
-                        <author ref="#EduDeS" />
-                        <title level="a" xml:lang="it">I manoscritti della Historia Animalium di Eliano</title>
-                        <title level="j" xml:lang="it">Studi italiani di filologia classica</title>
-                        <date when="1902" />
-                        <biblScope unit="volume" from="10" to="10" />
-                        <biblScope unit="page" from="175" to="222" />
+                     <bibl xml:id="Benediktsson1938">
+                        <author ref="#JakBen" />
+                        <title level="a">Ein Frühbyzantinisches Bibellexikon, <foreign xml:lang="grc">λέξεις τῆς ὀκτατεύχου</foreign></title>
+                        <title level="j">Classica et Mediaevalia</title>
+                        <date when="1938" />
+                        <biblScope from="1" to="1" unit="volume" />
+                        <biblScope from="243" to="280" unit="page" />
+                     </bibl>
+                  </egXML>
+                  <specList>
+                     <specDesc key="author" atts="ref" />
+                     <specDesc key="biblScope" atts="from to unit" />                     
+                     <specDesc key="date" atts="when" />
+                     <specDesc key="idno" atts="type" />
+                     <specDesc key="title" atts="level" />
+                  </specList>
+               </p>               
+            </div>
+            <div xml:id="book-articles">
+               <head>Articles in books</head>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <bibl xml:id="Harlfinger1977">
+                     <author ref="#DieHar" />
+                     <title level="a">Zu griechischen Kopisten und Schriftstilen des 15. und 16. Jahrhunderts</title>
+                     <editor ref="#JeaGle" />
+                     <editor ref="#JacBom" />
+                     <editor ref="#JeaIri" />
+                     <title level="m">La Paléographie grecque et byzantine</title>
+                     <pubPlace>Paris</pubPlace>
+                     <date when="1977" />
+                  </bibl>
+               </egXML>
+            </div>
+            <div xml:id="monographs">
+               <head>Monographs</head>
+               <p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <bibl xml:id="Karlsson1981">
+                        <editor ref="#GusKar" />
+                        <title level="m" xml:lang="de">Codex Upsaliensis Graecus 28: Geschichte und Beschreibung der Handschrift nebst einer Nachlese von Texten</title>                        
+                        <pubPlace>Uppsala</pubPlace>
+                        <date when="1981" />                        
                      </bibl>
                   </egXML>
                </p>
                <p>Use the <gi>q</gi> element instead of quotation marks, e.g. in titles.
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <title level="m" xml:lang="fr">Les <q>Cestes</q> de Julius Africanus: étude sur l’ensemble des fragments avec édition, traduction et commentaire</title>
                   </egXML>
                </p>
-            </div>
-            <div xml:id="monographs">
-               <head>Monographs</head>
-               <p>Use the <att>type</att> attribute with the value <val>book</val> for monographs.
+               <p>A link to a digitized item can be given in an <gi>idno</gi> element with the <att>type</att> attribute (value: <val>URI</val>)
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <bibl type="book" xml:id="Karlsson1981">
-                        <editor ref="#GusKar" />
-                        <title level="m" xml:lang="de">Codex Upsaliensis Graecus 28: Geschichte und Beschreibung der Handschrift nebst einer Nachlese von Texten</title>
-                        <title level="s" xml:lang="la">Bibliotheca Ekmaniana Universitatis Upsaliensis</title>
-                        <pubPlace>Uppsala</pubPlace>
-                        <date when="1981" />
-                        <biblScope unit="volume" from="69" to="69" />
+                     <bibl xml:id="Sathas1872">
+                        <author role="critEd" ref="#KonSat" />
+                        <title level="m">Mesaiōnikē bibliothēkē</title>
+                        <pubPlace>Venice</pubPlace>
+                        <date from="1872" to="1894" />
+                        <biblScope from="1" to="7" unit="volume" />
+                        <idno type="URI">http://catalog.hathitrust.org/Record/100332960</idno>
                      </bibl>
                   </egXML>
+                  <specList>
+                     <specDesc key="author" atts="ref" />
+                     <specDesc key="biblScope" atts="from to unit" />                     
+                     <specDesc key="date" atts="when" />
+                     <specDesc key="edition" />
+                     <specDesc key="editor" atts="ref" />
+                     <specDesc key="idno" atts="type" />
+                     <specDesc key="pubPlace" />
+                     <specDesc key="title" atts="level type" />
+                  </specList>
                </p>
             </div>
             <div xml:id="editions">
                <head>Editions</head>
-               <p>Use the <att>type</att> attribute with value <val>edition</val> for editions. The author of the work should be given in the <gi>author</gi> element and the name of the critical editor in the <gi>editor</gi> element. If there are more than one publication place only the first one should be included. In the <gi>date</gi> element the <att>when</att> attribute or the <att>from</att>/<att>to</att> attributes are required.
+               <p>The author of the original work should be given in the <gi>author</gi> element with the <att>role</att> attribute (value: origAuth) and the name of the critical editor in the <gi>author</gi> element with the <att>role</att> attribute (value: critEd). If there are more than one publication place only the first one should be included. In the <gi>date</gi> element the <att>when</att> attribute or the <att>from</att>/<att>to</att> attributes are required.
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <bibl type="edition" xml:id="GarcíaValdés2009">
-                        <author ref="#ClaAel" />
-                        <editor ref="#ManGar" />
-                        <editor ref="#LuiLle" />
-                        <editor ref="#LucRod" />
-                        <title level="m" xml:lang="la">De natura animalium</title>
-                        <title level="s" xml:lang="la">Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</title>
+                     <bibl xml:id="GarciaValdes2009">
+                        <author role="origAuth" ref="#ClaAel" />
+                        <author role="critEd" ref="#ManGar" />
+                        <author role="critEd" ref="#LuiLle" />
+                        <author role="critEd" ref="#LucRod" />
+                        <title level="m">De natura animalium</title>                        
                         <pubPlace>Berlin</pubPlace>
                         <date when="2009" />
+                     </bibl>
+                  </egXML>
+               </p>
+            </div>
+            <div xml:id="manuscripts">
+               <head>Manuscripts</head>
+               <p>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <bibl xml:id="Aurivillius1835">
+                        <author ref="#CarAur" />
+                        <title level="u">Codices Manuscriptos Graecos Bibliothecae Acad. Upsaliensis (handwritten catalogue)</title>
+                        <date when="1835" />
                      </bibl>
                   </egXML>
                </p>
@@ -145,6 +198,9 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="bibl" module="core" mode="change">
+                  <classes mode="change">
+                     <memberOf key="att.typed" mode="delete" />                     
+                  </classes>
                   <content>
                      <rng:zeroOrMore>
                         <rng:ref name="author" />
@@ -198,10 +254,14 @@
                            <valItem ident="thesis" />
                         </valList>
                      </attDef>-->
+                     <!-- Attributes changed and deleted in att.global -->
                      <attDef ident="xml:id" mode="change" usage="req" />
                      <attDef ident="facs" mode="delete" />
                      <attDef ident="n" mode="delete" />
                      <attDef ident="xml:lang" mode="delete" />
+                     <attDef ident="rend" mode="delete" />
+                     <attDef ident="rendition" mode="delete" />
+                     <attDef ident="style" mode="delete" />
                   </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
