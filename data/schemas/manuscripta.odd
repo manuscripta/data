@@ -1337,14 +1337,13 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
                         </classes>
-                        <!--<content>
+                        <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="term" />
                                 <elementRef key="locus" />
                             </alternate>
-                        </content>-->
-                        <content> </content>
+                        </content>                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <catchwords><term>vertical</term>, in the <term>lower right margin</term> of the <term>last verso</term>.</catchwords>
@@ -2044,6 +2043,7 @@
                                 <textNode />
                                 <elementRef key="ex" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="lb" minOccurs="0" maxOccurs="unbounded" />
+                                <elementRef key="unclear" minOccurs="0" maxOccurs="unbounded" />
                             </alternate>
                         </content>
                         <attList>
@@ -3547,6 +3547,7 @@
                                 <elementRef key="date" />
                                 <elementRef key="dimensions" />
                                 <elementRef key="foreign" />
+                                <elementRef key="idno" />
                                 <elementRef key="lb" />
                                 <elementRef key="locus" />
                                 <elementRef key="locusGrp" />
@@ -3776,6 +3777,7 @@
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="lb" />
+                                <elementRef key="sic" />
                             </alternate>
                         </content>
                         <attList>
