@@ -3481,7 +3481,8 @@
                         <constraintSpec ident="date.values" scheme="isoschematron">
                             <constraint>
                                 <sch:rule context="tei:origDate">
-                                    <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)"> You must provide either @when or @to/@from, or @notAfter/@notBefore. </sch:assert>
+                                    <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)"> Either @when or @to/@from, or @notAfter/@notBefore must be provided. </sch:assert>
+                                    <sch:report test="not(text())"> A text description for origDate must be provided</sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3776,8 +3777,10 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
+                                <elementRef key="ex" />
                                 <elementRef key="lb" />
                                 <elementRef key="sic" />
+                                <elementRef key="supplied" />
                             </alternate>
                         </content>
                         <attList>
