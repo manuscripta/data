@@ -575,10 +575,10 @@
                                 </egXML>
                             </p>
                             <p>The items should not be numbered with the <att>n</att> attribute. The numbering will be generated automatically in the XSLT transformation. If the manuscript item is incomplete through loss or damage use the <att>defective</att> attribute with value <val>true</val> (default value is <val>false</val>).</p>
-                            <p>Blank pages should be recorded at the end of a <gi>note</gi> element, in a separate paragraph, with the  <gi>locus</gi> or <gi>locusGrp</gi> element and the text <quote>is/are blank</quote>. Pages containing short notes or scribbles by later hands should be categorized as blank. Give a brief description in a <gi>note</gi> element with a reference to the <gi>handNote</gi> element containing the quote. Table of contents may be quoted under <gi>handNote</gi> in <gi>handDesc</gi>.</p>
+                            <p>Blank pages should be recorded at the end of a <gi>note</gi> element, in a separate paragraph, with the  <gi>locus</gi> or <gi>locusGrp</gi> element and the text <quote>is/are blank</quote>. Pages containing short notes or scribbles by later hands should also be recorded in the <gi>note</gi> element with a reference to the <gi>handNote</gi> if possible. Table of contents may be quoted under <gi>handNote</gi> in <gi>handDesc</gi>.</p>
                             <div xml:id="msitem_unit_locus">
                                 <head>Locus</head>
-                                <p>Give start and end folio of each item according to the guidelines specified in <ptr target="#locus" />. If there are several items on a single folio specify on which line the text starts and ends. For texts scattered over more than one location in the manuscript the <gi>locusGrp</gi> element should be used.
+                                <p>Give the start and end folio of each item according to the guidelines specified in <ptr target="#locus" />. If there are several items on a single folio specify on which line the text starts and ends. For texts scattered over more than one location in the manuscript the <gi>locusGrp</gi> element should be used.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <locusGrp>
                                             <locus from="178r" to="178v" scheme="folios" />
@@ -3162,10 +3162,7 @@
                                     <valItem ident="nat_hist">
                                         <gloss>Naturalis Historia</gloss>
                                         <desc>includes a broad range of topics such as animal nature, horse breeding and training, colors, stones, rivers, meteorology, and agriculture.</desc>
-                                    </valItem>
-                                    <valItem ident="note">
-                                        <gloss>Note added by later hand</gloss>
-                                    </valItem>
+                                    </valItem>                                    
                                     <valItem ident="onir">
                                         <gloss>Onirocritica</gloss>
                                     </valItem>
