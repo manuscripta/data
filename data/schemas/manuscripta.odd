@@ -1343,7 +1343,7 @@
                                 <elementRef key="term" />
                                 <elementRef key="locus" />
                             </alternate>
-                        </content>                        
+                        </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <catchwords><term>vertical</term>, in the <term>lower right margin</term> of the <term>last verso</term>.</catchwords>
@@ -1416,8 +1416,8 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <sequence minOccurs="1" maxOccurs="unbounded">
-                                <elementRef key="formula" />
+                            <sequence minOccurs="0" maxOccurs="unbounded">
+                                <elementRef key="formula" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="p" minOccurs="0" maxOccurs="1" />
                             </sequence>
                             <elementRef key="signatures" minOccurs="0" maxOccurs="1" />
@@ -2982,7 +2982,7 @@
                         </constraintSpec>
                         <attList>
                             <attDef ident="class" mode="change" usage="req">
-                                <valList mode="replace" type="closed">                                    
+                                <valList mode="replace" type="closed">
                                     <valItem ident="left_endleaf">
                                         <gloss>Left endleaf</gloss>
                                     </valItem>
@@ -3162,7 +3162,7 @@
                                     <valItem ident="nat_hist">
                                         <gloss>Naturalis Historia</gloss>
                                         <desc>includes a broad range of topics such as animal nature, horse breeding and training, colors, stones, rivers, meteorology, and agriculture.</desc>
-                                    </valItem>                                    
+                                    </valItem>
                                     <valItem ident="onir">
                                         <gloss>Onirocritica</gloss>
                                     </valItem>
