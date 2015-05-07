@@ -2182,7 +2182,7 @@
                         </classes>
                         <content>
                             <sequence>
-                                <alternate>
+                                <alternate  minOccurs="0" maxOccurs="1">
                                     <elementRef key="locus" />
                                     <elementRef key="locusGrp" />
                                 </alternate>
@@ -2200,7 +2200,7 @@
                                 </alternate>
                             </sequence>
                         </content>
-                        <constraintSpec ident="term.type.script" scheme="isoschematron">
+                        <!--<constraintSpec ident="term.type.script" scheme="isoschematron">
                             <desc versionDate="2014-11-17">Check that the <gi>handNote</gi> element contains at least one <gi>term</gi> element with <att>type</att>
                                 <val>script</val>.</desc>
                             <constraint>
@@ -2208,7 +2208,7 @@
                                     <sch:assert test="tei:term[@type='script']"> The handNote element must contain at least one term element with @type script. </sch:assert>
                                 </sch:rule>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <handDesc>
@@ -3825,6 +3825,16 @@
                                 <sch:pattern>
                                     <sch:rule context="tei:bibl/tei:ref">
                                         <sch:assert test="@target">The ref element must have a target attribute</sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
+                        <constraintSpec ident="xmlid.text.check" scheme="isoschematron">
+                            <desc versionDate="2015-03-17" xml:lang="en">checks that <att>xml:id</att> only contains basic latin characters and numbers.</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:bibl/tei:ref/@target">                              
+                                        <sch:assert test="matches(.,'^#[A-Za-z]+\d{4}[a-z]?$')">The target attribute should only consist of #, the authors surname in basic latin characters, followed by the publication year, and optionally characters a, b, c etc.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
