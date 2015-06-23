@@ -7,18 +7,21 @@ manuscripta/
 ├── data/
 │   ├── authority_files/
 │   ├── msDescs/
-│   │   ├── GUB/
-│   │   ├── KB/
-│   │   ├── LiSB/
-│   │   ├── LUB/
-│   │   ├── NatM/
-│   │   ├── Sko/
-│   │   └── UUB/
+│   │   ├── gub/
+│   │   ├── kb/
+│   │   ├── lsb/
+│   │   ├── lub/
+│   │   ├── natm/
+│   │   ├── ra/
+│   │   ├── sko/
+│   │   └── uub/
 │   ├── schemas/
 │   └── stylesheets/
 └── eXist-db/
     ├── data/
+    ├── metadata/
     ├── modules/
     ├── resources/
+    ├── stylesheets/
     └── templates/
 ```
