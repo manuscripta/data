@@ -19,9 +19,16 @@ manuscripta/
 │   └── stylesheets/
 └── eXist-db/
     ├── data/
+    │   ├── authority_files/
+    │   └── msDescs/
     ├── metadata/
+    │   └── diva/
     ├── modules/
     ├── resources/
+    │   ├── css/
+    │   ├── fonts/
+    │   ├── images/
+    │   └── scripts/
     ├── stylesheets/
     └── templates/
 ```
