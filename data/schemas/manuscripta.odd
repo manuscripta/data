@@ -496,10 +496,10 @@
                 </div>
                 <div xml:id="history_book">
                     <head>History</head>
-                    <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Record the different stages in the provenance in one or more <gi>provenance</gi> elements. The <gi>acquisition</gi> element should describe the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
+                    <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Centuries should be spelled with numbers, e.g. 13th century, and further specifications inside a parentheses, e.g. 13th century (2nd half). Only the attributes <att>notBefore</att>, <att>notAfter</att>, and <att>when</att> should be used for <gi>origDate</gi>, e.g. 13th century = 1201–1300, 13th century (1st half) = 1201–1250. Record the different stages in the provenance in one or more <gi>provenance</gi> elements. The <gi>acquisition</gi> element should describe the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <history>
-                                <origin>Probably written in the <origDate from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                                <origin>Probably written in the <origDate notBefore="1251" notAfter="1300">13th century (2nd half)</origDate>. Place unknown.</origin>
                                 <provenance>At sometime the volume came to <placeName>Venice</placeName>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
                                 <acquisition>It was acquired there by <persName ref="#JohSpa" />
                                         , who was staying in Venice <date from="1692" to="1693">from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios" />: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705" />.</acquisition>
@@ -2182,7 +2182,7 @@
                         </classes>
                         <content>
                             <sequence>
-                                <alternate  minOccurs="0" maxOccurs="1">
+                                <alternate minOccurs="0" maxOccurs="1">
                                     <elementRef key="locus" />
                                     <elementRef key="locusGrp" />
                                 </alternate>
@@ -3471,18 +3471,22 @@
                         </classes>
                         <content>
                             <textNode />
-                        </content>
+                        </content>                        
                         <constraintSpec ident="date.values" scheme="isoschematron">
                             <constraint>
                                 <sch:rule context="tei:origDate">
-                                    <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)"> Either @when or @to/@from, or @notAfter/@notBefore must be provided. </sch:assert>
+                                    <sch:assert test="@when or (@notAfter and @notBefore)"> Either @when or @notAfter/@notBefore must be provided. </sch:assert>
                                     <sch:report test="not(text())"> A text description for origDate must be provided</sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
+                        <attList>
+                            <attDef ident="from" mode="delete" />
+                            <attDef ident="to" mode="delete" />
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <origDate notBefore="1535" notAfter="1555">1540s</origDate>
+                                <origDate notBefore="1251" notAfter="1300">13th century (2nd half)</origDate>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -3834,7 +3838,7 @@
                             <desc versionDate="2015-03-17" xml:lang="en">checks that <att>xml:id</att> only contains basic latin characters and numbers.</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:rule context="tei:bibl/tei:ref/@target">                              
+                                    <sch:rule context="tei:bibl/tei:ref/@target">
                                         <sch:assert test="matches(.,'^#[A-Za-z]+\d{4}[a-z]?$')">The target attribute should only consist of #, the authors surname in basic latin characters, followed by the publication year, and optionally characters a, b, c etc.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
