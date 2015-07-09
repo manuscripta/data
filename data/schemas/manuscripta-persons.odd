@@ -149,8 +149,8 @@
                   <content>
                      <alternate minOccurs="0" maxOccurs="unbounded">
                         <textNode />
-                        <elementRef key="bibl" />                        
-                        <elementRef key="ref" />                                                
+                        <elementRef key="bibl" />
+                        <elementRef key="ref" />
                      </alternate>
                   </content>
                </elementSpec>
@@ -169,27 +169,15 @@
                </elementSpec>
                <elementSpec ident="persName" module="namesdates" mode="change">
                   <content>
-                     <rng:group>
-                        <rng:zeroOrMore>
-                           <rng:ref name="forename" />
-                        </rng:zeroOrMore>
-                        <rng:optional>
-                           <rng:ref name="genName" />
-                        </rng:optional>
-                        <rng:optional>
-                           <rng:ref name="nameLink" />
-                        </rng:optional>
-                        <rng:zeroOrMore>
-                           <rng:ref name="surname" />
-                        </rng:zeroOrMore>
-                        <rng:optional>
-                           <rng:ref name="addName" />
-                        </rng:optional>
-                        <rng:optional>
-                           <rng:ref name="roleName" />
-                        </rng:optional>
-                     </rng:group>
-                  </content>                  
+                     <alternate minOccurs="0" maxOccurs="unbounded">
+                        <elementRef key="forename" minOccurs="0" maxOccurs="unbounded" />
+                        <elementRef key="genName" minOccurs="0" maxOccurs="unbounded" />
+                        <elementRef key="nameLink" minOccurs="0" maxOccurs="unbounded" />
+                        <elementRef key="surname" minOccurs="0" maxOccurs="unbounded" />
+                        <elementRef key="addName" minOccurs="0" maxOccurs="unbounded" />
+                        <elementRef key="roleName" minOccurs="0" maxOccurs="unbounded" />
+                     </alternate>
+                  </content>
                   <attList>
                      <attDef ident="when" mode="delete" />
                      <attDef ident="from" mode="delete" />
@@ -337,13 +325,13 @@
                      <desc versionDate="2015-03-17" xml:lang="en">checks that <att>xml:id</att> only contains basic latin characters, and optionally of numbers.</desc>
                      <constraint>
                         <sch:pattern>
-                           <sch:rule context="tei:*/@xml:id">                              
+                           <sch:rule context="tei:*/@xml:id">
                               <sch:assert test="matches(.,'^[A-Za-z]+\d*$')">The xml:id should only consist of basic latin characters, and optionally of numbers.</sch:assert>
                            </sch:rule>
                         </sch:pattern>
                      </constraint>
                   </constraintSpec>
-                  <attList>                     
+                  <attList>
                      <attDef ident="n" mode="delete" />
                      <attDef ident="xml:lang" mode="change" usage="opt">
                         <valList mode="replace" type="closed">
@@ -403,7 +391,7 @@
                   </attList>
                </classSpec>
                <classSpec ident="att.placement" module="tei" type="atts" mode="delete" />
-               <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />               
+               <classSpec ident="att.typed" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.pointing.group" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
                <classSpec ident="att.scoping" module="tei" type="atts" mode="delete" />
