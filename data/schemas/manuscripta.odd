@@ -111,7 +111,8 @@
                     <head>Bibliographic citations</head>
                     <p>Bibliographic citations should be made using the <gi>bibl</gi> element with a <gi>ref</gi> element referring to the bibliography authority file with the target attribute. References to the relevant pages/columns should be made using the <gi>citedRange</gi> element.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <note>Note that this explicit is situated at the bottom of <locus from="83v" to="83v" scheme="folios" />, not on <locus from="91v" to="91v" scheme="folios" /> as one could have expected. Cf. <bibl>
+                            <note>Note that this explicit is situated at the bottom of <locus from="83v" to="83v" scheme="folios" />, 
+                                not on <locus from="91v" to="91v" scheme="folios" /> as one could have expected. Cf. <bibl>
                                     <ref target="#Migne1857" />
                                     <citedRange from="118" to="118" unit="volume" />
                                     <citedRange from="873A" to="873A" unit="column" />
@@ -149,14 +150,13 @@
                         <head>Interpunction</head>
                         <p>For the Greek question mark the semicolon (U+003B ;) should be used instead of the erotimatiko (U+037E ;).</p>
                         <p>For the Greek semicolon the middle dot (U+00B7 ·) should be used instead of the Greek ano teleia (U+0387 ·).</p>
-                        <p>For the Greek apostrophe the right single quotation mark (U+2019 ’) should be used instead of the apostrophe (U+0027 ') or the Greek psili (U+1FBF ᾿), cf. <ref target="http://www.tlg.uci.edu/encoding/BCM2013.pdf#page=7">TLG Beta Code Manual, p. 7</ref> and <ref target="http://www.unicode.org/versions/Unicode6.2.0/ch06.pdf#page=15">The Unicode Standard, Version 6.2, p. 200</ref>.                        
+                        <p>For the Greek apostrophe the right single quotation mark (U+2019 ’) should be used instead of the apostrophe (U+0027 ') or the Greek psili (U+1FBF ᾿), cf. <ref target="http://www.tlg.uci.edu/encoding/BCM2013.pdf#page=7">TLG Beta Code Manual, p. 7</ref> and <ref target="http://www.unicode.org/versions/Unicode6.2.0/ch06.pdf#page=15">The Unicode Standard, Version 6.2, p. 200</ref>.
                         </p>
                     </div>
                     <div xml:id="transcription">
                         <head>Transcription of Greek</head>
-                        <p>In most cases the Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>. However, the <ptr target="#colophon" /> and text quoted within the physical description should be transcribed as accurately as possible.</p>
-                        <p />
-                        <p>The <gi>supplied</gi> element should be used for editorial additions, the <gi>ex</gi> element for expansions of abbreviations, and the <gi>sic</gi> element for indicating that the word has been transcribed exactly as found in the original source even though it might be erroneous or nonstandard.
+                        <p>In most cases the Greek should be normalized: the first letter of sentences and names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>. However, the subscription, see <ptr target="#colophon" />, and text quoted within the physical description should be transcribed as accurately as possible.</p>                        
+                        <p>The <gi>supplied</gi> element should be used for editorial additions, with the <att>reason</att> attribute (possible values: <val>omitted</val>, <val>illegible</val>, <val>damage</val>, or <val>unknown</val>). The <gi>ex</gi> element should be used for expansions of abbreviations, and the <gi>sic</gi> element for indicating that the word has been transcribed exactly as found in the original source even though it might be erroneous or nonstandard.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <supplied reason="omitted">θ</supplied><ex>εο</ex>ῦ τὸ δῶρ<ex>ον</ex>
                             </egXML>
@@ -166,7 +166,8 @@
                                 <specDesc key="sic" />
                             </specList>
                         </p>
-                        <p>Additions and deletions should be recorded using the <gi>add</gi> and <gi>del</gi> elements.
+                        <p>Additions should be recorded using the <gi>add</gi> element, with the <att>place</att> attribute (legal values: <val>above</val>, <val>below</val>, or <val>margin</val>), and deletions with the <gi>del</gi> element. 
+                            
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <rubric xml:lang="grc">
                                     <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
