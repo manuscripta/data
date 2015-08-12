@@ -109,18 +109,20 @@
                 </div>
                 <div xml:id="citation">
                     <head>Bibliographic citations</head>
-                    <p>Bibliographic citations should be made using the <gi>bibl</gi> element with a <gi>ref</gi> element referring to the bibliography authority file with the target attribute. References to the relevant pages/columns should be made using the <gi>citedRange</gi> element.
+                    <p>Bibliographic citations should be made using the <gi>bibl</gi> element with a <gi>ref</gi> element referring to the bibliography authority file with the target attribute. References to the relevant pages, columns, or volume should be made using the <gi>citedRange</gi> element.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <note>Note that this explicit is situated at the bottom of <locus from="83v" to="83v" scheme="folios" />, 
                                 not on <locus from="91v" to="91v" scheme="folios" /> as one could have expected. Cf. <bibl>
                                     <ref target="#Migne1857" />
                                     <citedRange from="118" to="118" unit="volume" />
                                     <citedRange from="873A" to="873A" unit="column" />
-                                </bibl></note>
+                                </bibl>
+                            </note>
                         </egXML>
                         <specList>
                             <specDesc key="bibl" />
                             <specDesc key="ref" atts="target" />
+                            <specDesc key="citedRange" atts="from to unit" />
                         </specList>
                     </p>
                 </div>
