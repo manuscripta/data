@@ -144,7 +144,7 @@
                                 <num xml:lang="grc" type="ordinal" value="4">δ<hi rend="sup">ου</hi></num>
                             </egXML>
                             <specList>
-                                <specDesc key="num" atts="xml:lang type value" />
+                                <specDesc key="num" atts="type value" />
                             </specList>
                         </p>
                     </div>
@@ -186,8 +186,8 @@
                                 <gap extent="20" reason="damage" unit="mm" /><unclear extent="60" reason="faded" unit="mm" /> ἰορδάνης ἰορδάνης ἰορδάνου <unclear xml:lang="grc" extent="30" reason="faded" unit="mm">τελ</unclear> αἰδέσιμος, ἀξιοτίμητος
                         </egXML>
                             <specList>
-                                <specDesc key="gap" atts="reason extent unit" />
-                                <specDesc key="unclear" atts="reason extent unit" />
+                                <specDesc key="gap" atts="extent reason unit" />
+                                <specDesc key="unclear" atts="extent reason unit" />
                             </specList>
                         </p>
                         <p>Line breaks should be indicated with <gi>lb</gi> elements. Punctuations marks like : and + should be noted. Lower and upper case letters should be kept as they are in the manuscript.                            
@@ -197,7 +197,7 @@
             </div>
             <div xml:id="header">
                 <head>The TEI Header</head>
-                <p>The TEI root element must always contain a declaration of the TEI namespace, a <att>version</att> attribute with the value <val>5.0</val>, and a <att>xml:id</att> consisting of an abbreviation of the library and shelfmark. The TEI element must have a <gi>teiHeader</gi> element and a <gi>facsimile</gi> element. The <gi>teiHeader</gi> element in turn must have an <att>xml:lang</att> attribute defining the language of the description, and a <gi>fileDesc</gi> and <gi>revisionDesc</gi> element.
+                <p>The TEI root element must always contain a declaration of the TEI namespace, a <att>version</att> attribute with the value <val>5.0</val>, and a <att>xml:id</att> consisting of an abbreviation of the library and shelfmark. The TEI element must have a <gi>teiHeader</gi> element and a <gi>facsimile</gi> element, and may have a <gi>text</gi> element. The <gi>teiHeader</gi> element in turn must have an <att>xml:lang</att> attribute defining the language of the description, and a <gi>fileDesc</gi> and <gi>revisionDesc</gi> element.
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <TEI version="5.0" xml:id="uub-gr-027">
                             <teiHeader xml:lang="en">
@@ -216,6 +216,9 @@
                                     <!-- Revision history -->
                                 </revisionDesc>
                             </teiHeader>
+                            <text>
+                                <!-- Optional text -->
+                            </text>
                             <facsimile>
                                 <!-- Image information -->
                             </facsimile>
@@ -224,6 +227,7 @@
                     <specList>
                         <specDesc key="TEI" atts="version xml:id" />
                         <specDesc key="fileDesc" />
+                        <specDesc key="facsimile" />
                     </specList>
                 </p>
                 <div xml:id="filedescription">
