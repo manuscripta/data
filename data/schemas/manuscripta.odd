@@ -157,7 +157,7 @@
                     </div>
                     <div xml:id="transcription">
                         <head>Transcription of Greek</head>
-                        <p>In most cases the Greek should be normalized: the first letter of sentences and names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>. However, the subscription, see <ptr target="#colophon" />, and text quoted within the physical description should be transcribed as accurately as possible.</p>                        
+                        <p>In most cases the Greek should be normalized: the first letter of sentences and names should be capitalized, iota subscripts should be added, and abbreviations expanded. This applies for the <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, and for the <gi>quote</gi> element when it appears within a <gi>msItem</gi>. However, the subscription, see <ptr target="#colophon" />, and text quoted within the physical description should be transcribed as accurately as possible.</p>
                         <p>The <gi>supplied</gi> element should be used for editorial additions, with the <att>reason</att> attribute (possible values: <val>omitted</val>, <val>illegible</val>, <val>damage</val>, or <val>unknown</val>). The <gi>ex</gi> element should be used for expansions of abbreviations, and the <gi>sic</gi> element for indicating that the word has been transcribed exactly as found in the original source even though it might be erroneous or nonstandard.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <supplied reason="omitted">θ</supplied><ex>εο</ex>ῦ τὸ δῶρ<ex>ον</ex>
@@ -1287,11 +1287,12 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
                             <memberOf key="att.docStatus" mode="delete" />
+                            <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="ref" />
+                            <elementRef key="ref" minOccurs="1" maxOccurs="1" />
                             <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded" />
-                        </content>
+                        </content>                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bibl>
@@ -3478,7 +3479,7 @@
                         </classes>
                         <content>
                             <textNode />
-                        </content>                        
+                        </content>
                         <constraintSpec ident="date.values" scheme="isoschematron">
                             <constraint>
                                 <sch:rule context="tei:origDate">
