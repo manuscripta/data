@@ -334,15 +334,7 @@
                 </p>
                 <div xml:id="msidentifier">
                     <head>The Manuscript Identifier</head>
-                    <p>Information about the identity of the manuscripts should be given in the <gi>msIdentifier</gi> element in the following elements and in the following order:
-                        <specList>
-                            <specDesc key="country" />
-                            <specDesc key="settlement" />
-                            <specDesc key="institution" />
-                            <specDesc key="repository" />
-                            <specDesc key="idno" atts="type" />
-                        </specList>
-                    </p>
+                    <p>Information about the identity of the manuscripts should be given in the <gi>msIdentifier</gi> element using the following elements in the following order: <gi>country</gi>, <gi>settlement</gi>, <gi>institution</gi>, <gi>repository</gi>, and <gi>idno</gi>.</p>
                     <p>If the manuscript is known by a another name this should be recorded in a <gi>msName</gi> element. Former shelfmarks should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>former_shelfmark</val>). If the manuscript has a reference number in other catalogues, e.g. Nestle-Aland, this should be given inside an <gi>altIdentifier</gi> element in an <gi>idno</gi> element (<att>type</att> attribute with value <val>other</val>).  
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msIdentifier>
