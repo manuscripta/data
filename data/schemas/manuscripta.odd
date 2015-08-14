@@ -1259,7 +1259,9 @@
                         </content>
                         <attList>
                             <attDef ident="status" mode="change" usage="req">
-                                <defaultVal>free</defaultVal>
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="free" />
+                                </valList>
                             </attDef>
                         </attList>
                         <exemplum>
@@ -1830,7 +1832,6 @@
                             <attDef ident="defective" mode="change" usage="req" />
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="req">
-                                <defaultVal>grc</defaultVal>
                                 <valList mode="replace" type="closed">
                                     <valItem ident="grc">
                                         <desc>Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</desc>
@@ -1993,7 +1994,6 @@
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="req">
-                                <defaultVal>grc</defaultVal>
                                 <valList mode="replace" type="closed">
                                     <valItem ident="grc">
                                         <desc>Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</desc>
@@ -2401,8 +2401,7 @@
                         <attList>
                             <attDef ident="defective" mode="change" usage="req" />
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="req">
-                                <defaultVal>grc</defaultVal>
+                            <attDef ident="xml:lang" mode="change" usage="req">                                
                                 <valList mode="replace" type="closed">
                                     <valItem ident="grc">
                                         <desc>Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</desc>
@@ -4146,8 +4145,7 @@
                             <textNode />
                         </content>
                         <attList>
-                            <attDef ident="reason" mode="change" usage="req">
-                                <defaultVal>unknown</defaultVal>
+                            <attDef ident="reason" mode="change" usage="req">                                
                                 <valList mode="replace" type="closed">
                                     <valItem ident="omitted" />
                                     <valItem ident="illegible" />
@@ -4547,8 +4545,7 @@
                             <rng:empty />
                         </content>
                         <attList>
-                            <attDef ident="mainLang" mode="change" usage="req">
-                                <defaultVal>grc</defaultVal>
+                            <attDef ident="mainLang" mode="change" usage="req">                                
                                 <valList mode="replace" type="closed">
                                     <valItem ident="grc">
                                         <desc>Ancient Greek (to 1453)</desc>
