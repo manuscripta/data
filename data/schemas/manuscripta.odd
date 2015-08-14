@@ -3369,7 +3369,16 @@
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="type" mode="change" usage="req" />
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="cardinal">
+                                        <desc versionDate="2007-06-27" xml:lang="en">absolute number, e.g. 21, 21.5</desc>
+                                    </valItem>
+                                    <valItem ident="ordinal">
+                                        <desc versionDate="2007-06-27" xml:lang="en">ordinal number, e.g. 21st</desc>
+                                    </valItem>                                    
+                                </valList>
+                            </attDef>
                             <attDef ident="value" mode="change" usage="req" />
                             <!-- Changed and deleted attributes in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="req" />
