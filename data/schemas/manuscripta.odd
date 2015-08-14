@@ -2401,7 +2401,7 @@
                         <attList>
                             <attDef ident="defective" mode="change" usage="req" />
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="req">                                
+                            <attDef ident="xml:lang" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="grc">
                                         <desc>Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</desc>
@@ -3369,22 +3369,8 @@
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="type" mode="change" usage="req">
-                                <valList mode="change" type="closed">
-                                    <valItem ident="cardinal">
-                                        <desc versionDate="2007-06-27" xml:lang="en">absolute number, e.g. 21, 21.5</desc>
-                                    </valItem>
-                                    <valItem ident="ordinal">
-                                        <desc versionDate="2007-06-27" xml:lang="en">ordinal number, e.g. 21st</desc>
-                                    </valItem>
-                                    <valItem ident="fraction">
-                                        <desc versionDate="2007-06-27" xml:lang="en">fraction, e.g. one half or three-quarters</desc>
-                                    </valItem>
-                                    <valItem ident="percentage">
-                                        <desc versionDate="2007-06-27" xml:lang="en">a percentage</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
+                            <attDef ident="type" mode="change" usage="req" />
+                            <attDef ident="value" mode="change" usage="req" />
                             <!-- Changed and deleted attributes in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="req" />
                             <attDef ident="n" mode="delete" />
@@ -3438,8 +3424,12 @@
                                                 <hi rend="sub">Q30</hi>(IV + 3f.<hi rend="super">f.196–198</hi>)<hi rend="super">f.206</hi>: 
                                                 3 single leaves pasted together and onto the following quaternion + <hi rend="sub">Q31</hi>IV<hi rend="super">f.214</hi> + <hi rend="sub">Q32</hi>III<hi rend="super">f.220</hi>
                                             </formula>
-                                            <signatures><term>none</term></signatures>
-                                            <catchwords><term>none</term></catchwords>
+                                            <signatures>
+                                                <term>none</term>
+                                            </signatures>
+                                            <catchwords>
+                                                <term>none</term>
+                                            </catchwords>
                                         </collation>
                                     </supportDesc>
                                     <layoutDesc>
@@ -4145,7 +4135,7 @@
                             <textNode />
                         </content>
                         <attList>
-                            <attDef ident="reason" mode="change" usage="req">                                
+                            <attDef ident="reason" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="omitted" />
                                     <valItem ident="illegible" />
@@ -4545,7 +4535,7 @@
                             <rng:empty />
                         </content>
                         <attList>
-                            <attDef ident="mainLang" mode="change" usage="req">                                
+                            <attDef ident="mainLang" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="grc">
                                         <desc>Ancient Greek (to 1453)</desc>
