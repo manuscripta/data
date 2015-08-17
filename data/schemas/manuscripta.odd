@@ -1073,7 +1073,7 @@
                             <elementRef key="facsimile" />
                         </content>
                         <attList>
-                            <!-- Modified and deleted attributes in att.global -->
+                            <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:id" mode="change" usage="req" />
                             <attDef ident="version" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
@@ -1084,12 +1084,42 @@
                             </attDef>
                             <attDef ident="n" mode="delete" />
                             <attDef ident="xml:lang" mode="delete" />
+                            <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete" />
-                            <attDef ident="rendition" mode="delete" />
-                            <attDef ident="style" mode="delete" />
-                            <!-- Deleted attribute in att.global -->
+                            <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete" />
+                            <attDef ident="resp" mode="delete" />
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <TEI version="5.0" xml:id="uub-gr-027">
+                                    <teiHeader xml:lang="en">
+                                        <fileDesc>
+                                            <titleStmt>
+                                                <!-- Title information -->
+                                            </titleStmt>
+                                            <publicationStmt>
+                                                <!-- Information about the publication -->
+                                            </publicationStmt>
+                                            <sourceDesc>
+                                                <!-- The MS description -->
+                                            </sourceDesc>
+                                        </fileDesc>
+                                        <revisionDesc>
+                                            <!-- Revision history -->
+                                        </revisionDesc>
+                                    </teiHeader>
+                                    <text>
+                                        <!-- Optional text -->
+                                    </text>
+                                    <facsimile>
+                                        <!-- Image information -->
+                                    </facsimile>
+                                </TEI>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="acquisition" module="msdescription" mode="change">
                         <classes mode="change">
@@ -1133,13 +1163,15 @@
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="facs" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />                            
                             <attDef ident="n" mode="delete" />
-                            <attDef ident="rend" mode="delete" />
-                            <attDef ident="rendition" mode="delete" />
-                            <attDef ident="style" mode="delete" />
-
+                            <!-- Attributes changed and deleted in att.rendition -->
+                            <attDef ident="rend" mode="delete" />                            
+                            <!-- Attributes changed and deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete" />
+                            <attDef ident="resp" mode="delete" />
                             <!-- Closed value list for @place -->
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
@@ -3376,7 +3408,7 @@
                                     </valItem>
                                     <valItem ident="ordinal">
                                         <desc versionDate="2007-06-27" xml:lang="en">ordinal number, e.g. 21st</desc>
-                                    </valItem>                                    
+                                    </valItem>
                                 </valList>
                             </attDef>
                             <attDef ident="value" mode="change" usage="req" />
