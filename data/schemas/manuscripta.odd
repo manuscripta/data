@@ -543,7 +543,7 @@
                 </div>
                 <div xml:id="codicological_unit">
                     <head>Codicological Unit(s)</head>
-                    <p>Each codicological unit <gi>msPart</gi> should contain the following elements: 
+                    <p>Each codicological unit should be described in a separate <gi>msPart</gi> element using the following elements: 
                         <specList>
                             <specDesc key="msIdentifier" />
                             <specDesc key="msContents" />
@@ -551,7 +551,8 @@
                             <specDesc key="history" />
                         </specList>
                     </p>
-                    <p>Each codicological unit should be numbered using arabic numerals inside the <gi>idno</gi> in the <gi>msIdentifier</gi> element. The value for <att>type</att> of the <gi>idno</gi> element should be <val>codicological_unit</val>. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <p>Each codicological unit should be numbered using arabic numerals inside the <gi>idno</gi> in the <gi>msIdentifier</gi> element. The value for <att>type</att> of the <gi>idno</gi> element should be <val>codicological_unit</val>.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <msPart>
                                 <msIdentifier>
                                     <idno type="codicological_unit">1</idno>
@@ -593,13 +594,13 @@
                             </div>
                             <div xml:id="msitem_unit_textlanguage">
                                 <head>Text Language</head>
-                                <p>Give the text language for each <gi>msItem</gi> in the <att>mainLang</att> attribute (default value is Greek).  
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>Give the text language for each <gi>msItem</gi> in the <att>mainLang</att> attribute (default value is Greek).
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <textLang mainLang="grc" />
                                     </egXML>
                                 </p>
-                                <p>For bilingual or multilingual texts give the other languages in the <att>otherLangs</att> attribute.    
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>For bilingual or multilingual texts give the other languages in the <att>otherLangs</att> attribute.
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <textLang mainLang="grc" otherLangs="la" />
                                     </egXML>
                                 </p>
@@ -607,7 +608,7 @@
                             <div xml:id="msitem_unit_author">
                                 <head>Author</head>
                                 <p>The author name should be recorded inside the <gi>author</gi> element in a <gi>persName</gi> element with a reference to the persons authority file, see <ptr target="#personalnames" />. The <gi>author</gi> element should be omitted for anonymous works.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <author>
                                             <persName ref="#ClaAel" evidence="external" cert="high" />
                                         </author>
@@ -616,15 +617,15 @@
                             </div>
                             <div xml:id="title">
                                 <head>Title</head>
-                                <p>The title should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref> and the <att>type</att> attribute should then be set with the (default) value <val>uniform</val>. Give the URI for the text in Pinakes in a <att>ref</att> attribute. A BHG or CPG reference may also be give in the <att>key</att> attribute. If the work is known under an alternative title, this may be given in a separate <gi>title</gi> element with a <att>key</att> attribute containing the TLG, BHG, or CPG number for the text, and the <att>type</att> attribute with the value <val>alt</val>.                 
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>The title should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref> and the <att>type</att> attribute should then be set with the (default) value <val>uniform</val>. Give the URI for the text in Pinakes in a <att>ref</att> attribute. A BHG or CPG reference may also be give in the <att>key</att> attribute. If the work is known under an alternative title, this may be given in a separate <gi>title</gi> element with a <att>key</att> attribute containing the TLG, BHG, or CPG number for the text, and the <att>type</att> attribute with the value <val>alt</val>.
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <author>Aelius Aristides</author>
                                         <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/7462" type="uniform" xml:lang="la">In Apellam</title>
                                         <title key="TLG0284.010" type="alt" xml:lang="gr">Ἀπελλᾶ γενεθλιακός</title>
                                     </egXML>
                                 </p>
-                                <p>For works not included in Pinakes a descriptive title in English should be provided and the <att>type</att> attribute should then be set with the value <val>desc</val>.    
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>For works not included in Pinakes a descriptive title in English should be provided and the <att>type</att> attribute should then be set with the value <val>desc</val>.
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <title type="desc" xml:lang="en">Glossary to the Octateuch</title>
                                         <rubric xml:lang="gr">ἐκ τῆς ὀκτατεύχου</rubric>
                                     </egXML>
@@ -633,30 +634,28 @@
                             <div xml:id="rubric">
                                 <head>Rubric</head>
                                 <p>Rubrics should be indicated for all texts. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <rubric xml:lang="grc">Βίτωνος κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπελτιστῶν</rubric>
                                     </egXML>
                                 </p>
-                                <p>If there is no rubric in the manuscript give the following value: 
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>If there is no rubric in the manuscript give the following value:
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <rubric>None</rubric>
                                     </egXML>
                                 </p>
                             </div>
                             <div xml:id="incipit">
                                 <head>Incipit</head>
-                                <p>The incipit should be given for partially or completely unedited works; for excerpts, fragments or paraphrases of edited works; for edited texts where the incipit differs from the edited version. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. For mutilated incipits the <att>defective</att> attribute with value <val>true</val> should be used (default value is <val>false</val>). For incipits of excerpts use <att>defective</att> attribute with the value <val>inapplicable</val>.
-                        </p>
+                                <p>The incipit should be given for partially or completely unedited works; for excerpts, fragments or paraphrases of edited works; for edited texts where the incipit differs from the edited version. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. For mutilated incipits the <att>defective</att> attribute with value <val>true</val> should be used (default value is <val>false</val>). For incipits of excerpts use <att>defective</att> attribute with the value <val>inapplicable</val>.</p>
                             </div>
                             <div xml:id="explicit">
                                 <head>Explicit</head>
-                                <p>The explicit should be given for partially or completely unedited works; for excerpts, fragments or paraphrases of edited works; for edited texts where the explicit differs from the edited version. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. For mutilated explicits the <att>defective</att> attribute with value <val>true</val> should be used (default value is <val>false</val>). For explicits of excerpts use <att>defective</att> attribute with the value <val>inapplicable</val>.
-                        </p>
+                                <p>The explicit should be given for partially or completely unedited works; for excerpts, fragments or paraphrases of edited works; for edited texts where the explicit differs from the edited version. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded. For mutilated explicits the <att>defective</att> attribute with value <val>true</val> should be used (default value is <val>false</val>). For explicits of excerpts use <att>defective</att> attribute with the value <val>inapplicable</val>.</p>
                             </div>
                             <div xml:id="finalrubric">
                                 <head>Final rubric</head>
                                 <p>The final rubric should be given only when it differs from the rubric. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/id/2308" xml:lang="la">De Constructione Bellicarum Machinarum et Catapultarum</title>
                                         <title key="TLG 1226.001" xml:lang="grc" type="alt">Κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπαλτικῶν</title>
                                         <rubric xml:lang="grc">Βίτωνος κατασκευαὶ πολεμικῶν ὀργάνων καὶ καταπελτιστῶν</rubric>
@@ -670,8 +669,8 @@
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <note><!-- ADD EXAMPLE --></note>
                                     </egXML></p>
-                                <p>For longer texts a table of contents should be given in a <gi>list</gi> element with <att>type</att> attribute (value: <val>toc</val>). In this case use record each chapter/section in a separate paragraph inside a <gi>note</gi> element with <att>type</att> attribute (value: <val>toc</val>). 
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>For longer texts a table of contents should be given in a <gi>list</gi> element with <att>type</att> attribute (value: <val>toc</val>). In this case use record each chapter/section in a separate paragraph inside a <gi>note</gi> element with <att>type</att> attribute (value: <val>toc</val>).
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <note>
                                             <list type="toc">
                                                 <item>
@@ -693,13 +692,12 @@
                             </div>
                             <div xml:id="quote">
                                 <head>Quote</head>
-                                <p>Quotations from the manuscripts can be given in a <gi>quote</gi> element for recording other bits of the text not covered by <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>finalRubric</gi>, and <gi>colophon</gi>. Longer texts should be transcribed in the <gi>text</gi> element, see Guidelines <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#index-body.1_div.10_div.3_div.5_div.2">10.3.5.2 Linking a location to a transcription or an image</ref>. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.
-                        </p>
+                                <p>Quotations from the manuscripts can be given in a <gi>quote</gi> element for recording other bits of the text not covered by <gi>rubric</gi>, <gi>incipit</gi>, <gi>explicit</gi>, <gi>finalRubric</gi>, and <gi>colophon</gi>. Longer texts should be transcribed in the <gi>text</gi> element, see Guidelines <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#index-body.1_div.10_div.3_div.5_div.2">10.3.5.2 Linking a location to a transcription or an image</ref>. The Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</p>
                             </div>
                             <div xml:id="colophon">
                                 <head>Colophon</head>
-                                <p>Subscription should be given in the <gi>colophon</gi> element in the <gi>msItem</gi> element of the text to which it belongs in the manuscript. The text should be transcribed as accurately as possible using the transcription rules described at <ptr target="#transcription" />. See also discussion on <ref target="http://tei.markmail.org/thread/orswpj5rn4nspngg">TEI-list</ref>. 
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <p>Subscription should be given in the <gi>colophon</gi> element in the <gi>msItem</gi> element of the text to which it belongs in the manuscript. The text should be transcribed as accurately as possible using the transcription rules described at <ptr target="#transcription" />. See also discussion on <ref target="http://tei.markmail.org/thread/orswpj5rn4nspngg">TEI-list</ref>.
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <colophon xml:lang="grc">
                                             <locus from="119r" to="119r" scheme="folios" />
                                             <supplied xml:lang="grc" reason="omitted">θ</supplied><ex xml:lang="grc">ε</ex>ῷ 
@@ -718,7 +716,7 @@
                                 <head>Filiation</head>
                                 <p>Information about the relationship of the present manuscript to other surviving manuscripts of the same text should be recorded in the <gi>filiation</gi> element and <att>type</att> attribute with the value <val>protograph</val>, <val>apograph</val> or <val>antigraph</val> (indirect exemplar). Quoted manuscripts would be enclosed in <gi>idno</gi> elements with a <att>type</att> attribute (value <val>ms_ref</val>).</p>
                                 <p>If the present manuscript is referred to with a siglum in editions and articles, this should be mentioned in a separate <gi>filiation</gi> element and <att>type</att> attribute with the value <val>siglum</val>. Full references to these editions and articles should be given in the <gi>additional</gi> element.
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <filiation type="protograph"><idno type="ms_ref">Codex Vaticanus Palatinus Graecus 267</idno> (15th cent.), cf. 
                                 <bibl>
                                                 <ref target="#DeStefani1902" />
