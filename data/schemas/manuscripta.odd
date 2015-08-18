@@ -376,28 +376,26 @@
                     <head>Endleaves</head>
                     <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>left_endleaf</val> or <val>right_endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. For the guidelines on locus see <ptr target="#locus" />.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <msPart>
-                                <msContents>
-                                    <msItem class="left_endleaf">
-                                        <locusGrp>
-                                            <locus from="LCI" to="LCI" scheme="other" />
-                                            <locus from="L1r" to="L2v" scheme="folios" />
-                                        </locusGrp>
-                                        <note>Blank endleaves</note>
-                                    </msItem>
-                                    <msItem class="left_endleaf">
-                                        <locus from="L3r" to="L3v" scheme="folios" />
-                                        <note>Table of contents</note>
-                                    </msItem>
-                                    <msItem class="right_endleaf">
-                                        <locusGrp>
-                                            <locus from="R1r" to="R2v" scheme="folios" />
-                                            <locus from="RCI" to="RCI" scheme="other" />
-                                        </locusGrp>
-                                        <note>Blank endleaves</note>
-                                    </msItem>
-                                </msContents>
-                            </msPart>
+                            <msContents>
+                                <msItem class="left_endleaf">
+                                    <locusGrp>
+                                        <locus from="LCI" to="LCI" scheme="other" />
+                                        <locus from="L1r" to="L2v" scheme="folios" />
+                                    </locusGrp>
+                                    <note>Blank endleaves</note>
+                                </msItem>
+                                <msItem class="left_endleaf">
+                                    <locus from="L3r" to="L3v" scheme="folios" />
+                                    <note>Table of contents</note>
+                                </msItem>
+                                <msItem class="right_endleaf">
+                                    <locusGrp>
+                                        <locus from="R1r" to="R2v" scheme="folios" />
+                                        <locus from="RCI" to="RCI" scheme="other" />
+                                    </locusGrp>
+                                    <note>Blank endleaves</note>
+                                </msItem>
+                            </msContents>
                         </egXML>
                         <specList>
                             <specDesc key="msContents" />
@@ -420,27 +418,25 @@
                         <head>Object Description</head>
                         <p>In the <gi>objectDesc</gi> element the support, extent, and collation of the endleaves should be decribed, see <ptr target="#support" />, <ptr target="#extent_unit" /> and <ptr target="#collation" />. The foliation of the whole manuscript should also be recorded here, see <ptr target="#foliation" />.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <msPart>
-                                    <physDesc>
-                                        <objectDesc>
-                                            <supportDesc material="paper">
-                                                <support>
-                                                    <p> </p>
-                                                </support>
-                                                <extent>
-                                                    <measure type="left_flyleaves" quantity="2" />
-                                                    <measure type="right_flyleaves" quantity="2" />
-                                                </extent>
-                                                <foliation>
-                                                    <!-- ADD EXAMPLE -->
-                                                </foliation>
-                                                <collation>
-                                                    <!-- ADD EXAMPLE -->
-                                                </collation>
-                                            </supportDesc>
-                                        </objectDesc>
-                                    </physDesc>
-                                </msPart>
+                                <physDesc>
+                                    <objectDesc>
+                                        <supportDesc material="paper">
+                                            <support>
+                                                <p> </p>
+                                            </support>
+                                            <extent>
+                                                <measure type="left_flyleaves" quantity="2" />
+                                                <measure type="right_flyleaves" quantity="2" />
+                                            </extent>
+                                            <foliation>
+                                                <!-- ADD EXAMPLE -->
+                                            </foliation>
+                                            <collation>
+                                                <!-- ADD EXAMPLE -->
+                                            </collation>
+                                        </supportDesc>
+                                    </objectDesc>
+                                </physDesc>
                             </egXML>
                         </p>
                         <p>This structure should be used even if the manuscript contains no endleaves. <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1163,10 +1159,10 @@
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt" />
-                            <attDef ident="xml:id" mode="delete" />                            
+                            <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <!-- Attributes changed and deleted in att.rendition -->
-                            <attDef ident="rend" mode="delete" />                            
+                            <attDef ident="rend" mode="delete" />
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                             <!-- Attributes deleted in att.global.responsibility -->
@@ -2677,7 +2673,7 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="bibl" minOccurs="2" maxOccurs="unbounded" />
+                            <elementRef key="bibl" minOccurs="1" maxOccurs="unbounded" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5084,7 +5080,7 @@
                             <attDef ident="confidence" mode="delete" />
                         </attList>
                     </classSpec>
-                    <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />                    
+                    <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.scoping" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.segLike" module="tei" type="atts" mode="change">
                         <attList>
