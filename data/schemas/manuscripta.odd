@@ -1163,10 +1163,10 @@
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt" />
-                            <attDef ident="xml:id" mode="delete" />
+                            <attDef ident="xml:id" mode="delete" />                            
                             <attDef ident="n" mode="delete" />
                             <!-- Attributes changed and deleted in att.rendition -->
-                            <attDef ident="rend" mode="delete" />
+                            <attDef ident="rend" mode="delete" />                            
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                             <!-- Attributes deleted in att.global.responsibility -->
@@ -1195,10 +1195,7 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <alternate minOccurs="1" maxOccurs="1">
-                                <elementRef key="listBibl" minOccurs="1" maxOccurs="1" />
-                                <elementRef key="bibl" minOccurs="1" maxOccurs="1" />
-                            </alternate>
+                            <elementRef key="listBibl" minOccurs="1" maxOccurs="1" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5087,7 +5084,7 @@
                             <attDef ident="confidence" mode="delete" />
                         </attList>
                     </classSpec>
-                    <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
+                    <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />                    
                     <classSpec ident="att.scoping" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.segLike" module="tei" type="atts" mode="change">
                         <attList>
