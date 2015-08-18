@@ -5000,6 +5000,19 @@
                             <attDef ident="style" mode="delete" />
                         </attList>
                     </classSpec>
+                    <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="cert" mode="change">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="high" />
+                                    <valItem ident="medium" />
+                                    <valItem ident="low" />
+                                    <valItem ident="unknown" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="resp" mode="delete" />
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.handFeatures" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.internetMedia" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.media" module="tei" type="atts" mode="change">
@@ -5071,20 +5084,7 @@
                             <attDef ident="confidence" mode="delete" />
                         </attList>
                     </classSpec>
-                    <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.responsibility" module="tei" type="atts" mode="change">
-                        <attList>
-                            <attDef ident="cert" mode="change">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="high" />
-                                    <valItem ident="medium" />
-                                    <valItem ident="low" />
-                                    <valItem ident="unknown" />
-                                </valList>
-                            </attDef>
-                            <attDef ident="resp" mode="delete" />
-                        </attList>
-                    </classSpec>
+                    <classSpec ident="att.readFrom" module="tei" type="atts" mode="delete" />                    
                     <classSpec ident="att.scoping" module="tei" type="atts" mode="delete" />
                     <classSpec ident="att.segLike" module="tei" type="atts" mode="change">
                         <attList>
