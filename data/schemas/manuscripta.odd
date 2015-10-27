@@ -1027,7 +1027,7 @@
                             <p>The <gi>additions</gi> element is not used. Marginalia, notes, and other additions of interest should be recorded either in the <gi>handDesc</gi> or the <gi>provenance</gi> element.</p>
                         </div>
                     </div>
-                    <div xml:id="history_unit"> </div>                    
+                    <div xml:id="history_unit"> </div>
                 </div>
             </div>
             <div xml:id="works_cited">
@@ -1872,7 +1872,7 @@
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                             <!-- Attributes deleted in att.global.rendition -->
-                            <attDef ident="rend" mode="delete" />                            
+                            <attDef ident="rend" mode="delete" />
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete" />
                         </attList>
@@ -2030,7 +2030,7 @@
                                     <valItem ident="la" />
                                 </valList>
                             </attDef>
-                            <attDef ident="n" mode="delete" />                            
+                            <attDef ident="n" mode="delete" />
                             <attDef ident="xml:id" mode="delete" />
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
@@ -2087,7 +2087,7 @@
                             <!-- Attributes changed and deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
                             <!-- Attributes deleted in att.global.rendition -->
-                            <attDef ident="rend" mode="delete" />                            
+                            <attDef ident="rend" mode="delete" />
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete" />
                         </attList>
@@ -2919,10 +2919,10 @@
                             <attDef ident="n" mode="delete" />
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
-                            
+
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete" />
-                            
+
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete" />
                         </attList>
@@ -4096,7 +4096,7 @@
                         <attList>
                             <!-- Attributes deleted from att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt" />
-                            <attDef ident="xml:id" mode="delete" />                            
+                            <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <!-- Attributes deleted from att.global.fac -->
                             <attDef ident="facs" mode="delete" />
@@ -4364,21 +4364,17 @@
                         <constraintSpec ident="greek.check" scheme="isoschematron">
                             <desc versionDate="2014-08-01">Check that <att>xml:lang</att> with <val>grc</val> is used for Greek characters</desc>
                             <constraint>
-                                <sch:pattern>
-                                    <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
-                                        <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
-                                    </sch:rule>
-                                </sch:pattern>
+                                <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
+                                    <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
+                                </sch:rule>
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="latin.check" scheme="isoschematron">
                             <desc versionDate="2014-08-01">Checks that <att>xml:lang</att> with <val>grc</val> is not used for Latin letters or numbers</desc>
                             <constraint>
-                                <sch:pattern>
-                                    <sch:rule context="//*[@xml:lang='grc' or @xml:lang='el']">
-                                        <sch:report test="text()[matches(., '[(\p{N}|\p{L})-[\p{IsGreek}\p{IsGreekExtended}]]')]"> Only characters from Greek and Greek extended chart range are allowed in elements with the xml:lang="grc" or xml:lang="el".</sch:report>
-                                    </sch:rule>
-                                </sch:pattern>
+                                <sch:rule context="//*[@xml:lang='grc' or @xml:lang='el']">
+                                    <sch:report test="text()[matches(., '[(\p{N}|\p{L})-[\p{IsGreek}\p{IsGreekExtended}]]')]"> Only characters from Greek and Greek extended chart range are allowed in elements with the xml:lang="grc" or xml:lang="el".</sch:report>
+                                </sch:rule>
                             </constraint>
                         </constraintSpec>
                         <constraintSpec ident="check.forbidden.Greek.charcters" scheme="isoschematron">
