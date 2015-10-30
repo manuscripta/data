@@ -3,12 +3,24 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2015-10-23T13:03:46Z. .
+Schema generated from ODD source 2015-10-30T12:03:07Z. .
 TEI Edition: Version 2.8.0. Last updated on
 	6th April 2015, revision 13197
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
   
 --><!--[https://creativecommons.org/licenses/by/4.0/] Creative Commons Attribution 4.0 International-->
+   <define name="macro.specialPara">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="model.gLike"/>
+            <ref name="model.phrase"/>
+            <ref name="model.inter"/>
+            <ref name="model.divPart"/>
+            <ref name="model.global"/>
+         </choice>
+      </zeroOrMore>
+   </define>
    <define name="macro.xtext">
       <zeroOrMore>
          <choice>
@@ -213,6 +225,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
    <define name="att.datable.attributes">
       <ref name="att.datable.w3c.attributes"/>
    </define>
+   <define name="att.global.responsibility.attributes">
+      <ref name="att.global.responsibility.attribute.cert"/>
+   </define>
    <define name="att.global.responsibility.attribute.cert">
       <optional>
          <attribute name="cert">
@@ -220,6 +235,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
             <ref name="data.certainty"/>
          </attribute>
       </optional>
+   </define>
+   <define name="att.global.rendition.attributes">
+      <ref name="att.global.rendition.attribute.rend"/>
    </define>
    <define name="att.global.rendition.attribute.rend">
       <optional>
@@ -230,6 +248,59 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
                   <ref name="data.word"/>
                </oneOrMore>
             </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.attributes">
+      <ref name="att.global.rendition.attributes"/>
+      <ref name="att.global.facs.attributes"/>
+      <ref name="att.global.responsibility.attributes"/>
+      <ref name="att.global.attribute.xmlid"/>
+      <ref name="att.global.attribute.n"/>
+      <ref name="att.global.attribute.xmllang"/>
+   </define>
+   <define name="att.global.attribute.xmlid">
+      <optional>
+         <attribute name="xml:id">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
+            <data type="ID"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.attribute.n">
+      <optional>
+         <attribute name="n">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
+            <ref name="data.text"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.attribute.xmllang">
+      <optional>
+         <attribute name="xml:lang">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
+            <choice>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+               <value>de</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+               <value>el</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+               <value>it</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+               <value>la</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <value>nl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+               <value>sp</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+               <value>sv</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+            </choice>
          </attribute>
       </optional>
    </define>
@@ -353,6 +424,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
          <ref name="persName"/>
       </oneOrMore>
    </define>
+   <define name="model.segLike">
+      <notAllowed/>
+   </define>
    <define name="model.hiLike">
       <choice>
          <ref name="hi"/>
@@ -432,6 +506,12 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
       <oneOrMore>
          <ref name="title"/>
       </oneOrMore>
+   </define>
+   <define name="model.highlighted">
+      <choice>
+         <ref name="model.hiLike"/>
+         <ref name="model.emphLike"/>
+      </choice>
    </define>
    <define name="model.dateLike">
       <choice>
@@ -537,6 +617,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
          <ref name="width"/>
       </oneOrMore>
    </define>
+   <define name="model.egLike">
+      <notAllowed/>
+   </define>
+   <define name="model.graphicLike">
+      <choice>
+         <ref name="graphic"/>
+         <ref name="formula"/>
+      </choice>
+   </define>
    <define name="model.offsetLike">
       <notAllowed/>
    </define>
@@ -554,6 +643,19 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
    </define>
    <define name="model.offsetLike_sequenceRepeatable">
       <notAllowed/>
+   </define>
+   <define name="model.pPart.msdesc">
+      <choice>
+         <ref name="catchwords"/>
+         <ref name="dimensions"/>
+         <ref name="locus"/>
+         <ref name="locusGrp"/>
+         <ref name="material"/>
+         <ref name="origDate"/>
+         <ref name="origPlace"/>
+         <ref name="signatures"/>
+         <ref name="watermark"/>
+      </choice>
    </define>
    <define name="model.pPart.editorial">
       <choice>
@@ -659,12 +761,87 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
          <ref name="supplied"/>
       </oneOrMore>
    </define>
+   <define name="model.pPart.edit">
+      <choice>
+         <ref name="model.pPart.editorial"/>
+         <ref name="model.pPart.transcriptional"/>
+      </choice>
+   </define>
+   <define name="model.ptrLike">
+      <choice>
+         <ref name="ref"/>
+      </choice>
+   </define>
+   <define name="model.lPart">
+      <notAllowed/>
+   </define>
+   <define name="model.global.meta">
+      <notAllowed/>
+   </define>
+   <define name="model.milestoneLike">
+      <choice>
+         <ref name="lb"/>
+      </choice>
+   </define>
    <define name="model.gLike">
       <notAllowed/>
+   </define>
+   <define name="model.oddDecl">
+      <notAllowed/>
+   </define>
+   <define name="model.phrase.xml">
+      <notAllowed/>
+   </define>
+   <define name="model.specDescLike">
+      <notAllowed/>
+   </define>
+   <define name="model.biblLike">
+      <choice>
+         <ref name="bibl"/>
+         <ref name="listBibl"/>
+         <ref name="msDesc"/>
+      </choice>
    </define>
    <define name="model.headLike">
       <choice>
          <ref name="head"/>
+      </choice>
+   </define>
+   <define name="model.labelLike">
+      <choice>
+         <ref name="desc"/>
+      </choice>
+   </define>
+   <define name="model.listLike">
+      <choice>
+         <ref name="list"/>
+      </choice>
+   </define>
+   <define name="model.noteLike">
+      <choice>
+         <ref name="note"/>
+      </choice>
+   </define>
+   <define name="model.lLike">
+      <notAllowed/>
+   </define>
+   <define name="model.pLike">
+      <choice>
+         <ref name="p"/>
+      </choice>
+   </define>
+   <define name="model.stageLike">
+      <notAllowed/>
+   </define>
+   <define name="model.global.edit">
+      <choice>
+         <ref name="gap"/>
+      </choice>
+   </define>
+   <define name="model.divPart">
+      <choice>
+         <ref name="model.lLike"/>
+         <ref name="model.pLike"/>
       </choice>
    </define>
    <define name="model.placeNamePart">
@@ -775,6 +952,11 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
          <ref name="quote"/>
       </oneOrMore>
    </define>
+   <define name="model.qLike">
+      <choice>
+         <ref name="model.quoteLike"/>
+      </choice>
+   </define>
    <define name="model.addressLike">
       <notAllowed/>
    </define>
@@ -868,6 +1050,47 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
       <oneOrMore>
          <ref name="model.persNamePart_sequenceRepeatable"/>
       </oneOrMore>
+   </define>
+   <define name="model.global">
+      <choice>
+         <ref name="model.global.meta"/>
+         <ref name="model.milestoneLike"/>
+         <ref name="model.noteLike"/>
+         <ref name="model.global.edit"/>
+      </choice>
+   </define>
+   <define name="model.pPart.data">
+      <choice>
+         <ref name="model.dateLike"/>
+         <ref name="model.measureLike"/>
+         <ref name="model.addressLike"/>
+         <ref name="model.nameLike"/>
+      </choice>
+   </define>
+   <define name="model.inter">
+      <choice>
+         <ref name="model.egLike"/>
+         <ref name="model.oddDecl"/>
+         <ref name="model.biblLike"/>
+         <ref name="model.labelLike"/>
+         <ref name="model.listLike"/>
+         <ref name="model.stageLike"/>
+         <ref name="model.qLike"/>
+      </choice>
+   </define>
+   <define name="model.phrase">
+      <choice>
+         <ref name="model.segLike"/>
+         <ref name="model.highlighted"/>
+         <ref name="model.graphicLike"/>
+         <ref name="model.pPart.msdesc"/>
+         <ref name="model.pPart.edit"/>
+         <ref name="model.ptrLike"/>
+         <ref name="model.lPart"/>
+         <ref name="model.phrase.xml"/>
+         <ref name="model.specDescLike"/>
+         <ref name="model.pPart.data"/>
+      </choice>
    </define>
    <define name="p">
       <element name="p">
@@ -1804,22 +2027,26 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI header) supplies the descriptive and declarative information making up an electronic title page for every TEI-conformant document. [2.1.1. The TEI Header and Its Components 15.1. Varieties of Composite Text]</a:documentation>
          <ref name="fileDesc"/>
          <ref name="revisionDesc"/>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="manuscripta-teiHeader-greek.check-constraint-12">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0">
-                                    <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
-                                        <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
-                                    </sch:rule>
-                                </sch:pattern>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:tei="http://www.tei-c.org/ns/1.0"
+                      context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
+                                    <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
+                                </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="manuscripta-teiHeader-latin.check-constraint-13">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:tei="http://www.tei-c.org/ns/1.0">
-                                    <sch:rule context="//*[@xml:lang='grc' or @xml:lang='el']">
-                                        <sch:report test="text()[matches(., '[(\p{N}|\p{L})-[\p{IsGreek}\p{IsGreekExtended}]]')]"> Only characters from Greek and Greek extended chart range are allowed in elements with the xml:lang="grc" or xml:lang="el".</sch:report>
-                                    </sch:rule>
-                                </sch:pattern>
+                      xmlns:tei="http://www.tei-c.org/ns/1.0"
+                      context="//*[@xml:lang='grc' or @xml:lang='el']">
+                                    <sch:report test="text()[matches(., '[(\p{N}|\p{L})-[\p{IsGreek}\p{IsGreekExtended}]]')]"> Only characters from Greek and Greek extended chart range are allowed in elements with the xml:lang="grc" or xml:lang="el".</sch:report>
+                                </sch:rule>
+         </pattern>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3111,9 +3338,14 @@ The element <name/> may appear once only
       <element name="physDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(physical description) contains a full physical description of a manuscript or manuscript part, optionally subdivided using more specialized elements from the model.physDescPart class. [10.7. Physical Description]</a:documentation>
          <group>
-                                <ref name="objectDesc"/>
+                                <optional>
+               <ref name="objectDesc"/>
+            </optional>
                                 <optional>
                <ref name="handDesc"/>
+            </optional>
+                                <optional>
+               <ref name="additions"/>
             </optional>
                                 <optional>
                <ref name="musicNotation"/>
@@ -3380,6 +3612,14 @@ The element <name/> may appear once only
                                 <ref name="term"/>
                             </choice>
          </zeroOrMore>
+      </element>
+   </define>
+   <define name="additions">
+      <element name="additions">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of any significant additions found within a manuscript, such as marginalia or other annotations. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+         <ref name="macro.specialPara"/>
+         <ref name="att.global.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="bindingDesc">
@@ -3714,6 +3954,9 @@ The element <name/> may appear once only
          </optional>
          <empty/>
       </element>
+   </define>
+   <define name="att.global.facs.attributes">
+      <ref name="att.global.facs.attribute.facs"/>
    </define>
    <define name="att.global.facs.attribute.facs">
       <optional>
