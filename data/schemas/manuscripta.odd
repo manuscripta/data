@@ -4489,8 +4489,7 @@
                     </elementSpec>
                     <elementSpec ident="term" mode="change" module="core">
                         <classes mode="change">
-                            <memberOf key="att.pointing" mode="delete" />
-                            <memberOf key="att.canonical" mode="delete" />
+                            <memberOf key="att.pointing" mode="delete" />                            
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
@@ -4523,6 +4522,8 @@
                                     </valItem>
                                 </valList>
                             </attDef>
+                            <!-- Attributes changed and deleted in att.canonical -->
+                            <attDef ident="key" mode="delete" />
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt" />
                             <attDef ident="xml:id" mode="delete" />
