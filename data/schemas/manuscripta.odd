@@ -1259,6 +1259,7 @@
                         </content>
                         <valList mode="replace" type="closed">
                             <valItem ident="Uppsala University Library" />
+                            <valItem ident="Kungliga biblioteket" />
                         </valList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3764,10 +3765,10 @@
                             <textNode />
                         </content>
                         <constraintSpec ident="publication.place.check" scheme="isoschematron">
-                            <desc versionDate="2014-11-11">Check that Uppsala is used in <gi>pubPlace</gi> under <gi>publicationStmt</gi>.</desc>
+                            <desc versionDate="2014-11-11">Check that Uppsala or Stockholm is used in <gi>pubPlace</gi> under <gi>publicationStmt</gi>.</desc>
                             <constraint>
                                 <sch:rule context="tei:publicationStmt/tei:pubPlace">
-                                    <sch:assert test="text()='Uppsala'"> Uppsala should be used for pubPlace. </sch:assert>
+                                    <sch:assert test="text()='Uppsala' or text()='Stockholm' or "> Uppsala or Stockholm should be used for pubPlace. </sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
