@@ -2467,11 +2467,11 @@
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <valList mode="replace" type="closed">
-                            <valItem ident="Uppsala University" />
+                        <valList mode="replace" type="closed">                            
                             <valItem ident="Gothenburg University" />
                             <valItem ident="Linköping Diocesan Library" />
                             <valItem ident="Lund University" />
+                            <valItem ident="Kungliga biblioteket" />
                             <valItem ident="National Archives">
                                 <desc>The National Archives, Stockholm</desc>
                             </valItem>
@@ -2482,6 +2482,8 @@
                                 <desc>The National Library, Stockholm</desc>
                             </valItem>
                             <valItem ident="Skokloster Castle" />
+                            <valItem ident="Uppsala University" />
+                            <valItem ident="Uppsala universitet" />
                         </valList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2899,7 +2901,7 @@
                         <content>
                             <elementRef key="msIdentifier" />
                             <elementRef key="model.headLike" />
-                            <elementRef key="msContents" />
+                            <elementRef key="msContents" minOccurs="0" maxOccurs="1" />
                             <elementRef key="physDesc" />
                             <elementRef key="history" />
                             <elementRef key="additional" />
@@ -3770,7 +3772,7 @@
                             <desc versionDate="2014-11-11">Check that Uppsala or Stockholm is used in <gi>pubPlace</gi> under <gi>publicationStmt</gi>.</desc>
                             <constraint>
                                 <sch:rule context="tei:publicationStmt/tei:pubPlace">
-                                    <sch:assert test="text()='Uppsala' or text()='Stockholm' or "> Uppsala or Stockholm should be used for pubPlace. </sch:assert>
+                                    <sch:assert test="text()='Uppsala' or text()='Stockholm'"> Uppsala or Stockholm should be used for pubPlace. </sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3904,9 +3906,9 @@
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <valList mode="replace" type="closed">
-                            <valItem ident="Uppsala University Library" />
+                        <valList mode="replace" type="closed">                            
                             <valItem ident="Gothenburg University Library" />
+                            <valItem ident="Kungliga biblioteket" />
                             <valItem ident="Linköping Diocesan Library" />
                             <valItem ident="Lund University Library" />
                             <valItem ident="National Archives">
@@ -3919,6 +3921,8 @@
                                 <desc>The National Library, Stockholm</desc>
                             </valItem>
                             <valItem ident="Skokloster Castle Library" />
+                            <valItem ident="Uppsala University Library" />
+                            <valItem ident="Uppsala universitetsbibliotek" />
                         </valList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3977,15 +3981,18 @@
                             <!-- Attributes changed and deleted from att.global -->
                             <attDef ident="xml:id" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
+                                    <valItem ident="BC">
+                                        <desc>Barbara Crostini</desc>
+                                    </valItem>
                                     <valItem ident="EN">
                                         <desc>Eva Nyström</desc>
                                     </valItem>
                                     <valItem ident="PG">
                                         <desc>Patrik Granholm</desc>
                                     </valItem>
-                                    <valItem ident="BC">
-                                        <desc>Barbara Crostini</desc>
-                                    </valItem>
+                                    <valItem ident="PA">
+                                        <desc>Patrik Åström</desc>
+                                    </valItem>                                    
                                 </valList>
                             </attDef>
                             <attDef ident="n" mode="delete" />
@@ -4582,6 +4589,9 @@
                                     </valItem>
                                     <valItem ident="la">
                                         <desc>Latin</desc>
+                                    </valItem>
+                                    <valItem ident="sv">
+                                        <desc>Svenska, även fornsvenska</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
