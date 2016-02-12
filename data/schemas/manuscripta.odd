@@ -1211,7 +1211,21 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="additions" module="msdescription" mode="change" />
+                    <elementSpec ident="additions" module="msdescription" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete" />
+                        </classes>
+                        <content>
+                            <alternate>
+                                <sequence>
+                                    <elementRef key="locus" minOccurs="1" maxOccurs="1" />
+                                    <elementRef key="title" minOccurs="0" maxOccurs="1" />
+                                    <elementRef key="note" minOccurs="0" maxOccurs="1" />
+                                </sequence>
+                                <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
+                            </alternate>
+                        </content>
+                    </elementSpec>
                     <elementSpec ident="altIdentifier" module="msdescription" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -1330,6 +1344,13 @@
                         <content>
                             <elementRef key="binding" minOccurs="1" maxOccurs="unbounded" />
                         </content>
+                        <constraintSpec ident="bindingDesc.msPart.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="tei:bindingDesc">
+                                    <sch:report test="ancestor::tei:msPart"> bindingDesc is not allowed inside msPart </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
@@ -2467,7 +2488,7 @@
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <valList mode="replace" type="closed">                            
+                        <valList mode="replace" type="closed">
                             <valItem ident="Gothenburg University" />
                             <valItem ident="Linköping Diocesan Library" />
                             <valItem ident="Lund University" />
@@ -3906,7 +3927,7 @@
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
-                        <valList mode="replace" type="closed">                            
+                        <valList mode="replace" type="closed">
                             <valItem ident="Gothenburg University Library" />
                             <valItem ident="Kungliga biblioteket" />
                             <valItem ident="Linköping Diocesan Library" />
@@ -3992,7 +4013,7 @@
                                     </valItem>
                                     <valItem ident="PA">
                                         <desc>Patrik Åström</desc>
-                                    </valItem>                                    
+                                    </valItem>
                                 </valList>
                             </attDef>
                             <attDef ident="n" mode="delete" />
@@ -4636,7 +4657,6 @@
                             <constraint>
                                 <sch:rule context="tei:msItem/tei:title">
                                     <sch:assert test="@type"> The type attribute must be used </sch:assert>
-                                    
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
