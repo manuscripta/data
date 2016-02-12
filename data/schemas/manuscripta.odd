@@ -4623,12 +4623,20 @@
                                 <elementRef key="persName" />
                             </alternate>
                         </content>
-                        <constraintSpec ident="title.key.check" scheme="isoschematron">
+                        <constraintSpec ident="msItem.title.key.check" scheme="isoschematron">
                             <constraint>
                                 <sch:rule context="tei:title/@key">
                                     <sch:report test="matches(., 'TLG \p{N}') or matches(., 'TLG_\p{N}')"> Do not use space or underscore between TLG and the number </sch:report>
                                     <sch:report test="matches(., 'BHG \p{N}') or matches(., 'BHG_\p{N}')"> Do not use space or underscore between BHG and the number </sch:report>
                                     <sch:report test="matches(., 'CPG \p{N}') or matches(., 'CPG_\p{N}')"> Do not use space or underscore between CPG and the number </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <constraintSpec ident="msItem.title.type.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="tei:msItem/tei:title">
+                                    <sch:assert test="@type"> The type attribute must be used </sch:assert>
+                                    
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
