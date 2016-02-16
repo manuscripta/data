@@ -372,45 +372,13 @@
                         </specList>
                     </p>
                 </div>
-                <div xml:id="endleaves">
-                    <head>Endleaves</head>
-                    <p>In the <gi>msContents</gi> element endleaves should be listed as distinct <gi>msItem</gi> elements with the <att>class</att> attribute value <val>left_endleaf</val> or <val>right_endleaf</val>. The msItem element must contain at least a <gi>locus</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. For the guidelines on locus see <ptr target="#locus" />.
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <msContents>
-                                <msItem class="left_endleaf">
-                                    <locusGrp>
-                                        <locus from="LCI" to="LCI" scheme="other" />
-                                        <locus from="L1r" to="L2v" scheme="folios" />
-                                    </locusGrp>
-                                    <note>Blank endleaves</note>
-                                </msItem>
-                                <msItem class="left_endleaf">
-                                    <locus from="L3r" to="L3v" scheme="folios" />
-                                    <note>Table of contents</note>
-                                </msItem>
-                                <msItem class="right_endleaf">
-                                    <locusGrp>
-                                        <locus from="R1r" to="R2v" scheme="folios" />
-                                        <locus from="RCI" to="RCI" scheme="other" />
-                                    </locusGrp>
-                                    <note>Blank endleaves</note>
-                                </msItem>
-                            </msContents>
-                        </egXML>
-                        <specList>
-                            <specDesc key="msContents" />
-                            <specDesc key="msItem" atts="class" />
-                            <specDesc key="locus" atts="from to scheme" />
-                            <specDesc key="note" />
-                        </specList>
-                    </p>
-                </div>
                 <div xml:id="physdesc_book">
                     <head>Physical description</head>
                     <p>The physical description common to the whole manuscript should be recorded in the <gi>physDesc</gi> element using following elements: 
                         <specList>
                             <specDesc key="objectDesc" />
                             <specDesc key="handDesc" />
+                            <specDesc key="additions" />
                             <specDesc key="bindingDesc" />
                         </specList>
                     </p>
@@ -472,6 +440,31 @@
                     <div xml:id="handdesc_book">
                         <head>Description of Hands</head>
                         <p>Hands belonging to the bookblock should be described here according to <ptr target="#handdesc" />.</p>
+                    </div>
+                    <div xml:id="additions_book">
+                        <head>Endleaves</head>
+                        <p>The contents of the endleaves should be described in the <gi>additions</gi> element inside two <gi>p</gi> elements; the first for the left endleaves and the second for the right endleaves. Each p element must contain at least a <gi>locus</gi> or <gi>locusGrp</gi> element and a <gi>note</gi> element. In the note element it should be be recorded if the endleaves have content or are blank. For the guidelines on locus see <ptr target="#locus" />.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <additions>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other" />
+                                            <locus from="L1r" to="L2v" scheme="folios" />
+                                        </locusGrp>
+                                        <note>Blank endleaves</note>
+                                        <locus from="L3r" to="L3v" scheme="folios" />
+                                        <note>Table of contents</note>
+                                    </p>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="R1r" to="R2v" scheme="folios" />
+                                            <locus from="RCI" to="RCI" scheme="other" />
+                                        </locusGrp>
+                                        <note>Blank endleaves</note>
+                                    </p>
+                                </additions>
+                            </egXML>
+                        </p>
                     </div>
                     <div xml:id="bindingdesc">
                         <head>Binding Description</head>
@@ -1216,15 +1209,37 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <alternate>
-                                <sequence>
-                                    <elementRef key="locus" minOccurs="1" maxOccurs="1" />
-                                    <elementRef key="title" minOccurs="0" maxOccurs="1" />
-                                    <elementRef key="note" minOccurs="0" maxOccurs="1" />
-                                </sequence>
-                                <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
-                            </alternate>
+                            <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
                         </content>
+                        <constraintSpec ident="additions.endleaves.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="tei:msDesc/tei:physDesc/tei:additions">
+                                    <sch:report test="count(tei:p) &gt; 2"> Only two p elements allowed when describing the endleaves; the first for the left endleaves and the second for the right endleaves.</sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <additions>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other" />
+                                            <locus from="L1r" to="L2v" scheme="folios" />
+                                        </locusGrp>
+                                        <note>Blank endleaves</note>
+                                        <locus from="L3r" to="L3v" scheme="folios" />
+                                        <note>Table of contents</note>
+                                    </p>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="R1r" to="R2v" scheme="folios" />
+                                            <locus from="RCI" to="RCI" scheme="other" />
+                                        </locusGrp>
+                                        <note>Blank endleaves</note>
+                                    </p>
+                                </additions>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
                     <elementSpec ident="altIdentifier" module="msdescription" mode="change">
                         <classes mode="change">
