@@ -363,7 +363,7 @@
                 </div>
                 <div xml:id="heading">
                     <head>The Heading</head>
-                    <p>A brief descriptive title in English which summarizes the intellectual content of the whole manuscript should be given in the <gi>head</gi> element. For descriptive titles summarizing the intellectual content of each codicological see <ptr target="#summary_unit" />.
+                    <p>A brief descriptive title in English which summarizes the intellectual content of the whole manuscript should be given in the <gi>head</gi> element. For descriptive titles summarizing the intellectual content of each codicological see <ptr target="#summary" />.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <head>Aelian, On Animals</head>
                         </egXML>
@@ -376,7 +376,7 @@
                     <head>Physical description</head>
                     <p>The physical description common to the whole manuscript should be recorded in the <gi>physDesc</gi> element using following elements: 
                         <specList>
-                            <specDesc key="objectDesc" />
+                            <specDesc key="objectDesc" atts="form" />
                             <specDesc key="handDesc" />
                             <specDesc key="additions" />
                             <specDesc key="bindingDesc" />
@@ -384,10 +384,10 @@
                     </p>
                     <div xml:id="objectdesc_book">
                         <head>Object Description</head>
-                        <p>In the <gi>objectDesc</gi> element the support, extent, and collation of the endleaves should be decribed, see <ptr target="#support" />, <ptr target="#extent_unit" /> and <ptr target="#collation" />. The foliation of the whole manuscript should also be recorded here, see <ptr target="#foliation" />.
+                        <p>In the <gi>objectDesc</gi> element the support, extent, and collation of the endleaves should be decribed, see <ptr target="#support" />, <ptr target="#extent_unit" /> and <ptr target="#collation" />. The foliation of the whole manuscript should also be recorded here, see <ptr target="#foliation" />. The physical form of the carrier should be set in the <att>form</att> attribute (values: <val>codex</val>, <val>fragment</val>, <val>roll</val>)
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <physDesc>
-                                    <objectDesc>
+                                    <objectDesc form="codex">
                                         <supportDesc material="paper">
                                             <support>
                                                 <p> </p>
@@ -468,19 +468,21 @@
                     </div>
                     <div xml:id="bindingdesc">
                         <head>Binding Description</head>
-                        <p>The binding should be described in one or more paragraphs inside the <gi>bindingDesc</gi> element. Use <gi>term</gi> and <gi>material</gi> elements where applicable. The first paragraph should contain a brief description of the binding type, the structure, cover material, etc. Give the height, width and depth of the binding in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>binding</val>). A description of decorative features on the binding should be recorded in one or more <gi>decoNote</gi> elements. The overall condition and restaurations to the binding should be recorded in the <gi>condition</gi> element.
+                        <p>The binding should be described in one or more paragraphs in a <gi>binding</gi> element inside the <gi>bindingDesc</gi> element. Use <gi>term</gi> and <gi>material</gi> elements where applicable. The first paragraph should contain a brief description of the binding type, the structure, cover material, etc. Give the height, width and depth of the binding in mm (with 5 mm precision) in the <gi>dimensions</gi> element (<att>type</att> attribute with value <val>binding</val>). A description of decorative features on the binding can be recorded in one or more <gi>decoNote</gi> elements. The overall condition and restaurations to the binding can be recorded in the <gi>condition</gi> element.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
-                                    <p><term><material>Parchment</material> cover</term> over <term><material>paper</material> boards</term> with gold tooling. Sewn on three supports.</p>
-                                    <p>
-                                        <dimensions type="binding">
-                                            <height quantity="230" unit="mm" />
-                                            <width quantity="170" unit="mm" />
-                                            <depth quantity="25" unit="mm" />
-                                        </dimensions>
-                                    </p>
-                                    <decoNote>Gold-tooled <term>centerpiece</term> depicting the Crucifixion of Christ.</decoNote>
-                                    <condition>There is a 20 mm tear on left cover.</condition>
+                                    <binding>
+                                        <p><term><material>Parchment</material> cover</term> over <term><material>paper</material> boards</term> with gold tooling. Sewn on three supports.</p>
+                                        <p>
+                                            <dimensions type="binding">
+                                                <height quantity="230" unit="mm" />
+                                                <width quantity="170" unit="mm" />
+                                                <depth quantity="25" unit="mm" />
+                                            </dimensions>
+                                        </p>
+                                        <decoNote>Gold-tooled <term>centerpiece</term> depicting the Crucifixion of Christ.</decoNote>
+                                        <condition>There is a 20 mm tear on left cover.</condition>
+                                    </binding>
                                 </bindingDesc>
                             </egXML>
                         </p>
@@ -553,18 +555,34 @@
                             </msPart>
                         </egXML>
                     </p>
-                    <div xml:id="mscontent_unit">
+                    <div xml:id="mscontents">
                         <head>Intellectual Content</head>
-                        <p>The intellectual content of the codicological unit should be listed in the <gi>msContents</gi> element.</p>
-                        <div xml:id="summary_unit">
-                            <head>Summary</head>
-                            <p>Give a brief descriptive title in English in the <gi>summary</gi> element which summarizes the intellectual content of the codicological unit. For the descriptive title summarizing the intellectual content of the whole manuscript, see <ptr target="#heading" />.
+                        <p>The intellectual content of the codicological unit should be listed in the <gi>msContents</gi> element.
                             <specList>
-                                    <specDesc key="summary" />
-                                </specList>
-                            </p>
+                                <specDesc key="summary" />
+                                <specDesc key="textLang" />
+                                <specDesc key="msItem" />
+                            </specList>
+                        </p>
+                        <div xml:id="summary">
+                            <head>Summary</head>
+                            <p>Give a brief descriptive title in English in the <gi>summary</gi> element which summarizes the intellectual content of the codicological unit. For the descriptive title summarizing the intellectual content of the whole manuscript, see <ptr target="#heading" />.</p>
                         </div>
-                        <div xml:id="msitem_unit">
+                        <div xml:id="textlanguage">
+                            <head>Text Language</head>
+                            <p>Give the text language for the codicological unit in the <gi>textLang</gi> element with the <att>mainLang</att> attribute.
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <textLang mainLang="grc" />
+                                </egXML>
+                            </p>
+                            <p>For bilingual or multilingual texts give the other languages in the <att>otherLangs</att> attribute.
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <textLang mainLang="grc" otherLangs="la" />
+                                </egXML>
+                            </p>
+                            <p>The <gi>textLang</gi> element should also be used in the <gi>msItem</gi> element for texts that have a different language from the other texts in the unit.</p>
+                        </div>
+                        <div xml:id="msitem">
                             <head>Manuscript Item</head>
                             <p>Each item in the manuscript should be descibed in a distinct <gi>msItem</gi> with the <att>class</att> attribute identifying the text type(s) or classification(s) applicable to this item. Multiple values may be selected separated with whitespace. The values derive from the <ref target="http://www.tlg.uci.edu/help/class.html">TLG Canon of Authors and Works</ref>. 
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -572,8 +590,8 @@
                                 </egXML>
                             </p>
                             <p>The items should not be numbered with the <att>n</att> attribute. The numbering will be generated automatically in the XSLT transformation. If the manuscript item is incomplete through loss or damage use the <att>defective</att> attribute with value <val>true</val> (default value is <val>false</val>).</p>
-                            <p>Blank pages should be recorded at the end of a <gi>note</gi> element, in a separate paragraph, with the  <gi>locus</gi> or <gi>locusGrp</gi> element and the text <quote>is/are blank</quote>. Pages containing short notes or scribbles by later hands should also be recorded in the <gi>note</gi> element with a reference to the <gi>handNote</gi> if possible. Table of contents may be quoted under <gi>handNote</gi> in <gi>handDesc</gi>.</p>
-                            <div xml:id="msitem_unit_locus">
+                            <p>Blank pages should be recorded at the end of a <gi>note</gi> element, in a separate paragraph, with the  <gi>locus</gi> or <gi>locusGrp</gi> element and the text <quote>is/are blank</quote>. Pages containing short notes or scribbles by later hands should be recorded in the <gi>additions</gi> element, see <ptr target="#additions" />.</p>
+                            <div xml:id="msitem_locus">
                                 <head>Locus</head>
                                 <p>Give the start and end folio of each item according to the guidelines specified in <ptr target="#locus" />. If there are several items on a single folio specify on which line the text starts and ends. For texts scattered over more than one location in the manuscript the <gi>locusGrp</gi> element should be used.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -585,20 +603,7 @@
                                     </egXML>
                                 </p>
                             </div>
-                            <div xml:id="msitem_unit_textlanguage">
-                                <head>Text Language</head>
-                                <p>Give the text language for each <gi>msItem</gi> in the <att>mainLang</att> attribute (default value is Greek).
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <textLang mainLang="grc" />
-                                    </egXML>
-                                </p>
-                                <p>For bilingual or multilingual texts give the other languages in the <att>otherLangs</att> attribute.
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <textLang mainLang="grc" otherLangs="la" />
-                                    </egXML>
-                                </p>
-                            </div>
-                            <div xml:id="msitem_unit_author">
+                            <div xml:id="msitem_author">
                                 <head>Author</head>
                                 <p>The author name should be recorded inside the <gi>author</gi> element in a <gi>persName</gi> element with a reference to the persons authority file, see <ptr target="#personalnames" />. The <gi>author</gi> element should be omitted for anonymous works.
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -608,7 +613,7 @@
                                     </egXML>
                                 </p>
                             </div>
-                            <div xml:id="title">
+                            <div xml:id="msitem_title">
                                 <head>Title</head>
                                 <p>The title should be given in Latin according to <ref target="http://pinakes.irht.cnrs.fr">Pinakes</ref> and the <att>type</att> attribute should then be set with the (default) value <val>uniform</val>. Give the URI for the text in Pinakes in a <att>ref</att> attribute. A BHG or CPG reference may also be give in the <att>key</att> attribute. If the work is known under an alternative title, this may be given in a separate <gi>title</gi> element with a <att>key</att> attribute containing the TLG, BHG, or CPG number for the text, and the <att>type</att> attribute with the value <val>alt</val>.
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -656,7 +661,7 @@
                                     </egXML>
                                 </p>
                             </div>
-                            <div xml:id="note">
+                            <div xml:id="msitem_note">
                                 <head>Note</head>
                                 <p>In the note element additional information about the text may be given, e.g. if the text contains anonymous scholia or glosses. Authored scholia should be recorded in a separate <gi>msItem</gi>.
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -762,6 +767,7 @@
                     <specList>
                                 <specDesc key="objectDesc" />
                                 <specDesc key="handDesc" />
+                                <specDesc key="additions" />
                                 <specDesc key="musicNotation" />
                                 <specDesc key="decoDesc" />
                                 <specDesc key="bindingDesc" />
@@ -955,14 +961,15 @@
                         </div>
                         <div xml:id="handdesc">
                             <head>Description of Hands</head>
-                            <p>Each distinct hand should be described in a separate <gi>handNote</gi> element in the <gi>handDesc</gi> element. Give the extent for this hand in a <gi>locus</gi> or <gi>locusGrp</gi> element. Where the scribe is identifiable, either from the writing or a subscription, give the name (according to <hi rend="italics">Repertorium der Griechischen Kopisten</hi> or other relevant authority files, e.g. VIAF) in a <gi>persName</gi> element using a <att>ref</att> attribute pointing to the persons authority file, and the <att>role</att> attribute with value <val>scribe</val>. Specify the certainty of the attribution in the <att>cert</att> attribute (values: <val>high</val>, <val>middle</val>, <val>low</val>, <val>unknown</val>) and the evidence for this in the <att>evidence</att> attribute (values: <val>internal</val>, <val>external</val>, <val>conjecture</val>).                
+                            <p>Each distinct hand in the codicological unit should be described in a separate <gi>handNote</gi> element in the <gi>handDesc</gi> element. The <gi>handNote</gi> element should have an <att>xml:id</att> attribute with the values <val>hand-1</val>, <val>hand-2</val> etc, numbered in the order of appearance in the manuscript. If the same hand occurs in another unit the attribute <att>sameAs</att> should be used with a reference to the <att>xml:id</att> of that <gi>handNote</gi>.</p>
+                            <p>Give the extent for this hand in a <gi>locus</gi> or <gi>locusGrp</gi> element. Where the scribe is identifiable, either from the writing or a subscription, give the name (according to <hi rend="italics">Repertorium der Griechischen Kopisten</hi> or other relevant authority files, e.g. VIAF) in a <gi>persName</gi> element using a <att>ref</att> attribute pointing to the persons authority file, and the <att>role</att> attribute with value <val>scribe</val>. Specify the certainty of the attribution in the <att>cert</att> attribute (values: <val>high</val>, <val>middle</val>, <val>low</val>, <val>unknown</val>) and the evidence for this in the <att>evidence</att> attribute (values: <val>internal</val>, <val>external</val>, <val>conjecture</val>).                
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                     <handDesc>
-                                        <handNote>
+                                        <handNote xml:id="hand-1">
                                             <locus from="1r" to="119r" scheme="folios" />
                                             <persName ref="#MicSou" role="scribe" cert="high" evidence="internal" /> based on subscription <locus from="119r" to="119r" scheme="folios" />. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out.
                                         </handNote>
-                                        <handNote>
+                                        <handNote xml:id="hand-2">
                                             <locus from="1r" to="119r" scheme="folios" />
                                             Chapter divisions in Latin by unknown hand.
                                         </handNote>
@@ -972,11 +979,11 @@
                             <p>For unidentified hands describe the script and, if possible, classify it using the <gi>term</gi> element with the <att>type</att> attribute (value: <val>script</val>). Minor notes which cannot be attributed to a scribe should be summarized in an separate <gi>handNote</gi> element with a few <gi>locus</gi> as examples.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                     <handDesc>
-                                        <handNote>
+                                        <handNote xml:id="hand-1">
                                             <locus from="1r" to="223v" scheme="folios" />
                                             Slightly right-sloping <term type="script">minuscule</term>, <term type="script" xml:lang="de">Perlschrift</term>. Rubrics in <term type="script" xml:lang="de">alexandrinischer Auszeichnungsmajuskel</term>.
                                         </handNote>
-                                        <handNote>Occasional <term>notes</term> and <term>pen trials</term> by later hands, e.g. <locus from="10r" to="10r" scheme="folios" />, <locus from="18v" to="18v" scheme="folios" />, <locus from="193r" to="193r" scheme="folios" />.
+                                        <handNote xml:id="hand-2">Occasional <term>notes</term> and <term>pen trials</term> by later hands, e.g. <locus from="10r" to="10r" scheme="folios" />, <locus from="18v" to="18v" scheme="folios" />, <locus from="193r" to="193r" scheme="folios" />.
                                         </handNote>
                                     </handDesc>
                                 </egXML>
@@ -987,6 +994,12 @@
                                     <specDesc key="locusGrp" atts="from to scheme" />
                                     <specDesc key="term" atts="type" />
                                 </specList>
+                            </p>
+                        </div>
+                        <div xml:id="additions">
+                            <head>Additions</head>
+                            <p>Marginalia, notes, and other additions of interest should be recorded in the <gi>additions</gi> element. inside on ore more <gi>p</gi> elements.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"> </egXML>
                             </p>
                         </div>
                         <div xml:id="musicnotation">
@@ -1015,13 +1028,20 @@
                                 </egXML>
                             </p>
                         </div>
-                        <div xml:id="additions">
-                            <head>Additions</head>
-                            <p>Marginalia, notes, and other additions of interest should be recorded in the <gi>additions</gi> element.</p>
-                            <!--Expand-->
-                        </div>
                     </div>
-                    <div xml:id="history_unit"> </div>
+                    <div xml:id="history_unit">
+                        <head>History</head>
+                        <p>Codicological units with a different origin or provenance than the rest of the manuscript should be recorded in the <gi>msPart</gi> of that unit.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <history>
+                                    <origin>This binion was added to the rest of the codex after its arrival at <origPlace>
+                                            <placeName ref="#Escorial" />
+                                        </origPlace> in <date when="1576" />. <persName ref="#NicTor" /> wrote the table of contents and added the foliation throughout.
+                                </origin>
+                                </history>
+                            </egXML>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div xml:id="works_cited">
@@ -1047,6 +1067,7 @@
                     <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p pubPlace quote ref resp respStmt sic term textLang title unclear" />
                     <moduleRef key="header" include="authority availability change extent fileDesc handNote idno licence publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="figures" include="formula" />
+                    <moduleRef key="linking" />
                     <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
                     <moduleRef key="namesdates" include="country persName placeName settlement" />
                     <moduleRef key="textstructure" include="body div TEI text" />
@@ -1351,7 +1372,38 @@
                             <p />
                         </remarks>
                     </elementSpec>
-                    <elementSpec ident="binding" module="msdescription" mode="change" />
+                    <elementSpec ident="binding" module="msdescription" mode="change">
+                        <content>
+                            <sequence>
+                                <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
+                                <elementRef key="decoNote" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="condition" minOccurs="0" maxOccurs="1" />
+                            </sequence>
+                        </content>
+                        <constraintSpec ident="binding.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="tei:binding">
+                                    <sch:assert test="descendant::tei:dimensions"> The dimensins of the binding are missing </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <binding>
+                                    <p><term><material>Parchment</material> cover</term> over <term><material>paper</material> boards</term> with gold tooling. Sewn on three supports.</p>
+                                    <p>
+                                        <dimensions type="binding">
+                                            <height quantity="230" unit="mm" />
+                                            <width quantity="170" unit="mm" />
+                                            <depth quantity="25" unit="mm" />
+                                        </dimensions>
+                                    </p>
+                                    <decoNote>Gold-tooled <term>centerpiece</term> depicting the Crucifixion of Christ.</decoNote>
+                                    <condition>There is a 20 mm tear on left cover.</condition>
+                                </binding>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
                     <elementSpec ident="bindingDesc" module="msdescription" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -1369,16 +1421,18 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <bindingDesc>
-                                    <p><term><material>Parchment</material> cover</term> over <term><material>paper</material> boards</term> with gold tooling. Sewn on three supports.</p>
-                                    <p>
-                                        <dimensions type="binding" unit="mm">
-                                            <height quantity="230" />
-                                            <width quantity="170" />
-                                            <depth quantity="25" />
-                                        </dimensions>
-                                    </p>
-                                    <decoNote>Gold-tooled <term>centerpiece</term> depicting the Crucifixion of Christ.</decoNote>
-                                    <condition>There is a 20 mm tear on left cover.</condition>
+                                    <binding>
+                                        <p><term><material>Parchment</material> cover</term> over <term><material>paper</material> boards</term> with gold tooling. Sewn on three supports.</p>
+                                        <p>
+                                            <dimensions type="binding" unit="mm">
+                                                <height quantity="230" />
+                                                <width quantity="170" />
+                                                <depth quantity="25" />
+                                            </dimensions>
+                                        </p>
+                                        <decoNote>Gold-tooled <term>centerpiece</term> depicting the Crucifixion of Christ.</decoNote>
+                                        <condition>There is a 20 mm tear on left cover.</condition>
+                                    </binding>
                                 </bindingDesc>
                             </egXML>
                         </exemplum>
@@ -1996,22 +2050,30 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
+                            <!--<alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="bibl" />
                                 <elementRef key="date" />
                                 <elementRef key="foreign" />
                                 <elementRef key="idno" />
                                 <elementRef key="quote" />
+                            </alternate>-->
+                            <alternate>
+                                <elementRef key="ref" minOccurs="1" maxOccurs="1" />
+                                <elementRef key="idno" minOccurs="1" maxOccurs="1" />
                             </alternate>
+                            <alternate>
+                                <elementRef key="bibl" minOccurs="1" maxOccurs="1" />
+                                <elementRef key="listBibl" minOccurs="1" maxOccurs="1" />
+                            </alternate>
+                            <elementRef key="note" minOccurs="0" maxOccurs="1" />
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="opt">
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="siglum" />
-                                    <valItem ident="protograph" />
                                     <valItem ident="apograph" />
-                                    <valItem ident="antigraph" />
+                                    <valItem ident="protograph" />
+                                    <valItem ident="siglum" />
                                 </valList>
                             </attDef>
                         </attList>
@@ -2249,9 +2311,6 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="handNote" mode="change" module="msdescription">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                        </classes>
                         <content>
                             <sequence>
                                 <alternate minOccurs="0" maxOccurs="1">
@@ -2272,6 +2331,28 @@
                                 </alternate>
                             </sequence>
                         </content>
+                        <constraintSpec ident="handNote.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="tei:handNote">
+                                    <sch:assert test="@xml:id or @sameAs">The handNote element must have either @xml:id or @sameAs </sch:assert>
+                                </sch:rule>
+                                <sch:rule context="tei:handNote/@xml:id">
+                                    <sch:assert test="matches(., '^hand-\p{N}$')"> The value of @xml:id must start with hand-, followed by a digit </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="n" mode="delete" />
+                            <attDef ident="xml:id" mode="change" usage="rec" />
+                            <attDef ident="xml:lang" mode="delete" />
+                            <!-- Attributes changed and deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete" />
+                            <!-- Attributes deleted in att.global.rendition -->
+                            <attDef ident="rend" mode="delete" />
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete" />
+                        </attList>
                         <!--<constraintSpec ident="term.type.script" scheme="isoschematron">
                             <desc versionDate="2014-11-17">Check that the <gi>handNote</gi> element contains at least one <gi>term</gi> element with <att>type</att>
                                 <val>script</val>.</desc>
@@ -2436,7 +2517,9 @@
                                     <valItem ident="former_shelfmark" />
                                     <valItem ident="ms_ref" />
                                     <valItem ident="shelfmark" />
+                                    <valItem ident="siglum" />
                                     <valItem ident="other" />
+                                    <valItem ident="URI" />
                                 </valList>
                             </attDef>
                         </attList>
@@ -2916,6 +2999,7 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msContents>
+                                    <textLang mainLang="grc" />
                                     <msItem class="schol">
                                         <locus from="27v:12" to="27v:31" scheme="folios" />
                                         <author>
@@ -3053,11 +3137,11 @@
                             </sequence>
                         </content>
                         <constraintSpec ident="msItem.note.check" scheme="isoschematron">
-                            <desc versionDate="2014-10-29" xml:lang="en">checks that the <gi>meItem</gi> element contains at least a <gi>locus</gi> or <gi>locusGrp</gi> and a <gi>note</gi>.</desc>
+                            <desc versionDate="2014-10-29" xml:lang="en">checks that the <gi>msItem</gi> element contains at least a <gi>locus</gi> or <gi>locusGrp</gi> and a <gi>note</gi>.</desc>
                             <!-- Needed to validate against tei_all -->
                             <constraint>
                                 <sch:rule context="tei:msItem">
-                                    <sch:assert test="tei:note or (tei:textLang or tei:author or tei:title or tei:rubric or tei:msItem or tei:incipit or tei:quote or tei:explicit or tei:finalRubric or tei:colophon or tei:filiation or tei:listBibl or tei:bibl)">The msItem element must contain at least a locus or locusGrp and a note element.</sch:assert>
+                                    <sch:assert test="tei:note or (tei:textLang or tei:author or tei:title or tei:rubric or tei:msItem or tei:incipit or tei:quote or tei:explicit or tei:finalRubric or tei:colophon or tei:filiation or tei:listBibl or tei:bibl)"> The msItem element must contain at least a locus or locusGrp and a note element.</sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3328,7 +3412,6 @@
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msItem class="phil">
                                     <locus from="26r" to="26r" scheme="folios" />
-                                    <textLang mainLang="grc" />
                                     <title type="desc" xml:lang="en">A diagram on logical categories</title>
                                     <incipit xml:lang="grc" defective="false">Πᾶν πρᾶγμα ἢ διαιρετὸν ἢ ἀδιαίρετον</incipit>
                                     <explicit xml:lang="grc" defective="false">ὡς τῶν μελαίνων, τὰ μὲν ψυχρά, τὰ δὲ τερμά</explicit>
@@ -3408,6 +3491,7 @@
                                 <elementRef key="bibl" />
                                 <elementRef key="date" />
                                 <elementRef key="foreign" />
+                                <elementRef key="hi" />
                                 <elementRef key="idno" />
                                 <elementRef key="list" />
                                 <elementRef key="locus" />
@@ -3485,8 +3569,24 @@
                                 <elementRef key="layoutDesc" minOccurs="0" maxOccurs="1" />
                             </sequence>
                         </content>
+                        <constraintSpec ident="objectDesc.check" scheme="isoschematron">
+                            <constraint>
+                                <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc">
+                                    <sch:assert test="@form"> The form attribute is mandatory </sch:assert>
+                                </sch:rule>
+                                <sch:rule context="tei:msDesc/tei:msPart/tei:physDesc/tei:objectDesc">
+                                    <sch:report test="@form"> The form attribute should not be used in msPart </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
-                            <attDef ident="form" mode="delete" />
+                            <attDef ident="form" mode="change" usage="opt">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="codex" />
+                                    <valItem ident="fragment" />
+                                    <valItem ident="roll" />
+                                </valList>
+                            </attDef>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3854,6 +3954,7 @@
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="ex" />
+                                <elementRef key="hi" />
                                 <elementRef key="lb" />
                                 <elementRef key="sic" />
                                 <elementRef key="supplied" />
@@ -3886,6 +3987,7 @@
                                 <textNode />
                                 <elementRef key="bibl" />
                                 <elementRef key="date" />
+                                <elementRef key="idno" />
                                 <elementRef key="placeName" />
                                 <elementRef key="persName" />
                                 <elementRef key="watermark" />
@@ -5046,6 +5148,17 @@
                         </attList>
                     </classSpec>
                     <classSpec ident="att.global.change" module="tei" type="atts" mode="delete" />
+                    <classSpec ident="att.global.linking" module="linking" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="corresp" mode="delete" />
+                            <attDef ident="synch" mode="delete" />
+                            <attDef ident="copyOf" mode="delete" />
+                            <attDef ident="next" mode="delete" />
+                            <attDef ident="prev" mode="delete" />
+                            <attDef ident="exclude" mode="delete" />
+                            <attDef ident="select" mode="delete" />
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.global.rendition" module="tei" type="atts" mode="change">
                         <attList>
                             <attDef ident="rendition" mode="delete" />
