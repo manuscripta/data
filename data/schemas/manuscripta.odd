@@ -490,10 +490,10 @@
                 </div>
                 <div xml:id="history_book">
                     <head>History</head>
-                    <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Centuries should be spelled with numbers, e.g. 13th century, and further specifications inside a parentheses, e.g. 13th century (2nd half). Only the attributes <att>notBefore</att>, <att>notAfter</att>, and <att>when</att> should be used for <gi>origDate</gi>, e.g. 13th century = 1201–1300, 13th century (1st half) = 1201–1250. Record the different stages in the provenance in one or more <gi>provenance</gi> elements. The <gi>acquisition</gi> element should describe the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
+                    <p>The <gi>history</gi> element should include information about the origin, provenance and acquisition of the manuscript. In the <gi>origin</gi> element specify date (<gi>origDate</gi>) and place (<gi>origPlace</gi>) with the help of internal or other evidence. Centuries should be spelled with numbers and the c. abbreviation, e.g. 13th c., and further specifications inside a parentheses, e.g. 13th c. (2nd half). Only the attributes <att>notBefore</att>, <att>notAfter</att>, and <att>when</att> should be used for <gi>origDate</gi>, e.g. 13th c. = 1201–1300, 13th c. (1st half) = 1201–1250. Other examples of dating: 1540s = 1540–1549, around 1300 = 1275–1325. Record the different stages in the provenance in one or more <gi>provenance</gi> elements. The <gi>acquisition</gi> element should describe the last stage of the manuscript's history, i.e. how it was acquired by its present owners.
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <history>
-                                <origin>Probably written in the <origDate notBefore="1251" notAfter="1300">13th century (2nd half)</origDate>. Place unknown.</origin>
+                                <origin>Probably written in the <origDate notBefore="1251" notAfter="1300">13th c. (2nd half)</origDate>. Place unknown.</origin>
                                 <provenance>At sometime the volume came to <placeName>Venice</placeName>, 
                                     where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
                                 <acquisition>It was acquired there by <persName ref="#JohSpa" />
@@ -712,28 +712,33 @@
                             </div>
                             <div xml:id="filiation">
                                 <head>Filiation</head>
-                                <p>Information about the relationship of the present manuscript to other surviving manuscripts of the same text should be recorded in the <gi>filiation</gi> element and <att>type</att> attribute with the value <val>protograph</val>, <val>apograph</val> or <val>antigraph</val> (indirect exemplar). Quoted manuscripts would be enclosed in <gi>idno</gi> elements with a <att>type</att> attribute (value <val>ms_ref</val>).</p>
+                                <p>Information about the relationship of the present manuscript to other surviving manuscripts of the same text should be recorded in the <gi>filiation</gi> element and <att>type</att> attribute with the value <val>protograph</val>, <val>apograph</val> or <val>antigraph</val> (indirect exemplar). Quoted manuscripts would be enclosed in <gi>idno</gi> elements with a <att>type</att> attribute (value <val>ms_ref</val>). Further comments can be added in a <gi>note</gi> element.</p>
                                 <p>If the present manuscript is referred to with a siglum in editions and articles, this should be mentioned in a separate <gi>filiation</gi> element and <att>type</att> attribute with the value <val>siglum</val>. Full references to these editions and articles should be given in the <gi>additional</gi> element.
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <filiation type="protograph"><idno type="ms_ref">Codex Vaticanus Palatinus Graecus 267</idno> (15th cent.), cf. 
-                                <bibl>
-                                                <ref target="#DeStefani1902" />
-                                                <citedRange from="209" to="210" unit="page" />
-                                            </bibl>
-                                , 
-                                <bibl>
-                                                <ref target="#GarcíaValdés2009" />
-                                                <citedRange from="viii" to="viii" unit="page" />
-                                            </bibl>
+                                        <filiation type="protograph">
+                                            <idno type="ms_ref">Codex Vaticanus Palatinus Graecus 267</idno>
+                                            <listBibl>
+                                                <bibl>
+                                                    <ref target="#DeStefani1902" />
+                                                    <citedRange from="209" to="210" unit="page" />
+                                                </bibl>
+                                                <bibl>
+                                                    <ref target="#GarciaValdes2009" />
+                                                    <citedRange from="viii" to="viii" unit="page" />
+                                                </bibl>
+                                            </listBibl>
                                         </filiation>
-                                        <filiation type="siglum">U (
-                                <bibl>
-                                                <ref target="#DeStefani1902" />
-                                            </bibl>, 
-                                <bibl>
-                                                <ref target="#GarcíaValdés2009" />
-                                            </bibl>
-                                )</filiation>
+                                        <filiation type="siglum">
+                                            <idno type="siglum">U</idno>
+                                            <listBibl>
+                                                <bibl>
+                                                    <ref target="#DeStefani1902" />
+                                                </bibl>
+                                                <bibl>
+                                                    <ref target="#GarciaValdes2009" />
+                                                </bibl>
+                                            </listBibl>
+                                        </filiation>
                                     </egXML>
                                 </p>
                             </div>
@@ -1066,8 +1071,8 @@
                     <moduleRef key="tei" />
                     <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p pubPlace quote ref resp respStmt sic term textLang title unclear" />
                     <moduleRef key="header" include="authority availability change extent fileDesc handNote idno licence publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
-                    <moduleRef key="figures" include="formula" />
-                    <moduleRef key="linking" />
+                    <moduleRef key="figures" include="formula" />                    
+                    <moduleRef key="linking" include="" />
                     <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
                     <moduleRef key="namesdates" include="country persName placeName settlement" />
                     <moduleRef key="textstructure" include="body div TEI text" />
@@ -1909,6 +1914,9 @@
                             <memberOf key="att.editLike" mode="delete" />
                             <memberOf key="att.responsibility" mode="delete" />
                         </classes>
+                        <content>
+                            <textNode />
+                        </content>
                         <attList>
                             <!-- Attributes deleted from att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt" />
@@ -2211,6 +2219,7 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
+                    
                     <elementSpec ident="gap" mode="change" module="core">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -2508,7 +2517,10 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <textNode />
+                            <alternate>
+                                <textNode />
+                                <elementRef key="g" />
+                            </alternate>
                         </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
@@ -2586,6 +2598,9 @@
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
+                        <content>
+                            <textNode />
+                        </content>
                         <valList mode="replace" type="closed">
                             <valItem ident="Gothenburg University" />
                             <valItem ident="Linköping Diocesan Library" />
@@ -3423,6 +3438,9 @@
                         <classes mode="change">
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
+                        <content>
+                            <textNode />
+                        </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:lang" mode="change" usage="opt" />
@@ -3650,11 +3668,14 @@
                         <content>
                             <textNode />
                         </content>
-                        <constraintSpec ident="date.values" scheme="isoschematron">
+                        <constraintSpec ident="origDate.check" scheme="isoschematron">
                             <constraint>
                                 <sch:rule context="tei:origDate">
                                     <sch:assert test="@when or (@notAfter and @notBefore)"> Either @when or @notAfter/@notBefore must be provided. </sch:assert>
                                     <sch:report test="not(text())"> A text description for origDate must be provided</sch:report>
+                                </sch:rule>
+                                <sch:rule context="tei:origDate">
+                                    <sch:report test="text()='century'"> Use c. instead of century</sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3697,14 +3718,14 @@
                             <memberOf key="att.datable" mode="delete" />
                         </classes>
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
+                            <alternate minOccurs="1" maxOccurs="unbounded">
                                 <textNode />
                                 <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="date" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded" />
-                                <elementRef key="origDate" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="origDate" minOccurs="1" maxOccurs="1" />
                                 <elementRef key="origPlace" minOccurs="0" maxOccurs="1" />
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded" />
@@ -3712,7 +3733,7 @@
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <origin>Probably written in the <origDate from="1250" to="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                                <origin>Probably written in the <origDate notBefore="1251" notAfter="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -4045,6 +4066,9 @@
                             <memberOf key="att.naming" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
+                        <content>
+                            <textNode />
+                        </content>
                         <valList mode="replace" type="closed">
                             <valItem ident="Gothenburg University Library" />
                             <valItem ident="Kungliga biblioteket" />
