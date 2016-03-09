@@ -8,7 +8,7 @@
                 <author xml:id="EN">Eva Nyström</author>
             </titleStmt>
             <publicationStmt>
-                <authority>Patrik Granholm and Eva Nyström</authority>
+                <publisher>Manuscripta</publisher>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons
                         Attribution 4.0 International</licence>
@@ -53,9 +53,20 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <locus from="22r:1" to="22r:10" scheme="folios" />
                         </egXML>
-                        For left and right flyleaves use L1r (= i<hi rend="sup">r</hi>), R1r (= i'<hi rend="sup">r</hi>).
+                        For left and right endleaves without foliation use SL1r (= &lt;I<hi rend="sup">r</hi>&gt;), SR1r (= &lt;I´<hi rend="sup">r</hi>&gt;).
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <locus from="SL1r" to="SL2v" scheme="folios" />
+                        </egXML>
+                        For left (end)leaves with foliation use L1r (= I<hi rend="sup">r</hi>).
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <locus from="L1r" to="L2v" scheme="folios" />
+                        </egXML>
+                        For right leaves (except endleaves) without foliation continue the foliation, e.g. after f. 127v use S128r (= &lt;128<hi rend="sup">r</hi>&gt;).
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <locusGrp>
+                                <locus from="126r" to="127v" scheme="folios" />
+                                <locus from="S128r" to="S129v" scheme="folios" />
+                            </locusGrp>
                         </egXML>
                         For references to the spine and covers the <att>scheme</att> attribute with the value <val>other</val> should be used. Use the abbreviations LCO (= left cover outside), LCI (= left cover inside), RCI (= right cover inside), RCO (= right cover outside).
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -64,7 +75,7 @@
                         In cases where it is necessary to use different values for the scheme <att>attribute</att>, e.g. when referring to the left or right inside covers and the flyleaves, use <gi>locusGrp</gi>.
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <locusGrp>
-                                <locus from="R1r" to="R2v" scheme="folios" />
+                                <locus from="SR1r" to="SR2v" scheme="folios" />
                                 <locus from="RCI" to="RCI" scheme="other" />
                             </locusGrp>
                         </egXML>
@@ -268,13 +279,12 @@
                     </div>
                     <div xml:id="publicationstatement">
                         <head>Publication Statement</head>
-                        <p>The <gi>publicationStmt</gi> element must contain the follwing elements: <gi>authority</gi>,  <gi>pubPlace</gi>, <gi>date</gi>, and <gi>availability</gi>.</p>
+                        <p>The <gi>publicationStmt</gi> element must contain the <gi>publisher</gi>, <gi>date</gi>, and <gi>availability</gi> elements .</p>
                         <p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>
-                                    <authority>Uppsala University Library</authority>
-                                    <pubPlace>Uppsala</pubPlace>
-                                    <date when="2014" />
+                                <publicationStmt>      
+                                    <publisher>Manuscripta</publisher>                                       
+                                    <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -282,8 +292,7 @@
                             </egXML>
                             <specList>
                                 <specDesc key="publicationStmt" />
-                                <specDesc key="authority" />
-                                <specDesc key="pubPlace" />
+                                <specDesc key="publisher" />                                
                                 <specDesc key="date" atts="when" />
                                 <specDesc key="availability" atts="status" />
                             </specList>
@@ -1069,8 +1078,8 @@
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <moduleRef key="tei" />
-                    <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p pubPlace quote ref resp respStmt sic term textLang title unclear" />
-                    <moduleRef key="header" include="authority availability change extent fileDesc handNote idno licence publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
+                    <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p publisher quote ref resp respStmt sic term textLang title unclear" />
+                    <moduleRef key="header" include="availability change extent fileDesc handNote idno licence publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
                     <moduleRef key="figures" include="formula" />                    
                     <moduleRef key="linking" include="" />
                     <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
@@ -1318,9 +1327,12 @@
                         </valList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>
-                                    <authority>Uppsala University Library</authority>
-                                    <pubPlace>Uppsala</pubPlace>
+                                <publicationStmt>      
+                                    <publisher>Manuscripta</publisher>                                       
+                                    <date when="2016" />
+                                    <availability status="free">
+                                        <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                    </availability>
                                 </publicationStmt>
                             </egXML>
                         </exemplum>
@@ -1341,10 +1353,9 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>
-                                    <authority>Uppsala University Library</authority>
-                                    <pubPlace>Uppsala</pubPlace>
-                                    <date when="2014" />
+                                <publicationStmt>      
+                                    <publisher>Manuscripta</publisher>                                       
+                                    <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -2798,10 +2809,9 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>
-                                    <authority>Uppsala University Library</authority>
-                                    <pubPlace>Uppsala</pubPlace>
-                                    <date when="2014" />
+                                <publicationStmt>      
+                                    <publisher>Manuscripta</publisher>                                       
+                                    <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -3916,28 +3926,24 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    <elementSpec ident="pubPlace" mode="change" module="core">
+                    <elementSpec ident="publisher" mode="change" module="core">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.naming" mode="delete" />
-                            <memberOf key="att.canonical" mode="delete" />
+                            <memberOf key="att.global" mode="delete" />                            
                         </classes>
                         <content>
                             <textNode />
                         </content>
-                        <constraintSpec ident="publication.place.check" scheme="isoschematron">
-                            <desc versionDate="2014-11-11">Check that Uppsala or Stockholm is used in <gi>pubPlace</gi> under <gi>publicationStmt</gi>.</desc>
-                            <constraint>
-                                <sch:rule context="tei:publicationStmt/tei:pubPlace">
-                                    <sch:assert test="text()='Uppsala' or text()='Stockholm'"> Uppsala or Stockholm should be used for pubPlace. </sch:assert>
-                                </sch:rule>
-                            </constraint>
-                        </constraintSpec>
+                        <valList mode="replace" type="closed">
+                            <valItem ident="Manuscripta" />
+                        </valList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>
-                                    <authority>Uppsala University Library</authority>
-                                    <pubPlace>Uppsala</pubPlace>
+                                <publicationStmt>      
+                                    <publisher>Manuscripta</publisher>                                       
+                                    <date when="2016" />
+                                    <availability status="free">
+                                        <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                    </availability>
                                 </publicationStmt>
                             </egXML>
                         </exemplum>
@@ -3947,17 +3953,18 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="authority" />
-                            <elementRef key="pubPlace" />
+                            <elementRef key="publisher" />                            
                             <elementRef key="date" />
                             <elementRef key="availability" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>
-                                    <authority>Uppsala University Library</authority>
-                                    <pubPlace>Uppsala</pubPlace>
-                                    <date when="2014" />
+                                <publicationStmt>      
+                                    <publisher>Manuscripta</publisher>                                       
+                                    <date when="2016" />
+                                    <availability status="free">
+                                        <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                    </availability>
                                 </publicationStmt>
                             </egXML>
                         </exemplum>
@@ -4642,9 +4649,12 @@
                                                 <resp key="encoder" />
                                             </respStmt>
                                         </titleStmt>
-                                        <publicationStmt>
-                                            <authority>Uppsala University Library</authority>
-                                            <pubPlace>Uppsala</pubPlace>
+                                        <publicationStmt>      
+                                            <publisher>Manuscripta</publisher>                                       
+                                            <date when="2016" />
+                                            <availability status="free">
+                                                <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                                            </availability>
                                         </publicationStmt>
                                         <sourceDesc>
                                             <!-- Source description -->
