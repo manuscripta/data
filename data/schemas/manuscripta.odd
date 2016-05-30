@@ -282,8 +282,8 @@
                         <p>The <gi>publicationStmt</gi> element must contain the <gi>publisher</gi>, <gi>date</gi>, and <gi>availability</gi> elements .</p>
                         <p>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>      
-                                    <publisher>Manuscripta</publisher>                                       
+                                <publicationStmt>
+                                    <publisher>Manuscripta</publisher>
                                     <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
@@ -292,7 +292,7 @@
                             </egXML>
                             <specList>
                                 <specDesc key="publicationStmt" />
-                                <specDesc key="publisher" />                                
+                                <specDesc key="publisher" />
                                 <specDesc key="date" atts="when" />
                                 <specDesc key="availability" atts="status" />
                             </specList>
@@ -1080,7 +1080,7 @@
                     <moduleRef key="tei" />
                     <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p publisher quote ref resp respStmt sic term textLang title unclear" />
                     <moduleRef key="header" include="availability change extent fileDesc handNote idno licence publicationStmt revisionDesc sourceDesc teiHeader titleStmt" />
-                    <moduleRef key="figures" include="formula" />                    
+                    <moduleRef key="figures" include="formula" />
                     <moduleRef key="linking" include="" />
                     <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width" />
                     <moduleRef key="namesdates" include="country persName placeName settlement" />
@@ -1327,8 +1327,8 @@
                         </valList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>      
-                                    <publisher>Manuscripta</publisher>                                       
+                                <publicationStmt>
+                                    <publisher>Manuscripta</publisher>
                                     <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
@@ -1353,8 +1353,8 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>      
-                                    <publisher>Manuscripta</publisher>                                       
+                                <publicationStmt>
+                                    <publisher>Manuscripta</publisher>
                                     <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
@@ -2230,7 +2230,7 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
-                    
+
                     <elementSpec ident="gap" mode="change" module="core">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -2652,7 +2652,8 @@
                                     <elementRef key="locus" />
                                     <elementRef key="locusGrp" />
                                 </alternate>
-                                <elementRef key="title" />
+                                <elementRef key="title" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="note" minOccurs="0" maxOccurs="1" />
                             </sequence>
                         </content>
                         <exemplum>
@@ -2809,8 +2810,8 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>      
-                                    <publisher>Manuscripta</publisher>                                       
+                                <publicationStmt>
+                                    <publisher>Manuscripta</publisher>
                                     <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
@@ -3928,7 +3929,7 @@
                     </elementSpec>
                     <elementSpec ident="publisher" mode="change" module="core">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />                            
+                            <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
                             <textNode />
@@ -3938,8 +3939,8 @@
                         </valList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>      
-                                    <publisher>Manuscripta</publisher>                                       
+                                <publicationStmt>
+                                    <publisher>Manuscripta</publisher>
                                     <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
@@ -3953,14 +3954,14 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="publisher" />                            
+                            <elementRef key="publisher" />
                             <elementRef key="date" />
                             <elementRef key="availability" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <publicationStmt>      
-                                    <publisher>Manuscripta</publisher>                                       
+                                <publicationStmt>
+                                    <publisher>Manuscripta</publisher>
                                     <date when="2016" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
@@ -4649,8 +4650,8 @@
                                                 <resp key="encoder" />
                                             </respStmt>
                                         </titleStmt>
-                                        <publicationStmt>      
-                                            <publisher>Manuscripta</publisher>                                       
+                                        <publicationStmt>
+                                            <publisher>Manuscripta</publisher>
                                             <date when="2016" />
                                             <availability status="free">
                                                 <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
