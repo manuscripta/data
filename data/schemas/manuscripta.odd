@@ -4882,6 +4882,16 @@
                         <content>
                             <rng:empty />
                         </content>
+                        <constraintSpec ident="quantity.atLeast.atMost.attributes" scheme="isoschematron">
+                            <desc versionDate="2016-06-14" xml:lang="en">checks that the <gi>unclear</gi> element has either a <att>quantity</att> or <att>atLeast</att>/<att>atMoset</att> attributes.</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:unclear">
+                                        <sch:assert test="@quantity or (@atLeast and @atMost)">The unclear element must have either @quantity or @atLeast/@atMost. </sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <attDef ident="reason" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
@@ -4901,7 +4911,7 @@
                                     <valItem ident="mm" />
                                 </valList>
                             </attDef>
-                            <attDef ident="quantity" mode="change" usage="req" />
+                            <attDef ident="quantity" mode="change" usage="opt" />
                             <attDef ident="extent" mode="delete" />
                             <!-- Attributes changed and deleted in att.ranging-->
                             <attDef ident="atLeast" mode="change" usage="opt" />
