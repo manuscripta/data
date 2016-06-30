@@ -98,9 +98,9 @@
                 </div>
                 <div xml:id="placenames">
                     <head>Place names</head>
-                    <p>Should be referred to the places authority file in a <gi>placeName</gi> element with the <att>ref</att> attribute, see <ref target="manuscripta-places.html">Guidelines for places</ref>.
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <placeName ref="#Bologna" />
+                    <p>Should be given in a <gi>placeName</gi> element with the <att>ref</att> attribute pointing to the GeoNames geographical database, or VIAF for corporate entities.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <placeName ref="http://www.geonames.org/3181928">Bologna</placeName>
                         </egXML>
                         <specList>
                             <specDesc key="placeName" atts="ref" />
@@ -3714,7 +3714,7 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <origPlace>
-                                    <placeName ref="#Bologna" />
+                                    <placeName ref="http://www.geonames.org/3181928">Bologna</placeName>
                                 </origPlace>
                             </egXML>
                         </exemplum>
@@ -3885,8 +3885,18 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <rng:empty />
+                            <textNode />
                         </content>
+                        <constraintSpec ident="placeName.ref.content.check" scheme="isoschematron">
+                            <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>ref</att> attribute in the <gi>palceName</gi> element starts with http://www.geonames.org/</desc>
+                            <constraint>
+                                <sch:pattern>
+                                    <sch:rule context="tei:placeName/@ref">
+                                        <sch:assert test="starts-with(., 'http://www.geonames.org/') or starts-with(., 'http://www.viaf.org/')">A URI should be used in the ref attribute for placeName pointing to GeoNames or VIAF</sch:assert>
+                                    </sch:rule>
+                                </sch:pattern>
+                            </constraint>
+                        </constraintSpec>
                         <attList>
                             <!-- Attribute deleted in att.naming -->
                             <attDef ident="role" mode="delete" />
@@ -3896,7 +3906,7 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <placeName ref="#Bologna" />
+                                <placeName ref="http://www.geonames.org/3181928">Bologna</placeName>
                             </egXML>
                         </exemplum>
                     </elementSpec>
