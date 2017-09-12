@@ -1,28 +1,19 @@
-#Greek Manuscripts in Sweden: A Digitization and Cataloguing Project
+#Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden
 
 ##Preliminary directory structure:
 
 ```
 manuscripta/
 ├── data/
-│   ├── authority_files/
+│   ├── guidelines/
+│   ├── id/
 │   ├── msDescs/
-│   │   ├── gub/
-│   │   ├── kb/
-│   │   ├── lsb/
-│   │   ├── lub/
-│   │   ├── natm/
-│   │   ├── ra/
-│   │   ├── sko/
-│   │   └── uub/
-│   ├── schemas/
-│   └── stylesheets/
+│   └── schemas/
 └── eXist-db/
     ├── data/
-    │   ├── authority_files/
+    │   ├── id/
     │   └── msDescs/
-    ├── metadata/
-    │   └── diva/
+    ├── iiif/
     ├── modules/
     ├── resources/
     │   ├── css/
