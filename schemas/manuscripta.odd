@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>TEI P5 Customization and Encoding Guidelines for Greek Manuscripts in Sweden</title>
+                <title>TEI P5 Customization and Encoding Guidelines Manuscripta – A Digital Catalogue of Manuscripts in Sweden</title>
                 <author xml:id="PG">Patrik Granholm</author>
                 <author xml:id="EN">Eva Nyström</author>
             </titleStmt>
@@ -27,7 +27,7 @@
             <divGen type="toc" xml:id="toc" />
             <div xml:id="introduction">
                 <head>Introduction</head>
-                <p>This TEI P5 ODD Customization for the cataloguing project <hi rend="italic">Greek Manuscripts in Sweden</hi> was created by Patrik Granholm and Eva Nyström, and is released under a <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</ref>.</p>
+                <p>This TEI P5 ODD Customization for <hi rend="italic">Manuscripta – A Digital Catalogue of Manuscripts in Sweden</hi> was created by Patrik Granholm and Eva Nyström, and is released under a <ref target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</ref>.</p>
             </div>
             <div xml:id="phraselevel">
                 <head>Phrase-level Elements</head>
@@ -1172,7 +1172,7 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="idno" />
+                            <elementRef key="idno" minOccurs="1" maxOccurs="unbounded" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1277,7 +1277,7 @@
                                     <sch:let name="author-surname" value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[@role = 'critEd'][1]/tei:persName/tei:surname" />
                                     <sch:let name="date" value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct/tei:monogr/tei:imprint/tei:date" />
                                     <sch:let name="year" value="if($date[@when]) then $date/@when else concat($date/@from, '–', $date/@to)" />
-                                    <sch:assert test="starts-with(@ref, 'http://www.manuscripta.se/bibl/')">A URI should be used in the ref attribute for placeName pointing to http://www.manuscripta.se/bibl/</sch:assert>
+                                    <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/bibl/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/bibl/</sch:assert>
                                     <sch:assert test="contains($short-title,.) or contains(concat($first-author-surname, ' (', $year, ')'),.) or contains(concat($author-surname, ' (', $year, ')'),.)">bibl mismatch</sch:assert>
                                 </sch:rule>
                             </constraint>
@@ -1298,7 +1298,7 @@
                         <content>
                             <sequence>
                                 <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
-                                <elementRef key="decoNote" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded" />
                                 <elementRef key="condition" minOccurs="0" maxOccurs="1" />
                             </sequence>
                         </content>
@@ -1612,7 +1612,8 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="p" minOccurs="1" maxOccurs="unbounded" />
+                            <elementRef key="p" minOccurs="0" maxOccurs="unbounded" />
+                            <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1623,9 +1624,19 @@
                         </exemplum>
                     </elementSpec>
                     <elementSpec ident="decoNote" mode="change" module="msdescription">
+                        <attList>
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="bookmarks" />
+                                    <valItem ident="edges" />
+                                    <valItem ident="images" />
+                                    <valItem ident="initials" />                                    
+                                    <valItem ident="tooling" />                                    
+                                </valList>
+                            </attDef>
+                        </attList>
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
@@ -2439,9 +2450,9 @@
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="defective" mode="change" usage="req" />
+                            <attDef ident="defective" mode="change" usage="rec" />
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="req">
+                            <attDef ident="xml:lang" mode="change" usage="rec">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="grc">
                                         <desc>Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</desc>
@@ -3651,7 +3662,7 @@
                                 <sch:rule context="tei:persName">
                                     <sch:let name="persname-ref" value="substring-after(@ref, 'person/')" />
                                     <sch:let name="persname" value="doc(concat('../id/person/',$persname-ref,'.xml'))//tei:person/tei:persName/normalize-space()" />
-                                    <sch:assert test="starts-with(@ref, 'http://www.manuscripta.se/person/')">A URI should be used in the ref attribute for placeName pointing to http://www.manuscripta.se/place/</sch:assert>
+                                    <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/person/')">A URI should be used in the ref attribute for persName pointing to https://www.manuscripta.se/person/</sch:assert>
                                     <sch:assert test="contains($persname,.)">persName mismatch</sch:assert>
                                 </sch:rule>
                             </constraint>
@@ -3736,14 +3747,14 @@
                             <textNode />
                         </content>
                         <constraintSpec ident="placeName.ref.content.check" scheme="isoschematron">
-                            <desc versionDate="2016-12-29" xml:lang="en">checks that the <att>ref</att> attribute in the <gi>placeName</gi> element starts with http://www.manuscripta.se/place/</desc>
+                            <desc versionDate="2016-12-29" xml:lang="en">checks that the <att>ref</att> attribute in the <gi>placeName</gi> element starts with https://www.manuscripta.se/place/</desc>
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:placeName">
-                                        <!--<sch:let name="placename-ref" value="substring-after(@ref, 'http://www.manuscripta.se/place/')" />-->
+                                        <!--<sch:let name="placename-ref" value="substring-after(@ref, 'https://www.manuscripta.se/place/')" />-->
                                         <sch:let name="placename-ref" value="substring-after(@ref, 'place/')" />
                                         <sch:let name="placename" value="doc(concat('../id/place/',$placename-ref,'.xml'))//tei:place/tei:placeName" />
-                                        <sch:assert test="starts-with(@ref, 'http://www.manuscripta.se/place/')">A URI should be used in the ref attribute for placeName pointing to http://www.manuscripta.se/place/</sch:assert>
+                                        <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/place/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/place/</sch:assert>
                                         <sch:assert test="$placename = text()">Placename mismatch</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
@@ -3764,10 +3775,10 @@
                     </elementSpec>
                     <elementSpec ident="provenance" mode="change" module="msdescription">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.datable" mode="delete" />
+                            <memberOf key="att.global" mode="delete" />                            
                             <memberOf key="att.typed" mode="delete" />
                             <memberOf key="att.responsibility" mode="delete" />
+                            <memberOf key="att.global.responsibility" mode="add" />
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
@@ -3816,6 +3827,7 @@
                         </classes>
                         <content>
                             <elementRef key="publisher" />
+                            <elementRef key="idno" />
                             <elementRef key="date" />
                             <elementRef key="availability" />
                         </content>
@@ -3889,7 +3901,7 @@
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'http://www.manuscripta.se')">The target value must start with http://www.manuscripta.se</sch:assert>
+                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -3912,7 +3924,7 @@
                                         <sch:assert test="matches(.,'^#[A-Za-z]+\d{4}[a-z]?$')">The target attribute should only consist of #, the authors surname in basic latin characters, followed by the publication year, and optionally characters a, b, c etc.</sch:assert>
                                     </sch:rule>-->
                                     <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'http://www.manuscripta.se')">The target value must start with http://www.manuscripta.se</sch:assert>
+                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -4709,7 +4721,7 @@
                         <content>
                             <elementRef key="title" minOccurs="1" maxOccurs="1" />
                             <elementRef key="sponsor" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="funder" minOccurs="1" maxOccurs="1" />
+                            <elementRef key="funder" minOccurs="1" maxOccurs="unbounded" />
                             <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded" />
                         </content>
                         <exemplum>

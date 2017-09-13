@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-05-12T07:17:42Z. .
+Schema generated from ODD source 2017-09-13T08:31:16Z. .
 TEI Edition: Version 3.1.0. Last updated on
 	15th December 2016, revision d3f5e70
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
@@ -1847,7 +1847,7 @@ Measures]</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                                     <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'http://www.manuscripta.se')">The target value must start with http://www.manuscripta.se</sch:assert>
+                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
@@ -1862,7 +1862,7 @@ Measures]</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                                     
                                     <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'http://www.manuscripta.se')">The target value must start with http://www.manuscripta.se</sch:assert>
+                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -2183,7 +2183,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                         value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct/tei:monogr/tei:imprint/tei:date"/>
                                     <sch:let name="year"
                         value="if($date[@when]) then $date/@when else concat($date/@from, '–', $date/@to)"/>
-                                    <sch:assert test="starts-with(@ref, 'http://www.manuscripta.se/bibl/')">A URI should be used in the ref attribute for placeName pointing to http://www.manuscripta.se/bibl/</sch:assert>
+                                    <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/bibl/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/bibl/</sch:assert>
                                     <sch:assert test="contains($short-title,.) or contains(concat($first-author-surname, ' (', $year, ')'),.) or contains(concat($author-surname, ' (', $year, ')'),.)">bibl mismatch</sch:assert>
                                 </sch:rule>
          </pattern>
@@ -2332,7 +2332,9 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) groups information about the title of a work and those responsible for its content. [2.2.1. The Title Statement 2.2. The File Description]</a:documentation>
          <ref name="title"/>
          <ref name="sponsor"/>
-         <ref name="funder"/>
+         <oneOrMore>
+            <ref name="funder"/>
+         </oneOrMore>
          <zeroOrMore>
             <ref name="respStmt"/>
          </zeroOrMore>
@@ -2380,6 +2382,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <element name="publicationStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication statement) groups information concerning the publication or distribution of an electronic or other text. [2.2.4. Publication, Distribution, Licensing, etc. 2.2. The File Description]</a:documentation>
          <ref name="publisher"/>
+         <ref name="idno"/>
          <ref name="date"/>
          <ref name="availability"/>
       </element>
@@ -3187,7 +3190,9 @@ The element <name/> may appear once only
    <define name="altIdentifier">
       <element name="altIdentifier">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative identifier) contains an alternative or former structured identifier used for a manuscript, such as a former catalogue number. [10.4. The Manuscript Identifier]</a:documentation>
-         <ref name="idno"/>
+         <oneOrMore>
+            <ref name="idno"/>
+         </oneOrMore>
       </element>
    </define>
    <define name="msName">
@@ -3398,31 +3403,35 @@ The element <name/> may appear once only
          <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
-         <attribute name="xml:lang">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
-            <choice>
-               <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</a:documentation>
-               <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            </choice>
-         </attribute>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="defective"
-                    a:defaultValue="false">
-            <a:documentation>indicates whether the passage being quoted is defective, i.e. incomplete through loss or damage.</a:documentation>
-            <choice>
-               <data type="boolean"/>
+         <optional>
+            <attribute name="xml:lang">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>unknown</value>
-                  <a:documentation/>
-                  <value>inapplicable</value>
-                  <a:documentation/>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Greek should be normalized: the first letter of each sentence and of names should be capitalized, iota subscripts should be added, and abbreviations expanded.</a:documentation>
+                  <value>la</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>sv</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
-            </choice>
-         </attribute>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="defective"
+                       a:defaultValue="false">
+               <a:documentation>indicates whether the passage being quoted is defective, i.e. incomplete through loss or damage.</a:documentation>
+               <choice>
+                  <data type="boolean"/>
+                  <choice>
+                     <value>unknown</value>
+                     <a:documentation/>
+                     <value>inapplicable</value>
+                     <a:documentation/>
+                  </choice>
+               </choice>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -4012,9 +4021,12 @@ The element <name/> may appear once only
    <define name="decoDesc">
       <element name="decoDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(decoration description) contains a description of the decoration of a manuscript, either as a sequence of paragraphs, or as a sequence of topically organized decoNote elements. [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
-         <oneOrMore>
+         <zeroOrMore>
             <ref name="p"/>
-         </oneOrMore>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="decoNote"/>
+         </zeroOrMore>
       </element>
    </define>
    <define name="decoNote">
@@ -4035,6 +4047,23 @@ The element <name/> may appear once only
                <ref name="term"/>
             </choice>
          </zeroOrMore>
+         <ref name="att.typed.attribute.subtype"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <choice>
+               <value>bookmarks</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>edges</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>images</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>initials</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>tooling</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <empty/>
       </element>
    </define>
    <define name="additions">
@@ -4078,9 +4107,9 @@ The element <name/> may appear once only
             <oneOrMore>
                <ref name="p"/>
             </oneOrMore>
-            <optional>
+            <zeroOrMore>
                <ref name="decoNote"/>
-            </optional>
+            </zeroOrMore>
             <optional>
                <ref name="condition"/>
             </optional>
@@ -4196,6 +4225,9 @@ The element <name/> may appear once only
                </zeroOrMore>
             </choice>
          </zeroOrMore>
+         <ref name="att.global.responsibility.attributes"/>
+         <ref name="att.datable.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="acquisition">
@@ -4290,7 +4322,7 @@ The element <name/> may appear once only
                                     <sch:let name="persname-ref" value="substring-after(@ref, 'person/')"/>
                                     <sch:let name="persname"
                         value="doc(concat('../id/person/',$persname-ref,'.xml'))//tei:person/tei:persName/normalize-space()"/>
-                                    <sch:assert test="starts-with(@ref, 'http://www.manuscripta.se/person/')">A URI should be used in the ref attribute for placeName pointing to http://www.manuscripta.se/place/</sch:assert>
+                                    <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/person/')">A URI should be used in the ref attribute for persName pointing to https://www.manuscripta.se/person/</sch:assert>
                                     <sch:assert test="contains($persname,.)">persName mismatch</sch:assert>
                                 </sch:rule>
          </pattern>
@@ -4372,7 +4404,7 @@ The element <name/> may appear once only
                                         <sch:let name="placename-ref" value="substring-after(@ref, 'place/')"/>
                                         <sch:let name="placename"
                         value="doc(concat('../id/place/',$placename-ref,'.xml'))//tei:place/tei:placeName"/>
-                                        <sch:assert test="starts-with(@ref, 'http://www.manuscripta.se/place/')">A URI should be used in the ref attribute for placeName pointing to http://www.manuscripta.se/place/</sch:assert>
+                                        <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/place/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/place/</sch:assert>
                                         <sch:assert test="$placename = text()">Placename mismatch</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
