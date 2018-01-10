@@ -984,11 +984,19 @@
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
+                    <specGrp xml:id="publicationStmtGrp"> 
+                        <!--FLYTTA HIT publicationStmt elementSpecs-->
+                    </specGrp>
+
+
                     <elementSpec ident="TEI" module="textstructure" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="delete" />
+                        </classes>
                         <content>
                             <elementRef key="teiHeader" />
-                            <elementRef key="text" minOccurs="0" maxOccurs="1" />
-                            <elementRef key="facsimile" />
+                            <elementRef key="text" minOccurs="1" maxOccurs="1" />
+                            <elementRef key="facsimile" minOccurs="0" maxOccurs="1" />
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
@@ -1004,10 +1012,15 @@
                             <attDef ident="xml:lang" mode="delete" />
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete" />
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete" />
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete" />
+                            <attDef ident="resp" mode="delete" />
+                            <!-- Attributes deleted in att.global.source -->
+                            <attDef ident="source" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1244,8 +1257,8 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
-                                    <publisher>Manuscripta</publisher>
-                                    <date when="2016" />
+                                    <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
+                                    <date when="2017" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -1566,47 +1579,49 @@
                             <p>The <gi>country</gi> element should only be used in <gi>msIdentifier</gi>. Elsewhere the <gi>placeName</gi> element with the <att>ref</att> attribute should be used.</p>
                         </remarks>
                     </elementSpec>
-                    <elementSpec ident="date" mode="change" module="core">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.editLike" mode="delete" />
-                            <memberOf key="att.dimensions" mode="delete" />
-                            <memberOf key="att.ranging" mode="delete" />
-                            <memberOf key="att.responsibility" mode="delete" />
-                            <memberOf key="att.typed" mode="delete" />
-                        </classes>
-                        <content>
-                            <textNode />
-                        </content>
-                        <constraintSpec ident="date.attributes" scheme="isoschematron">
-                            <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>date</gi> element has either a <att>when</att> or <att>to</att>/<att>from</att> attributes, or <att>notAfter</att>/<att>notBefore</att> attributes.</desc>
-                            <constraint>
-                                <sch:pattern>
-                                    <sch:rule context="tei:date">
-                                        <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)">The date element must have either @when or @to/@from, or @notAfter/@notBefore. </sch:assert>
+                    <specGrp xml:id="date_grp">
+                        <elementSpec ident="date" mode="change" module="core">
+                            <classes mode="change">
+                                <memberOf key="att.global" mode="delete" />
+                                <memberOf key="att.editLike" mode="delete" />
+                                <memberOf key="att.dimensions" mode="delete" />
+                                <memberOf key="att.ranging" mode="delete" />
+                                <memberOf key="att.responsibility" mode="delete" />
+                                <memberOf key="att.typed" mode="delete" />
+                            </classes>
+                            <content>
+                                <textNode />
+                            </content>
+                            <constraintSpec ident="date.attributes" scheme="isoschematron">
+                                <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>date</gi> element has either a <att>when</att> or <att>to</att>/<att>from</att> attributes, or <att>notAfter</att>/<att>notBefore</att> attributes.</desc>
+                                <constraint>
+                                    <sch:pattern>
+                                        <sch:rule context="tei:date">
+                                            <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)">The date element must have either @when or @to/@from, or @notAfter/@notBefore. </sch:assert>
+                                        </sch:rule>
+                                    </sch:pattern>
+                                </constraint>
+                            </constraintSpec>
+                            <constraintSpec ident="date.when.value" scheme="isoschematron">
+                                <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>date</gi> element is empty when using the <att>when</att> attribute.</desc>
+                                <constraint>
+                                    <sch:rule context="tei:date[@when]">
+                                        <sch:report test="text()">The date element must be empty when using the when attribute.</sch:report>
                                     </sch:rule>
-                                </sch:pattern>
-                            </constraint>
-                        </constraintSpec>
-                        <constraintSpec ident="date.when.value" scheme="isoschematron">
-                            <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>date</gi> element is empty when using the <att>when</att> attribute.</desc>
-                            <constraint>
-                                <sch:rule context="tei:date[@when]">
-                                    <sch:report test="text()">The date element must be empty when using the when attribute.</sch:report>
-                                </sch:rule>
-                            </constraint>
-                        </constraintSpec>
-                        <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <date from="1767" to="1779" />
-                            </egXML>
-                        </exemplum>
-                        <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <date notBefore="1573" notAfter="1580">mid-1570s</date>
-                            </egXML>
-                        </exemplum>
-                    </elementSpec>
+                                </constraint>
+                            </constraintSpec>
+                            <exemplum>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <date from="1767" to="1779" />
+                                </egXML>
+                            </exemplum>
+                            <exemplum>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <date notBefore="1573" notAfter="1580">mid-1570s</date>
+                                </egXML>
+                            </exemplum>
+                        </elementSpec>
+                    </specGrp>
                     <elementSpec ident="decoDesc" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete" />
@@ -1630,8 +1645,8 @@
                                     <valItem ident="bookmarks" />
                                     <valItem ident="edges" />
                                     <valItem ident="images" />
-                                    <valItem ident="initials" />                                    
-                                    <valItem ident="tooling" />                                    
+                                    <valItem ident="initials" />
+                                    <valItem ident="tooling" />
                                 </valList>
                             </attDef>
                         </attList>
@@ -2403,7 +2418,6 @@
                         <content>
                             <alternate>
                                 <textNode />
-                                <elementRef key="g" />
                             </alternate>
                         </content>
                         <attList>
@@ -2417,6 +2431,16 @@
                                     <valItem ident="siglum" />
                                     <valItem ident="other" />
                                     <valItem ident="URI" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="subtype" mode="change" usage="opt">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="Diktyon" />
+                                    <valItem ident="Manuscripta" />
+                                    <valItem ident="Access" />
+                                    <valItem ident="Alvin" />
+                                    <valItem ident="Libris" />
+                                    <valItem ident="Regina" />
                                 </valList>
                             </attDef>
                         </attList>
@@ -2671,8 +2695,8 @@
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
-                                    <publisher>Manuscripta</publisher>
-                                    <date when="2016" />
+                                    <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
+                                    <date when="2017" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -2903,6 +2927,7 @@
                     <elementSpec ident="msDesc" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.typed" mode="delete" />
+                            <memberOf key="att.docStatus" mode="delete" />
                         </classes>
                         <content>
                             <elementRef key="msIdentifier" />
@@ -2926,26 +2951,27 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt" />
+                            <attDef ident="xml:lang" mode="change" usage="req" />
                             <attDef ident="xml:id" mode="delete" />
                             <attDef ident="n" mode="delete" />
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete" />
-
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete" />
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete" />
-
-                            <!-- Attributes deleted in att.global.responsibility -->
+                            <!-- Attributes changed and deleted in att.global.responsibility -->
+                            <attDef ident="resp" mode="change" usage="req" />
                             <attDef ident="cert" mode="delete" />
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <msDesc>
                                     <msIdentifier>
-                                        <country>Sweden</country>
-                                        <settlement>Uppsala</settlement>
-                                        <institution>Uppsala University</institution>
-                                        <repository>Uppsala University Library</repository>
+                                        <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
+                                        <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
+                                        <institution ref="https://www.manuscripta.se/place/100091">Uppsala University</institution>
+                                        <repository ref="https://www.manuscripta.se/place/100092">Uppsala University Library</repository>
                                         <idno type="shelfmark">Gr. 27</idno>
                                     </msIdentifier>
                                     <head>Aelian, On Animals</head>
@@ -3564,7 +3590,7 @@
                             <memberOf key="att.typed" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="placeName" />
+                            <elementRef key="placeName" minOccurs="1" maxOccurs="2" />
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3693,7 +3719,7 @@
                             <!-- Changed attribute in att.naming -->
                             <attDef ident="role" mode="change" usage="opt" />
                             <!-- Modified and deleted attributes in att.canonical -->
-                            <attDef ident="ref" mode="change" usage="req" />
+                            <attDef ident="ref" mode="change" usage="opt" />
                             <attDef ident="key" mode="delete" />
                         </attList>
                         <exemplum>
@@ -3775,7 +3801,7 @@
                     </elementSpec>
                     <elementSpec ident="provenance" mode="change" module="msdescription">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />                            
+                            <memberOf key="att.global" mode="delete" />
                             <memberOf key="att.typed" mode="delete" />
                             <memberOf key="att.responsibility" mode="delete" />
                             <memberOf key="att.global.responsibility" mode="add" />
@@ -3813,7 +3839,7 @@
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
                                     <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
-                                    <date when="2016" />
+                                    <date when="2017" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -3826,16 +3852,18 @@
                             <memberOf key="att.global" mode="delete" />
                         </classes>
                         <content>
-                            <elementRef key="publisher" />
-                            <elementRef key="idno" />
-                            <elementRef key="date" />
-                            <elementRef key="availability" />
+                            <sequence minOccurs="1" maxOccurs="1">
+                                <elementRef key="publisher" minOccurs="1" maxOccurs="1" />
+                                <elementRef key="idno" minOccurs="1" maxOccurs="unbounded" />
+                                <elementRef key="date" minOccurs="1" maxOccurs="1" />
+                                <elementRef key="availability" minOccurs="1" maxOccurs="1" />
+                            </sequence>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <publicationStmt>
-                                    <publisher>Manuscripta</publisher>
-                                    <date when="2016" />
+                                    <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
+                                    <date when="2017" />
                                     <availability status="free">
                                         <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                                     </availability>
@@ -5173,7 +5201,7 @@
                             <attDef ident="seq" mode="delete" />
                         </attList>
                     </classSpec>
-                    <classSpec ident="att.translatable" module="tei" type="atts" mode="delete" />                    
+                    <classSpec ident="att.translatable" module="tei" type="atts" mode="delete" />
                 </schemaSpec>
             </div>
         </back>
