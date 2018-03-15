@@ -21,298 +21,382 @@
         </revisionDesc>
     </teiHeader>
     <text>
-        <body> </body>
+        <body>
+            <div/>
+        </body>
         <back>
             <div xml:id="schema">
                 <head>Schema for the Manuscripta bibliography files</head>
 
-                <schemaSpec ident="manuscripta-bibliography" start="TEI" xml:lang="en">
+                <schemaSpec ident="manuscripta-bibliography" start="TEI" xml:lang="en" source="file:/F:/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
-                    <moduleRef key="tei" />
-                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor foreign imprint monogr p publisher pubPlace q respStmt resp series textLang title" />
-                    <moduleRef key="header" include="availability change edition fileDesc funder idno licence publicationStmt revisionDesc sourceDesc sponsor teiHeader titleStmt" />
-                    <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" />
-                    <moduleRef key="textstructure" include="TEI body text" />
+                    <!-- Modules imported from manuscripta.odd -->
+
+                    <moduleRef key="tei"/>
+                    <moduleRef key="core" include="date foreign publisher resp respStmt textLang"/>
+                    <moduleRef key="header" include="availability change fileDesc funder licence publicationStmt revisionDesc sponsor teiHeader titleStmt"/>
+                    <moduleRef key="textstructure" include="TEI text"/>
+
+                    <!-- Modules for bibliography-bibl.odd -->
+
+                    <moduleRef key="core" include="analytic author biblScope biblStruct editor imprint monogr p pubPlace q series title" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+                    <moduleRef key="header" include="edition idno sourceDesc" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+                    <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+                    <moduleRef key="textstructure" include="body" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
-                    <elementSpec ident="biblStruct" module="core" mode="change">
+                    <elementSpec ident="addName" module="namesdates" mode="change">                        
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.docStatus" mode="delete" />
-                            <memberOf key="att.typed" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.personal" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <sequence minOccurs="1" maxOccurs="1">
-                                <elementRef key="analytic" minOccurs="0" maxOccurs="1" />
-                                <elementRef key="monogr" minOccurs="1" maxOccurs="1" />
-                                <elementRef key="series" minOccurs="0" maxOccurs="1" />
+                            <textNode/>
+                        </content>
+                    </elementSpec>
+                    
+                    <elementSpec ident="analytic" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                        </classes>
+                        <content>
+                            <sequence>
+                                <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="editor" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="body" module="textstructure" mode="change">
+                    
+                    <elementSpec ident="author" module="core" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.declaring" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>                            
                         </classes>
                         <content>
-                            <elementRef key="biblStruct" minOccurs="1" maxOccurs="1" />
-                        </content>
-                    </elementSpec>
-                    <elementSpec ident="change" module="header" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.typed" mode="delete" />
-                        </classes>
-                        <content>
-                            <textNode />
+                            <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
                         <attList>
-                            <attDef ident="target" mode="delete" />
-                            <!-- Attributes changed in att.ascribed -->
-                            <attDef ident="who" mode="change" usage="req" />
-                            <!-- Attributes changed and deleted from att.datable.w3c -->
-                            <attDef ident="when" mode="change" usage="req" />
-                            <attDef ident="notAfter" mode="delete" />
-                            <attDef ident="notBefore" mode="delete" />
-                            <attDef ident="from" mode="delete" />
-                            <attDef ident="to" mode="delete" />
-                            <!-- Attributes changed in att.docStatus -->
-                            <attDef ident="status" mode="change" usage="req" />
+                            <!-- Attributes deleted in att.canonical -->
+                            <attDef ident="key" mode="delete"/>
+                            <attDef ident="ref" mode="delete"/>
+                            <!-- Attributes deleted in att.naming -->
+                            <attDef ident="nymRef" mode="delete"/>                            
                         </attList>
                     </elementSpec>
-                    <!-- Import elementSpec for date from manuscripta.odd -->
-                    <specGrpRef target="manuscripta.odd#date_grp" />
-                    
-                    <elementSpec ident="fileDesc" module="header" mode="change">
+
+                    <elementSpec ident="biblScope" module="core" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="titleStmt" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="publicationStmt" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="sourceDesc" minOccurs="1" maxOccurs="1" />
+                            <empty/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="idno" module="header" mode="change">
-                        <content>
-                            <textNode />
-                        </content>
+
+                    <elementSpec ident="biblStruct" module="core" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.datable" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.docStatus" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
+                        <content>
+                            <sequence minOccurs="1" maxOccurs="1">
+                                <elementRef key="analytic" minOccurs="0" maxOccurs="1"/>
+                                <sequence minOccurs="1" maxOccurs="1">
+                                    <elementRef key="monogr"/>
+                                    <elementRef key="series" minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="body" module="textstructure" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.declaring" mode="delete"/>
+                        </classes>
+                        <content>
+                            <elementRef key="biblStruct" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="edition" module="header" mode="change">
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="editor" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.naming" mode="delete"/>
+                        </classes>
+                        <content>
+                            <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="forename" module="namesdates" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.personal" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="genName" module="namesdates" mode="change">                        
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.personal" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="imprint" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                        </classes>
+                        <content>
+                            <elementRef key="pubPlace" minOccurs="1" maxOccurs="unbounded"/>
+                            <elementRef key="publisher" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="date" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="idno" module="header" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="codicologicalUnit" />
-                                    <valItem ident="formerShelfmark" />
-                                    <valItem ident="id" />
-                                    <valItem ident="msRef" />
-                                    <valItem ident="shelfmark" />
-                                    <valItem ident="siglum" />
-                                    <valItem ident="other" />
-                                    <valItem ident="URI" />
+                                    <valItem ident="ISBN"/>
+                                    <valItem ident="ISSN"/>
+                                    <valItem ident="URI"/>
+                                    <valItem ident="URN"/>
                                 </valList>
                             </attDef>
                             <attDef ident="subtype" mode="change" usage="opt">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="Diktyon" />
-                                    <valItem ident="Manuscripta" />
-                                    <valItem ident="Access" />
-                                    <valItem ident="Alvin" />
-                                    <valItem ident="Libris" />
-                                    <valItem ident="Regina" />
+                                <valList mode="replace" type="closed">                                    
+                                    <valItem ident="Digitization"/>
+                                    <valItem ident="Libris"/>
+                                    <valItem ident="Manuscripta"/>
+                                    <valItem ident="Regina"/>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="publicationStmt" module="header" mode="change">
+
+                    <elementSpec ident="monogr" module="core" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <sequence minOccurs="1" maxOccurs="1">
-                                <elementRef key="publisher" minOccurs="1" maxOccurs="1" />
-                                <elementRef key="idno" minOccurs="1" maxOccurs="unbounded" />
-                                <elementRef key="date" minOccurs="1" maxOccurs="1" />
-                                <elementRef key="availability" minOccurs="1" maxOccurs="1" />
+                            <sequence>
+                                <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="editor" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="edition" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="imprint" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="publisher" module="core" mode="change">
+
+                    <elementSpec ident="nameLink" module="namesdates" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.personal" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <textNode />
+                            <textNode/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="respStmt" module="core" mode="change">
+
+                    <elementSpec ident="p" module="core" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.canonical" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="persName" />
-                            <elementRef key="resp" minOccurs="1" maxOccurs="unbounded" />
+                            <textNode/>
                         </content>
-                        <attList>
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
                     </elementSpec>
-                    <elementSpec ident="revisionDesc" module="header" mode="change">
+
+                    <elementSpec ident="persName" module="namesdates" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                        </classes>
-                        <attList>
-                            <!-- Attributes changed in att.docStatus -->
-                            <attDef ident="status" mode="change" usage="req" />
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="TEI" module="textstructure" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.typed" mode="delete" />
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="teiHeader" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="text" minOccurs="1" maxOccurs="1" />
-                        </content>
-                        <attList>
-                            <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:id" mode="change" usage="req" />
-                            <attDef ident="version" mode="change" usage="req">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="5.0">
-                                        <desc>TEI P5</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
-                            <attDef ident="xml:lang" mode="delete" />
-                        </attList>
-                    </elementSpec>
-                    <elementSpec ident="teiHeader" module="header" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                        </classes>
-                    </elementSpec>
-                    <elementSpec ident="text" module="textstructure" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete" />
-                            <memberOf key="att.declaring" mode="delete" />
-                            <memberOf key="att.typed" mode="delete" />
-                            <memberOf key="att.written" mode="delete" />
-                        </classes>
-                    </elementSpec>
-                    <elementSpec ident="title" module="core" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.datable" mode="delete" />
-                        </classes>
-                        <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode />
-                                <elementRef key="foreign" />
-                                <elementRef key="q" />
+                            <alternate>
+                                <textNode/>
+                                <sequence>
+                                    <elementRef key="forename" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="nameLink" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="surname" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="addName" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="genName" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="roleName" minOccurs="0" maxOccurs="unbounded"/>
+                                </sequence>
                             </alternate>
                         </content>
                         <attList>
-                            <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt" />
-                            <attDef ident="xml:id" mode="delete" />
-                            <attDef ident="n" mode="delete" />
-
-                            <!-- Attributes deleted in att.global.rendition -->
-                            <attDef ident="rend" mode="delete" />
-                            <!-- Attributes deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete" />
-                            <!-- Attributes deleted from att.canonical -->
-                            <attDef ident="key" mode="delete" />
+                            <!-- Attributes deleted in att.canonical -->
+                            <attDef ident="key" mode="delete"/>                            
+                            <!-- Attributes deleted in att.naming -->
+                            <attDef ident="nymRef" mode="delete"/>
+                            <attDef ident="role" mode="delete"/>                            
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="titleStmt" module="header" mode="change">
-                        <classes>
-                            <memberOf key="att.global" mode="delete" />
+
+                    <elementSpec ident="pubPlace" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="title" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="sponsor" minOccurs="1" maxOccurs="1" />
-                            <elementRef key="funder" minOccurs="1" maxOccurs="unbounded" />
-                            <elementRef key="respStmt" minOccurs="1" maxOccurs="unbounded" />
+                            <textNode/>
+                        </content>
+                        
+                        <attList>
+                            <!-- Attributes deleted from att.naming -->
+                            <attDef ident="role" mode="delete"/>
+                            <attDef ident="nymRef" mode="delete"/>
+                            <!-- Attributes deleted from att.canonical -->                            
+                            <attDef ident="key" mode="delete"/>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="q" module="core" mode="change">
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <attDef ident="type" mode="delete"/>
+                            <!-- Attributes deleted from att.global -->
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted from att.ascribed -->
+                            <attDef ident="who" mode="delete"/>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="roleName" module="namesdates" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.personal" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
                         </content>
                     </elementSpec>
 
-                    <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+                    <elementSpec ident="series" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                        </classes>
+                        <content>
+                            <sequence>
+                                <elementRef key="editor" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
+                        </content>
+                    </elementSpec>
 
-                    <classSpec ident="att.datable" module="tei" type="atts" mode="change">
+                    <elementSpec ident="sourceDesc" module="header" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>                            
+                        </classes>
+                        <content>
+                            <elementRef key="p" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="surname" module="namesdates" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.personal" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="title" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.datable" mode="delete"/>
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <elementRef key="foreign"/>
+                                <elementRef key="q"/>
+                            </alternate>
+                        </content>
                         <attList>
-                            <attDef ident="calendar" mode="delete" />
-                            <attDef ident="period" mode="delete" />
+                            <!-- Attributes deleted in att.canonical -->
+                            <attDef ident="key" mode="delete"/>
+                            <!-- Attributes deleted in att.typed -->
+                            <attDef ident="subtype" mode="delete"/>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
                         </attList>
-                    </classSpec>
-                    <classSpec ident="att.datable.iso" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.datable.custom" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.declarable" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.docStatus" module="tei" type="atts" mode="change">
+                    </elementSpec>
+
+                    <classSpec ident="att.editLike" module="tei" type="atts" mode="delete"/>
+
+                    <classSpec ident="att.global.analytic" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.global.facs" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.global.linking" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
+                    <classSpec ident="att.naming" module="tei" type="atts" mode="change">
                         <attList>
-                            <!-- Closed value list for @status -->
-                            <attDef ident="status" mode="change" usage="req">
+                            <!-- Closed value list for @role -->
+                            <attDef ident="role" mode="change">
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="draft">
-                                        <desc>working draft</desc>
+                                    <valItem ident="critEd">
+                                        <desc>Critical editor</desc>
                                     </valItem>
-                                    <valItem ident="published">
-                                        <desc>published version</desc>
+                                    <valItem ident="origAuth">
+                                        <desc>Original author</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
+                            <attDef ident="nymRef" mode="delete"/>
                         </attList>
                     </classSpec>
-                    <classSpec ident="att.global" type="atts" module="tei" mode="change">
-                        <attList>
-                            <attDef ident="n" mode="delete" />
-                            <attDef ident="xml:lang" mode="change" usage="opt">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="grc">
-                                        <desc>Ancient Greek (to 1453)</desc>
-                                    </valItem>
-                                    <valItem ident="en">
-                                        <desc>English</desc>
-                                    </valItem>
-                                    <valItem ident="fr">
-                                        <desc>French</desc>
-                                    </valItem>
-                                    <valItem ident="de">
-                                        <desc>German</desc>
-                                    </valItem>
-                                    <valItem ident="el">
-                                        <desc>Modern Greek</desc>
-                                    </valItem>
-                                    <valItem ident="it">
-                                        <desc>Italian</desc>
-                                    </valItem>
-                                    <valItem ident="la">
-                                        <desc>Latin</desc>
-                                    </valItem>
-                                    <valItem ident="nl">
-                                        <desc>Dutch</desc>
-                                    </valItem>
-                                    <valItem ident="sp">
-                                        <desc>Spanish</desc>
-                                    </valItem>
-                                    <valItem ident="sv">
-                                        <desc>Swedish</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
-                            <attDef ident="xml:base" mode="delete" />
-                            <attDef ident="xml:space" mode="delete" />
-                        </attList>
-                    </classSpec>
-                    <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.global.source" module="tei" type="atts" mode="delete" />
-                    <classSpec ident="att.sortable" module="tei" type="atts" mode="delete" />
+
                 </schemaSpec>
             </div>
         </back>

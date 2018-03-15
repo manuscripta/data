@@ -5,21 +5,12 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-12-08T14:34:04Z. .
+Schema generated from ODD source 2018-03-15T16:18:27Z. .
 TEI Edition: Version 3.2.0. Last updated on
 	10th July 2017, revision 0fcf651
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
   
 --><!--[https://creativecommons.org/licenses/by/4.0/] Creative Commons Attribution 4.0 International-->
-   <define name="macro.phraseSeq.limited">
-      <zeroOrMore>
-         <choice>
-            <text/>
-            <ref name="model.limitedPhrase"/>
-            <ref name="model.global"/>
-         </choice>
-      </zeroOrMore>
-   </define>
    <define name="att.canonical.attributes">
       <ref name="att.canonical.attribute.key"/>
       <ref name="att.canonical.attribute.ref"/>
@@ -140,17 +131,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
          <attribute name="extent">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the size of the object concerned using a project-specific vocabulary combining quantity and units in a single string of words.</a:documentation>
             <data type="string"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.written.attributes">
-      <ref name="att.written.attribute.hand"/>
-   </define>
-   <define name="att.written.attribute.hand">
-      <optional>
-         <attribute name="hand">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a handNote element describing the hand considered responsible for the textual content of the element concerned.</a:documentation>
-            <data type="anyURI"/>
          </attribute>
       </optional>
    </define>
@@ -346,8 +326,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
    </define>
    <define name="att.global.attributes">
       <ref name="att.global.rendition.attributes"/>
-      <ref name="att.global.linking.attributes"/>
-      <ref name="att.global.facs.attributes"/>
       <ref name="att.global.responsibility.attributes"/>
       <ref name="att.global.source.attributes"/>
       <ref name="att.global.attribute.xmlid"/>
@@ -375,26 +353,36 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
-               <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-               <value>en</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-               <value>fr</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+               <value>da</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                <value>de</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                <value>el</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                <value>it</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                <value>nl</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+               <value>non-dan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+               <value>non-gut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+               <value>non-swe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                <value>sp</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
             </choice>
          </attribute>
       </optional>
@@ -808,19 +796,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
    <define name="model.offsetLike_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="model.pPart.msdesc">
-      <choice>
-         <ref name="catchwords"/>
-         <ref name="dimensions"/>
-         <ref name="locus"/>
-         <ref name="locusGrp"/>
-         <ref name="material"/>
-         <ref name="origDate"/>
-         <ref name="origPlace"/>
-         <ref name="signatures"/>
-         <ref name="watermark"/>
-      </choice>
-   </define>
    <define name="model.pPart.editorial">
       <choice>
          <ref name="ex"/>
@@ -925,35 +900,9 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          <ref name="supplied"/>
       </oneOrMore>
    </define>
-   <define name="model.ptrLike">
-      <choice>
-         <ref name="ref"/>
-      </choice>
-   </define>
-   <define name="model.global.meta">
-      <notAllowed/>
-   </define>
-   <define name="model.milestoneLike">
-      <choice>
-         <ref name="lb"/>
-      </choice>
-   </define>
-   <define name="model.phrase.xml">
-      <notAllowed/>
-   </define>
    <define name="model.headLike">
       <choice>
          <ref name="head"/>
-      </choice>
-   </define>
-   <define name="model.noteLike">
-      <choice>
-         <ref name="note"/>
-      </choice>
-   </define>
-   <define name="model.global.edit">
-      <choice>
-         <ref name="gap"/>
       </choice>
    </define>
    <define name="model.placeNamePart">
@@ -1158,33 +1107,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          <ref name="model.persNamePart_sequenceRepeatable"/>
       </oneOrMore>
    </define>
-   <define name="model.global">
-      <choice>
-         <ref name="model.global.meta"/>
-         <ref name="model.milestoneLike"/>
-         <ref name="model.noteLike"/>
-         <ref name="model.global.edit"/>
-      </choice>
-   </define>
-   <define name="model.pPart.data">
-      <choice>
-         <ref name="model.dateLike"/>
-         <ref name="model.measureLike"/>
-         <ref name="model.addressLike"/>
-         <ref name="model.nameLike"/>
-      </choice>
-   </define>
-   <define name="model.limitedPhrase">
-      <choice>
-         <ref name="model.hiLike"/>
-         <ref name="model.emphLike"/>
-         <ref name="model.pPart.msdesc"/>
-         <ref name="model.pPart.editorial"/>
-         <ref name="model.ptrLike"/>
-         <ref name="model.phrase.xml"/>
-         <ref name="model.pPart.data"/>
-      </choice>
-   </define>
    <define name="p">
       <element name="p">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]</a:documentation>
@@ -1230,35 +1152,43 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       </report>
             </rule>
          </pattern>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
-         <ref name="att.written.attributes"/>
          <optional>
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -1282,32 +1212,41 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
                </zeroOrMore>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
-               <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-               <value>en</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-               <value>fr</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+               <value>da</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                <value>de</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                <value>el</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                <value>it</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                <value>nl</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+               <value>non-dan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+               <value>non-gut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+               <value>non-swe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                <value>sp</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -1317,10 +1256,8 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <element name="hi">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(highlighted) marks a word or phrase as graphically distinct from the surrounding text, for reasons concerning which no claim is made. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]</a:documentation>
          <text/>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
-         <ref name="att.written.attributes"/>
          <attribute name="rend">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rendition) indicates how the element in question was rendered or presented in the source text.</a:documentation>
             <list>
@@ -1352,7 +1289,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
                <ref name="unclear"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -1360,26 +1296,36 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -1401,7 +1347,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
                <text/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -1411,26 +1356,36 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -1467,7 +1422,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <element name="sic">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin for thus or so) contains text reproduced although apparently incorrect or inaccurate. [3.4.1. Apparent Errors]</a:documentation>
          <text/>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -1475,26 +1429,36 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -1570,33 +1534,43 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <element name="add">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(addition) contains letters, words, or phrases inserted in the source text by an author, scribe, or a previous annotator or corrector. [3.4.3. Additions, Deletions, and Omissions]</a:documentation>
          <text/>
-         <ref name="att.global.linking.attribute.sameAs"/>
+         <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <optional>
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -1622,33 +1596,42 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <element name="del">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(deletion) contains a letter, word, or passage deleted, marked as deleted, or otherwise indicated as superfluous or spurious in the copy text by an author, scribe, or a previous annotator or corrector. [3.4.3. Additions, Deletions, and Omissions]</a:documentation>
          <text/>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <optional>
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -1737,33 +1720,42 @@ Measures]</a:documentation>
                <text/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
-               <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-               <value>en</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-               <value>fr</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+               <value>da</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                <value>de</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                <value>el</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                <value>it</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                <value>nl</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+               <value>non-dan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+               <value>non-gut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+               <value>non-swe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                <value>sp</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
             </choice>
          </attribute>
          <attribute name="type">
@@ -1853,7 +1845,7 @@ Measures]</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                                     <sch:rule context="tei:date">
-                                        <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)">The date element must have either @when or @to/@from, or @notAfter/@notBefore. </sch:assert>
+                                        <sch:assert test="@when or (@notAfter or @notBefore) or (@from or @to)">The date element must have either @when or @to/@from, or @notAfter/@notBefore. </sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -1985,7 +1977,6 @@ Measures]</a:documentation>
             </group>
          </choice>
          <ref name="att.placement.attributes"/>
-         <ref name="att.written.attributes"/>
          <empty/>
       </element>
    </define>
@@ -2011,8 +2002,6 @@ Measures]</a:documentation>
                <ref name="term"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.written.attributes"/>
-         <empty/>
       </element>
    </define>
    <define name="graphic">
@@ -2040,11 +2029,10 @@ Elements 7.2.5. Speech Contents]</a:documentation>
    <define name="respStmt">
       <element name="respStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
-         <ref name="persName"/>
          <oneOrMore>
             <ref name="resp"/>
          </oneOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
+         <ref name="persName"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -2110,7 +2098,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                                     <sch:assert test="@type"> The type attribute must be used </sch:assert>
                                 </sch:rule>
          </pattern>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -2120,26 +2107,36 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -2182,10 +2179,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
    <define name="publisher">
       <element name="publisher">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
-         <choice>
-            <value>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</value>
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         </choice>
+         <text/>
       </element>
    </define>
    <define name="citedRange">
@@ -2203,10 +2197,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <zeroOrMore>
             <ref name="citedRange"/>
          </zeroOrMore>
-         <desc xmlns="http://www.tei-c.org/ns/1.0"
-               xmlns:rng="http://relaxng.org/ns/structure/1.0"
-               xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-               versionDate="2017-02-23">Check that short title in bibl matches with the authority file.</desc>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="manuscripta-bibl-bibl.check-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
@@ -2245,12 +2235,36 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <attribute name="mainLang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(main language) supplies a code which identifies the chief language used in the bibliographic work.</a:documentation>
             <choice>
+               <value>da</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
+               <value>de</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
+               <value>el</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
                <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
+               <value>it</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
+               <value>nl</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+               <value>non-dan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+               <value>non-gut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+               <value>non-swe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
+               <value>sp</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Svenska, även fornsvenska</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
             </choice>
          </attribute>
          <optional>
@@ -2259,12 +2273,36 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                <list>
                   <zeroOrMore>
                      <choice>
+                        <value>da</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
+                        <value>de</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
+                        <value>el</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                        <value>en</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                        <value>fi</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                        <value>fr</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
                         <value>grc</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
+                        <value>it</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                         <value>la</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
+                        <value>nl</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                        <value>non-dan</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                        <value>non-gut</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                        <value>non-swe</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
+                        <value>sp</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                         <value>sv</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Svenska, även fornsvenska</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                      </choice>
                   </zeroOrMore>
                </list>
@@ -2344,10 +2382,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                                         <sch:assert test="not(contains(., '‘'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
-         <ref name="att.global.linking.attribute.sameAs"/>
-         <ref name="att.global.responsibility.attribute.cert"/>
-         <ref name="att.global.responsibility.attribute.resp"/>
-         <ref name="att.global.source.attribute.source"/>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
@@ -2372,30 +2406,30 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <element name="titleStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) groups information about the title of a work and those responsible for its content. [2.2.1. The Title Statement 2.2. The File Description]</a:documentation>
          <ref name="title"/>
-         <ref name="sponsor"/>
+         <oneOrMore>
+            <ref name="sponsor"/>
+         </oneOrMore>
          <oneOrMore>
             <ref name="funder"/>
          </oneOrMore>
-         <zeroOrMore>
+         <oneOrMore>
             <ref name="respStmt"/>
-         </zeroOrMore>
+         </oneOrMore>
       </element>
    </define>
    <define name="sponsor">
       <element name="sponsor">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the name of a sponsoring organization or institution. [2.2.1. The Title Statement]</a:documentation>
-         <ref name="macro.phraseSeq.limited"/>
-         <ref name="att.global.attributes"/>
-         <ref name="att.canonical.attributes"/>
+         <text/>
+         <ref name="att.canonical.attribute.ref"/>
          <empty/>
       </element>
    </define>
    <define name="funder">
       <element name="funder">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(funding body) specifies the name of an individual, institution, or organization responsible for the funding of a project or text. [2.2.1. The Title Statement]</a:documentation>
-         <ref name="macro.phraseSeq.limited"/>
-         <ref name="att.global.attributes"/>
-         <ref name="att.canonical.attributes"/>
+         <text/>
+         <ref name="att.canonical.attribute.ref"/>
          <empty/>
       </element>
    </define>
@@ -2435,29 +2469,27 @@ Elements 7.2.5. Speech Contents]</a:documentation>
    <define name="idno">
       <element name="idno">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution, Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
-         <choice>
-            <text/>
-         </choice>
+         <text/>
          <ref name="att.datable.attributes"/>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">categorizes the identifier, for example as an ISBN, Social Security number, etc.</a:documentation>
             <choice>
                <value>codicologicalUnit</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Codicologial unit</a:documentation>
                <value>formerShelfmark</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Former shelfmark</a:documentation>
                <value>id</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Identifier</a:documentation>
                <value>msRef</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference to other manuscript</a:documentation>
                <value>shelfmark</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Shelfmark</a:documentation>
                <value>siglum</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Siglum in edition</a:documentation>
                <value>other</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Other</a:documentation>
                <value>URI</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Uniform Resource Identifier</a:documentation>
             </choice>
          </attribute>
          <optional>
@@ -2564,7 +2596,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                                     <sch:assert test="matches(., '^hand-\p{N}$')"> The value of @xml:id must start with hand-, followed by a digit </sch:assert>
                                 </sch:rule>
          </pattern>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <optional>
@@ -2646,17 +2677,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          </zeroOrMore>
       </element>
    </define>
-   <define name="att.global.linking.attributes">
-      <ref name="att.global.linking.attribute.sameAs"/>
-   </define>
-   <define name="att.global.linking.attribute.sameAs">
-      <optional>
-         <attribute name="sameAs">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to an element that is the same as the current element.</a:documentation>
-            <data type="anyURI"/>
-         </attribute>
-      </optional>
-   </define>
    <define name="att.msExcerpt.attributes">
       <ref name="att.msExcerpt.attribute.defective"/>
    </define>
@@ -2704,26 +2724,36 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
-               <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-               <value>en</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-               <value>fr</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+               <value>da</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                <value>de</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                <value>el</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                <value>it</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                <value>nl</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+               <value>non-dan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+               <value>non-gut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+               <value>non-swe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                <value>sp</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
             </choice>
          </attribute>
          <attribute name="resp">
@@ -3111,14 +3141,7 @@ The element <name/> may appear once only
                                     <sch:report test="text()='century'"> Use c. instead of century</sch:report>
                                 </sch:rule>
          </pattern>
-         <ref name="att.global.attribute.xmlid"/>
-         <ref name="att.global.attribute.n"/>
-         <ref name="att.global.attribute.xmllang"/>
-         <ref name="att.global.rendition.attribute.rend"/>
-         <ref name="att.global.linking.attribute.sameAs"/>
-         <ref name="att.global.responsibility.attribute.cert"/>
-         <ref name="att.global.responsibility.attribute.resp"/>
-         <ref name="att.global.source.attribute.source"/>
+         <ref name="att.global.attributes"/>
          <ref name="att.datable.w3c.attribute.when"/>
          <ref name="att.datable.w3c.attribute.notBefore"/>
          <ref name="att.datable.w3c.attribute.notAfter"/>
@@ -3134,6 +3157,8 @@ The element <name/> may appear once only
                <ref name="placeName"/>
             </optional>
          </group>
+         <ref name="att.global.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="signatures">
@@ -3202,7 +3227,6 @@ The element <name/> may appear once only
                                         <sch:assert test="@n[matches(., '\p{N}|\p{N}\p{Ll}')]"> The n attribute should contain digits, or digits and lower-case letters.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -3293,7 +3317,6 @@ The element <name/> may appear once only
       <element name="msName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative name) contains any form of unstructured alternative name used for a manuscript, such as an ocellus nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
          <text/>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -3301,26 +3324,36 @@ The element <name/> may appear once only
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -3347,33 +3380,42 @@ The element <name/> may appear once only
                <ref name="unclear"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <ref name="att.msExcerpt.attributes"/>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
-               <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-               <value>en</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-               <value>fr</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+               <value>da</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                <value>de</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                <value>el</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                <value>it</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                <value>nl</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+               <value>non-dan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+               <value>non-gut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+               <value>non-swe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                <value>sp</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -3392,7 +3434,6 @@ The element <name/> may appear once only
                <ref name="unclear"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <attribute name="xml:lang">
@@ -3467,7 +3508,6 @@ The element <name/> may appear once only
                <ref name="unclear"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <ref name="att.msExcerpt.attributes"/>
@@ -3496,7 +3536,6 @@ The element <name/> may appear once only
                <ref name="unclear"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <optional>
@@ -3559,12 +3598,10 @@ The element <name/> may appear once only
                   <zeroOrMore>
                      <ref name="author"/>
                   </zeroOrMore>
-                  <zeroOrMore>
+                  <oneOrMore>
                      <ref name="title"/>
-                  </zeroOrMore>
-                  <optional>
-                     <ref name="rubric"/>
-                  </optional>
+                  </oneOrMore>
+                  <ref name="rubric"/>
                   <zeroOrMore>
                      <ref name="msItem"/>
                   </zeroOrMore>
@@ -3804,7 +3841,6 @@ The element <name/> may appear once only
                <ref name="supplied"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -4169,15 +4205,6 @@ The element <name/> may appear once only
          <oneOrMore>
             <ref name="p"/>
          </oneOrMore>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-additions-additions.endleaves.check-constraint-rule-48">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:msDesc/tei:physDesc/tei:additions">
-                                    <sch:report test="count(tei:p) &gt; 2"> Only two p elements allowed when describing the endleaves; the first for the left endleaves and the second for the right endleaves.</sch:report>
-                                </sch:rule>
-         </pattern>
       </element>
    </define>
    <define name="bindingDesc">
@@ -4187,7 +4214,7 @@ The element <name/> may appear once only
             <ref name="binding"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-bindingDesc-bindingDesc.msPart.check-constraint-rule-49">
+                  id="manuscripta-bindingDesc-bindingDesc.msPart.check-constraint-rule-48">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4212,12 +4239,12 @@ The element <name/> may appear once only
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-binding-binding.check-constraint-rule-50">
+                  id="manuscripta-binding-binding.check-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:binding">
-                                    <sch:assert test="descendant::tei:dimensions"> The dimensins of the binding are missing </sch:assert>
+                                    <sch:assert test="descendant::tei:dimensions"> The dimensions of the binding are missing </sch:assert>
                                 </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
@@ -4402,7 +4429,7 @@ The element <name/> may appear once only
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-persName-evidence.cert.check-constraint-rule-51">
+                  id="manuscripta-persName-evidence.cert.check-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4411,7 +4438,7 @@ The element <name/> may appear once only
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-persName-evidence.cert.check-constraint-rule-52">
+                  id="manuscripta-persName-evidence.cert.check-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4423,7 +4450,6 @@ The element <name/> may appear once only
                                     <sch:assert test="contains($persname,.)">persName mismatch</sch:assert>
                                 </sch:rule>
          </pattern>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <optional>
@@ -4584,8 +4610,6 @@ The element <name/> may appear once only
       <element name="text">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
          <ref name="body"/>
-         <ref name="att.written.attributes"/>
-         <empty/>
       </element>
    </define>
    <define name="body">
@@ -4599,14 +4623,9 @@ The element <name/> may appear once only
    <define name="div">
       <element name="div">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text division) contains a subdivision of the front, body, or back of a text. [4.1. Divisions of the Body]</a:documentation>
-         <optional>
-            <ref name="head"/>
-         </optional>
-         <oneOrMore>
-            <ref name="p"/>
-         </oneOrMore>
+         <ref name="p"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-div-abstractModel-structure-l-constraint-report-52">
+                  id="manuscripta-div-abstractModel-structure-l-constraint-report-51">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4616,7 +4635,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-div-abstractModel-structure-p-constraint-report-53">
+                  id="manuscripta-div-abstractModel-structure-p-constraint-report-52">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4625,33 +4644,7 @@ The element <name/> may appear once only
       </report>
             </rule>
          </pattern>
-         <ref name="att.global.linking.attribute.sameAs"/>
-         <ref name="att.global.responsibility.attribute.resp"/>
-         <ref name="att.global.source.attribute.source"/>
-         <ref name="att.written.attributes"/>
-         <optional>
-            <attribute name="xml:id">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
-               <data type="ID"/>
-            </attribute>
-         </optional>
-         <empty/>
       </element>
-   </define>
-   <define name="att.global.facs.attributes">
-      <ref name="att.global.facs.attribute.facs"/>
-   </define>
-   <define name="att.global.facs.attribute.facs">
-      <optional>
-         <attribute name="facs">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(facsimile) points to all or part of an image which corresponds with the content of the element.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
    </define>
    <define name="facsimile">
       <element name="facsimile">
@@ -4666,7 +4659,6 @@ The element <name/> may appear once only
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a written surface as a two-dimensional coordinate space, optionally grouping one or more graphic representations of that space, zones of interest within that space, and transcriptions of the writing within them. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
          <ref name="desc"/>
          <ref name="graphic"/>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -4681,7 +4673,6 @@ The element <name/> may appear once only
       <element name="ex">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(editorial expansion) contains a sequence of letters added by an editor or transcriber when expanding an abbreviation. [11.3.1.2. Abbreviation and Expansion]</a:documentation>
          <text/>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -4689,26 +4680,36 @@ The element <name/> may appear once only
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -4719,7 +4720,6 @@ The element <name/> may appear once only
       <element name="supplied">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signifies text supplied by the transcriber or editor for any reason; for example because the original cannot be read due to physical damage, or because of an obvious omission by the author or scribe. [11.3.3.1. Damage, Illegibility, and Supplied Text]</a:documentation>
          <text/>
-         <ref name="att.global.linking.attribute.sameAs"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
@@ -4727,26 +4727,36 @@ The element <name/> may appear once only
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
