@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:lang="en" xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Schema for the Manuscripta organization files</title>
+                <author xml:id="PG">Patrik Granholm</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Manuscripta</publisher>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2018-02-23" who="#PG">Created ODD</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div/>
+        </body>
+        <back>
+            <div xml:id="schema">
+                <head>Schema for the Manuscripta organization files</head>
+
+                <!--<schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="https://raw.githubusercontent.com/manuscripta/data/master/schemas/manuscripta-p5subset.xml">-->
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/F:/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
+
+                    <!--       MODULES USED BY THE SCHEMA       -->
+
+                    <!-- Modules imported from manuscripta.odd -->
+
+                    <moduleRef key="tei"/>
+                    <moduleRef key="core" include="date publisher resp respStmt"/>
+                    <moduleRef key="header" include="availability change fileDesc funder licence publicationStmt revisionDesc sponsor teiHeader titleStmt"/>
+                    <moduleRef key="namesdates" include="listOrg org orgName persName"/>
+                    <moduleRef key="textstructure" include="TEI text"/>
+
+                    <!-- Modules for manuscripta-org.odd -->
+
+                    <moduleRef key="core" include="desc p title" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+                    <moduleRef key="header" include="idno sourceDesc" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+                    <moduleRef key="textstructure" include="body" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+
+                    <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
+
+                    <elementSpec ident="body" module="textstructure" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.declaring" mode="delete"/>
+                        </classes>
+                        <content>
+                            <elementRef key="listOrg" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="desc" module="core" mode="change">
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <elementRef key="orgName"/>
+                            </alternate>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="idno" module="header" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="URI"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="subtype" mode="change" usage="opt">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="Libris"/>
+                                    <valItem ident="Manuscripta"/>
+                                    <valItem ident="VIAF"/>
+                                    <valItem ident="Wikidata"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+
+                    <elementSpec ident="p" module="core" mode="change">
+                        <content>
+                            <textNode/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="sourceDesc" module="header" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                        </classes>
+                        <content>
+                            <elementRef key="p" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
+
+                    <elementSpec ident="title" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.datable" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+
+                            <!-- Attributes deleted in att.global.rendition -->
+                            <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes deleted from att.global.facs -->
+                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted from att.canonical -->
+                            <attDef ident="key" mode="delete"/>
+                        </attList>
+                    </elementSpec>
+
+                    <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+
+                    <classSpec ident="att.datable" module="tei" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="calendar" mode="delete"/>
+                            <attDef ident="period" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    
+                    <classSpec ident="att.datable.iso" module="tei" type="atts" mode="delete"/>
+                    
+                    <classSpec ident="att.datable.custom" module="tei" type="atts" mode="delete"/>
+                    
+                    <classSpec ident="att.declarable" module="tei" type="atts" mode="delete"/>
+                    
+                    <classSpec ident="att.docStatus" module="tei" type="atts" mode="change">
+                        <attList>
+                            <!-- Closed value list for @status -->
+                            <attDef ident="status" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="draft">
+                                        <desc>working draft</desc>
+                                    </valItem>
+                                    <valItem ident="published">
+                                        <desc>published version</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </classSpec>
+                    
+                    <classSpec ident="att.global" type="atts" module="tei" mode="change">
+                        <attList>
+                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="grc">
+                                        <desc>Ancient Greek (to 1453)</desc>
+                                    </valItem>
+                                    <valItem ident="en">
+                                        <desc>English</desc>
+                                    </valItem>
+                                    <valItem ident="fr">
+                                        <desc>French</desc>
+                                    </valItem>
+                                    <valItem ident="de">
+                                        <desc>German</desc>
+                                    </valItem>
+                                    <valItem ident="el">
+                                        <desc>Modern Greek</desc>
+                                    </valItem>
+                                    <valItem ident="it">
+                                        <desc>Italian</desc>
+                                    </valItem>
+                                    <valItem ident="la">
+                                        <desc>Latin</desc>
+                                    </valItem>
+                                    <valItem ident="nl">
+                                        <desc>Dutch</desc>
+                                    </valItem>
+                                    <valItem ident="sp">
+                                        <desc>Spanish</desc>
+                                    </valItem>
+                                    <valItem ident="sv">
+                                        <desc>Swedish</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:space" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    
+                    <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
+                    
+                    <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="delete"/>
+                    
+                    <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
+                    
+                    <classSpec ident="att.sortable" module="tei" type="atts" mode="delete"/>
+                    
+                </schemaSpec>
+            </div>
+        </back>
+    </text>
+</TEI>

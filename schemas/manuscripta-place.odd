@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Schema for the Manuscripta person files</title>
+                <title>Schema for the Manuscripta place files</title>
                 <author xml:id="PG">Patrik Granholm</author>
             </titleStmt>
             <publicationStmt>
@@ -17,7 +17,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change when="2018-02-22" who="#PG">Created ODD</change>
+            <change when="2018-02-23" who="#PG">Created ODD</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -26,39 +26,26 @@
         </body>
         <back>
             <div xml:id="schema">
-                <head>Schema for the Manuscripta person files</head>
+                <head>Schema for the Manuscripta place files</head>
 
-                <schemaSpec ident="manuscripta-person" start="TEI" xml:lang="en" source="https://raw.githubusercontent.com/manuscripta/data/master/schemas/manuscripta-p5subset.xml">
-
-                    <!--       MODULES USED BY THE SCHEMA       -->
+                <!--                <schemaSpec ident="manuscripta-place" start="TEI" xml:lang="en" source="https://raw.githubusercontent.com/manuscripta/data/master/schemas/manuscripta-p5subset.xml">-->
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/F:/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
 
                     <!-- Modules imported from manuscripta.odd -->
 
                     <moduleRef key="tei"/>
-                    <moduleRef key="core" include="bibl citedRange date foreign publisher resp respStmt"/>
+                    <moduleRef key="core" include="date publisher resp respStmt"/>
                     <moduleRef key="header" include="availability change fileDesc funder licence publicationStmt revisionDesc sponsor teiHeader titleStmt"/>
-                    <moduleRef key="namesdates" include="placeName"/>
                     <moduleRef key="textstructure" include="TEI text"/>
 
-                    <!-- Modules for bibliography-bibl.odd -->
+                    <!-- Modules for manuscripta-person.odd -->
 
                     <moduleRef key="core" include="note p title" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
                     <moduleRef key="header" include="idno sourceDesc" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
-                    <moduleRef key="namesdates" include="addName forename genName listPerson nameLink persName person roleName surname" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+                    <moduleRef key="namesdates" include="listPlace place placeName persName" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
                     <moduleRef key="textstructure" include="body" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
-
-                    <elementSpec ident="addName" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.personal" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
-                        <content>
-                            <textNode/>
-                        </content>
-                    </elementSpec>
 
                     <elementSpec ident="body" module="textstructure" mode="change">
                         <classes mode="change">
@@ -66,29 +53,7 @@
                             <memberOf key="att.declaring" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="listPerson" minOccurs="1" maxOccurs="1"/>
-                        </content>
-                    </elementSpec>
-
-                    <elementSpec ident="forename" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.personal" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
-                        <content>
-                            <textNode/>
-                        </content>
-                    </elementSpec>
-
-                    <elementSpec ident="genName" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.personal" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
-                        <content>
-                            <textNode/>
+                            <elementRef key="listPlace" minOccurs="1" maxOccurs="1"/>
                         </content>
                     </elementSpec>
 
@@ -103,96 +68,51 @@
                         <attList>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
+                                    <valItem ident="codicologicalUnit"/>
+                                    <valItem ident="formerShelfmark"/>
                                     <valItem ident="id"/>
                                     <valItem ident="msRef"/>
                                     <valItem ident="shelfmark"/>
+                                    <valItem ident="siglum"/>
+                                    <valItem ident="other"/>
                                     <valItem ident="URI"/>
-                                    <valItem ident="URN"/>
                                 </valList>
                             </attDef>
                             <attDef ident="subtype" mode="change" usage="opt">
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="Alvin"/>
-                                    <valItem ident="CERL"/>
-                                    <valItem ident="CITE"/>
+                                    <valItem ident="Diktyon"/>
                                     <valItem ident="Manuscripta"/>
-                                    <valItem ident="NDB"/>
+                                    <valItem ident="Access"/>
+                                    <valItem ident="Alvin"/>
                                     <valItem ident="Libris"/>
-                                    <valItem ident="Pinakes"/>
-                                    <valItem ident="PLP">
-                                        <desc>Prosopographisches Lexikon der Palaiologenzeit</desc>
-                                    </valItem>                                    
                                     <valItem ident="Regina"/>
-                                    <valItem ident="SBL"/>
-                                    <valItem ident="VIAF"/>
-                                    <valItem ident="Wikipedia"/>
+                                    <valItem ident="Wikidata"/>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
 
-                    <elementSpec ident="listPerson" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
+                    <elementSpec ident="listPlace" module="namesdates" mode="change">
                         <content>
-                            <elementRef key="person" minOccurs="1" maxOccurs="1"/>
+                            <elementRef key="place" minOccurs="1" maxOccurs="1"/>
                         </content>
                     </elementSpec>
 
-                    <elementSpec ident="nameLink" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.personal" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
-                        <content>
-                            <textNode/>
-                        </content>
-                    </elementSpec>
-
-                    <elementSpec ident="note" module="core" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
-                        <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
-                                <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
-                            </alternate>
-                        </content>
-                    </elementSpec>
+                    <elementSpec ident="note" module="core" mode="change"/>
 
                     <elementSpec ident="p" module="core" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
                         <content>
                             <textNode/>
                         </content>
                     </elementSpec>
 
                     <elementSpec ident="persName" module="namesdates" mode="change">
-                        <classes mode="change">                            
+                        <classes mode="change">
                             <memberOf key="att.datable" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <alternate>
-                                <textNode/>
-                                <alternate minOccurs="1" maxOccurs="unbounded">
-                                    <elementRef key="forename" minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="nameLink" minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="surname" minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="addName" minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="genName" minOccurs="0" maxOccurs="unbounded"/>
-                                    <elementRef key="roleName" minOccurs="0" maxOccurs="unbounded"/>
-                                </alternate>
-                            </alternate>
+                            <textNode/>
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.canonical -->
@@ -203,47 +123,14 @@
                         </attList>
                     </elementSpec>
 
-                    <elementSpec ident="person" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
+                    <elementSpec ident="place" module="namesdates" mode="change">
                         <content>
-                            <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="note" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="placeName" minOccurs="1" maxOccurs="unbounded"/>
                             <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                     </elementSpec>
 
-                    <elementSpec ident="publicationStmt" module="header" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
-                        <content>
-                            <sequence minOccurs="1" maxOccurs="1">
-                                <elementRef key="publisher" minOccurs="1" maxOccurs="1"/>
-                                <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
-                                <elementRef key="date" minOccurs="1" maxOccurs="1"/>
-                                <elementRef key="availability" minOccurs="1" maxOccurs="1"/>
-                            </sequence>
-                        </content>
-                    </elementSpec>
-
-                    <elementSpec ident="revisionDesc" module="header" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
-                        <attList>
-                            <!-- Attributes changed in att.docStatus -->
-                            <attDef ident="status" mode="change" usage="req"/>
-                        </attList>
-                    </elementSpec>
-
-                    <elementSpec ident="roleName" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.personal" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
+                    <elementSpec ident="placeName" module="namesdates" mode="change">
                         <content>
                             <textNode/>
                         </content>
@@ -255,17 +142,6 @@
                         </classes>
                         <content>
                             <elementRef key="p" minOccurs="1" maxOccurs="1"/>
-                        </content>
-                    </elementSpec>
-
-                    <elementSpec ident="surname" module="namesdates" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.personal" mode="delete"/>
-                            <memberOf key="att.typed" mode="delete"/>
-                        </classes>
-                        <content>
-                            <textNode/>
                         </content>
                     </elementSpec>
 
@@ -291,6 +167,7 @@
                         </attList>
                     </elementSpec>
 
+
                     <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
 
                     <classSpec ident="att.datable" module="tei" type="atts" mode="change">
@@ -299,13 +176,9 @@
                             <attDef ident="period" mode="delete"/>
                         </attList>
                     </classSpec>
-                    
                     <classSpec ident="att.datable.iso" module="tei" type="atts" mode="delete"/>
-                    
                     <classSpec ident="att.datable.custom" module="tei" type="atts" mode="delete"/>
-                    
                     <classSpec ident="att.declarable" module="tei" type="atts" mode="delete"/>
-                    
                     <classSpec ident="att.docStatus" module="tei" type="atts" mode="change">
                         <attList>
                             <!-- Closed value list for @status -->
@@ -321,7 +194,6 @@
                             </attDef>
                         </attList>
                     </classSpec>
-                    
                     <classSpec ident="att.global" type="atts" module="tei" mode="change">
                         <attList>
                             <attDef ident="n" mode="delete"/>
@@ -363,15 +235,10 @@
                             <attDef ident="xml:space" mode="delete"/>
                         </attList>
                     </classSpec>
-                    
                     <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
-                    
                     <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="delete"/>
-                    
                     <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
-                    
                     <classSpec ident="att.sortable" module="tei" type="atts" mode="delete"/>
-                    
                 </schemaSpec>
             </div>
         </back>

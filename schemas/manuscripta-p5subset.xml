@@ -2869,6 +2869,12 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DROTH">7.3. Other Types of Performance Text</ref>
   </listRef>
+</classSpec><classSpec predeclare="true" module="tei" type="model" ident="model.eventLike">
+  <desc versionDate="2015-05-25" xml:lang="en">groups elements which describe events.</desc>
+  <classes>
+    
+    <memberOf key="model.orgPart"/>
+  </classes>
 </classSpec><classSpec module="tei" xml:id="EDITINCL" type="model" ident="model.global.edit">
   <desc versionDate="2007-10-03" xml:lang="en">groups globally available elements which perform a specifically editorial function.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">명확한 편집 기능을 수행하며, 전체적으로 이용 가능한 요소를 모아 놓는다.</desc>
@@ -2919,6 +2925,19 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
+</classSpec><classSpec type="model" module="tei" ident="model.personLike">
+  <desc versionDate="2007-10-03" xml:lang="en">groups elements which provide information about people and their relationships.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">사람과 그들의 친족관계에 관한 정보를 제공하는 요소를 모아 놓는다.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">該元素集提供人物及人物關係的資訊。</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">人々やその関係を表す情報を示す要素をまとめる．</desc>
+  <desc versionDate="2009-10-06" xml:lang="fr">regroupe des éléments qui donnent des informations
+    sur des personnes et leurs relations.</desc>
+  <desc versionDate="2007-05-04" xml:lang="es">clase de elementos utilizados para proporcionar
+    informaciones relativas a personas y a las relaciones entre estas.</desc>
+  <desc versionDate="2007-01-21" xml:lang="it">classe di elementi utilizzati per fornire informazioni
+    relative a persone e relazioni tra le stesse</desc>
+  
+  
 </classSpec><classSpec predeclare="true" module="tei" xml:id="PLACPART" type="model" ident="model.placeNamePart">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which form part of a place name.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">장소명의 부분을 형성하는 요소를 모아 놓는다.</desc>
@@ -2948,6 +2967,9 @@ expliquer d'autres parties d'un document.</desc>
   <classes>
     <memberOf key="model.nameLike"/>
   </classes>
+</classSpec><classSpec type="model" module="tei" ident="model.orgPart" predeclare="true">
+  <desc versionDate="2011-11-17" xml:lang="en">groups elements which form part of the description of an
+  organization.</desc>
 </classSpec><classSpec module="tei" xml:id="QUOTELIKE" type="model" ident="model.quoteLike">
   <desc versionDate="2005-11-17" xml:lang="en">groups elements used to directly contain quotations.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인용을 직접 포함하는 요소를 모아 놓는다.</desc>
@@ -3124,7 +3146,36 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><dataSpec module="tei" ident="teidata.certainty">
+</classSpec><macroSpec module="tei" type="pe" ident="macro.phraseSeq">
+  <gloss versionDate="2005-01-14" xml:lang="en">phrase sequence</gloss>
+  <gloss versionDate="2007-12-20" xml:lang="ko">구 연쇄</gloss>
+  <gloss versionDate="2007-05-02" xml:lang="zh-TW">詞組序列</gloss>
+  <gloss versionDate="2007-06-12" xml:lang="fr">suite de syntagmes.</gloss>
+  <gloss versionDate="2007-05-04" xml:lang="es">secuencia sintagmática</gloss>
+  <gloss versionDate="2007-01-21" xml:lang="it">sequenza sintagmatica</gloss>
+  <desc versionDate="2005-01-14" xml:lang="en">defines a sequence of character data and phrase-level elements.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">문자 데이터 및 구층위 요소의 연쇄를 정의한다.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義一連串文字資料與詞組層次元素。</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">一連の文字列と句レベル要素を定義する．</desc>
+  <desc versionDate="2007-06-12" xml:lang="fr">définit un ordre de données et d'éléments syntagmatiques.</desc>
+  <desc versionDate="2007-05-04" xml:lang="es">&gt;defince una secuencia de caracteres y elementos
+    de tipo sintagmático.</desc>
+  <desc versionDate="2007-01-21" xml:lang="it">definisce una sequenza di caratteri ed elementi di tipo
+    sintagmatico</desc>
+  <content>
+    
+      <alternate minOccurs="0" maxOccurs="unbounded">
+        <textNode/>
+        <classRef key="model.gLike"/>
+        <classRef key="model.phrase"/>
+        <classRef key="model.global"/>
+      </alternate>
+    
+  </content>
+  <listRef>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STECST">1.4.1. Standard Content Models</ref>
+  </listRef>
+</macroSpec><dataSpec module="tei" ident="teidata.certainty">
   <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values expressing a degree of certainty.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">확실성 정도를 표현하는 속성 값의 범위를 정의한다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">定義表示正確度的屬性值範圍</desc>
@@ -3843,7 +3894,16 @@ resource, either within the current document or elsewhere.</desc>
 </dataSpec><classSpec rend="change" module="tei" type="atts" ident="att.personal"><gloss versionDate="2012-10-24" xml:lang="en">attributes for components of names usually, but not necessarily, personal names</gloss><gloss versionDate="2007-12-20" xml:lang="ko">사람 이름의 성분에 대한 속성</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">用於個人名稱元件的屬性</gloss><gloss versionDate="2007-06-12" xml:lang="fr">attributs des composantes des noms de personnes</gloss><gloss versionDate="2007-05-04" xml:lang="es">atributos para los componentes de nombres propios de persona</gloss><gloss versionDate="2007-01-21" xml:lang="it">attributi per componenti di nomi propri di persona</gloss><desc versionDate="2012-10-24" xml:lang="en">common attributes for those elements which form part of a name usually, but not necessarily, a personal name.</desc><desc versionDate="2007-12-20" xml:lang="ko">사람 이름의 부분을 형성하는 요소에 대한 공통 속성</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">構成部分個人名稱的元素所用之通用屬性</desc><desc versionDate="2008-04-05" xml:lang="ja">個人名の構成要素となる要素に付与される属性．</desc><desc versionDate="2009-05-28" xml:lang="fr">attributs communs des éléments qui composent un nom de personne</desc><desc versionDate="2007-05-04" xml:lang="es">atributos comunes para los elementos que forman parte de un nombre propio de persona.</desc><desc versionDate="2007-01-21" xml:lang="it">attributi comuni agli
   elementi che compongono un nome proprio di persona</desc><classes><memberOf key="att.naming"/></classes><attList/><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPER">13.2.1. Personal Names</ref>
-  </listRef></classSpec><elementSpec rend="change" module="core" ident="p"><gloss versionDate="2005-01-14" xml:lang="en">paragraph</gloss><gloss versionDate="2007-12-20" xml:lang="ko">문단</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">段落</gloss><gloss versionDate="2009-01-06" xml:lang="fr">paragraphe</gloss><gloss versionDate="2007-05-04" xml:lang="es">párrafo</gloss><gloss versionDate="2007-01-21" xml:lang="it">paragrafo</gloss><gloss versionDate="2016-11-24" xml:lang="de">Absatz</gloss><desc versionDate="2005-01-14" xml:lang="en">marks paragraphs in prose.</desc><desc versionDate="2007-12-20" xml:lang="ko">산문에서 문단을 표시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">標記散文的段落。</desc><desc versionDate="2008-04-05" xml:lang="ja">散文の段落を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">marque les paragraphes dans un texte en prose.</desc><desc versionDate="2007-05-04" xml:lang="es">marca párrafos en prosa.</desc><desc versionDate="2007-01-21" xml:lang="it">indica i paragrafi in prosa</desc><desc versionDate="2016-11-24" xml:lang="de">markiert einen Absatz in einem Prosatext.</desc><classes><memberOf key="att.global"/><memberOf key="model.pLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="bibl"/><elementRef key="date"/><elementRef key="dimensions"/><elementRef key="foreign"/><elementRef key="idno"/><elementRef key="lb"/><elementRef key="locus"/><elementRef key="locusGrp"/><elementRef key="material"/><elementRef key="measure"/><elementRef key="note"/><elementRef key="persName"/><elementRef key="placeName"/><elementRef key="quote"/><elementRef key="ref"/><elementRef key="term"/><elementRef key="watermark"/></alternate></content><constraintSpec ident="abstractModel-structure-p" scheme="schematron">
+  </listRef></classSpec><classSpec type="model" module="tei" ident="model.placeLike">
+  <desc versionDate="2007-10-03" xml:lang="en">groups elements used to provide information about places and their relationships.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">장소와 그 관계에 관한 정보를 제공하는 요소를 모아 놓는다.</desc>
+  <desc versionDate="2008-04-06" xml:lang="es">elementos de los grupos usados para proporcionar a la
+    información sobre los lugares y sus lazos.</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">場所やそれらの関連性に関する情報を示す要素をまとめる．</desc>
+  <desc versionDate="2009-10-06" xml:lang="fr">regroupe des éléments qui donne des informations sur des lieux et leurs relations.</desc>
+  <desc versionDate="2007-11-06" xml:lang="it">raggruppa elementi utilizzati per fornire informazioni
+    relative a luoghi e relazioni corrispondenti</desc>
+</classSpec><elementSpec rend="change" module="core" ident="p"><gloss versionDate="2005-01-14" xml:lang="en">paragraph</gloss><gloss versionDate="2007-12-20" xml:lang="ko">문단</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">段落</gloss><gloss versionDate="2009-01-06" xml:lang="fr">paragraphe</gloss><gloss versionDate="2007-05-04" xml:lang="es">párrafo</gloss><gloss versionDate="2007-01-21" xml:lang="it">paragrafo</gloss><gloss versionDate="2016-11-24" xml:lang="de">Absatz</gloss><desc versionDate="2005-01-14" xml:lang="en">marks paragraphs in prose.</desc><desc versionDate="2007-12-20" xml:lang="ko">산문에서 문단을 표시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">標記散文的段落。</desc><desc versionDate="2008-04-05" xml:lang="ja">散文の段落を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">marque les paragraphes dans un texte en prose.</desc><desc versionDate="2007-05-04" xml:lang="es">marca párrafos en prosa.</desc><desc versionDate="2007-01-21" xml:lang="it">indica i paragrafi in prosa</desc><desc versionDate="2016-11-24" xml:lang="de">markiert einen Absatz in einem Prosatext.</desc><classes><memberOf key="att.global"/><memberOf key="model.pLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="bibl"/><elementRef key="date"/><elementRef key="dimensions"/><elementRef key="foreign"/><elementRef key="idno"/><elementRef key="lb"/><elementRef key="locus"/><elementRef key="locusGrp"/><elementRef key="material"/><elementRef key="measure"/><elementRef key="note"/><elementRef key="persName"/><elementRef key="placeName"/><elementRef key="quote"/><elementRef key="ref"/><elementRef key="term"/><elementRef key="watermark"/></alternate></content><constraintSpec ident="abstractModel-structure-p" scheme="schematron">
     <constraint>
       <report xmlns="http://purl.oclc.org/dsdl/schematron" test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
         Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
@@ -4828,7 +4888,7 @@ inclus, peuvent être encodés dans un élément
     liberamente i cui componeneti potrebbero o meno essere codificati esplicitamente.</desc><desc versionDate="2017-06-13" xml:lang="de">enthält eine lose strukturierte bibliografische Angabe, in der einzelne Komponenten explizit
     ausgezeichnet sein können.</desc><classes><memberOf key="model.biblLike"/></classes><content><elementRef key="title" minOccurs="1" maxOccurs="1"/><elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded"/></content><constraintSpec ident="bibl.check" scheme="schematron">
                             <desc versionDate="2017-02-23">Check that short title in bibl matches with the authority file.</desc>
-                            <constraint>                                
+                            <constraint>
                                 <sch:rule context="tei:bibl/tei:title">
                                     <sch:let name="bibl-ref" value="substring-after(@ref, 'bibl/')"/>
                                     <sch:let name="short-title" value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:title[@type = 'short']"/>
@@ -5916,7 +5976,7 @@ watermark or similar device.</desc><desc versionDate="2007-12-20" xml:lang="ko">
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mswat">10.3.3. Watermarks and Stamps</ref>
   </listRef></elementSpec><elementSpec rend="change" module="msdescription" xml:id="MSIDENTIFIER" ident="msIdentifier"><gloss versionDate="2007-07-04" xml:lang="en">manuscript identifier</gloss><gloss versionDate="2007-12-20" xml:lang="ko">원고 확인소</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW"/><gloss versionDate="2008-04-06" xml:lang="es">identificador del manuscrito</gloss><gloss versionDate="2007-06-12" xml:lang="fr">identifiant du manuscrit</gloss><gloss versionDate="2007-11-06" xml:lang="it">identificatore del manoscritto</gloss><desc versionDate="2005-12-13" xml:lang="en" xml:id="msidentifier.desc">contains the information required to identify
 the  manuscript being described.</desc><desc versionDate="2007-12-20" xml:lang="ko">기술되고 있는 원고를 식별하기 위해 필요한 정보를 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含識別敘述中的手稿所需要的資訊。</desc><desc versionDate="2008-04-05" xml:lang="ja">解説されている手書き資料を特定するために必要な情報を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">Contient les informations requises pour identifier le
-      manuscrit en cours de description.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene la información necesaria para identificar el manuscrito que se examina.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene l'informazione necessaria a identificare il manoscritto esaminato</desc><classes/><content><sequence minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="1"><elementRef key="country" minOccurs="1" maxOccurs="1"/><elementRef key="settlement" minOccurs="1" maxOccurs="1"/><elementRef key="institution" minOccurs="0" maxOccurs="1"/><elementRef key="repository" minOccurs="1" maxOccurs="1"/><elementRef key="collection" minOccurs="0" maxOccurs="1"/><elementRef key="idno" minOccurs="1" maxOccurs="1"/></sequence><alternate minOccurs="0" maxOccurs="unbounded"><elementRef key="msName"/><elementRef key="altIdentifier"/></alternate></sequence></content><constraintSpec scheme="schematron" ident="msId_minimal">
+      manuscrit en cours de description.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene la información necesaria para identificar el manuscrito que se examina.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene l'informazione necessaria a identificare il manoscritto esaminato</desc><classes/><content><sequence minOccurs="1" maxOccurs="1"><sequence minOccurs="1" maxOccurs="1"><elementRef key="country" minOccurs="0" maxOccurs="1"/><elementRef key="settlement" minOccurs="0" maxOccurs="1"/><elementRef key="institution" minOccurs="0" maxOccurs="1"/><elementRef key="repository" minOccurs="0" maxOccurs="1"/><elementRef key="collection" minOccurs="0" maxOccurs="1"/><elementRef key="idno" minOccurs="1" maxOccurs="1"/></sequence><alternate minOccurs="0" maxOccurs="unbounded"><elementRef key="msName"/><elementRef key="altIdentifier"/></alternate></sequence></content><constraintSpec scheme="schematron" ident="msId_minimal">
     <constraint>
       <report xmlns="http://purl.oclc.org/dsdl/schematron" test="not(parent::tei:msPart) and       (local-name(*[1])='idno' or       local-name(*[1])='altIdentifier' or       normalize-space(.)='')">An msIdentifier must contain either a repository or location of some type, or a manuscript name</report>
     </constraint>
@@ -5970,7 +6030,7 @@ the  manuscript being described.</desc><desc versionDate="2007-12-20" xml:lang="
   </listRef></elementSpec><elementSpec rend="change" module="msdescription" xml:id="COLLECTION" ident="collection"><gloss versionDate="2007-06-12" xml:lang="fr">collection</gloss><desc versionDate="2005-01-14" xml:lang="en" xml:id="collection.desc">contains the name of a collection of
 manuscripts, not necessarily located within a single repository.</desc><desc versionDate="2007-12-20" xml:lang="ko">하나의 장서고 내에 반드시 위치할 필요는 없지만 원고의 모음집 이름을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含手稿集合的名稱，手稿未必皆位於單一收藏點。</desc><desc versionDate="2008-04-05" xml:lang="ja">手書き資料のコレクション名を示す．必ずしも一ヶ所に保管されている必要
   はない．</desc><desc versionDate="2007-06-12" xml:lang="fr">Contient le nom d'une collection de manuscrits,
-      ceux-ci ne se trouvant pas nécessairement dans le même lieu de conservation.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene el nombre de una colección de manuscritos, no necesariamente colocados en un único depósito.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene il nome di una raccolta di manoscritti non necessariamente collocati in un unico deposito</desc><classes><memberOf key="att.naming"/></classes><content><textNode/></content><attList><attDef ident="role" mode="delete"/><attDef ident="key" mode="delete"/><attDef ident="ref" mode="change" usage="req"/></attList><exemplum xml:lang="en">
+      ceux-ci ne se trouvant pas nécessairement dans le même lieu de conservation.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene el nombre de una colección de manuscritos, no necesariamente colocados en un único depósito.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene il nome di una raccolta di manoscritti non necessariamente collocati in un unico deposito</desc><classes><memberOf key="att.naming"/></classes><content><textNode/></content><attList><attDef ident="role" mode="delete"/><attDef ident="key" mode="delete"/><attDef ident="ref" mode="delete"/></attList><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <msIdentifier>
         <country>USA</country>
@@ -6856,8 +6916,10 @@ such components.</desc><desc versionDate="2007-12-20" xml:lang="ko">원고의 �
                                 <valList mode="replace" type="closed">
                                     <valItem ident="bookmarks"/>
                                     <valItem ident="edges"/>
+                                    <valItem ident="endbands"/>
                                     <valItem ident="images"/>
                                     <valItem ident="initials"/>
+                                    <valItem ident="lombards"/>
                                     <valItem ident="tooling"/>
                                 </valList>
                             </attDef></attList><exemplum>
@@ -7083,7 +7145,47 @@ it with  curatorial or administrative information.</desc><desc versionDate="2007
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPER">13.2.1. Personal Names</ref>
   </listRef>
-</classSpec><elementSpec rend="change" module="namesdates" ident="persName"><gloss versionDate="2005-01-14" xml:lang="en">personal name</gloss><gloss versionDate="2007-12-20" xml:lang="ko">개인 이름</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">個人名稱</gloss><gloss versionDate="2008-12-09" xml:lang="fr">nom de personne</gloss><gloss versionDate="2007-05-04" xml:lang="es">nombre propio de persona</gloss><gloss versionDate="2007-01-21" xml:lang="it">nome proprio di persona</gloss><desc versionDate="2012-03-13" xml:lang="en">contains a proper noun or proper-noun phrase referring to a
+</classSpec><elementSpec module="namesdates" ident="orgName">
+  <gloss versionDate="2005-01-14" xml:lang="en">organization name</gloss>
+  <gloss versionDate="2007-12-20" xml:lang="ko">조직명</gloss>
+  <gloss versionDate="2007-05-02" xml:lang="zh-TW">組織名稱</gloss>
+  <gloss versionDate="2008-12-09" xml:lang="fr">nom d'organisation</gloss>
+  <gloss versionDate="2007-05-04" xml:lang="es">nombre de una organización</gloss>
+  <gloss versionDate="2007-01-21" xml:lang="it">nome di organizzazione</gloss>
+  <desc versionDate="2005-01-14" xml:lang="en">contains an organizational name.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">조직명을 포함한다.</desc>
+  <desc versionDate="2007-05-02" xml:lang="zh-TW">包含一個組織名稱。</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">組織の名前を示す．</desc>
+  <desc versionDate="2009-03-19" xml:lang="fr">contient le nom d'une organisation.</desc>
+  <desc versionDate="2007-05-04" xml:lang="es">contiene el nombre de una organización.</desc>
+  <desc versionDate="2007-01-21" xml:lang="it">contiene il nome proprio di un'organizzazione</desc>
+  <classes>
+    <memberOf key="att.global"/>
+    <memberOf key="model.nameLike.agent"/>
+    <memberOf key="att.datable"/>
+    <memberOf key="att.editLike"/>
+    <memberOf key="att.personal"/>
+    <memberOf key="att.typed"/>
+  </classes>
+  <content>
+    <macroRef key="macro.phraseSeq"/>
+  </content>
+  <exemplum xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">About a year back, a question of considerable interest was agitated in the <orgName key="PAS1" type="voluntary"><placeName key="PEN">Pennsyla.</placeName> Abolition Society</orgName> [...]</egXML>
+  </exemplum>
+  <exemplum versionDate="2008-04-06" xml:lang="fr">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <orgName key="ssav" type="regional">Société savoisienne de <placeName key="GRE">Grenoble</placeName>
+         </orgName>
+    </egXML>
+  </exemplum>
+  <exemplum xml:lang="zh-TW">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"> 大約一年前，在<placeName key="PEN">賓州</placeName>的<orgName key="PAS1" type="voluntary">廢止黑奴協會</orgName>，有一場轟動的激辯。</egXML>
+  </exemplum>
+  <listRef>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDORG">13.2.2. Organizational Names</ref>
+  </listRef>
+</elementSpec><elementSpec rend="change" module="namesdates" ident="persName"><gloss versionDate="2005-01-14" xml:lang="en">personal name</gloss><gloss versionDate="2007-12-20" xml:lang="ko">개인 이름</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">個人名稱</gloss><gloss versionDate="2008-12-09" xml:lang="fr">nom de personne</gloss><gloss versionDate="2007-05-04" xml:lang="es">nombre propio de persona</gloss><gloss versionDate="2007-01-21" xml:lang="it">nome proprio di persona</gloss><desc versionDate="2012-03-13" xml:lang="en">contains a proper noun or proper-noun phrase referring to a
   person, possibly including one or more of
   the person's forenames, surnames, honorifics, added names, etc.</desc><desc versionDate="2007-12-20" xml:lang="ko">개인의 이름, 성, 존칭어, 추가 명 등의 하나 또는 전부를 사용하여 개인을 지칭하는, 고유명사 또는
     고유명사구를 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含一個人名，可能是任何或全部屬於該人物的名字、姓氏、敬稱、或附加名等。</desc><desc versionDate="2008-04-05" xml:lang="ja">人物の固有名詞を示す．例えば，名，姓，敬称，追加名など．</desc><desc versionDate="2008-12-09" xml:lang="fr">contient un nom propre ou une expression nominale se
@@ -7168,7 +7270,189 @@ it with  curatorial or administrative information.</desc><desc versionDate="2007
                             </egXML>
                         </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPLAC">13.2.3. Place Names</ref>
-  </listRef></elementSpec><elementSpec rend="change" module="textstructure" ident="TEI"><gloss versionDate="2005-12-24" xml:lang="en">TEI document</gloss><gloss versionDate="2007-12-20" xml:lang="ko">TEI 문서</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI文件</gloss><gloss versionDate="2007-06-12" xml:lang="fr">document TEI</gloss><gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss><gloss versionDate="2007-05-04" xml:lang="es">documento TEI</gloss><gloss versionDate="2007-01-21" xml:lang="it">documento TEI</gloss><desc versionDate="2017-02-07" xml:lang="en">contains a single TEI-conformant document, combining
+  </listRef></elementSpec><elementSpec module="namesdates" ident="listOrg">
+  <gloss versionDate="2007-07-04" xml:lang="en">list of organizations</gloss>
+  <gloss versionDate="2007-12-20" xml:lang="ko">조직 목록</gloss>
+  <gloss versionDate="2008-04-06" xml:lang="es">lista de organizaciones</gloss>
+  <gloss versionDate="2008-12-09" xml:lang="fr">liste d'organisations</gloss>
+  <gloss versionDate="2007-11-06" xml:lang="it">elenco delle organizzazioni</gloss>
+  <desc versionDate="2008-04-29" xml:lang="en">contains a list of elements, each of which provides information about an identifiable
+        organization.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">식별 가능한 조직에 관한 정보를 제공하며, 각각에 대한 기술 목록을 포함한다.</desc>
+  <desc versionDate="2008-04-06" xml:lang="es">contiene una lista de descripciones, que proporciona a
+        la información sobre una organización identificable.</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">特定可能な団体に関する情報を示す解説のリストを示す． </desc>
+  <desc versionDate="2008-12-09" xml:lang="fr">contient une liste d'éléments, chacun d'eux fournissant
+        des informations sur une organisation identifiable.</desc>
+  <desc versionDate="2007-11-06" xml:lang="it">contiene una lista di descrizioni, ognuna delle quali
+        fornisce informazioni relative a una determinata organizzazione</desc>
+  <classes>
+    <memberOf key="att.global"/>
+    <memberOf key="att.typed"/>
+    
+    
+    <memberOf key="model.listLike"/>
+    <memberOf key="model.orgPart"/>
+  </classes>
+  <content>
+    <sequence>
+      
+        <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
+      
+      
+        <alternate minOccurs="1" maxOccurs="unbounded">
+          <elementRef key="org"/>
+          <elementRef key="listOrg"/>
+        </alternate>
+      
+      
+        <alternate minOccurs="0" maxOccurs="unbounded">
+          <elementRef key="relation"/>
+          <elementRef key="listRelation"/>
+        </alternate>
+      
+    </sequence>
+  </content>
+  <exemplum xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#ND-eg-99">
+      <listOrg>
+        <head>Libyans</head>
+        <org>
+          <orgName>Adyrmachidae</orgName>
+          <desc>These people have, in most points, the same customs as the Egyptians, but
+                        use the costume of the Libyans. Their women wear on each leg a ring made of
+                        bronze [...]</desc>
+        </org>
+        <org>
+          <orgName>Nasamonians</orgName>
+          <desc>In summer they leave their flocks and herds upon the sea-shore, and go up
+                        the country to a place called Augila, where they gather the dates from the
+                        palms [...]</desc>
+        </org>
+        <org>
+          <orgName>Garamantians</orgName>
+          <desc>[...] avoid all society or intercourse with their fellow-men, have no
+                        weapon of war, and do not know how to defend themselves. [...]</desc>
+          <!-- ... -->
+        </org>
+      </listOrg>
+    </egXML>
+  </exemplum>
+  
+  <remarks versionDate="2007-09-13" xml:lang="en">
+    <p rend="dataDesc">The type attribute may be used to distinguish lists of organizations of a
+            particular type if convenient.</p>
+  </remarks>
+  <remarks versionDate="2008-12-09" xml:lang="fr">
+    <p rend="dataDesc">L'attribut type peut être utilisé pour établir des listes par type
+            d'organisation si cela présente un intérêt.</p>
+  </remarks>
+  <remarks xml:lang="ja" versionDate="2008-04-05">
+    <p rend="dataDesc"> 属性typeは，特別な種類の組織を区別するために使われるかもしれない． </p>
+  </remarks>
+  <listRef>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDORG">13.2.2. Organizational Names</ref>
+  </listRef>
+</elementSpec><elementSpec module="namesdates" ident="org">
+  <gloss versionDate="2007-07-04" xml:lang="en">organization</gloss>
+  <gloss versionDate="2007-12-20" xml:lang="ko">조직</gloss>
+  <gloss versionDate="2008-04-06" xml:lang="es">organización</gloss>
+  <gloss versionDate="2008-12-09" xml:lang="fr">organisation</gloss>
+  <gloss versionDate="2007-11-06" xml:lang="it">organizzazione</gloss>
+  <desc versionDate="2007-06-14" xml:lang="en">provides information about an identifiable organization such as a business, a tribe, or
+        any other grouping of people.</desc>
+  <desc versionDate="2007-12-20" xml:lang="ko">업무, 종족, 또는 사람들의 다른 종류의 그룹과 같은 식별 가능한 조직에 대한 정보를 제공한다.</desc>
+  <desc versionDate="2008-04-06" xml:lang="es">proporciona a la información sobre una organización
+        identificable tal como un negocio, una tribu, o cualquier otro grupo de personas.</desc>
+  <desc versionDate="2008-04-05" xml:lang="ja">特定可能な団体の情報を示す．例えば，会社，集団など，人の集まり．</desc>
+  <desc versionDate="2008-12-09" xml:lang="fr">fournit des informations sur une organisation
+        identifiable, telle qu'une entreprise, une tribu ou tout autre groupement de personnes.</desc>
+  <desc versionDate="2007-11-06" xml:lang="it">fornisce informazioni relative a un'organizzazione
+        identificate come società, tribù, o qualsiasi altro raggruppamento di persone</desc>
+  <classes>
+    <memberOf key="att.global"/>
+    <memberOf key="att.typed"/>
+    <memberOf key="att.editLike"/>
+    <memberOf key="model.personLike"/>
+    
+  </classes>
+  <content>
+    <sequence>
+      
+        <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
+      
+      <alternate>
+        
+          
+            <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
+          
+        
+        
+          <alternate minOccurs="0" maxOccurs="unbounded">
+            <classRef key="model.labelLike"/>
+            <classRef key="model.nameLike"/>
+            <classRef key="model.placeLike"/>
+            <classRef key="model.orgPart"/>
+	    <classRef key="model.milestoneLike"/>
+          </alternate>
+        
+      </alternate>
+      
+        <alternate minOccurs="0" maxOccurs="unbounded">
+          <classRef key="model.noteLike"/>
+          <classRef key="model.biblLike"/>
+          <elementRef key="linkGrp"/>
+          <elementRef key="link"/>
+        </alternate>
+      
+      
+        <classRef key="model.personLike" minOccurs="0" maxOccurs="unbounded"/>
+      
+    </sequence>
+  </content>
+  <attList>
+    <attDef ident="role" usage="opt">
+      <desc versionDate="2007-06-14" xml:lang="en">specifies a primary role or classification for the organization.</desc>
+      <desc versionDate="2007-12-20" xml:lang="ko">조직에 대한 주요 역할 또는 분류를 명시한다.</desc>
+      <desc versionDate="2008-04-05" xml:lang="ja">当該組織の，第一位の役割または分類を示す．</desc>
+      <desc versionDate="2008-12-09" xml:lang="fr">spécifie le rôle principal ou la catégorie
+                d'une organisation.</desc>
+      <desc versionDate="2007-05-04" xml:lang="es">establece el rol o la clasificación primaria de
+                una persona.</desc>
+      <desc versionDate="2007-01-21" xml:lang="it">stabilisce il ruolo o la classificazione
+                primaria di una persona</desc>
+      <datatype maxOccurs="unbounded"><dataRef key="teidata.word"/></datatype>
+<remarks versionDate="2013-12-21" xml:lang="en">
+        <p>Values for this attribute may be locally defined by a
+	project, using arbitrary keywords such as <val>artist</val>,
+	<val>employer</val>, <val>family group</val>, or
+	<val>political party</val>, each of which should be associated with a
+	definition. Such local definitions will typically be provided by a
+	<gi>valList</gi> element in the project schema
+specification.</p></remarks>
+
+    </attDef>
+  </attList>
+  <exemplum xml:lang="en">
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <org xml:id="JAMs">
+        <orgName>Justified Ancients of Mummu</orgName>
+        <desc>An underground anarchist collective spearheaded by <persName>Hagbard
+                    Celine</persName>, who fight the Illuminati from a golden submarine, the
+                        <name>Leif Ericson</name>
+            </desc>
+        <bibl>
+          <author>Robert Shea</author>
+          <author>Robert Anton Wilson</author>
+          <title>The Illuminatus! Trilogy</title>
+        </bibl>
+      </org>
+    </egXML>
+  </exemplum>
+  <listRef>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDORG">13.2.2. Organizational Names</ref>
+  </listRef>
+</elementSpec><elementSpec rend="change" module="textstructure" ident="TEI"><gloss versionDate="2005-12-24" xml:lang="en">TEI document</gloss><gloss versionDate="2007-12-20" xml:lang="ko">TEI 문서</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI文件</gloss><gloss versionDate="2007-06-12" xml:lang="fr">document TEI</gloss><gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss><gloss versionDate="2007-05-04" xml:lang="es">documento TEI</gloss><gloss versionDate="2007-01-21" xml:lang="it">documento TEI</gloss><desc versionDate="2017-02-07" xml:lang="en">contains a single TEI-conformant document, combining
     a single TEI header with one or more members of the <ident type="class">model.resourceLike</ident> class. Multiple <gi>TEI</gi>
     elements may be combined to form a <gi>teiCorpus</gi> element.</desc><desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더와 텍스트로 구성된 단일 TEI 구조 문서를 포함한다. 독립 요소 또는 <gi>teiCorpus</gi> 요소의 부분.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含符合TEI標準的單一文件，由一個TEI標頭及一份文本組成，可單獨出現或是作為元素<gi>teiCorpus</gi>的一部分。</desc><desc versionDate="2008-04-05" xml:lang="ja">TEIに準拠する文書</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un seul document conforme à la TEI, qui
             comprend un en-tête TEI et un texte, soit de façon isolée, soit comme  partie d’un
