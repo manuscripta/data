@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-06-28T12:27:26Z. .
+Schema generated from ODD source 2018-10-04T09:12:37Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -127,7 +127,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="manuscripta-bibliography-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
+            id="manuscripta-org-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -136,7 +136,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="manuscripta-bibliography-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
+            id="manuscripta-org-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -145,7 +145,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="manuscripta-bibliography-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
+            id="manuscripta-org-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -221,7 +221,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="manuscripta-bibliography-att.typed-subtypeTyped-constraint-rule-4">
+            id="manuscripta-org-att.typed-subtypeTyped-constraint-rule-4">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -283,332 +283,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
-   <define name="model.nameLike.agent">
-      <choice>
-         <ref name="persName"/>
-      </choice>
-   </define>
-   <define name="model.nameLike.agent_alternation">
-      <choice>
-         <ref name="persName"/>
-      </choice>
-   </define>
-   <define name="model.nameLike.agent_sequence">
-      <ref name="persName"/>
-   </define>
-   <define name="model.nameLike.agent_sequenceOptional">
-      <optional>
-         <ref name="persName"/>
-      </optional>
-   </define>
-   <define name="model.nameLike.agent_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="persName"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.nameLike.agent_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="persName"/>
-      </oneOrMore>
-   </define>
-   <define name="model.hiLike">
-      <notAllowed/>
-   </define>
-   <define name="model.hiLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.hiLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.emphLike">
-      <choice>
-         <ref name="foreign"/>
-         <ref name="title"/>
-      </choice>
-   </define>
-   <define name="model.emphLike_alternation">
-      <choice>
-         <ref name="foreign"/>
-         <ref name="title"/>
-      </choice>
-   </define>
-   <define name="model.emphLike_sequence">
-      <ref name="foreign"/>
-      <ref name="title"/>
-   </define>
-   <define name="model.emphLike_sequenceOptional">
-      <optional>
-         <ref name="foreign"/>
-      </optional>
-      <optional>
-         <ref name="title"/>
-      </optional>
-   </define>
-   <define name="model.emphLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="foreign"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="title"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.emphLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="foreign"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="title"/>
-      </oneOrMore>
-   </define>
-   <define name="model.dateLike">
-      <choice>
-         <ref name="date"/>
-      </choice>
-   </define>
-   <define name="model.dateLike_alternation">
-      <choice>
-         <ref name="date"/>
-      </choice>
-   </define>
-   <define name="model.dateLike_sequence">
-      <ref name="date"/>
-   </define>
-   <define name="model.dateLike_sequenceOptional">
-      <optional>
-         <ref name="date"/>
-      </optional>
-   </define>
-   <define name="model.dateLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="date"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.dateLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="date"/>
-      </oneOrMore>
-   </define>
-   <define name="model.measureLike">
-      <notAllowed/>
-   </define>
-   <define name="model.measureLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.measureLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial_sequence">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional_sequence">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.placeNamePart">
-      <notAllowed/>
-   </define>
-   <define name="model.placeNamePart_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.placeNamePart_sequence">
-      <empty/>
-   </define>
-   <define name="model.placeNamePart_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.placeNamePart_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.placeNamePart_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.placeStateLike">
-      <choice>
-         <ref name="model.placeNamePart"/>
-      </choice>
-   </define>
-   <define name="model.placeStateLike_alternation">
-      <choice>
-         <ref name="model.placeNamePart_alternation"/>
-      </choice>
-   </define>
-   <define name="model.placeStateLike_sequence">
-      <ref name="model.placeNamePart_sequence"/>
-   </define>
-   <define name="model.placeStateLike_sequenceOptional">
-      <optional>
-         <ref name="model.placeNamePart_sequenceOptional"/>
-      </optional>
-   </define>
-   <define name="model.placeStateLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.placeStateLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="model.placeNamePart_sequenceRepeatable"/>
-      </oneOrMore>
-   </define>
-   <define name="model.addressLike">
-      <notAllowed/>
-   </define>
-   <define name="model.addressLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.addressLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.nameLike">
-      <choice>
-         <ref name="model.nameLike.agent"/>
-         <ref name="model.offsetLike"/>
-         <ref name="model.placeStateLike"/>
-         <ref name="idno"/>
-         <ref name="model.persNamePart"/>
-      </choice>
-   </define>
-   <define name="model.nameLike_alternation">
-      <choice>
-         <ref name="model.nameLike.agent_alternation"/>
-         <ref name="model.offsetLike_alternation"/>
-         <ref name="model.placeStateLike_alternation"/>
-         <ref name="idno"/>
-         <ref name="model.persNamePart_alternation"/>
-      </choice>
-   </define>
-   <define name="model.nameLike_sequence">
-      <ref name="model.nameLike.agent_sequence"/>
-      <ref name="model.offsetLike_sequence"/>
-      <ref name="model.placeStateLike_sequence"/>
-      <ref name="idno"/>
-      <ref name="model.persNamePart_sequence"/>
-   </define>
-   <define name="model.nameLike_sequenceOptional">
-      <optional>
-         <ref name="model.nameLike.agent_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="model.offsetLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="model.placeStateLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="idno"/>
-      </optional>
-      <optional>
-         <ref name="model.persNamePart_sequenceOptional"/>
-      </optional>
-   </define>
-   <define name="model.nameLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="model.nameLike.agent_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.offsetLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.placeStateLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="idno"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.persNamePart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.nameLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="model.nameLike.agent_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.offsetLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.placeStateLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="idno"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.persNamePart_sequenceRepeatable"/>
-      </oneOrMore>
-   </define>
    <define name="foreign">
       <element name="foreign">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies a word or phrase as belonging to some language other than that of the surrounding text. [3.3.2.1. Foreign Words or Expressions]</a:documentation>
@@ -667,7 +341,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
                                     </sch:rule>
                                 </sch:pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-bibliography-date-date.when.value-constraint-rule-6">
+                  id="manuscripta-org-date-date.when.value-constraint-rule-6">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -812,7 +486,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [ ]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-bibliography-p-abstractModel-structure-p-constraint-report-5">
+                  id="manuscripta-org-p-abstractModel-structure-p-constraint-report-5">
             <rule context="tei:p">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -822,7 +496,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-bibliography-p-abstractModel-structure-l-constraint-report-6">
+                  id="manuscripta-org-p-abstractModel-structure-l-constraint-report-6">
             <rule context="tei:p">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -912,7 +586,21 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       <element name="author">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [ ]</a:documentation>
          <ref name="persName"/>
-         <ref name="att.naming.attribute.role"/>
+         <optional>
+            <attribute name="role">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>critEd</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Critical editor) </a:documentation>
+                        <value>origAuth</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Original author) </a:documentation>
+                     </choice>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -966,9 +654,9 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
    <define name="imprint">
       <element name="imprint">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups information relating to the publication or distribution of a bibliographic item. []</a:documentation>
-         <oneOrMore>
+         <zeroOrMore>
             <ref name="pubPlace"/>
-         </oneOrMore>
+         </zeroOrMore>
          <optional>
             <ref name="publisher"/>
          </optional>
@@ -1013,7 +701,7 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
          <ref name="fileDesc"/>
          <ref name="revisionDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-bibliography-teiHeader-greek.check-constraint-rule-7">
+                  id="manuscripta-org-teiHeader-greek.check-constraint-rule-7">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1023,7 +711,7 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-bibliography-teiHeader-latin.check-constraint-rule-8">
+                  id="manuscripta-org-teiHeader-latin.check-constraint-rule-8">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1313,119 +1001,33 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
          <ref name="p"/>
       </element>
    </define>
-   <define name="model.persNamePart">
-      <choice>
-         <ref name="surname"/>
-         <ref name="forename"/>
-         <ref name="genName"/>
-         <ref name="nameLink"/>
-         <ref name="addName"/>
-         <ref name="roleName"/>
-      </choice>
-   </define>
-   <define name="model.persNamePart_alternation">
-      <choice>
-         <ref name="surname"/>
-         <ref name="forename"/>
-         <ref name="genName"/>
-         <ref name="nameLink"/>
-         <ref name="addName"/>
-         <ref name="roleName"/>
-      </choice>
-   </define>
-   <define name="model.persNamePart_sequence">
-      <ref name="surname"/>
-      <ref name="forename"/>
-      <ref name="genName"/>
-      <ref name="nameLink"/>
-      <ref name="addName"/>
-      <ref name="roleName"/>
-   </define>
-   <define name="model.persNamePart_sequenceOptional">
-      <optional>
-         <ref name="surname"/>
-      </optional>
-      <optional>
-         <ref name="forename"/>
-      </optional>
-      <optional>
-         <ref name="genName"/>
-      </optional>
-      <optional>
-         <ref name="nameLink"/>
-      </optional>
-      <optional>
-         <ref name="addName"/>
-      </optional>
-      <optional>
-         <ref name="roleName"/>
-      </optional>
-   </define>
-   <define name="model.persNamePart_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="surname"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="forename"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="genName"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="nameLink"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="addName"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="roleName"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.persNamePart_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="surname"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="forename"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="genName"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="nameLink"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="addName"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="roleName"/>
-      </oneOrMore>
-   </define>
    <define name="persName">
       <element name="persName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. []</a:documentation>
          <choice>
             <text/>
-            <group>
-               <zeroOrMore>
-                  <ref name="forename"/>
-               </zeroOrMore>
-               <optional>
-                  <ref name="nameLink"/>
-               </optional>
-               <zeroOrMore>
-                  <ref name="surname"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="addName"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="genName"/>
-               </zeroOrMore>
-               <zeroOrMore>
-                  <ref name="roleName"/>
-               </zeroOrMore>
-            </group>
+            <oneOrMore>
+               <choice>
+                  <zeroOrMore>
+                     <ref name="forename"/>
+                  </zeroOrMore>
+                  <optional>
+                     <ref name="nameLink"/>
+                  </optional>
+                  <zeroOrMore>
+                     <ref name="surname"/>
+                  </zeroOrMore>
+                  <zeroOrMore>
+                     <ref name="addName"/>
+                  </zeroOrMore>
+                  <zeroOrMore>
+                     <ref name="genName"/>
+                  </zeroOrMore>
+                  <zeroOrMore>
+                     <ref name="roleName"/>
+                  </zeroOrMore>
+               </choice>
+            </oneOrMore>
          </choice>
          <ref name="att.canonical.attribute.ref"/>
          <empty/>

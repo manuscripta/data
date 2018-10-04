@@ -28,11 +28,11 @@
             <div xml:id="schema">
                 <head>Schema for the Manuscripta bibliography files</head>
 
-                <schemaSpec ident="manuscripta-bibliography" start="TEI" xml:lang="en" source="file:/F:/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
-                    <!-- Modules imported from manuscripta.odd -->
+                    <!-- Modules imported from manuscripta-master.odd -->
 
                     <moduleRef key="tei"/>
                     <moduleRef key="core" include="date foreign publisher resp respStmt textLang"/>
@@ -49,7 +49,7 @@
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
-                    <elementSpec ident="addName" module="namesdates" mode="change">                        
+                    <elementSpec ident="addName" module="namesdates" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.personal" mode="delete"/>
@@ -58,8 +58,19 @@
                         <content>
                             <textNode/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <persName ref="https://www.manuscripta.se/person/100056">
+                                    <forename>Basilius</forename>
+                                    <addName>Caesariensis</addName>
+                                </persName>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
-                    
+
                     <elementSpec ident="analytic" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
@@ -73,11 +84,17 @@
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
-                    
+
                     <elementSpec ident="author" module="core" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>                            
+                            <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
@@ -87,8 +104,24 @@
                             <attDef ident="key" mode="delete"/>
                             <attDef ident="ref" mode="delete"/>
                             <!-- Attributes deleted in att.naming -->
-                            <attDef ident="nymRef" mode="delete"/>                            
+                            <attDef ident="nymRef" mode="delete"/>
+                            <attDef ident="role" mode="change">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="critEd">
+                                        <gloss>Critical editor</gloss>
+                                    </valItem>
+                                    <valItem ident="origAuth">
+                                        <gloss>Original author</gloss>
+                                    </valItem>
+                                </valList>
+                            </attDef>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="biblScope" module="core" mode="change">
@@ -98,6 +131,12 @@
                         <content>
                             <empty/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="biblStruct" module="core" mode="change">
@@ -115,6 +154,12 @@
                                 </sequence>
                             </sequence>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="body" module="textstructure" mode="change">
@@ -125,6 +170,12 @@
                         <content>
                             <elementRef key="biblStruct" minOccurs="1" maxOccurs="1"/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="edition" module="header" mode="change">
@@ -136,6 +187,12 @@
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="editor" module="core" mode="change">
@@ -146,6 +203,12 @@
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="forename" module="namesdates" mode="change">
@@ -157,9 +220,15 @@
                         <content>
                             <textNode/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="genName" module="namesdates" mode="change">                        
+                    <elementSpec ident="genName" module="namesdates" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.personal" mode="delete"/>
@@ -168,6 +237,12 @@
                         <content>
                             <textNode/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="imprint" module="core" mode="change">
@@ -175,10 +250,16 @@
                             <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="pubPlace" minOccurs="1" maxOccurs="unbounded"/>
+                            <elementRef key="pubPlace" minOccurs="0" maxOccurs="unbounded"/>
                             <elementRef key="publisher" minOccurs="0" maxOccurs="1"/>
                             <elementRef key="date" minOccurs="1" maxOccurs="1"/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="idno" module="header" mode="change">
@@ -199,7 +280,7 @@
                                 </valList>
                             </attDef>
                             <attDef ident="subtype" mode="change" usage="opt">
-                                <valList mode="replace" type="closed">                                    
+                                <valList mode="replace" type="closed">
                                     <valItem ident="Digitization"/>
                                     <valItem ident="Libris"/>
                                     <valItem ident="Manuscripta"/>
@@ -207,6 +288,12 @@
                                 </valList>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="monogr" module="core" mode="change">
@@ -225,6 +312,12 @@
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="nameLink" module="namesdates" mode="change">
@@ -236,6 +329,12 @@
                         <content>
                             <textNode/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="p" module="core" mode="change">
@@ -245,6 +344,12 @@
                         <content>
                             <textNode/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="persName" module="namesdates" mode="change">
@@ -256,23 +361,29 @@
                         <content>
                             <alternate>
                                 <textNode/>
-                                <sequence>
+                                <alternate minOccurs="1" maxOccurs="unbounded">
                                     <elementRef key="forename" minOccurs="0" maxOccurs="unbounded"/>
                                     <elementRef key="nameLink" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="surname" minOccurs="0" maxOccurs="unbounded"/>
                                     <elementRef key="addName" minOccurs="0" maxOccurs="unbounded"/>
                                     <elementRef key="genName" minOccurs="0" maxOccurs="unbounded"/>
                                     <elementRef key="roleName" minOccurs="0" maxOccurs="unbounded"/>
-                                </sequence>
+                                </alternate>
                             </alternate>
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.canonical -->
-                            <attDef ident="key" mode="delete"/>                            
+                            <attDef ident="key" mode="delete"/>
                             <!-- Attributes deleted in att.naming -->
                             <attDef ident="nymRef" mode="delete"/>
-                            <attDef ident="role" mode="delete"/>                            
+                            <attDef ident="role" mode="delete"/>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="pubPlace" module="core" mode="change">
@@ -282,14 +393,19 @@
                         <content>
                             <textNode/>
                         </content>
-                        
                         <attList>
                             <!-- Attributes deleted from att.naming -->
                             <attDef ident="role" mode="delete"/>
                             <attDef ident="nymRef" mode="delete"/>
-                            <!-- Attributes deleted from att.canonical -->                            
+                            <!-- Attributes deleted from att.canonical -->
                             <attDef ident="key" mode="delete"/>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="q" module="core" mode="change">
@@ -304,6 +420,12 @@
                             <!-- Attributes deleted from att.ascribed -->
                             <attDef ident="who" mode="delete"/>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="roleName" module="namesdates" mode="change">
@@ -315,6 +437,12 @@
                         <content>
                             <textNode/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="series" module="core" mode="change">
@@ -328,15 +456,27 @@
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="sourceDesc" module="header" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>                            
+                            <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="p" minOccurs="1" maxOccurs="1"/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="surname" module="namesdates" mode="change">
@@ -348,6 +488,12 @@
                         <content>
                             <textNode/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="title" module="core" mode="change">
@@ -370,6 +516,12 @@
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <classSpec ident="att.editLike" module="tei" type="atts" mode="delete"/>
@@ -395,6 +547,12 @@
                             </attDef>
                             <attDef ident="nymRef" mode="delete"/>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </classSpec>
 
                 </schemaSpec>

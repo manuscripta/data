@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-06-28T13:29:15Z. .
+Schema generated from ODD source 2018-10-04T09:23:50Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -196,23 +196,8 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="att.global.attributes">
       <ref name="att.global.attribute.xmlid"/>
+      <ref name="att.global.attribute.n"/>
       <ref name="att.global.attribute.xmllang"/>
-   </define>
-   <define name="att.global.attribute.xmlbase">
-      <optional>
-         <attribute name="xml:base">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <text/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.global.attribute.xmlspace">
-      <optional>
-         <attribute name="xml:space">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <text/>
-         </attribute>
-      </optional>
    </define>
    <define name="att.global.attribute.xmlid">
       <optional>
@@ -222,31 +207,49 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          </attribute>
       </optional>
    </define>
+   <define name="att.global.attribute.n">
+      <optional>
+         <attribute name="n">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
    <define name="att.global.attribute.xmllang">
       <optional>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
-               <value>grc</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-               <value>en</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-               <value>fr</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+               <value>da</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                <value>de</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                <value>el</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+               <value>en</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+               <value>fi</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+               <value>fr</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+               <value>grc</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                <value>it</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                <value>la</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                <value>nl</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+               <value>non-dan</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+               <value>non-gut</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+               <value>non-swe</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                <value>sp</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                <value>sv</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
             </choice>
          </attribute>
       </optional>
@@ -273,9 +276,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             </list>
          </attribute>
       </optional>
-   </define>
-   <define name="att.placement.attributes">
-      <ref name="att.placement.attribute.place"/>
    </define>
    <define name="att.placement.attribute.place">
       <optional>
@@ -347,9 +347,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
         <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
       </sch:rule>
    </pattern>
-   <define name="att.pointing.attributes">
-      <ref name="att.pointing.attribute.target"/>
-   </define>
    <define name="att.pointing.attribute.target">
       <optional>
          <attribute name="target">
@@ -361,330 +358,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
             </list>
          </attribute>
       </optional>
-   </define>
-   <define name="model.nameLike.agent">
-      <choice>
-         <ref name="persName"/>
-      </choice>
-   </define>
-   <define name="model.nameLike.agent_alternation">
-      <choice>
-         <ref name="persName"/>
-      </choice>
-   </define>
-   <define name="model.nameLike.agent_sequence">
-      <ref name="persName"/>
-   </define>
-   <define name="model.nameLike.agent_sequenceOptional">
-      <optional>
-         <ref name="persName"/>
-      </optional>
-   </define>
-   <define name="model.nameLike.agent_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="persName"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.nameLike.agent_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="persName"/>
-      </oneOrMore>
-   </define>
-   <define name="model.hiLike">
-      <notAllowed/>
-   </define>
-   <define name="model.hiLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.hiLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.emphLike">
-      <choice>
-         <ref name="title"/>
-      </choice>
-   </define>
-   <define name="model.emphLike_alternation">
-      <choice>
-         <ref name="title"/>
-      </choice>
-   </define>
-   <define name="model.emphLike_sequence">
-      <ref name="title"/>
-   </define>
-   <define name="model.emphLike_sequenceOptional">
-      <optional>
-         <ref name="title"/>
-      </optional>
-   </define>
-   <define name="model.emphLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="title"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.emphLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="title"/>
-      </oneOrMore>
-   </define>
-   <define name="model.dateLike">
-      <choice>
-         <ref name="date"/>
-      </choice>
-   </define>
-   <define name="model.dateLike_alternation">
-      <choice>
-         <ref name="date"/>
-      </choice>
-   </define>
-   <define name="model.dateLike_sequence">
-      <ref name="date"/>
-   </define>
-   <define name="model.dateLike_sequenceOptional">
-      <optional>
-         <ref name="date"/>
-      </optional>
-   </define>
-   <define name="model.dateLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="date"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.dateLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="date"/>
-      </oneOrMore>
-   </define>
-   <define name="model.measureLike">
-      <notAllowed/>
-   </define>
-   <define name="model.measureLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.measureLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial_sequence">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional_sequence">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.placeNamePart">
-      <choice>
-         <ref name="placeName"/>
-      </choice>
-   </define>
-   <define name="model.placeNamePart_alternation">
-      <choice>
-         <ref name="placeName"/>
-      </choice>
-   </define>
-   <define name="model.placeNamePart_sequence">
-      <ref name="placeName"/>
-   </define>
-   <define name="model.placeNamePart_sequenceOptional">
-      <optional>
-         <ref name="placeName"/>
-      </optional>
-   </define>
-   <define name="model.placeNamePart_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="placeName"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.placeNamePart_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="placeName"/>
-      </oneOrMore>
-   </define>
-   <define name="model.placeStateLike">
-      <choice>
-         <ref name="model.placeNamePart"/>
-      </choice>
-   </define>
-   <define name="model.placeStateLike_alternation">
-      <choice>
-         <ref name="model.placeNamePart_alternation"/>
-      </choice>
-   </define>
-   <define name="model.placeStateLike_sequence">
-      <ref name="model.placeNamePart_sequence"/>
-   </define>
-   <define name="model.placeStateLike_sequenceOptional">
-      <optional>
-         <ref name="model.placeNamePart_sequenceOptional"/>
-      </optional>
-   </define>
-   <define name="model.placeStateLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.placeStateLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="model.placeNamePart_sequenceRepeatable"/>
-      </oneOrMore>
-   </define>
-   <define name="model.addressLike">
-      <notAllowed/>
-   </define>
-   <define name="model.addressLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.addressLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.nameLike">
-      <choice>
-         <ref name="model.nameLike.agent"/>
-         <ref name="model.offsetLike"/>
-         <ref name="model.placeStateLike"/>
-         <ref name="idno"/>
-         <ref name="model.persNamePart"/>
-      </choice>
-   </define>
-   <define name="model.nameLike_alternation">
-      <choice>
-         <ref name="model.nameLike.agent_alternation"/>
-         <ref name="model.offsetLike_alternation"/>
-         <ref name="model.placeStateLike_alternation"/>
-         <ref name="idno"/>
-         <ref name="model.persNamePart_alternation"/>
-      </choice>
-   </define>
-   <define name="model.nameLike_sequence">
-      <ref name="model.nameLike.agent_sequence"/>
-      <ref name="model.offsetLike_sequence"/>
-      <ref name="model.placeStateLike_sequence"/>
-      <ref name="idno"/>
-      <ref name="model.persNamePart_sequence"/>
-   </define>
-   <define name="model.nameLike_sequenceOptional">
-      <optional>
-         <ref name="model.nameLike.agent_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="model.offsetLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="model.placeStateLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="idno"/>
-      </optional>
-      <optional>
-         <ref name="model.persNamePart_sequenceOptional"/>
-      </optional>
-   </define>
-   <define name="model.nameLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="model.nameLike.agent_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.offsetLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.placeStateLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="idno"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.persNamePart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.nameLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="model.nameLike.agent_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.offsetLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.placeStateLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="idno"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.persNamePart_sequenceRepeatable"/>
-      </oneOrMore>
    </define>
    <define name="att.personal.attributes">
       <ref name="att.naming.attributes"/>
@@ -720,8 +393,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
             <ref name="resp"/>
          </oneOrMore>
          <ref name="persName"/>
-         <ref name="att.global.attribute.xmlbase"/>
-         <ref name="att.global.attribute.xmlspace"/>
          <attribute name="xml:id">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
             <choice>
@@ -788,65 +459,46 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          <empty/>
       </element>
    </define>
-   <define name="note">
-      <element name="note">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a note or annotation. [   ]</a:documentation>
-         <ref name="att.global.attributes"/>
-         <ref name="att.placement.attributes"/>
-         <ref name="att.pointing.attributes"/>
-         <ref name="att.typed.attributes"/>
-         <optional>
-            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                       name="anchored"
-                       a:defaultValue="true">
-               <a:documentation>indicates whether the copy text shows the exact place of reference for the note.</a:documentation>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="targetEnd">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the end of the span to which the note is attached, if the note is not embedded in the text at that point.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI"/>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
    <define name="title">
       <element name="title">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a title for any kind of work. [  ]</a:documentation>
          <text/>
-         <ref name="att.global.attribute.xmlbase"/>
-         <ref name="att.global.attribute.xmlspace"/>
          <ref name="att.canonical.attribute.ref"/>
          <ref name="att.typed.attribute.subtype"/>
          <optional>
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
                <choice>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ancient Greek (to 1453)</a:documentation>
-                  <value>en</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>da</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Danish) </a:documentation>
                   <value>de</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(German) </a:documentation>
                   <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Modern Greek) </a:documentation>
+                  <value>en</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(English) </a:documentation>
+                  <value>fi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Finnish) </a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(French) </a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Ancient Greek (to 1453)) </a:documentation>
                   <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Italian) </a:documentation>
                   <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin) </a:documentation>
                   <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dutch) </a:documentation>
+                  <value>non-dan</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Danish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-dan).</a:documentation>
+                  <value>non-gut</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Gutnish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-gut).</a:documentation>
+                  <value>non-swe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Old Swedish of East Norse) LINGUIST List code standard (http://multitree.org/codes/non-swe).</a:documentation>
                   <value>sp</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Spanish) </a:documentation>
                   <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Swedish) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -950,8 +602,6 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
                                         <sch:assert test="not(contains(., '‘'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
-         <ref name="att.global.attribute.xmlbase"/>
-         <ref name="att.global.attribute.xmlspace"/>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
             <choice>
@@ -1120,8 +770,6 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
          <ns xmlns="http://purl.oclc.org/dsdl/schematron"
              prefix="rng"
              uri="http://relaxng.org/ns/structure/1.0"/>
-         <ref name="att.global.attribute.xmlbase"/>
-         <ref name="att.global.attribute.xmlspace"/>
          <attribute name="xml:id">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
             <data type="ID"/>
@@ -1196,24 +844,6 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(source description) describes the source from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. []</a:documentation>
          <ref name="p"/>
       </element>
-   </define>
-   <define name="model.persNamePart">
-      <notAllowed/>
-   </define>
-   <define name="model.persNamePart_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.persNamePart_sequence">
-      <empty/>
-   </define>
-   <define name="model.persNamePart_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.persNamePart_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.persNamePart_sequenceRepeatable">
-      <notAllowed/>
    </define>
    <define name="persName">
       <element name="persName">
