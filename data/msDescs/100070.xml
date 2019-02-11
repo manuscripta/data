@@ -5,22 +5,13 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 67</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -31,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057 https://www.manuscripta.se/person/100143">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -48,44 +39,31 @@
                             <supportDesc>
                                 <support>
                                     <p>
-                                        <locus from="" to="" scheme=""/>
-                                        <material><!-- Material --></material>
-                                        <dimensions type="leaf">
-                                            <height quantity="" unit="mm"/>
-                                            <width quantity="" unit="mm"/>
-                                        </dimensions>
+                                        <locus from="130Ar" to="131v" scheme="folios"/>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf"/>
                                     </p>
                                 </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="0"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="rightFlyleaves" quantity="2"/>
                                 </extent>
-                                <foliation><!-- Foliation in pencil by modern hand: 1–84, 84a, 85–130, 130a, 131. Four stubs with text have not been foliated: 9a, 63a–b, 74a. --></foliation>
-                                <collation>
-                                    <formula><!-- Collation of the endleaves --></formula>
-                                </collation>
+                                <foliation>Foliation in pencil by modern hand: 1–84, 84a, 85–130, 130a, 131. Four stubs with text have not been foliated: 9a, 63a–b, 74a.</foliation>
                             </supportDesc>
                         </objectDesc>
-                        <bindingDesc>
-                            <binding>
-                                <p><!-- Boudalis: "Type common in Mt Sinai. Endband on two cores. For some parts of the text block original binding. Board and text block sewn at the same time." --></p>
-                                <p>
-                                    <dimensions type="binding">
-                                        <height quantity="" unit="mm"/>
-                                        <width quantity="" unit="mm"/>
-                                        <depth quantity="" unit="mm"/>
-                                    </dimensions>
-                                </p>
-                                <decoNote><!-- Description of decorative feature on the binding --></decoNote>
-                                <condition><!-- Condition of the binding --></condition>
-                            </binding>
-                        </bindingDesc>
                     </physDesc>
                     <history>
                         <provenance/>
                         <acquisition/>
                     </history>
-                    <additional/>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100266">Wasserman (2010)</title>
+                                <citedRange from="98" to="98" unit="page"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
@@ -98,45 +76,49 @@
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="" to="" scheme=""/>
-                                            <material><!-- Material --></material>
-                                            <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
-                                            </dimensions>
+                                            <locus from="1r" to="85v" scheme="folios"/>
+                                            <material>Parchment</material>
+                                            <dimensions type="leaf"/>
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="137"/>
+                                        <measure type="textblockLeaves" quantity="90"/>
                                     </extent>
-                                    <foliation><!-- Older foliation specific for the unit--></foliation>
-                                    <collation>
-                                        <formula><!-- Collation of the unit --></formula>
-                                        <signatures/>
-                                        <catchwords/>
-                                    </collation>
-                                    <condition><!-- Condition of the unit --></condition>
                                 </supportDesc>
-                                <layoutDesc>
-                                    <layout columns="" ruledLines="">
-                                        <locus from="" to="" scheme=""/>
-                                    </layout>
-                                </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <!-- Descripition of hands in the unit -->
-                                <handNote xml:id="hand-1">
-                                    <locus from="" to="" scheme=""/>
-                                </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <p><!-- Descripition of the decoration in the unit --></p>
-                            </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
-                                <origPlace> </origPlace>
-                                <origDate notBefore="" notAfter=""><!-- origDate --></origDate>
+                                <origDate notBefore="1100" notAfter="1199" cert="low">12th c.?</origDate>
+                            </origin>
+                        </history>
+                    </msPart>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicologicalUnit">2</idno>
+                        </msIdentifier>
+                        <msContents>
+                            <textLang mainLang="grc"/>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc material="paper">
+                                    <support>
+                                        <p>
+                                            <locus from="86r" to="130v" scheme="folios"/>
+                                            <material>Arabic paper</material>
+                                            <dimensions type="leaf"/>
+                                        </p>
+                                    </support>
+                                    <extent>
+                                        <measure type="textblockLeaves" quantity="90"/>
+                                    </extent>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate notBefore="1400" notAfter="1499">15th c.</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -144,8 +126,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-18" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-27" who="#PG">Added facsimile</change>
+            <change status="draft" when="2016-03-18" who="#person-100380">First draft</change>
+            <change status="draft" when="2016-07-27" who="#person-100380">Added facsimile</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -237,11 +219,11 @@
             <graphic url="uub-gr-067_0020_009v.tif" height="3240px" width="2934px"/>
         </surface>
         <surface xml:id="ms-100070_S9Ar">
-            <desc>&lt;f. 9Ar&gt;</desc>
+            <desc>&#10216;f. 9Ar&#10217;</desc>
             <graphic url="uub-gr-067_0021_S009Ar.tif" height="3156px" width="2934px"/>
         </surface>
         <surface xml:id="ms-100070_S9Av">
-            <desc>&lt;f. 9Av&gt;</desc>
+            <desc>&#10216;f. 9Av&#10217;</desc>
             <graphic url="uub-gr-067_0022_S009Av.tif" height="3228px" width="2934px"/>
         </surface>
         <surface xml:id="ms-100070_10r">
@@ -677,19 +659,19 @@
             <graphic url="uub-gr-067_0130_063v.tif" height="3012px" width="3084px"/>
         </surface>
         <surface xml:id="ms-100070_S63Ar">
-            <desc>&lt;f. 63Ar&gt;</desc>
+            <desc>&#10216;f. 63Ar&#10217;</desc>
             <graphic url="uub-gr-067_0131_S063Ar.tif" height="2958px" width="2730px"/>
         </surface>
         <surface xml:id="ms-100070_S63Av">
-            <desc>&lt;f. 63Av&gt;</desc>
+            <desc>&#10216;f. 63Av&#10217;</desc>
             <graphic url="uub-gr-067_0132_S063Av.tif" height="2982px" width="3000px"/>
         </surface>
         <surface xml:id="ms-100070_S63Br">
-            <desc>&lt;f. 63Br&gt;</desc>
+            <desc>&#10216;f. 63Br&#10217;</desc>
             <graphic url="uub-gr-067_0133_S063Br.tif" height="2976px" width="2814px"/>
         </surface>
         <surface xml:id="ms-100070_S63Bv">
-            <desc>&lt;f. 63Bv&gt;</desc>
+            <desc>&#10216;f. 63Bv&#10217;</desc>
             <graphic url="uub-gr-067_0134_S063Bv.tif" height="2976px" width="2994px"/>
         </surface>
         <surface xml:id="ms-100070_64r">
@@ -781,11 +763,11 @@
             <graphic url="uub-gr-067_0156_074v.tif" height="3030px" width="3000px"/>
         </surface>
         <surface xml:id="ms-100070_S74Ar">
-            <desc>&lt;f. 74Ar&gt;</desc>
+            <desc>&#10216;f. 74Ar&#10217;</desc>
             <graphic url="uub-gr-067_0157_S074Ar.tif" height="3024px" width="883px"/>
         </surface>
         <surface xml:id="ms-100070_S74Av">
-            <desc>&lt;f. 74Av&gt;</desc>
+            <desc>&#10216;f. 74Av&#10217;</desc>
             <graphic url="uub-gr-067_0158_S074Av.tif" height="3018px" width="2982px"/>
         </surface>
         <surface xml:id="ms-100070_75r">

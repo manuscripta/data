@@ -5,18 +5,18 @@
             <titleStmt>
                 <title>Linköping Diocesan Library, Kl f 17</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100143">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -27,7 +27,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057 https://www.manuscripta.se/person/100143">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100046">Linköping</settlement>
@@ -159,9 +159,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100303">Libanius</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6033/"
-                               type="uniform"
-                               xml:lang="la">Epistulae</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6033/" type="uniform" xml:lang="la">Epistulae</title>
                                 <title type="desc" xml:lang="la">Epistulae 1–37</title>
                                 <rubric xml:lang="grc">Λιβανίου κοιαίστορος, τοῦ σοφιστοῦ. ἐπιστολαί</rubric>
                                 <incipit xml:lang="grc" defective="false">Εἴτε μὴ βοηθεῖς οἷς ἀξιοῦμεν</incipit>
@@ -401,9 +399,7 @@
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <persName ref="https://www.manuscripta.se/person/100341"
-                                     evidence="conjecture"
-                                     cert="medium">Michael Apostolis</persName>; cf. <idno type="msRef">Vat. Urb. gr. 127</idno>. </handNote>
+                                    <persName ref="https://www.manuscripta.se/person/100341" evidence="conjecture" cert="medium">Michael Apostolis</persName>; cf. <idno type="msRef">Vat. Urb. gr. 127</idno>. </handNote>
                             </handDesc>
                             <additions>
                                 <p>
@@ -427,9 +423,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100303">Libanius</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6033/"
-                               type="uniform"
-                               xml:lang="la">Epistulae</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6033/" type="uniform" xml:lang="la">Epistulae</title>
                                 <note>
                                     <p>Another 261 letters by <persName ref="https://www.manuscripta.se/person/100303">Libanius</persName>; in this part of the MS they are not numbered. Reference numbers, below, pertain to <persName ref="https://www.manuscripta.se/person/100410">Richard Foerster</persName>’s edition.</p>
                                     <list type="toc">
@@ -1566,9 +1560,7 @@
                                     <locus from="43" to="192" scheme="pages"/> The beta in this hand has a curved tail bent upwards. </handNote>
                                 <handNote xml:id="hand-4">
                                     <locus from="193" to="197" scheme="pages"/>
-                                    <persName ref="https://www.manuscripta.se/person/100037"
-                                     evidence="conjecture"
-                                     cert="high">Antonios Damilas</persName> Single words by this hand are found also on <locus from="80" to="81" scheme="pages"/> and <locus from="90" to="90" scheme="pages"/>. </handNote>
+                                    <persName ref="https://www.manuscripta.se/person/100037" evidence="conjecture" cert="high">Antonios Damilas</persName> Single words by this hand are found also on <locus from="80" to="81" scheme="pages"/> and <locus from="90" to="90" scheme="pages"/>. </handNote>
                             </handDesc>
                             <additions>
                                 <p>
@@ -1589,7 +1581,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-07-09" who="#PG">First draft</change>
+            <change status="draft" when="2015-07-09" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1609,11 +1601,11 @@
             <graphic url="lsb-kl-f-017_0002_LCI.tif" height="8068px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100103_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="lsb-kl-f-017_0003_SL001r.tif" height="8068px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100103_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="lsb-kl-f-017_0004_SL001v.tif" height="8068px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100103_1">
@@ -2409,11 +2401,11 @@
             <graphic url="lsb-kl-f-017_0202_198.tif" height="8068px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100103_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="lsb-kl-f-017_0203_SR001r.tif" height="8068px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100103_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="lsb-kl-f-017_0204_SR001v.tif" height="8068px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100103_RCI">

@@ -5,18 +5,18 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 21</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100143">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">                    
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -27,7 +27,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100143">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -156,9 +156,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100204">Hesiodus</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/10928/"
-                               type="uniform"
-                               xml:lang="la">Opera et dies</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/10928/" type="uniform" xml:lang="la">Opera et dies</title>
                                 <rubric xml:lang="grc">Ἡσιόδου Ἔργα</rubric>
                                 <finalRubric xml:lang="grc">Τέλος τῶν ἔργων καὶ ἡμερῶν Ἡσιόδου· ἀμήν. Δέχου τὸ ῥαψώδημα τοῦ συγγόνου ἥδυσμα καὶ παίδευμα Πέρση σῶν τρόπων.</finalRubric>
                                 <note>
@@ -197,9 +195,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100264">Johannes Pediasimus</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1426/"
-                               type="uniform"
-                               xml:lang="la">Commentarius ad Theocriti Syringem</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1426/" type="uniform" xml:lang="la">Commentarius ad Theocriti Syringem</title>
                                 <rubric xml:lang="grc">Τοῦ σοφωτάτου χαρτοφύλακος τῆς ἁγίας Ἰουστι<supplied reason="omitted" xml:lang="grc">νι</supplied>ανῆς, καὶ πάσης Βουλγαρίας κυρίου Ἰωάννου τοῦ Πεδιασίμου, ἐξήγησις εἰς τὴν τοῦ Θεοκρίτου Σύριγγα</rubric>
                                 <bibl>
                                     <title type="short" ref="https://www.manuscripta.se/bibl/100053">Dübner (1849)</title>
@@ -210,13 +206,9 @@
                                 <locus from="27v:1" to="27v:11" scheme="folios"/>
                                 <textLang mainLang="grc"/>
                                 <author>
-                                    <persName ref="https://www.manuscripta.se/person/100316"
-                                     evidence="external"
-                                     cert="high">Manuel Holobolus</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100316" evidence="external" cert="high">Manuel Holobolus</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/8691/"
-                               type="uniform"
-                               xml:lang="la">In Theocriti Syringem</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/8691/" type="uniform" xml:lang="la">In Theocriti Syringem</title>
                                 <title type="alt" xml:lang="grc">Τοῦ σοφωτάτου ῥήτορος τῶν ῥητόρων κύρου Μαξίμου τοῦ Ὁλοβόλου εἰς τὴν Θεοκρίτου Σύριγγα σύνοψις τῶν μέτρων</title>
                                 <rubric>None</rubric>
                                 <incipit xml:lang="grc" defective="false">
@@ -244,15 +236,13 @@
                             </msItem>
                             <msItem class="schol">
                                 <locus from="27v:12" to="27v:36" scheme="folios"/>
-                                <textLang mainLang="grc"/>
+                                <textLang mainLang="grc"/>                                
                                 <msItem class="schol">
                                     <locus from="27v:12" to="27v:31" scheme="folios"/>
                                     <author>
                                         <persName ref="https://www.manuscripta.se/person/100316">Manuel Holobolus</persName>
                                     </author>
-                                    <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1420/"
-                                  type="uniform"
-                                  xml:lang="la">Commentarius in securim</title>
+                                    <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1420/" type="uniform" xml:lang="la">Commentarius in securim</title>
                                     <rubric xml:lang="grc">Τοῦ Ὁλοβόλου εἰς τὸν Πέλεκυν ἐξήγησις συνοπτική</rubric>
                                     <incipit xml:lang="grc" defective="false">Ὁ πέλεκυς οὐχ <supplied reason="omitted" xml:lang="grc">ὡς</supplied> ὁ Σύριγξ καὶ οἱ Βωμοὶ</incipit>
                                     <explicit xml:lang="grc" defective="false">ὄλβιος καὶ εὐτυχὴς ἀεὶ πνεῖ καὶ ζῇ</explicit>
@@ -289,13 +279,9 @@
                                 <locus from="28r" to="28r" scheme="folios"/>
                                 <textLang mainLang="grc"/>
                                 <author>
-                                    <persName ref="https://www.manuscripta.se/person/100441"
-                                     evidence="external"
-                                     cert="high">Theocritus</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100441" evidence="external" cert="high">Theocritus</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12767/"
-                               type="uniform"
-                               xml:lang="la">Syrinx</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12767/" type="uniform" xml:lang="la">Syrinx</title>
                                 <rubric xml:lang="grc">Πρὸς τὸν Σύριγγα ὁ λόγος</rubric>
                                 <note>With interlinear glosses. The poem is written as a carmen figuratum in the approximate shape of a flute, and includes a frame, a bell at the top end, and eighteen tone holes set in the middle of the pipes.</note>
                                 <bibl>
@@ -318,13 +304,9 @@
                                 <locus from="28v" to="28v" scheme="folios"/>
                                 <textLang mainLang="grc"/>
                                 <author>
-                                    <persName ref="https://www.manuscripta.se/person/100117"
-                                     evidence="external"
-                                     cert="high">Dosiadas Cretensis</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100117" evidence="external" cert="high">Dosiadas Cretensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/707/"
-                               type="uniform"
-                               xml:lang="la">Ara</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/707/" type="uniform" xml:lang="la">Ara</title>
                                 <note>With interlinear glosses in the <persName ref="https://www.manuscripta.se/person/100316">Manuel Holobolus</persName> tradition. The poem is written as a carmen figuratum in the shape of an altar with a base and dome.</note>
                                 <bibl>
                                     <title type="short" ref="https://www.manuscripta.se/bibl/100125">Kwapisz (2013)</title>
@@ -357,9 +339,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100404">Pythagoras</persName>
                                 </author>
-                                <title type="uniform"
-                               ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1065/"
-                               xml:lang="la">Carmen aureum</title>
+                                <title type="uniform" ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1065/" xml:lang="la">Carmen aureum</title>
                                 <rubric xml:lang="grc">Χρυσᾶ ἔπη τοῦ Πυθαγόρου</rubric>
                                 <note>With interlinear glosses and commentary. The main text and accompanying paraphrase are connected with the help of reading signs. The rubricized title of the paraphrase, which is given in code, would in plain read <foreign xml:lang="grc">Πυθαγορικῶν χρυσέων ἐπῶν φράσις</foreign>.</note>
                                 <listBibl>
@@ -456,7 +436,7 @@
                                             </watermark>
                                         </p>
                                         <p>
-                                            <locus from="8" to="9" scheme="folios"/>
+                                            <locus from="8r" to="9v" scheme="folios"/>
                                             <dimensions type="leaf">
                                                 <height quantity="220" unit="mm"/>
                                                 <width quantity="160" unit="mm"/>
@@ -466,7 +446,7 @@
                                             <note>This paper of coarser quality was only used for one substitute bifolium. No watermarks visible.</note>
                                         </p>
                                         <p>
-                                            <locus from="14" to="24" scheme="folios"/>
+                                            <locus from="14r" to="24v" scheme="folios"/>
                                             <dimensions type="leaf">
                                                 <height quantity="220" unit="mm"/>
                                                 <width quantity="160" unit="mm"/>
@@ -580,10 +560,7 @@
                             <handDesc>
                                 <handNote xml:id="hand-1">
                                     <locus from="1r" to="30v" scheme="folios"/>
-                                    <persName ref="https://www.manuscripta.se/person/100357"
-                                     role="scribe"
-                                     cert="low"
-                                     evidence="conjecture">Nikolaos Gaitanos Marulos</persName> Responsible for all the main texts, and most of the paratexts including rubricized parts, commentaries and glossae. He uses an even, slightly right-sloping humanist <term type="script">minuscule</term> in the style of <persName ref="https://www.manuscripta.se/person/100070">Camillus Venetus</persName> (so-called <term type="script">Camillus-Schrift</term>); cf. <bibl>
+                                    <persName ref="https://www.manuscripta.se/person/100357" role="scribe" cert="low" evidence="conjecture">Nikolaos Gaitanos Marulos</persName> Responsible for all the main texts, and most of the paratexts including rubricized parts, commentaries and glossae. He uses an even, slightly right-sloping humanist <term type="script">minuscule</term> in the style of <persName ref="https://www.manuscripta.se/person/100070">Camillus Venetus</persName> (so-called <term type="script">Camillus-Schrift</term>); cf. <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100094">Harlfinger (1977)</title>
                                         <citedRange unit="page" from="336" to="337"/>
                                         <citedRange unit="plate" from="16" to="18"/>
@@ -608,8 +585,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-01-12" who="#PG">Added facsimile</change>
-            <change status="draft" when="2014-01-03" who="#EN">First draft</change>
+            <change status="draft" when="2015-01-12" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2014-01-03" who="#person-100143">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -629,11 +606,11 @@
             <graphic url="uub-gr-021_0002_LCI.tif" height="4158px" width="3732px"/>
         </surface>
         <surface xml:id="ms-100021_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-021_0003_SL001r.tif" height="3894px" width="3618px"/>
         </surface>
         <surface xml:id="ms-100021_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-021_0004_SL001v.tif" height="4176px" width="3684px"/>
         </surface>
         <surface xml:id="ms-100021_1r">
@@ -877,11 +854,11 @@
             <graphic url="uub-gr-021_0064_030v.tif" height="4110px" width="3624px"/>
         </surface>
         <surface xml:id="ms-100021_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-021_0065_SR001r.tif" height="3912px" width="3534px"/>
         </surface>
         <surface xml:id="ms-100021_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-021_0066_SR001v.tif" height="4128px" width="3780px"/>
         </surface>
         <surface xml:id="ms-100021_RCI">

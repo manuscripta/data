@@ -5,18 +5,13 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 50</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -27,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -40,16 +35,26 @@
                     </msIdentifier>
                     <head>Mathematical works by Serenus of Antinouplis and Apollonius of Perga</head>
                     <physDesc>
-                        <objectDesc>
+                        <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
                                     <!-- No endleaves? -->
                                     <measure type="leftFlyleaves" quantity="5"/>
                                     <measure type="rightFlyleaves" quantity="0"/>
                                 </extent>
-                                <foliation><!-- Foliation in pencil by modern hand: 1–231, 231bis, 232–315. --></foliation>
+                                <foliation>Foliation in pencil by modern hand: 1–231, 231bis, 232–315.</foliation>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <binding>
+                                <p>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="325" unit="mm"/>
+                                        <width quantity="230" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <provenance/>
@@ -62,6 +67,9 @@
                                 <citedRange from="67" to="67" unit="page"/>
                             </bibl>
                             <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>
+                            </bibl>
+                            <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100043">Decorps-Foulquier (2001)</title>
                                 <citedRange from="73" to="75" unit="page"/>
                             </bibl>
@@ -72,13 +80,17 @@
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
-                            <!--Contents-->
+                            <textLang mainLang="grc"/>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
-                                        <p/>
+                                        <p>
+                                            <locus from="1r" to="S320v" scheme="folios"/>
+                                            <material>Western paper</material>
+                                            <dimensions type="leaf"/>
+                                        </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="321"/>
@@ -88,17 +100,18 @@
                             </objectDesc>
                         </physDesc>
                         <history>
-                            <origin/>
-                            <provenance/>
-                            <acquisition/>
+                            <origin>
+                                <origDate notBefore="1500" notAfter="1699" source="https://www.manuscripta.se/bibl/100335">16th–17th c.</origDate>
+                            </origin>
                         </history>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-14" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-22" who="#PG">Added facsimile</change>
+            <change status="draft" when="2019-01-25" who="#person-100380">Added origDate, foliation, binding dimensions and support material</change>
+            <change status="draft" when="2016-07-22" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2016-03-14" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -118,43 +131,43 @@
             <graphic url="uub-gr-050_0002_LCI.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-050_0003_SL001r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-050_0004_SL001v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL2r">
-            <desc>&lt;f. IIr&gt;</desc>
+            <desc>&#10216;f. IIr&#10217;</desc>
             <graphic url="uub-gr-050_0005_SL002r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL2v">
-            <desc>&lt;f. IIv&gt;</desc>
+            <desc>&#10216;f. IIv&#10217;</desc>
             <graphic url="uub-gr-050_0006_SL002v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL3r">
-            <desc>&lt;f. IIIr&gt;</desc>
+            <desc>&#10216;f. IIIr&#10217;</desc>
             <graphic url="uub-gr-050_0007_SL003r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL3v">
-            <desc>&lt;f. IIIv&gt;</desc>
+            <desc>&#10216;f. IIIv&#10217;</desc>
             <graphic url="uub-gr-050_0008_SL003v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL4r">
-            <desc>&lt;f. IVr&gt;</desc>
+            <desc>&#10216;f. IVr&#10217;</desc>
             <graphic url="uub-gr-050_0009_SL004r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL4v">
-            <desc>&lt;f. IVv&gt;</desc>
+            <desc>&#10216;f. IVv&#10217;</desc>
             <graphic url="uub-gr-050_0010_SL004v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL5r">
-            <desc>&lt;f. Vr&gt;</desc>
+            <desc>&#10216;f. Vr&#10217;</desc>
             <graphic url="uub-gr-050_0011_SL005r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_SL5v">
-            <desc>&lt;f. Vv&gt;</desc>
+            <desc>&#10216;f. Vv&#10217;</desc>
             <graphic url="uub-gr-050_0012_SL005v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_1r">
@@ -2686,43 +2699,43 @@
             <graphic url="uub-gr-050_0644_315v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S316r">
-            <desc>&lt;f. 316r&gt;</desc>
+            <desc>&#10216;f. 316r&#10217;</desc>
             <graphic url="uub-gr-050_0645_S316r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S316v">
-            <desc>&lt;f. 316v&gt;</desc>
+            <desc>&#10216;f. 316v&#10217;</desc>
             <graphic url="uub-gr-050_0646_S316v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S317r">
-            <desc>&lt;f. 317r&gt;</desc>
+            <desc>&#10216;f. 317r&#10217;</desc>
             <graphic url="uub-gr-050_0647_S317r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S317v">
-            <desc>&lt;f. 317v&gt;</desc>
+            <desc>&#10216;f. 317v&#10217;</desc>
             <graphic url="uub-gr-050_0648_S317v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S318r">
-            <desc>&lt;f. 318r&gt;</desc>
+            <desc>&#10216;f. 318r&#10217;</desc>
             <graphic url="uub-gr-050_0649_S318r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S318v">
-            <desc>&lt;f. 318v&gt;</desc>
+            <desc>&#10216;f. 318v&#10217;</desc>
             <graphic url="uub-gr-050_0650_S318v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S319r">
-            <desc>&lt;f. 319r&gt;</desc>
+            <desc>&#10216;f. 319r&#10217;</desc>
             <graphic url="uub-gr-050_0651_S319r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S319v">
-            <desc>&lt;f. 319v&gt;</desc>
+            <desc>&#10216;f. 319v&#10217;</desc>
             <graphic url="uub-gr-050_0652_S319v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S320r">
-            <desc>&lt;f. 320r&gt;</desc>
+            <desc>&#10216;f. 320r&#10217;</desc>
             <graphic url="uub-gr-050_0653_S320r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_S320v">
-            <desc>&lt;f. 320v&gt;</desc>
+            <desc>&#10216;f. 320v&#10217;</desc>
             <graphic url="uub-gr-050_0654_S320v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100052_RCI">
@@ -2738,5 +2751,4 @@
             <graphic url="uub-gr-050_0000_QPcard.tif" height="8956px" width="6708px"/>
         </surface>
     </facsimile>
-
 </TEI>

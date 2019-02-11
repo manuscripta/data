@@ -5,22 +5,13 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 65</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -31,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -64,9 +55,6 @@
                                     <measure type="rightFlyleaves" quantity="1"/>
                                 </extent>
                                 <foliation>Foliation in pencil by modern hand: 1–9, 9a, 10–29.</foliation>
-                                <collation>
-                                    <formula><!-- Collation of the endleaves --></formula>
-                                </collation>
                             </supportDesc>
                         </objectDesc>
                         <additions>
@@ -81,24 +69,22 @@
                         </additions>
                         <bindingDesc>
                             <binding>
-                                <p><!-- Description of the binding --></p>
                                 <p>
-                                    <dimensions type="binding">
-                                        <height quantity="" unit="mm"/>
-                                        <width quantity="" unit="mm"/>
-                                        <depth quantity="" unit="mm"/>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="235" unit="mm"/>
+                                        <width quantity="220" unit="mm"/>
                                     </dimensions>
                                 </p>
-                                <decoNote><!-- Description of decorative feature on the binding --></decoNote>
-                                <condition><!-- Condition of the binding --></condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
-                    <history>
-                        <provenance/>
-                        <acquisition/>
-                    </history>
-                    <additional/>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
@@ -121,22 +107,12 @@
                                         <p>
                                             <locus from="1r" to="29v" scheme="folios"/>
                                             <material>Western paper</material>
-                                            <dimensions type="leaf">
-                                                <height quantity="335" unit="mm"/>
-                                                <width quantity="220" unit="mm"/>
-                                                <!-- Rudbergs uppgift -->
-                                            </dimensions>
+                                            <dimensions type="leaf"/>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="30"/>
                                     </extent>
-                                    <collation>
-                                        <formula><!-- Collation of the unit --></formula>
-                                        <signatures/>
-                                        <catchwords/>
-                                    </collation>
-                                    <condition><!-- Condition of the unit --></condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1">
@@ -168,8 +144,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-14" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-01" who="#PG">Preliminary description</change>
+            <change status="draft" when="2019-01-15" who="#person-100380">Added binding dimensions</change>
+            <change status="draft" when="2016-07-01" who="#person-100380">Preliminary description</change>
+            <change status="draft" when="2016-03-14" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -189,11 +166,11 @@
             <graphic url="uub-gr-065_0002_LCI.tif" height="3876px" width="2874px"/>
         </surface>
         <surface xml:id="ms-100069_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-065_0003_SL001r.tif" height="3846px" width="2904px"/>
         </surface>
         <surface xml:id="ms-100069_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-065_0004_SL001v.tif" height="3870px" width="2856px"/>
         </surface>
         <surface xml:id="ms-100069_1r">
@@ -437,11 +414,11 @@
             <graphic url="uub-gr-065_0064_029v.tif" height="3822px" width="2910px"/>
         </surface>
         <surface xml:id="ms-100069_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-065_0065_SR001r.tif" height="3828px" width="2874px"/>
         </surface>
         <surface xml:id="ms-100069_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-065_0066_SR001v.tif" height="3810px" width="2886px"/>
         </surface>
         <surface xml:id="ms-100069_RCI">
@@ -457,5 +434,4 @@
             <graphic url="uub-gr-065_0000_QPcard.tif" height="3864px" width="2940px"/>
         </surface>
     </facsimile>
-
 </TEI>

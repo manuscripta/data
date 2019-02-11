@@ -5,22 +5,13 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 37</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -31,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -44,7 +35,7 @@
                     </msIdentifier>
                     <head>Geographical texts</head>
                     <physDesc>
-                        <objectDesc>
+                        <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="2"/>
@@ -54,8 +45,7 @@
                             </supportDesc>
                         </objectDesc>
                     </physDesc>
-                    <history>
-                        <origin/>
+                    <history>                        
                         <provenance/>
                         <acquisition/>
                     </history>
@@ -65,6 +55,9 @@
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100083">Graux (1889)</title>
                                 <citedRange from="59" to="61" unit="page"/>
                             </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>
+                            </bibl>
                         </listBibl>
                     </additional>
                     <msPart>
@@ -72,13 +65,17 @@
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
-                            <!--Contents-->
+                            <textLang mainLang="grc" otherLangs="la"/>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="">
+                                <supportDesc material="paper">
                                     <support>
-                                        <p/>
+                                        <p>
+                                            <locus from="1r" to="25v" scheme="folios"/>
+                                            <material>Western paper</material>
+                                            <dimensions type="leaf"/>
+                                        </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="25"/>
@@ -88,17 +85,18 @@
                             </objectDesc>
                         </physDesc>
                         <history>
-                            <origin/>
-                            <provenance/>
-                            <acquisition/>
+                            <origin>
+                                <origDate when="1654">1654</origDate>
+                            </origin>                            
                         </history>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-01-11" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-19" who="#PG">Added facsimile</change>
+            <change status="draft" when="2019-01-24" who="#person-100380">Added origDate, and support material</change>
+            <change status="draft" when="2016-07-19" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2015-01-11" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -118,19 +116,19 @@
             <graphic url="uub-gr-037_0002_LCI.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-037_0003_SL001r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-037_0004_SL001v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_SL2r">
-            <desc>&lt;f. IIr&gt;</desc>
+            <desc>&#10216;f. IIr&#10217;</desc>
             <graphic url="uub-gr-037_0005_SL002r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_SL2v">
-            <desc>&lt;f. IIv&gt;</desc>
+            <desc>&#10216;f. IIv&#10217;</desc>
             <graphic url="uub-gr-037_0006_SL002v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_1r">
@@ -334,11 +332,11 @@
             <graphic url="uub-gr-037_0056_025v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-037_0057_SR001r.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-037_0058_SR001v.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100038_RCI">

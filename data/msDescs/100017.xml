@@ -5,18 +5,13 @@
             <titleStmt>
                 <title xml:lang="sv">Uppsala University Library, Gr. 17</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -27,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -43,7 +38,7 @@
                     </msIdentifier>
                     <head>Lexicographical manuscript</head>
                     <physDesc>
-                        <objectDesc>
+                        <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="2"/>
@@ -59,6 +54,12 @@
                         <bindingDesc>
                             <binding>
                                 <p>Byzantine binding, possibly original.</p>
+                                <p>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="175" unit="mm"/>
+                                        <width quantity="140" unit="mm"/>
+                                    </dimensions>
+                                </p>
                                 <condition>Damage from worms on the first and last folia.</condition>
                             </binding>
                         </bindingDesc>
@@ -78,6 +79,9 @@
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100083">Graux (1889)</title>
                                 <citedRange from="48" to="48" unit="page"/>
                             </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>                                
+                            </bibl>
                         </listBibl>
                     </additional>
                     <msPart>
@@ -93,13 +97,9 @@
                                 </locusGrp>
                                 <textLang mainLang="grc"/>
                                 <author>
-                                    <persName ref="https://www.manuscripta.se/person/100218"
-                                     evidence="external"
-                                     cert="high">Ioannes Zonaras</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100218" evidence="external" cert="high">Ioannes Zonaras</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9132/"
-                               type="uniform"
-                               xml:lang="la">Lexicon</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9132/" type="uniform" xml:lang="la">Lexicon</title>
                                 <rubric>None</rubric>
                                 <incipit defective="true" xml:lang="grc">
                                     <gap reason="damage" quantity="20" unit="mm"/>
@@ -207,10 +207,13 @@
                                         </item>
                                     </list>
                                 </note>
-                                <filiation type="siglum">Nr. 108 (<bibl>
+                                <filiation type="siglum">
+                                    <idno type="siglum">Nr. 108</idno>
+                                    <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100004">Alpers (1981)</title>
                                         <citedRange from="32" to="33" unit="page"/>
-                                    </bibl>).</filiation>
+                                    </bibl>
+                                </filiation>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100256">Tittmann (1808)</title>
@@ -231,7 +234,7 @@
                             <msItem class="lexicogr" defective="true">
                                 <locus from="177v" to="177v" scheme="folios"/>
                                 <textLang mainLang="grc"/>
-                                <title xml:lang="la">Lexicum in Psalmos</title>
+                                <title type="desc" xml:lang="la">Lexicum in Psalmos</title>
                                 <rubric xml:lang="grc">ἀρχὴ τῶν λέξεων τῶν ρν´ ψαλμῶν</rubric>
                                 <incipit defective="false" xml:lang="grc">Ἀλληλούια· αἰνείτε τὸν ὄντα ἤτοι τὸν Κύριον</incipit>
                                 <explicit defective="true" xml:lang="grc">καὶ μετὰ τῆς συνουσίας, ἑτέρας τεσσαράκοντα· ἔνθα ἡγεῖται</explicit>
@@ -242,7 +245,7 @@
                             </msItem>
                             <msItem class="lexicogr">
                                 <locus from="184r" to="184v:14" scheme="folios"/>
-                                <title xml:lang="la">Lexicum in Octateuchum</title>
+                                <title type="desc" xml:lang="la">Lexicum in Octateuchum</title>
                                 <rubric xml:lang="grc">ἐκ τῆς ὀκτατεύχου</rubric>
                                 <incipit defective="true" xml:lang="grc">ἐν φυτῷ σαβέκ· ἐν φυτῷ δυνατῷ</incipit>
                                 <explicit defective="true" xml:lang="grc">χυτρόγαυλον· λέβητας ἢ λουτῆρας</explicit>
@@ -256,7 +259,7 @@
                                     <locus from="184v:15" to="184v:22" scheme="folios"/>
                                     <locus from="177r" to="177v" scheme="folios"/>
                                 </locusGrp>
-                                <title xml:lang="la">Lexicum in Reges</title>
+                                <title type="desc" xml:lang="la">Lexicum in Reges</title>
                                 <rubric xml:lang="grc">λέξεις τῶν βασιλείων α´</rubric>
                                 <incipit defective="false" xml:lang="grc">ἀναφέ· βαθμῶν</incipit>
                                 <explicit defective="true" xml:lang="grc">ἥνπερ Ἕλληνες καλοῦσιν Ἀφροδίτην</explicit>
@@ -271,7 +274,7 @@
                             </msItem>
                             <msItem class="lexicogr">
                                 <locus from="185r" to="185r" scheme="folios"/>
-                                <title>Glossary to Luke</title>
+                                <title type="desc">Glossary to Luke</title>
                                 <incipit defective="true" xml:lang="grc">μου πλησμονή</incipit>
                                 <explicit defective="true" xml:lang="grc">φαρισαῖος δια?? <gap reason="damage" unit="chars" quantity="2"/>
                                 </explicit>
@@ -289,7 +292,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100183">Gregorius Nazianzenus</persName>
                                 </author>
-                                <title key="TLG2022.060; CPG3035" xml:lang="la">Carmina moralia, I.2.30</title>
+                                <title type="desc" key="TLG2022.060; CPG3035" xml:lang="la">Carmina moralia, I.2.30</title>
                                 <rubric xml:lang="grc">τοῦ ἁγίου Γρηγορίου τοῦ θεολόγου ἀκροστιχὶς τῶν πάντων στοιχείων ἑκάστου ἰάμβου τελείαν παραίνεσιν ἔχοντος</rubric>
                                 <incipit xml:lang="grc" defective="false">Ἀρχὴν ἁπάντων καὶ τέλος ποιοῦ τὸν Θεόν</incipit>
                                 <explicit xml:lang="grc" defective="false">Ὦ τίς φυλάξει ταῦτα, καὶ σωθήσεται</explicit>
@@ -311,7 +314,7 @@
                                     <persName ref="https://www.manuscripta.se/person/100183">Gregorius Nazianzenus</persName>
                                     <!--Check authorship http://www.sources-chretiennes.mom.fr/index.php?pageid=auteurs_anciens&id=593-->
                                 </author>
-                                <title xml:lang="la">Alphabeticum paraeneticum I</title>
+                                <title type="desc" xml:lang="la">Alphabeticum paraeneticum I</title>
                                 <rubric xml:lang="grc">τοῦ αὐτοῦ ἕτερος ἀλφάβητος</rubric>
                                 <incipit xml:lang="grc" defective="false">Ἀρχὴν νόμιζε τῶν ὅλων εἶναι Θεόν</incipit>
                                 <explicit xml:lang="grc" defective="false">Ὦ παῖ, φίλασσων ταῦτα σώζειν ἐνθέως</explicit>
@@ -323,11 +326,9 @@
                             <msItem class="poem">
                                 <locus from="185v" to="186v" scheme="folios"/>
                                 <author>
-                                    <persName ref="https://www.manuscripta.se/person/100435"
-                                     evidence="external"
-                                     cert="high">Symeon Metaphrastes</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100435" evidence="external" cert="high">Symeon Metaphrastes</persName>
                                 </author>
-                                <title xml:lang="la">Acrostichon</title>
+                                <title type="desc" xml:lang="la">Acrostichon</title>
                                 <rubric xml:lang="grc">
                                     <supplied xml:lang="grc" reason="omitted">ἕ</supplied>τερος ἀλφάβητος</rubric>
                                 <incipit defective="false" xml:lang="grc">Ἀπὸ βλεφάρων δάκρυα, ἀπὸ καρδίας πόνους</incipit>
@@ -338,14 +339,14 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100354">Nicephorus Uranus</persName>
                                 </author>
-                                <title>Acrostichon</title>
+                                <title type="desc" xml:lang="la">Acrostichon</title>
                                 <rubric xml:lang="grc">ἕτερος ἀλφάβητος</rubric>
                                 <incipit defective="false" xml:lang="grc">Ἀπὸ χειλέων λόγον σοι προσοίσω, Λόγε</incipit>
                                 <explicit defective="false" xml:lang="grc">εἰς σπλάγχνα σου κατέφυγον· μή με ἀποβδελύξῃ</explicit>
                             </msItem>
                             <msItem class="geogr">
                                 <locus from="187v" to="187v" scheme="folios"/>
-                                <title>List of provincial capitals</title>
+                                <title type="desc">List of provincial capitals</title>
                                 <rubric xml:lang="grc">η´ μητροπόλεις</rubric>
                                 <incipit defective="true" xml:lang="grc">
                                     <gap reason="damage" unit="chars" quantity="2"/>
@@ -377,6 +378,10 @@
                                             </locusGrp>
                                             <material>Western paper</material>
                                             <measure type="folding">Quarto</measure>
+                                            <dimensions type="leaf">
+                                                <height quantity="175" unit="mm"/>
+                                                <width quantity="140" unit="mm"/>
+                                            </dimensions>
                                             <watermark n="1">
                                                 <term type="watermarkMotif">Amphora with handle</term>
                                                 <term type="proximity">similar to</term>
@@ -435,7 +440,7 @@
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote>
+                                <handNote xml:id="hand-1">
                                     <locus from="1r" to="187v" scheme="folios"/> The script is similar to the so-called <term type="script">Fettaugenmode</term>. </handNote>
                             </handDesc>
                         </physDesc>
@@ -448,10 +453,10 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-01-12" who="#PG">Added facsimile</change>
-            <change status="draft" when="2014-10-01" who="#PG">Changes to modified ODD</change>
-            <change status="draft" when="2014-06-11" who="#PG">Changes to modified ODD</change>
-            <change status="draft" when="2012-11-12" who="#PG">First draft</change>
+            <change status="draft" when="2015-01-12" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2014-10-01" who="#person-100380">Changes to modified ODD</change>
+            <change status="draft" when="2014-06-11" who="#person-100380">Changes to modified ODD</change>
+            <change status="draft" when="2012-11-12" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -471,19 +476,19 @@
             <graphic url="uub-gr-017_0002_LCI.tif" height="3390px" width="3072px"/>
         </surface>
         <surface xml:id="ms-100017_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-017_0003_SL001r.tif" height="3600px" width="4056px"/>
         </surface>
         <surface xml:id="ms-100017_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-017_0004_SL001v.tif" height="3402px" width="3168px"/>
         </surface>
         <surface xml:id="ms-100017_SL2r">
-            <desc>&lt;f. IIr&gt;</desc>
+            <desc>&#10216;f. IIr&#10217;</desc>
             <graphic url="uub-gr-017_0005_SL002r.tif" height="3618px" width="4002px"/>
         </surface>
         <surface xml:id="ms-100017_SL2v">
-            <desc>&lt;f. IIv&gt;</desc>
+            <desc>&#10216;f. IIv&#10217;</desc>
             <graphic url="uub-gr-017_0006_SL002v.tif" height="3378px" width="3186px"/>
         </surface>
         <surface xml:id="ms-100017_1r">
@@ -1983,19 +1988,19 @@
             <graphic url="uub-gr-017_0380_187v.tif" height="3600px" width="4050px"/>
         </surface>
         <surface xml:id="ms-100017_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-017_0381_SR001r.tif" height="3432px" width="2988px"/>
         </surface>
         <surface xml:id="ms-100017_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-017_0382_SR001v.tif" height="3594px" width="4104px"/>
         </surface>
         <surface xml:id="ms-100017_SR2r">
-            <desc>&lt;f. II´r&gt;</desc>
+            <desc>&#10216;f. II´r&#10217;</desc>
             <graphic url="uub-gr-017_0383_SR002r.tif" height="3438px" width="3024px"/>
         </surface>
         <surface xml:id="ms-100017_SR2v">
-            <desc>&lt;f. II´v&gt;</desc>
+            <desc>&#10216;f. II´v&#10217;</desc>
             <graphic url="uub-gr-017_0384_SR002v.tif" height="3624px" width="4181px"/>
         </surface>
         <surface xml:id="ms-100017_RCI">

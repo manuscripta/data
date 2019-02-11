@@ -5,21 +5,22 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 10</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100057">
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
+                </respStmt>
+                <respStmt xml:id="person-100143">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -30,7 +31,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057 https://www.manuscripta.se/person/100143">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -62,6 +63,16 @@
                                 <note/>
                             </p>
                         </additions>
+                        <bindingDesc>
+                            <binding>
+                                <p>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="155" unit="mm"/>
+                                        <width quantity="125" unit="mm"/>                                        
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin/>
@@ -73,6 +84,9 @@
                             <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100083">Graux (1889)</title>
                                 <citedRange from="41" to="42" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>                                
                             </bibl>
                         </listBibl>
                     </additional>
@@ -130,8 +144,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-01-18" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-19" who="#PG">Added facsimile</change>
+            <change status="draft" when="2016-01-18" who="#person-100380">First draft</change>
+            <change status="draft" when="2016-07-19" who="#person-100380">Added facsimile</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -151,11 +165,11 @@
             <graphic url="uub-gr-010_0002_LCI.tif" height="4480px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100010_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-010_0003_SL001r.tif" height="4480px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100010_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-010_0004_SL001v.tif" height="4480px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100010_1r">
@@ -2775,11 +2789,11 @@
             <graphic url="uub-gr-010_0658_327v.tif" height="4480px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100010_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-010_0659_SR001r.tif" height="4480px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100010_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-010_0660_SR001v.tif" height="4480px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100010_RCI">

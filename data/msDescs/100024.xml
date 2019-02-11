@@ -5,22 +5,13 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 24</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -31,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -42,64 +33,25 @@
                             <idno type="id" subtype="Diktyon">64437</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Psalter</head>
+                    <head resp="#https://www.manuscripta.se/person/100380">Psalter</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
-                                <support>
-                                    <p>
-                                        <locus from="" to="" scheme=""/>
-                                        <material><!-- Material --></material>
-                                        <dimensions type="leaf">
-                                            <height quantity="" unit="mm"/>
-                                            <width quantity="" unit="mm"/>
-                                        </dimensions>
-                                    </p>
-                                </support>
                                 <extent>
                                     <!-- 2 or 1 endleaves? II and I´ pasted together with first and last leaf of the textblock -->
                                     <measure type="leftFlyleaves" quantity="2"/>
                                     <measure type="rightFlyleaves" quantity="2"/>
                                 </extent>
-                                <foliation><!-- Foliation --></foliation>
-                                <collation>
-                                    <formula><!-- Collation of the endleaves --></formula>
-                                </collation>
                             </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                            <!-- Descripition of hands on the endleaves -->
-                        </handDesc>
-                        <additions>
-                            <p>
-                                <locusGrp>
-                                    <locus from="LCI" to="LCI" scheme="other"/>
-                                    <locus from="SL1r" to="SL2v" scheme="folios"/>
-                                </locusGrp>
-                                <note>
-                                    <locus from="SL2v" to="SL2v" scheme="folios"/> is pasted together with the first leaf the textblock.</note>
-                            </p>
-                            <p>
-                                <locusGrp>
-                                    <locus from="SR1r" to="SR2v" scheme="folios"/>
-                                    <locus from="RCI" to="RCI" scheme="other"/>
-                                </locusGrp>
-                                <note>
-                                    <locus from="SR1v" to="SR1v" scheme="folios"/> is pasted together with the last leaf the textblock.</note>
-                            </p>
-                        </additions>
                         <bindingDesc>
                             <binding>
-                                <p><!-- Description of the binding --></p>
                                 <p>
                                     <dimensions type="binding">
-                                        <height quantity="" unit="mm"/>
-                                        <width quantity="" unit="mm"/>
-                                        <depth quantity="" unit="mm"/>
+                                        <height quantity="130" unit="mm"/>
+                                        <width quantity="110" unit="mm"/>
                                     </dimensions>
                                 </p>
-                                <decoNote><!-- Description of decorative feature on the binding --></decoNote>
-                                <condition><!-- Condition of the binding --></condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
@@ -124,48 +76,23 @@
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="">
+                                <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="" to="" scheme=""/>
-                                            <material><!-- Material --></material>
-                                            <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
-                                            </dimensions>
+                                            <locus from="1r" to="120v" scheme="folios"/>
+                                            <material>Parchment</material>
+                                            <dimensions type="leaf"/>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="120"/>
-                                    </extent>
-                                    <foliation><!-- Older foliation specific for the unit--></foliation>
-                                    <collation>
-                                        <formula><!-- Collation of the unit --></formula>
-                                        <signatures/>
-                                        <catchwords/>
-                                    </collation>
-                                    <condition><!-- Condition of the unit --></condition>
+                                    </extent>                                    
                                 </supportDesc>
-                                <layoutDesc>
-                                    <layout columns="" ruledLines="">
-                                        <locus from="" to="" scheme=""/>
-                                    </layout>
-                                </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <!-- Descripition of hands in the unit -->
-                                <handNote xml:id="hand-1">
-                                    <locus from="" to="" scheme=""/>
-                                </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <p><!-- Descripition of the decoration in the unit --></p>
-                            </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
-                                <origPlace> </origPlace>
-                                <origDate notBefore="" notAfter=""><!-- origDate --></origDate>
+                                <origDate notBefore="1400" notAfter="1499">15th c.</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -173,8 +100,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-11" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-19" who="#PG">Added facsimile</change>
+            <change status="draft" when="2019-01-14" who="#person-100380">Added origDate, and binding dimensions</change>
+            <change status="draft" when="2016-07-19" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2016-03-11" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -194,27 +122,27 @@
             <graphic url="uub-gr-024_0002_LCI.tif" height="3324px" width="3084px"/>
         </surface>
         <surface xml:id="ms-100024_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-024_0003_SL001r.tif" height="3348px" width="3360px"/>
         </surface>
         <surface xml:id="ms-100024_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-024_0004_SL001v.tif" height="3330px" width="3108px"/>
         </surface>
         <surface xml:id="ms-100024_SL2r">
-            <desc>&lt;f. IIr&gt;</desc>
+            <desc>&#10216;f. IIr&#10217;</desc>
             <graphic url="uub-gr-024_0005_SL002r.tif" height="3354px" width="3216px"/>
         </surface>
         <surface xml:id="ms-100024_SL2v">
-            <desc>&lt;f. IIv&gt;</desc>
+            <desc>&#10216;f. IIv&#10217;</desc>
             <graphic url="uub-gr-024_0006_SL002v.tif" height="3342px" width="3096px"/>
         </surface>
         <surface xml:id="ms-100024_SL3r">
-            <desc>&lt;f. IIIr&gt;</desc>
+            <desc>&#10216;f. IIIr&#10217;</desc>
             <graphic url="uub-gr-024_0007_SL003r.tif" height="3330px" width="3426px"/>
         </surface>
         <surface xml:id="ms-100024_SL3v">
-            <desc>&lt;f. IIIv&gt;</desc>
+            <desc>&#10216;f. IIIv&#10217;</desc>
             <graphic url="uub-gr-024_0008_SL003v.tif" height="3306px" width="3198px"/>
         </surface>
         <surface xml:id="ms-100024_1r">
@@ -1162,27 +1090,27 @@
             <graphic url="uub-gr-024_0244_118v.tif" height="3288px" width="3528px"/>
         </surface>
         <surface xml:id="ms-100024_S119r">
-            <desc>&lt;f. 119r&gt;</desc>
+            <desc>&#10216;f. 119r&#10217;</desc>
             <graphic url="uub-gr-024_0245_S119r.tif" height="3324px" width="3096px"/>
         </surface>
         <surface xml:id="ms-100024_S119v">
-            <desc>&lt;f. 119v&gt;</desc>
+            <desc>&#10216;f. 119v&#10217;</desc>
             <graphic url="uub-gr-024_0246_S119v.tif" height="3300px" width="3570px"/>
         </surface>
         <surface xml:id="ms-100024_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-024_0247_SR001r.tif" height="3354px" width="3096px"/>
         </surface>
         <surface xml:id="ms-100024_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-024_0248_SR001v.tif" height="3318px" width="3426px"/>
         </surface>
         <surface xml:id="ms-100024_SR2r">
-            <desc>&lt;f. II´r&gt;</desc>
+            <desc>&#10216;f. II´r&#10217;</desc>
             <graphic url="uub-gr-024_0249_SR002r.tif" height="3372px" width="3186px"/>
         </surface>
         <surface xml:id="ms-100024_SR2v">
-            <desc>&lt;f. II´v&gt;</desc>
+            <desc>&#10216;f. II´v&#10217;</desc>
             <graphic url="uub-gr-024_0250_SR002v.tif" height="3324px" width="3468px"/>
         </surface>
         <surface xml:id="ms-100024_RCI">

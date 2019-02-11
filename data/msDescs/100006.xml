@@ -5,22 +5,22 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 6</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100057">
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
+                </respStmt>
+                <respStmt xml:id="person-100143">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -31,7 +31,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057 https://www.manuscripta.se/person/100143">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -46,50 +46,20 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
-                                <support>
-                                    <p>
-                                        <locus from="" to="" scheme=""/>
-                                        <material><!-- Material --></material>
-                                        <dimensions type="leaf">
-                                            <height quantity="" unit="mm"/>
-                                            <width quantity="" unit="mm"/>
-                                        </dimensions>
-                                    </p>
-                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="1"/>
                                     <measure type="rightFlyleaves" quantity="1"/>
                                 </extent>
-                                <foliation><!-- Foliation --></foliation>
-                                <collation>
-                                    <formula><!-- Collation of the endleaves --></formula>
-                                </collation>
                             </supportDesc>
                         </objectDesc>
-                        <additions>
-                            <p>
-                                <!-- Left endleaves -->
-                                <locus from="" to="" scheme=""/>
-                                <note/>
-                            </p>
-                            <p>
-                                <!-- Right endleaves -->
-                                <locus from="" to="" scheme=""/>
-                                <note/>
-                            </p>
-                        </additions>
                         <bindingDesc>
                             <binding>
-                                <p><!-- Description of the binding --></p>
                                 <p>
-                                    <dimensions type="binding">
-                                        <height quantity="" unit="mm"/>
-                                        <width quantity="" unit="mm"/>
-                                        <depth quantity="" unit="mm"/>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="185" unit="mm"/>
+                                        <width quantity="130" unit="mm"/>
                                     </dimensions>
                                 </p>
-                                <decoNote><!-- Description of decorative feature on the binding --></decoNote>
-                                <condition><!-- Condition of the binding --></condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
@@ -102,6 +72,9 @@
                             <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100083">Graux (1889)</title>
                                 <citedRange from="33" to="34" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -117,45 +90,26 @@
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="" to="" scheme=""/>
-                                            <material><!-- Material --></material>
+                                            <locus from="1r" to="100v" scheme="folios"/>
+                                            <material>Arabic paper</material>
                                             <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
+                                                <height quantity="180" unit="mm"/>
+                                                <width quantity="125" unit="mm"/>
                                             </dimensions>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="100"/>
                                     </extent>
-                                    <foliation><!-- Older foliation specific for the unit--></foliation>
-                                    <collation>
-                                        <formula><!-- Collation of the unit --></formula>
-                                        <signatures/>
-                                        <catchwords/>
-                                    </collation>
-                                    <condition><!-- Condition of the unit --></condition>
                                 </supportDesc>
-                                <layoutDesc>
-                                    <layout columns="" ruledLines="">
-                                        <locus from="" to="" scheme=""/>
-                                    </layout>
-                                </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <!-- Descripition of hands in the unit -->
-                                <handNote xml:id="hand-1">
-                                    <locus from="" to="" scheme=""/>
-                                </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <p><!-- Descripition of the decoration in the unit --></p>
-                            </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
-                                <origPlace> </origPlace>
-                                <origDate notBefore="" notAfter=""><!-- origDate --></origDate>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100015">Constantinople</placeName>
+                                </origPlace>
+                                <origDate notBefore="1300" notAfter="1399">14th c.</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -163,8 +117,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-11" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-18" who="#PG">Added facsimile</change>
+            <change status="draft" when="2019-01-14" who="#person-100380">Added binding and leaf dimensions, and origin</change>
+            <change status="draft" when="2016-07-18" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2016-03-11" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -184,11 +139,11 @@
             <graphic url="uub-gr-006_0002_LCI.tif" height="5008px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100006_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-006_0003_SL001r.tif" height="5008px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100006_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-006_0004_SL001v.tif" height="5008px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100006_1r">
@@ -992,11 +947,11 @@
             <graphic url="uub-gr-006_0204_100v.tif" height="5008px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100006_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-006_0205_SR001r.tif" height="5008px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100006_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-006_0206_SR001v.tif" height="5008px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100006_RCI">
@@ -1009,9 +964,7 @@
         </surface>
         <surface xml:id="ms-100006_3r-detail">
             <desc>p. 3r-detail</desc>
-            <graphic url="uub-gr-006_0209_003r-detail.tif"
-                  height="5008px"
-                  width="4080px"/>
+            <graphic url="uub-gr-006_0209_003r-detail.tif" height="5008px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100006_QPcard">
             <desc>QPcard</desc>

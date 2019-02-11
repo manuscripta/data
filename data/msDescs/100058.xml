@@ -5,22 +5,13 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 56</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -31,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -46,38 +37,20 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
-                                <support>
-                                    <p>
-                                        <locus from="" to="" scheme=""/>
-                                        <material><!-- Material --></material>
-                                        <dimensions type="leaf">
-                                            <height quantity="" unit="mm"/>
-                                            <width quantity="" unit="mm"/>
-                                        </dimensions>
-                                    </p>
-                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="0"/>
                                     <measure type="rightFlyleaves" quantity="0"/>
                                 </extent>
-                                <foliation><!-- Foliation --></foliation>
-                                <collation>
-                                    <formula><!-- Collation of the endleaves --></formula>
-                                </collation>
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc>
                             <binding>
-                                <p><!-- Description of the binding --></p>
                                 <p>
-                                    <dimensions type="binding">
-                                        <height quantity="" unit="mm"/>
-                                        <width quantity="" unit="mm"/>
-                                        <depth quantity="" unit="mm"/>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="320" unit="mm"/>
+                                        <width quantity="215" unit="mm"/>
                                     </dimensions>
                                 </p>
-                                <decoNote><!-- Description of decorative feature on the binding --></decoNote>
-                                <condition><!-- Condition of the binding --></condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
@@ -91,6 +64,9 @@
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100083">Graux (1889)</title>
                                 <citedRange from="68" to="68" unit="page"/>
                             </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>
+                            </bibl>
                         </listBibl>
                     </additional>
                     <msPart>
@@ -98,52 +74,27 @@
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
-                            <textLang mainLang="grc"/>
+                            <textLang mainLang="la"/>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="" to="" scheme=""/>
-                                            <material><!-- Material --></material>
-                                            <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
-                                            </dimensions>
+                                            <locus from="L1" to="L62b" scheme="pages"/>
+                                            <material>Western paper</material>
+                                            <dimensions type="leaf"/>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="254"/>
                                     </extent>
-                                    <foliation><!-- Older foliation specific for the unit--></foliation>
-                                    <collation>
-                                        <formula><!-- Collation of the unit --></formula>
-                                        <signatures/>
-                                        <catchwords/>
-                                    </collation>
-                                    <condition><!-- Condition of the unit --></condition>
                                 </supportDesc>
-                                <layoutDesc>
-                                    <layout columns="" ruledLines="">
-                                        <locus from="" to="" scheme=""/>
-                                    </layout>
-                                </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <!-- Descripition of hands in the unit -->
-                                <handNote xml:id="hand-1">
-                                    <locus from="" to="" scheme=""/>
-                                </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <p><!-- Descripition of the decoration in the unit --></p>
-                            </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
-                                <origPlace> </origPlace>
-                                <origDate notBefore="" notAfter=""><!-- origDate --></origDate>
+                                <origDate when="1762">1762</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -151,8 +102,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-28" who="#PG">First draft</change>
-            <change status="draft" when="2016-07-27" who="#PG">Added facsimile</change>
+            <change status="draft" when="2019-01-25" who="#person-100380">Added origDate, and support material</change>
+            <change status="draft" when="2016-07-27" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2016-03-28" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -172,43 +124,43 @@
             <graphic url="uub-gr-056_0002_LCI.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L1">
-            <desc>p. L1</desc>
+            <desc>p. I</desc>
             <graphic url="uub-gr-056_0003_L001.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L2">
-            <desc>p. L2</desc>
+            <desc>p. II</desc>
             <graphic url="uub-gr-056_0004_L002.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L3">
-            <desc>p. L3</desc>
+            <desc>p. III</desc>
             <graphic url="uub-gr-056_0005_L003.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L4">
-            <desc>p. L4</desc>
+            <desc>p. IV</desc>
             <graphic url="uub-gr-056_0006_L004.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L5">
-            <desc>p. L5</desc>
+            <desc>p. V</desc>
             <graphic url="uub-gr-056_0007_L005.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L6">
-            <desc>p. L6</desc>
+            <desc>p. VI</desc>
             <graphic url="uub-gr-056_0008_L006.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L7">
-            <desc>p. L7</desc>
+            <desc>p. VII</desc>
             <graphic url="uub-gr-056_0009_L007.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L8">
-            <desc>p. L8</desc>
+            <desc>p. VIII</desc>
             <graphic url="uub-gr-056_0010_L008.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L9">
-            <desc>p. L9</desc>
+            <desc>p. IX</desc>
             <graphic url="uub-gr-056_0011_L009.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L10">
-            <desc>f. </desc>
+            <desc>p. X</desc>
             <graphic url="uub-gr-056_0012_L010.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_1">
@@ -260,11 +212,11 @@
             <graphic url="uub-gr-056_0024_012.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Ir">
-            <desc>f. tab-Ir</desc>
+            <desc>tab. Ir</desc>
             <graphic url="uub-gr-056_0025_tab-Ir.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Iv">
-            <desc>f. tab-Iv</desc>
+            <desc>tab. Iv</desc>
             <graphic url="uub-gr-056_0026_tab-Iv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_13">
@@ -300,11 +252,11 @@
             <graphic url="uub-gr-056_0034_020.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIr">
-            <desc>f. tab-IIr</desc>
+            <desc>tab. IIr</desc>
             <graphic url="uub-gr-056_0035_tab-IIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIv">
-            <desc>f. tab-IIv</desc>
+            <desc>tab. IIv</desc>
             <graphic url="uub-gr-056_0036_tab-IIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_21">
@@ -324,11 +276,11 @@
             <graphic url="uub-gr-056_0040_024.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIIr">
-            <desc>f. tab-IIIr</desc>
+            <desc>tab. IIIr</desc>
             <graphic url="uub-gr-056_0041_tab-IIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIIv">
-            <desc>f. tab-IIIv</desc>
+            <desc>tab. IIIv</desc>
             <graphic url="uub-gr-056_0042_tab-IIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_25">
@@ -348,11 +300,11 @@
             <graphic url="uub-gr-056_0046_028.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IVr">
-            <desc>f. tab-IVr</desc>
+            <desc>tab. IVr</desc>
             <graphic url="uub-gr-056_0047_tab-IVr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IVv">
-            <desc>f. tab-IVv</desc>
+            <desc>tab. IVv</desc>
             <graphic url="uub-gr-056_0048_tab-IVv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_29">
@@ -380,11 +332,11 @@
             <graphic url="uub-gr-056_0054_034.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Vr">
-            <desc>f. tab-Vr</desc>
+            <desc>tab. Vr</desc>
             <graphic url="uub-gr-056_0055_tab-Vr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Vv">
-            <desc>f. tab-Vv</desc>
+            <desc>tab. Vv</desc>
             <graphic url="uub-gr-056_0056_tab-Vv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_35">
@@ -420,11 +372,11 @@
             <graphic url="uub-gr-056_0064_042.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIr">
-            <desc>f. tab-VIr</desc>
+            <desc>tab. VIr</desc>
             <graphic url="uub-gr-056_0065_tab-VIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIv">
-            <desc>f. tab-VIv</desc>
+            <desc>tab. VIv</desc>
             <graphic url="uub-gr-056_0066_tab-VIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_43">
@@ -460,11 +412,11 @@
             <graphic url="uub-gr-056_0074_050.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIIr">
-            <desc>f. tab-VIIr</desc>
+            <desc>tab. VIIr</desc>
             <graphic url="uub-gr-056_0075_tab-VIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIIv">
-            <desc>f. tab-VIIv</desc>
+            <desc>tab. VIIv</desc>
             <graphic url="uub-gr-056_0076_tab-VIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_51">
@@ -492,11 +444,11 @@
             <graphic url="uub-gr-056_0082_056.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIIIr">
-            <desc>f. tab-VIIIr</desc>
+            <desc>tab. VIIIr</desc>
             <graphic url="uub-gr-056_0083_tab-VIIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIIIv">
-            <desc>f. tab-VIIIv</desc>
+            <desc>tab. VIIIv</desc>
             <graphic url="uub-gr-056_0084_tab-VIIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_57">
@@ -524,11 +476,11 @@
             <graphic url="uub-gr-056_0090_062.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IXr">
-            <desc>f. tab-IXr</desc>
+            <desc>tab. IXr</desc>
             <graphic url="uub-gr-056_0091_tab-IXr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IXv">
-            <desc>f. tab-IXv</desc>
+            <desc>tab. IXv</desc>
             <graphic url="uub-gr-056_0092_tab-IXv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_63">
@@ -564,11 +516,11 @@
             <graphic url="uub-gr-056_0100_070.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Xr">
-            <desc>f. tab-Xr</desc>
+            <desc>tab. Xr</desc>
             <graphic url="uub-gr-056_0101_tab-Xr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Xv">
-            <desc>f. tab-Xv</desc>
+            <desc>tab. Xv</desc>
             <graphic url="uub-gr-056_0102_tab-Xv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_71">
@@ -588,11 +540,11 @@
             <graphic url="uub-gr-056_0106_074.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIr">
-            <desc>f. tab-XIr</desc>
+            <desc>tab. XIr</desc>
             <graphic url="uub-gr-056_0107_tab-XIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIv">
-            <desc>f. tab-XIv</desc>
+            <desc>tab. XIv</desc>
             <graphic url="uub-gr-056_0108_tab-XIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_75">
@@ -620,11 +572,11 @@
             <graphic url="uub-gr-056_0114_080.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIIr">
-            <desc>f. tab-XIIr</desc>
+            <desc>tab. XIIr</desc>
             <graphic url="uub-gr-056_0115_tab-XIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIIv">
-            <desc>f. tab-XIIv</desc>
+            <desc>tab. XIIv</desc>
             <graphic url="uub-gr-056_0116_tab-XIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_81">
@@ -660,11 +612,11 @@
             <graphic url="uub-gr-056_0124_088.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIIIr">
-            <desc>f. tab-XIIIr</desc>
+            <desc>tab. XIIIr</desc>
             <graphic url="uub-gr-056_0125_tab-XIIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIIIv">
-            <desc>f. tab-XIIIv</desc>
+            <desc>tab. XIIIv</desc>
             <graphic url="uub-gr-056_0126_tab-XIIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_89">
@@ -684,11 +636,11 @@
             <graphic url="uub-gr-056_0130_092.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIVr">
-            <desc>f. tab-XIVr</desc>
+            <desc>tab. XIVr</desc>
             <graphic url="uub-gr-056_0131_tab-XIVr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIVv">
-            <desc>f. tab-XIVv</desc>
+            <desc>tab. XIVv</desc>
             <graphic url="uub-gr-056_0132_tab-XIVv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_93">
@@ -708,11 +660,11 @@
             <graphic url="uub-gr-056_0136_096.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVr">
-            <desc>f. tab-XVr</desc>
+            <desc>tab. XVr</desc>
             <graphic url="uub-gr-056_0137_tab-XVr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVv">
-            <desc>f. tab-XVv</desc>
+            <desc>tab. XVv</desc>
             <graphic url="uub-gr-056_0138_tab-XVv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_97">
@@ -724,11 +676,11 @@
             <graphic url="uub-gr-056_0140_098.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVIr">
-            <desc>f. tab-XVIr</desc>
+            <desc>tab. XVIr</desc>
             <graphic url="uub-gr-056_0141_tab-XVIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVIv">
-            <desc>f. tab-XVIv</desc>
+            <desc>tab. XVIv</desc>
             <graphic url="uub-gr-056_0142_tab-XVIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_99">
@@ -764,11 +716,11 @@
             <graphic url="uub-gr-056_0150_106.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVIIr">
-            <desc>f. tab-XVIIr</desc>
+            <desc>tab. XVIIr</desc>
             <graphic url="uub-gr-056_0151_tab-XVIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVIIv">
-            <desc>f. tab-XVIIv</desc>
+            <desc>tab. XVIIv</desc>
             <graphic url="uub-gr-056_0152_tab-XVIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_107">
@@ -796,11 +748,11 @@
             <graphic url="uub-gr-056_0158_112.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVIIIr">
-            <desc>f. tab-XVIIIr</desc>
+            <desc>tab. XVIIIr</desc>
             <graphic url="uub-gr-056_0159_tab-XVIIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XVIIIv">
-            <desc>f. tab-XVIIIv</desc>
+            <desc>tab. XVIIIv</desc>
             <graphic url="uub-gr-056_0160_tab-XVIIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_113">
@@ -820,11 +772,11 @@
             <graphic url="uub-gr-056_0164_116.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIXr">
-            <desc>f. tab-XIXr</desc>
+            <desc>tab. XIXr</desc>
             <graphic url="uub-gr-056_0165_tab-XIXr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XIXv">
-            <desc>f. tab-XIXv</desc>
+            <desc>tab. XIXv</desc>
             <graphic url="uub-gr-056_0166_tab-XIXv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_117">
@@ -844,11 +796,11 @@
             <graphic url="uub-gr-056_0170_120.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXr">
-            <desc>f. tab-XXr</desc>
+            <desc>tab. XXr</desc>
             <graphic url="uub-gr-056_0171_tab-XXr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXv">
-            <desc>f. tab-XXv</desc>
+            <desc>tab. XXv</desc>
             <graphic url="uub-gr-056_0172_tab-XXv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_121">
@@ -860,11 +812,11 @@
             <graphic url="uub-gr-056_0174_122.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIr">
-            <desc>f. tab-XXIr</desc>
+            <desc>tab. XXIr</desc>
             <graphic url="uub-gr-056_0175_tab-XXIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIv">
-            <desc>f. tab-XXIv</desc>
+            <desc>tab. XXIv</desc>
             <graphic url="uub-gr-056_0176_tab-XXIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_123">
@@ -876,11 +828,11 @@
             <graphic url="uub-gr-056_0178_124.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIIr">
-            <desc>f. tab-XXIIr</desc>
+            <desc>tab. XXIIr</desc>
             <graphic url="uub-gr-056_0179_tab-XXIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIIv">
-            <desc>f. tab-XXIIv</desc>
+            <desc>tab. XXIIv</desc>
             <graphic url="uub-gr-056_0180_tab-XXIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_125">
@@ -948,11 +900,11 @@
             <graphic url="uub-gr-056_0196_140.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIIIr">
-            <desc>f. tab-XXIIIr</desc>
+            <desc>tab. XXIIIr</desc>
             <graphic url="uub-gr-056_0197_tab-XXIIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIIIv">
-            <desc>f. tab-XXIIIv</desc>
+            <desc>tab. XXIIIv</desc>
             <graphic url="uub-gr-056_0198_tab-XXIIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_141">
@@ -988,11 +940,11 @@
             <graphic url="uub-gr-056_0206_148.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIVr">
-            <desc>f. tab-XXIVr</desc>
+            <desc>tab. XXIVr</desc>
             <graphic url="uub-gr-056_0207_tab-XXIVr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIVv">
-            <desc>f. tab-XXIVv</desc>
+            <desc>tab. XXIVv</desc>
             <graphic url="uub-gr-056_0208_tab-XXIVv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_149">
@@ -1020,11 +972,11 @@
             <graphic url="uub-gr-056_0214_154.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVr">
-            <desc>f. tab-XXVr</desc>
+            <desc>tab. XXVr</desc>
             <graphic url="uub-gr-056_0215_tab-XXVr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVv">
-            <desc>f. tab-XXVv</desc>
+            <desc>tab. XXVv</desc>
             <graphic url="uub-gr-056_0216_tab-XXVv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_155">
@@ -1052,11 +1004,11 @@
             <graphic url="uub-gr-056_0222_160.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVIr">
-            <desc>f. tab-XXVIr</desc>
+            <desc>tab. XXVIr</desc>
             <graphic url="uub-gr-056_0223_tab-XXVIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVIv">
-            <desc>f. tab-XXVIv</desc>
+            <desc>tab. XXVIv</desc>
             <graphic url="uub-gr-056_0224_tab-XXVIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_161">
@@ -1084,11 +1036,11 @@
             <graphic url="uub-gr-056_0230_166.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVIIr">
-            <desc>f. tab-XXVIIr</desc>
+            <desc>tab. XXVIIr</desc>
             <graphic url="uub-gr-056_0231_tab-XXVIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVIIv">
-            <desc>f. tab-XXVIIv</desc>
+            <desc>tab. XXVIIv</desc>
             <graphic url="uub-gr-056_0232_tab-XXVIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_167">
@@ -1132,16 +1084,12 @@
             <graphic url="uub-gr-056_0242_176.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVIIIr">
-            <desc>f. tab-XXVIIIr</desc>
-            <graphic url="uub-gr-056_0243_tab-XXVIIIr.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXVIIIr</desc>
+            <graphic url="uub-gr-056_0243_tab-XXVIIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXVIIIv">
-            <desc>f. tab-XXVIIIv</desc>
-            <graphic url="uub-gr-056_0244_tab-XXVIIIv.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXVIIIv</desc>
+            <graphic url="uub-gr-056_0244_tab-XXVIIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_177">
             <desc>p. 177</desc>
@@ -1168,11 +1116,11 @@
             <graphic url="uub-gr-056_0250_182.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIXr">
-            <desc>f. tab-XXIXr</desc>
+            <desc>tab. XXIXr</desc>
             <graphic url="uub-gr-056_0251_tab-XXIXr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXIXv">
-            <desc>f. tab-XXIXv</desc>
+            <desc>tab. XXIXv</desc>
             <graphic url="uub-gr-056_0252_tab-XXIXv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_183">
@@ -1208,11 +1156,11 @@
             <graphic url="uub-gr-056_0260_190.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXr">
-            <desc>f. tab-XXXr</desc>
+            <desc>tab. XXXr</desc>
             <graphic url="uub-gr-056_0261_tab-XXXr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXv">
-            <desc>f. tab-XXXv</desc>
+            <desc>tab. XXXv</desc>
             <graphic url="uub-gr-056_0262_tab-XXXv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_191">
@@ -1248,11 +1196,11 @@
             <graphic url="uub-gr-056_0270_198.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIr">
-            <desc>f. tab-XXXIr</desc>
+            <desc>tab. XXXIr</desc>
             <graphic url="uub-gr-056_0271_tab-XXXIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIv">
-            <desc>f. tab-XXXIv</desc>
+            <desc>tab. XXXIv</desc>
             <graphic url="uub-gr-056_0272_tab-XXXIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_199">
@@ -1280,11 +1228,11 @@
             <graphic url="uub-gr-056_0278_204.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIIr">
-            <desc>f. tab-XXXIIr</desc>
+            <desc>tab. XXXIIr</desc>
             <graphic url="uub-gr-056_0279_tab-XXXIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIIv">
-            <desc>f. tab-XXXIIv</desc>
+            <desc>tab. XXXIIv</desc>
             <graphic url="uub-gr-056_0280_tab-XXXIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_205">
@@ -1304,16 +1252,12 @@
             <graphic url="uub-gr-056_0284_208.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIIIr">
-            <desc>f. tab-XXXIIIr</desc>
-            <graphic url="uub-gr-056_0285_tab-XXXIIIr.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXXIIIr</desc>
+            <graphic url="uub-gr-056_0285_tab-XXXIIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIIIv">
-            <desc>f. tab-XXXIIIv</desc>
-            <graphic url="uub-gr-056_0286_tab-XXXIIIv.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXXIIIv</desc>
+            <graphic url="uub-gr-056_0286_tab-XXXIIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_209">
             <desc>p. 209</desc>
@@ -1372,11 +1316,11 @@
             <graphic url="uub-gr-056_0300_222.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIVr">
-            <desc>f. tab-XXXIVr</desc>
+            <desc>tab. XXXIVr</desc>
             <graphic url="uub-gr-056_0301_tab-XXXIVr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXIVv">
-            <desc>f. tab-XXXIVv</desc>
+            <desc>tab. XXXIVv</desc>
             <graphic url="uub-gr-056_0302_tab-XXXIVv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_223">
@@ -1468,11 +1412,11 @@
             <graphic url="uub-gr-056_0324_244.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVr">
-            <desc>f. tab-XXXVr</desc>
+            <desc>tab. XXXVr</desc>
             <graphic url="uub-gr-056_0325_tab-XXXVr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVv">
-            <desc>f. tab-XXXVv</desc>
+            <desc>tab. XXXVv</desc>
             <graphic url="uub-gr-056_0326_tab-XXXVv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_245">
@@ -1524,11 +1468,11 @@
             <graphic url="uub-gr-056_0338_256.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVIr">
-            <desc>f. tab-XXXVIr</desc>
+            <desc>tab. XXXVIr</desc>
             <graphic url="uub-gr-056_0339_tab-XXXVIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVIv">
-            <desc>f. tab-XXXVIv</desc>
+            <desc>tab. XXXVIv</desc>
             <graphic url="uub-gr-056_0340_tab-XXXVIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_257">
@@ -1572,16 +1516,12 @@
             <graphic url="uub-gr-056_0350_266.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVIIr">
-            <desc>f. tab-XXXVIIr</desc>
-            <graphic url="uub-gr-056_0351_tab-XXXVIIr.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXXVIIr</desc>
+            <graphic url="uub-gr-056_0351_tab-XXXVIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVIIv">
-            <desc>f. tab-XXXVIIv</desc>
-            <graphic url="uub-gr-056_0352_tab-XXXVIIv.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXXVIIv</desc>
+            <graphic url="uub-gr-056_0352_tab-XXXVIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_267">
             <desc>p. 267</desc>
@@ -1648,23 +1588,19 @@
             <graphic url="uub-gr-056_0368_282.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVIIIr">
-            <desc>f. tab-XXXVIIIr</desc>
-            <graphic url="uub-gr-056_0369_tab-XXXVIIIr.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXXVIIIr</desc>
+            <graphic url="uub-gr-056_0369_tab-XXXVIIIr.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-XXXVIIIv">
-            <desc>f. tab-XXXVIIIv</desc>
-            <graphic url="uub-gr-056_0370_tab-XXXVIIIv.tif"
-                  height="8956px"
-                  width="6708px"/>
+            <desc>tab. XXXVIIIv</desc>
+            <graphic url="uub-gr-056_0370_tab-XXXVIIIv.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L1a">
-            <desc>f. </desc>
+            <desc>p. Ia</desc>
             <graphic url="uub-gr-056_0371_L001a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L2a">
-            <desc>f. </desc>
+            <desc>p. IIa</desc>
             <graphic url="uub-gr-056_0372_L002a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_1a">
@@ -1732,11 +1668,11 @@
             <graphic url="uub-gr-056_0388_016a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Iar">
-            <desc>f. tab-Iar</desc>
+            <desc>tab. Iar</desc>
             <graphic url="uub-gr-056_0389_tab-Iar.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Iav">
-            <desc>f. tab-Iav</desc>
+            <desc>tab. Iav</desc>
             <graphic url="uub-gr-056_0390_tab-Iav.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_17a">
@@ -1780,11 +1716,11 @@
             <graphic url="uub-gr-056_0400_026a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIar">
-            <desc>f. tab-IIar</desc>
+            <desc>tab. IIar</desc>
             <graphic url="uub-gr-056_0401_tab-IIar.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIav">
-            <desc>f. tab-IIav</desc>
+            <desc>tab. IIav</desc>
             <graphic url="uub-gr-056_0402_tab-IIav.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_27a">
@@ -1836,11 +1772,11 @@
             <graphic url="uub-gr-056_0414_038a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIIar">
-            <desc>f. tab-IIIar</desc>
+            <desc>tab. IIIar</desc>
             <graphic url="uub-gr-056_0415_tab-IIIar.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IIIav">
-            <desc>f. tab-IIIav</desc>
+            <desc>tab. IIIav</desc>
             <graphic url="uub-gr-056_0416_tab-IIIav.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_39a">
@@ -1884,11 +1820,11 @@
             <graphic url="uub-gr-056_0426_048a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IVar">
-            <desc>f. tab-IVar</desc>
+            <desc>tab. IVar</desc>
             <graphic url="uub-gr-056_0427_tab-IVar.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-IVav">
-            <desc>f. tab-IVav</desc>
+            <desc>tab. IVav</desc>
             <graphic url="uub-gr-056_0428_tab-IVav.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_49a">
@@ -1932,11 +1868,11 @@
             <graphic url="uub-gr-056_0438_058a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Var">
-            <desc>f. tab-Var</desc>
+            <desc>tab. Var</desc>
             <graphic url="uub-gr-056_0439_tab-Var.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-Vav">
-            <desc>f. tab-Vav</desc>
+            <desc>tab. Vav</desc>
             <graphic url="uub-gr-056_0440_tab-Vav.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_59a">
@@ -1964,23 +1900,23 @@
             <graphic url="uub-gr-056_0446_064a.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIar">
-            <desc>f. tab-VIar</desc>
+            <desc>tab. VIar</desc>
             <graphic url="uub-gr-056_0447_tab-VIar.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_tab-VIav">
-            <desc>f. tab-VIav</desc>
+            <desc>tab. VIav</desc>
             <graphic url="uub-gr-056_0448_tab-VIav.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L1b">
-            <desc>f. </desc>
+            <desc>p. Ib</desc>
             <graphic url="uub-gr-056_0449_L001b.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L2b">
-            <desc>f. </desc>
+            <desc>p. IIb</desc>
             <graphic url="uub-gr-056_0450_L002b.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L3b">
-            <desc>f. </desc>
+            <desc>p. IIIb</desc>
             <graphic url="uub-gr-056_0451_L003b.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L4b">
@@ -2216,7 +2152,7 @@
             <graphic url="uub-gr-056_0509_L061b.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_L62b">
-            <desc>f. </desc>
+            <desc>p. LXII</desc>
             <graphic url="uub-gr-056_0510_L062b.tif" height="8956px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100058_RCI">
@@ -2232,5 +2168,4 @@
             <graphic url="uub-gr-056_0000_QPcard.tif" height="8956px" width="6708px"/>
         </surface>
     </facsimile>
-
 </TEI>

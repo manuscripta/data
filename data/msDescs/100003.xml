@@ -5,22 +5,21 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 3</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100057">
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
+                </respStmt>
+                <respStmt xml:id="person-100143">
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -31,7 +30,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -53,6 +52,16 @@
                                 <foliation/>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <binding>
+                                <p>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="300" unit="mm"/>
+                                        <width quantity="220" unit="mm"/>                                        
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history/>
                     <additional>
@@ -60,6 +69,9 @@
                             <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100083">Graux (1889)</title>
                                 <citedRange from="30" to="30" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>                                
                             </bibl>
                         </listBibl>
                     </additional>
@@ -69,7 +81,6 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="grc"/>
-                            <!--Contents-->
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -79,8 +90,8 @@
                                             <locus from="1r" to="70v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
+                                                <height quantity="295" unit="mm"/>
+                                                <width quantity="210" unit="mm"/>
                                             </dimensions>
                                         </p>
                                     </support>
@@ -93,7 +104,7 @@
                         </physDesc>
                         <history>
                             <origin>
-                                <origDate>17th c.</origDate>
+                                <origDate notBefore="1604" notAfter="1606">ca 1604–6</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -102,8 +113,7 @@
                             <idno type="codicologicalUnit">2</idno>
                         </msIdentifier>
                         <msContents>
-                            <textLang mainLang="grc"/>
-                            <msItem/>
+                            <textLang mainLang="la"/>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -113,8 +123,8 @@
                                             <locus from="71r" to="128v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
+                                                <height quantity="295" unit="mm"/>
+                                                <width quantity="210" unit="mm"/>
                                             </dimensions>
                                         </p>
                                     </support>
@@ -127,7 +137,7 @@
                         </physDesc>
                         <history>
                             <origin>
-                                <origDate notBefore="1604" notAfter="1606">1604–6</origDate>
+                                <origDate notBefore="1604" notAfter="1606">ca 1604–6</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -135,7 +145,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-07" who="#PG">First draft</change>
+            <change status="draft" when="2019-01-14" who="#person-100380">Added leaf dimensions and origDate</change>
+            <change status="draft" when="2016-03-07" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -155,11 +166,11 @@
             <graphic url="uub-gr-003_0002_LCI.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-003_0003_SL001r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-003_0004_SL001v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_1r">
@@ -1139,59 +1150,59 @@
             <graphic url="uub-gr-003_0248_122v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S123r">
-            <desc>&lt;f. 123r&gt;</desc>
+            <desc>&#10216;f. 123r&#10217;</desc>
             <graphic url="uub-gr-003_0249_S123r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S123v">
-            <desc>&lt;f. 123v&gt;</desc>
+            <desc>&#10216;f. 123v&#10217;</desc>
             <graphic url="uub-gr-003_0250_S123v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S124r">
-            <desc>&lt;f. 124r&gt;</desc>
+            <desc>&#10216;f. 124r&#10217;</desc>
             <graphic url="uub-gr-003_0251_S124r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S124v">
-            <desc>&lt;f. 124v&gt;</desc>
+            <desc>&#10216;f. 124v&#10217;</desc>
             <graphic url="uub-gr-003_0252_S124v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S125r">
-            <desc>&lt;f. 125r&gt;</desc>
+            <desc>&#10216;f. 125r&#10217;</desc>
             <graphic url="uub-gr-003_0253_S125r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S125v">
-            <desc>&lt;f. 125v&gt;</desc>
+            <desc>&#10216;f. 125v&#10217;</desc>
             <graphic url="uub-gr-003_0254_S125v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S126r">
-            <desc>&lt;f. 126r&gt;</desc>
+            <desc>&#10216;f. 126r&#10217;</desc>
             <graphic url="uub-gr-003_0255_S126r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S126v">
-            <desc>&lt;f. 126v&gt;</desc>
+            <desc>&#10216;f. 126v&#10217;</desc>
             <graphic url="uub-gr-003_0256_S126v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S127r">
-            <desc>&lt;f. 127r&gt;</desc>
+            <desc>&#10216;f. 127r&#10217;</desc>
             <graphic url="uub-gr-003_0257_S127r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S127v">
-            <desc>&lt;f. 127v&gt;</desc>
+            <desc>&#10216;f. 127v&#10217;</desc>
             <graphic url="uub-gr-003_0258_S127v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S128r">
-            <desc>&lt;f. 128r&gt;</desc>
+            <desc>&#10216;f. 128r&#10217;</desc>
             <graphic url="uub-gr-003_0259_S128r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_S128v">
-            <desc>&lt;f. 128v&gt;</desc>
+            <desc>&#10216;f. 128v&#10217;</desc>
             <graphic url="uub-gr-003_0260_S128v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-003_0261_SR001r.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-003_0262_SR001v.tif" height="5440px" width="4080px"/>
         </surface>
         <surface xml:id="ms-100003_RCI">

@@ -5,18 +5,18 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 14</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100143">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -27,7 +27,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100143">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -43,7 +43,7 @@
                     </msIdentifier>
                     <head>Aristides and Lucian, Rhetorical texts</head>
                     <physDesc>
-                        <objectDesc>
+                        <objectDesc form="codex">
                             <supportDesc>
                                 <support>
                                     <p>
@@ -91,6 +91,12 @@
                         <bindingDesc>
                             <binding>
                                 <p>Greek-style binding, bound in wooden boards cut flush with the textblock. The boards have grooves at all edges. Unsupported sewing on five sewing stations. Reddish-brown goatskin cover, blind-tooled with frames and vegetal borders. Holes after two straps and pins at foredge. Another single hole in the left cover. Compound endbands with secondary sewing in green, red and white silk. A movable string marker of linen thread attached to the headband. Modern endleaves.</p>
+                                <p>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="200" unit="mm"/>
+                                        <width quantity="150" unit="mm"/>
+                                    </dimensions>
+                                </p>
                                 <condition>Rebound. In this process, the bookblock was restored extensively. Each leaf was given a new guard and sometimes also new margins, but many leaves had apparently gone missing prior to that radical rescue operation. Most often it is the outer double-leaf in the quire that has been lost.</condition>
                             </binding>
                         </bindingDesc>
@@ -128,6 +134,9 @@
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100135">Lenz (1976)</title>
                                 <citedRange from="LVIII" to="LIX" unit="page"/>
                             </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>                                
+                            </bibl>
                         </listBibl>
                     </additional>
                     <msPart>
@@ -147,9 +156,7 @@
                                     <author>
                                         <persName ref="https://www.manuscripta.se/person/100427">Sopater Atheniensis</persName>
                                     </author>
-                                    <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11735/"
-                                  type="uniform"
-                                  xml:lang="la">Prolegomena in Aristidem</title>
+                                    <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11735/" type="uniform" xml:lang="la">Prolegomena in Aristidem</title>
                                     <rubric>none</rubric>
                                     <incipit defective="false" xml:lang="grc">Παναθηναϊκὸς Ἀριστείδου συμβαίνουσαν</incipit>
                                     <explicit defective="false" xml:lang="grc">τῆς λέξεως ἐπεξιόντες παρατηρήσομεν</explicit>
@@ -183,10 +190,7 @@
                                     <author>
                                         <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                     </author>
-                                    <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11335/"
-                                  key="TLG0284.013"
-                                  type="uniform"
-                                  xml:lang="la">Panathenaica</title>
+                                    <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11335/" key="TLG0284.013" type="uniform" xml:lang="la">Panathenaica</title>
                                     <rubric xml:lang="grc">
                                         <supplied reason="omitted" xml:lang="grc">Ἀ</supplied>ριστείδου τοῦ ῥήτορος Παναθηναϊκός</rubric>
                                     <explicit defective="true" xml:lang="grc">τοῖς ὅπλοις τῇ δ’ ἐπιεικείᾳ</explicit>
@@ -240,9 +244,6 @@
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <handNote/>
-                            </handDesc>
                             <decoDesc>
                                 <p>Headpiece in brown ink on <locus from="1r" to="1r" scheme="folios"/> and a couple of larger initials on <locus from="2v" to="2v" scheme="folios"/> – unskillfully executed later additions.</p>
                             </decoDesc>
@@ -263,10 +264,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11333/"
-                               key="TLG0284.021"
-                               type="uniform"
-                               xml:lang="la">Palinodia de Smyrna</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11333/" key="TLG0284.021" type="uniform" xml:lang="la">Palinodia de Smyrna</title>
                                 <rubric xml:lang="grc">Ἐπιστολὴ Σμύρνης καὶ πρὸς τὸν αὐτοκράτορα· Ἀριστείδου Παλινῳδία ἐπὶ Σμύρνῃ καὶ τῷ ταύτης ἀνοικισμῷ</rubric>
                                 <note>Although split up, these three leaves actually contain the complete text. In addition to the Smyrnaea Politica, which follows directly below, yet another work by Aristides on Smyrna (De Smyrna epistula ad imperatores) is found on <locus from="177r" to="178r" scheme="folios"/>; those two texts would have preceded the Palinodia before the leaves in the codex were disarranged.</note>
                                 <listBibl>
@@ -286,10 +284,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12597/"
-                               key="TLG0284.015"
-                               type="uniform"
-                               xml:lang="la">Smyrnaea Politica</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12597/" key="TLG0284.015" type="uniform" xml:lang="la">Smyrnaea Politica</title>
                                 <rubric xml:lang="grc">Παλινῳδία· Σμύρνης ἐγκώμιον ἢ προσφωνητικός</rubric>
                                 <explicit xml:lang="grc" defective="true">ὀφθέντες ὑπ’ αὐτῶν κατιόντων, οὐ</explicit>
                                 <note>Where the texts breaks off, the manuscript probably lacks two leaves (those would have fitted the rest of this speech and the first few lines of Cyzicena Panegyrica.</note>
@@ -310,10 +305,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1923/"
-                               key="TLG0284.016"
-                               type="uniform"
-                               xml:lang="la">Cyzicena Panegyrica</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1923/" key="TLG0284.016" type="uniform" xml:lang="la">Cyzicena Panegyrica</title>
                                 <rubric>none</rubric>
                                 <incipit xml:lang="grc" defective="true">ἔφη Πίνδαρος, θεοῦ δείξαντος</incipit>
                                 <note>The manuscript lacks some eight to ten lines at the beginning of the speech.</note>
@@ -334,10 +326,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/7462/"
-                               key="TLG0284.010"
-                               type="uniform"
-                               xml:lang="la">In Apellam</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/7462/" key="TLG0284.010" type="uniform" xml:lang="la">In Apellam</title>
                                 <msItem class="schol">
                                     <locus from="32r:29" to="32v:6" scheme="folios"/>
                                     <rubric xml:lang="grc">Π<supplied reason="omitted" xml:lang="grc">ρο</supplied>θεω<supplied reason="omitted" xml:lang="grc">ρία</supplied>
@@ -370,10 +359,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11675/"
-                               key="TLG0284.032"
-                               type="uniform"
-                               xml:lang="la">Pro pace Atheniensibus concedenda</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11675/" key="TLG0284.032" type="uniform" xml:lang="la">Pro pace Atheniensibus concedenda</title>
                                 <rubric xml:lang="grc">Ὑπὲρ τῆς πρὸς Ἀθηναίους εἰρήνης</rubric>
                                 <explicit defective="true" xml:lang="grc">ἠράμεθα, οὔθ’ ὡς λείαν ἡμῶν</explicit>
                                 <note>The text opens with a scholion: <quote xml:lang="grc">Πλεῖστα ἐν ὀλίγοις ἔχει ὁ λόγος καὶ τὰ πάθη λανθάνοντα καὶ πρέποντα ἀνδρὶ Σπαρτιάτῃ καὶ ὡς ἂν μάλιστ’ ἤνυσεν</quote>. Due to the loss of leaves, only the first twelve lines of this text are preserved.</note>
@@ -394,10 +380,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3955/"
-                               key="TLG0284.034"
-                               type="uniform"
-                               xml:lang="la">De societate ad Thebaios 1</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3955/" key="TLG0284.034" type="uniform" xml:lang="la">De societate ad Thebaios 1</title>
                                 <rubric>none</rubric>
                                 <incipit defective="true" xml:lang="grc">ἀντιθέντες κρίνετε καὶ ἐρωτᾶτε</incipit>
                                 <note>The beginning of this text is missing, the amount of text probably equalling one leaf.</note>
@@ -418,10 +401,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4563/"
-                               key="TLG0284.004"
-                               type="uniform"
-                               xml:lang="la">Dionysus</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4563/" key="TLG0284.004" type="uniform" xml:lang="la">Dionysus</title>
                                 <rubric xml:lang="grc">Διόνυσος</rubric>
                                 <explicit defective="true" xml:lang="grc">θεούς τε καὶ ἀνθρώπους· οὔτε</explicit>
                                 <note>Due to the loss of leaves, only the first twelve lines of this text are preserved.</note>
@@ -442,10 +422,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/47/"
-                               key="TLG0284.018"
-                               type="uniform"
-                               xml:lang="la">Ad Aesculapii puteum</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/47/" key="TLG0284.018" type="uniform" xml:lang="la">Ad Aesculapii puteum</title>
                                 <incipit defective="true" xml:lang="grc">καὶ ἀνθρώποις καὶ πίνειν</incipit>
                                 <note>Only the last few lines of this text are preserved.</note>
                                 <listBibl>
@@ -465,10 +442,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/46/"
-                               key="TLG0284.052"
-                               type="uniform"
-                               xml:lang="la">Ad Achillem</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/46/" key="TLG0284.052" type="uniform" xml:lang="la">Ad Achillem</title>
                                 <rubric xml:lang="grc">Πρεσβευτικὴ πρὸς τὸν Ἀχιλλέα</rubric>
                                 <listBibl>
                                     <bibl>
@@ -487,10 +461,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/80/"
-                               key="TLG0284.047"
-                               type="uniform"
-                               xml:lang="la">Ad Capitonem</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/80/" key="TLG0284.047" type="uniform" xml:lang="la">Ad Capitonem</title>
                                 <rubric xml:lang="grc">Ἀριστείδου πρὸς Καπίτωνα</rubric>
                                 <explicit defective="true" xml:lang="grc">δημιουργὸς, ὃν δὴ μιμητὴν</explicit>
                                 <note>The loss of text at the end equals about two and a half manuscript pages.</note>
@@ -511,9 +482,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11680/"
-                               type="uniform"
-                               xml:lang="la">Pro Quattuor viris</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11680/" type="uniform" xml:lang="la">Pro Quattuor viris</title>
                                 <msItem class="hypoth">
                                     <locus scheme="folios" from="47r" to="47v:24"/>
                                     <title type="desc" xml:lang="la">Pro Quattuor viris: Hypothesis 2</title>
@@ -612,9 +581,6 @@
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <handNote/>
-                            </handDesc>
                             <decoDesc>
                                 <p>Rubricated titles and some red initials, mostly plain. Only a couple of flourished initials; see e.g. <locusGrp>
                                         <locus from="47v" to="44r" scheme="folios"/>
@@ -623,7 +589,6 @@
                             </decoDesc>
                         </physDesc>
                     </msPart>
-
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">3</idno>
@@ -638,10 +603,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1780/"
-                               key="TLG0284.051"
-                               type="uniform"
-                               xml:lang="la">Contra incriminantes quod non declamaret</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1780/" key="TLG0284.051" type="uniform" xml:lang="la">Contra incriminantes quod non declamaret</title>
                                 <rubric xml:lang="grc">Πρὸς τοὺς αἰτιωμένους ὅτι μὴ μελετῴη</rubric>
                                 <listBibl>
                                     <bibl>
@@ -660,10 +622,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3298/"
-                               key="TLG0284.040"
-                               type="uniform"
-                               xml:lang="la">De non agendis comoediis</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3298/" key="TLG0284.040" type="uniform" xml:lang="la">De non agendis comoediis</title>
                                 <rubric xml:lang="grc">Περὶ τοῦ μὴ δεῖν κωμῳδεῖν</rubric>
                                 <listBibl>
                                     <bibl>
@@ -686,10 +645,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/8396/"
-                               key="TLG0284.050"
-                               type="uniform"
-                               xml:lang="la">In proditores mysteriorum</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/8396/" key="TLG0284.050" type="uniform" xml:lang="la">In proditores mysteriorum</title>
                                 <rubric xml:lang="grc">Ἀριστείδου Κατὰ τῶν ἐξορχουμένων</rubric>
                                 <finalRubric xml:lang="grc">Ἀριστείδου κατὰ τῶν ἐξορχουμένων κοινῶς Ἀσίας ἐν Σμύρνη ἐθαυμάσθη δὲ ὑπεράπαντας</finalRubric>
                                 <note>In the margin of <locus from="125r" to="125r" scheme="folios"/> a scholion on three kinds of <foreign xml:lang="grc">ἀμαθία</foreign>, not found in Dindorf’s edition; on <locus from="136r" to="136r" scheme="folios"/> another one to the lemma <foreign xml:lang="grc">μάσθλης</foreign>.</note>
@@ -739,9 +695,6 @@
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <handNote/>
-                            </handDesc>
                             <decoDesc>
                                 <p>Titles partly in red ink, partly in black. Simple ornaments in red or black accompanying rubrics and some initials (see e.g. <locus from="131v" to="131v" scheme="folios"/>).</p>
                             </decoDesc>
@@ -759,10 +712,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/842/"
-                               key="TLG0062.013"
-                               type="uniform"
-                               xml:lang="la">Calumniae non temere credendum</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/842/" key="TLG0062.013" type="uniform" xml:lang="la">Calumniae non temere credendum</title>
                                 <rubric xml:lang="grc">Λουκιανοῦ Περὶ διαβολῆς</rubric>
                                 <note>With scholia.</note>
                                 <bibl>
@@ -776,10 +726,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1188/"
-                               key="TLG0062.016"
-                               type="uniform"
-                               xml:lang="la">Cataplus</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/1188/" key="TLG0062.016" type="uniform" xml:lang="la">Cataplus</title>
                                 <rubric xml:lang="grc">Λουκιανοῦ Κατάπλους ἢ Τύραννος· Τὰ πρόσωπα εἰσὶ Χάρων καὶ Κλωθώ</rubric>
                                 <explicit defective="true" xml:lang="grc">χρησάμενος τῷ φαρμάκῳ· ἀλλ’ ἄπιθι</explicit>
                                 <note>The manuscript text lacks paragraphs 25–28, approximately what would have been accomodated on one leaf.</note>
@@ -797,10 +744,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6691/"
-                               key="TLG0062.019"
-                               type="uniform"
-                               xml:lang="la">Gallus</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6691/" key="TLG0062.019" type="uniform" xml:lang="la">Gallus</title>
                                 <rubric>none</rubric>
                                 <incipit defective="true" xml:lang="grc">ῥαψῳδῶν οὐχ ὥσπερ ἐγὼ νῦν</incipit>
                                 <explicit defective="true" xml:lang="grc">δακτύλους κατεσκληκότα, ὃν</explicit>
@@ -816,10 +760,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11775/"
-                               key="TLG0062.020"
-                               type="uniform"
-                               xml:lang="la">Prometheus</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11775/" key="TLG0062.020" type="uniform" xml:lang="la">Prometheus</title>
                                 <rubric>none</rubric>
                                 <incipit defective="true" xml:lang="grc">
                                     <sic xml:lang="grc">δίδω</sic> καὶ ἐλάττω ποιῶ</incipit>
@@ -835,10 +776,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/7379/"
-                               key="TLG0062.021"
-                               type="uniform"
-                               xml:lang="la">Icaromenippus</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/7379/" key="TLG0062.021" type="uniform" xml:lang="la">Icaromenippus</title>
                                 <rubric xml:lang="grc">Ἰκαρομένιππος ἢ Ὑπερνέφελος. Τὰ πρόσωπα Μένιππος καὶ Ἑταῖρος.</rubric>
                                 <explicit defective="true" xml:lang="grc">ἰταμώτατος καὶ πρὸς τὰς</explicit>
                                 <note>Incomplete due to the loss of leaves; paragraphs 1–30 remain.</note>
@@ -853,10 +791,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/13027/"
-                               key="TLG0062.022"
-                               type="uniform"
-                               xml:lang="la">Timon</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/13027/" key="TLG0062.022" type="uniform" xml:lang="la">Timon</title>
                                 <rubric>none</rubric>
                                 <incipit defective="true" xml:lang="grc">αὐτὴν ἐσθίουσαν τῶν κριθῶν</incipit>
                                 <note>
@@ -881,10 +816,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/340/"
-                               key="TLG0062.028"
-                               type="uniform"
-                               xml:lang="la">Adversus indoctum et libros multos ementem</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/340/" key="TLG0062.028" type="uniform" xml:lang="la">Adversus indoctum et libros multos ementem</title>
                                 <incipit defective="true" xml:lang="grc">καὶ τοῦτο. κατὰ ταὐτὰ δὴ καὶ ὁ κυβερνᾶν</incipit>
                                 <note>The manuscript text picks up in the middle of paragraph 5.</note>
                                 <bibl>
@@ -898,10 +830,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11455/"
-                               key="TLG0062.001"
-                               type="uniform"
-                               xml:lang="la">Phalaris I</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11455/" key="TLG0062.001" type="uniform" xml:lang="la">Phalaris I</title>
                                 <rubric xml:lang="grc">Φάλαρις πρῶτος</rubric>
                                 <bibl>
                                     <title type="short" ref="https://www.manuscripta.se/bibl/100158">MacLeod (1972–1987)</title>
@@ -914,10 +843,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/785/"
-                               key="TLG0062.003"
-                               type="uniform"
-                               xml:lang="la">Bacchus</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/785/" key="TLG0062.003" type="uniform" xml:lang="la">Bacchus</title>
                                 <rubric xml:lang="grc">Προλαλιὰ ὁ Διόνυσος</rubric>
                                 <explicit defective="true" xml:lang="grc">οἱ ἄνδρες δὲ τῆς Πανικῆς, τῆς δὲ τοῦ</explicit>
                                 <note>The text breaks off at the last line of paragraph 6 (paragraphs 7–8 missing).</note>
@@ -932,10 +858,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11421/"
-                               key="TLG0062.010"
-                               type="uniform"
-                               xml:lang="la">Patriae encomium</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/11421/" key="TLG0062.010" type="uniform" xml:lang="la">Patriae encomium</title>
                                 <rubric xml:lang="grc">Πατρίδος ἐγκώμιον</rubric>
                                 <bibl>
                                     <title type="short" ref="https://www.manuscripta.se/bibl/100158">MacLeod (1972–1987)</title>
@@ -948,10 +871,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9215/"
-                               key="TLG0062.014"
-                               type="uniform"
-                               xml:lang="la">Lis consonantium</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9215/" key="TLG0062.014" type="uniform" xml:lang="la">Lis consonantium</title>
                                 <rubric xml:lang="grc">Δίκη φωνηέντων</rubric>
                                 <bibl>
                                     <title type="short" ref="https://www.manuscripta.se/bibl/100158">MacLeod (1972–1987)</title>
@@ -964,10 +884,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12604/"
-                               key="TLG0062.070"
-                               type="uniform"
-                               xml:lang="la">Soloecista</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12604/" key="TLG0062.070" type="uniform" xml:lang="la">Soloecista</title>
                                 <rubric xml:lang="grc">Ψευδοσοφιστὴς ἢ σολοικιστής</rubric>
                                 <bibl>
                                     <title type="short" ref="https://www.manuscripta.se/bibl/100158">MacLeod (1972–1987)</title>
@@ -983,10 +900,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12630/"
-                               key="TLG0062.029"
-                               type="uniform"
-                               xml:lang="la">Somnium sive vita Luciani</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/12630/" key="TLG0062.029" type="uniform" xml:lang="la">Somnium sive vita Luciani</title>
                                 <rubric xml:lang="grc">Περὶ τοῦ ἐνυπνίου ἤτοι βίος Λουκιανοῦ</rubric>
                                 <bibl>
                                     <title type="short" ref="https://www.manuscripta.se/bibl/100158">MacLeod (1972–1987)</title>
@@ -999,9 +913,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4710/"
-                               type="uniform"
-                               xml:lang="la">Eleusinia</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4710/" type="uniform" xml:lang="la">Eleusinia</title>
                                 <rubric>none</rubric>
                                 <incipit xml:lang="grc" defective="true">πολέμιοι· ὦ πάλαι τε καὶ νῦν</incipit>
                                 <finalRubric xml:lang="grc">Ἐλευσίνιος ἐγράφη ὅσον ἐν ὥρᾳ ἐν Σμύρνῃ μηνὶ ιβʹ ἐπὶ ἡγεμόνος Μακρίνου ἔτων ὄντι ΝΓʹ καὶ μηνῶν ἕξ· ἐλέχθη δὲ ἐν τῷ βουλευτηρίῳ</finalRubric>
@@ -1023,10 +935,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100001">Aelius Aristides</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3952/"
-                               key="TLG0284.041"
-                               type="uniform"
-                               xml:lang="la">De Smyrna epistula ad imperatores</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3952/" key="TLG0284.041" type="uniform" xml:lang="la">De Smyrna epistula ad imperatores</title>
                                 <rubric xml:lang="grc">Ἀριστείδου ἐπιστολὴ περὶ Σμύρνης καὶ πρὸς τοὺς βασιλεῖς τῶν Ῥωμαίων</rubric>
                                 <note>On <locus from="177r" to="177r" scheme="folios"/> a scribal note in the lower margin: <quote xml:lang="grc">τὰ ἔμπροσθεν οὐκ οἶδα πῶς θέτω, ἐνηλλαγμένα ἐτύγχανον</quote>. Note also that another text on Smyrna begins at the bottom of <locus from="178r" to="178r" scheme="folios"/>: that text is presently split up on three separate leaves in the volume and has been described above in connection with <locus from="28r" to="28r" scheme="folios"/>.</note>
                                 <listBibl>
@@ -1104,9 +1013,9 @@
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <handNote><!-- Three different scribes? Corresponding with loci for the different layouts, above. --></handNote>
-                            </handDesc>
+<!--                            <handDesc>-->
+                                <!-- Three different scribes? Corresponding with loci for the different layouts, above. -->
+                            <!--</handDesc>-->
                             <decoDesc>
                                 <p>Red titles, plain red initials, a modest headpiece on <locus from="137r" to="137r" scheme="folios"/>; marginalia sometimes in red.</p>
                             </decoDesc>
@@ -1124,10 +1033,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4488/"
-                               key="TLG0062.068"
-                               type="uniform"
-                               xml:lang="la">Dialogi deorum, N:o 15–17. 21. 25. 24. 22–23. 20. 19. 18.</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4488/" key="TLG0062.068" type="uniform" xml:lang="la">Dialogi deorum, N:o 15–17. 21. 25. 24. 22–23. 20. 19. 18.</title>
                                 <msItem class="dialog satura">
                                     <locus from="181r" to="181v" scheme="folios"/>
                                     <title type="desc">N:o 15</title>
@@ -1196,10 +1102,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4344/"
-                               key="TLG0062.032"
-                               type="uniform"
-                               xml:lang="la">Dearum judicium</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4344/" key="TLG0062.032" type="uniform" xml:lang="la">Dearum judicium</title>
                                 <rubric xml:lang="grc">Θεῶν κρίσις</rubric>
                                 <note>On <locus from="187v" to="188v" scheme="folios"/> there are several brief lacunae in the manuscript text, a couple of words missing, as though the writing area of the protograph might have been partly damaged or unreadable here.</note>
                                 <bibl>
@@ -1223,10 +1126,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4491/"
-                               key="TLG0062.066"
-                               type="uniform"
-                               xml:lang="la">Dialogi mortuorum, N:o 1–7. 19. 24–27.</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4491/" key="TLG0062.066" type="uniform" xml:lang="la">Dialogi mortuorum, N:o 1–7. 19. 24–27.</title>
                                 <rubric xml:lang="grc">Νεκρικοὶ διάλογοι</rubric>
                                 <msItem class="dialog satura">
                                     <locus from="192r" to="192v" scheme="folios"/>
@@ -1301,10 +1201,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4489/"
-                               key="TLG0062.067"
-                               type="uniform"
-                               xml:lang="la">Dialogi marini, N:o 1–6. 8–15</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4489/" key="TLG0062.067" type="uniform" xml:lang="la">Dialogi marini, N:o 1–6. 8–15</title>
                                 <msItem class="dialog satura">
                                     <locus from="201r" to="201v" scheme="folios"/>
                                     <rubric xml:lang="grc">Δωρὶς καὶ Γαλάτεια</rubric>
@@ -1385,10 +1282,7 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100306">Lucianus Samosatensis</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4418/"
-                               key="TLG0062.008"
-                               type="uniform"
-                               xml:lang="la">Demonax</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/4418/" key="TLG0062.008" type="uniform" xml:lang="la">Demonax</title>
                                 <rubric xml:lang="grc">Δημώνακτος βίος</rubric>
                                 <explicit defective="true" xml:lang="grc">ἀπὸ τούτων τοῖς ἀναγινώσκουσι λο<supplied reason="omitted" xml:lang="grc">γίζεσθαι</supplied>
                                 </explicit>
@@ -1438,10 +1332,7 @@
                                         </dimensions>
                                     </layout>
                                 </layoutDesc>
-                            </objectDesc>
-                            <handDesc>
-                                <handNote/>
-                            </handDesc>
+                            </objectDesc>                            
                             <decoDesc>
                                 <p>Titles, initials, and some marginalia in red ink.</p>
                             </decoDesc>
@@ -1451,9 +1342,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-05-07" who="#PG">Added facsimile</change>
-            <change status="draft" when="2014-06-11" who="#PG">Changes to modified ODD</change>
-            <change status="draft" when="2013-05-28" who="#EN">First draft</change>
+            <change status="draft" when="2015-05-07" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2014-06-11" who="#person-100380">Changes to modified ODD</change>
+            <change status="draft" when="2013-05-28" who="#person-100143">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1473,11 +1364,11 @@
             <graphic url="uub-gr-014_0002_LCI.tif" height="3812px" width="3330px"/>
         </surface>
         <surface xml:id="ms-100014_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-014_0003_SL001r.tif" height="4008px" width="3852px"/>
         </surface>
         <surface xml:id="ms-100014_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-014_0004_SL001v.tif" height="3823px" width="3355px"/>
         </surface>
         <surface xml:id="ms-100014_1r">
@@ -3209,11 +3100,11 @@
             <graphic url="uub-gr-014_0436_216v.tif" height="3972px" width="3906px"/>
         </surface>
         <surface xml:id="ms-100014_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-014_0437_SR001r.tif" height="3816px" width="3192px"/>
         </surface>
         <surface xml:id="ms-100014_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-014_0438_SR001v.tif" height="3942px" width="3906px"/>
         </surface>
         <surface xml:id="ms-100014_RCI">

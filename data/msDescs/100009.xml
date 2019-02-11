@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--OBS! Baserad på Rudberg-->
+<!-- OBS! Baserad på Rudberg -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" version="5.0" xml:id="ms-100009">
     <teiHeader xml:lang="en">
         <fileDesc>
             <titleStmt>
                 <title>Uppsala University Library, Gr. 9</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100057">
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -28,7 +27,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -52,10 +51,7 @@
                                             <locus from="RCI" to="RCI" scheme="other"/>
                                         </locusGrp>
                                         <material>Western paper</material>
-                                        <dimensions type="leaf">
-                                            <height quantity="240" unit="mm"/>
-                                            <width quantity="185" unit="mm"/>
-                                        </dimensions>
+                                        <dimensions type="leaf"/>
                                     </p>
                                 </support>
                                 <extent>
@@ -75,8 +71,18 @@
                                 <note>Blank endleaf</note>
                             </p>
                         </additions>
+                        <bindingDesc>
+                            <binding>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="240" unit="mm"/>
+                                        <width quantity="185" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
-                    <history> </history>
+                    <history/>
                     <additional>
                         <listBibl>
                             <bibl>
@@ -97,9 +103,7 @@
                             <textLang mainLang="grc"/>
                             <msItem class="evang relig">
                                 <locus from="5r" to="87v" scheme="folios"/>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6305/"
-                               xml:lang="la"
-                               type="uniform">Euangelium Sec. Matthaeum</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6305/" xml:lang="la" type="uniform">Euangelium Sec. Matthaeum</title>
                                 <note>
                                     <p>
                                         <locus from="1r" to="2r" scheme="folios"/> are blank. On <locus from="2r" to="2r" scheme="folios"/> a later hand has added a verse from John 1.1.</p>
@@ -112,9 +116,7 @@
                             </msItem>
                             <msItem class="evang relig">
                                 <locus from="90r" to="136r" scheme="folios"/>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6304/"
-                               xml:lang="la"
-                               type="uniform">Euangelium Sec. Marcum</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6304/" xml:lang="la" type="uniform">Euangelium Sec. Marcum</title>
                                 <note>
                                     <p>
                                         <locus from="88r" to="89r" scheme="folios"/> Index to Mark (1–48)</p>
@@ -125,9 +127,7 @@
                             </msItem>
                             <msItem class="evang relig">
                                 <locus from="140r" to="218v" scheme="folios"/>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6303/"
-                               xml:lang="la"
-                               type="uniform">Euangelium Sec. Lucam</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6303/" xml:lang="la" type="uniform">Euangelium Sec. Lucam</title>
                                 <note>
                                     <p>
                                         <locus from="136v" to="138r" scheme="folios"/> Index to Luke (1–83).</p>
@@ -140,9 +140,7 @@
                             </msItem>
                             <msItem class="evang relig">
                                 <locus from="220r" to="276v" scheme="folios"/>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6302/"
-                               xml:lang="la"
-                               type="uniform">Euangelium Sec. Iohannem</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/6302/" xml:lang="la" type="uniform">Euangelium Sec. Iohannem</title>
                                 <note>
                                     <p>
                                         <locus from="219r" to="219r" scheme="folios"/> Index to John (1–18).</p>
@@ -156,13 +154,13 @@
                             <msItem class="evang">
                                 <!--evang?-->
                                 <locus from="278r" to="281v" scheme="folios"/>
-                                <title>Synaxarion</title>
+                                <title type="desc">Synaxarion</title>
                                 <rubric xml:lang="grc">Συναξάριον σὺν Θεῷ ἁγίῳ τοῦ τετραευαγγελίου ἀρχόμενον ἀπὸ τῆς μεγάλης</rubric>
                             </msItem>
                             <msItem class="evang">
                                 <!--evang?-->
                                 <locus from="281v" to="285r" scheme="folios"/>
-                                <title>Menologion</title>
+                                <title type="desc">Menologion</title>
                                 <rubric xml:lang="grc">Ἀρχὴ σὺν Θεῷ τοῦ μηνολογίου</rubric>
                                 <note>
                                     <p>
@@ -174,7 +172,7 @@
                             <msItem class="evang">
                                 <!--evang?-->
                                 <locus from="287r" to="288v" scheme="folios"/>
-                                <title>Lectionary</title>
+                                <title type="desc">Lectionary</title>
                             </msItem>
                         </msContents>
                         <physDesc>
@@ -184,15 +182,12 @@
                                         <p>
                                             <locus from="1r" to="288v" scheme="folios"/>
                                             <material>Parchment</material>
-                                            <dimensions type="leaf">
-                                                <height quantity="240" unit="mm"/>
-                                                <width quantity="185" unit="mm"/>
-                                            </dimensions>
+                                            <dimensions type="leaf"/>
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="289"/>
-                                        <!--288 ifall f. 285A inte ska inkluderas-->
+                                        <measure type="textblockLeaves" quantity="288"/>
+                                        <!-- 289 in case f. 285A is included -->
                                     </extent>
                                     <foliation/>
                                 </supportDesc>
@@ -208,7 +203,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-06-08" who="#PG">First draft</change>
+            <change status="draft" when="2015-06-08" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -228,11 +223,11 @@
             <graphic url="uub-gr-009_0002_LCI.tif" height="3546px" width="3156px"/>
         </surface>
         <surface xml:id="ms-100009_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-009_0003_SL001r.tif" height="3768px" width="3348px"/>
         </surface>
         <surface xml:id="ms-100009_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-009_0004_SL001v.tif" height="3576px" width="3174px"/>
         </surface>
         <surface xml:id="ms-100009_1r">
@@ -2548,11 +2543,11 @@
             <graphic url="uub-gr-009_0582_288v.tif" height="3696px" width="3300px"/>
         </surface>
         <surface xml:id="ms-100009_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-009_0583_SR001r.tif" height="3684px" width="3264px"/>
         </surface>
         <surface xml:id="ms-100009_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-009_0584_SR001v.tif" height="3678px" width="3396px"/>
         </surface>
         <surface xml:id="ms-100009_RCI">

@@ -5,18 +5,13 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 27</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -27,7 +22,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -141,16 +136,12 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="grc"/>
-                            <msItem class="nat_hist paradox" defective="false">
+                            <msItem class="natHist paradox" defective="false">
                                 <locus from="1r" to="119r" scheme="folios"/>
                                 <author>
-                                    <persName ref="https://www.manuscripta.se/person/100089"
-                                     evidence="external"
-                                     cert="high">Claudius Aelianus</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100089" evidence="external" cert="high">Claudius Aelianus</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3267/"
-                               type="uniform"
-                               xml:lang="la">De natura animalium libri XVII</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/3267/" type="uniform" xml:lang="la">De natura animalium libri XVII</title>
                                 <rubric>None</rubric>
                                 <note>
                                     <list type="toc">
@@ -341,7 +332,7 @@
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1" to="S120" scheme="folios"/>
+                                            <locus from="1r" to="S120v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="230" unit="mm"/>
@@ -544,10 +535,7 @@
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <locus from="1r" to="119r" scheme="folios"/> Written in a <term type="script">minuscule script</term>, most likely by <persName ref="https://www.manuscripta.se/person/100346"
-                                     role="scribe"
-                                     cert="high"
-                                     evidence="internal">Michael Souliardos</persName> based on subscription <locus from="119r" to="119r" scheme="folios"/>. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out. </handNote>
+                                    <locus from="1r" to="119r" scheme="folios"/> Written in a <term type="script">minuscule script</term>, most likely by <persName ref="https://www.manuscripta.se/person/100346" role="scribe" cert="high" evidence="internal">Michael Souliardos</persName> based on subscription <locus from="119r" to="119r" scheme="folios"/>. Numerous <foreign xml:lang="grc">σημείωσαι</foreign> and <foreign xml:lang="grc">ὡραῖον</foreign> references in the margins, sometimes partly cut out. </handNote>
                                 <handNote xml:id="hand-2">
                                     <locusGrp>
                                         <locus from="1r" to="1r" scheme="folios"/>
@@ -581,9 +569,7 @@
                             </handDesc>
                         </physDesc>
                         <history>
-                            <origin>Written by <persName ref="https://www.manuscripta.se/person/100346"
-                                  role="scribe"
-                                  evidence="internal">Michael Souliardos</persName> in <origPlace>
+                            <origin>Written by <persName ref="https://www.manuscripta.se/person/100346" role="scribe" evidence="internal">Michael Souliardos</persName> in <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100009">Bologna</placeName>
                                 </origPlace>, probably in the <origDate notBefore="1490" notAfter="1499">1490s</origDate>, cf. subscription on <locus from="119r" to="119r" scheme="folios"/>.</origin>
                         </history>
@@ -592,9 +578,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-01-09" who="#PG">Added facsimile</change>
-            <change status="draft" when="2014-06-11" who="#PG">Changes to modified ODD</change>
-            <change status="draft" when="2013-06-26" who="#PG">First draft</change>
+            <change status="draft" when="2015-01-09" who="#person-100380">Added facsimile</change>
+            <change status="draft" when="2014-06-11" who="#person-100380">Changes to modified ODD</change>
+            <change status="draft" when="2013-06-26" who="#person-100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1566,19 +1552,19 @@
             <graphic url="uub-gr-027_0240_119v.tif" height="4008px" width="3642px"/>
         </surface>
         <surface xml:id="ms-100027_S120r">
-            <desc>&lt;f. 120r&gt;</desc>
+            <desc>&#10216;f. 120r&#10217;</desc>
             <graphic url="uub-gr-027_0241_S120r.tif" height="3912px" width="3450px"/>
         </surface>
         <surface xml:id="ms-100027_S120v">
-            <desc>&lt;f. 120v&gt;</desc>
+            <desc>&#10216;f. 120v&#10217;</desc>
             <graphic url="uub-gr-027_0242_S120v.tif" height="4002px" width="3648px"/>
         </surface>
         <surface xml:id="ms-100027_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-027_0243_SR001r.tif" height="3906px" width="3492px"/>
         </surface>
         <surface xml:id="ms-100027_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-027_0244_SR001v.tif" height="3937px" width="3775px"/>
         </surface>
         <surface xml:id="ms-100027_RCI">

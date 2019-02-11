@@ -5,21 +5,22 @@
             <titleStmt>
                 <title>Uppsala University Library, Gr. 19</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
-            <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
-                <respStmt xml:id="EN">
-               <resp key="cataloguer"/>
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
-            </respStmt>
-                <respStmt xml:id="PG">
-               <resp key="encoder"/>
-               <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-            </respStmt>
-                <respStmt xml:id="BC">
-               <resp key="cataloguer"/>
-               <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
-            </respStmt>
+                <respStmt xml:id="person-100057">
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
+                </respStmt>
+                <respStmt xml:id="person-100143">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
+                </respStmt>
+                <respStmt xml:id="person-100380">
+                    <resp key="cataloguer"/>
+                    <resp key="encoder"/>
+                    <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
@@ -30,7 +31,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc>
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057 https://www.manuscripta.se/person/100143">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
@@ -47,7 +48,7 @@
                     </msIdentifier>
                     <head>Fragments of two Metaphrastic Saints’ Lives</head>
                     <physDesc>
-                        <objectDesc>
+                        <objectDesc form="codex">
                             <supportDesc>
                                 <support>
                                     <p>
@@ -99,6 +100,12 @@
                         <bindingDesc>
                             <binding>
                                 <p>Modern half binding in brown goatskin and marbled paper. Presumably bound at <placeName ref="https://www.manuscripta.se/place/100092">Uppsala University Library</placeName> in <date from="1900" to="1920">the early twentieth century</date>, although the decorated paper used as board cover may point to an earlier date.</p>
+                                <p>
+                                    <dimensions type="binding" source="https://www.manuscripta.se/bibl/100335">
+                                        <height quantity="325" unit="mm"/>
+                                        <width quantity="250" unit="mm"/>                                        
+                                    </dimensions>
+                                </p>
                             </binding>
                         </bindingDesc>
                     </physDesc>
@@ -135,6 +142,9 @@
                                 <citedRange from="396" to="398" unit="page"/>
                             </bibl>
                             <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>                                
+                            </bibl>
+                            <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100089">Halkin (1983)</title>
                                 <citedRange from="76" to="76" unit="page"/>
                             </bibl>
@@ -145,14 +155,13 @@
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
+                            <textLang mainLang="grc"/>
                             <msItem class="hagiogr liturg">
                                 <locus from="1r" to="2v" scheme="folios"/>
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100435">Symeon Metaphrastes</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9235/"
-                               type="uniform"
-                               xml:lang="la">Liturgica</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9235/" type="uniform" xml:lang="la">Liturgica</title>
                                 <title key="BHG1028" type="desc" xml:lang="la">Menologium mensis Decembris (Vita <persName ref="https://www.manuscripta.se/person/100319">Marcellus Abbas Archimandrite of the Acoemetae</persName>, fragmentum)</title>
                                 <rubric xml:lang="grc">ιγ</rubric>
                                 <incipit xml:lang="grc" defective="true">
@@ -173,16 +182,14 @@
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100435">Symeon Metaphrastes</persName>
                                 </author>
-                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9235/"
-                               type="uniform"
-                               xml:lang="la">Liturgica</title>
+                                <title ref="http://pinakes.irht.cnrs.fr/notices/oeuvre/9235/" type="uniform" xml:lang="la">Liturgica</title>
                                 <title key="BHG1242" type="desc" xml:lang="la">Menologii mensis Decembris (Vita <persName ref="https://www.manuscripta.se/person/100336">Melania Iunior</persName>, Fragmenta)</title>
                                 <msItem class="hagiogr">
                                     <locus from="3r" to="4v" scheme="folios"/>
+                                    <title type="desc">Fragment A of <foreign xml:lang="la">Vita S. Melaniae</foreign></title>
                                     <rubric xml:lang="grc">ιδ</rubric>
                                     <incipit xml:lang="grc" defective="true">ἐπειδὴ μὴ ἤρκουν</incipit>
                                     <explicit xml:lang="grc" defective="true">ἐκείνοι φυγῇ κλέψαι τὴν</explicit>
-                                    <note>Fragment A of <foreign xml:lang="la">Vita S. Melaniae</foreign>.</note>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100169">PG</title>
                                         <citedRange from="116" to="116" unit="volume"/>
@@ -191,10 +198,10 @@
                                 </msItem>
                                 <msItem class="hagiogr">
                                     <locus from="5r" to="12v" scheme="folios"/>
+                                    <title type="desc">Fragment B of <foreign xml:lang="la">Vita S. Melaniae</foreign>.</title>
                                     <rubric xml:lang="grc">ιδ</rubric>
                                     <incipit xml:lang="grc" defective="true">ἠρεμεῖν οὐκ εἴα</incipit>
                                     <explicit xml:lang="grc" defective="true">καταλέλειπτο καί τινι τῶν πιστῶν</explicit>
-                                    <note>Fragment B of <foreign xml:lang="la">Vita S. Melaniae</foreign>.</note>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100169">PG</title>
                                         <citedRange from="116" to="116" unit="volume"/>
@@ -203,10 +210,10 @@
                                 </msItem>
                                 <msItem class="hagiogr">
                                     <locus from="13r" to="14v" scheme="folios"/>
+                                    <title type="desc">Fragment C of <foreign xml:lang="la">Vita S. Melaniae</foreign>.</title>
                                     <rubric xml:lang="grc">ιδ</rubric>
                                     <incipit xml:lang="grc" defective="true">Ποτέ τις προσῆλθε γέροντι</incipit>
                                     <explicit xml:lang="grc" defective="true">τῶν ἐπὶ τούτῳ μισθῶν</explicit>
-                                    <note>Fragment C of <foreign xml:lang="la">Vita S. Melaniae</foreign>.</note>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100169">PG</title>
                                         <citedRange from="116" to="116" unit="volume"/>
@@ -279,11 +286,11 @@
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote>
+                                <handNote xml:id="hand-1">
                                     <locus from="1r" to="14v" scheme="folios"/>
                                     <term type="script">Perlschrift</term> typical of the second half of the eleventh century, written deliberately to be easily legible and only occasionally allowing the spontaneous movement of letters such as Kappa, Lambda, Chi, so as to make the flow of script harmonious and rhythmic, rather than staid. Ornamental apices can be seen, e.g. in the Kappa acting as the last letter on <locus from="1r" to="1r" scheme="folios"/>, col. b, those of the last lines of <locus from="1v" to="1v" scheme="folios"/>, and several other last-line Kappas; in the tall Tau of the first line of <locus from="2v" to="2v" scheme="folios"/>, col. b, and the ligature Omicron-Upsilon lower down in the external margin of that same column; in the Eta whose prolongation is marked by two small crosses, on the lower right corner of <locus from="3r" to="3r" scheme="folios"/>, col. b, and similarly on the Zeta at <locus from="4v" to="4v" scheme="folios"/>, last line of col. a, and last
                                     line of col. b at <locus from="5r" to="5r" scheme="folios"/> (attached to a letter now erased). Although the ligatures are standard, note the elongated shape they take at <locus from="11v" to="11v" scheme="folios"/>, col. b, line 3. At <locus from="12v" to="12v" scheme="folios"/>, col. a, the letters added in the margin to line 12 and the erasure at line 13 seem to be scribal corrections. </handNote>
-                                <handNote>
+                                <handNote xml:id="hand-2">
                                     <locus scheme="folios" from="1r" to="14r"/> Later marginal annotations by a thirteenth-century <term type="script">minuscule</term>hand writing in dark ink. On <locus from="1r" to="1r" scheme="folios"/>, partly erased and replaced: <quote xml:lang="grc">λαφύξας· διεκροφήσ<ex xml:lang="grc">ας</ex>
                                     </quote>. Traces of the erased word seems to suggest the gloss <foreign xml:lang="grc">διασπαράξας</foreign>, which is given as synonym to <foreign xml:lang="grc">λαφύξας</foreign> in, e.g., Hesychius lexicon and in Suda. The verb <foreign xml:lang="grc"> διεκροφῆσαι</foreign> is encountered once in <persName ref="https://www.manuscripta.se/person/100349">Nicetas Choniates</persName>’ <foreign xml:lang="la">Historia</foreign> (<bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100050">Dieten (1975)</title>
@@ -298,17 +305,17 @@
                                         <citedRange from="2" to="2" unit="volume"/>
                                         <citedRange from="epsilon5968" to="epsilon5968" unit="number"/>
                                     </bibl>); <quote xml:lang="grc">λιτῶς τε καὶ ἀφελῶς· ψιλῶς τε <lb/> καὶ ἐλ<supplied xml:lang="grc" reason="illegible">ευθε</supplied>ρίως</quote>. On <locus from="13r" to="13r" scheme="folios"/>: <quote xml:lang="grc">ἐρέσθαι· ἐρωτᾶν</quote> (cf. <bibl>
-                                        <title type="short" ref=""> (–)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/100256">Tittman (1808)</title>
                                         <citedRange unit="volume" from="1" to="1"/>
                                         <citedRange unit="page" from="872" to="872"/>
                                     </bibl>); <quote xml:lang="grc">ἐμπαροινούμενον· ὑβριζόμενον</quote>. On <locus from="14r" to="14r" scheme="folios"/>: <quote xml:lang="grc">ἄστει· κοσμικῶν</quote>. </handNote>
-                                <handNote>
+                                <handNote xml:id="hand-3">
                                     <locus from="5r" to="5r" scheme="folios"/>
                                     <quote xml:lang="la">N:o 9</quote>, in brown ink in the <term>upper center margin</term>. Probably added by <persName ref="https://www.manuscripta.se/person/100382" role="librarian">Pehr Fabian Aurivillius</persName>, who made an inventory of the Björnståhl donation of manuscripts (cf. <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100061">Espling (1785)</title>
                                         <citedRange from="35" to="35" unit="page"/>
                                     </bibl>). The placing of the former shelfmark indicates that this leaf and quire was put as the first one at that time. The leaves have subsequently been rearranged to their present and more correct order. </handNote>
-                                <handNote>
+                                <handNote xml:id="hand-4">
                                     <locus from="1r" to="14v" scheme="folios"/> Frequent references to <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/100244">Surius (1571–1576)</title>
                                     </bibl> by a <term type="script">modern</term> (nineteenth-century?) hand, in pencil.</handNote>
@@ -327,7 +334,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2015-02-24" who="#EN">First draft</change>
+            <change status="draft" when="2019-01-14" who="#person-100380">Added binding dimensions</change>
+            <change status="draft" when="2015-02-24" who="#person-100143">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -347,11 +355,11 @@
             <graphic url="uub-gr-019_0002_LCI.tif" height="7565px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100019_SL1r">
-            <desc>&lt;f. Ir&gt;</desc>
+            <desc>&#10216;f. Ir&#10217;</desc>
             <graphic url="uub-gr-019_0003_SL001r.tif" height="7565px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100019_SL1v">
-            <desc>&lt;f. Iv&gt;</desc>
+            <desc>&#10216;f. Iv&#10217;</desc>
             <graphic url="uub-gr-019_0004_SL001v.tif" height="7565px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100019_1r">
@@ -467,11 +475,11 @@
             <graphic url="uub-gr-019_0032_014v.tif" height="7565px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100019_SR1r">
-            <desc>&lt;f. I´r&gt;</desc>
+            <desc>&#10216;f. I´r&#10217;</desc>
             <graphic url="uub-gr-019_0033_SR001r.tif" height="7565px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100019_SR1v">
-            <desc>&lt;f. I´v&gt;</desc>
+            <desc>&#10216;f. I´v&#10217;</desc>
             <graphic url="uub-gr-019_0034_SR001v.tif" height="7565px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100019_RCI">
