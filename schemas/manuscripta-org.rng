@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-10-04T08:00:31Z. .
+Schema generated from ODD source 2019-02-12T12:36:40Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -254,20 +254,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             <ref name="resp"/>
          </oneOrMore>
          <ref name="persName"/>
-         <attribute name="xml:id">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
-            <choice>
-               <value>BC</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Barbara Crostini</a:documentation>
-               <value>EN</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eva Nyström</a:documentation>
-               <value>PG</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Patrik Granholm</a:documentation>
-               <value>PA</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Patrik Åström</a:documentation>
-            </choice>
-         </attribute>
-         <empty/>
       </element>
    </define>
    <define name="resp">
@@ -327,6 +313,19 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
                <ref name="orgName"/>
             </choice>
          </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="manuscripta-org-desc-deprecationInfo-only-in-deprecated-constraint-rule-7">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:desc[ @type eq 'deprecationInfo']">
+	              <sch:assert test="../@validUntil">Information about a
+	deprecation should only be present in a specification element
+	that is being deprecated: that is, only an element that has a
+	@validUntil attribute should have a child &lt;desc
+	type="deprecationInfo"&gt;.</sch:assert>
+            </sch:rule>
+         </pattern>
          <ref name="att.global.attribute.xmllang"/>
          <empty/>
       </element>
@@ -343,7 +342,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <ref name="fileDesc"/>
          <ref name="revisionDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-teiHeader-greek.check-constraint-rule-7">
+                  id="manuscripta-org-teiHeader-greek.check-constraint-rule-8">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -353,7 +352,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-teiHeader-latin.check-constraint-rule-8">
+                  id="manuscripta-org-teiHeader-latin.check-constraint-rule-9">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -432,12 +431,12 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       <element name="titleStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) groups information about the title of a work and those responsible for its content. [2.2.1. The Title Statement 2.2. The File Description]</a:documentation>
          <ref name="title"/>
-         <oneOrMore>
+         <zeroOrMore>
             <ref name="sponsor"/>
-         </oneOrMore>
-         <oneOrMore>
+         </zeroOrMore>
+         <zeroOrMore>
             <ref name="funder"/>
-         </oneOrMore>
+         </zeroOrMore>
          <oneOrMore>
             <ref name="respStmt"/>
          </oneOrMore>
