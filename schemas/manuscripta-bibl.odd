@@ -28,21 +28,24 @@
             <div xml:id="schema">
                 <head>Schema for the Manuscripta bibliography files</head>
 
-                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
+<!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/F:/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <!-- Modules imported from manuscripta-master.odd -->
 
                     <moduleRef key="tei"/>
-                    <moduleRef key="core" include="date foreign publisher resp respStmt textLang"/>
+                    <moduleRef key="core" include="date foreign head publisher resp respStmt textLang"/>
                     <moduleRef key="header" include="availability change fileDesc funder licence publicationStmt revisionDesc sponsor teiHeader titleStmt"/>
+                    <moduleRef key="namesdates" include="country settlement"/>                    
                     <moduleRef key="textstructure" include="TEI text"/>
 
                     <!-- Modules for manuscripta-bibl.odd -->
 
                     <moduleRef key="core" include="analytic author biblScope biblStruct editor imprint monogr p pubPlace q series title" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
                     <moduleRef key="header" include="edition idno sourceDesc" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
+                    <moduleRef key="msdescription" include="institution msDesc msIdentifier objectDesc physDesc repository summary" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
                     <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
                     <moduleRef key="textstructure" include="body" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml"/>
 
@@ -168,7 +171,10 @@
                             <memberOf key="att.declaring" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="biblStruct" minOccurs="1" maxOccurs="1"/>
+                            <alternate minOccurs="1" maxOccurs="1">
+                                <elementRef key="biblStruct" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="msDesc" minOccurs="0" maxOccurs="1"/>
+                            </alternate>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>

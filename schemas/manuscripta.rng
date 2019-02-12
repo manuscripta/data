@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-10-01T11:26:03Z. .
+Schema generated from ODD source 2019-02-11T14:30:38Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -680,6 +680,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
       <element name="hi">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(highlighted) marks a word or phrase as graphically distinct from the surrounding text, for reasons concerning which no claim is made. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]</a:documentation>
          <text/>
+         <ref name="att.global.attribute.xmllang"/>
          <attribute name="rend">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
@@ -1303,7 +1304,8 @@ Measures]</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                                     <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
+                                        
+                                        <sch:assert test="starts-with(., 'http') or starts-with(., '#')">The target value must start with http or #</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
@@ -1311,14 +1313,6 @@ Measures]</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron">
                                     <sch:rule context="tei:bibl/tei:ref">
                                         <sch:assert test="@target">The ref element must have a target attribute</sch:assert>
-                                    </sch:rule>
-                                </sch:pattern>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-                                    
-                                    <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -1351,7 +1345,7 @@ Measures]</a:documentation>
             <ref name="item"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-list-gloss-list-must-have-labels-constraint-rule-13">
+                  id="manuscripta-org-list-gloss-list-must-have-labels-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -1400,6 +1394,15 @@ Measures]</a:documentation>
                </choice>
             </group>
          </choice>
+         <ref name="att.global.responsibility.attribute.resp"/>
+         <ref name="att.global.source.attribute.source"/>
+         <optional>
+            <attribute name="xml:id">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <empty/>
       </element>
    </define>
    <define name="note">
@@ -1458,23 +1461,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <ref name="resp"/>
          </oneOrMore>
          <ref name="persName"/>
-         <ref name="att.global.responsibility.attribute.cert"/>
-         <ref name="att.global.responsibility.attribute.resp"/>
-         <ref name="att.global.source.attribute.source"/>
-         <attribute name="xml:id">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
-            <choice>
-               <value>BC</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Barbara Crostini</a:documentation>
-               <value>EN</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eva Nyström</a:documentation>
-               <value>PG</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Patrik Granholm</a:documentation>
-               <value>PA</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Patrik Åström</a:documentation>
-            </choice>
-         </attribute>
-         <empty/>
       </element>
    </define>
    <define name="resp">
@@ -1499,12 +1485,13 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
+               <ref name="foreign"/>
                <ref name="supplied"/>
                <ref name="persName"/>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-title-msItem.title.key.check-constraint-rule-14">
+                  id="manuscripta-org-title-msItem.title.key.check-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -1515,7 +1502,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-title-msItem.title.type.check-constraint-rule-15">
+                  id="manuscripta-org-title-msItem.title.type.check-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -1527,7 +1514,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <ref name="att.typed.attribute.subtype"/>
-         <ref name="att.datable.attributes"/>
          <optional>
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
@@ -1622,27 +1608,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <zeroOrMore>
             <ref name="citedRange"/>
          </zeroOrMore>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-bibl-bibl.check-constraint-rule-16">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:bibl/tei:title">
-                                    <sch:let name="bibl-ref" value="substring-after(@ref, 'bibl/')"/>
-                                    <sch:let name="short-title"
-                        value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:title[@type = 'short']"/>
-                                    <sch:let name="first-author-surname"
-                        value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[1][not(@role = 'origAuth')]/tei:persName/tei:surname"/>
-                                    <sch:let name="author-surname"
-                        value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[@role = 'critEd'][1]/tei:persName/tei:surname"/>
-                                    <sch:let name="date"
-                        value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct/tei:monogr/tei:imprint/tei:date"/>
-                                    <sch:let name="year"
-                        value="if($date[@when]) then $date/@when else concat($date/@from, '–', $date/@to)"/>
-                                    <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/bibl/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/bibl/</sch:assert>
-                                    <sch:assert test="contains($short-title,.) or contains(concat($first-author-surname, ' (', $year, ')'),.) or contains(concat($author-surname, ' (', $year, ')'),.)">bibl mismatch</sch:assert>
-                                </sch:rule>
-         </pattern>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <empty/>
@@ -1745,7 +1710,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <ref name="fileDesc"/>
          <ref name="revisionDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-teiHeader-greek.check-constraint-rule-17">
+                  id="manuscripta-org-teiHeader-greek.check-constraint-rule-15">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1755,7 +1720,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-teiHeader-latin.check-constraint-rule-18">
+                  id="manuscripta-org-teiHeader-latin.check-constraint-rule-16">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1834,12 +1799,12 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <element name="titleStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title statement) groups information about the title of a work and those responsible for its content. [2.2.1. The Title Statement 2.2. The File Description]</a:documentation>
          <ref name="title"/>
-         <oneOrMore>
+         <zeroOrMore>
             <ref name="sponsor"/>
-         </oneOrMore>
-         <oneOrMore>
+         </zeroOrMore>
+         <zeroOrMore>
             <ref name="funder"/>
-         </oneOrMore>
+         </zeroOrMore>
          <oneOrMore>
             <ref name="respStmt"/>
          </oneOrMore>
@@ -1901,6 +1866,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <element name="idno">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution, Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
          <text/>
+         <ref name="att.global.attribute.xmllang"/>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">categorizes the identifier, for example as an ISBN, Social Security number, etc.</a:documentation>
             <choice>
@@ -2005,7 +1971,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-handNote-handNote.check-constraint-rule-25">
+                  id="manuscripta-org-handNote-handNote.check-constraint-rule-23">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -2015,7 +1981,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-handNote-handNote.check-constraint-rule-26">
+                  id="manuscripta-org-handNote-handNote.check-constraint-rule-24">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -2132,9 +2098,15 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <optional>
             <ref name="msContents"/>
          </optional>
-         <ref name="physDesc"/>
-         <ref name="history"/>
-         <ref name="additional"/>
+         <optional>
+            <ref name="physDesc"/>
+         </optional>
+         <optional>
+            <ref name="history"/>
+         </optional>
+         <optional>
+            <ref name="additional"/>
+         </optional>
          <oneOrMore>
             <ref name="msPart"/>
          </oneOrMore>
@@ -2204,7 +2176,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-catchwords-catchword_in_msDesc-constraint-assert-20">
+                  id="manuscripta-org-catchwords-catchword_in_msDesc-constraint-assert-17">
             <rule context="tei:catchwords">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -2268,6 +2240,8 @@ The element <name/> may appear once only
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates which aspect of the object is being measured.</a:documentation>
             <choice>
                <value>binding</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>box</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>chainLines</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -2458,7 +2432,7 @@ The element <name/> may appear once only
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a location within a manuscript or manuscript part, usually as a (possibly discontinuous) sequence of folio references. [10.3.5. References to Locations within a Manuscript]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-locus-locus.count.check-constraint-rule-31">
+                  id="manuscripta-org-locus-locus.count.check-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2467,7 +2441,7 @@ The element <name/> may appear once only
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-locus-locus.check-constraint-rule-32">
+                  id="manuscripta-org-locus-locus.check-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2481,7 +2455,7 @@ The element <name/> may appear once only
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-locus-locus.scheme.pages-constraint-rule-33">
+                  id="manuscripta-org-locus-locus.scheme.pages-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2491,7 +2465,7 @@ The element <name/> may appear once only
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-locus-locus.scheme.other-constraint-rule-34">
+                  id="manuscripta-org-locus-locus.scheme.other-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2539,7 +2513,7 @@ The element <name/> may appear once only
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a word or phrase describing the material of which the object being described is composed. [10.3.2. Material and Object Type]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-material-support.material-constraint-rule-35">
+                  id="manuscripta-org-material-support.material-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2554,28 +2528,26 @@ The element <name/> may appear once only
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(origin date) contains any form of date, used to identify the date of origin for a manuscript or manuscript part. [10.3.1. Origination]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-origDate-origDate.check-constraint-rule-36">
+                  id="manuscripta-org-origDate-origDate.check-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:origDate">
-                                    <sch:assert test="@when or (@notAfter and @notBefore)"> Either @when or @notAfter/@notBefore must be provided. </sch:assert>
+                                    <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)"> Either @when or @notAfter/@notBefore or @from/@to) must be provided. </sch:assert>
                                     <sch:report test="not(text())"> A text description for origDate must be provided</sch:report>
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-origDate-origDate.check-constraint-rule-37">
+                  id="manuscripta-org-origDate-origDate.check-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:origDate">
-                                    <sch:report test="text()='century'"> Use c. instead of century</sch:report>
+                                    <sch:report test="contains(text(),'century') or contains(text(),'cent.')"> Use c. instead of century or cent.</sch:report>
                                 </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
-         <ref name="att.datable.w3c.attribute.when"/>
-         <ref name="att.datable.w3c.attribute.notBefore"/>
-         <ref name="att.datable.w3c.attribute.notAfter"/>
+         <ref name="att.datable.attributes"/>
          <ref name="att.dimensions.attributes"/>
          <empty/>
       </element>
@@ -2583,12 +2555,9 @@ The element <name/> may appear once only
    <define name="origPlace">
       <element name="origPlace">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(origin place) contains any form of place name, used to identify the place of origin for a manuscript or manuscript part. [10.3.1. Origination]</a:documentation>
-         <group>
+         <oneOrMore>
             <ref name="placeName"/>
-            <optional>
-               <ref name="placeName"/>
-            </optional>
-         </group>
+         </oneOrMore>
          <ref name="att.global.attributes"/>
          <empty/>
       </element>
@@ -2607,7 +2576,7 @@ The element <name/> may appear once only
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-signatures-signatures_in_msDesc-constraint-assert-26">
+                  id="manuscripta-org-signatures-signatures_in_msDesc-constraint-assert-23">
             <rule context="tei:signatures">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -2644,7 +2613,7 @@ The element <name/> may appear once only
             </group>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-watermark-watermark.check-constraint-rule-38">
+                  id="manuscripta-org-watermark-watermark.check-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2687,6 +2656,9 @@ The element <name/> may appear once only
                </optional>
                <optional>
                   <ref name="repository"/>
+               </optional>
+               <optional>
+                  <ref name="collection"/>
                </optional>
                <ref name="idno"/>
             </group>
@@ -2735,6 +2707,12 @@ The element <name/> may appear once only
             </list>
          </attribute>
          <empty/>
+      </element>
+   </define>
+   <define name="collection">
+      <element name="collection">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the name of a collection of manuscripts, not necessarily located within a single repository. [10.4. The Manuscript Identifier]</a:documentation>
+         <text/>
       </element>
    </define>
    <define name="altIdentifier">
@@ -3009,9 +2987,9 @@ The element <name/> may appear once only
             <ref name="summary"/>
          </optional>
          <ref name="textLang"/>
-         <oneOrMore>
+         <zeroOrMore>
             <ref name="msItem"/>
-         </oneOrMore>
+         </zeroOrMore>
       </element>
    </define>
    <define name="msItem">
@@ -3033,7 +3011,9 @@ The element <name/> may appear once only
                   <oneOrMore>
                      <ref name="title"/>
                   </oneOrMore>
-                  <ref name="rubric"/>
+                  <optional>
+                     <ref name="rubric"/>
+                  </optional>
                   <zeroOrMore>
                      <ref name="msItem"/>
                   </zeroOrMore>
@@ -3071,7 +3051,7 @@ The element <name/> may appear once only
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-msItem-msItem.note.check-constraint-rule-40">
+                  id="manuscripta-org-msItem-msItem.note.check-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3334,7 +3314,7 @@ The element <name/> may appear once only
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-objectDesc-objectDesc.check-constraint-rule-41">
+                  id="manuscripta-org-objectDesc-objectDesc.check-constraint-rule-39">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3343,7 +3323,7 @@ The element <name/> may appear once only
                                 </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-objectDesc-objectDesc.check-constraint-rule-42">
+                  id="manuscripta-org-objectDesc-objectDesc.check-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3418,7 +3398,7 @@ The element <name/> may appear once only
             <ref name="p"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-support-support.check-constraint-rule-45">
+                  id="manuscripta-org-support-support.check-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3448,7 +3428,7 @@ The element <name/> may appear once only
             <ref name="catchwords"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-collation-signatures.catchwords.check-constraint-rule-46">
+                  id="manuscripta-org-collation-signatures.catchwords.check-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3503,6 +3483,9 @@ The element <name/> may appear once only
          <oneOrMore>
             <ref name="layout"/>
          </oneOrMore>
+         <ref name="att.global.responsibility.attribute.resp"/>
+         <ref name="att.global.source.attribute.source"/>
+         <empty/>
       </element>
    </define>
    <define name="layout">
@@ -3527,7 +3510,7 @@ The element <name/> may appear once only
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-layout-layout.proximity-constraint-rule-47">
+                  id="manuscripta-org-layout-layout.proximity-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3535,20 +3518,11 @@ The element <name/> may appear once only
                                     <sch:assert test="text()='similar to' or text()='very similar to' or text()='identical with' or text()='not clear'"> Permitted values are "similar to", "very similar to", "identical with", or "not clear".</sch:assert>
                                 </sch:rule>
          </pattern>
+         <ref name="att.global.responsibility.attribute.resp"/>
+         <ref name="att.global.source.attribute.source"/>
          <optional>
             <attribute name="columns">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the number of columns per page</a:documentation>
-               <list>
-                  <data type="nonNegativeInteger"/>
-                  <optional>
-                     <data type="nonNegativeInteger"/>
-                  </optional>
-               </list>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="streams">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(textual streams) indicates the number of streams per page, each of which contains an independent textual stream</a:documentation>
                <list>
                   <data type="nonNegativeInteger"/>
                   <optional>
@@ -3584,7 +3558,7 @@ The element <name/> may appear once only
    </define>
    <define name="handDesc">
       <element name="handDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description of hands) contains a description of all the different hands used in a manuscript. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description of hands) contains a description of all the different kinds of writing used in a manuscript. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <oneOrMore>
             <ref name="handNote"/>
          </oneOrMore>
@@ -3678,7 +3652,7 @@ The element <name/> may appear once only
             <ref name="binding"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-bindingDesc-bindingDesc.msPart.check-constraint-rule-48">
+                  id="manuscripta-org-bindingDesc-bindingDesc.msPart.check-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3706,7 +3680,7 @@ The element <name/> may appear once only
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-binding-binding.check-constraint-rule-49">
+                  id="manuscripta-org-binding-binding.check-constraint-rule-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3775,9 +3749,9 @@ The element <name/> may appear once only
                   <ref name="locus"/>
                </zeroOrMore>
                <ref name="origDate"/>
-               <optional>
+               <zeroOrMore>
                   <ref name="origPlace"/>
-               </optional>
+               </zeroOrMore>
                <zeroOrMore>
                   <ref name="persName"/>
                </zeroOrMore>
@@ -3889,25 +3863,12 @@ The element <name/> may appear once only
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-persName-evidence.cert.check-constraint-rule-50">
+                  id="manuscripta-org-persName-evidence.cert.check-constraint-rule-48">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:persName[@evidence='external' or @evidence='conjecture']">
                                     <sch:assert test="@cert"> Use the cert attribute when the evidence attribute has the value external or conjecture. </sch:assert>
-                                </sch:rule>
-         </pattern>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-persName-evidence.cert.check-constraint-rule-51">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:persName">
-                                    <sch:let name="persname-ref" value="substring-after(@ref, 'person/')"/>
-                                    <sch:let name="persname"
-                        value="doc(concat('../id/person/',$persname-ref,'.xml'))//tei:person/tei:persName/normalize-space()"/>
-                                    <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/person/')">A URI should be used in the ref attribute for persName pointing to https://www.manuscripta.se/person/</sch:assert>
-                                    <sch:assert test="contains($persname,.)">persName mismatch</sch:assert>
                                 </sch:rule>
          </pattern>
          <ref name="att.global.responsibility.attribute.resp"/>

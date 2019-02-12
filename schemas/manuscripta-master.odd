@@ -1080,8 +1080,8 @@
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="additions" module="msdescription" mode="change">                        
-                        <content>                            
+                    <elementSpec ident="additions" module="msdescription" mode="change">
+                        <content>
                             <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <attList>
@@ -1241,7 +1241,7 @@
                             <!--<elementRef key="ref" minOccurs="1" maxOccurs="1" />-->
                             <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
-                        <constraintSpec ident="bibl.check" scheme="schematron">
+                        <!--<constraintSpec ident="bibl.check" scheme="schematron">
                             <desc versionDate="2017-02-23">Check that short title in bibl matches with the authority file.</desc>
                             <constraint>
                                 <sch:rule context="tei:bibl/tei:title">
@@ -1255,7 +1255,7 @@
                                     <sch:assert test="contains($short-title,.) or contains(concat($first-author-surname, ' (', $year, ')'),.) or contains(concat($author-surname, ' (', $year, ')'),.)">bibl mismatch</sch:assert>
                                 </sch:rule>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <attList>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:lang" mode="delete"/>
@@ -1830,6 +1830,7 @@
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="binding"/>
+                                    <valItem ident="box"/>
                                     <valItem ident="chainLines"/>
                                     <valItem ident="leaf"/>
                                     <valItem ident="watermark"/>
@@ -2365,7 +2366,6 @@
 
                     <elementSpec ident="head" mode="change" module="core">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                             <memberOf key="att.placement" mode="delete"/>
                         </classes>
@@ -2381,6 +2381,14 @@
                                 </sequence>
                             </alternate>
                         </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:id" mode="change" usage="rec"/>
+                            <attDef ident="xml:lang" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <head>Aelian, On Animals</head>
@@ -2454,8 +2462,7 @@
                                 </valList>
                             </attDef>
                             <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>                            
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
@@ -2500,13 +2507,21 @@
 
                     <elementSpec ident="idno" mode="change" module="header">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attributes deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
+                            <!-- Attributes changed -->
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="codicologicalUnit">
@@ -2674,10 +2689,7 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="layout" mode="change" module="msdescription">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
+                    <elementSpec ident="layout" mode="change" module="msdescription">                        
                         <content>
                             <sequence>
                                 <alternate>
@@ -2698,6 +2710,22 @@
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
+                        <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="streams" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.rendition -->
+                            <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <layoutDesc>
@@ -2720,12 +2748,23 @@
                     </elementSpec>
 
                     <elementSpec ident="layoutDesc" mode="change" module="msdescription">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
                         <content>
                             <elementRef key="layout" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.rendition -->
+                            <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <layoutDesc>
@@ -3033,7 +3072,7 @@
                         <content>
                             <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
                             <elementRef key="textLang" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="msItem" minOccurs="1" maxOccurs="unbounded"/>
+                            <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                         <attList>
                             <attDef ident="class" mode="delete"/>
@@ -3063,12 +3102,12 @@
                             <memberOf key="att.docStatus" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="msIdentifier"/>
-                            <elementRef key="model.headLike"/>
+                            <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                            <elementRef key="model.headLike" minOccurs="1" maxOccurs="1"/>
                             <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="physDesc"/>
-                            <elementRef key="history"/>
-                            <elementRef key="additional"/>
+                            <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                            <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
                             <elementRef key="msPart" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <constraintSpec ident="folio.ref.check" scheme="schematron">
@@ -3166,7 +3205,7 @@
                                         <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
                                         <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
-                                        <elementRef key="rubric" minOccurs="1" maxOccurs="1"/>
+                                        <elementRef key="rubric" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded"/>
                                         <elementRef key="incipit" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="quote" minOccurs="0" maxOccurs="1"/>
@@ -3748,17 +3787,15 @@
                         <constraintSpec ident="origDate.check" scheme="schematron">
                             <constraint>
                                 <sch:rule context="tei:origDate">
-                                    <sch:assert test="@when or (@notAfter and @notBefore)"> Either @when or @notAfter/@notBefore must be provided. </sch:assert>
+                                    <sch:assert test="@when or (@notAfter and @notBefore) or (@from and @to)"> Either @when or @notAfter/@notBefore or @from/@to) must be provided. </sch:assert>
                                     <sch:report test="not(text())"> A text description for origDate must be provided</sch:report>
                                 </sch:rule>
                                 <sch:rule context="tei:origDate">
-                                    <sch:report test="text()='century'"> Use c. instead of century</sch:report>
+                                    <sch:report test="contains(text(),'century') or contains(text(),'cent.')"> Use c. instead of century or cent.</sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
-                        <attList>
-                            <attDef ident="from" mode="delete"/>
-                            <attDef ident="to" mode="delete"/>
+                        <attList>                            
                             <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
@@ -3777,7 +3814,7 @@
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="placeName" minOccurs="1" maxOccurs="2"/>
+                            <elementRef key="placeName" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3806,7 +3843,7 @@
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="locus" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="origDate" minOccurs="1" maxOccurs="1"/>
-                                <elementRef key="origPlace" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
@@ -3818,7 +3855,7 @@
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="p" mode="change" module="core">                        
+                    <elementSpec ident="p" mode="change" module="core">
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
@@ -3875,12 +3912,12 @@
                                 <sch:rule context="tei:persName[@evidence='external' or @evidence='conjecture']">
                                     <sch:assert test="@cert"> Use the cert attribute when the evidence attribute has the value external or conjecture. </sch:assert>
                                 </sch:rule>
-                                <sch:rule context="tei:persName">
+                                <!--<sch:rule context="tei:persName">
                                     <sch:let name="persname-ref" value="substring-after(@ref, 'person/')"/>
                                     <sch:let name="persname" value="doc(concat('../id/person/',$persname-ref,'.xml'))//tei:person/tei:persName/normalize-space()"/>
                                     <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/person/')">A URI should be used in the ref attribute for persName pointing to https://www.manuscripta.se/person/</sch:assert>
                                     <sch:assert test="contains($persname,.)">persName mismatch</sch:assert>
-                                </sch:rule>
+                                </sch:rule>-->
                             </constraint>
                         </constraintSpec>
                         <attList>
@@ -4127,7 +4164,8 @@
                             <constraint>
                                 <sch:pattern>
                                     <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
+                                        <!--<sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>-->
+                                        <sch:assert test="starts-with(., 'http') or starts-with(., '#')">The target value must start with http or #</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -4138,19 +4176,6 @@
                                 <sch:pattern>
                                     <sch:rule context="tei:bibl/tei:ref">
                                         <sch:assert test="@target">The ref element must have a target attribute</sch:assert>
-                                    </sch:rule>
-                                </sch:pattern>
-                            </constraint>
-                        </constraintSpec>
-                        <constraintSpec ident="xmlid.text.check" scheme="schematron">
-                            <desc versionDate="2015-03-17" xml:lang="en">checks that <att>xml:id</att> only contains basic latin characters and numbers.</desc>
-                            <constraint>
-                                <sch:pattern>
-                                    <!--<sch:rule context="tei:bibl/tei:ref/@target">
-                                        <sch:assert test="matches(.,'^#[A-Za-z]+\d{4}[a-z]?$')">The target attribute should only consist of #, the authors surname in basic latin characters, followed by the publication year, and optionally characters a, b, c etc.</sch:assert>
-                                    </sch:rule>-->
-                                    <sch:rule context="tei:ref/@target">
-                                        <sch:assert test="starts-with(., 'https://www.manuscripta.se')">The target value must start with https://www.manuscripta.se</sch:assert>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -4236,36 +4261,12 @@
                     <elementSpec ident="respStmt" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.canonical" mode="delete"/>
+                            <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="resp" minOccurs="1" maxOccurs="unbounded"/>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
-                        </content>
-                        <attList>
-                            <!-- Attributes changed and deleted from att.global -->
-                            <attDef ident="xml:id" mode="change" usage="req">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="BC">
-                                        <desc>Barbara Crostini</desc>
-                                    </valItem>
-                                    <valItem ident="EN">
-                                        <desc>Eva Nyström</desc>
-                                    </valItem>
-                                    <valItem ident="PG">
-                                        <desc>Patrik Granholm</desc>
-                                    </valItem>
-                                    <valItem ident="PA">
-                                        <desc>Patrik Åström</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:lang" mode="delete"/>
-                            <!-- Attributes deleted in att.global.rendition -->
-                            <attDef ident="rend" mode="delete"/>
-                            <!-- Attributes deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
-                        </attList>
+                        </content>                        
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <respStmt xml:id="EN">
@@ -5093,9 +5094,13 @@
                     </elementSpec>
 
                     <elementSpec ident="title" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.datable" mode="delete"/>
+                        </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="foreign"/>
                                 <elementRef key="supplied"/>
                                 <elementRef key="persName"/>
                             </alternate>
@@ -5161,8 +5166,8 @@
                         </classes>
                         <content>
                             <elementRef key="title" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="sponsor" minOccurs="1" maxOccurs="unbounded"/>
-                            <elementRef key="funder" minOccurs="1" maxOccurs="unbounded"/>
+                            <elementRef key="sponsor" minOccurs="0" maxOccurs="unbounded"/>
+                            <elementRef key="funder" minOccurs="0" maxOccurs="unbounded"/>
                             <elementRef key="respStmt" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <exemplum>
@@ -5693,7 +5698,7 @@
                     <classSpec ident="att.translatable" module="tei" type="atts" mode="delete"/>
 
                     <classSpec ident="att.written" module="tei" type="atts" mode="delete"/>
-                    
+
                 </schemaSpec>
             </div>
         </back>
