@@ -1,6 +1,6 @@
 {
     "@context": "http://iiif.io/api/presentation/2/context.json",
-    "@id": "https://www.manuscripta.se/iiif/100048/manifest",
+    "@id": "https://www.manuscripta.se/iiif/100048/manifest.json",
     "@type": "sc:Manifest",
     "label": "Uppsala University Library, Gr. 46",    
     "metadata": [
@@ -33,13 +33,22 @@
             "value": "grc"
         }
     ],
-    "description": "<p><b>Origin</b></p>", 
+    "description": "Johannes Pediasimus, Geometria",
+    "thumbnail": 
+        {
+        "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-3.json",
+            "service": {
+                "@context": "http://iiif.io/api/image/2/context.json",
+                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0003_001r.tif",
+                "profile": "http://iiif.io/api/image/2/level1.json"
+            }
+        },    
     "viewingHint": "paged",
     "license": "http://creativecommons.org/publicdomain/zero/1.0/",
     "attribution": "Uppsala University Library",
     "seeAlso": 
         {
-            "@id": "https://www.manuscripta.se/xml/100048",
+            "@id": "https://www.manuscripta.se/ms/100048.xml",
             "format": "application/tei+xml"
         },
     "related": {
@@ -48,1449 +57,1920 @@
     },           
     "sequences": [
         {
-            "@id": "https://www.manuscripta.se/iiif/100048/sequence/s1",
+            "@id": "https://www.manuscripta.se/iiif/100048/sequence/s-1.json",
             "@type": "sc:Sequence",
-            "label": "Current order",
-            "rendering": {
-            "@id": "https://www.manuscripta.se/pdf/100048",
-            "format": "application/pdf",
-            "label": "Download as PDF"
-        },        
-        
-        "canvases": [
+            "label": "Current order",                  
+            "startCanvas": "https://www.manuscripta.se/iiif/100048/canvas/c-3.json",
+            "canvases": [
                             
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-1",
-                "@type": "sc:Canvas",
-                "label": "left cover, outside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0001_LCO.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0001_LCO",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-1",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0001_LCO.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-1.json",
+                    "@type": "sc:Canvas",
+                    "label": "left cover, outside",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0001_LCO.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0001_LCO.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0001_LCO.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-1.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0001_LCO.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0001_LCO.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-2",
-                "@type": "sc:Canvas",
-                "label": "left cover, inside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0002_LCI.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0002_LCI",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-2",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0002_LCI.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-2.json",
+                    "@type": "sc:Canvas",
+                    "label": "left cover, inside",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0002_LCI.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0002_LCI.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0002_LCI.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-2.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0002_LCI.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0002_LCI.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-3",
-                "@type": "sc:Canvas",
-                "label": "f. 1r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0003_001r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0003_001r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-3",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0003_001r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-3.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 1r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0003_001r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0003_001r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0003_001r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-3.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0003_001r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0003_001r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-4",
-                "@type": "sc:Canvas",
-                "label": "f. 1v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0004_001v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0004_001v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-4",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0004_001v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-4.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 1v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0004_001v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0004_001v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0004_001v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-4.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0004_001v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0004_001v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-5",
-                "@type": "sc:Canvas",
-                "label": "f. 2r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0005_002r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0005_002r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-5",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0005_002r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-5.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 2r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0005_002r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0005_002r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0005_002r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-5.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0005_002r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0005_002r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-6",
-                "@type": "sc:Canvas",
-                "label": "f. 2v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0006_002v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0006_002v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-6",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0006_002v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-6.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 2v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0006_002v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0006_002v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0006_002v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-6.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0006_002v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0006_002v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-7",
-                "@type": "sc:Canvas",
-                "label": "f. 3r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0007_003r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0007_003r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-7",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0007_003r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-7.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 3r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0007_003r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0007_003r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0007_003r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-7.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0007_003r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0007_003r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-8",
-                "@type": "sc:Canvas",
-                "label": "f. 3v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0008_003v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0008_003v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-8",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0008_003v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-8.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 3v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0008_003v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0008_003v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0008_003v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-8.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0008_003v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0008_003v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-9",
-                "@type": "sc:Canvas",
-                "label": "f. 4r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0009_004r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0009_004r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-9",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0009_004r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-9.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 4r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0009_004r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0009_004r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0009_004r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-9.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0009_004r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0009_004r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-10",
-                "@type": "sc:Canvas",
-                "label": "f. 4v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0010_004v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0010_004v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-10",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0010_004v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-10.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 4v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0010_004v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0010_004v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0010_004v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-10.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0010_004v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0010_004v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-11",
-                "@type": "sc:Canvas",
-                "label": "f. 5r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0011_005r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0011_005r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-11",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0011_005r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-11.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 5r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0011_005r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0011_005r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0011_005r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-11.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0011_005r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0011_005r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-12",
-                "@type": "sc:Canvas",
-                "label": "f. 5v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0012_005v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0012_005v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-12",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0012_005v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-12.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 5v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0012_005v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0012_005v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0012_005v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-12.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0012_005v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0012_005v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-13",
-                "@type": "sc:Canvas",
-                "label": "f. 6r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0013_006r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0013_006r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-13",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0013_006r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-13.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 6r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0013_006r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0013_006r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0013_006r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-13.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0013_006r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0013_006r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-14",
-                "@type": "sc:Canvas",
-                "label": "f. 6v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0014_006v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0014_006v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-14",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0014_006v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-14.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 6v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0014_006v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0014_006v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0014_006v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-14.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0014_006v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0014_006v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-15",
-                "@type": "sc:Canvas",
-                "label": "f. 7r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0015_007r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0015_007r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-15",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0015_007r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-15.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 7r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0015_007r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0015_007r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0015_007r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-15.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0015_007r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0015_007r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-16",
-                "@type": "sc:Canvas",
-                "label": "f. 7v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0016_007v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0016_007v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-16",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0016_007v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-16.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 7v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0016_007v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0016_007v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0016_007v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-16.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0016_007v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0016_007v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-17",
-                "@type": "sc:Canvas",
-                "label": "f. 8r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0017_008r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0017_008r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-17",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0017_008r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-17.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 8r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0017_008r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0017_008r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0017_008r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-17.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0017_008r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0017_008r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-18",
-                "@type": "sc:Canvas",
-                "label": "f. 8v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0018_008v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0018_008v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-18",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0018_008v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-18.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 8v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0018_008v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0018_008v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0018_008v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-18.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0018_008v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0018_008v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-19",
-                "@type": "sc:Canvas",
-                "label": "f. 9r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0019_009r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0019_009r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-19",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0019_009r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-19.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 9r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0019_009r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0019_009r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0019_009r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-19.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0019_009r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0019_009r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-20",
-                "@type": "sc:Canvas",
-                "label": "f. 9v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0020_009v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0020_009v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-20",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0020_009v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-20.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 9v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0020_009v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0020_009v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0020_009v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-20.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0020_009v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0020_009v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-21",
-                "@type": "sc:Canvas",
-                "label": "f. 10r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0021_010r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0021_010r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-21",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0021_010r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-21.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 10r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0021_010r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0021_010r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0021_010r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-21.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0021_010r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0021_010r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-22",
-                "@type": "sc:Canvas",
-                "label": "f. 10v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0022_010v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0022_010v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-22",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0022_010v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-22.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 10v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0022_010v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0022_010v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0022_010v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-22.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0022_010v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0022_010v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-23",
-                "@type": "sc:Canvas",
-                "label": "f. 11r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0023_011r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0023_011r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-23",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0023_011r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-23.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 11r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0023_011r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0023_011r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0023_011r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-23.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0023_011r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0023_011r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-24",
-                "@type": "sc:Canvas",
-                "label": "f. 11v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0024_011v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0024_011v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-24",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0024_011v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-24.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 11v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0024_011v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0024_011v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0024_011v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-24.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0024_011v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0024_011v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-25",
-                "@type": "sc:Canvas",
-                "label": "f. 12r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0025_012r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0025_012r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-25",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0025_012r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-25.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 12r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0025_012r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0025_012r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0025_012r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-25.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0025_012r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0025_012r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-26",
-                "@type": "sc:Canvas",
-                "label": "f. 12v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0026_012v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0026_012v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-26",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0026_012v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-26.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 12v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0026_012v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0026_012v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0026_012v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-26.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0026_012v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0026_012v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-27",
-                "@type": "sc:Canvas",
-                "label": "f. 13r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0027_013r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0027_013r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-27",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0027_013r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-27.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 13r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0027_013r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0027_013r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0027_013r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-27.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0027_013r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0027_013r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-28",
-                "@type": "sc:Canvas",
-                "label": "f. 13v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0028_013v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0028_013v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-28",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0028_013v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-28.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 13v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0028_013v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0028_013v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0028_013v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-28.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0028_013v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0028_013v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-29",
-                "@type": "sc:Canvas",
-                "label": "f. 14r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0029_014r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0029_014r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-29",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0029_014r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-29.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 14r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0029_014r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0029_014r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0029_014r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-29.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0029_014r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0029_014r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-30",
-                "@type": "sc:Canvas",
-                "label": "f. 14v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0030_014v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0030_014v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-30",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0030_014v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-30.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 14v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0030_014v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0030_014v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0030_014v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-30.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0030_014v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0030_014v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-31",
-                "@type": "sc:Canvas",
-                "label": "f. 15r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0031_015r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0031_015r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-31",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0031_015r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-31.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 15r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0031_015r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0031_015r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0031_015r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-31.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0031_015r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0031_015r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-32",
-                "@type": "sc:Canvas",
-                "label": "f. 15v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0032_015v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0032_015v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-32",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0032_015v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-32.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 15v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0032_015v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0032_015v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0032_015v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-32.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0032_015v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0032_015v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-33",
-                "@type": "sc:Canvas",
-                "label": "f. 16r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0033_016r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0033_016r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-33",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0033_016r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-33.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 16r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0033_016r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0033_016r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0033_016r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-33.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0033_016r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0033_016r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-34",
-                "@type": "sc:Canvas",
-                "label": "f. 16v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0034_016v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0034_016v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-34",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0034_016v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-34.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 16v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0034_016v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0034_016v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0034_016v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-34.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0034_016v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0034_016v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-35",
-                "@type": "sc:Canvas",
-                "label": "f. 17r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0035_017r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0035_017r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-35",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0035_017r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-35.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 17r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0035_017r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0035_017r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0035_017r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-35.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0035_017r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0035_017r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-36",
-                "@type": "sc:Canvas",
-                "label": "f. 17v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0036_017v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0036_017v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-36",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0036_017v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-36.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 17v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0036_017v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0036_017v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0036_017v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-36.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0036_017v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0036_017v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-37",
-                "@type": "sc:Canvas",
-                "label": "f. 18r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0037_018r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0037_018r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-37",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0037_018r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-37.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 18r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0037_018r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0037_018r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0037_018r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-37.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0037_018r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0037_018r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-38",
-                "@type": "sc:Canvas",
-                "label": "f. 18v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0038_018v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0038_018v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-38",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0038_018v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-38.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 18v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0038_018v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0038_018v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0038_018v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-38.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0038_018v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0038_018v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-39",
-                "@type": "sc:Canvas",
-                "label": "f. 19r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0039_019r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0039_019r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-39",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0039_019r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-39.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 19r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0039_019r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0039_019r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0039_019r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-39.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0039_019r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0039_019r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-40",
-                "@type": "sc:Canvas",
-                "label": "f. 19v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0040_019v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0040_019v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-40",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0040_019v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-40.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 19v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0040_019v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0040_019v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0040_019v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-40.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0040_019v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0040_019v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-41",
-                "@type": "sc:Canvas",
-                "label": "f. 20r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0041_020r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0041_020r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-41",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0041_020r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-41.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 20r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0041_020r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0041_020r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0041_020r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-41.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0041_020r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0041_020r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-42",
-                "@type": "sc:Canvas",
-                "label": "f. 20v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0042_020v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0042_020v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-42",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0042_020v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-42.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 20v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0042_020v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0042_020v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0042_020v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-42.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0042_020v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0042_020v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-43",
-                "@type": "sc:Canvas",
-                "label": "f. 21r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0043_021r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0043_021r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-43",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0043_021r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-43.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 21r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0043_021r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0043_021r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0043_021r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-43.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0043_021r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0043_021r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-44",
-                "@type": "sc:Canvas",
-                "label": "f. 21v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0044_021v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0044_021v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-44",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0044_021v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-44.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 21v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0044_021v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0044_021v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0044_021v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-44.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0044_021v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0044_021v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-45",
-                "@type": "sc:Canvas",
-                "label": "f. 22r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0045_022r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0045_022r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-45",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0045_022r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-45.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 22r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0045_022r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0045_022r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0045_022r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-45.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0045_022r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0045_022r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-46",
-                "@type": "sc:Canvas",
-                "label": "f. 22v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0046_022v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0046_022v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-46",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0046_022v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-46.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 22v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0046_022v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0046_022v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0046_022v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-46.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0046_022v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0046_022v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-47",
-                "@type": "sc:Canvas",
-                "label": "f. 23r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0047_023r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0047_023r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-47",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0047_023r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-47.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 23r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0047_023r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0047_023r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0047_023r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-47.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0047_023r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0047_023r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-48",
-                "@type": "sc:Canvas",
-                "label": "f. 23v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0048_023v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0048_023v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-48",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0048_023v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-48.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 23v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0048_023v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0048_023v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0048_023v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-48.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0048_023v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0048_023v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-49",
-                "@type": "sc:Canvas",
-                "label": "f. 24r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0049_024r.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0049_024r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-49",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0049_024r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-49.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 24r",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0049_024r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0049_024r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0049_024r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-49.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0049_024r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0049_024r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-50",
-                "@type": "sc:Canvas",
-                "label": "f. 24v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0050_024v.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0050_024v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-50",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0050_024v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-50.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 24v",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0050_024v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0050_024v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0050_024v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-50.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0050_024v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0050_024v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-51",
-                "@type": "sc:Canvas",
-                "label": "right cover, inside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0051_RCI.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0051_RCI",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-51",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0051_RCI.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-51.json",
+                    "@type": "sc:Canvas",
+                    "label": "right cover, inside",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0051_RCI.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0051_RCI.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0051_RCI.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-51.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0051_RCI.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0051_RCI.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-52",
-                "@type": "sc:Canvas",
-                "label": "right cover, outside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0052_RCO.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0052_RCO",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-52",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0052_RCO.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-52.json",
+                    "@type": "sc:Canvas",
+                    "label": "right cover, outside",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0052_RCO.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0052_RCO.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0052_RCO.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-52.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0052_RCO.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0052_RCO.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-53",
-                "@type": "sc:Canvas",
-                "label": "QPcard",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0000_QPcard.tif/full/90,/0/default.jpg",
-                "height": 5284,
-                "width": 4080,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0000_QPcard",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100048/canvas/c-53",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0000_QPcard.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 5284,
-                            "width": 4080,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100048/canvas/c-53.json",
+                    "@type": "sc:Canvas",
+                    "label": "QPcard",
+                    "height": 5284,
+                    "width": 4080,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0000_QPcard.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0000_QPcard.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100048/annotation/uub-gr-046_0000_QPcard.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100048/canvas/c-53.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0000_QPcard.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5284,
+                                "width": 4080,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100048/uub-gr-046_0000_QPcard.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 }
         ]
     }]
 }
-                    

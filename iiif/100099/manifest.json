@@ -1,6 +1,6 @@
 {
     "@context": "http://iiif.io/api/presentation/2/context.json",
-    "@id": "https://www.manuscripta.se/iiif/100099/manifest",
+    "@id": "https://www.manuscripta.se/iiif/100099/manifest.json",
     "@type": "sc:Manifest",
     "label": "Linköping Diocesan Library, Kl f 13",    
     "metadata": [
@@ -33,13 +33,22 @@
             "value": "la"
         }
     ],
-    "description": "<p><b>Origin</b></p>", 
+    "description": "Homer, Sentences on the Odysse",
+    "thumbnail": 
+        {
+        "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-1.json",
+            "service": {
+                "@context": "http://iiif.io/api/image/2/context.json",
+                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/",
+                "profile": "http://iiif.io/api/image/2/level1.json"
+            }
+        },    
     "viewingHint": "paged",
     "license": "http://creativecommons.org/publicdomain/zero/1.0/",
     "attribution": "Linköping Diocesan Library",
     "seeAlso": 
         {
-            "@id": "https://www.manuscripta.se/xml/100099",
+            "@id": "https://www.manuscripta.se/ms/100099.xml",
             "format": "application/tei+xml"
         },
     "related": {
@@ -48,693 +57,912 @@
     },           
     "sequences": [
         {
-            "@id": "https://www.manuscripta.se/iiif/100099/sequence/s1",
+            "@id": "https://www.manuscripta.se/iiif/100099/sequence/s-1.json",
             "@type": "sc:Sequence",
-            "label": "Current order",
-            "rendering": {
-            "@id": "https://www.manuscripta.se/pdf/100099",
-            "format": "application/pdf",
-            "label": "Download as PDF"
-        },        
-        
-        "canvases": [
+            "label": "Current order",                  
+            "startCanvas": "https://www.manuscripta.se/iiif/100099/canvas/c-1.json",
+            "canvases": [
                             
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-1",
-                "@type": "sc:Canvas",
-                "label": "left cover, outside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0001_LCO.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0001_LCO",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-1",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0001_LCO.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-1.json",
+                    "@type": "sc:Canvas",
+                    "label": "left cover, outside",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0001_LCO.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0001_LCO.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0001_LCO.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-1.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0001_LCO.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0001_LCO.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-2",
-                "@type": "sc:Canvas",
-                "label": "left cover, inside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0002_LCI.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0002_LCI",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-2",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0002_LCI.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-2.json",
+                    "@type": "sc:Canvas",
+                    "label": "left cover, inside",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0002_LCI.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0002_LCI.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0002_LCI.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-2.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0002_LCI.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0002_LCI.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-3",
-                "@type": "sc:Canvas",
-                "label": "<f. 1r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0003_S001r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0003_S001r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-3",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0003_S001r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-3.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 1r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0003_S001r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0003_S001r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0003_S001r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-3.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0003_S001r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0003_S001r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-4",
-                "@type": "sc:Canvas",
-                "label": "<f. 1v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0004_S001v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0004_S001v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-4",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0004_S001v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-4.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 1v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0004_S001v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0004_S001v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0004_S001v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-4.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0004_S001v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0004_S001v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-5",
-                "@type": "sc:Canvas",
-                "label": "<f. 2r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0005_S002r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0005_S002r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-5",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0005_S002r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-5.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 2r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0005_S002r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0005_S002r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0005_S002r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-5.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0005_S002r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0005_S002r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-6",
-                "@type": "sc:Canvas",
-                "label": "<f. 2v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0006_S002v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0006_S002v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-6",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0006_S002v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-6.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 2v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0006_S002v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0006_S002v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0006_S002v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-6.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0006_S002v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0006_S002v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-7",
-                "@type": "sc:Canvas",
-                "label": "<f. 3r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0007_S003r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0007_S003r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-7",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0007_S003r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-7.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 3r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0007_S003r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0007_S003r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0007_S003r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-7.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0007_S003r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0007_S003r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-8",
-                "@type": "sc:Canvas",
-                "label": "<f. 3v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0008_S003v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0008_S003v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-8",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0008_S003v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-8.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 3v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0008_S003v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0008_S003v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0008_S003v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-8.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0008_S003v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0008_S003v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-9",
-                "@type": "sc:Canvas",
-                "label": "<f. 4r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0009_S004r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0009_S004r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-9",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0009_S004r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-9.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 4r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0009_S004r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0009_S004r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0009_S004r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-9.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0009_S004r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0009_S004r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-10",
-                "@type": "sc:Canvas",
-                "label": "<f. 4v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0010_S004v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0010_S004v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-10",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0010_S004v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-10.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 4v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0010_S004v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0010_S004v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0010_S004v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-10.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0010_S004v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0010_S004v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-11",
-                "@type": "sc:Canvas",
-                "label": "<f. 5r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0011_S005r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0011_S005r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-11",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0011_S005r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-11.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 5r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0011_S005r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0011_S005r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0011_S005r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-11.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0011_S005r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0011_S005r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-12",
-                "@type": "sc:Canvas",
-                "label": "<f. 5v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0012_S005v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0012_S005v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-12",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0012_S005v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-12.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 5v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0012_S005v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0012_S005v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0012_S005v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-12.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0012_S005v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0012_S005v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-13",
-                "@type": "sc:Canvas",
-                "label": "<f. 6r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0013_S006r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0013_S006r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-13",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0013_S006r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-13.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 6r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0013_S006r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0013_S006r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0013_S006r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-13.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0013_S006r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0013_S006r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-14",
-                "@type": "sc:Canvas",
-                "label": "<f. 6v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0014_S006v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0014_S006v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-14",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0014_S006v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-14.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 6v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0014_S006v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0014_S006v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0014_S006v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-14.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0014_S006v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0014_S006v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-15",
-                "@type": "sc:Canvas",
-                "label": "<f. 7r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0015_S007r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0015_S007r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-15",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0015_S007r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-15.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 7r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0015_S007r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0015_S007r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0015_S007r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-15.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0015_S007r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0015_S007r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-16",
-                "@type": "sc:Canvas",
-                "label": "<f. 7v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0016_S007v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0016_S007v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-16",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0016_S007v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-16.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 7v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0016_S007v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0016_S007v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0016_S007v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-16.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0016_S007v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0016_S007v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-17",
-                "@type": "sc:Canvas",
-                "label": "<f. 8r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0017_S008r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0017_S008r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-17",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0017_S008r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-17.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 8r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0017_S008r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0017_S008r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0017_S008r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-17.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0017_S008r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0017_S008r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-18",
-                "@type": "sc:Canvas",
-                "label": "<f. 8v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0018_S008v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0018_S008v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-18",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0018_S008v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-18.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 8v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0018_S008v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0018_S008v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0018_S008v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-18.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0018_S008v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0018_S008v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-19",
-                "@type": "sc:Canvas",
-                "label": "<f. 9r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0019_S009r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0019_S009r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-19",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0019_S009r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-19.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 9r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0019_S009r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0019_S009r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0019_S009r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-19.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0019_S009r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0019_S009r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-20",
-                "@type": "sc:Canvas",
-                "label": "<f. 9v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0020_S009v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0020_S009v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-20",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0020_S009v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-20.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 9v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0020_S009v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0020_S009v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0020_S009v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-20.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0020_S009v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0020_S009v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-21",
-                "@type": "sc:Canvas",
-                "label": "<f. 10r>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0021_S010r.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0021_S010r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-21",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0021_S010r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-21.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 10r⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0021_S010r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0021_S010r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0021_S010r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-21.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0021_S010r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0021_S010r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-22",
-                "@type": "sc:Canvas",
-                "label": "<f. 10v>",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0022_S010v.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0022_S010v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-22",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0022_S010v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-22.json",
+                    "@type": "sc:Canvas",
+                    "label": "⟨f. 10v⟩",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0022_S010v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0022_S010v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0022_S010v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-22.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0022_S010v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0022_S010v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-23",
-                "@type": "sc:Canvas",
-                "label": "right cover, inside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0023_RCI.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0023_RCI",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-23",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0023_RCI.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-23.json",
+                    "@type": "sc:Canvas",
+                    "label": "right cover, inside",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0023_RCI.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0023_RCI.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0023_RCI.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-23.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0023_RCI.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0023_RCI.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-24",
-                "@type": "sc:Canvas",
-                "label": "right cover, outside",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0024_RCO.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0024_RCO",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-24",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0024_RCO.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-24.json",
+                    "@type": "sc:Canvas",
+                    "label": "right cover, outside",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0024_RCO.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0024_RCO.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0024_RCO.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-24.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0024_RCO.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0024_RCO.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-25",
-                "@type": "sc:Canvas",
-                "label": "QPcard",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0000_QPcard.tif/full/90,/0/default.jpg",
-                "height": 7912,
-                "width": 6708,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0000_QPcard",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100099/canvas/c-25",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0000_QPcard.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7912,
-                            "width": 6708,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100099/canvas/c-25.json",
+                    "@type": "sc:Canvas",
+                    "label": "QPcard",
+                    "height": 7912,
+                    "width": 6708,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0000_QPcard.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0000_QPcard.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100099/annotation/lsb-kl-f-013_0000_QPcard.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100099/canvas/c-25.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0000_QPcard.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7912,
+                                "width": 6708,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100099/lsb-kl-f-013_0000_QPcard.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 }
         ]
     }]
 }
-                    

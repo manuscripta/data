@@ -1,6 +1,6 @@
 {
     "@context": "http://iiif.io/api/presentation/2/context.json",
-    "@id": "https://www.manuscripta.se/iiif/100112/manifest",
+    "@id": "https://www.manuscripta.se/iiif/100112/manifest.json",
     "@type": "sc:Manifest",
     "label": "Linköping Diocesan Library, Saml 24:26",    
     "metadata": [
@@ -33,13 +33,22 @@
             "value": "grc"
         }
     ],
-    "description": "<p><b>Origin</b></p>", 
+    "description": "Gregory of Nazianzus, Or. 7, a fragment",
+    "thumbnail": 
+        {
+        "@id": "https://www.manuscripta.se/iiif/100112/canvas/c-1.json",
+            "service": {
+                "@context": "http://iiif.io/api/image/2/context.json",
+                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0001_001r.tif",
+                "profile": "http://iiif.io/api/image/2/level1.json"
+            }
+        },    
     "viewingHint": "paged",
     "license": "http://creativecommons.org/publicdomain/zero/1.0/",
     "attribution": "Linköping Diocesan Library",
     "seeAlso": 
         {
-            "@id": "https://www.manuscripta.se/xml/100112",
+            "@id": "https://www.manuscripta.se/ms/100112.xml",
             "format": "application/tei+xml"
         },
     "related": {
@@ -48,72 +57,84 @@
     },           
     "sequences": [
         {
-            "@id": "https://www.manuscripta.se/iiif/100112/sequence/s1",
+            "@id": "https://www.manuscripta.se/iiif/100112/sequence/s-1.json",
             "@type": "sc:Sequence",
-            "label": "Current order",
-            "rendering": {
-            "@id": "https://www.manuscripta.se/pdf/100112",
-            "format": "application/pdf",
-            "label": "Download as PDF"
-        },        
-        
-        "canvases": [
+            "label": "Current order",                  
+            "startCanvas": "https://www.manuscripta.se/iiif/100112/canvas/c-1.json",
+            "canvases": [
                             
-            {
-                "@id": "https://www.manuscripta.se/iiif/100112/canvas/c-1",
-                "@type": "sc:Canvas",
-                "label": "f. 1r",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0001_001r.tif/full/90,/0/default.jpg",
-                "height": 7924,
-                "width": 5797,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100112/annotation/lsb-saml-024-26_0001_001r",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100112/canvas/c-1",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0001_001r.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7924,
-                            "width": 5797,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100112/canvas/c-1.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 1r",
+                    "height": 7924,
+                    "width": 5797,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0001_001r.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0001_001r.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100112/annotation/lsb-saml-024-26_0001_001r.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100112/canvas/c-1.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0001_001r.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7924,
+                                "width": 5797,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0001_001r.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 },                
-            {
-                "@id": "https://www.manuscripta.se/iiif/100112/canvas/c-2",
-                "@type": "sc:Canvas",
-                "label": "f. 1v",
-                "thumbnail": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0002_001v.tif/full/90,/0/default.jpg",
-                "height": 7925,
-                "width": 5780,
-                "images": [
-                    {
-                        "@id": "https://www.manuscripta.se/iiif/100112/annotation/lsb-saml-024-26_0002_001v",
-                        "@type": "oa:Annotation",
-                        "motivation": "sc:painting",
-                        "on": "https://www.manuscripta.se/iiif/100112/canvas/c-2",
-                        "resource": {
-                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0002_001v.tif/full/full/0/default.jpg",
-                            "@type": "dcterms:Image",
-                            "format": "image/jpeg",
-                            "height": 7925,
-                            "width": 5780,
+                {
+                    "@id": "https://www.manuscripta.se/iiif/100112/canvas/c-2.json",
+                    "@type": "sc:Canvas",
+                    "label": "f. 1v",
+                    "height": 7925,
+                    "width": 5780,
+                    "thumbnail": 
+                        {
+                            "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0002_001v.tif/full/90,/0/default.jpg",
                             "service": {
                                 "@context": "http://iiif.io/api/image/2/context.json",
                                 "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0002_001v.tif",
                                 "profile": "http://iiif.io/api/image/2/level1.json"
                             }
+                        },                
+                    "images": [
+                        {
+                            "@id": "https://www.manuscripta.se/iiif/100112/annotation/lsb-saml-024-26_0002_001v.json",
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "on": "https://www.manuscripta.se/iiif/100112/canvas/c-2.json",
+                            "resource": {
+                                "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0002_001v.tif/full/full/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7925,
+                                "width": 5780,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "https://www.manuscripta.se/iipsrv/iipsrv.fcgi?IIIF=100112/lsb-saml-024-26_0002_001v.tif",
+                                    "profile": "http://iiif.io/api/image/2/level1.json"
+                                }
+                            }
                         }
-                    }]
+                    ]
                 }
         ]
     }]
 }
-                    
