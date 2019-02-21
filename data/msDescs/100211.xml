@@ -4,32 +4,33 @@
         <fileDesc>
             <titleStmt>
                 <title>Kungliga biblioteket, A 12</title>
-                <sponsor ref="https://www.manuscripta.se/org/">TTT: Text till tiden! Medeltida texter i kontext – då och nu</sponsor>
-                <funder ref="https://www.manuscripta.se/org/">Riksbankens jubileumsfond</funder>
-                <funder ref="https://www.manuscripta.se/org/">Kungliga Vitterhetsakademien</funder>
-                <respStmt xml:id="PA">
-                    <persName ref="https://www.manuscripta.se/person/100500">Patrik Åström</persName>
+                <sponsor ref="https://www.manuscripta.se/org/100005">TTT: Text till tiden! Medeltida texter i kontext – då och nu</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100004">Kungliga biblioteket</sponsor>
+                <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
+                <funder ref="https://www.manuscripta.se/org/100006">Kungl. Vitterhets Historie och Antikvitets Akademien</funder>
+                <respStmt>
                     <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100474">Patrik Åström</persName>
                 </respStmt>
-                <respStmt xml:id="PG">
+                <respStmt>
+                    <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-                    <resp key="encoder"/>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/100211</idno>
-                <date when="2017"/>
+                <date when="2018"/>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc resp="#PA" xml:lang="sv">
+                <msDesc resp="https://www.manuscripta.se/person/100474" xml:lang="sv">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sverige</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
-                        <institution ref="https://www.manuscripta.se/place/100040">Kungliga biblioteket</institution>
+                        <institution ref="https://www.manuscripta.se/org/100004">Kungliga biblioteket</institution>
                         <repository ref="https://www.manuscripta.se/place/100040">Kungliga biblioteket</repository>
                         <idno type="shelfmark">A 12</idno>
                         <altIdentifier>
@@ -42,17 +43,19 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
-                                <support>
-                                    <p/>
-                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="0"/>
                                     <measure type="rightFlyleaves" quantity="0"/>
                                 </extent>
-                                <foliation>I övre högerhörn på rectosidorna: A) Nyare paginering med udda nummer 1-341, samt 342 i blyerts. B) Nyare paginering 1-335, som börjar på blad 3r. C) Foliering som regel på av tionde sida, ibland även mellanliggande blad; det sista bladet betecknat "171" (s. 342).</foliation>
+                                <foliation>I övre högerhörn på rectosidorna: A) Nyare paginering med udda nummer 1-341, samt 342 i blyerts. B) Nyare paginering 1-335, som börjar på blad <locus from="3r" to="3r" scheme="folios"/>. C) Foliering som regel på av tionde sida, ibland även mellanliggande blad; det sista bladet betecknat "171" (s. 342)</foliation>
                             </supportDesc>
                         </objectDesc>
                         <additions>
+                            <p>
+                                <locus from="ryggen" to="ryggen" scheme="folios"/>
+                                <note>Biblioteksmärke. <quote>87</quote> i ryggfält 4; pappersetikett med <quote>A 12</quote>
+                                </note>
+                            </p>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
                                 <note>Biblioteksmärke. KB:s exlibris.</note>
@@ -115,7 +118,6 @@
                                 <decoNote type="tooling">Ram av tre(?) linjer; diagonala trelinjer som formar ett andreaskors. Enkelstämplar: Fram franska liljor i romb (10549), fyrblad/kors (10107); bak dessutom ros/femblad i cirkel (10626). På ryggen "A 12" i guld i fält 3.</decoNote>
                                 <decoNote type="edges">röda snitt</decoNote>
                                 <decoNote type="bookmarks">12 bladmärken av vävda band i blått och vitt.</decoNote>
-                                <condition>"87" i ryggfält 4; pappersetikett med "A 12" i fält 5.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
@@ -133,6 +135,7 @@
                     <additional>
                         <listBibl>
                             <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100725">Robert Geete (1895)</title>
                                 <citedRange from="LXXXV" to="XC" unit="page"/>
                             </bibl>
                         </listBibl>
@@ -142,32 +145,38 @@
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
-                            <textLang mainLang="sv"/>
+                            <textLang mainLang="non-swe"/>
                             <msItem>
                                 <locus from="1r" to="1r" scheme="folios"/>
                                 <textLang mainLang="la"/>
-                                <title type="uniform">Oratio/preces (bön/böner på latin)</title>
+                                <title type="uniform" key="Geete_ Åström_2797.1">Oratio/preces (bön/böner på latin)</title>
+                                <rubric>Ingen</rubric>
+                                <incipit xml:lang="la">Ne stem… domini deus delicta</incipit>
                                 <note>Tre rader. Nära samtidig hand, cursiva. (Jfr SFSS 30, s. XC).</note>
                             </msItem>
                             <msItem>
                                 <locus from="2v" to="171r" scheme="folios"/>
-                                <textLang mainLang="sv"/>
+                                <textLang mainLang="non-swe"/>
                                 <author>
                                     <persName>Petrus Olavi</persName>
                                 </author>
-                                <title type="uniform">Jungfru Marias örtagård (Cantus sororum): med utläggning</title>
+                                <title type="uniform" key="Geete_258 Åström_2582">Jungfru Marias örtagård (Cantus sororum): med utläggning</title>
+                                <rubric>Rubrica här äpther börias prologus ower the bok som kallas iomffru maria yrtegardher Oc är hon en wttydilse ower sancti saluatoris systra wiku sangh […] kära systrom oc döttrom til andeliken hwgnat</rubric>
+                                <incipit xml:lang="non-swe">Alzmäktoghom gudhi fadher oc son oc them hälgha anda till loff</incipit>
                                 <note>Översättare: Nicolaus Ragvaldi (Nils Ragvaldsson). Titel originalverk: Cantus sororum. I överskriften anges att texten diktats och sammansatts av <quote>mästar pädhar sancta birgitta skriffta fadher</quote> samt översatts från latin till svenska av <quote>war käre fadher confessor generalis her niglis raualdi</quote>
                                 </note>
                             </msItem>
                             <msItem>
                                 <locus from="171v" to="171v" scheme="folios"/>
-                                <textLang mainLang="sv"/>
-                                <title type="uniform">Bön</title>
+                                <textLang mainLang="non-swe"/>
+                                <title type="uniform" key="Geete_ Åström_2797">Bön</title>
+                                <rubric>Ingen</rubric>
+                                <incipit xml:lang="non-swe">jak loffwar, hedrar, wphögher, ärar, oc wälsignar tik, o godhe jesu, fför the osighelika glädhinna</incipit>
                                 <note>Nära samtidig hand i cursiva. En hel bön, följd av en upprepning av bönens första 8 ord (eller en annan bön med samma inledning). (SFSS 30, s. XC) felaktigt: <quote>några katolska latinska böner, ditskrifna på 1500-talet</quote>
                                 </note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/101841">Alving (1934)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103389">Alving (1934)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -185,30 +194,31 @@
                                         <measure type="textblockLeaves" quantity="171"/>
                                     </extent>
                                     <collation>
-                                        <formula>V+(V-1)+V+(VI-2)+11V+VI+V (försätts av pergament bortskuret; 1 blad bortskuret i lägg 2; 2 blad bortskurna i lägg 4)</formula>
-                                        <signatures>I lägg 2 "a"-"e" på s. 11-15 i nederkant före bindet.</signatures>
+                                        <formula>V+(V-1)+V+(VI-2)+11V+VI+V</formula>
+                                        <signatures>I lägg 2 "a"-"e" på s. 11-15 i nederkant före bindet</signatures>
                                         <catchwords>Kustoder finns i slutet av alla lägg utom 4 och 13</catchwords>
                                     </collation>
-                                    <condition>Röda ramverk omger tillägg i margen av glömda ställen på s. 306, 317, 331. - Träsnitt och praktfulla initialer skyddas i flera fall av velum (siden eller linne) i olika färger. S. 1-3, 255-257 och 342 är lämnade tomma. Blad 127 och 128 (med s. 255-258) är hopsydda i överkanten, på s. 258 är klistrat ett helsides pappersblad med ett tryck (se bild, ovan).</condition>
+                                    <condition>Träsnitt och praktfulla initialer skyddas i flera fall av velum (siden eller linne) i olika färger. Blad 127 och 128 (med s. 255-258) är hopsydda i överkanten. På s. 258 är klistrat ett helsides pappersblad med ett tryck (se bild, ovan)</condition>
                                 </supportDesc>
                                 <layoutDesc>
-                                    <layout columns="1" writtenLines="20-23">
+                                    <layout columns="1" writtenLines="20 23">
+                                        <locus from="1r" to="171v" scheme="folios"/>
                                         <dimensions type="written">
                                             <height min="155" max="180" unit="mm"/>
                                             <width min="95" max="130" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: långlång+20 korta+1, 2 eller 3 långa; i början äv. långkortlång+20 korta+långkortlång Sidrubriker: Sidrubriker i rött s. 7-238 (Prologus, Venite, samt veckodagarna).</note>
+                                        <note>Linjering: långlång+20 korta+1, 2 eller 3 långa; i början även långkortlång+20 korta+långkortlång; Textytans höjd: 15.5-18 ; Textytans bredd: 9.5-13; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-5">Hybrida</term>; Skriftfärg: svart; röd utmärkningsskrift (rubriker, överskrifter, komman, paragraftecken), streckningar och understrykningar.</handNote>
+                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-5">Hybrida</term>; Röda ramverk omger tillägg i margen av glömda ställen på s. 306, 317, 331 Skriven av en "ovärdig konventssyster" (<locus from="171r" to="171r" scheme="folios"/>) i Vadstena. Skriftfärg: svart; röd utmärkningsskrift (överskrifter, överskrifter, komman, paragraftecken), streckningar och understrykningar.</handNote>
                             </handDesc>
                             <decoDesc>
-                                <decoNote type="initials">Initialer: s. 5: "A" i rött, blått och vitt på guldgrund; s. 29: "V" i guld och blått; vidare 14 i rött, blått, vitt och guld vid invitatorium och första dagslektier (s. 29, 76, 80, 98, 102, 122, 125, 149, 154, 171, 175, 194, 197, 217); samt 5 likadana s. 259 (med rankor), 263, 265, 290, 300 (med rankor). 5 mindre initialer i blått på röd grund (enligt Geete). Både initialmajuskler och lombarder kan ha fleuronnéer. Initialfärg: röd, blå, flerfärgade</decoNote>
-                                <decoNote type="lombards">Omväxlande röda och blå lombarder, ibland med ursparningar.</decoNote>
-                                <decoNote type="images">rankornament f. 2v, 3r, 38v, 130r och 150v. F. 2v och 38v små målade träsnitt, f. 129v ett större.</decoNote>
+                                <decoNote type="initials">Initialer: s. 5: "A" i rött, blått och vitt på guldgrund; s. 29: "V" i guld och blått; vidare 14 i rött, blått, vitt och guld vid invitatorium och första dagslektier (s. 29, 76, 80, 98, 102, 122, 125, 149, 154, 171, 175, 194, 197, 217); samt 5 likadana s. 259 (med rankor), 263, 265, 290, 300 (med rankor). 5 mindre initialer i blått på röd grund (enligt Geete). Både initialmajuskler och lombarder kan ha fleuronnéer Initialfärg: röd, blå, flerfärgade</decoNote>
+                                <decoNote type="lombards">Omväxlande röda och blå lombarder, ibland med ursparningar</decoNote>
+                                <decoNote type="images">rankornament <locus from="2v" to="2v" scheme="folios"/>, <locus from="3r" to="3r" scheme="folios"/>, <locus from="38v" to="38v" scheme="folios"/>, <locus from="130r" to="130r" scheme="folios"/> och <locus from="150v" to="150v" scheme="folios"/>. F. <locus from="2v" to="2v" scheme="folios"/> och <locus from="38v" to="38v" scheme="folios"/> små målade träsnitt, <locus from="129v" to="129v" scheme="folios"/> ett större</decoNote>
                                 <decoNote type="images">
                                     <locus from="2v" to="2v" scheme="folios"/> Kolorerat träsnitt: Tronande Maria med Jesusbarnet (rött, grönt, blått, guld); utförlig beskrivning i SFSS 30, s. LXXXVIII.</decoNote>
                                 <decoNote type="images">
@@ -221,8 +231,8 @@
                         <history>
                             <origin>
                                 <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/">Sverige</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/"> Vadstena</placeName>
+                                    <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
+                                    <placeName ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>
                                 </origPlace>
                                 <origDate>1510</origDate>
                             </origin>
@@ -232,7 +242,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2018-01-12" who="#PG">Migration from Access</change>
+            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>
