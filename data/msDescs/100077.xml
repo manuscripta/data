@@ -6,7 +6,7 @@
                 <title>Uppsala University Library, Gr. 74</title>
                 <sponsor ref="https://www.manuscripta.se/org/100001">Greek manuscripts in Sweden – a digitization and cataloguing project</sponsor>
                 <sponsor ref="https://www.manuscripta.se/org/100002">Uppsala University Library</sponsor>
-                <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>                
+                <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
                 <respStmt>
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
@@ -40,24 +40,10 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
-                                <support>
-                                    <p>
-                                        <locus from="" to="" scheme=""/>
-                                        <material><!-- Material --></material>
-                                        <dimensions type="leaf">
-                                            <height quantity="" unit="mm"/>
-                                            <width quantity="" unit="mm"/>
-                                        </dimensions>
-                                    </p>
-                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="0"/>
                                     <measure type="rightFlyleaves" quantity="0"/>
                                 </extent>
-                                <foliation><!-- Foliation --></foliation>
-                                <collation>
-                                    <formula><!-- Collation of the endleaves --></formula>
-                                </collation>
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc resp="https://www.manuscripta.se/person/100143">
@@ -72,15 +58,10 @@
                                         <depth quantity="75" unit="mm"/>
                                     </dimensions>
                                 </p>
-                                <decoNote>Blind tooling on board covers with a four-line tool and small hand tools (tiny quatre-feuil in circle, six-pointed star or flower in circle, fleur-de-lis in lozenge, bird in lozenge). Small flat metal bosses in corners and center of boards, some of them missing.</decoNote>
+                                <decoNote type="tooling">Blind tooling on board covers with a four-line tool and small hand tools (tiny quatre-feuil in circle, six-pointed star or flower in circle, fleur-de-lis in lozenge, bird in lozenge). Small flat metal bosses in corners and center of boards, some of them missing.</decoNote>
                             </binding>
                         </bindingDesc>
                     </physDesc>
-                    <history>
-                        <!-- origin Kosinitza  daterad 1441: se Rudbergs art.  -->
-                        <provenance/>
-                        <acquisition/>
-                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
@@ -89,6 +70,9 @@
                             </bibl>
                             <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100212">Rudberg (1954)</title>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100335">Rudberg (MS)</title>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -104,45 +88,24 @@
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="" to="" scheme=""/>
-                                            <material><!-- Material --></material>
-                                            <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
-                                            </dimensions>
+                                            <locus from="1r" to="242v" scheme="folios"/>
+                                            <material>Western paper</material>
+                                            <dimensions type="leaf"/>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="242"/>
                                     </extent>
-                                    <foliation><!-- Older foliation specific for the unit--></foliation>
-                                    <collation>
-                                        <formula><!-- Collation of the unit --></formula>
-                                        <signatures/>
-                                        <catchwords/>
-                                    </collation>
-                                    <condition><!-- Condition of the unit --></condition>
                                 </supportDesc>
-                                <layoutDesc>
-                                    <layout columns="" ruledLines="">
-                                        <locus from="" to="" scheme=""/>
-                                    </layout>
-                                </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <!-- Descripition of hands in the unit -->
-                                <handNote xml:id="hand-1">
-                                    <locus from="" to="" scheme=""/>
-                                </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <p><!-- Descripition of the decoration in the unit --></p>
-                            </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
-                                <origPlace> </origPlace>
-                                <origDate notBefore="" notAfter=""><!-- origDate --></origDate>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100110">Kosinitza</placeName>
+                                    <placeName ref="https://www.manuscripta.se/place/100026">Greece</placeName>
+                                </origPlace>
+                                <origDate when="1441">1441</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -150,8 +113,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-28" who="https://www.manuscripta.se/person/100380">First draft</change>
+            <change status="draft" when="2019-02-27" who="https://www.manuscripta.se/person/100380">Added origDate, origPlace, and support material</change>
             <change status="draft" when="2016-07-27" who="https://www.manuscripta.se/person/100380">Added facsimile</change>
+            <change status="draft" when="2016-03-28" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -2139,5 +2103,4 @@
             <graphic url="uub-gr-074_0000_QPcard.tif" height="7977px" width="6708px"/>
         </surface>
     </facsimile>
-
 </TEI>

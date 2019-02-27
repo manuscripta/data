@@ -44,44 +44,12 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
-                                <support>
-                                    <p>
-                                        <locus from="" to="" scheme=""/>
-                                        <material><!-- Material --></material>
-                                        <dimensions type="leaf">
-                                            <height quantity="" unit="mm"/>
-                                            <width quantity="" unit="mm"/>
-                                        </dimensions>
-                                    </p>
-                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="1"/>
                                     <measure type="rightFlyleaves" quantity="0"/>
                                 </extent>
-                                <foliation><!-- Foliation --></foliation>
-                                <collation>
-                                    <formula><!-- Collation of the endleaves --></formula>
-                                </collation>
                             </supportDesc>
                         </objectDesc>
-                        <handDesc>
-                            <!-- Descripition of hands on the endleaves -->
-                            <handNote xml:id="hand-1">
-                                <locus from="" to="" scheme=""/>
-                            </handNote>
-                        </handDesc>
-                        <additions>
-                            <p>
-                                <!-- Left endleaves -->
-                                <locus from="" to="" scheme=""/>
-                                <note/>
-                            </p>
-                            <p>
-                                <!-- Right endleaves -->
-                                <locus from="" to="" scheme=""/>
-                                <note/>
-                            </p>
-                        </additions>
                         <bindingDesc resp="https://www.manuscripta.se/person/100143">
                             <binding>
                                 <p>Byzantine style binding. <material>Wooden boards</material> cut flush with the bookblock; grain parallel to the spine; thickness 9 mm; shallow grooves in board edges all around. Unsupported sewing at 4 stations prepared with v-nick at distances measured from head edge: 30, 95, 150, 200 mm. Coarse sewing thread with a z-ply. Attachment with Z-pattern on inside of board. Flat spine, with a tendency for concaveness in the latter half of the bookblock. Spine lining of coarse plain cloth all along. Covered in full reddish-brown <material>goat leather</material> with a polished surface.</p>
@@ -99,7 +67,7 @@
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <!-- se Rudberg1954: this ms is identical with ms. Kosinitza 202 in Gregory, Textkritik des neuen Testamentes III, 1909, p. 1271. Även Rudberg1953 sid 22 -->
+                        <!-- Cf. Rudberg (1954): this ms is identical with ms. Kosinitza 202 in Gregory, Textkritik des neuen Testamentes III, 1909, p. 1271. See also Rudberg (1953) p. 22 -->
                         <provenance/>
                         <acquisition/>
                     </history>
@@ -131,45 +99,24 @@
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="" to="" scheme=""/>
-                                            <material><!-- Material --></material>
-                                            <dimensions type="leaf">
-                                                <height quantity="" unit="mm"/>
-                                                <width quantity="" unit="mm"/>
-                                            </dimensions>
+                                            <locus from="1r" to="186v" scheme="folios"/>
+                                            <material>Parchment</material>
+                                            <dimensions type="leaf"/>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="186"/>
                                     </extent>
-                                    <foliation><!-- Older foliation specific for the unit--></foliation>
-                                    <collation>
-                                        <formula><!-- Collation of the unit --></formula>
-                                        <signatures/>
-                                        <catchwords/>
-                                    </collation>
-                                    <condition><!-- Condition of the unit --></condition>
                                 </supportDesc>
-                                <layoutDesc>
-                                    <layout columns="" ruledLines="">
-                                        <locus from="" to="" scheme=""/>
-                                    </layout>
-                                </layoutDesc>
                             </objectDesc>
-                            <handDesc>
-                                <!-- Descripition of hands in the unit -->
-                                <handNote xml:id="hand-2">
-                                    <locus from="" to="" scheme=""/>
-                                </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <p><!-- Descripition of the decoration in the unit --></p>
-                            </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
-                                <origPlace> </origPlace>
-                                <origDate notBefore="" notAfter=""><!-- origDate --></origDate>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100110">Kosinitza</placeName>
+                                    <placeName ref="https://www.manuscripta.se/place/100026">Greece</placeName>
+                                </origPlace>
+                                <origDate notBefore="1200" notAfter="1299">13th c.</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -177,8 +124,9 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2016-03-28" who="https://www.manuscripta.se/person/100380">First draft</change>
+            <change status="draft" when="2019-02-27" who="https://www.manuscripta.se/person/100380">Added origDate, origPlace, and support material</change>
             <change status="draft" when="2016-07-27" who="https://www.manuscripta.se/person/100380">Added facsimile</change>
+            <change status="draft" when="2016-03-28" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1706,5 +1654,4 @@
             <graphic url="uub-gr-073_0000_QPcard.tif" height="7565px" width="6708px"/>
         </surface>
     </facsimile>
-
 </TEI>
