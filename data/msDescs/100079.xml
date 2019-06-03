@@ -9,15 +9,15 @@
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond</funder>
                 <respStmt>
                     <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
                 </respStmt>
                 <respStmt>
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
-                </respStmt>
-                <respStmt>
-                    <resp key="cataloguer"/>
-                    <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -29,11 +29,11 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057 https://www.manuscripta.se/person/100143">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100057">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100023">Gothenburg</settlement>
-                        <institution ref="https://www.manuscripta.se/place/100024">Gothenburg University</institution>
+                        <institution ref="https://www.manuscripta.se/org/100012">Gothenburg University</institution>
                         <repository ref="https://www.manuscripta.se/place/100025">Gothenburg University Library</repository>
                         <idno type="shelfmark">Gr. 1</idno>
                         <altIdentifier>
@@ -45,18 +45,13 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="1"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="leftFlyleaves" quantity="1" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
                                 <foliation/>
                             </supportDesc>
                         </objectDesc>
                     </physDesc>
-                    <history>
-                        <origin/>
-                        <provenance/>
-                        <acquisition/>
-                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
@@ -83,10 +78,14 @@
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
-                                        <p/>
+                                        <p>
+                                            <locus from="1r" to="40v" scheme="folios"/>
+                                            <material>Arabic paper</material>
+                                            <dimensions type="leaf"/>
+                                        </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="40"/>
+                                        <measure type="textblockLeaves" quantity="40" unit="folios"/>
                                     </extent>
                                     <foliation/>
                                 </supportDesc>
@@ -104,11 +103,21 @@
                         <msIdentifier>
                             <idno type="codicologicalUnit">2</idno>
                         </msIdentifier>
+                        <msContents>
+                            <textLang mainLang="grc"/>
+                        </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
+                                    <support>
+                                        <p>
+                                            <locus from="41r" to="44v" scheme="folios"/>
+                                            <material>Western paper</material>
+                                            <dimensions type="leaf"/>
+                                        </p>
+                                    </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="4"/>
+                                        <measure type="textblockLeaves" quantity="4" unit="folios"/>
                                     </extent>
                                 </supportDesc>
                             </objectDesc>
@@ -131,15 +140,22 @@
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
+                                    <support>
+                                        <p>
+                                            <locus from="45r" to="143v" scheme="folios"/>
+                                            <material>Parchment</material>
+                                            <dimensions type="leaf"/>
+                                        </p>
+                                    </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="99"/>
+                                        <measure type="textblockLeaves" quantity="99" unit="folios"/>
                                     </extent>
                                 </supportDesc>
                             </objectDesc>
                         </physDesc>
                         <history>
                             <origin>
-                                <origDate notBefore="1300" notAfter="1500">14th/15th c.</origDate>
+                                <origDate notBefore="1300" notAfter="1499">14th/15th c.</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -147,6 +163,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
+            <change status="draft" when="2019-02-28" who="https://www.manuscripta.se/person/100380">Added support material</change>
             <change status="draft" when="2016-02-08" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>
