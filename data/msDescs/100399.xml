@@ -30,7 +30,7 @@
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sverige</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
-                        <institution ref="https://www.manuscripta.se/org/FEL">Uppsala universitet</institution>
+                        <institution ref="https://www.manuscripta.se/org/100011">Uppsala universitet</institution>
                         <repository ref="https://www.manuscripta.se/place/100092">Uppsala universitetsbibliotek</repository>
                         <idno type="shelfmark">B 68</idno>
                         <altIdentifier>
@@ -46,8 +46,8 @@
                                     <p/>
                                 </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="9"/>
-                                    <measure type="rightFlyleaves" quantity="8"/>
+                                    <measure type="leftFlyleaves" quantity="9" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="8" unit="folios"/>
                                 </extent>
                                 <foliation>9 ofolierade pappersblad först; nyare foliering 1-151 i övre högerhörn på rectosidorna; 8 ofolierade pappersblad sist</foliation>
                             </supportDesc>
@@ -82,30 +82,12 @@
                                 <note>Ägaranteckning. <quote>R</quote>, på <locus from="1r" to="1r" scheme="folios"/> med punkt över och därefter, tillagt av annan hand: <quote>(Redin)</quote>
                                 </note>
                             </p>
-                            <p>
-                                <locus from="1v" to="1v" scheme="folios"/>
-                                <note>Anteckning. Pennprov.</note>
-                            </p>
-                            <p>
-                                <locus from="3r" to="3r" scheme="folios"/>
-                                <note>Ägaranteckning. Under den utskrapade bilden: <quote>N. Rommel</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="151v" to="151v" scheme="folios"/>
-                                <note>Annotatio scriptoris: latinæ. <quote>A[nno domini] m° cd xxx est completus</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="ryggen" to="ryggen" scheme="folios"/>
-                                <note>Anteckning. Ryggtitel (se bokbandsbeskrivningen).</note>
-                            </p>
                         </additions>
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-7">Helband i papp</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-2">överdragsmaterial i pergament</term>; vit överdragsfärg; 3 infällda bind; </p>
-                                <p>
+                                    <note type="description">
+                                        <term>Helband i papp med överdrag av pergament</term>; överdragsfärg: vit; 3 infällda bind</note>
                                     <dimensions type="binding">
                                         <height quantity="180" unit="mm"/>
                                         <width quantity="135" unit="mm"/>
@@ -119,25 +101,38 @@
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance from="" to="">
-                            <quote>N. Rommel</quote> Ägardatering: <date>-</date> Ägarperiod: -</provenance>
-                        <provenance from="1700?" to="1786?">
-                            <quote>-</quote> Ägardatering: <date>-</date> Ägarperiod: 1700?-1786?</provenance>
-                        <provenance from="1750?" to="1832?">
-                            <quote>R [med punkt över]</quote> Ägardatering: <date>-</date> Ägarperiod: 1750?-1832?</provenance>
-                        <provenance from="1832" to="1846">
-                            <quote>Tillhör Hr Großhandlaren H. Ekström</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date>1832</date> Ägarperiod: 1832-1846</provenance>
-                        <provenance from="1846" to="1855">
-                            <quote>[tillagt efter H. Ekströms ägarnotis:] af Sonen v. Häradshöfdingen Knut Ekström förärat till Upsala Acad. Bibliothek Decemb. 1855</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date notAfter="1855"/> Ägarperiod: 1846-1855</provenance>
-                        <provenance from="1855" to=""> Ägarperiod: 1855-</provenance>
-                        <provenance from="" to="">
-                            <quote>R [med punkt över; därefter, möjligen av Schlyters hand:] (Redin)</quote> Ägarperiod: till 1832</provenance>
+                        <provenance xml:id="prov-807">
+                            <persName ref="https://www.manuscripta.se/person/101018">Nils Rommel</persName>
+                            <date/> Ägarnotis: N. Rommel</provenance>
+                        <provenance xml:id="prov-634">
+                            <persName ref="https://www.manuscripta.se/person/101059">Daniel Solander</persName>, <date from="1700?" to="1786?">1700?-1786?</date> Ägarnotis: -</provenance>
+                        <provenance xml:id="prov-417">
+                            <persName ref="https://www.manuscripta.se/person/101003">J. Redin</persName>, <date from="" to="">till 1832</date> Ägarnotis: R [med punkt över; <locus from="1r" to="1r" scheme="folios"/> därefter, möjligen av Schlyters hand:] (Redin)</provenance>
+                        <provenance xml:id="prov-318">
+                            <persName ref="https://www.manuscripta.se/person/100707">Henric Ekström</persName>, <date from="1832" to="1846">1832-1846</date> Ägarnotis: Tillhör Hr Großhandlaren H. Ekström, 0:<locus from="1r" to="1r" scheme="folios"/></provenance>
+                        <provenance xml:id="prov-444">
+                            <persName ref="https://www.manuscripta.se/person/100708">Knut Ekström</persName>, <date from="1846" to="1855">1846-1855</date> Ägarnotis: [tillagt efter H. Ekströms ägarnotis:] af Sonen v. Häradshöfdingen Knut Ekström förärat till Upsala Acad. Bibliothek Decemb. 1855, P2</provenance>
+                        <acquisition xml:id="prov-1074">
+                            <orgName ref="https://www.manuscripta.se/org/100097">Uppsala Universitetsbibliotek</orgName>, <date from="1855" to="">1855-</date>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100781">Gösta Holm (1988)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100513">Schlyter (1834)</title>
+                                <citedRange from="455" to="456" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100551">Schlyter (1862)</title>
+                                <citedRange from="XXXI" to="XXXI" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100781">Holm (1988)</title>
                                 <citedRange from="42" to="43" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101365">Åström (2003)</title>
+                                <citedRange from="" to="" unit="page"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -145,96 +140,54 @@
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
-                        <msContents>
+                        <msContents class="lagbok">
                             <textLang mainLang="non-swe"/>
                             <msItem>
                                 <locus from="2r" to="2r" scheme="folios"/>
                                 <textLang mainLang="la"/>
-                                <title type="uniform" key="Geete_ Åström_1182.91">Evangelium secundum Ioannem 1: 1-14</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100835">Evangelium secundum Ioannem 1:1-14</title>
                                 <rubric>Ingen</rubric>
-                                <note>Nästan utplånad text.</note>
                             </msItem>
                             <msItem>
                                 <locus from="3v" to="3v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4064.1">Magnus Erikssons landslag: Innehållsförteckning</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103124">Magnus Erikssons landslag: Innehållsförteckning</title>
                                 <rubric>Ingen</rubric>
-                                <note>Omfattar även Kyrkobalken. I slutet upptas Gårdsrätten och ytterligare en text, som kanske aldrig har funnits.</note>
                             </msItem>
                             <msItem>
                                 <locus from="3v" to="17v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4052">Östgötalagen: Kyrkobalken (Kristnu balkär)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103090">Östgötalagen: Kyrkobalken (Kristnu balkär)</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="17v" to="151v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_4061033 Åström_4060">Magnus Erikssons landslag (MELL)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103105">Magnus Erikssons landslag (MELL)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103169">Ad. Noreen (1892-1894)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103181">Emil Hildebrand (1897)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103184">Harald Hjärne (1895)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103219">Emil Hildebrand (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103220">Sprinchorn (1889)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103375">Alving (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103471">Ad. Noreen (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103727">Ad. Noreen (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104511">C. J. Schlyter (1862)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104572">Henrik Cornell (1943)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104590">Olson (1956)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104593">Åke Holmbäck och Elias Wessén (1962)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104648">Per-Axel Wiktorsson (1989)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104693">Olson (1909)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104694">Olson (1917)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104572">Cornell (1943)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="151v" to="151v" scheme="folios"/>
-                                <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_84 Åström_840">Lagrim (Rim ur lagböcker)</title>
+                                <textLang mainLang="la"/>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103612">Annotatio scriptoris: latinæ</title>
                                 <rubric>Ingen</rubric>
-                                <note>
-                                    <quote>A yorde man tha ey bethre lefwer än man [then fatthige ?] almose gefwr</quote>
-                                </note>
                             </msItem>
                             <msItem>
                                 <locus from="151v" to="151v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_9050">Mot kåta pigor, ur norska lagen</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100720">Lagrim (Rim ur lagböcker)</title>
                                 <rubric>Ingen</rubric>
-                                <note>Troligen så.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="151v" to="151v" scheme="folios"/>
+                                <textLang mainLang="non-swe"/>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103770">Mot kåta pigor, ur norska lagen</title>
+                                <rubric>Ingen</rubric>
                             </msItem>
                         </msContents>
                         <physDesc>
@@ -248,7 +201,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="151"/>
+                                        <measure type="textblockLeaves" quantity="151" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <signatures>Gammal läggnumrering i brunt bläck med arabiska siffror, som delvis skadats eller bortskurits, från och med nuvarande lägg 3 i övre högerhörnet på läggens förstasida (de skadade numren markerade med frågetecken): 2? <locus from="9r" to="9r" scheme="folios"/>, 3 <locus from="17r" to="17r" scheme="folios"/>, 5 (rest) <locus from="33r" to="33r" scheme="folios"/>, 6 <locus from="40r" to="40r" scheme="folios"/>, 7 <locus from="47r" to="47r" scheme="folios"/>, 8? <locus from="56r" to="56r" scheme="folios"/>, 9? <locus from="63r" to="63r" scheme="folios"/>, 10 <locus from="71r" to="71r" scheme="folios"/> i nedre margen, 11 f. i nedre margen, 12? <locus from="87r" to="87r" scheme="folios"/>, 13 <locus from="95r" to="95r" scheme="folios"/>, 16 <locus from="123r" to="123r" scheme="folios"/> och 18 <locus from="143r" to="143r" scheme="folios"/>. Därtill en något yngre numrering av nuvarande lägg 3-8 med de romerska siffrorna II-VII i
@@ -258,68 +211,88 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="26">
-                                        <locus from="1r" to="151v" scheme="folios"/>
+                                        <locus from="1r" to="151v"/>
                                         <dimensions type="written">
-                                            <height unit="mm"/>
+                                            <height quantity="125" unit="mm"/>
                                             <width quantity="85" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: Linjerad; Textytans höjd: 12.5; Textytans bredd: 8.5; </note>
+                                        <note type="ruling">Linjerad</note>
+                                        <note type="runningHeaders">löpande uppslagsvis i rött</note>
+                                        <note>Textytans bredd: 8,5; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-8">Cursiva gothica recentior</term>; Skrift av en hand Skriftfärg: svart. Röd utmärkningsskrift (streckade bokstäver, flocknummer, paragraftecken, radfyllnader).</handNote>
+                                    <note type="script">Cursiva gothica recentior</note>
+                                    <note type="medium">svart. Röd utmärkningsskrift (streckade bokstäver, flocknummer, paragraftecken, radfyllnader)</note>
+                                    <note>Skriven av en hand. Tillägg i slutet av flera händer.</note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1v" to="1v" scheme="folios"/>
+                                    <note>Anteckning. Pennprov.</note>
+                                </p>
+                                <p>
+                                    <locus from="3r" to="3r" scheme="folios"/>
+                                    <note>Ägaranteckning. Under den utskrapade bilden: <quote>N. Rommel</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="ryggen" to="ryggen" scheme="folios"/>
+                                    <note>Anteckning. Ryggtitel (se bokbandsbeskrivningen).</note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="initials">Initial <locus from="2r" to="2r" scheme="folios"/> (i form av en fisk) och vid balkarnas början Initialfärg: röd, gul, mörkgrön</decoNote>
                                 <decoNote type="lombards">Enfärgade röda, mörkgröna/svarta eller tvåfärgade lombarder i flockbörjan</decoNote>
-                                <decoNote type="images">
-                                    <locus from="2v" to="2v" scheme="folios"/> Tronande Kristus. Med skadade språkband, till vänster <quote>Venite Benedicti pa[tris …]</quote>, till höger <quote>Jte maledicti ig[ne …]</quote>
+                                <decoNote type="image">
+                                    <locus from="(2v" to="(2v" scheme="folios"/> Tronande Kristus. Med skadade språkband, till vänster <quote>Venite Benedicti pa[tris …]</quote>, till höger <quote>Jte maledicti ig[ne …]</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="3r" to="3r" scheme="folios"/> Utskrapad helsidesbild av korsfästelsen.</decoNote>
-                                <decoNote type="images">
-                                    <locus from="5r" to="5r" scheme="folios"/> Kyrka.</decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
+                                    <locus from="(5r i KkB.)" to="(5r i KkB.)" scheme="folios"/> Kyrka.</decoNote>
+                                <decoNote type="image">
                                     <locus from="19v" to="19v" scheme="folios"/> Kung. Bildtext: <quote>konungx balk</quote>. Språkband: <quote>data est ei potestas</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="35v" to="35v" scheme="folios"/> Trolovningsscen med kvinna och man. Bildtext: <quote>Giftamalz Balk</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="43v" to="43v" scheme="folios"/> Arvskiftesscen med man och kvinna, kanna och smörkärna. Bildtext: <quote>Arfuatha bal[k]</quote>. Språkband: [han:] <quote>fa mik kannan hafui kärnan</quote>; [hon:] <quote>kanna är bätra</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="50r" to="50r" scheme="folios"/> Landskap. Bildtext: <quote>IORHTA BALK</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="61r" to="61r" scheme="folios"/> Man med spade.</decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="88r" to="88r" scheme="folios"/> Krämarbod med kvinnlig kund och köpman. Bildtext: <quote>köpmän balk</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="92v" to="92v" scheme="folios"/> Tingsscen med två män. Bildtext: <quote>Thiinkxmal bal</quote>. Språkband: [man 1:] <quote>las saa at iak ma nogit fo</quote> [man 2:] <quote>Jak gör ok sua</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="103v" to="103v" scheme="folios"/> Man med yxa ovanför en person som lutar sig ut ur ett hus över en liggande, sårad (?) person.</decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="114v" to="114v" scheme="folios"/> Kvinna som dräper ett spädbarn. Bildtext: <quote>Höchmelz bal[k]</quote>. Språkband: [barnet:] <quote>kiara mother</quote>, [kvinnan:] <quote>vil iak thiit lyff vnna tha kallas iak drauls kona</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="119v" to="119v" scheme="folios"/> Blodig, av svärd genomstucken man, och man med svärd lyft över huvudet. Tvådelat språkband: (a) <quote>thu scalt hafua mera [?] til</quote>. (b) <quote>migh hauer tak</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="128r" to="128r" scheme="folios"/> Man har fällt träd över annan man. Språkband: <quote>hielp för gudz skuld</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="132v" to="132v" scheme="folios"/> Man sticker annan man med kniv. Språkband: [man 1]: <quote>haui thu thet</quote>, [man 2:] <quote>thet gialihi [?] thit lif [?]</quote>
                                 </decoNote>
-                                <decoNote type="images">
+                                <decoNote type="image">
                                     <locus from="137v" to="137v" scheme="folios"/> En man som ber en annan om ursäkt för vådasår. Bildtext: <quote>Saar medh uada</quote>. Språkband: [man 1:] <quote>thet är myk a mot</quote> [man 2:] <quote>iak forlata tyk thet</quote>
                                 </decoNote>
-                                <decoNote type="images">
-                                    <locus from="144r" to="144r" scheme="folios"/> Hängd man. Bildtext: <quote>Thiufua balk</quote>. Språkband: [vänster:] <quote>lifhta vtan agha thy hafuer then plagha</quote>, [höger:] <quote>agha bonda barn i tyt [?] tha komba ey hyth</quote>
+                                <decoNote type="image">
+                                    <locus from="144r" to="144r" scheme="folios"/> Hängd man. Bildtext: <quote>Thiufua balk</quote>. Språkband: [vänster:] <quote>liffha vtan agha thy hafuer then plagha</quote>, [höger:] <quote>agha bonda barn i tyt tha komba ey hyth</quote>
                                 </decoNote>
                             </decoDesc>
                         </physDesc>
@@ -327,9 +300,8 @@
                             <origin>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/FEL">Östergötland (?)</placeName>
-                                </origPlace>
-                                <origDate>1430</origDate>
+                                    <placeName cert="low" ref="https://www.manuscripta.se/place/100115">Östergötland</placeName>
+                                </origPlace>, <origDate when="1430">1430</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -337,7 +309,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>

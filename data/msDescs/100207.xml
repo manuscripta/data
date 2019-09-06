@@ -47,8 +47,8 @@
                                     <p/>
                                 </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="1"/>
-                                    <measure type="rightFlyleaves" quantity="1"/>
+                                    <measure type="leftFlyleaves" quantity="1" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
                                 <foliation/>
                             </supportDesc>
@@ -58,32 +58,12 @@
                                 <locus from="LCI" to="LCI" scheme="other"/>
                                 <note>Biblioteksmärke. KB:s exlibris.</note>
                             </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Anteckning. <quote>Inskr. 31 juli 1886.</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Anteckning. <quote>Original af Henricus Tidemanni</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Anteckning. <quote>Detta blad var klistradt på frampermen af Birgittas Uppenbarelser fragment med Antiquitets Arkivets signatur A. 5: b.</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Anteckning. <quote>Tryckt 1886 i Samlaren.</quote>
-                                </note>
-                            </p>
                         </additions>
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-4">Halvfranskt band i papp</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-5">överdragsmaterial i papper med pergamentskoning</term>; grå, blå, brun och vit marmorering; brun skinnskoning överdragsfärg; </p>
-                                <p>
+                                    <note type="description">
+                                        <term>Halvfranskt band i papp med överdrag av papper med pergamentskoning</term>; överdragsfärg: grå, blå, brun och vit marmorering; brun skinnskoning</note>
                                     <dimensions type="binding">
                                         <height quantity="380" unit="mm"/>
                                         <width quantity="275" unit="mm"/>
@@ -91,14 +71,31 @@
                                     </dimensions>
                                 </p>
                                 <decoNote type="tooling">Fram: "A 5 c" i guldtryck i nedre vänsterkant.</decoNote>
+                                <condition>Lösgjort från frampärmen till A 5 b och inbundet 1886.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <acquisition>Till Kungliga biblioteket (oklart)</acquisition>
+                        <provenance xml:id="prov-1826">
+                            <orgName ref="https://www.manuscripta.se/org/100098">Vadstena kloster</orgName>, <date from="" to="">till 1595?</date>
+                        </provenance>
+                        <provenance xml:id="prov-1827">
+                            <persName ref="https://www.manuscripta.se/person/100532">Elias Brenner</persName>
+                            <date notAfter="1717"/> Ägarnotis: Såld på Brenners auktion, nr 65 fol.</provenance>
+                        <provenance xml:id="prov-1828">
+                            <orgName ref="https://www.manuscripta.se/org/100059">Antikvitetsarkivet</orgName>, <date from="1717?" to="1780">1717?-1780</date>
+                        </provenance>
+                        <acquisition xml:id="prov-1668">
+                            <orgName ref="https://www.manuscripta.se/org/100004">Stockholm, Kungliga biblioteket</orgName>, <date from="1780" to="">1780-</date>
+                        </acquisition>
                     </history>
                     <additional>
-                        <listBibl/>
+                        <listBibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100964">Wessén (1949)</title>
+                                <citedRange from="XIX" to="XX, 13" unit="page"/>
+                            </bibl>
+                        </listBibl>
                     </additional>
                     <msPart>
                         <msIdentifier>
@@ -110,17 +107,18 @@
                                 <locus from="1r" to="1r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Henrik Tidemansson (Henricus Tidemanni)</persName>
+                                    <persName><!--KOLLA-->Henrik Tidemansson (Henricus Tidemanni)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_254 Åström_2540">Råd till klosterfolk</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101475">Råd till klosterfolk</title>
                                 <rubric>Ingen</rubric>
-                                <note>Början av texten är oläslig.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102365">Klemming (1883-1886)</title>
+                                        <citedRange from="234" to="237" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102373">Klemming (1885)</title>
+                                        <citedRange from="174" to="177" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -135,25 +133,53 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="1"/>
+                                        <measure type="textblockLeaves" quantity="1" unit="folios"/>
                                     </extent>
                                     <collation/>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="49">
-                                        <locus from="1r" to="1v" scheme="folios"/>
+                                        <locus from="1r" to="1v"/>
                                         <dimensions type="written">
                                             <height quantity="240" unit="mm"/>
                                             <width quantity="250" unit="mm"/>
                                         </dimensions>
-                                        <note/>
+                                        <note>Textytans bredd: 25; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-8">Cursiva gothica recentior</term>; Skrift av en hand Skriftfärg: brun rad 1-39, svart rad 39 (slutet) - 49.</handNote>
+                                    <note type="script">Cursiva gothica recentior</note>
+                                    <note type="medium">brun rad 1-39, svart rad 39 (slutet) - 49</note>
+                                    <note>Skriven av en hand</note>
+                                    <note type="scribe">
+                                        <persName ref="https://www.manuscripta.se/person/100558"/>, <placeName ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>
+                                    </note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Anteckning. <quote>Inskr. 31 juli 1886.</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Anteckning. <quote>Original af Henricus Tidemanni</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Anteckning. <quote>Detta blad var klistradt på frampermen af Birgittas Uppenbarelser fragment med Antiquitets Arkivets signatur A. 5: b.</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Anteckning. <quote>Tryckt 1886 i Samlaren.</quote>
+                                    </note>
+                                </p>
+                            </additions>
                             <decoDesc/>
                         </physDesc>
                         <history>
@@ -161,8 +187,7 @@
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
                                     <placeName ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>
-                                </origPlace>
-                                <origDate>1495</origDate>
+                                </origPlace>, <origDate when="1495">1495</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -170,7 +195,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -190,27 +215,27 @@
             <graphic url="kb-a-005c_0002_LCI.tif" height="4673px" width="3399px"/>
         </surface>
         <surface xml:id="ms-100207_SL001r">
-            <desc>f. SL001r</desc>
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="kb-a-005c_0003_SL001r.tif" height="4673px" width="3399px"/>
         </surface>
         <surface xml:id="ms-100207_SL001v">
-            <desc>f. SL001v</desc>
+            <desc>⟨f. Iv⟩</desc>
             <graphic url="kb-a-005c_0004_SL001v.tif" height="4673px" width="3399px"/>
         </surface>
         <surface xml:id="ms-100207_S001r">
-            <desc>f. S001r</desc>
+            <desc>⟨f. 1r⟩</desc>
             <graphic url="kb-a-005c_0005_S001r.tif" height="4673px" width="3399px"/>
         </surface>
         <surface xml:id="ms-100207_S001v">
-            <desc>f. S001v</desc>
+            <desc>⟨f. 1v⟩</desc>
             <graphic url="kb-a-005c_0006_S001v.tif" height="4673px" width="3399px"/>
         </surface>
         <surface xml:id="ms-100207_SR001r">
-            <desc>f. SR001r</desc>
+            <desc>⟨f. I´r⟩</desc>
             <graphic url="kb-a-005c_0007_SR001r.tif" height="4673px" width="3399px"/>
         </surface>
         <surface xml:id="ms-100207_SR001v">
-            <desc>f. SR001v</desc>
+            <desc>⟨f. I´v⟩</desc>
             <graphic url="kb-a-005c_0008_SR001v.tif" height="4673px" width="3399px"/>
         </surface>
         <surface xml:id="ms-100207_RCI">

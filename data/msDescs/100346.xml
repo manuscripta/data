@@ -45,18 +45,13 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="0"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="leftFlyleaves" quantity="0" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
                                 <foliation>Två ofolierade pergamentblad först, därefter äldre foliering 1-201 (146:1 överhoppad), fortsatt av något yngre hand 226-253, samt av ännu yngre hand (J. A. Ahlstrand?) 254-272 i övre högerhörn på rectosidorna</foliation>
                             </supportDesc>
                         </objectDesc>
                         <additions>
-                            <p>
-                                <locus from="ryggen" to="ryggen" scheme="folios"/>
-                                <note>Biblioteksmärke. <quote>D 2</quote>
-                                </note>
-                            </p>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
                                 <note>Anteckning. <quote>Spegelbergs bok</quote>
@@ -88,25 +83,15 @@
                             </p>
                             <p>
                                 <locus from="0:1r" to="0:1r" scheme="folios"/>
-                                <note>GutasaganHistoriæ Gottlandiæ. I nedre margen: <quote>Hec ex cronica Gotlandorum</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Skrivarvers. <quote>assit ad inceptum sancta maria meum</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="184v" to="184v" scheme="folios"/>
-                                <note>Skrivarnotis: svenska. <quote>then hona screff hett iogan prest han pläga wara pa noret mest […] äpther gudz ffödzle xv hundrade aar och ther til xx som scriffuith staar om man legger ther til thry war thenna boken scriffuit aa ny</quote>
+                                <note>Gutasagan. I nedre margen: <quote>Hec ex cronica Gotlandorum</quote>
                                 </note>
                             </p>
                         </additions>
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-1">Helband i trä</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-1">överdragsmaterial i skinn</term>; brun överdragsfärg; 3 bind; Fram två beslag (hakar) i framkant, bak två beslag med remrester i framkant..</p>
-                                <p>
+                                    <note type="description">
+                                        <term>Helband i trä med överdrag av skinn</term>; överdragsfärg: brun; 3 bind; Fram två beslag (hakar) i framkant, bak två beslag med remrester i framkant.</note>
                                     <dimensions type="binding">
                                         <height quantity="295" unit="mm"/>
                                         <width quantity="105" unit="mm"/>
@@ -114,31 +99,92 @@
                                     </dimensions>
                                 </p>
                                 <decoNote type="tooling">Fram och bak: Yttre dubbla lodräta tre- och fyrlinjiga ramar med blomornament (rulle, 50220) emellan, upptill och nertill tre vågräta delfält av samma typ som de lodräta, med samma ornament. I mittfälten plattstämplar med granatäpplen (10947), och enkla bladverk (10478) i hörnen och halvcirklarna mellan de stora stämplarna. Ryggen: enkla linjer kring binden. (Sten G. Lindberg: B 8)</decoNote>
+                                <condition>Bandet har gammal lagning av hörn och rygg (som spruckit).</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance from="1500?" to="1527?">
-                            <quote>[vapensköld]</quote> Ägardatering: <date>-</date> Ägarperiod: 1500?-1527?</provenance>
-                        <provenance from="1600?" to="1650?">
-                            <quote>[donationsanteckning: skänkte boken till riksarkivet]</quote> Ägardatering: <date>-</date> Ägarperiod: 1600?-1650?</provenance>
-                        <provenance from="1650?" to="1700?">
-                            <quote>Thenne Book hafwer Hans Excell. Grefwe Johan Oxenstierna skenckt till Archivum</quote> Ägardatering: <date>-</date> Ägarperiod: 1650?-1700?</provenance>
-                        <provenance from="1700?" to="1780"> Ägarperiod: 1700?-1780</provenance>
+                        <provenance xml:id="prov-278">
+                            <persName ref="https://www.manuscripta.se/person/100531">Hans Brask</persName>, <date from="1500?" to="1527?">1500?-1527?</date> Ägarnotis: [vapensköld], P2, P3</provenance>
+                        <provenance xml:id="prov-364">
+                            <persName ref="https://www.manuscripta.se/person/100958">Johan (Axelsson) Oxenstierna (till Södermöre)</persName>, <date from="" to="">före 1657?</date> Ägarnotis: [donationsanteckning: skänkte boken till antikvitetsarkivet], P2</provenance>
+                        <provenance xml:id="prov-115">
+                            <orgName ref="https://www.manuscripta.se/org/100083">Stockholm, Riksarkivet</orgName>, <date from="1650?" to="1657?">1650?-1657?</date> Ägarnotis: Thenne Book hafwer Hans Excell. Grefwe Johan Oxenstierna skenckt till Archivum</provenance>
+                        <provenance xml:id="prov-1842">
+                            <orgName ref="https://www.manuscripta.se/org/100060">Antikvitetskollegium</orgName>, <date from="1668" to="1692">1668-1692</date>
+                        </provenance>
+                        <provenance xml:id="prov-15">
+                            <orgName ref="https://www.manuscripta.se/org/100059">Antikvitetsarkivet</orgName>, <date from="1668?" to="1780">1668?-1780</date>
+                        </provenance>
+                        <acquisition xml:id="prov-1844">
+                            <orgName ref="https://www.manuscripta.se/org/100004">Stockholm, Kungliga biblioteket</orgName>, <date from="1780" to="">1780-</date>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100692">J. A. Ahlstrand [egentl. G. E. Klemming] (1853)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100692">Ahlstrand (1853)</title>
                                 <citedRange from="227" to="227" unit="page"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100704">G. E. Klemming (1867-1868)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100704">Klemming (1867-1868)</title>
                                 <citedRange from="243" to="246" unit="page"/>
                             </bibl>
                             <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100718">Klemming (1881-1882)</title>
+                                <citedRange from="529 (25, 376, 450, 421)" to="529 (25, 376, 450, 421)" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100743">Pipping (1921)</title>
+                                <citedRange from="I" to="I" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100745">Noreen (1927)</title>
+                                <citedRange from="VII" to="VII" unit="page"/>
+                            </bibl>
+                            <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100766">Ljunggren (1959)</title>
-                                <citedRange from="11" to="15, 67" unit="page"/>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100770">Pipping (1963)</title>
+                                <citedRange from="I" to="I" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101340">Jonsson (2010)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101301">Hedlund (1980)</title>
+                                <citedRange from="47" to="47" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101358">Brøndum-Nielsen (1944)</title>
+                                <citedRange from="125" to="126" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100911">Gunneng (1981)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101419">Gödel (1916)</title>
+                                <citedRange from="5, 6, 40, 53, 54, 272, 298, 301" to="5, 6, 40, 53, 54, 272, 298, 301" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101022">Arkiv för nordisk filologi ; 77 (1962)</title>
+                                <citedRange from="125" to="197" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101518">Nyerup (1816)</title>
+                                <citedRange from="101" to="105" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101422">Carlquist (2002)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101520">Raneke (2001)</title>
+                                <citedRange from="703" to="703" unit="page"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -149,291 +195,155 @@
                         <msContents>
                             <textLang mainLang="non-swe"/>
                             <msItem>
+                                <locus from="1r" to="1r" scheme="folios"/>
+                                <textLang mainLang="non-swe"/>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103613">Skrivarvers</title>
+                                <rubric>Ingen</rubric>
+                            </msItem>
+                            <msItem>
                                 <locus from="1r" to="46v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_48856 Åström_480">Erikskrönikan (Gamla krönikan. 1229-1319)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100645">Erikskrönikan (Gamla krönikan. 1229-1319)</title>
                                 <rubric>Ingen</rubric>
-                                <note>Efter texten på <locus from="46v" to="46v" scheme="folios"/> är en rad utskrapad, som möjligen varit en latinsk skrivarnotis som slutat med <quote>deo gracias</quote>
-                                </note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102732">Klemming (1865-1866)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103141">Ad. Noreen (1892-1894)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103173">Emil Hildebrand (1897)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103211">Emil Hildebrand (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103223">Sprinchorn (1889)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103238">Richard Steffen (1905)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103255">Richard Steffen (1910)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103268">Ernst Lagus (1906)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103280">Berggren (1907)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103304">Sverker Ek &amp; Josua Mjöberg (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103309">S. Ek och J. Mjöberg (1935)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103315">J. Mjöberg (1937)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103363">Ekermann (1919)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103364">Ekermann (1940)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103365">Ekermann (1929)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103366">Ekermann (1936)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103367">Ekermann (1923)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103380">Alving (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103392">Alving (1934)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103408">G. Montelin och J. Berg (1930)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103421">G. Montelin och J. Berg (1935)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103435">Montelin (1939)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103440">Ad. Noreen (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103496">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103535">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103549">E. Noreen o. T. Wernström (1933)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103569">Richard Steffen (1918)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103591">Richard Steffen (1924)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103609">Elias Wessén (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103626">Elias Wessén (1936)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103702">Ad. Noreen (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104638">Rolf Pipping (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104647">Rolf Pipping (1963)</title>
+                                        <citedRange from="1" to="155" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="46v" to="53r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_517">Del av Stora rimkrönikan, redaktion I-III: "Förbindelsedikten", fortsättning (för åren 1319-89) av Gamla krönikan (Erikskrönikan) för att sammanbinda den med den Nya till ett helt verk</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100651">Del av Stora rimkrönikan, redaktion I-III: "Förbindelsedikten", fortsättning (för åren 1319-89) av Gamla krönikan (Erikskrönikan) för att sammanbinda den med den Nya till ett helt verk</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">[D]Rotzeten skuld rikzens förstondere vara … [<locus from="53r" to="53r" scheme="folios"/> rad 6] oc j thera land mechilborg friit</incipit>
-                                <note>Tillsammans med Nya krönikan.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102730">Klemming (1865-1866)</title>
+                                        <citedRange from="171" to="192" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="53r" to="141r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_50857 Åström_500">Karlskrönikan (Nya krönikan. 1389-1452)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100646">Karlskrönikan (Nya krönikan. 1389-1452)</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">[<locus from="53r" to="53r" scheme="folios"/> rad 7] [S]Jdan riket kom til drotningen handa … han komber aldrik leffwandis J geen</incipit>
-                                <note>Tillsammans med Förbindelsedikten. På <locus from="76v" to="76v" scheme="folios"/> och <locus from="78r" to="78r" scheme="folios"/> har sju respektive åtta rader, som skrivaren har lämnat plats för, ifyllts av Hadorph (enligt Klemming, SFSS 17:3 s. 244). På <locus from="99r" to="101v" scheme="folios"/>, som är tomma, har plats lämnats för verserna 5046-5299. F. <locus from="141v" to="147v" scheme="folios"/> är tomma.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102738">Klemming (1866-1867)</title>
+                                        <citedRange>1-330, 332-372</citedRange>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103142">Ad. Noreen (1892-1894)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103174">Emil Hildebrand (1897)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103212">Emil Hildebrand (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103239">Richard Steffen (1905)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103256">Richard Steffen (1910)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103281">Lundegård (1913)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103381">Alving (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103393">Alving (1934)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103441">Ad. Noreen (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103493">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103532">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103570">Richard Steffen (1918)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103592">Richard Steffen (1924)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103703">Ad. Noreen (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104566">Oscar Wieselgren (1938)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104566">Wieselgren (1938)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="148r" to="184v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_69870 Åström_690">Hertig Fredrik av Normandie</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100697">Hertig Fredrik av Normandie</title>
                                 <rubric>Aff k artus oc herre fredrik</rubric>
                                 <incipit xml:lang="non-swe">Thette ewentÿr och börias her wilin i höra huru thet är</incipit>
+                            </msItem>
+                            <msItem>
+                                <locus from="184v" to="184v" scheme="folios"/>
+                                <textLang mainLang="non-swe"/>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103606">Skrivarnotis: svenska</title>
+                                <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104470">G. W. Gumælius (1822)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103051">Beckman (1917)</title>
+                                        <citedRange from="114" to="114" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104617">J. A. Ahlstrand [egentl. G. E. Klemming] (1853)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103055">Beckman (1917)</title>
+                                        <citedRange from="156" to="156" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104640">Erik Noreen (1927)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103059">Beckman (1917)</title>
+                                        <citedRange from="194" to="194" unit="page"/>
+                                    </bibl>
+                                    <bibl>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103061">Beckman (1917)</title>
+                                        <citedRange from="217" to="217" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="184v" to="187r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_72 Åström_720">Paris och Vienna (fragment: endast början)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100702">Paris och Vienna (fragment: endast början)</title>
                                 <rubric>Här börias een lustelich historia aff en eddla Riddara i francariike ther heet pariis Oc then sköne Jomffru vienna […]</rubric>
-                                <note>F. <locus from="187v" to="228v" scheme="folios"/> tomma.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102873">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103145">Ad. Noreen (1892-1894)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103444">Ad. Noreen (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103501">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103540">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103706">Ad. Noreen (1904)</title>
+                                        <citedRange from="443" to="450" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="229r" to="247v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_56 Åström_560">Olav den heliges saga</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100669">Olav den heliges saga</title>
                                 <rubric>Historia sancti olaj</rubric>
-                                <note>F. <locus from="248r" to="252v" scheme="folios"/> tomma.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102863">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104436">J. Hadorph (1675)</title>
+                                        <citedRange from="313" to="376" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="253r" to="262r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_452 Åström_4521">Om Halland och Skåne (Tre av kung Valdemar av Danmarks förskrivningar på Skåne, Halland, Blekinge in under Sverige till evig tid)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103353">Om Halland och Skåne (Tre av kung Valdemar av Danmarks förskrivningar på Skåne, Halland, Blekinge in under Sverige till evig tid)</title>
                                 <rubric>paa halland oc skane</rubric>
-                                <note>Se följande tre brev.</note>
                             </msItem>
                             <msItem>
                                 <locus from="(253r" to="256r)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4521.1">Kung Valdemar av Danmark stadfäster greve Johans av Holstein överlåtelse av Skåne, Blekinge, Lister och ön Ven, till kung Magnus av Sverige m.m. Helsingborg, 3 januari 1341 (DS. 3537a)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103354">Kung Valdemar av Danmark stadfäster greve Johans av Holstein överlåtelse av Skåne, Blekinge, Lister och ön Ven, till kung Magnus av Sverige m.m. Helsingborg, 3 januari 1341 (DS. 3537a)</title>
                                 <rubric>Sv. Dipl. N. 3537.a. [tillagt av 1800-talshand]</rubric>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102295">Bror Emil Hildebrand (1858-1865)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102295">Hildebrand (1858-1865)</title>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103830">Johan Hadorphio (1676)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103830">Hadorph (1676)</title>
+                                        <citedRange><locus from="19r" to="23r" scheme="folios"/></citedRange>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="(256r" to="261r)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4521.2">Kung Valdemar av Danmark säljer till kung Magnus av Sverige hela Skåne och hela Halland samt Blekinge, Lister och ön Ven m.m. Varberg, 18 november 1343 (DS. 3741a)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103355">Kung Valdemar av Danmark säljer till kung Magnus av Sverige hela Skåne och hela Halland samt Blekinge, Lister och ön Ven m.m. Varberg, 18 november 1343 (DS. 3741a)</title>
                                 <rubric>Sv. Dipl. N. 3741.a. [tillagt av 1800-talshand]</rubric>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102296">Bror Emil Hildebrand (1858-1865)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102296">Hildebrand (1858-1865)</title>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/107006">Johan Hadorphio (1676)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/107006">Hadorph (1676)</title>
+                                        <citedRange><locus from="24r" to="30r" scheme="folios"/></citedRange>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="(261r" to="262r)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4521.3">Kung Valdemar ger kung Magnus, hans arvingar och efterträdare samt Sveriges krona skötning på de avträdda landskapen Skåne, Halland, Blekinge, Lister och ön Ven m.m. Varberg, 20 november 1343 (DS. 3747a)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103356">Kung Valdemar ger kung Magnus, hans arvingar och efterträdare samt Sveriges krona skötning på de avträdda landskapen Skåne, Halland, Blekinge, Lister och ön Ven m.m. Varberg, 20 november 1343 (DS. 3747a)</title>
                                 <rubric>Sv. Dipl. N. 3747.a. [tillagt av 1800-talshand]</rubric>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102297">Bror Emil Hildebrand (1858-1865)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102297">Hildebrand (1858-1865)</title>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/107007">Johan Hadorphio (1676)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/107007">Hadorph (1676)</title>
+                                        <citedRange><locus from="30r" to="31r" scheme="folios"/></citedRange>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -441,29 +351,31 @@
                                 <locus from="267r" to="268r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Henrik Tidemansson (Henricus Tidemanni)</persName>
+                                    <persName><!--KOLLA-->Henrik Tidemansson (Henricus Tidemanni)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_79 Åström_790">Kungen</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100714">Kungen</title>
                                 <rubric>Biscop Henriks Rim</rubric>
-                                <note>F. 268 tom.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102175">Geijer (1828)</title>
+                                        <citedRange from="169" to="170" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102879">Klemming (1881-1882)</title>
+                                        <citedRange from="419" to="421" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="269r" to="271v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_621">Om kung Kristian II (tillägg till yngsta redaktionen av Stora rimkrönikan): redaktion 2</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100687">Om kung Kristian II (tillägg till yngsta redaktionen av Stora rimkrönikan): redaktion 2</title>
                                 <rubric>Konung Christierns klippingx kronica</rubric>
                                 <incipit xml:lang="non-swe">Haa gud försmår i alla stund</incipit>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102052">Johannes Hadorphius (1674)</title>
+                                        <citedRange from="586" to="594" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -480,7 +392,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="250"/>
+                                        <measure type="textblockLeaves" quantity="250" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <signatures>Läggsignaturer a-o, r-s på första rectosidan i lägg 2-18 (<locus from="12r" to="12r" scheme="folios"/>, <locus from="24r" to="24r" scheme="folios"/>, <locus from="36r" to="36r" scheme="folios"/>, <locus from="47r" to="47r" scheme="folios"/>, <locus from="63r" to="63r" scheme="folios"/>, <locus from="79r" to="79r" scheme="folios"/>, <locus from="87r" to="87r" scheme="folios"/>, <locus from="101r" to="101r" scheme="folios"/>, <locus from="116r" to="116r" scheme="folios"/>, <locus from="132r" to="132r" scheme="folios"/>, <locus from="147r" to="147r" scheme="folios"/>, <locus from="167r" to="167r" scheme="folios"/>, <locus from="183r" to="183r" scheme="folios"/>, <locus from="239r" to="239r" scheme="folios"/>, <locus from="255r" to="255r" scheme="folios"/>)</signatures>
@@ -489,34 +401,46 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="">
-                                        <locus from="1r" to="250v" scheme="folios"/>
+                                        <locus from="1r" to="250v"/>
                                         <dimensions type="written">
                                             <height min="230" max="250" unit="mm"/>
-                                            <width min="60" max="70" unit="mm"/>
+                                            <width/>
                                         </dimensions>
-                                        <note>Radantal: 50 (oftast); Linjering: A) lång högermarg; i senare delen: B) blinda, vikta höger- och vänstermarger, och C) blinda långa höger- och vänstermarger och korta skrivlinjer; Textytans höjd: 23-25; Textytans bredd: 6-7 ; </note>
+                                        <note type="ruling">A) lång högermarg; i senare delen: B) blinda, vikta höger- och vänstermarger, och C) blinda långa höger- och vänstermarger och korta skrivlinjer</note>
+                                        <note>Radantal: 50 (oftast); Textytans bredd: 6-7 (varierar med verslängderna); </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-8">Cursiva gothica recentior</term>; Sju händer enligt följande (efter Gunneng 1981): hand 1 f. 0:<locus from="1r" to="1r" scheme="folios"/>, marganteckningar på <locus from="52v" to="52v" scheme="folios"/>, <locus from="114v" to="114v" scheme="folios"/>, <locus from="116r" to="116r" scheme="folios"/>, <locus from="119r" to="119r" scheme="folios"/> (Hans Spegelberg); hand 2 <locus from="1r" to="46v" scheme="folios"/> rad 37; hand 3 f. anteckning på frampärmens insida om Halland och Skåne (jfr <locus from="47r" to="47r" scheme="folios"/>), <locus from="46v" to="46v" scheme="folios"/> rad 38-<locus from="78v" to="78v" scheme="folios"/>, <locus from="148r" to="184v" scheme="folios"/> rad 11, <locus from="186r" to="186v" scheme="folios"/> rad 5, <locus from="186v" to="186v" scheme="folios"/> rad 33-<locus from="187r" to="187r" scheme="folios"/>, <locus from="229r" to="247v" scheme="folios"/>, <locus
-                                        from="267r" to="268r" scheme="folios"/>, <locus from="269r" to="271v" scheme="folios"/>; hand 4 <locus from="79r" to="98v" scheme="folios"/>; hand 5 <locus from="101r" to="141r" scheme="folios"/>; hand 6 <locus from="184v" to="184v" scheme="folios"/> rad 12-<locus from="185v" to="185v" scheme="folios"/>, <locus from="186v" to="186v" scheme="folios"/> rad 5-<locus from="186v" to="186v" scheme="folios"/> rad 32 (Hans Brask); hand 7 <locus from="253r" to="262r" scheme="folios"/>. Skriftfärg: svart <locus from="1r" to="46v" scheme="folios"/>, <locus from="101r" to="141r" scheme="folios"/>, <locus from="167v" to="184v" scheme="folios"/>, <locus from="186v" to="187r" scheme="folios"/>, <locus from="253r" to="258r" scheme="folios"/>, <locus from="261v" to="261v" scheme="folios"/> (13 rader), <locus from="267r" to="268r" scheme="folios"/>; brun <locus from="46v" to="98v" scheme="folios"/>, <locus from="148r" to="167v" scheme="folios"/>, <locus
-                                        from="184v" to="186v" scheme="folios"/>, <locus from="229r" to="247v" scheme="folios"/>, <locus from="258v" to="262r" scheme="folios"/>, <locus from="269r" to="271v" scheme="folios"/>.</handNote>
+                                    <note type="script">Cursiva gothica recentior</note>
+                                    <note type="medium">svart <locus from="1r" to="46v" scheme="folios"/>, <locus from="101r" to="141r" scheme="folios"/>, <locus from="167v" to="184v" scheme="folios"/>, <locus from="186v" to="187r" scheme="folios"/>, <locus from="253r" to="258r" scheme="folios"/>, <locus from="261v" to="261v" scheme="folios"/> (13 rader), <locus from="267r" to="268r" scheme="folios"/>; brun <locus from="46v" to="98v" scheme="folios"/>, <locus from="148r" to="167v" scheme="folios"/>, <locus from="184v" to="186v" scheme="folios"/>, <locus from="229r" to="247v" scheme="folios"/>, <locus from="258v" to="262r" scheme="folios"/>, <locus from="269r" to="271v" scheme="folios"/></note>
+                                    <note>Sju händer enligt följande (efter Gunneng 1981): hand 1 f. 0:<locus from="1r" to="1r" scheme="folios"/>, marganteckningar på <locus from="52v" to="52v" scheme="folios"/>, <locus from="114v" to="114v" scheme="folios"/>, <locus from="116r" to="116r" scheme="folios"/>, <locus from="119r" to="119r" scheme="folios"/> (Hans Spegelberg); hand 2 <locus from="1r" to="46v" scheme="folios"/> rad 37; hand 3 f. anteckning på frampärmens insida om Halland och Skåne (jfr <locus from="47r" to="47r" scheme="folios"/>), <locus from="46v" to="46v" scheme="folios"/> rad 38-<locus from="78v" to="78v" scheme="folios"/>, <locus from="148r" to="184v" scheme="folios"/> rad 11, <locus from="186r" to="186v" scheme="folios"/> rad 5, <locus from="186v" to="186v" scheme="folios"/> rad 33-<locus from="187r" to="187r" scheme="folios"/>, <locus from="229r" to="247v" scheme="folios"/>, <locus from="267r" to="268r" scheme="folios"/>, <locus from="269r" to="271v" scheme="folios"
+                                        />; hand 4 <locus from="79r" to="98v" scheme="folios"/>; hand 5 <locus from="101r" to="141r" scheme="folios"/>; hand 6 <locus from="184v" to="184v" scheme="folios"/> rad 12-<locus from="185v" to="185v" scheme="folios"/>, <locus from="186v" to="186v" scheme="folios"/> rad 5-<locus from="186v" to="186v" scheme="folios"/> rad 32 (Hans Brask); hand 7 <locus from="253r" to="262r" scheme="folios"/>.</note>
+                                    <note type="scribe">
+                                        <persName><!--KOLLA-->Hans Brask (?)</persName>
+                                    </note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="ryggen" to="ryggen" scheme="folios"/>
+                                    <note>Biblioteksmärke. <quote>D 2</quote>
+                                    </note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="lombards">Två röda lombarder <locus from="20r" to="20r" scheme="folios"/></decoNote>
-                                <decoNote type="images">P2 och P3 vapensköld</decoNote>
+                                <decoNote type="illuminations">P2 och P3 vapensköld</decoNote>
                             </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/FEL">Östergötland</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/FEL">Norsholm (?)</placeName>
-                                </origPlace>
-                                <origDate>1400-1500, 1523 (?)</origDate>
+                                    <placeName ref="https://www.manuscripta.se/place/100115">Östergötland</placeName>
+                                    <placeName cert="low"><!--KOLLA-->Norsholm</placeName>
+                                </origPlace>, <origDate>1400-1500, 1523?</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -524,7 +448,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -544,19 +468,19 @@
             <graphic url="kb-d-002_0002_LCI.tif" height="3579px" width="1516px"/>
         </surface>
         <surface xml:id="ms-100346_SL001r">
-            <desc>f. SL001r</desc>
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="kb-d-002_0003_SL001r.tif" height="3579px" width="1516px"/>
         </surface>
         <surface xml:id="ms-100346_SL001r">
-            <desc>f. SL001r</desc>
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="kb-d-002_0004_SL001v.tif" height="3579px" width="1516px"/>
         </surface>
         <surface xml:id="ms-100346_SL002r">
-            <desc>f. SL002r</desc>
+            <desc>⟨f. IIr⟩</desc>
             <graphic url="kb-d-002_0005_SL002r.tif" height="3579px" width="1516px"/>
         </surface>
         <surface xml:id="ms-100346_SL002v">
-            <desc>f. SL002v</desc>
+            <desc>⟨f. IIv⟩</desc>
             <graphic url="kb-d-002_0006_SL002v.tif" height="3579px" width="1516px"/>
         </surface>
         <surface xml:id="ms-100346_1r">

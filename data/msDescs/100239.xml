@@ -44,8 +44,8 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="0"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="leftFlyleaves" quantity="0" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
                                 <foliation>Nyare paginering (av 1600-talshand; Johan Bure?) 1-341 i bläck där ett hopp gjorts från 145 till 157; felpagineringen som därmed uppstått på egentliga s. 147 och framåt har rättats med blyerts (av Klemming?)</foliation>
                             </supportDesc>
@@ -111,25 +111,6 @@
                                 </note>
                             </p>
                             <p>
-                                <locus from="s. 1" to="s. 1" scheme="folios"/>
-                                <note>Anteckning. <quote>Siälinna Tröst. Skrefven af en Abatissa vid namn Karin S: Brittas dotter Åhr 1401</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="(passim)" to="(passim)" scheme="folios"/>
-                                <note>Anteckning. Marganteckningar av flera händer från 1600-talet (i bläck), som tillskrivits Johannes Bureus och Georg Stiernhielm, samt senare (mest glosor, i blyerts).</note>
-                            </p>
-                            <p>
-                                <locus from="s. 150" to="s. 150" scheme="folios"/>
-                                <note>Anteckning. <quote>på thenna tidh som thenna Bock skreff war en abbatisa Som het karin S britha dotther 544</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="s. 292" to="s. 292" scheme="folios"/>
-                                <note>Anteckning. <quote>Ett blad felar sedan Bures tid</quote>
-                                </note>
-                            </p>
-                            <p>
                                 <locus from="RCI" to="RCI" scheme="other"/>
                                 <note>Anteckning. <quote>Possessor liber ???</quote>
                                 </note>
@@ -143,8 +124,8 @@
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-3">Ryggband i trä</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-1">överdragsmaterial i skinn</term>; gulbrun, brun rygg överdragsfärg; 4 infällda bind; Fram två mässingsbeslag med remrester i framkanten. Bak märken och hål på pärmens insida efter två spännen mitt på pärmen..</p>
-                                <p>
+                                    <note type="description">
+                                        <term>Ryggband i trä med överdrag av skinn</term>; överdragsfärg: gulbrun, brun rygg; 4 infällda bind; Fram två mässingsbeslag med remrester i framkanten. Bak märken och hål på pärmens insida efter två spännen mitt på pärmen.</note>
                                     <dimensions type="binding">
                                         <height quantity="300" unit="mm"/>
                                         <width quantity="220" unit="mm"/>
@@ -152,30 +133,73 @@
                                     </dimensions>
                                 </p>
                                 <decoNote type="tooling">Bak: Två inristade liggande bomärken i närheten av framkanten, det ena (mindre) nere till vänster, det andra i mitten.</decoNote>
+                                <condition>Ny rygg från februari 1954 (SFSS 59, s. VI not); av bokbindarnotisen på bakpärmens insida framgår att renoveringen urförts av Sven Wiklander. Hål i det gamla skinnet har lagats (underifrån) med samma nya, rödbruna skinn som ryggen.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance from="1670?" to="1717"> Ägarperiod: 1670?-1717</provenance>
-                        <provenance from="1717" to="1736"> Ägarperiod: 1717-1736</provenance>
-                        <provenance from="1737" to="1770"> Ägarperiod: 1737-1770</provenance>
-                        <provenance from="1770" to="1870?"> Ägarperiod: 1770-1870?</provenance>
-                        <provenance from="" to=""> Ägardatering: <date notAfter="1873"/> Ägarperiod: till 1873</provenance>
-                        <acquisition>Till Kungliga biblioteket (oklart)</acquisition>
+                        <provenance xml:id="prov-1806">
+                            <orgName ref="https://www.manuscripta.se/org/100083">Stockholm, Riksarkivet</orgName>, <date from="1620?" to="1668?">1620?-1668?</date>
+                        </provenance>
+                        <provenance xml:id="prov-641">
+                            <persName ref="https://www.manuscripta.se/person/100532">Elias Brenner</persName>, <date from="1670?" to="1717">1670?-1717</date>
+                        </provenance>
+                        <provenance xml:id="prov-660">
+                            <persName ref="https://www.manuscripta.se/person/100761">Abraham Erik Gyllengrip</persName>, <date from="1717" to="1736">1717-1736</date>
+                        </provenance>
+                        <provenance xml:id="prov-157">
+                            <orgName ref="https://www.manuscripta.se/org/100104">Ängsö fidekommiss</orgName>, <date from="1770" to="1873">1770-1873</date>
+                        </provenance>
+                        <provenance xml:id="prov-258">
+                            <persName ref="https://www.manuscripta.se/person/100987">Carl Fredrik Piper</persName>, <date from="1737" to="1770">1737-1770</date>, P2</provenance>
+                        <provenance xml:id="prov-1303">
+                            <persName ref="https://www.manuscripta.se/person/101211">Axel Piper</persName>, <date from="" to="">till 1873</date>
+                        </provenance>
+                        <acquisition xml:id="prov-1698">
+                            <orgName ref="https://www.manuscripta.se/org/100004">Stockholm, Kungliga biblioteket</orgName>, <date from="1873" to="">1873-</date>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100706">G. E. Klemming (1871-1873)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100706">Klemming (1871-1873)</title>
                                 <citedRange from="VII" to="VIII" unit="page"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100759">Sam. Henning (1954-1956)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100718">Klemming (1881-1882)</title>
+                                <citedRange from="526 (60, 149, 157, 164)" to="526 (60, 149, 157, 164)" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100733">Geete (1907-1909)</title>
+                                <citedRange from="LXXXVII" to="LXXXVII" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100759">Henning (1954-1956)</title>
                                 <citedRange from="V" to="XVI" unit="page"/>
                             </bibl>
                             <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/100768">Henning (1960)</title>
                                 <citedRange from="163 (5" to="8, 27-164)" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101335">Thorén (1942)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101364">Dverstorp (2010)</title>
+                                <citedRange from="73" to="124, 183, 191-206" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101419">Gödel (1916)</title>
+                                <citedRange from="4, 39, 47, 161, 233, 267, 268, 270, 272, 284, 286, 292, 293" to="4, 39, 47, 161, 233, 267, 268, 270, 272, 284, 286, 292, 293" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101225">Carlquist (1996)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101525">Nordisk tidskrift för bok- och biblioteksväsen 40 (1953) (1954)</title>
+                                <citedRange from="145" to="154" unit="page"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -188,835 +212,658 @@
                             <msItem>
                                 <locus from="s. 1" to="332" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_134889 Åström_1340">Själens tröst</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100992">Själens tröst</title>
                                 <rubric>her byrias första capitulum</rubric>
-                                <note>Här redovisas endast texter som även finns i andra uppteckningar eller redaktioner. För en fullständig innehållsförteckning se Sam. Henning (utg.), SFSS 59, s. 492-499.</note>
-                                <listBibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102542">Andersson-Schmitt (1972)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103148">Ad. Noreen (1892-1894)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103242">Richard Steffen (1905)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103259">Richard Steffen (1910)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103278">Ernst Lagus (1906)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103296"> Fogelklou (1917)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103404">G. Montelin och J. Berg (1930)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103417">G. Montelin och J. Berg (1935)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103431">Montelin (1939)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103449">Ad. Noreen (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103487">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103526">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103562">Richard Steffen (1918)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103584">Richard Steffen (1924)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103604">Elias Wessén (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103621">Elias Wessén (1936)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103700">Ad. Noreen (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104620">G. E. Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104645">Sam. Henning (1954-1956)</title>
-                                    </bibl>
-                                </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 11" to="12" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_224 Åström_2240">Fru Sapientia och hennes döttrar (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Aff een dyghdhelike frw heth sapiencia oc aff henna dötrum</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101363">Fru Sapientia och hennes döttrar (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102780">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103663">Henning (1954-1956)</title>
+                                        <citedRange from="19" to="22" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 32" to="37" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_154 Åström_1541">Sankt Alexius: redaktion b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101089">Sankt Alexius: redaktion b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104366">Sam. Henning (1954-1956)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104367">G. E. Klemming (1871-1873)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104367">Klemming (1871-1873)</title>
+                                        <citedRange from="55" to="61" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 47" to="49" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_220 Åström_2202">Nikolaus i sankt Patriks skärseld (Patrikssagan del 2): redaktion b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101343">Nikolaus i sankt Patriks skärseld (Patrikssagan del 2): redaktion b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102778">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103661">Henning (1954-1956)</title>
+                                        <citedRange from="78" to="82" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 52" to="55" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_200 Åström_2001">Judas Iskariot: redaktion b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101261">Judas Iskariot: redaktion b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102775">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103658">Henning (1954-1956)</title>
+                                        <citedRange from="86" to="90" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 61" to="67" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_165 Åström_1652">Sankt Blasius: redaktion c (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101136">Sankt Blasius: redaktion c (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102766">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103649">Henning (1954-1956)</title>
+                                        <citedRange from="101" to="110" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 75" to="78" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_902 Åström_1896">Sankt Görans saga: redaktion b (kortare)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101229">Sankt Görans saga: redaktion b (kortare)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102771">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103298"> Fogelklou (1917)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103654">Henning (1954-1956)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103698">Ernst Lagus (1906)</title>
+                                        <citedRange from="122" to="127" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 104" to="112" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_267 Åström_2670">Sju dagstider (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101515">Sju dagstider (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102786">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103669">Henning (1954-1956)</title>
+                                        <citedRange from="167" to="181" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 105" to="s. 105" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_44 Åström_441">Böner vid gudstjänstens sju tider: 1. Vesper (aftonsång) (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100633">Böner vid gudstjänstens sju tider: 1. Vesper (aftonsång) (ur Själens tröst)</title>
                                 <rubric>Aff aptonsangx tidhinne</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102755">Klemming (1871-1873)</title>
+                                        <citedRange from="168" to="169" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102854">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103638">Henning (1954-1956)</title>
+                                        <citedRange from="150" to="150" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 106" to="s. 106" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_44 Åström_442">Böner vid gudstjänstens sju tider: 2. Matutin (nattsång) (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100634">Böner vid gudstjänstens sju tider: 2. Matutin (nattsång) (ur Själens tröst)</title>
                                 <rubric>Aff natsangx tima</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102756">Klemming (1871-1873)</title>
+                                        <citedRange from="170" to="171" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102855">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103639">Henning (1954-1956)</title>
+                                        <citedRange from="150" to="151" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 107" to="s. 107" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_44 Åström_443">Böner vid gudstjänstens sju tider: 3. Laudes (ottesång) (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100635">Böner vid gudstjänstens sju tider: 3. Laudes (ottesång) (ur Själens tröst)</title>
                                 <rubric>Aff otosangx tidh</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102757">Klemming (1871-1873)</title>
+                                        <citedRange from="172" to="173" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102856">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103640">Henning (1954-1956)</title>
+                                        <citedRange from="151" to="152" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 107" to="108" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_44 Åström_444">Böner vid gudstjänstens sju tider: 4. Prim (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100636">Böner vid gudstjänstens sju tider: 4. Prim (ur Själens tröst)</title>
                                 <rubric>Aff prims tidh</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102758">Klemming (1871-1873)</title>
+                                        <citedRange from="173" to="174" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102857">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103641">Henning (1954-1956)</title>
+                                        <citedRange from="152" to="153" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 108" to="s. 108" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_44 Åström_445">Böner vid gudstjänstens sju tider: 5. Ters (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100637">Böner vid gudstjänstens sju tider: 5. Ters (ur Själens tröst)</title>
                                 <rubric>Aff terdz tidh</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102759">Klemming (1871-1873)</title>
+                                        <citedRange from="175" to="175" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102858">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103642">Henning (1954-1956)</title>
+                                        <citedRange from="153" to="154" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 109" to="110" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_44 Åström_446">Böner vid gudstjänstens sju tider: 6. Sext (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100638">Böner vid gudstjänstens sju tider: 6. Sext (ur Själens tröst)</title>
                                 <rubric>Aff sext tidh</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102760">Klemming (1871-1873)</title>
+                                        <citedRange from="177" to="178" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102859">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103643">Henning (1954-1956)</title>
+                                        <citedRange from="154" to="155" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 110" to="111" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_44 Åström_447">Böner vid gudstjänstens sju tider: 7. Non (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100639">Böner vid gudstjänstens sju tider: 7. Non (ur Själens tröst)</title>
                                 <rubric>Aff nons tidh</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102761">Klemming (1871-1873)</title>
+                                        <citedRange from="179" to="180" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102860">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103644">Henning (1954-1956)</title>
+                                        <citedRange from="155" to="157" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 111" to="112" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_36854 Åström_360">Bön till Jesus (inl: O, allra mildaste herre Jesus Kristus)</title>
-                                <title type="alt" xml:lang="sv">En godh oc fagher bön aff warom herra ihesu christo</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100616">Bön till Jesus (inl: O, allra mildaste herre Jesus Kristus)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102840">Klemming (1881-1882)</title>
+                                        <citedRange from="137" to="137" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 112" to="114" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_139 Åström_1390">Jesus fyrahanda gråt (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Aff fyra handa grath som war herra ihesus christus gräth her j werldinne</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101007">Jesus fyrahanda gråt (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
-                                <note/>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102762">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103645">Henning (1954-1956)</title>
+                                        <citedRange from="181" to="186" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 112" to="114" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_37 Åström_370">Böner om Jesus fyrahanda gråt (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Aff fyra handa grath som war herra her j werldinne j sinom mandom</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100618">Böner om Jesus fyrahanda gråt (ur Själens tröst)</title>
                                 <rubric>Her sigx aff fyra handa grath som war hera ihesus christus gräth her j werldinnem j sinom mandom som scriptin talar vm</rubric>
-                                <note/>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102750">Klemming (1871-1873)</title>
+                                        <citedRange from="181" to="186" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102841">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103633">Henning (1954-1956)</title>
+                                        <citedRange from="146" to="149" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 114" to="119" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_256 Åström_2560">Hur man skall uppträda i kyrkan (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Huru thu skalt hafwa thik j kyrkionne</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101478">Hur man skall uppträda i kyrkan (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
-                                <note/>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102785">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103668">Henning (1954-1956)</title>
+                                        <citedRange from="186" to="199" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 117" to="s. 117" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_43 Åström_431">Böner vid gudstjänsten (Nattvardsböner): 1 (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100628">Böner vid gudstjänsten (Nattvardsböner): 1 (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102751">Klemming (1871-1873)</title>
+                                        <citedRange from="191" to="191" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102850">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103634">Henning (1954-1956)</title>
+                                        <citedRange from="163" to="163" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 118" to="s. 118" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_43 Åström_432">Böner vid gudstjänsten (Nattvardsböner): 2 (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100629">Böner vid gudstjänsten (Nattvardsböner): 2 (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102752">Klemming (1871-1873)</title>
+                                        <citedRange from="191" to="191" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102851">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103635">Henning (1954-1956)</title>
+                                        <citedRange from="163" to="164" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 118" to="s. 118" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_43 Åström_433">Böner vid gudstjänsten (Nattvardsböner): 3 (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100630">Böner vid gudstjänsten (Nattvardsböner): 3 (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102753">Klemming (1871-1873)</title>
+                                        <citedRange from="192" to="192" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102852">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103636">Henning (1954-1956)</title>
+                                        <citedRange from="164" to="164" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 118" to="119" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_43 Åström_434">Böner vid gudstjänsten (Nattvardsböner): 4 (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100631">Böner vid gudstjänsten (Nattvardsböner): 4 (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102754">Klemming (1871-1873)</title>
+                                        <citedRange from="193" to="193" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102853">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103637">Henning (1954-1956)</title>
+                                        <citedRange from="164" to="164" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 120" to="121" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_2792.001">Bön till Gud Fader: Vi lovar dig Gud (Te Deum)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101742">Bön till Gud Fader: Vi lovar dig Gud (Te Deum)</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="s. 122" to="s. 122" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_2781.095">Bön till Jungfru Maria (Salve Regina) (del av Ingeborg Gertsdotters "Fjorton råd om ett gudeligt leverne")</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101648">Bön till Jungfru Maria (Salve Regina) (del av Ingeborg Gertsdotters "Fjorton råd om ett gudeligt leverne")</title>
                                 <rubric>Ingen</rubric>
-                                <note>Titel originalverk: Salve Regina misericordie. </note>
-                                <listBibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103858">Robert Geete (1907-1909)</title>
-                                    </bibl>
-                                </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 123" to="143" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_150 Åström_1500">Jungfru Marias sju fröjder (med rimmade böner) (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Af varfru fröghdhom</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101033">Jungfru Marias sju fröjder (med rimmade böner) (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102764">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103647">Henning (1954-1956)</title>
+                                        <citedRange from="199" to="231" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 124" to="125, 126, 127-128, 129-130, 130-131, 134, 143" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_22851 Åström_220">Marias sju fröjder (rimmade böner): redaktion a (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100052">Marias sju fröjder (rimmade böner): redaktion a (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">Glädz maria modhir aff fröghdhom riik</incipit>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102749">Klemming (1871-1873)</title>
+                                        <citedRange from="202" to="230" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102826">Klemming (1881-1882)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103632">Henning (1954-1956)</title>
+                                        <citedRange from="55" to="60" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 136" to="142" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_178 Åström_1780">Ester (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101188">Ester (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102769">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103652">Henning (1954-1956)</title>
+                                        <citedRange from="220" to="229" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 145" to="146" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_1481.2">Järtecken om Jungfru Maria (En ung man förnekade Kristus men inte Maria): variant b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101029">Järtecken om Jungfru Maria (En ung man förnekade Kristus men inte Maria): variant b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="s. 147" to="148" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_1482.2">Järtecken om Jungfru Maria (Synderskan som bad för den fromme prästen): variant b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101031">Järtecken om Jungfru Maria (Synderskan som bad för den fromme prästen): variant b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="s. 153" to="163" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_169 Åström_1690">Sankt Kristina (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101157">Sankt Kristina (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102767">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103650">Henning (1954-1956)</title>
+                                        <citedRange from="247" to="261" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 163" to="165" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_161 Åström_1611">Sankt Barbara: redaktion b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101118">Sankt Barbara: redaktion b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102765">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103648">Henning (1954-1956)</title>
+                                        <citedRange from="262" to="266" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 171" to="s. 171" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_2391.2">Den onde sonen och paddan: variant b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101431">Den onde sonen och paddan: variant b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="s. 177" to="179" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_1832.2">Sankt Germanus och djävulsklostret: variant b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101214">Sankt Germanus och djävulsklostret: variant b (ur Själens tröst)</title>
+                                <rubric>Ingen</rubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="s. 185" to="s. 185" scheme="folios"/>
+                                <textLang mainLang="non-swe"/>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102746">Ordspråk</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="s. 185" to="191" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_144895 Åström_1440">Järtecken om Heliga kors (fyra mirakel) (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Miracula aff thy hälgha korsse</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101019">Järtecken om Heliga kors (fyra mirakel) (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102763">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103243">Richard Steffen (1905)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103260">Richard Steffen (1910)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103561">Richard Steffen (1918)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103583">Richard Steffen (1924)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103646">Henning (1954-1956)</title>
+                                        <citedRange from="295" to="303" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
-                                <locus from="s. 185" to="s. 185" scheme="folios"/>
-                                <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_3535">Ordspråk</title>
-                                <rubric>Ingen</rubric>
-                                <note>Ingår i mirakel om krucifixet: <quote>thet är gamalt ordh / gläkt är gesta ögha / oc ää thes gläggare gestin är werre</quote>
-                                </note>
-                            </msItem>
-                            <msItem>
                                 <locus from="s. 191" to="197" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_203 Åström_2032">Sankt Justina: redaktion b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101266">Sankt Justina: redaktion b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102776">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103659">Henning (1954-1956)</title>
+                                        <citedRange from="306" to="314" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 196" to="197" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_2920.0012">Fader vår: variant b</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102495">Fader vår: variant b</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">Fadhir waar thär är j hymirike</incipit>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102787">Klemming (1871-1873)</title>
+                                        <citedRange from="314" to="316" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104161">Robert Geete (1907-1909)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104161">Geete (1907-1909)</title>
+                                        <citedRange from="[3]" to="[3]" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 202" to="211" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_179 Åström_1790">Om Farao och Moses (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Aff konug pharao huru thz gig mz honom</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101196">Om Farao och Moses (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102770">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103653">Henning (1954-1956)</title>
+                                        <citedRange from="323" to="336" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 211" to="213" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_172 Åström_1720">Cyrus (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101165">Cyrus (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102768">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103651">Henning (1954-1956)</title>
+                                        <citedRange from="336" to="340" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 225" to="227" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_222 Åström_2220">Pontius Pilatus och hans öden (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101355">Pontius Pilatus och hans öden (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
-                                <note/>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102779">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103662">Henning (1954-1956)</title>
+                                        <citedRange from="358" to="368" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 228" to="232" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_222 Åström_2355.41">Kejsar Vespasianus botas från sin sjukdom, och judarna straffas för Kristi död (Jerusalems förstörelse) (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101412">Kejsar Vespasianus botas från sin sjukdom, och judarna straffas för Kristi död (Jerusalems förstörelse) (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
-                                <note/>
                             </msItem>
                             <msItem>
                                 <locus from="s. 232" to="235" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_192 Åström_1920">Herodes. (Tre kungar.) (Ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101239">Herodes. (Tre kungar.) (Ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
-                                <note/>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102772">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103655">Henning (1954-1956)</title>
+                                        <citedRange from="368" to="374" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 236" to="239" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_233 Åström_2330">Sankt Teodora (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101395">Sankt Teodora (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102782">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103665">Henning (1954-1956)</title>
+                                        <citedRange from="374" to="380" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 248" to="258" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_199 Åström_1990">Sankt Josef (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101258">Sankt Josef (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102774">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103657">Henning (1954-1956)</title>
+                                        <citedRange from="396" to="411" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 268" to="270" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_302 Åström_3026">Fem spörsmål om stöld besvaras (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102583">Fem spörsmål om stöld besvaras (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102789">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103672">Henning (1954-1956)</title>
+                                        <citedRange from="429" to="433" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 271" to="273" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_231 Åström_2310">Susanna (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101389">Susanna (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102781">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103664">Henning (1954-1956)</title>
+                                        <citedRange from="436" to="439" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 273" to="276" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_239 Åström_2390">Om två bröder och riddare (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">aff thwem brödhrom oc waro badhe riddara</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101429">Om två bröder och riddare (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102784">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103667">Henning (1954-1956)</title>
+                                        <citedRange from="439" to="443" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 276" to="280" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_236 Åström_2360">Den ärbara kejsarinnan i Rom (onämnd) (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Aff eene ärlike frw j room</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101426">Den ärbara kejsarinnan i Rom (onämnd) (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102783">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103666">Henning (1954-1956)</title>
+                                        <citedRange from="443" to="450" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 280" to="291" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_341 Åström_3410">Amicus och Amelius (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Aff Amelio oc Amico</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102714">Amicus och Amelius (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102792">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103675">Henning (1954-1956)</title>
+                                        <citedRange from="450" to="470" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 301" to="303" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_300 Åström_3000">Om ocker (tio spörsmål) (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102567">Om ocker (tio spörsmål) (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102788">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103671">Henning (1954-1956)</title>
+                                        <citedRange from="489" to="492" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 306" to="307" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_2392.2">Ockraren som dog bland sitt guld: variant b (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101433">Ockraren som dog bland sitt guld: variant b (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="s. 312" to="326" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_340 Åström_3400">Alexander Magnus (ur Själens tröst)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102713">Alexander Magnus (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102791">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103674">Henning (1954-1956)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104499">Johan Ernst Rietz (1847-1850)</title>
+                                        <citedRange from="510" to="533" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="s. 317" to="s. 317" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_3535">Ordspråk</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102746">Ordspråk</title>
                                 <rubric>Ingen</rubric>
-                                <note>Ingår i Sagan om kung Alexander: <quote>witin j thet ey / at then hunden som fastast göör / han är blödhoghast at bita</quote>
-                                </note>
                             </msItem>
                             <msItem>
                                 <locus from="s. 326" to="332" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_308 Åström_3080.1">Utläggning av Tio Guds bud: redaktion b</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102603">Utläggning av Tio Guds bud: redaktion b</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="s. 332" to="s. 332" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_194 Åström_1940">Holofernes (ur Själens tröst)</title>
-                                <title type="alt" xml:lang="sv">Olofernes ther manga änkior oc fadherlös barn hafdhe giort</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101245">Holofernes (ur Själens tröst)</title>
                                 <rubric>Ingen</rubric>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102773">Klemming (1871-1873)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103656">Henning (1954-1956)</title>
+                                        <citedRange from="340" to="344" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -1031,7 +878,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="166"/>
+                                        <measure type="textblockLeaves" quantity="166" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <signatures>I de 12 första läggen har de första 4 versosidorna i läggen signaturerna a-d (eller har haft; därefter är det möjligt att de fallit bort vid beskärning, eftersom kustoderna i de följande läggen är mer eller mindre bortfallna)</signatures>
@@ -1040,19 +887,44 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="30 33">
-                                        <locus from="1r" to="166v" scheme="folios"/>
+                                        <locus from="1r" to="166v"/>
                                         <dimensions type="written">
                                             <height min="210" max="220" unit="mm"/>
                                             <width min="150" max="160" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: A, s. 1-78:) 3 långa (ibland fler), 24 (25) korta, 5 (4) långa, dubbla långa yttermarger och enkla innermarger (men ibland även dubbla). B, s. 79-332:) 3 långa, 2 korta, 3 långa, 15 korta, 3 långa, 2 korta, 3 långa, enkel höger- och vänstermarg; Textytans höjd: 21-22; Textytans bredd: 15-16; </note>
+                                        <note type="ruling">A, s. 1-78:) 3 långa (ibland fler), 24 (25) korta, 5 (4) långa, dubbla långa yttermarger och enkla innermarger (men ibland även dubbla). B, s. 79-332:) 3 långa, 2 korta, 3 långa, 15 korta, 3 långa, 2 korta, 3 långa, enkel höger- och vänstermarg</note>
+                                        <note>Textytans bredd: 15-16; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-8">Cursiva gothica recentior</term>; Samma hand som gjort den äldre pagineringen har troligen också gjort några hänvisningar på frampärmens insida Skriftfärg: svart; röd utmärkningsskrift (överskrifter, streckade bokstäver, skiljetecken).</handNote>
+                                    <note type="script">Cursiva gothica recentior</note>
+                                    <note type="medium">svart; röd utmärkningsskrift (överskrifter, streckade bokstäver, skiljetecken)</note>
+                                    <note>Skriven av en hand. Samma hand som gjort den äldre pagineringen har troligen också gjort några hänvisningar på frampärmens insida</note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="s. 1" to="s. 1" scheme="folios"/>
+                                    <note>Anteckning. <quote>Siälinna Tröst. Skrefven af en Abatissa vid namn Karin S: Brittas dotter Åhr 1401</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="(passim)" to="(passim)" scheme="folios"/>
+                                    <note>Anteckning. Marganteckningar av flera händer från 1600-talet (i bläck), som tillskrivits Johannes Bureus och Georg Stiernhielm, samt senare (mest glosor, i blyerts).</note>
+                                </p>
+                                <p>
+                                    <locus from="s. 150" to="s. 150" scheme="folios"/>
+                                    <note>Anteckning. <quote>på thenna tidh som thenna Bock skreff war en abbatisa Som het karin S britha dotther 544</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="s. 292" to="s. 292" scheme="folios"/>
+                                    <note>Anteckning. <quote>Ett blad felar sedan Bures tid</quote>
+                                    </note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="initials">Initial s. 1 Initialfärg: röd</decoNote>
                                 <decoNote type="lombards">Röda lombarder i olika storlekar genomgående</decoNote>
@@ -1062,8 +934,7 @@
                             <origin>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
-                                </origPlace>
-                                <origDate>1400-1450 (1438-1442)</origDate>
+                                </origPlace>, <origDate>1400-1450 (1438-1442)</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -1071,7 +942,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1091,11 +962,11 @@
             <graphic url="kb-a-108_0002_LCI.tif" height="3729px" width="2638px"/>
         </surface>
         <surface xml:id="ms-100239_card_r">
-            <desc>card_r</desc>
+            <desc>f. card_r</desc>
             <graphic url="kb-a-108_0003_card_r.tif" height="3729px" width="2638px"/>
         </surface>
         <surface xml:id="ms-100239_card_v">
-            <desc>card_v</desc>
+            <desc>f. card_v</desc>
             <graphic url="kb-a-108_0004_card_v.tif" height="3729px" width="2638px"/>
         </surface>
         <surface xml:id="ms-100239_1">

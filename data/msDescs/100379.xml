@@ -30,7 +30,7 @@
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sverige</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
-                        <institution ref="https://www.manuscripta.se/org/FEL">Uppsala universitet</institution>
+                        <institution ref="https://www.manuscripta.se/org/100011">Uppsala universitet</institution>
                         <repository ref="https://www.manuscripta.se/place/100092">Uppsala universitetsbibliotek</repository>
                         <idno type="shelfmark">B 23</idno>
                         <altIdentifier>
@@ -43,8 +43,8 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="0"/>
-                                    <measure type="rightFlyleaves" quantity="2"/>
+                                    <measure type="leftFlyleaves" quantity="0" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="2" unit="folios"/>
                                 </extent>
                                 <foliation>Nyare foliering 1-116 i övre högerhörn på rectosidorna, som är rättad fr.o.m. f. 76, p.g.a. att f. 75 först överhoppats, och därefter kompletterad med 117-120</foliation>
                             </supportDesc>
@@ -52,33 +52,19 @@
                         <additions>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
-                                <note>Biblioteksmärke. UUB:s pappersetikett samt i bläckskrift <quote>Upsala Universitets Bibliothek Cronstedts Saml.</quote>
+                                <note>Biblioteksmärke. UUB:s etiketter; stämpel.</note>
+                            </p>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Biblioteksmärke. <quote>Upsala Universitets Bibliothek Cronstedts Saml.</quote>
                                 </note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Ägaranteckning. <quote>Possessor Abrahamus Ericus Gyllengrijp 28 ark af Sparf[wenfeldt] (?)</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Biblioteksmärke. UUB:s stämpel.</note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Ägaranteckning. <quote>Coll. Cronstedt</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="117v" to="117v" scheme="folios"/>
-                                <note>Biblioteksmärke. UUB:s sigill (blindpressat). KOLLAS</note>
                             </p>
                         </additions>
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-3">Ryggband i trä</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-4">överdragsmaterial i papper med skinnskoning</term>; vipäggsmarmor (yttre), kammarmor (spegelblad) överdragsfärg; Fram och bak spår efter två spännen.</p>
-                                <p>
+                                    <note type="description">
+                                        <term>Ryggband i trä med överdrag av papper med skinnskoning</term>; överdragsfärg: vipäggsmarmor (yttre), kammarmor (spegelblad); Fram och bak spår efter två spännen</note>
                                     <dimensions type="binding">
                                         <height quantity="260" unit="mm"/>
                                         <width quantity="190" unit="mm"/>
@@ -87,24 +73,49 @@
                                 </p>
                                 <decoNote type="tooling">På ryggen är ryggfälten avgränsade med dubbla, svarta filélinjer; i fält 1 (delvis dold), 4 och 5 en romb i svart, med växtmotiv. I fält 1 över romben skinnetikett med "49" i guld. I fält 2 skadad pappersetikett med texten "LANDS LAG M: [S]C". I fält 3 pappersetikett med texten "B 23". Rygg: raka och repmönstrade filéer avgränsar ryggfälten kring binden, som har en rad med repmönster i mitten</decoNote>
                                 <decoNote type="endbands">Skadat kapitälband i vitt och rött vid huvudet</decoNote>
+                                <condition>Gamla bokspån har använts för halvfranskt band (1700-talet eller senare?). Ryggskinnet är skadat vid huvud och fot.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance/>
-                        <provenance from="" to="1737">
-                            <quote>Possessor Abrahamus Ericus Gyllengrijp 28 [riksdaler?] af[?] [---]</quote> Ägardatering: <date notAfter="1737]"/> Ägarperiod: -1737</provenance>
-                        <provenance from="1700?" to="1751">
-                            <quote>Coll. Cronstedt</quote> Ägardatering: <date notAfter="1756"/> Ägarperiod: 1700?-1751</provenance>
-                        <provenance from="1751" to="1756">
-                            <quote>-</quote> Ägardatering: <date>-</date> Ägarperiod: 1751-1756</provenance>
-                        <provenance from="1756" to="1767"> Ägarperiod: 1756-1767</provenance>
+                        <provenance xml:id="prov-1845">
+                            <persName ref="https://www.manuscripta.se/person/100761">Abraham Erik Gyllengrip</persName>, <date from="" to="1737">-1737</date> Ägarnotis: Possessor Abrahamus Ericus Gyllengrijp 28 [ark?] af[?] [---]</provenance>
+                        <provenance xml:id="prov-343">
+                            <persName ref="https://www.manuscripta.se/person/100687">Jacob Cronstedt</persName>, <date from="1700?" to="1751">1700?-1751</date> Ägarnotis: Coll. Cronstedt</provenance>
+                        <provenance xml:id="prov-770">
+                            <persName ref="https://www.manuscripta.se/person/100756">Margareta Beata Grundel</persName>, <date from="1751" to="1756">1751-1756</date> Ägarnotis: -</provenance>
+                        <provenance xml:id="prov-259">
+                            <persName ref="https://www.manuscripta.se/person/100573">Gustav (III)</persName>, <date from="1756" to="1767">1756-1767</date>
+                        </provenance>
+                        <acquisition xml:id="prov-1067">
+                            <orgName ref="https://www.manuscripta.se/org/100097">Uppsala Universitetsbibliotek</orgName>, <date/>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100782">Per-Axel Wiktorsson (1989)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100551">Schlyter (1862)</title>
+                                <citedRange from="IX" to="X" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100782">Wiktorsson (1989)</title>
                                 <citedRange from="XV" to="LX" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100777">Wollin (1981)</title>
+                                <citedRange from="70" to="73" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101365">Åström (2003)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101343">Åström (2013)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100889">Wiktorsson (1981)</title>
+                                <citedRange from="70" to="73" unit="page"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -112,176 +123,84 @@
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
-                        <msContents>
+                        <msContents class="lagbok">
                             <textLang mainLang="non-swe"/>
                             <msItem>
                                 <locus from="1r" to="1r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_8050">Hänvisning till Samling Af Sweriges Gamla Lagar</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103650">Hänvisning till Samling Af Sweriges Gamla Lagar</title>
                                 <rubric>Ingen</rubric>
-                                <note/>
                             </msItem>
                             <msItem>
                                 <locus from="1r" to="39v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_4061033 Åström_4060">Magnus Erikssons landslag (MELL)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103105">Magnus Erikssons landslag (MELL)</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">xiij Nu en frelsis man orkar ei lenger vnde frelse blifuä</incipit>
-                                <note>På grund av bladförlust i början saknas början av Kungabalkens förteckning. Texten omfattar senare delen av Kungabalkens förteckning - Byggningabalkens förteckning, och fortsätter f. 47; f. 40-46 är ersättningsblad med text från KrLL (se nedan och SSGL 10, s. IX, 126 not 1, 152 not 34.)</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103169">Ad. Noreen (1892-1894)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103181">Emil Hildebrand (1897)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103184">Harald Hjärne (1895)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103219">Emil Hildebrand (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103220">Sprinchorn (1889)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103375">Alving (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103471">Ad. Noreen (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103727">Ad. Noreen (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104511">C. J. Schlyter (1862)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104572">Henrik Cornell (1943)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104590">Olson (1956)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104593">Åke Holmbäck och Elias Wessén (1962)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104648">Per-Axel Wiktorsson (1989)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104693">Olson (1909)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104694">Olson (1917)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104572">Cornell (1943)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="40r" to="46v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4085.6">Kristoffers landslag: del av Byggningabalken</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103181">Kristoffers landslag: del av Byggningabalken</title>
                                 <rubric>Ingen</rubric>
-                                <note>Ersättningsblad som innehåller Byggningabalken 1-2, 4-17 och början Byggningabalken 18 (motsvarande Magnus Erikssons landslag Byggningabalken 1-16, och början 17, se SSGL 10, s. IX, 126 not 1).</note>
                             </msItem>
                             <msItem>
                                 <locus from="47r" to="116v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_4061033 Åström_4060">Magnus Erikssons landslag (MELL)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103105">Magnus Erikssons landslag (MELL)</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">thre mark . en han vardhir bar ok a takin</incipit>
-                                <note>Fortsättning av gamla handskriften (från <locus from="39v" to="39v" scheme="folios"/>) med Byggningabalken 17:pr (utom början). (SSGL 10, s. IX, 126 not 1, 152 not 34).</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103169">Ad. Noreen (1892-1894)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103181">Emil Hildebrand (1897)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103184">Harald Hjärne (1895)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103219">Emil Hildebrand (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103220">Sprinchorn (1889)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103375">Alving (1922)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103471">Ad. Noreen (1921)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103727">Ad. Noreen (1904)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104511">C. J. Schlyter (1862)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104572">Henrik Cornell (1943)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104590">Olson (1956)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104593">Åke Holmbäck och Elias Wessén (1962)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104648">Per-Axel Wiktorsson (1989)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104693">Olson (1909)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104694">Olson (1917)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104572">Cornell (1943)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="60r" to="60r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4060.05">Magnus Erikssons landslag: del av Byggningabalken</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103110">Magnus Erikssons landslag: del av Byggningabalken</title>
                                 <rubric>Ingen</rubric>
-                                <note>Byggningabalken 38, <quote>de 2 sista raderna</quote>
-                                </note>
                             </msItem>
                             <msItem>
                                 <locus from="60r" to="60r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4054">Östgötalagen: Byggningabalken 36:2-3 (älgjakt)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103094">Östgötalagen: Byggningabalken 36:2-3 (älgjakt)</title>
                                 <rubric>Ingen</rubric>
-                                <note>Blad 60 ersatt.</note>
                             </msItem>
                             <msItem>
                                 <locus from="60r" to="60v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4085.6">Kristoffers landslag: del av Byggningabalken</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103186">Kristoffers landslag: Byggningabalken 50 (fä förs olovligt till ö)</title>
                                 <rubric>Ingen</rubric>
-                                <note>Byggningabalken 50. Blad 60 ersatt.</note>
                             </msItem>
                             <msItem>
                                 <locus from="64r" to="64r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4065.23">Magnus Erikssons landslag: Gemensam titel ("Manhelgdsbalk") och förteckning över Edsöres-, Högmåls-, Dråp med våda, Dråp med vilja, Sår med dråp och Sår med vilja</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103148">Magnus Erikssons landslag: Gemensam titel ("Manhelgdsbalk") och förteckning över Edsöres-, Högmåls-, Dråp med våda, Dråp med vilja, Sår med dråp och Sår med vilja</title>
                                 <rubric>manhelghis balker. ok er .ij. honum ezöre. draap. saramaal. baþe meþ vilia ok vaþa .J. ezöre tälias flokkä</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="116v" to="116v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4086.6">Kristoffers landslag: Tjuvabalken 1 (hustrustöld)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103207">Kristoffers landslag: Tjuvabalken 1 (hustrustöld)</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="117r" to="117r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_5115">Åbo landsrätts stadga eller dom om fiske och notdräkt 1415 (SD. 1659)</title>
-                                <rubric>Ingen</rubric>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102101">Åbo landsrätts stadga eller dom om fiske och notdräkt 1415 (SD. 1659)</title>
+                                <rubric>Om fiskewatn</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="117r" to="117v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_5695">Sten Sture d.ä:s och Åbo landrätts dom om fisket i sjön Erstan. 1488 20/10.</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103454">Sten Sture d.ä:s och Åbo landrätts dom om fisket i sjön Erstan. 1488 20/10.</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                         </msContents>
@@ -297,7 +216,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="118"/>
+                                        <measure type="textblockLeaves" quantity="118" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <catchwords>Kustoder i lägg 3, 4, 6 (?), 7, 8, 10, 11 (<locus from="23v" to="23v" scheme="folios"/>, <locus from="29v" to="29v" scheme="folios"/>, <locus from="56v" to="56v" scheme="folios"/>, <locus from="66v" to="66v" scheme="folios"/>, <locus from="81v" to="81v" scheme="folios"/>, <locus from="89v" to="89v" scheme="folios"/>)</catchwords>
@@ -305,31 +224,51 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="23">
-                                        <locus from="1r" to="118v" scheme="folios"/>
+                                        <locus from="1r" to="118v"/>
                                         <dimensions type="written">
                                             <height min="175" max="185" unit="mm"/>
                                             <width min="130" max="135" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: Linjerad; Textytans höjd: 17.5-18.5; Textytans bredd: 13-13.5; </note>
+                                        <note type="ruling">Linjerad</note>
+                                        <note type="runningHeaders">löpande, uppslagsvis i rött</note>
+                                        <note>Textytans bredd: 13-13,5; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-2">Textualis gothica</term>; F. 40-46 har skrift av samma hand som i UUB B 5. Skriftfärg: svart, grönt (<locus from="1r" to="6r" scheme="folios"/>, <locus from="8v" to="8v" scheme="folios"/> rad 13 och 18), <locus from="9v" to="9v" scheme="folios"/> rad 1-3, <locus from="49r" to="49r" scheme="folios"/> rad 1-5, <locus from="51v" to="51v" scheme="folios"/>, <locus from="52r" to="52r" scheme="folios"/> 1-3); röd utmärkningsskrift (streckade bokstäver, flocköverskrifter, paragraftecken)..</handNote>
+                                    <note type="script">Textualis gothica</note>
+                                    <note type="medium">svart, grönt (<locus from="1r" to="6r" scheme="folios"/>, <locus from="8v" to="8v" scheme="folios"/> rad 13 och 18), <locus from="9v" to="9v" scheme="folios"/> rad 1-3, <locus from="49r" to="49r" scheme="folios"/> rad 1-5, <locus from="51v" to="51v" scheme="folios"/>, <locus from="52r" to="52r" scheme="folios"/> 1-3); röd utmärkningsskrift (streckade bokstäver, flocköverskrifter, paragraftecken).</note>
+                                    <note>Skriven av en hand. Senare tillägg av en hand (<locus from="40r" to="46v" scheme="folios"/>, <locus from="60r" to="60v" scheme="folios"/>, <locus from="116v" to="116v" scheme="folios"/>) efter 1442, möjligen av samma hand som skrivit UUB B 5. Tillägg av en ännu senare hand på <locus from="117r" to="117v" scheme="folios"/>.</note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Ägaranteckning. <quote>Possessor Abrahamus Ericus Gyllengrijp 28 ark af Sparf[wenfeldt] (?)</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Ägaranteckning. <quote>Coll. Cronstedt</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="117v" to="117v" scheme="folios"/>
+                                    <note>Biblioteksmärke. UUB:s sigill (blindpressat). KOLLAS</note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="initials">Initialer: <locus from="2r" to="2r" scheme="folios"/>, <locus from="15v" to="15v" scheme="folios"/>, <locus from="22r" to="22r" scheme="folios"/>, <locus from="22v" to="22v" scheme="folios"/>, <locus from="27v" to="27v" scheme="folios"/>, <locus from="29r" to="29r" scheme="folios"/>, <locus from="62r" to="62r" scheme="folios"/>, <locus from="66r" to="66r" scheme="folios"/>, <locus from="74r" to="74r" scheme="folios"/>, <locus from="76r" to="76r" scheme="folios"/>, <locus from="77v" to="77v" scheme="folios"/>, <locus from="78r" to="78r" scheme="folios"/>, <locus from="78v" to="78v" scheme="folios"/>, <locus from="79r" to="79r" scheme="folios"/>, <locus from="88r" to="88r" scheme="folios"/>, <locus from="91r" to="91r" scheme="folios"/>, <locus from="108v" to="108v" scheme="folios"/> Initialfärg: röd, blå, svart</decoNote>
                                 <decoNote type="lombards">Omväxlande röda och blå lombarder i flockinledningarna</decoNote>
-                                <decoNote type="images">Profilteckningar i bläck: <locus from="1r" to="1r" scheme="folios"/>, <locus from="3r" to="3r" scheme="folios"/>, <locus from="9r" to="9r" scheme="folios"/>, <locus from="16r" to="16r" scheme="folios"/>, <locus from="89v" to="89v" scheme="folios"/></decoNote>
+                                <decoNote type="illuminations">Profilteckningar i bläck: <locus from="1r" to="1r" scheme="folios"/>, <locus from="3r" to="3r" scheme="folios"/>, <locus from="9r" to="9r" scheme="folios"/>, <locus from="16r" to="16r" scheme="folios"/>, <locus from="89v" to="89v" scheme="folios"/></decoNote>
                             </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
-                                </origPlace>
-                                <origDate>1350-1400</origDate>
+                                </origPlace>, <origDate notBefore="1350" notAfter="1400">1350-1400</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -337,7 +276,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>

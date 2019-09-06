@@ -45,8 +45,8 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="0"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="leftFlyleaves" quantity="0" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
                                 <foliation>Nyare foliering 1-276 i övre högerhörn på rectosidorna; nyare paginering (men äldre än folieringen) med udda tal 1-161 på <locus from="11r" to="93r" scheme="folios"/> i övre högerhörn på rectosidorna. Textspalterna är numrerade 1-624 till vänster ovanför respektive spalt f. 120-275 (sannolikt av Klemming)</foliation>
                             </supportDesc>
@@ -68,11 +68,6 @@
                                 </note>
                             </p>
                             <p>
-                                <locus from="1v" to="1v" scheme="folios"/>
-                                <note>Innehållsförteckning. A) Av 1600-talshand i bläck: <quote>1. Tacksägelseböner om Christi pino 2. S. Berrhards liber de arte bene vivendi 3. Christi pino 4. postilla på alla Söndagarom åhret</quote>
-                                </note>
-                            </p>
-                            <p>
                                 <locus from="RCI" to="RCI" scheme="other"/>
                                 <note>Anteckning. Tre små anteckningar: ett delvis utsmetat pennprov som inleds <quote>ihesus maria</quote> av medeltida hand (?); därefter <quote>[…] bok […] waztena closter</quote>, följt av <quote>thenne bok […]</quote>
                                 </note>
@@ -81,8 +76,8 @@
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-1">Helband i trä</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-1">överdragsmaterial i skinn</term>; brun överdragsfärg; 5 bind; Fram järnögla mitt på nederkanten; långremsspänne med beslag och hake i mässing, fäst mitt på framkanten. Bak mitt på pärmen hål med metallrest (för hyska?)..</p>
-                                <p>
+                                    <note type="description">
+                                        <term>Helband i trä med överdrag av skinn</term>; överdragsfärg: brun; 5 bind; Fram järnögla mitt på nederkanten; långremsspänne med beslag och hake i mässing, fäst mitt på framkanten. Bak mitt på pärmen hål med metallrest (för hyska?). Järnöglan på frampärmen visar att boken har varit en katenat, d.v.s. fastkedjad.</note>
                                     <dimensions type="binding">
                                         <height quantity="260" unit="mm"/>
                                         <width quantity="175" unit="mm"/>
@@ -91,26 +86,59 @@
                                 </p>
                                 <decoNote type="tooling">Ryggen: "A 27" i guldtryck i fält 3.</decoNote>
                                 <decoNote type="bookmarks">Bladmärke (sigillbandstyp) f. 27 i nederkant, f. 87 i framkant</decoNote>
-                                <condition>Järnöglan på frampärmen visar att boken har varit en katenat, d.v.s. fastkedjad.</condition>
+                                <condition>Överdragsskinnet är slitet, särskilt på bakpärmen.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance/>
-                        <provenance/>
-                        <provenance from="1500" to="1600">
-                            <quote>Secundus in ordine</quote> Ägarperiod: 1500-1600</provenance>
-                        <acquisition>Till Kungliga biblioteket (oklart)</acquisition>
+                        <provenance xml:id="prov-1141">
+                            <orgName ref="https://www.manuscripta.se/org/100098">Vadstena kloster</orgName>, <date from="" to="">till 1619?</date> Ägarnotis: Secundus in ordine</provenance>
+                        <provenance xml:id="prov-1829">
+                            <orgName ref="https://www.manuscripta.se/org/100083">Stockholm, Riksarkivet</orgName>, <date from="1620?" to="1668">1620?-1668</date>
+                        </provenance>
+                        <provenance xml:id="prov-1673">
+                            <orgName ref="https://www.manuscripta.se/org/100060">Antikvitetskollegium</orgName>, <date from="1668" to="1692">1668-1692</date>
+                        </provenance>
+                        <provenance xml:id="prov-1674">
+                            <orgName ref="https://www.manuscripta.se/org/100059">Antikvitetsarkivet</orgName>, <date from="1692" to="1780">1692-1780</date>
+                        </provenance>
+                        <acquisition xml:id="prov-1672">
+                            <orgName ref="https://www.manuscripta.se/org/100004">Stockholm, Kungliga biblioteket</orgName>, <date from="1780" to="">1780-</date>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100701">Harald Wieselgren (1864-1866)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100698">Klemming (1861-1875)</title>
+                                <citedRange from="146, (523)" to="146, (523)" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100699">Klemming (1883-1884)</title>
+                                <citedRange from="157" to="157" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100701">Wieselgren (1864-1866)</title>
                                 <citedRange from="X, XI" to="XII" unit="page"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100711">G. E. Klemming (1880)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100705">Bergström (1868-1870)</title>
+                                <citedRange from="VIII" to="VIII" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100710">Klemming (1879)</title>
+                                <citedRange from="359" to="359" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100711">Klemming (1880)</title>
                                 <citedRange from="303" to="304" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101419">Gödel (1916)</title>
+                                <citedRange from="4, 5, 40, 97, 270, 296, 297, 300, 302" to="4, 5, 40, 97, 270, 296, 297, 300, 302" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101422">Carlquist (2002)</title>
+                                <citedRange from="" to="" unit="page"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -124,17 +152,18 @@
                                 <locus from="2ra" to="3va" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Birgitta Birgersdotter</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100481">Birgitta Birgersdotter</persName>
                                 </author>
-                                <title type="uniform" key="Geete_288 Åström_2881">Fyra större böner: 1. Till Jesu pina: variant a</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102377">Fyra större böner: 1. Till Jesu pina: variant a</title>
                                 <rubric>Aff gudz pino</rubric>
-                                <note>Sidhänvisning här enligt trycket I SFSS.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102708">Klemming (1861-1875)</title>
+                                        <citedRange from="151" to="155" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104288">G. E. Klemming (1861-1875)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104288">Klemming (1861-1875)</title>
+                                        <citedRange from="132" to="136" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -142,17 +171,18 @@
                                 <locus from="3vb" to="5rb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Birgitta Birgersdotter</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100481">Birgitta Birgersdotter</persName>
                                 </author>
-                                <title type="uniform" key="Geete_288 Åström_2882">Fyra större böner: 2. Till Jesu lekamen: variant a</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102381">Fyra större böner: 2. Till Jesu lekamen: variant a</title>
                                 <rubric>af vpstandilse</rubric>
-                                <note>Sidhänvisning här enligt trycket I SFSS.</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104289">G. E. Klemming (1861-1875)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104289">Klemming (1861-1875)</title>
+                                        <citedRange from="136" to="138" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104291">G. E. Klemming (1861-1875)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104291">Klemming (1861-1875)</title>
+                                        <citedRange from="146" to="149" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -160,17 +190,18 @@
                                 <locus from="5rb" to="8ra" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Birgitta Birgersdotter</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100481">Birgitta Birgersdotter</persName>
                                 </author>
-                                <title type="uniform" key="Geete_288 Åström_2883">Fyra större böner: 3. Till Jungfru Maria: variant a</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102385">Fyra större böner: 3. Till Jungfru Maria: variant a</title>
                                 <rubric>Af warfru dröfuilsom prima</rubric>
-                                <note>Sidhänvisning här enligt trycket I SFSS.</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104290">G. E. Klemming (1861-1875)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104290">Klemming (1861-1875)</title>
+                                        <citedRange from="138" to="142" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104292">G. E. Klemming (1861-1875)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104292">Klemming (1861-1875)</title>
+                                        <citedRange from="149" to="151" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -178,18 +209,19 @@
                                 <locus from="8ra" to="9vb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Birgitta Birgersdotter</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100481">Birgitta Birgersdotter</persName>
                                 </author>
-                                <title type="uniform" key="Geete_288 Åström_2884">Fyra större böner: 4. Till Jungfru Maria: variant a</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102389">Fyra större böner: 4. Till Jungfru Maria: variant a</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">Min iomfru sancta maria af sancta trinitate thu äres</incipit>
-                                <note>Början markeras inte särskilt. Sidhänvisning här enligt trycket I SFSS.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102707">Klemming (1861-1875)</title>
+                                        <citedRange from="143" to="146" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104293">G. E. Klemming (1861-1875)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104293">Klemming (1861-1875)</title>
+                                        <citedRange from="156" to="158" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -197,15 +229,14 @@
                                 <locus from="11ra" to="21rb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Bernhard av Clairvaux (?)</persName>
+                                    <persName><!--KOLLA-->Bernhard av Clairvaux (?)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_247 Åström_2470">Om klosterleverne</title>
-                                <title type="alt" xml:lang="sv">S. Bernardi bok til märkelikin kännedom ... them som til renlifnadh i kloster gifne äru huru the skula lifwa</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101454">Om klosterleverne</title>
                                 <rubric>Thässa bokena giordhe sanctus bernardus til märkelikin kännedom. ok mykit nyttan allom them som til renlifnadh i kloster gifne äru. hon halder tyughu ok tw capitula. första capitulum läre them som nykompne äru. hurur the skulu lifwa</rubric>
-                                <note>Sidhänvisning här enligt trycket I SFSS.</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102722">Harald Wieselgren (1864-1866)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102722">Wieselgren (1864-1866)</title>
+                                        <citedRange from="[241]" to="264" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -213,27 +244,26 @@
                                 <locus from="21va" to="37va" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Bernhard av Clairvaux (?)</persName>
+                                    <persName><!--KOLLA-->Bernhard av Clairvaux (?)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_248 Åström_2462">Undervisning för klosterbröder</title>
-                                <title type="alt" xml:lang="sv">Kännedomber aff S. Benedicti regula ad fratres</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101453">Undervisning för klosterbröder</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">O Älskelikin son göm ödhmykt i allom thingom</incipit>
-                                <note>I övre margen <quote>2°</quote>
-                                </note>
                             </msItem>
                             <msItem>
                                 <locus from="(22rb" to="24va)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_310970 Åström_3101">Om ödmjukhet (och om ödmjukhetens tolv trappor): variant b (del av "Undervisning om Basilii och Benedicti regel/Undervisning för klosterbröder")</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102619">Om ödmjukhet (och om ödmjukhetens tolv trappor): variant b (del av "Undervisning om Basilii och Benedicti regel/Undervisning för klosterbröder")</title>
                                 <rubric>Af tolf ödhmyktenna trappom</rubric>
                                 <incipit xml:lang="non-swe">Nw är märkiande at tolf äru ödhmyuktena trappo</incipit>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104802">Joh. Ernest. Rietz (1844)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104802">Rietz (1844)</title>
+                                        <citedRange from="166" to="172" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104803">F. A. Dahlgren (1874-1875)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104803">Dahlgren (1874-1875)</title>
+                                        <citedRange from="183" to="189" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -241,15 +271,14 @@
                                 <locus from="37va" to="92vb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Heinrich von Berg (Suso)</persName>
+                                    <persName><!--KOLLA-->Heinrich von Berg (Suso)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_305 Åström_3052">Gudelig snilles väckare: redaktion b (förkortad)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102594">Gudelig snilles väckare: redaktion b (förkortad)</title>
                                 <rubric>här sigx af them ordhom gudhlik snille tedhe sinom kännesven</rubric>
-                                <note>Titel originalverk: Horologium æternæ sapientia. I övre margen <quote>3 Dialogus Sapientiæ et discipuli</quote>
-                                </note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102747">Bergström (1868-1870)</title>
+                                        <citedRange from="381" to="462" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -257,60 +286,47 @@
                                 <locus from="93ra" to="116va" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Bernhard av Clairvaux (?)</persName>
+                                    <persName><!--KOLLA-->Pseudo-Bernhard av Clairvaux</persName>
                                 </author>
-                                <title type="uniform" key="Geete_284 Åström_2840">Tänkelsebok: redaktion a (fullständig)</title>
-                                <title type="alt" xml:lang="sv">S. Bärnardhi thänkkilse</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102308">Tänkelsebok: redaktion a (fullständig)</title>
                                 <rubric>Här börias sancti bernardi thänkilse. af gudz widherkänno</rubric>
                                 <incipit xml:lang="non-swe">Mange vita mykit ok vita sik ey siälfwa</incipit>
-                                <note>Titel originalverk: Meditationes. I övre margen <quote>IV.</quote>
-                                </note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102726">Harald Wieselgren (1864-1866)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102726">Wieselgren (1864-1866)</title>
+                                        <citedRange from="[197]" to="239" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="116v" to="116v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_382 Åström_3811">Glossa</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102893">Glossa</title>
                                 <rubric>Ingen</rubric>
-                                <note>
-                                    <quote>Mediator dagtingare</quote>
-                                </note>
                             </msItem>
                             <msItem>
                                 <locus from="120ra" to="275vb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_2802">Postilla (2)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102293">Postilla (2)</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">THäntidh ihesus kom a händer ierusalem</incipit>
-                                <note>Efter den inledande evangelietexten följer rubriken <quote>Första sunnodaghen j aduentonne</quote> till utläggningen med hänvisning till Augustinus. Ovanför texten <locus from="120ra" to="120ra" scheme="folios"/> har en 1800-talshand tillagt <quote>1. Sönd. i Adventet</quote>
-                                </note>
-                                <listBibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104720">G. E. Klemming (1880)</title>
-                                    </bibl>
-                                </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="(121ra" to="130rb)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_140 Åström_1400">Jesus pinohistoria</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101008">Jesus pinohistoria</title>
                                 <rubric>Ingen</rubric>
-                                <note>Ovanför texten <quote>Jesu Pino Historia</quote>
-                                </note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102815">Klemming (1880)</title>
+                                        <citedRange>5-30; 297-298</citedRange>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="(215va" to="223vb)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_308 Åström_3080.1">Utläggning av Tio Guds bud: redaktion b</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102603">Utläggning av Tio Guds bud: redaktion b</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">Nu for thy at här sigs i lästinne At petrus kalla van herra biudhara oc at petrus ey lydde honom […] är nakat talande af gudz buordhom</incipit>
                             </msItem>
@@ -325,7 +341,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="276"/>
+                                        <measure type="textblockLeaves" quantity="276" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <signatures>Före bindet numreringen I-IIIII i nedre vänsterkant på versosidorna i lägg 8, 9</signatures>
@@ -333,23 +349,34 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="2" writtenLines="24 26">
-                                        <locus from="1r" to="276v" scheme="folios"/>
+                                        <locus from="1r" to="276v"/>
                                         <dimensions type="written">
                                             <height quantity="180" unit="mm"/>
                                             <width quantity="140" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: 3 långa + 20 korta + 3 långa f. 1-135; 2 långa + 21 korta + 2 långa f. 136-275 (slutet); </note>
+                                        <note type="ruling">3 långa + 20 korta + 3 långa f. 1-135; 2 långa + 21 korta + 2 långa f. 136-275 (slutet)</note>
+                                        <note>Textytans bredd: 14; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-8">Cursiva gothica recentior</term>; Enligt Klemming (1880 s. 303) har hand 1 skrivit f. 2-9, 136-275 och hand 2 f. 11-<locus from="116r" to="116r" scheme="folios"/>, 120-135 Skriftfärg: svart; röd utmärkningsskrift (överskrifter, streckade bokstäver, stycketecken).</handNote>
+                                    <note type="script">Cursiva gothica recentior</note>
+                                    <note type="medium">svart; röd utmärkningsskrift (överskrifter, streckade bokstäver, stycketecken)</note>
+                                    <note>Enligt Klemming (1880 s. 303) har hand 1 skrivit f. 2-9, 136-275 och hand 2 f. 11-<locus from="116r" to="116r" scheme="folios"/>, 120-135</note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1v" to="1v" scheme="folios"/>
+                                    <note>Innehållsförteckning. A) Av 1600-talshand i bläck: <quote>1. Tacksägelseböner om Christi pino 2. S. Berrhards liber de arte bene vivendi 3. Christi pino 4. postilla på alla Söndagarom åhret</quote>
+                                    </note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="initials"> Initialfärg: röd</decoNote>
                                 <decoNote type="lombards">Röda lombarder i avsnittsbörjan</decoNote>
-                                <decoNote type="images">Ansikte i initial <locus from="144v" to="144v" scheme="folios"/></decoNote>
+                                <decoNote type="illuminations">Ansikte i initial <locus from="144v" to="144v" scheme="folios"/></decoNote>
                             </decoDesc>
                         </physDesc>
                         <history>
@@ -357,8 +384,7 @@
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
                                     <placeName ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>
-                                </origPlace>
-                                <origDate>1450-1500</origDate>
+                                </origPlace>, <origDate notBefore="1450" notAfter="1500">1450-1500</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -366,7 +392,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>

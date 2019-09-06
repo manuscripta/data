@@ -44,8 +44,8 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="1"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="leftFlyleaves" quantity="1" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
                                 <foliation>Ett ofolierad försätts, därefter nyare foliering 1-185 i övre högerhörn på rectosidorna i blyerts</foliation>
                             </supportDesc>
@@ -85,26 +85,6 @@
                                 </note>
                             </p>
                             <p>
-                                <locus from="2va" to="2va" scheme="folios"/>
-                                <note>Anteckning. <quote>Fanns inklistrad i Kongl. Bibl. fol. Handskr. A. 22. GS [?]</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="113r" to="113r" scheme="folios"/>
-                                <note>Anteckning. <quote>Finit Berhardus […]</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="140v" to="140v" scheme="folios"/>
-                                <note>Anteckning. Två rader, tre ord, med pekande hand, allt i rött; slitet och svårtytt. Därjämte <quote>xij</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="175v" to="175v" scheme="folios"/>
-                                <note>Skrivarnotis: svenska. <quote>aM</quote>
-                                </note>
-                            </p>
-                            <p>
                                 <locus from="RCI" to="RCI" scheme="other"/>
                                 <note>Anteckning. <quote>K</quote>
                                 </note>
@@ -113,8 +93,8 @@
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-1">Helband i trä</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-1">överdragsmaterial i skinn</term>; ljusbrun överdragsfärg; 6 bind; Fram två mässingsbeslag med remrester i framkant; bak två hål med spår efter beslag nära mitten på pärmen..</p>
-                                <p>
+                                    <note type="description">
+                                        <term>Helband i trä med överdrag av skinn</term>; överdragsfärg: ljusbrun; 6 bind; Fram två mässingsbeslag med remrester i framkant; bak två hål med spår efter beslag nära mitten på pärmen.</note>
                                     <dimensions type="binding">
                                         <height quantity="265" unit="mm"/>
                                         <width quantity="190" unit="mm"/>
@@ -127,17 +107,56 @@
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <acquisition>Till Kungliga biblioteket (oklart)</acquisition>
+                        <provenance xml:id="prov-1809">
+                            <orgName ref="https://www.manuscripta.se/org/100098">Vadstena kloster</orgName>, <date from="" to="">till 1619</date>
+                        </provenance>
+                        <provenance xml:id="prov-1804">
+                            <orgName ref="https://www.manuscripta.se/org/100083">Stockholm, Riksarkivet</orgName>, <date from="1620?" to="1668">1620?-1668</date>
+                        </provenance>
+                        <provenance xml:id="prov-1784">
+                            <orgName ref="https://www.manuscripta.se/org/100060">Antikvitetskollegium</orgName>
+                            <date notBefore="1668"/>
+                        </provenance>
+                        <provenance xml:id="prov-1794">
+                            <orgName ref="https://www.manuscripta.se/org/100059">Antikvitetsarkivet</orgName>, <date from="1692" to="1780">1692-1780</date>
+                        </provenance>
+                        <acquisition xml:id="prov-1670">
+                            <orgName ref="https://www.manuscripta.se/org/100004">Stockholm, Kungliga biblioteket</orgName>, <date from="1780" to="">1780-</date>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100701">Harald Wieselgren (1864-1866)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100687">Stephens (1865-1874)</title>
+                                <citedRange from="IV" to="IV" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100701">Wieselgren (1864-1866)</title>
                                 <citedRange from="IX, X" to="IX, X" unit="page"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100731">Robert Geete (1904-1905)</title>
-                                <citedRange from="XXIII" to="XXVI (IX, X, XV, XXII)" unit="page"/>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100727">Geete (1899)</title>
+                                <citedRange from="XXI" to="XXI" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100728">Geete (1900)</title>
+                                <citedRange from="XIX" to="XX (XIII-XIV, XVI)" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100731">Geete (1904-1905)</title>
+                                <citedRange from="XXIII" to="XXVI (IX, X, XV, XX" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101364">Dverstorp (2010)</title>
+                                <citedRange from="124" to="150, 215-218" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101352">Antonianum ; 20 (Miscellanea historica P. Livaro Oliger septuagenario ab amicis et discipulis oblata) (1945)</title>
+                                <citedRange from="447" to="447" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101419">Gödel (1916)</title>
+                                <citedRange from="4, 40, 161, 233, 267, 284, 286, 292, 293, 296, 297" to="4, 40, 161, 233, 267, 284, 286, 292, 293, 296, 297" unit="page"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -151,19 +170,19 @@
                                 <locus from="1r" to="95r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Thomas de Froidmont (Pseudo-Bernhard av Clairvaux)</persName>
+                                    <persName><!--KOLLA-->Thomas de Froidmont (Pseudo-Bernhard av Clairvaux)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_281 Åström_2812">Om gudeligt leverne</title>
-                                <title type="alt" xml:lang="sv">S. Bernardi bok til sinne syster af ett gudhelikt lifwärne</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102303">Om gudeligt leverne</title>
                                 <rubric>här byrias sancti bernardi bok</rubric>
                                 <incipit xml:lang="non-swe">KÄrasta mik j christo syster, lango är at thu badh</incipit>
-                                <note>Titel originalverk: De modo bene vivendi ad sororem (Modus bene vivendi ad sororem). Överskriften, i svart, förefaller vara tillagd i efterhand, möjligen av annan hand än huvudhanden.</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102723">Harald Wieselgren (1864-1866)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102723">Wieselgren (1864-1866)</title>
+                                        <citedRange from="1" to="195" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/104513">Nielsen (1863-1866)</title>
+                                        <citedRange>437-438, 441-443</citedRange>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -171,29 +190,28 @@
                                 <locus from="95r" to="113r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Bernhard av Clairvaux (?)</persName>
+                                    <persName><!--KOLLA-->Pseudo-Bernhard av Clairvaux</persName>
                                 </author>
-                                <title type="uniform" key="Geete_284 Åström_2840">Tänkelsebok: redaktion a (fullständig)</title>
-                                <title type="alt" xml:lang="sv">S. Bärnardhi thänkkilse</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102308">Tänkelsebok: redaktion a (fullständig)</title>
                                 <rubric>Här byrias sancti bärnardhi thänkkilse, Orate pro me [innehållsförteckning] af gudhz widerkänno</rubric>
                                 <incipit xml:lang="non-swe">MAnge wita mykit, och wita sik ey siälfwa</incipit>
-                                <note>Titel originalverk: Meditationes. Rubriken är skriven i ett sammanhang med sluttiteln till föregående text: <quote>Här ändas the bok som sanctus bärnardus diktadhe och sände sinne syster gudhi til lofh och hedher och äro / Ok hans wälsighnadha modher iomfru marie nw och ä for wtan ända AMEN Här byrias [se rubriken]</quote>
-                                </note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102726">Harald Wieselgren (1864-1866)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102726">Wieselgren (1864-1866)</title>
+                                        <citedRange from="[197]" to="239" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="113r" to="119v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_216 Åström_2160">Sankt Nereus, sankt Akilleus och sankt Domicilla</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101332">Sankt Nereus, sankt Akilleus och sankt Domicilla</title>
                                 <rubric>Här sigx hwru the hälge herrane santus nereus ok achilleus wmwände iomfru domicillam fran willo ok wantro ok til sannan gudz kärlek ok renlek / ok lydhu ther äpther badhe hon ok the dödh ok pino for gudz troscul [?]</rubric>
                                 <incipit xml:lang="non-swe">Sanctus nereus ok achilleus waro renlifwis</incipit>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102646">George Stephens (1847)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102646">Stephens (1847)</title>
+                                        <citedRange from="481" to="496" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -201,14 +219,15 @@
                                 <locus from="119v" to="121r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Mechtild av Hackeborn (Mechtildis de Hackeborn)</persName>
+                                    <persName><!--KOLLA-->Mechtild av Hackeborn (Mechtildis de Hackeborn)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_299 Åström_2995">Uppenbarelser: bok 1, kapitel 66</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102560">Uppenbarelser: bok 1, kapitel 66</title>
                                 <rubric>Här äpther star huru war kärra kände sancte mäktilde at hedhra änglomen wppa thera dag ok huru han tedhe henne en gyllene wpgang mz niio trappom</rubric>
                                 <incipit xml:lang="non-swe">Tha som gudhz thiänista qwinna war i hemelike talan</incipit>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102948">Robert Geete (1899)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102948">Geete (1899)</title>
+                                        <citedRange from="385" to="388" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -216,125 +235,140 @@
                                 <locus from="121r" to="121r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Mechtild av Hackeborn (Mechtildis de Hackeborn)</persName>
+                                    <persName><!--KOLLA-->Mechtild av Hackeborn (Mechtildis de Hackeborn)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_299 Åström_2996">Uppenbarelser: bok 1, kapitel 67</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102561">Uppenbarelser: bok 1, kapitel 67</title>
                                 <rubric>Här äpther sigx hwru sancte mäktild sa änglana thiäna sinom systrum i mässonne</rubric>
                                 <incipit xml:lang="non-swe">J Mässonne saa sancta mäktild en storan ängla skara</incipit>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102949">Robert Geete (1899)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102949">Geete (1899)</title>
+                                        <citedRange from="388" to="389" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="121r" to="122v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_264 Åström_2640">När biskopen viger kyrka</title>
-                                <title type="alt" xml:lang="sv">Nakor stykke som biscopin gör the, han wighir kirkio</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101506">När biskopen viger kyrka</title>
                                 <rubric>Thätta är nakor stykke som biscopin gör nar han wigher kirkio hwilkin ske ok göras skulu i människionna siäl wm hon skal wardha gudhz mönster märk aat granlika</rubric>
                                 <incipit xml:lang="non-swe">FÖrsta är at biscopin stänker ok wäter</incipit>
-                                <note>Texten avslutas med <quote>bidhin for mik</quote>
-                                </note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102964">Robert Geete (1900)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102964">Geete (1900)</title>
+                                        <citedRange from="[247]" to="252" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="122v" to="125r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_242 Åström_2420">Uttydning av antifoner och responsorier i advent (O-antifonerna)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101439">Uttydning av antifoner och responsorier i advent (O-antifonerna)</title>
                                 <rubric>Thätta är wtydhilse aff them siw antiphonis som siwngas fore iwlin Som heta O sapiencia gudhi til lofh ok hedher ok Jomfru marie Ok idher allom til hwgnadh til wara siäl Amen Amen</rubric>
                                 <incipit xml:lang="non-swe">TÄsse siw antiphonis betekna</incipit>
-                                <note>Titel originalverk: Antiphonae ante festum nativitatis Christi dicendae (Antiphonae majores, O-antifonerna). </note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102952">Robert Geete (1900)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104232">Jonas Carlquist (2006)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102952">Geete (1900)</title>
+                                        <citedRange from="[321]" to="339" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="125r" to="128v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_964 Åström_3081">Sex synder mot den helige Ande</title>
-                                <title type="alt" xml:lang="sv">Thätta äru säx synder amote them hälgha anda hwlka stundom äru nadhelika ok stundom dödhelika ok stundom rät mote them hälgha anda</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102604">Sex synder mot den helige Ande</title>
                                 <rubric>Thetta äru säx synder amote them hälgha anda hwlka stundom äru nadhelika ok stundom dödhelika ok stundom rät mote them hälgha anda</rubric>
                                 <incipit xml:lang="non-swe">Först är witande at människian syndar optarst i thriggia handa matta</incipit>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102999">Robert Geete (1904-1905)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102999">Geete (1904-1905)</title>
+                                        <citedRange from="245" to="259" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="128v" to="129v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_962 Åström_3033">Ord utgångna av Guds mun</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102586">Ord utgångna av Guds mun</title>
                                 <rubric>thässin ordhin här äpther star äru wt ganghin af gudhz mwnne ok äru mykith nythlikin hwario enne cristne människio at halda ok fulkompna til sinna siäls helso Amen</rubric>
                                 <incipit xml:lang="non-swe">Thät war en biscoper i tyskolande swa hetandes hvmbertus</incipit>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103016">Robert Geete (1904-1905)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103016">Geete (1904-1905)</title>
+                                        <citedRange from="415" to="417" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="129v" to="138v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_903 Åström_1975">Johannes evangelisten</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101254">Johannes evangelisten</title>
                                 <rubric>Här äpter star huru sanctus johannes ewangelis liknas widher siw thrä ok siw foghla ok siw blomster mz fägherstom wtthydhilsom / gudhi til hedher ok sancte johanni til pris ok äro</rubric>
                                 <incipit xml:lang="non-swe">Gracia dei sicut paradysus in benedictionibus […; Eccl. 40] Människian ibland annor creatur</incipit>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102997">Robert Geete (1904-1905)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104221">Jonas Carlquist (2006)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102997">Geete (1904-1905)</title>
+                                        <citedRange from="111" to="139" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="136r" to="136r" scheme="folios"/>
                                 <textLang mainLang="la"/>
-                                <title type="uniform" key="Geete_ Åström_3535.20569">Proverbia: Palleat omnis amans: color et hic aptus amanti</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102015">Proverbia: Palleat omnis amans: color et hic aptus amanti</title>
                                 <rubric>Ingen</rubric>
-                                <note>Walther, Proverbia 20569 = Ovidius, Ars amatoria, 1: 729: <quote>Wersus Palleat omnis amans color et hic aptus amanti</quote>
-                                </note>
+                                <incipit xml:lang="la">Wersus</incipit>
                             </msItem>
                             <msItem>
                                 <locus from="138v" to="181v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>(Pseudo-)Bonaventura (egentligen Jacobus Mediolanensis)</persName>
+                                    <persName><!--KOLLA-->(Pseudo-)Bonaventura (egentligen Jacobus Mediolanensis)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_934 Åström_2911">Stimulus amoris</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102447">Stimulus amoris</title>
                                 <rubric>Här byrias bok the som kallas stimulus amoris ok sigher aff och läre hwilka ledhis människian skal idhna sik i andeliko lifuärne ok huru hon ma meer främmias i godho och täkkias gudhi</rubric>
                                 <incipit xml:lang="non-swe">Capitulum i Först skal människian thät mästa hon gither</incipit>
-                                <note>Titel originalverk: Stimulus (divini) amoris. </note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103006">Robert Geete (1904-1905)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103006">Geete (1904-1905)</title>
+                                        <citedRange from="1" to="110" unit="page"/>
+                                    </bibl>
+                                </listBibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="175v" to="175v" scheme="folios"/>
+                                <textLang mainLang="non-swe"/>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103606">Skrivarnotis: svenska</title>
+                                <rubric>Ingen</rubric>
+                                <listBibl>
+                                    <bibl>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103051">Beckman (1917)</title>
+                                        <citedRange from="114" to="114" unit="page"/>
+                                    </bibl>
+                                    <bibl>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103055">Beckman (1917)</title>
+                                        <citedRange from="156" to="156" unit="page"/>
+                                    </bibl>
+                                    <bibl>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103059">Beckman (1917)</title>
+                                        <citedRange from="194" to="194" unit="page"/>
+                                    </bibl>
+                                    <bibl>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/103061">Beckman (1917)</title>
+                                        <citedRange from="217" to="217" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="182r" to="184v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_242 Åström_2420">Uttydning av antifoner och responsorier i advent (O-antifonerna)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101439">Uttydning av antifoner och responsorier i advent (O-antifonerna)</title>
                                 <rubric>Thetta responsorium siongx lögherdaghin för aduento synnedagh</rubric>
                                 <incipit xml:lang="non-swe">Härran sigher se oc skodha</incipit>
-                                <note>Titel originalverk: Antiphonae ante festum nativitatis Christi dicendae (Antiphonae majores, O-antifonerna). Endast rubriken (2 rader) på <locus from="181v" to="181v" scheme="folios"/>.</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102952">Robert Geete (1900)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104232">Jonas Carlquist (2006)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102952">Geete (1900)</title>
+                                        <citedRange from="[321]" to="339" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -349,7 +383,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="185"/>
+                                        <measure type="textblockLeaves" quantity="185" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <catchwords>Kustoder finns på <locus from="10v" to="10v" scheme="folios"/>, <locus from="90v" to="90v" scheme="folios"/>, <locus from="160v" to="160v" scheme="folios"/></catchwords>
@@ -357,19 +391,42 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="30">
-                                        <locus from="1r" to="185v" scheme="folios"/>
+                                        <locus from="1r" to="185v"/>
                                         <dimensions type="written">
                                             <height min="180" max="190" unit="mm"/>
                                             <width min="125" max="135" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: långlångkortlång+22 korta+långkortlånglång t.o.m. f. 140 (läggslut); långlång+27 korta+långlång därefter; Textytans höjd: 18-19; Textytans bredd: 12.5-13.5; </note>
+                                        <note type="ruling">långlångkortlång+22 korta+långkortlånglång t.o.m. f. 140 (läggslut); långlång+27 korta+långlång därefter</note>
+                                        <note>Textytans bredd: 12,5-13,5; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-5">Hybrida</term>; Skriftfärg: svart; röda kapiteltitlar och initialer och gula streckade bokstäver fram till f. 113 rad 22, och <locus from="138v" to="138v" scheme="folios"/> rad 22 till <locus from="181v" to="181v" scheme="folios"/>; röda streckade bokstäver och skiljetecken från <locus from="113r" to="113r" scheme="folios"/> rad 22 till <locus from="139v" to="139v" scheme="folios"/> rad 21, samt <locus from="181v" to="181v" scheme="folios"/> sista två raderna till slutet.</handNote>
+                                    <note type="script">Hybrida gothica</note>
+                                    <note type="medium">svart; röda kapiteltitlar och initialer och gula streckade bokstäver fram till f. 113 rad 22, och <locus from="138v" to="138v" scheme="folios"/> rad 22 till <locus from="181v" to="181v" scheme="folios"/>; röda streckade bokstäver och skiljetecken från <locus from="113r" to="113r" scheme="folios"/> rad 22 till <locus from="139v" to="139v" scheme="folios"/> rad 21, samt <locus from="181v" to="181v" scheme="folios"/> sista två raderna till slutet</note>
+                                    <note type="scribe">
+                                        <persName><!--KOLLA-->A. M. [Anna Matsdotter Karth] (kan ifrågasättas)</persName>, <placeName ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>, <locus from="175v" to="175v" scheme="folios"/>
+                                    </note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="2va" to="2va" scheme="folios"/>
+                                    <note>Anteckning. <quote>Fanns inklistrad i Kongl. Bibl. fol. Handskr. A. 22. GS [?]</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="113r" to="113r" scheme="folios"/>
+                                    <note>Anteckning. <quote>Finit Berhardus […]</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="140v" to="140v" scheme="folios"/>
+                                    <note>Anteckning. Två rader, tre ord, med pekande hand, allt i rött; slitet och svårtytt. Därjämte <quote>xij</quote>
+                                    </note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="initials">Initialer: kadeller, oftast med gul dekor, ibland även med röd, på första raden <locus from="27v" to="30v" scheme="folios"/> och <locus from="139v" to="152r" scheme="folios"/> (Stimulus amoris kap. 4-21, början) Initialfärg: röd</decoNote>
                                 <decoNote type="lombards">Röda lombarder i avsnittsbörjan; en blå <locus from="119v" to="119v" scheme="folios"/>, en grön <locus from="122v" to="122v" scheme="folios"/>, en grön och röd <locus from="125r" to="125r" scheme="folios"/></decoNote>
@@ -380,8 +437,8 @@
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
                                     <placeName ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>
-                                </origPlace>
-                                <origDate>1400-1500</origDate>
+                                </origPlace>, <origDate notBefore="1498" notAfter="1502">1498-1502</origDate>
+                                <p>Dateringen baseras på Geetes antagande att "aM" på <locus from="172v" to="172v" scheme="folios"/> i slutet på överskriften till kapitel 32 syftar på skriverskan Anna Matsdotter (Karth), nunna 1498-1524, och att ett avsnitt ur denna handskrift avskrivits i SKB A 3, som är daterad 1502.</p>
                             </origin>
                         </history>
                     </msPart>
@@ -389,7 +446,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -409,19 +466,19 @@
             <graphic url="kb-a-009_0002_LCI.tif" height="3521px" width="2675px"/>
         </surface>
         <surface xml:id="ms-100209_3-note">
-            <desc>3-note</desc>
+            <desc>p. 3-note</desc>
             <graphic url="kb-a-009_0003_note.tif" height="3316px" width="2424px"/>
         </surface>
         <surface xml:id="ms-100209_4-note">
-            <desc>4-note</desc>
+            <desc>p. 4-note</desc>
             <graphic url="kb-a-009_0004_note.tif" height="3521px" width="2675px"/>
         </surface>
         <surface xml:id="ms-100209_SL1r">
-            <desc>f. SL1r</desc>
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="kb-a-009_0005_SL001r.tif" height="3308px" width="2420px"/>
         </surface>
         <surface xml:id="ms-100209_SL1v">
-            <desc>f. SL1v</desc>
+            <desc>⟨f. Iv⟩</desc>
             <graphic url="kb-a-009_0006_SL001v.tif" height="3521px" width="2675px"/>
         </surface>
         <surface xml:id="ms-100209_1r">

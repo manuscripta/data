@@ -30,7 +30,7 @@
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sverige</country>
                         <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
-                        <institution ref="https://www.manuscripta.se/org/FEL">Uppsala universitet</institution>
+                        <institution ref="https://www.manuscripta.se/org/100011">Uppsala universitet</institution>
                         <repository ref="https://www.manuscripta.se/place/100092">Uppsala universitetsbibliotek</repository>
                         <idno type="shelfmark">B 49</idno>
                         <altIdentifier>
@@ -43,8 +43,8 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="0"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="leftFlyleaves" quantity="0" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
                                 <foliation>Nyare foliering 1-79 i övre högerhörn på rectosidorna</foliation>
                             </supportDesc>
@@ -80,19 +80,6 @@
                                 </note>
                             </p>
                             <p>
-                                <locus from="40v" to="40v" scheme="folios"/>
-                                <note>Anteckning. <quote>krws haar wold??der . langer korth wiþ ghist sötä minnder</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="40v" to="40v" scheme="folios"/>
-                                <note>Annotatio. I cursiva.</note>
-                            </p>
-                            <p>
-                                <locus from="80r" to="80v" scheme="folios"/>
-                                <note>Anteckning. Om bokens ägare och anteckningarna på bakpärmens insida av J. H. Schröder.</note>
-                            </p>
-                            <p>
                                 <locus from="RCI" to="RCI" scheme="other"/>
                                 <note>Anteckning. <quote>Olawer […] iiij öra</quote> och därunder <quote>Sigbiörn i aa iij öra</quote>
                                 </note>
@@ -110,189 +97,139 @@
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-1">Helband i trä</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-1">överdragsmaterial i skinn</term>; brun överdragsfärg; Spår efter ett spänne fram och bak.</p>
-                                <p>
+                                    <note type="description">
+                                        <term>Helband i trä med överdrag av skinn</term>; överdragsfärg: brun; Spår efter ett spänne fram och bak</note>
                                     <dimensions type="binding">
                                         <height quantity="" unit="mm"/>
                                         <width quantity="" unit="mm"/>
                                         <depth quantity="" unit="mm"/>
                                     </dimensions>
                                 </p>
+                                <condition>Ombundet; rygg av linnelärft.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance from="1550?" to="1601">
-                            <quote>[Joh. Burei ant:] Donarium Brynolphi Blanchovii Kal. Aprili 1601(?)</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date notAfter="1601"/> Ägarperiod: 1550?-1601</provenance>
-                        <provenance from="1601" to="1602">
-                            <quote>Johanni Buræo collatum</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date>1601, 1602</date> Ägarperiod: 1601-1602</provenance>
-                        <provenance from="1601" to="1602"> Ägardatering: <date>1601, 1602</date> Ägarperiod: 1601-1602</provenance>
-                        <provenance from="1602" to="1602">
-                            <quote>Sedan gifwin then höghachtadhe och wälförståndigha Hans Nilson till ett taksäjelses täkn af Johan Bure S. Johans afton 1602 Stokkholmiæ</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date>1602</date> Ägarperiod: 1602-1602</provenance>
-                        <provenance from="1602" to="1611?">
-                            <quote>Nw förähret [M]in käre broder Peer Niellsson Secreterer af H. Nielsson 5 Julij. 1602</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date>1602</date> Ägarperiod: 1602-1611?</provenance>
-                        <provenance from="1750?" to="1800">
-                            <quote>[auktionskatalogen 1802, s. 257]</quote> Ägardatering: <date>-</date> Ägarperiod: 1750?-1800</provenance>
-                        <provenance from="1802" to="1823">
-                            <quote>Köpt år 1800. 1802 S. Berglind [därefter tillagt av J. H. Schröder:] och af honom förärad till Upsala Acad. Bibliothek år 1823</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date notBefore="1802"/> Ägarperiod: 1802-1823</provenance>
-                        <provenance from="1823" to=""> Ägarperiod: 1823-</provenance>
+                        <provenance xml:id="prov-242">
+                            <persName ref="https://www.manuscripta.se/person/100520">Brynolphus (Bryngel) Blanchovius</persName>, <date from="1550?" to="1601">1550?-1601</date> Ägarnotis: [Joh. Burei ant:] Donarium Brynolphi Blanchovii Kal. Aprili 1601(?), P2</provenance>
+                        <provenance xml:id="prov-755">
+                            <persName ref="https://www.manuscripta.se/person/100544">Johannes Thomæ (Johan Thomasson) Bureus (Bure)</persName>, <date from="1601" to="1602">1601-1602</date> Ägarnotis: Johanni Buræo collatum, P2</provenance>
+                        <provenance xml:id="prov-287">
+                            <persName ref="https://www.manuscripta.se/person/100937">Hans Nilsson (till Helgö, Rosenbanér?)</persName>, <date from="1602" to="1602">1602-1602</date> Ägarnotis: Sedan gifwin then höghachtadhe och wälförståndigha Hans Nilson till ett taksäjelses täkn af Johan Bure S. Johans afton 1602 Stokkholmiæ, P2</provenance>
+                        <provenance xml:id="prov-901">
+                            <persName ref="https://www.manuscripta.se/person/100936">Per Nilsson (Jacobsköld)</persName>, <date from="1602" to="1611?">1602-1611?</date> Ägarnotis: Nw förähret [M]in käre broder Peer Niellsson Secreterer af H. Nielsson 5 Julij. 1602, P2</provenance>
+                        <provenance xml:id="prov-458">
+                            <persName ref="https://www.manuscripta.se/person/100645">Lars Benzelstierna</persName>, <date from="1750?" to="1800">1750?-1800</date> Ägarnotis: [auktionskatalogen 1802, s. 257]</provenance>
+                        <provenance xml:id="prov-543">
+                            <persName ref="https://www.manuscripta.se/person/100504">Sam[uel] Berglind</persName>, <date from="1802" to="1823">1802-1823</date> Ägarnotis: Köpt år 1800. 1802 S. Berglind [därefter tillagt av J. H. Schröder:] och af honom förärad till Upsala Acad. Bibliothek år 1823, P2</provenance>
+                        <acquisition xml:id="prov-1071">
+                            <orgName ref="https://www.manuscripta.se/org/100097">Uppsala Universitetsbibliotek</orgName>, <date from="1823" to="">1823-</date>
+                        </acquisition>
                     </history>
                     <additional>
-                        <listBibl/>
+                        <listBibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100795">Nelson (1948)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100530">Schlyter (1844)</title>
+                                <citedRange from="I" to="V" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100513">Schlyter (1834)</title>
+                                <citedRange from="VII" to="VIII" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101419">Gödel (1916)</title>
+                                <citedRange from="17, 204, 205" to="17, 204, 205" unit="page"/>
+                            </bibl>
+                        </listBibl>
                     </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
-                        <msContents>
+                        <msContents class="lagbok">
                             <textLang mainLang="non-swe"/>
-                            <msItem>
-                                <locus from="" to="" scheme="folios"/>
-                                <title type="uniform" key="Geete_ Åström_8060.01"># ENHET 1</title>
-                                <rubric>Ingen</rubric>
-                            </msItem>
                             <msItem>
                                 <locus from="1r" to="65v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_3921024 Åström_3920">Hälsingelagen (HelsL)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102935">Hälsingelagen (HelsL)</title>
                                 <rubric>Ingen</rubric>
-                                <note>Skriven efter 1320 vilket framgår av Ärvdabalken 16:pr (SSGL 6, s. II not 1). På grund av bladförlust efter f. 20 saknas Ärvdabalkens förteckning-Ärvdabalken 1 (del), efter f. 32 saknas Manhelgdbalken 2 (del)-Manhelgdbalken 14 (början), efter f. 40 saknas Jordabalkens förteckning-Jordabalken 2 (del).</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102028">Sweriges Rijkes Landz- och Stadzlagh (1643)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102029">Sweriges Rijkes Landz- och Stadzlagh (1643)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102034">Sweriges Rijkes Gamble Laghböker (1650)</title>
-                                    </bibl>
-                                    <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102239">Schlyter (1844)</title>
+                                        <citedRange>I-XVII, 3-93</citedRange>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102538">Nelson (1957)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103192">Harald Hjärne (1895)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103232">Richard Steffen (1905)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103249">Richard Steffen (1910)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103266">Ernst Lagus (1906)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103313">J. Mjöberg (1937)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103556">Richard Steffen (1918)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103578">Richard Steffen (1924)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103804">Åke Holmbäck och Elias Wessén (1940)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104400">[Jonas Bure] (1609)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104413">Hälsinge-laghen (1650)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104430">[Claudius Åkerman] (1665)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104431">[Claudius Åkerman] (1665)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104577">Axel Nelson (1948)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104741">Hälsingelagen / tolkad av Johannes Kjellström (1909)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104577">Nelson (1948)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="(vid balkarnas slut)" to="(vid balkarnas slut)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_84 Åström_840">Lagrim (Rim ur lagböcker)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/100720">Lagrim (Rim ur lagböcker)</title>
                                 <rubric>Ingen</rubric>
-                                <note>Ett rim är felaktigt infört vid Kyrkobalken 21:2 i rött, och ett annat vid dess slut i svart.</note>
                             </msItem>
                             <msItem>
                                 <locus from="(64r" to="65r)" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_327 Åström_3270">Rågångsbeskrivning över gränserna mellan Sverige och Norge</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102673">Rågångsbeskrivning över gränserna mellan Sverige och Norge</title>
                                 <rubric>Ingen</rubric>
-                                <note>Tingmålabalken 15a.</note>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102238">Schlyter (1844)</title>
+                                        <citedRange from="93" to="93" unit="page"/>
                                     </bibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102337">Rydberg (1877)</title>
+                                        <citedRange from="250" to="250" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="65v" to="65v" scheme="folios"/>
                                 <textLang mainLang="la"/>
-                                <title type="uniform" key="Geete_ Åström_2797.53">Oratio: Scio Domine Iesu Christe quod in quacumque die</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102236">Oratio: Scio Domine Iesu Christe quod in quacumque die</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="la">Scio Domine Iesu Christe quod in quacumque die … celesti aux[i]lio progetas et defendas</incipit>
-                                <note>Något senare tillägg.</note>
                             </msItem>
                             <msItem>
                                 <locus from="65v" to="65v" scheme="folios"/>
                                 <textLang mainLang="la"/>
-                                <title type="uniform" key="Geete_ Åström_2797.31">Oratio: Gaude Maria quod solius tue glorie</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102191">Oratio: Gaude Maria quod solius tue glorie</title>
                                 <rubric>Ingen</rubric>
-                                <incipit xml:lang="la">Gaude Maria quod solius tue glorie … per infinita seculorum secula AMEN</incipit>
-                                <note>Något senare tillägg.</note>
                             </msItem>
                             <msItem>
                                 <locus from="65v" to="65v" scheme="folios"/>
                                 <textLang mainLang="la"/>
-                                <title type="uniform" key="Geete_ Åström_2797.23">Oratio: Domine Iesu Christe peto te per memoriam</title>
-                                <rubric>Ingen</rubric>
-                                <incipit xml:lang="la">Domine Iesu Christe peto te pro memoriam … AMEN</incipit>
-                                <note>Något senare tillägg.</note>
-                            </msItem>
-                            <msItem>
-                                <locus from="" to="" scheme="folios"/>
-                                <title type="uniform" key="Geete_ Åström_8060.02"># ENHET 2</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102181">Oratio: Domine Iesu Christe peto te per memoriam</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="66r" to="79r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_3963">Upplandslagen: del av</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102996">Upplandslagen: del av</title>
                                 <rubric>Ingen</rubric>
-                                <note>Ärvdabalken. På grund av bladförlust efter f. 77 saknas Ärvdabalken 22 (del)-Ärvdabalken 23 (del).</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102514">Ståhle (1939)</title>
-                                    </bibl>
-                                    <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102548">Wiktorsson (1985)</title>
+                                        <citedRange from="118" to="134" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102583">Robert Geete (1900-1916)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102583">Geete (1900-1916)</title>
+                                        <citedRange from="[243]" to="259" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="79r" to="79v" scheme="folios"/>
                                 <textLang mainLang="la"/>
-                                <title type="uniform" key="Geete_ Åström_9755">Modus publicarum penitenciarum [1344]. (Botföreskrifter för Uppsala stift. [1344]) (DS 3843)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103901">Modus publicarum penitenciarum [1344]. (Botföreskrifter för Uppsala stift. [1344]) (DS 3843)</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="la">Ut penitencie publice … fruct[us] vt ecclesie tue sancte a . cuius integritate de[uiauerat]</incipit>
-                                <note>På grund av bladförlust efter f. 79 saknas slutet.</note>
                             </msItem>
                         </msContents>
                         <physDesc>
@@ -305,7 +242,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="79"/>
+                                        <measure type="textblockLeaves" quantity="79" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <catchwords>Kustoder i lägg 1-4, 6, 8-10 och 12 (<locus from="7v" to="7v" scheme="folios"/>, <locus from="15v" to="15v" scheme="folios"/>, <locus from="22v" to="22v" scheme="folios"/>, <locus from="29v" to="29v" scheme="folios"/>, <locus from="33v" to="33v" scheme="folios"/>, <locus from="45v" to="45v" scheme="folios"/>, <locus from="56v" to="56v" scheme="folios"/>, <locus from="61v" to="61v" scheme="folios"/>, <locus from="73v" to="73v" scheme="folios"/>)</catchwords>
@@ -313,19 +250,39 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1">
-                                        <locus from="1r" to="79v" scheme="folios"/>
+                                        <locus from="1r" to="79v"/>
                                         <dimensions type="written">
-                                            <height unit="mm"/>
-                                            <width quantity="105" unit="mm"/>
+                                            <height/>
+                                            <width/>
                                         </dimensions>
-                                        <note>Radantal: 17 (<locus from="1r" to="65r" scheme="folios"/>); 20-21 (<locus from="66r" to="79r" scheme="folios"/>); Textytans höjd: 13.5 ; Textytans bredd: 10.5 ; </note>
+                                        <note type="runningHeaders">löpande uppslagsvis i rött</note>
+                                        <note>Radantal: 17 (<locus from="1r" to="65r" scheme="folios"/>); 20-21 (<locus from="66r" to="79r" scheme="folios"/>); Textytans höjd: 13,5 (<locus from="1r" to="65r" scheme="folios"/>); 15 (<locus from="66r" to="79r" scheme="folios"/>); Textytans bredd: 10,5 (<locus from="1r" to="65r" scheme="folios"/>); 10,5 (<locus from="66r" to="79r" scheme="folios"/>); </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-2">Textualis gothica</term>; Hand 2 och 3 <locus from="65v" to="65v" scheme="folios"/> cursiva recentior Hand 1 <locus from="1r" to="65r" scheme="folios"/>, hand 2 <locus from="65v" to="65v" scheme="folios"/> rad 1-6, hand 3 <locus from="65v" to="65v" scheme="folios"/> resten från rad 7, hand 4 <locus from="66r" to="79r" scheme="folios"/> rad 7, hand 5 <locus from="79r" to="79r" scheme="folios"/> rad 8-<locus from="79v" to="79v" scheme="folios"/> Skriftfärg: Röd utmärkningsskrift (streckade bokstäver, flocknummer, radfyllnader).</handNote>
+                                    <note type="script">Textualis gothica</note>
+                                    <note type="medium">röd utmärkningsskrift (streckade bokstäver, flocknummer, radfyllnader)</note>
+                                    <note>Hand 2 och 3 <locus from="65v" to="65v" scheme="folios"/> cursiva recentior</note>
+                                    <note>Hand 1 <locus from="1r" to="65r" scheme="folios"/>, hand 2 <locus from="65v" to="65v" scheme="folios"/> rad 1-6, hand 3 <locus from="65v" to="65v" scheme="folios"/> resten från rad 7, hand 4 <locus from="66r" to="79r" scheme="folios"/> rad 7, hand 5 <locus from="79r" to="79r" scheme="folios"/> rad 8-<locus from="79v" to="79v" scheme="folios"/></note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="40v" to="40v" scheme="folios"/>
+                                    <note>Anteckning. <quote>krws haar wold??der . langer korth wiþ ghist sötä minnder</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="40v" to="40v" scheme="folios"/>
+                                    <note>Annotatio. I cursiva.</note>
+                                </p>
+                                <p>
+                                    <locus from="80r" to="80v" scheme="folios"/>
+                                    <note>Anteckning. Om bokens ägare och anteckningarna på bakpärmens insida av J. H. Schröder.</note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="initials">Initialer: i balk- och flockbörjan i Hälsningelagen (<locus from="1r" to="66r" scheme="folios"/>), av första graden i balkbörjan <locus from="3r" to="3r" scheme="folios"/>, <locus from="14v" to="14v" scheme="folios"/>, <locus from="31v" to="31v" scheme="folios"/>, <locus from="43v" to="43v" scheme="folios"/>, <locus from="48r" to="48r" scheme="folios"/>, <locus from="58r" to="58r" scheme="folios"/> Initialfärg: röd, blå</decoNote>
                                 <decoNote type="lombards">Lombarder i balk- och flockbörjan i Upplandslagen (<locus from="66r" to="79r" scheme="folios"/>)</decoNote>
@@ -335,9 +292,8 @@
                             <origin>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/FEL">Hälsingland</placeName>
-                                </origPlace>
-                                <origDate>1325-1375 (efter 1320)</origDate>
+                                    <placeName><!--KOLLA-->Hälsingland</placeName>
+                                </origPlace>, <origDate>1325-1375 (efter 1320)</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -345,7 +301,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>

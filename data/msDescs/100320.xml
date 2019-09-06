@@ -46,8 +46,8 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="0"/>
-                                    <measure type="rightFlyleaves" quantity="0"/>
+                                    <measure type="leftFlyleaves" quantity="0" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
                                 <foliation>Nyare foliering 1-68 i övre högerhörn på rectosidorna; paginering 1-134 som börjar på <locus from="1v" to="1v" scheme="folios"/> (sidan 1=<locus from="1v" to="1v" scheme="folios"/>, 2=<locus from="2r" to="2r" scheme="folios"/> etc.)</foliation>
                             </supportDesc>
@@ -55,7 +55,8 @@
                         <additions>
                             <p>
                                 <locus from="LCO" to="LCO" scheme="other"/>
-                                <note>Biblioteksmärke. KB:s gröna exlibris.</note>
+                                <note>Biblioteksmärke. KB:s gröna exlibris; <quote>B. 170</quote>
+                                </note>
                             </p>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
@@ -68,16 +69,7 @@
                             </p>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
-                                <note>Biblioteksmärke. <quote>B. 170</quote>, <quote>Kongl. Bibliotheket No 80</quote>
-                                </note>
-                            </p>
-                            <p>
-                                <locus from="1r" to="1r" scheme="folios"/>
-                                <note>Biblioteksmärke. KB:s stämpel.</note>
-                            </p>
-                            <p>
-                                <locus from="64r" to="64r" scheme="folios"/>
-                                <note>Annotatio scriptoris: latinæ. <quote>Explicit iste liber. sit scriptor crimine liber Completus est liber iste sub manu konradi scriptoris anno ab incarnacione domini M° C°CC lxx°x septimo [tillagt med mindre, kursiv stil:] circa michaelis</quote>
+                                <note>Biblioteksmärke. <quote>Kongl. Bibliotheket No 80</quote>
                                 </note>
                             </p>
                             <p>
@@ -89,8 +81,8 @@
                         <bindingDesc>
                             <binding contemporary="true">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-1">Helband i trä</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-1">överdragsmaterial i skinn</term>; röd överdragsfärg; 7 upphöjda bind; Fram: Mässingsbeslag: 2 spännremmar med ändbeslag på båda sidor, ett stycke in på ovansidan buckla på undersidan hålbeslag; på pärmen 4 hörnbucklor och 1 mittbuckla; 1 järnbeslag med hyska mellan spännremmarna. Bak: mässingsbeslag: 2 tenar för spänne ca 11 cm in från framkant, 4 hörn- och 1 mittbuckla; 1 krampa av järn mellan de 2 främre hörnbucklorna..</p>
-                                <p>
+                                    <note type="description">
+                                        <term>Helband i trä med överdrag av skinn</term>; överdragsfärg: röd; 7 upphöjda bind; Fram: Mässingsbeslag: 2 spännremmar med ändbeslag på båda sidor, ett stycke in på ovansidan buckla på undersidan hålbeslag; på pärmen 4 hörnbucklor och 1 mittbuckla; 1 järnbeslag med hyska mellan spännremmarna. Bak: mässingsbeslag: 2 tenar för spänne ca 11 cm in från framkant, 4 hörn- och 1 mittbuckla; 1 krampa av järn mellan de 2 främre hörnbucklorna.</note>
                                     <dimensions type="binding">
                                         <height quantity="330" unit="mm"/>
                                         <width quantity="230" unit="mm"/>
@@ -98,164 +90,120 @@
                                     </dimensions>
                                 </p>
                                 <decoNote type="endbands">Rester av kapitälband vid huvud och svans</decoNote>
+                                <condition>Bandet har ett rött skyddsöverdrag av skinn.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance from="1387" to="1866">
-                            <quote>Öfverlemnad till Kongl. Bibliotheket från Söderköpings Rådhusarkiv enligt skrifvelse 15 Februari 1866 [G. E. Klemmings hand]</quote> (<locus from="LCI" to="LCI" scheme="other"/>) Ägardatering: <date>1387</date> Ägarperiod: 1387-1866</provenance>
-                        <acquisition>Till Kungliga biblioteket 1866-</acquisition>
+                        <provenance xml:id="prov-137">
+                            <orgName ref="https://www.manuscripta.se/org/100093">Söderköpings rådhusarkiv</orgName>, <date from="1387" to="1866">1387-1866</date> Ägarnotis: Öfverlemnad till Kongl. Bibliotheket från Söderköpings Rådhusarkiv enligt skrifvelse 15 Februari 1866 [G. E. Klemmings hand], <locus from="64r" to="64r" scheme="folios"/></provenance>
+                        <acquisition xml:id="prov-1019">
+                            <orgName ref="https://www.manuscripta.se/org/100004">Stockholm, Kungliga biblioteket</orgName>, <date from="1866" to="">1866-</date>
+                        </acquisition>
                     </history>
                     <additional>
-                        <listBibl/>
+                        <listBibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100830">Wessén (1971)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100555">Schlyter (1865)</title>
+                                <citedRange from="III" to="V" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100739">Beckman (1917)</title>
+                                <citedRange from="194" to="203" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101301">Hedlund (1980)</title>
+                                <citedRange from="14" to="14" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100881">Holmbäck (1966)</title>
+                                <citedRange from="XXIV" to="LIV" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101365">Åström (2003)</title>
+                                <citedRange from="" to="" unit="page"/>
+                            </bibl>
+                        </listBibl>
                     </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
-                        <msContents>
+                        <msContents class="lagbok">
                             <textLang mainLang="non-swe"/>
                             <msItem>
                                 <locus from="1v" to="1v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_4731">Stycket "Om flock och samnad mot fogde m.fl." (Magnus Erikssons Stadslag, Edsöresbalken 27)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102055">Stycket "Om flock och samnad mot fogde m.fl." (Magnus Erikssons Stadslag, Edsöresbalken 27)</title>
                                 <rubric>Ingen</rubric>
-                                <note>På rasur.</note>
-                                <listBibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102303">Schlyter (1865)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102318">Schlyter (1869)</title>
-                                    </bibl>
-                                </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="1v" to="1v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_8711">Om edens betydelse och om mened (Vilken som svär ed på bok)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103731">Om edens betydelse och om mened (Vilken som svär ed på bok)</title>
                                 <rubric>Ingen</rubric>
                                 <incipit xml:lang="non-swe">Allom skal mä[r]kiande wara them som dirfu[es] til at, sweria a bok at thän som swär</incipit>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/103052">Beckman (1917)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103077">Beckman (1917)</title>
+                                        <citedRange from="120" to="120" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="2r" to="64r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_4141035 Åström_4140">Magnus Erikssons stadslag (MEStL): redaktion 1</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103249">Magnus Erikssons stadslag (MEStL): redaktion 1</title>
                                 <rubric>Ingen</rubric>
-                                <note>På grund av bladförlust efter f. 34 (motsvarande 2 blad) saknas KpB.34 (del)-SkB.11 (del). På ett något senare insatt blad har den ursprungligen överhoppade huvuddelen av EdsB.19 infogats.</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104402">[Jonas Bure] ([1618])</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104407">Swerikes Rijkes Stadz Lagh (1635)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104409">Swerikes Rijkes Stadz Lagh (1638)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104411">Sweriges Rijkes Landz- och Stadzlagh (1643)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104419">Swerikes Rijkes STADZLAGH (1665)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104423">[Claudius Åkerman] (1665)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104448">Petter Abrahamsson (1702)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104454">Isr. Arnell (1730)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104515">C. J. Schlyter (1865)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104573">Nils Ahnlund (1944)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104595">Åke Holmbäck och Elias Wessén (1966)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104598">Elias Wessén (1971)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104573">Ahnlund (1944)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
+                                <locus from="64r" to="64r" scheme="folios"/>
+                                <textLang mainLang="la"/>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103612">Annotatio scriptoris: latinæ</title>
+                                <rubric>Ingen</rubric>
+                            </msItem>
+                            <msItem>
                                 <locus from="64v" to="65v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_3277">Söderköpings råmärken 1591</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102680">Söderköpings råmärken 1591</title>
                                 <rubric>Ingen</rubric>
                             </msItem>
                             <msItem>
                                 <locus from="66r" to="66v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_8020">Brev</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103642">Brev</title>
                                 <rubric>Ingen</rubric>
-                                <note>Brev daterat 1585.</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103477">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103495">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103516">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103534">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104814">Bertil Ejder (1974)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104814">Ejder (1974)</title>
+                                        <citedRange from="9" to="10" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="67r" to="67v" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_559 Åström_5590">Riksens råds brev om utlänningars uteslutande ur städernas råd. Stockholm 1471 (MEStL: Add. A.)</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103432">Riksens råds brev om utlänningars uteslutande ur städernas råd. Stockholm, 14 oktober 1471 (MEStL: Additamentum A.)</title>
                                 <rubric>Ingen</rubric>
-                                <note/>
-                                <listBibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102306">Schlyter (1865)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104546">Karl Hildebrand (1900)</title>
-                                    </bibl>
-                                </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="68r" to="68r" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_ Åström_8020">Brev</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/103642">Brev</title>
                                 <rubric>Ingen</rubric>
-                                <note>Brevavslutning (formulär?) dat. 1419 (?).</note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103477">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103495">Erik Noreen (1932)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103516">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103534">Sven Benson (1954)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/104814">Bertil Ejder (1974)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/104814">Ejder (1974)</title>
+                                        <citedRange from="9" to="10" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -270,7 +218,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="68"/>
+                                        <measure type="textblockLeaves" quantity="68" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <signatures>Sist i lägg 2-6 och även först i lägg 6</signatures>
@@ -279,33 +227,41 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" writtenLines="27">
-                                        <locus from="1r" to="68v" scheme="folios"/>
+                                        <locus from="1r" to="68v"/>
                                         <dimensions type="written">
                                             <height quantity="220" unit="mm"/>
                                             <width quantity="145" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: Linjerad; Textytans bredd: 14.5; </note>
+                                        <note type="ruling">Linjerad</note>
+                                        <note type="runningHeaders">löpande uppslagsvis i rött</note>
+                                        <note>Textytans bredd: 14,5; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-2">Textualis gothica</term>; Skriftfärg: svart; röd utmärkningsskrift (streckade bokstäver, flocknummer).</handNote>
+                                    <note type="script">Textualis gothica</note>
+                                    <note type="medium">svart; röd utmärkningsskrift (streckade bokstäver, flocknummer)</note>
+                                    <note>Skriven av en hand, med tillägg av 3 händer, varav 2 efter 1591.</note>
+                                    <note type="scribe">
+                                        <persName ref="https://www.manuscripta.se/person/101421">Konrad</persName>
+                                    </note>
+                                </handNote>
                             </handDesc>
+                            <additions/>
                             <decoDesc>
                                 <decoNote type="initials">Fleuronnéinitialer: röda och gröna med margutlöpare i balkbörjan, mindre vid förteckningarna, större vid textbörjan: <locus from="2r" to="2r" scheme="folios"/>+v, <locus from="8r" to="8r" scheme="folios"/>+v, <locus from="13r" to="13r" scheme="folios"/>+v, <locus from="16v" to="16v" scheme="folios"/>, <locus from="17r" to="17r" scheme="folios"/>, <locus from="20r" to="20r" scheme="folios"/>+v, <locus from="26v" to="26v" scheme="folios"/>, <locus from="27r" to="27r" scheme="folios"/>, <locus from="36r" to="36r" scheme="folios"/>+v, <locus from="43v" to="43v" scheme="folios"/>, <locus from="44r" to="44r" scheme="folios"/>, <locus from="49v" to="49v" scheme="folios"/>, <locus from="51v" to="51v" scheme="folios"/>, <locus from="52r" to="52r" scheme="folios"/>, <locus from="53v" to="53v" scheme="folios"/>, <locus from="54r" to="54r" scheme="folios"/>, <locus from="56r" to="56r" scheme="folios"/>+v, <locus from="59r" to="59r"
                                         scheme="folios"/>+v, <locus from="60v" to="60v" scheme="folios"/>, <locus from="61r" to="61r" scheme="folios"/>, <locus from="63v" to="63v" scheme="folios"/> Initialfärg: röd, grön</decoNote>
                                 <decoNote type="lombards">Omväxlande röda och gröna lombarder i flockbörjan</decoNote>
-                                <decoNote type="images"><locus from="21v" to="21v" scheme="folios"/>: blomornament i svart bläck (eftermedeltida?)</decoNote>
+                                <decoNote type="illuminations"><locus from="21v" to="21v" scheme="folios"/>: blomornament i svart bläck (eftermedeltida?)</decoNote>
                             </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/FEL" cert="low">Söderköping</placeName>
-                                </origPlace>
-                                <origDate>1387</origDate>
+                                    <placeName cert="low"><!--KOLLA-->Söderköping</placeName>
+                                </origPlace>, <origDate when="1387">1387</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -313,7 +269,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>

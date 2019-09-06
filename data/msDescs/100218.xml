@@ -47,8 +47,8 @@
                                     <p/>
                                 </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="1"/>
-                                    <measure type="rightFlyleaves" quantity="1"/>
+                                    <measure type="leftFlyleaves" quantity="1" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
                                 <foliation>Försättsbladet av papper är ofolierat. Första pergamentbladet är folierat "I" i blyerts, därefter foliering 1-169 i övre högerhörn på rectosidorna; en äldre foliering av vart 5:e eller 10:e blad i bläck har rättats med blyerts fr.o.m. f. 109, som har rättats från "110". Sista pergamentbladet och eftersättsbladet i papper är ofolierade. Textspalterna är från f. 11 numrerade 42-688 i övermarg i blyerts</foliation>
                             </supportDesc>
@@ -73,20 +73,12 @@
                                 <note>Anteckning. <quote>Heliga Birgittas Uppenbarelser 1-3 Boken</quote> upptill, samt <quote>Tryckt 1857, 58</quote> nertill i rödkrita av 1800- eller 1900-talshand. Därtill <quote>Gammal N:o på ryggen 47. Antiquitets Arkivets signatur A 33.</quote>
                                 </note>
                             </p>
-                            <p>
-                                <locus from="(passim, marg)" to="(passim, marg)" scheme="folios"/>
-                                <note>Anteckning. Marginalanteckningar på några ställen av J. T. Bure, enligt G. E. Klemming, SFSS 14:5, s. 146.</note>
-                            </p>
-                            <p>
-                                <locus from="eftersätts recto" to="eftersätts recto" scheme="folios"/>
-                                <note>Anteckning. Uppställning över bokens läggsammansättning och bladförluster (av Klemming).</note>
-                            </p>
                         </additions>
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>
-                                    <term ref="https://www.manuscripta.se/terms/bandtyp-7">Helband i papp</term> med <term ref="https://www.manuscripta.se/terms/overdragsmaterial-1">överdragsmaterial i skinn</term>; brun överdragsfärg; 3 infällda bind; </p>
-                                <p>
+                                    <note type="description">
+                                        <term>Helband i papp med överdrag av skinn</term>; överdragsfärg: brun; 3 infällda bind</note>
                                     <dimensions type="binding">
                                         <height quantity="220" unit="mm"/>
                                         <width quantity="165" unit="mm"/>
@@ -94,23 +86,47 @@
                                     </dimensions>
                                 </p>
                                 <decoNote type="tooling">Ryggen: "HELIGA BIRGITTAS UPPENBARELSER 1-3 Boken" samt "A 33" i guldtryck. Fram och bak enkel filéram.</decoNote>
+                                <condition>1800-talsband. Ryggen renoverad.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <provenance/>
-                        <provenance/>
-                        <acquisition>Till Kungliga biblioteket (oklart)</acquisition>
+                        <provenance xml:id="prov-1705">
+                            <orgName ref="https://www.manuscripta.se/org/100060">Antikvitetskollegium</orgName>
+                            <date notAfter="1692"/>
+                        </provenance>
+                        <provenance xml:id="prov-1704">
+                            <orgName ref="https://www.manuscripta.se/org/100059">Antikvitetsarkivet</orgName>, <date from="1692" to="1780">1692-1780</date>
+                        </provenance>
+                        <acquisition xml:id="prov-1675">
+                            <orgName ref="https://www.manuscripta.se/org/100004">Stockholm, Kungliga biblioteket</orgName>, <date from="1780" to="">1780-</date>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100699">G. E. Klemming (1883-1884)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100682">Lindström (1845)</title>
+                                <citedRange from="I (not)" to="I (not)" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100695">Klemming (1857-1858)</title>
+                                <citedRange from="403" to="403" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100699">Klemming (1883-1884)</title>
                                 <citedRange from="145" to="146" unit="page"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/100711">G. E. Klemming (1880)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100711">Klemming (1880)</title>
                                 <citedRange from="299" to="299" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/100769">Gussgard (1961)</title>
+                                <citedRange from="21" to="21" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101419">Gödel (1916)</title>
+                                <citedRange from="4, 39, 44, 233, 298, 301" to="4, 39, 44, 233, 298, 301" unit="page"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -124,43 +140,37 @@
                                 <locus from="1ra" to="11rb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Nils Hermansson (Nicolaus Hermanni)</persName>
+                                    <persName><!--KOLLA-->Nils Hermansson (Nicolaus Hermanni)</persName>
                                 </author>
-                                <title type="uniform" key="Geete_164899 Åström_1640">Heliga Birgittas levnad</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/101128">Heliga Birgittas levnad</title>
                                 <rubric>de vita birgitte</rubric>
-                                <note>Översättare: [okänd]. Titel originalverk: De vita beatae Birgittæ. Vita abbreviata. </note>
                                 <listBibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/102591">Carl Ferdinand Lindström (1845)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/103833"> Fogelklou (1917)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/102591">Lindström (1845)</title>
+                                        <citedRange>II-XXI</citedRange>
                                     </bibl>
                                 </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="11rb" to="17ra" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
-                                <title type="uniform" key="Geete_308 Åström_3080.1">Utläggning av Tio Guds bud: redaktion b</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102603">Utläggning av Tio Guds bud: redaktion b</title>
                                 <rubric>Scriwat är j lästinne Matteus xix</rubric>
                                 <incipit xml:lang="non-swe">En man sporde wan herra ihesum christum sighiande hwat goth skal iak göra</incipit>
-                                <note>Delvis utgiven i Sv. medeltidspostillor, del 2. KOLLAS: KOMPLETTERAS</note>
                             </msItem>
                             <msItem>
                                 <locus from="17ra" to="97vb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Birgitta Birgersdotter</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100481">Birgitta Birgersdotter</persName>
                                 </author>
-                                <title type="uniform" key="Geete_286 Åström_2861">Himmelska uppenbarelser: bok 1</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102315">Himmelska uppenbarelser: bok 1</title>
                                 <rubric>Hic incipit primus liber reuelacionum beate byrgitte que dicitur esse sponsa christi. Primum capitulum [<locus from="17vb" to="17vb" scheme="folios"/>] Wars herra ihesu christi ordh til sinna vtualda ok sötasta brudh sancta byrgitta […] Capitulum primum primi libri</rubric>
                                 <incipit xml:lang="non-swe">JAK Är skapare hymils ok iordz En j guddomenom mz fadherenom</incipit>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102697">Klemming (1857-1858)</title>
-                                    </bibl>
-                                    <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/106492">Roger Andersson (2014)</title>
+                                        <citedRange from="[1]" to="210" unit="page"/>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -168,17 +178,18 @@
                                 <locus from="97vb" to="132rb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Birgitta Birgersdotter</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100481">Birgitta Birgersdotter</persName>
                                 </author>
-                                <title type="uniform" key="Geete_286 Åström_2862">Himmelska uppenbarelser: bok 2</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102334">Himmelska uppenbarelser: bok 2</title>
                                 <rubric>Jncipit liber secundus capitulum primum</rubric>
                                 <incipit xml:lang="non-swe">JHesus christus talade til sina brudh</incipit>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102698">Klemming (1857-1858)</title>
+                                        <citedRange from="[211]" to="304" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/106506">Roger Andersson (2016)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/106506">Andersson (2016)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -186,17 +197,18 @@
                                 <locus from="132rb" to="169vb" scheme="folios"/>
                                 <textLang mainLang="non-swe"/>
                                 <author>
-                                    <persName>Birgitta Birgersdotter</persName>
+                                    <persName ref="https://www.manuscripta.se/person/100481">Birgitta Birgersdotter</persName>
                                 </author>
-                                <title type="uniform" key="Geete_286 Åström_2863">Himmelska uppenbarelser: bok 3</title>
+                                <title type="uniform" ref="https://www.manuscripta.se/work/102343">Himmelska uppenbarelser: bok 3</title>
                                 <rubric>Jncipit liber tercius Primum capitulum</rubric>
                                 <incipit xml:lang="non-swe">JHesus christus gudh ok man hulkin som kom</incipit>
                                 <listBibl>
                                     <bibl>
                                         <title type="short" ref="https://www.manuscripta.se/bibl/102699">Klemming (1857-1858)</title>
+                                        <citedRange from="[305]" to="402" unit="page"/>
                                     </bibl>
                                     <bibl>
-                                        <title type="short" ref="https://www.manuscripta.se/bibl/106515">Roger Andersson (2017)</title>
+                                        <title type="short" ref="https://www.manuscripta.se/bibl/106515">Andersson (2017)</title>
                                     </bibl>
                                 </listBibl>
                             </msItem>
@@ -212,7 +224,7 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="169"/>
+                                        <measure type="textblockLeaves" quantity="169" unit="folios"/>
                                     </extent>
                                     <collation>
                                         <signatures>Läggen numrerade i nedre högerhörn i blyerts</signatures>
@@ -221,19 +233,36 @@
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="2" writtenLines="35 39">
-                                        <locus from="1r" to="169v" scheme="folios"/>
+                                        <locus from="1r" to="169v"/>
                                         <dimensions type="written">
                                             <height quantity="150" unit="mm"/>
                                             <width quantity="110" unit="mm"/>
                                         </dimensions>
-                                        <note>Linjering: enkel ram som också markerar spalterna, långa linjer; </note>
+                                        <note type="ruling">enkel ram som också markerar spalterna, långa linjer</note>
+                                        <note>Textytans bredd: 11; </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <handNote xml:id="hand-1">
-                                    <term ref="https://www.manuscripta.se/terms/skrifttyp-8">Cursiva gothica recentior</term>; Skriftfärg: svart och brun; röda kapitelöverskrifter, majuskler och lombarder.</handNote>
+                                    <note type="script">Cursiva gothica recentior</note>
+                                    <note type="medium">svart och brun; röda kapitelöverskrifter, majuskler och lombarder</note>
+                                    <note>Skriven av en hand; anteckningar av en yngre hand (Johannes Bureus)</note>
+                                    <note type="scribe">
+                                        <persName ref="https://www.manuscripta.se/person/100558"/>, <placeName><!--KOLLA-->Vadstena?</placeName>
+                                    </note>
+                                </handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="(passim, marg)" to="(passim, marg)" scheme="folios"/>
+                                    <note>Anteckning. Marginalanteckningar på några ställen av J. T. Bure, enligt G. E. Klemming, SFSS 14:5, s. 146.</note>
+                                </p>
+                                <p>
+                                    <locus from="eftersätts recto" to="eftersätts recto" scheme="folios"/>
+                                    <note>Anteckning. Uppställning över bokens läggsammansättning och bladförluster (av Klemming).</note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <decoNote type="initials">Initialer: Några större majuskler, vissa med linjeornament: <locus from="1ra" to="1ra" scheme="folios"/>, <locus from="17rb" to="17rb" scheme="folios"/>, <locus from="55vb" to="55vb" scheme="folios"/>, <locus from="97vb" to="97vb" scheme="folios"/>, <locus from="131rb" to="131rb" scheme="folios"/>, <locus from="132rb" to="132rb" scheme="folios"/> Initialfärg: röd</decoNote>
                                 <decoNote type="lombards">Röda lombarder i avsnittsbörjan</decoNote>
@@ -243,9 +272,8 @@
                             <origin>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100081">Sverige</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/100101" cert="low">Vadstena</placeName>
-                                </origPlace>
-                                <origDate>1400-1500</origDate>
+                                    <placeName cert="low" ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>
+                                </origPlace>, <origDate notBefore="1400" notAfter="1500">1400-1500</origDate>
                             </origin>
                         </history>
                     </msPart>
@@ -253,7 +281,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
-            <change status="draft" when="2019-02-15" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
+            <change status="draft" when="2019-06-12" who="https://www.manuscripta.se/person/100380">Migration from Access</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -273,19 +301,19 @@
             <graphic url="kb-a-033_0002_LCI.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_SL001r">
-            <desc>f. SL001r</desc>
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="kb-a-033_0003_SL001r.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_SL001v">
-            <desc>f. SL001v</desc>
+            <desc>⟨f. Iv⟩</desc>
             <graphic url="kb-a-033_0004_SL001v.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_L001r">
-            <desc>f. L001r</desc>
+            <desc>f. Ir</desc>
             <graphic url="kb-a-033_0005_L001r.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_L001v">
-            <desc>f. L001v</desc>
+            <desc>f. Iv</desc>
             <graphic url="kb-a-033_0006_L001v.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_1r">
@@ -1649,19 +1677,19 @@
             <graphic url="kb-a-033_0346_169v.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_S170r">
-            <desc>f. S170r</desc>
+            <desc>⟨f. 170r⟩</desc>
             <graphic url="kb-a-033_0347_S170r.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_S170v">
-            <desc>f. S170v</desc>
+            <desc>⟨f. 170v⟩</desc>
             <graphic url="kb-a-033_0348_S170v.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_SR001r">
-            <desc>f. SR001r</desc>
+            <desc>⟨f. I´r⟩</desc>
             <graphic url="kb-a-033_0349_SR001r.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_SR001v">
-            <desc>f. SR001v</desc>
+            <desc>⟨f. I´v⟩</desc>
             <graphic url="kb-a-033_0350_SR001v.tif" height="2807px" width="2191px"/>
         </surface>
         <surface xml:id="ms-100218_RCI">
