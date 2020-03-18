@@ -973,10 +973,10 @@
                     <!--       MODULES USED BY THE SCHEMA       -->
 
                     <moduleRef key="tei"/>
-                    <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p publisher quote ref resp respStmt sic term textLang title unclear"/>
+                    <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p publisher q quote ref resp respStmt sic term textLang title unclear"/>
                     <moduleRef key="header" include="availability change extent fileDesc funder handNote idno licence publicationStmt revisionDesc sourceDesc sponsor teiHeader titleStmt"/>
                     <moduleRef key="figures" include="formula"/>
-                    <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width"/>
+                    <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width"/>
                     <moduleRef key="namesdates" include="country listOrg org orgName persName placeName settlement"/>
                     <moduleRef key="textstructure" include="body div TEI text"/>
                     <moduleRef key="transcr" include="ex facsimile supplied surface"/>
@@ -2370,15 +2370,16 @@
                             <memberOf key="att.placement" mode="delete"/>
                         </classes>
                         <content>
-                            <alternate>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
-                                <sequence>
+                                <elementRef key="q" minOccurs="0" maxOccurs="unbounded"/>
+                                <!--<sequence>
                                     <elementRef key="title" minOccurs="1" maxOccurs="1"/>
                                     <alternate>
                                         <elementRef key="locus"/>
                                         <elementRef key="locusGrp"/>
                                     </alternate>
-                                </sequence>
+                                </sequence>-->
                             </alternate>
                         </content>
                         <attList>
@@ -2462,7 +2463,7 @@
                                 </valList>
                             </attDef>
                             <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>                            
+                            <attDef ident="xml:id" mode="delete"/>
                             <!-- Attributes deleted in att.global.facs -->
                             <attDef ident="facs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
@@ -2689,7 +2690,7 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="layout" mode="change" module="msdescription">                        
+                    <elementSpec ident="layout" mode="change" module="msdescription">
                         <content>
                             <sequence>
                                 <alternate>
@@ -3108,7 +3109,10 @@
                             <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
                             <elementRef key="history" minOccurs="0" maxOccurs="1"/>
                             <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="msPart" minOccurs="1" maxOccurs="unbounded"/>
+                            <alternate>
+                                <elementRef key="msPart" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="msFrag" minOccurs="1" maxOccurs="unbounded"/>
+                            </alternate>
                         </content>
                         <constraintSpec ident="folio.ref.check" scheme="schematron">
                             <desc versionDate="2014-09-26" xml:lang="en">Checks that folio and page references are only given in <gi>locus</gi> elements and not in the running text.</desc>
@@ -3116,7 +3120,7 @@
                                 <sch:pattern>
                                     <sch:rule context="tei:msDesc//*">
                                         <sch:report test="text()[matches(., ' f. \p{N}| ff. \p{N}')]"> Do not use f./ff. in the running text for folio references. Use the locus element instead.</sch:report>
-                                        <sch:report test="text()[matches(., ' p. \p{N}| pp. \p{N}')]"> Do not use p./pp. in the running text for page references. Use the locus element instead.</sch:report>
+                                        <sch:report test="text()[matches(., ' p. \p{N}| pp. \p{N}')]"> Do not use p./pp. in the running text for page references. Use the locus element instead.</sch:report>                                        
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
@@ -3151,6 +3155,21 @@
                                 </msDesc>
                             </egXML>
                         </exemplum>
+                    </elementSpec>
+
+                    <elementSpec ident="msFrag" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                        </classes>
+                        <content>
+                            <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                            <elementRef key="msContents" minOccurs="1" maxOccurs="1"/>
+                            <elementRef key="physDesc" minOccurs="1" maxOccurs="1"/>
+                            <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                        </content>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="msIdentifier" module="msdescription" mode="change">
@@ -3795,7 +3814,7 @@
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
-                        <attList>                            
+                        <attList>
                             <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
@@ -3845,6 +3864,7 @@
                                 <elementRef key="origDate" minOccurs="1" maxOccurs="1"/>
                                 <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
@@ -3994,9 +4014,9 @@
                             <memberOf key="att.dimensions" mode="delete"/>
                             <memberOf key="att.ranging" mode="delete"/>
                             <memberOf key="att.responsibility" mode="delete"/>
-                            <memberOf key="att.global" mode="delete"/>
+                            <!--<memberOf key="att.global" mode="delete"/>-->
                             <memberOf key="att.naming" mode="delete"/>
-                            <!--<memberOf key="att.typed" mode="delete" />-->
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <textNode/>
@@ -4021,6 +4041,10 @@
                             <!-- Attributes changed and deleted in att.canonical -->
                             <attDef ident="ref" mode="change" usage="req"/>
                             <attDef ident="key" mode="delete"/>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4266,7 +4290,7 @@
                         <content>
                             <elementRef key="resp" minOccurs="1" maxOccurs="unbounded"/>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
-                        </content>                        
+                        </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <respStmt xml:id="EN">

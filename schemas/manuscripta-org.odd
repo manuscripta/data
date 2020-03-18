@@ -29,9 +29,9 @@
                 <head>Schema for the Manuscripta organization files</head>
 
                 <!--<schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="https://raw.githubusercontent.com/manuscripta/data/master/schemas/manuscripta-p5subset.xml">-->
-<!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
-                    <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/F:/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
-                        
+                <!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/F:/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
+
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
@@ -44,7 +44,7 @@
                     <moduleRef key="textstructure" include="TEI text"/>
 
                     <!-- Modules for manuscripta-org.odd -->
-                        <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
+                    <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
                     <moduleRef key="core" include="desc p title" source="file:/F:/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="header" include="idno sourceDesc" source="file:/F:/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="namesdates" include="persName" source="file:/F:/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
@@ -69,7 +69,7 @@
                     </elementSpec>
 
                     <elementSpec ident="desc" module="core" mode="change">
-                        <classes mode="change">                            
+                        <classes mode="change">
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
@@ -79,7 +79,7 @@
                             </alternate>
                         </content>
                         <attList>
-                            <!-- Attributes deleted in att.global -->                            
+                            <!-- Attributes deleted in att.global -->
                             <attDef ident="n" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                         </attList>
@@ -140,9 +140,9 @@
                     <elementSpec ident="persName" module="namesdates" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.datable" mode="delete"/>                            
+                            <memberOf key="att.datable" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
-                        </classes>                        
+                        </classes>
                         <content>
                             <textNode/>
                         </content>
@@ -166,6 +166,19 @@
                         </classes>
                         <content>
                             <elementRef key="p" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
+
+                    <elementSpec ident="TEI" module="textstructure" mode="change">
+                        <content>
+                            <elementRef key="teiHeader"/>
+                            <elementRef key="text" minOccurs="1" maxOccurs="1"/>                            
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
@@ -203,7 +216,7 @@
 
                     <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
 
-                    <classSpec ident="att.editLike" module="tei" type="atts" mode="delete"/>                    
+                    <classSpec ident="att.editLike" module="tei" type="atts" mode="delete"/>
 
                 </schemaSpec>
             </div>
