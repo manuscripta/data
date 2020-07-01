@@ -41,28 +41,21 @@
 
                     <!-- Modules for manuscripta-works.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
-                    <moduleRef key="core" include="author bibl editor note p title" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="core" include="author bibl editor note p quote title" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="header" include="idno sourceDesc" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="msdescription" include="explicit incipit" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="namesdates" include="persName" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="textstructure" include="body" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
-
                     <elementSpec ident="author" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.naming" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
-                        <attList>
-                            <!-- Attributes deleted in att.canonical -->
-                            <attDef ident="key" mode="delete"/>
-                            <!-- Attributes deleted in att.naming -->
-                            <attDef ident="nymRef" mode="delete"/>
-                            <attDef ident="role" mode="delete"/>
-                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
@@ -87,11 +80,18 @@
                                     <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
                                     <elementRef key="incipit" minOccurs="0" maxOccurs="unbounded"/>
                                     <elementRef key="explicit" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                                     <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
                                     <elementRef key="bibl" minOccurs="0" maxOccurs="1"/>
                                 </sequence>
                             </alternate>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="body" module="textstructure" mode="change">
@@ -113,18 +113,22 @@
                     <elementSpec ident="editor" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.naming" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted in att.naming -->
                             <attDef ident="role" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="editor"/>
                                     <valItem ident="translator"/>
                                 </valList>
                             </attDef>
+                            <attDef ident="nymRef" mode="delete"/>
+                            <!-- Attributes deleted in att.canonical -->
+                            <attDef ident="key" mode="delete"/>
+                            <attDef ident="ref" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
@@ -136,6 +140,7 @@
 
                     <elementSpec ident="explicit" module="msdescription" mode="change">
                         <classes mode="change">
+                            <memberOf key="att.msExcerpt" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
@@ -143,33 +148,48 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="req"/>
                             <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:space" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="incipit" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.typed" mode="delete"/>
+                            <memberOf key="att.msExcerpt" mode="delete"/>
                         </classes>
                         <content>
                             <textNode/>
                         </content>
                         <attList>
-                            <!-- Attributes changed and deleted in att.global -->
+                            <!-- Attributes cahnged and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="req"/>
                             <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:space" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
                     </elementSpec>
 
                     <elementSpec ident="idno" module="header" mode="change">
@@ -200,6 +220,12 @@
                                         <desc>Geete, Fornsvensk bibl. suppl., textnr</desc>
                                     </valItem>
                                     <valItem ident="Manuscripta"/>
+                                    <valItem ident="Geete-genrenr">
+                                        <desc>Geete, Fornsvensk bibl., genrenr</desc>
+                                    </valItem>
+                                    <valItem ident="Astrom-genrenr">
+                                        <desc>Åström, genrenr</desc>
+                                    </valItem>
                                 </valList>
                             </attDef>
                         </attList>
@@ -215,14 +241,25 @@
                         <classes mode="change">
                             <memberOf key="att.placement" mode="delete"/>
                             <memberOf key="att.pointing" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <textNode/>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <elementRef key="bibl"/>
+                                <elementRef key="persName"/>
+                                <elementRef key="quote"/>
+                            </alternate>
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:space" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
                             <!-- Attributes deleted in att.typed -->
                             <attDef ident="subtype" mode="delete"/>
                             <attDef ident="anchored" mode="delete"/>
@@ -253,7 +290,6 @@
 
                     <elementSpec ident="persName" module="namesdates" mode="change">
                         <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.datable" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
@@ -261,11 +297,47 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:space" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="resp" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                             <!-- Attributes deleted in att.naming -->
                             <attDef ident="nymRef" mode="delete"/>
                             <attDef ident="role" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
+                    
+                    <elementSpec ident="quote" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="delete"/>
+                            <memberOf key="att.msExcerpt" mode="delete"/>
+                            <memberOf key="att.source" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:space" mode="delete"/>
+                            <!-- Attributes deleted in att.global.rendition -->
+                            <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.facs -->
+                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
@@ -304,14 +376,21 @@
                             <attDef ident="type" mode="change" usage="rec">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="uniform"/>
+                                    <valItem ident="alt"/>
                                     <valItem ident="desc"/>
+                                    <valItem ident="short"/>
                                 </valList>
                             </attDef>
                             <attDef ident="subtype" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:space" mode="delete"/>
                             <attDef ident="level" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
@@ -414,22 +493,10 @@
                     <classSpec ident="att.global.facs" module="tei" type="atts" mode="delete"/>
                     <classSpec ident="att.global.linking" module="tei" type="atts" mode="delete"/>
                     <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
-                    <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="delete"/>
                     <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
                     <classSpec ident="att.msExcerpt " module="msdescription" type="atts" mode="delete"/>
                     <classSpec ident="att.naming" module="tei" type="atts" mode="change">
                         <attList>
-                            <!-- Closed value list for @role -->
-                            <attDef ident="role" mode="change">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="critEd">
-                                        <desc>Critical editor</desc>
-                                    </valItem>
-                                    <valItem ident="origAuth">
-                                        <desc>Original author</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
                             <attDef ident="nymRef" mode="delete"/>
                         </attList>
                         <exemplum>
