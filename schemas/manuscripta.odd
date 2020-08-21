@@ -28,9 +28,9 @@
             <div xml:id="schema">
                 <head>Schema for the Manuscripta msDescs</head>
 
-<!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
-                    <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
-                        
+                <!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
+
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
@@ -40,6 +40,7 @@
                     <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p publisher q quote ref resp respStmt sic term textLang title unclear"/>
                     <moduleRef key="header" include="availability change extent fileDesc funder handNote idno licence publicationStmt revisionDesc sourceDesc sponsor teiHeader titleStmt"/>
                     <moduleRef key="figures" include="formula"/>
+                    <moduleRef key="linking" except="ab alt altGrp anchor join joinGrp link linkGrp seg standOff timeline when"/>
                     <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width"/>
                     <moduleRef key="namesdates" include="country persName placeName settlement"/>
                     <moduleRef key="textstructure" include="body div TEI text"/>

@@ -976,6 +976,7 @@
                     <moduleRef key="core" include="add author bibl citedRange date del desc foreign gap graphic head hi item lb list listBibl measure note num p publisher q quote ref resp respStmt sic term textLang title unclear"/>
                     <moduleRef key="header" include="availability change extent fileDesc funder handNote idno licence publicationStmt revisionDesc sourceDesc sponsor teiHeader titleStmt"/>
                     <moduleRef key="figures" include="formula"/>
+                    <moduleRef key="linking" except="ab alt altGrp anchor join joinGrp link linkGrp seg standOff timeline when"/>
                     <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width"/>
                     <moduleRef key="namesdates" include="country listOrg org orgName persName placeName settlement"/>
                     <moduleRef key="textstructure" include="body div TEI text"/>
@@ -998,9 +999,12 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes changed and deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1024,9 +1028,12 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Closed value list for @place -->
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
@@ -1052,9 +1059,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1086,9 +1096,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1132,9 +1145,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1159,9 +1175,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1258,9 +1277,12 @@
                         </constraintSpec>-->
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1294,9 +1316,12 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1331,9 +1356,12 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1376,9 +1404,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1470,9 +1501,12 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1526,13 +1560,15 @@
                                 <elementRef key="supplied"/>
                                 <elementRef key="unclear"/>
                             </alternate>
-                            <!--Make a class called model.colophonLike (e.g.) and add elements to it -->
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="change" usage="req"/>
                             <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1556,9 +1592,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1633,9 +1672,12 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1658,9 +1700,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1691,9 +1736,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                             <!-- Attributes changed and deleted in att.typed -->
@@ -1702,6 +1750,7 @@
                                     <valItem ident="bookmarks"/>
                                     <valItem ident="edges"/>
                                     <valItem ident="endbands"/>
+                                    <valItem ident="illuminations"/>
                                     <valItem ident="images"/>
                                     <valItem ident="initials"/>
                                     <valItem ident="lombards"/>
@@ -1727,9 +1776,12 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1822,9 +1874,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                             <!-- Attribute changed in att.typed -->
@@ -1838,6 +1893,7 @@
                                     <valItem ident="written"/>
                                 </valList>
                             </attDef>
+                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1886,9 +1942,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted from att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1916,8 +1975,12 @@
                             <!-- Attribute changed in att.msExcerpt -->
                             <attDef ident="defective" mode="change" usage="req"/>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1948,9 +2011,12 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -1965,22 +2031,37 @@
                     </elementSpec>
 
                     <elementSpec ident="facsimile" module="transcr" mode="change">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
                         <content>
                             <elementRef key="surface" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
+                        <attList>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="change" usage="req"/>
+                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attributes deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <facsimile>
-                                    <surface xml:id="UGr-027-1r">
-                                        <desc>f. 1r</desc>
-                                        <graphic url="UGr-027-0003.jp2"/>
+                                <facsimile xml:base="https://iiif.manuscripta/iiif/100203/">
+                                    <surface xml:id="ms-100203_0001_LCO">
+                                        <desc>left cover, outside</desc>
+                                        <graphic url="ms-100203_0001.tif" height="5610px" width="4243px"/>
                                     </surface>
-                                    <surface xml:id="UGr-027-1v">
-                                        <desc>f. 1v</desc>
-                                        <graphic url="UGr-027-0004.jp2"/>
+                                    <surface xml:id="ms-100203_0002_LCI">
+                                        <desc>left cover, inside</desc>
+                                        <graphic url="ms-100203_0002.tif" height="5610px" width="4243px"/>
+                                    </surface>
+                                    <surface xml:id="ms-100203_0003_1r">
+                                        <desc>f. 1r</desc>
+                                        <graphic url="ms-100203_0003.tif" height="5610px" width="4243px"/>
                                     </surface>
                                 </facsimile>
                             </egXML>
@@ -2014,19 +2095,22 @@
                         <content>
                             <alternate>
                                 <elementRef key="ref" minOccurs="1" maxOccurs="1"/>
-                                <elementRef key="idno" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
                             </alternate>
                             <alternate>
-                                <elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
-                                <elementRef key="listBibl" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="bibl" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="listBibl" minOccurs="0" maxOccurs="1"/>
                             </alternate>
                             <elementRef key="note" minOccurs="0" maxOccurs="1"/>
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                             <!-- Attribute changed and deleted in att.typed -->
@@ -2074,8 +2158,12 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -2101,9 +2189,12 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -2127,11 +2218,12 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="req"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="req"/>
                             <attDef ident="n" mode="delete"/>
-                            <!-- Attributes changed and deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
@@ -2191,9 +2283,12 @@
                                 </valList>
                             </attDef>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted -->
                             <attDef ident="hand" mode="delete"/>
                             <attDef ident="agent" mode="delete"/>
@@ -2257,9 +2352,12 @@
                         <attList>
                             <attDef ident="hands" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attribute deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -2307,11 +2405,9 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="change" usage="rec"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
-                            <!-- Attributes changed and deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
@@ -2357,9 +2453,12 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="change" usage="rec"/>
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -2435,10 +2534,11 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
-                            <!-- Attributes deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>
@@ -2462,9 +2562,12 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -2488,8 +2591,11 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>
@@ -2568,8 +2674,12 @@
                         <attList>
                             <attDef ident="defective" mode="change" usage="rec"/>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -2669,11 +2779,10 @@
                             <!-- Attributes deleted -->
                             <attDef ident="streams" mode="delete"/>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
-                            <!-- Attributes deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
@@ -2708,11 +2817,10 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
-                            <!-- Attributes deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
@@ -3074,18 +3182,17 @@
                                 <sch:pattern>
                                     <sch:rule context="tei:msDesc//*">
                                         <sch:report test="text()[matches(., ' f. \p{N}| ff. \p{N}')]"> Do not use f./ff. in the running text for folio references. Use the locus element instead.</sch:report>
-                                        <sch:report test="text()[matches(., ' p. \p{N}| pp. \p{N}')]"> Do not use p./pp. in the running text for page references. Use the locus element instead.</sch:report>                                        
+                                        <sch:report test="text()[matches(., ' p. \p{N}| pp. \p{N}')]"> Do not use p./pp. in the running text for page references. Use the locus element instead.</sch:report>
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="req"/>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="req"/>
                             <attDef ident="n" mode="delete"/>
-                            <!-- Attributes deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
@@ -3177,7 +3284,7 @@
                                     <sequence>
                                         <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
-                                        <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
+                                        <elementRef key="title" minOccurs="0" maxOccurs="unbounded"/>
                                         <elementRef key="rubric" minOccurs="0" maxOccurs="1"/>
                                         <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded"/>
                                         <elementRef key="incipit" minOccurs="0" maxOccurs="1"/>
@@ -3489,13 +3596,13 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attributes changed and deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3608,13 +3715,14 @@
                             </attDef>
                             <attDef ident="value" mode="change" usage="req"/>
                             <!-- Changed and deleted attributes in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="change" usage="req"/>
                             <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Deleted attributes in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3751,6 +3859,8 @@
 
                     <elementSpec ident="origDate" mode="change" module="msdescription">
                         <classes mode="change">
+                            <memberOf key="att.dimensions" mode="delete"/>
+                            <memberOf key="att.ranging" mode="delete"/>
                             <memberOf key="att.editLike" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
@@ -3769,7 +3879,13 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3789,6 +3905,15 @@
                         <content>
                             <elementRef key="placeName" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
+                        <attList>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <origPlace>
@@ -3854,13 +3979,19 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attributes changed and deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attributes deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3895,14 +4026,15 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <!-- Attributes changed and deleted in att.global -->
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Deleted attributes in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                             <!-- Changed and deleted attributes in att.responsibility  -->
                             <attDef ident="cert" mode="change" usage="opt"/>
                             <!-- Changed and deleted attributes in att.dimensions -->
@@ -3996,9 +4128,12 @@
                             <attDef ident="ref" mode="change" usage="req"/>
                             <attDef ident="key" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="n" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4086,6 +4221,26 @@
                         </exemplum>
                     </elementSpec>
 
+                    <elementSpec ident="q" mode="change" module="core">
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="req"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.linking-->
+                            <attDef ident="sameAs" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <quote xml:lang="la">Theodorus samius primo clavem mostravit</quote>
+                            </egXML>
+                        </exemplum>
+                    </elementSpec>
+
                     <elementSpec ident="quote" mode="change" module="core">
                         <classes mode="change">
                             <memberOf key="att.typed" mode="delete"/>
@@ -4106,13 +4261,14 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attributes changed and deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4219,8 +4375,6 @@
                             </attDef>
                             <!-- Attributes deleted from att.canonical -->
                             <attDef ident="ref" mode="delete"/>
-                            <!-- Attributes deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4296,12 +4450,13 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted from att.global -->
-                            <attDef ident="n" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attribute deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4351,15 +4506,14 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted from att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
-                            <!-- Attributes deleted from att.global.fac -->
-                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted from att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attributes deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4439,6 +4593,7 @@
 
                     <elementSpec ident="supplied" mode="change" module="transcr">
                         <classes mode="change">
+                            <memberOf key="att.dimensions" mode="delete"/>
                             <memberOf key="att.editLike" mode="delete"/>
                             <memberOf key="att.responsibility" mode="delete"/>
                         </classes>
@@ -4455,13 +4610,14 @@
                                 </valList>
                             </attDef>
                             <!-- Changed and deleted attributes in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Deleted attributes in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Deleted attributes in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4607,13 +4763,19 @@
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="change" usage="req"/>
                             <attDef ident="xml:lang" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attribute deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attribute deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attribute deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
                             <!-- Attributes deleted  -->
                             <attDef ident="attachment" mode="delete"/>
                             <attDef ident="flipping" mode="delete"/>
@@ -4652,8 +4814,7 @@
                             </attDef>
                             <attDef ident="n" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
-                            <!-- Attributes deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
@@ -4771,6 +4932,8 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="en"/>
@@ -4778,11 +4941,10 @@
                                 </valList>
                             </attDef>
                             <attDef ident="n" mode="delete"/>
-                            <attDef ident="xml:id" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attribute deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>
@@ -4860,15 +5022,22 @@
                                 </valList>
                             </attDef>
                             <!-- Attributes changed and deleted in att.canonical -->
+                            <attDef ident="ref" mode="change" usage="rec"/>
                             <attDef ident="key" mode="delete"/>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attributes deleted in att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attributes deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5137,13 +5306,14 @@
                             <attDef ident="key" mode="change" usage="opt"/>
                             <attDef ident="ref" mode="change" usage="opt"/>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted from att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attributes deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5270,13 +5440,14 @@
                         </constraintSpec>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
-                            <attDef ident="n" mode="change" usage="opt"/>
+                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="n" mode="change" usage="opt"/>
+                            <!-- Attribute deleted from att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attribute deleted from att.global.facs -->
-                            <attDef ident="facs" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5353,6 +5524,8 @@
                     </elementSpec>
 
                     <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+
+                    <classSpec ident="att.ascribed.directed" module="tei" type="atts" mode="delete"/>
 
                     <classSpec ident="att.breaking" module="tei" type="atts" mode="delete"/>
 
@@ -5562,7 +5735,6 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:space" mode="delete"/>
                         </attList>
                     </classSpec>
@@ -5570,6 +5742,18 @@
                     <classSpec ident="att.global.change" module="tei" type="atts" mode="delete"/>
 
                     <classSpec ident="att.global.facs" module="tei" type="atts" mode="delete"/>
+
+                    <classSpec ident="att.global.linking" module="linking" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="corresp" mode="delete"/>
+                            <attDef ident="synch" mode="delete"/>
+                            <attDef ident="copyOf" mode="delete"/>
+                            <attDef ident="next" mode="delete"/>
+                            <attDef ident="prev" mode="delete"/>
+                            <attDef ident="exclude" mode="delete"/>
+                            <attDef ident="select" mode="delete"/>
+                        </attList>
+                    </classSpec>
 
                     <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
 
@@ -5640,6 +5824,8 @@
                             <attDef ident="nymRef" mode="delete"/>
                         </attList>
                     </classSpec>
+
+                    <classSpec ident="att.notated" module="tei" type="atts" mode="delete"/>
 
                     <classSpec ident="att.patternReplacement" module="header" type="atts" mode="delete"/>
 
