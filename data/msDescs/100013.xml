@@ -41,8 +41,8 @@
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="2" unit="folios"/>
-                                    <measure type="rightFlyleaves" quantity="2" unit="folios"/>
+                                    <measure type="leftFlyleaves" quantity="1" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
                             </supportDesc>
                         </objectDesc>
@@ -107,7 +107,9 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published">
+            <change status="published" when="2020-09-01" who="https://www.manuscripta.se/person/100380">Changing status from draft to published</change>
+            <change status="draft" when="2020-04-27" who="https://www.manuscripta.se/person/100380">Corrected extent for flyleaves</change>
             <change status="draft" when="2019-01-14" who="https://www.manuscripta.se/person/100380">Added origDate, support material, binding and leaf dimensions</change>
             <change status="draft" when="2016-07-19" who="https://www.manuscripta.se/person/100380">Added facsimile</change>
             <change status="draft" when="2016-03-25" who="https://www.manuscripta.se/person/100380">First draft</change>
@@ -120,7 +122,7 @@
             </div>
         </body>
     </text>
-    <facsimile>
+    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-100013/">
         <surface xml:id="ms-100013_LCO">
             <desc>left cover, outside</desc>
             <graphic url="uub-gr-013_0001_LCO.tif" height="7140px" width="6708px"/>
@@ -130,11 +132,11 @@
             <graphic url="uub-gr-013_0002_LCI.tif" height="7140px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100013_SL1r">
-            <desc>&#10216;f. Ir&#10217;</desc>
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="uub-gr-013_0003_SL001r.tif" height="7140px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100013_SL1v">
-            <desc>&#10216;f. Iv&#10217;</desc>
+            <desc>⟨f. Iv⟩</desc>
             <graphic url="uub-gr-013_0004_SL001v.tif" height="7140px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100013_1r">
@@ -1978,11 +1980,11 @@
             <graphic url="uub-gr-013_0464_230v.tif" height="7140px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100013_SR1r">
-            <desc>&#10216;f. I´r&#10217;</desc>
+            <desc>⟨f. I´r⟩</desc>
             <graphic url="uub-gr-013_0465_SR001r.tif" height="7140px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100013_SR1v">
-            <desc>&#10216;f. I´v&#10217;</desc>
+            <desc>⟨f. I´v⟩</desc>
             <graphic url="uub-gr-013_0466_SR001v.tif" height="7140px" width="6708px"/>
         </surface>
         <surface xml:id="ms-100013_RCI">
@@ -1998,5 +2000,4 @@
             <graphic url="uub-gr-013_0000_QPcard.tif" height="7140px" width="6708px"/>
         </surface>
     </facsimile>
-
 </TEI>
