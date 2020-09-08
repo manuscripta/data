@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-05-07T14:34:15Z. .
+Schema generated from ODD source 2020-09-08T09:21:05Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -33,13 +33,6 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             </list>
          </attribute>
       </optional>
-   </define>
-   <define name="att.datable.w3c.attributes">
-      <ref name="att.datable.w3c.attribute.when"/>
-      <ref name="att.datable.w3c.attribute.notBefore"/>
-      <ref name="att.datable.w3c.attribute.notAfter"/>
-      <ref name="att.datable.w3c.attribute.from"/>
-      <ref name="att.datable.w3c.attribute.to"/>
    </define>
    <define name="att.datable.w3c.attribute.when">
       <optional>
@@ -128,7 +121,8 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
-      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@when]">
@@ -137,7 +131,8 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
-      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@from]">
@@ -146,16 +141,14 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
-      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@to]">
          <sch:report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
-   <define name="att.datable.attributes">
-      <ref name="att.datable.w3c.attributes"/>
-   </define>
    <define name="att.global.attribute.xmllang">
       <optional>
          <attribute name="xml:lang">
@@ -221,393 +214,14 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.typed-subtypeTyped-constraint-rule-4">
-      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@subtype]">
          <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
       </sch:rule>
    </pattern>
-   <define name="model.nameLike.agent">
-      <choice>
-         <ref name="orgName"/>
-         <ref name="persName"/>
-      </choice>
-   </define>
-   <define name="model.nameLike.agent_alternation">
-      <choice>
-         <ref name="orgName"/>
-         <ref name="persName"/>
-      </choice>
-   </define>
-   <define name="model.nameLike.agent_sequence">
-      <ref name="orgName"/>
-      <ref name="persName"/>
-   </define>
-   <define name="model.nameLike.agent_sequenceOptional">
-      <optional>
-         <ref name="orgName"/>
-      </optional>
-      <optional>
-         <ref name="persName"/>
-      </optional>
-   </define>
-   <define name="model.nameLike.agent_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="orgName"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="persName"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.nameLike.agent_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="orgName"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="persName"/>
-      </oneOrMore>
-   </define>
-   <define name="model.hiLike">
-      <notAllowed/>
-   </define>
-   <define name="model.hiLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.hiLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.hiLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.emphLike">
-      <choice>
-         <ref name="title"/>
-      </choice>
-   </define>
-   <define name="model.emphLike_alternation">
-      <choice>
-         <ref name="title"/>
-      </choice>
-   </define>
-   <define name="model.emphLike_sequence">
-      <ref name="title"/>
-   </define>
-   <define name="model.emphLike_sequenceOptional">
-      <optional>
-         <ref name="title"/>
-      </optional>
-   </define>
-   <define name="model.emphLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="title"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.emphLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="title"/>
-      </oneOrMore>
-   </define>
-   <define name="model.dateLike">
-      <choice>
-         <ref name="date"/>
-      </choice>
-   </define>
-   <define name="model.dateLike_alternation">
-      <choice>
-         <ref name="date"/>
-      </choice>
-   </define>
-   <define name="model.dateLike_sequence">
-      <ref name="date"/>
-   </define>
-   <define name="model.dateLike_sequenceOptional">
-      <optional>
-         <ref name="date"/>
-      </optional>
-   </define>
-   <define name="model.dateLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="date"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.dateLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="date"/>
-      </oneOrMore>
-   </define>
-   <define name="model.measureLike">
-      <notAllowed/>
-   </define>
-   <define name="model.measureLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.measureLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.measureLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.offsetLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.offsetLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.editorial_sequence">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.pPart.editorial_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.pPart.transcriptional_sequence">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.pPart.transcriptional_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.placeNamePart">
-      <notAllowed/>
-   </define>
-   <define name="model.placeNamePart_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.placeNamePart_sequence">
-      <empty/>
-   </define>
-   <define name="model.placeNamePart_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.placeNamePart_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.placeNamePart_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.placeStateLike">
-      <choice>
-         <ref name="model.placeNamePart"/>
-      </choice>
-   </define>
-   <define name="model.placeStateLike_alternation">
-      <choice>
-         <ref name="model.placeNamePart_alternation"/>
-      </choice>
-   </define>
-   <define name="model.placeStateLike_sequence">
-      <ref name="model.placeNamePart_sequence"/>
-   </define>
-   <define name="model.placeStateLike_sequenceOptional">
-      <optional>
-         <ref name="model.placeNamePart_sequenceOptional"/>
-      </optional>
-   </define>
-   <define name="model.placeStateLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.placeStateLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="model.placeNamePart_sequenceRepeatable"/>
-      </oneOrMore>
-   </define>
-   <define name="model.quoteLike">
-      <notAllowed/>
-   </define>
-   <define name="model.quoteLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.quoteLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.quoteLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.quoteLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.quoteLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.addressLike">
-      <notAllowed/>
-   </define>
-   <define name="model.addressLike_alternation">
-      <notAllowed/>
-   </define>
-   <define name="model.addressLike_sequence">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceOptional">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceOptionalRepeatable">
-      <empty/>
-   </define>
-   <define name="model.addressLike_sequenceRepeatable">
-      <notAllowed/>
-   </define>
-   <define name="model.nameLike">
-      <choice>
-         <ref name="model.nameLike.agent"/>
-         <ref name="model.offsetLike"/>
-         <ref name="model.placeStateLike"/>
-         <ref name="model.persNamePart"/>
-         <ref name="idno"/>
-         <ref name="model.persNamePart"/>
-      </choice>
-   </define>
-   <define name="model.nameLike_alternation">
-      <choice>
-         <ref name="model.nameLike.agent_alternation"/>
-         <ref name="model.offsetLike_alternation"/>
-         <ref name="model.placeStateLike_alternation"/>
-         <ref name="model.persNamePart_alternation"/>
-         <ref name="idno"/>
-         <ref name="model.persNamePart_alternation"/>
-      </choice>
-   </define>
-   <define name="model.nameLike_sequence">
-      <ref name="model.nameLike.agent_sequence"/>
-      <ref name="model.offsetLike_sequence"/>
-      <ref name="model.placeStateLike_sequence"/>
-      <ref name="model.persNamePart_sequence"/>
-      <ref name="idno"/>
-      <ref name="model.persNamePart_sequence"/>
-   </define>
-   <define name="model.nameLike_sequenceOptional">
-      <optional>
-         <ref name="model.nameLike.agent_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="model.offsetLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="model.placeStateLike_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="model.persNamePart_sequenceOptional"/>
-      </optional>
-      <optional>
-         <ref name="idno"/>
-      </optional>
-      <optional>
-         <ref name="model.persNamePart_sequenceOptional"/>
-      </optional>
-   </define>
-   <define name="model.nameLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="model.nameLike.agent_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.offsetLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.placeStateLike_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.persNamePart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="idno"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="model.persNamePart_sequenceOptionalRepeatable"/>
-      </zeroOrMore>
-   </define>
-   <define name="model.nameLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="model.nameLike.agent_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.offsetLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.placeStateLike_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.persNamePart_sequenceRepeatable"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="idno"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="model.persNamePart_sequenceRepeatable"/>
-      </oneOrMore>
-   </define>
-   <define name="date">
-      <element name="date">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.7. Dates and Times]</a:documentation>
-         <text/>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-            <sch:rule context="tei:date">
-               <sch:assert test="@when or (@notAfter or @notBefore) or (@from or @to)">The date element must have either @when or @to/@from, or @notAfter/@notBefore. </sch:assert>
-            </sch:rule>
-         </sch:pattern>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-date-date.when.value-constraint-rule-6">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:date[@when]">
-               <sch:report test="text()">The date element must be empty when using the when attribute.</sch:report>
-            </sch:rule>
-         </pattern>
-         <ref name="att.datable.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="respStmt">
       <element name="respStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
@@ -644,7 +258,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [ ]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-p-abstractModel-structure-p-constraint-report-5">
+                  id="manuscripta-org-p-abstractModel-structure-p-constraint-report-4">
             <rule context="tei:p">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -654,7 +268,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-p-abstractModel-structure-l-constraint-report-6">
+                  id="manuscripta-org-p-abstractModel-structure-l-constraint-report-5">
             <rule context="tei:p">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -675,7 +289,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-desc-deprecationInfo-only-in-deprecated-constraint-rule-7">
+                  id="manuscripta-org-desc-deprecationInfo-only-in-deprecated-constraint-rule-5">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -691,6 +305,14 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <empty/>
       </element>
    </define>
+   <define name="date">
+      <element name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [     ]</a:documentation>
+         <text/>
+         <ref name="att.datable.w3c.attribute.when"/>
+         <empty/>
+      </element>
+   </define>
    <define name="title">
       <element name="title">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a title for any kind of work. [  ]</a:documentation>
@@ -703,7 +325,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <ref name="fileDesc"/>
          <ref name="revisionDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-teiHeader-greek.check-constraint-rule-8">
+                  id="manuscripta-org-teiHeader-greek.check-constraint-rule-6">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -713,7 +335,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-teiHeader-latin.check-constraint-rule-9">
+                  id="manuscripta-org-teiHeader-latin.check-constraint-rule-7">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -884,7 +506,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="change">
       <element name="change">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.6. Identifying Changes and Revisions]</a:documentation>
          <text/>
          <attribute name="who">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the person, or group of people, to whom the element content is ascribed.</a:documentation>
@@ -938,7 +560,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="org">
       <element name="org">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organization) provides information about an identifiable organization such as a business, a tribe, or any other grouping of people. [13.2.2. Organizational Names]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organization) provides information about an identifiable organization such as a business, a tribe, or any other grouping of people. [13.3.3. Organizational Data]</a:documentation>
          <oneOrMore>
             <ref name="orgName"/>
          </oneOrMore>
@@ -952,18 +574,24 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="TEI">
       <element name="TEI">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resourceLike class. Multiple <code xmlns="http://www.w3.org/1999/xhtml">&lt;TEI&gt;</code> elements may be combined to form a <code xmlns="http://www.w3.org/1999/xhtml">&lt;teiCorpus&gt;</code> element. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resource class. Multiple <code xmlns="http://www.w3.org/1999/xhtml">&lt;TEI&gt;</code> elements may be combined within a <code xmlns="http://www.w3.org/1999/xhtml">&lt;TEI&gt;</code> (or <code xmlns="http://www.w3.org/1999/xhtml">&lt;teiCorpus&gt;</code>) element. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
          <ref name="teiHeader"/>
          <ref name="text"/>
-         <ns xmlns="http://purl.oclc.org/dsdl/schematron"
-             prefix="tei"
-             uri="http://www.tei-c.org/ns/1.0"/>
-         <ns xmlns="http://purl.oclc.org/dsdl/schematron"
-             prefix="xs"
-             uri="http://www.w3.org/2001/XMLSchema"/>
-         <ns xmlns="http://purl.oclc.org/dsdl/schematron"
-             prefix="rng"
-             uri="http://relaxng.org/ns/structure/1.0"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 prefix="tei"
+                 uri="http://www.tei-c.org/ns/1.0"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 prefix="xs"
+                 uri="http://www.w3.org/2001/XMLSchema"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 prefix="rng"
+                 uri="http://relaxng.org/ns/structure/1.0"/>
          <attribute name="xml:id">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
             <data type="ID"/>

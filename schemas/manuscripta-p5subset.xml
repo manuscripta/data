@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xml:base="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-master.odd" xml:lang="en"><?TEIVERSION Version 4.0.0. Last updated on
-	13th February 2020, revision ccd19b0ba?>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xml:base="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-master.odd" xml:lang="en"><?TEIVERSION Version 4.1.0. Last updated on
+	19th August 2020, revision b414ba550?>
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -968,7 +968,7 @@
         <back>
             <div xml:id="schema">
                 <head>Schema</head>
-                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="manuscripta" start="TEI" xml:lang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="file:/C:/Program Files/Oxygen XML Editor 22/frameworks/tei/xml/tei/odd/p5subset.xml"><classSpec module="tei" type="atts" ident="att.ascribed">
+                <schemaSpec xmlns:teix="http://www.tei-c.org/ns/Examples" ident="manuscripta" start="TEI" xml:lang="en" defaultExceptions="http://www.tei-c.org/ns/1.0 teix:egXML" source="file:/C:/Program Files/Oxygen XML Editor 22/frameworks/tei/xml/tei/odd/p5subset.xml"><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="atts" ident="att.ascribed">
   <desc versionDate="2006-01-05" xml:lang="en">provides attributes for elements representing speech or action that can be ascribed to a
     specific individual.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">특정 개인의 대화 또는 행위를 표시하는 요소에 대한 속성을 제공한다.</desc>
@@ -1028,7 +1028,7 @@
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBA">8.3. Elements Unique to Spoken Texts</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="atts" ident="att.canonical">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="atts" ident="att.canonical">
   <desc versionDate="2008-09-05" xml:lang="en">provides attributes which can be used to associate a representation such as a name or title
     with canonical information about the object being named or referenced.</desc>
   <desc versionDate="2009-05-25" xml:lang="fr">fournit des attributs qui peuvent être utilisés pour
@@ -1102,7 +1102,7 @@
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDATTSnr">13.1.1. Linking Names and Their Referents</ref>
   </listRef>
-</classSpec><classSpec rend="change" module="tei" type="atts" ident="att.ranging"><desc versionDate="2009-06-05" xml:lang="en">provides attributes for describing numerical ranges.</desc><classes/><attList><attDef ident="atLeast">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" ident="att.ranging"><desc versionDate="2009-06-05" xml:lang="en">provides attributes for describing numerical ranges.</desc><classes/><attList><attDef ident="atLeast">
       <desc versionDate="2009-06-29" xml:lang="en">gives a minimum estimated value for the approximate measurement.</desc>
       <desc versionDate="2009-05-25" xml:lang="fr">donne une estimation de la valeur minimum pour la
         mesure.</desc>
@@ -1130,7 +1130,7 @@
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
 The MS. was lost in transmission by mail from <del rend="overstrike"><gap reason="illegible" extent="one or two letters" atLeast="1" atMost="2" unit="chars"/></del> Philadelphia to the Graphic office, New York.
     </egXML>
-  </exemplum></classSpec><classSpec rend="change" module="tei" type="atts" ident="att.dimensions"><desc versionDate="2007-08-05" xml:lang="en">provides attributes for describing the size of physical objects.</desc><desc versionDate="2007-12-20" xml:lang="ko">물리적 대상의 크기를 기술하는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供符合某種度量值的屬性值。</desc><desc versionDate="2008-04-05" xml:lang="ja">物理的対象の大きさを表す属性を示す． </desc><desc versionDate="2009-05-25" xml:lang="fr">fournit des attributs
+  </exemplum></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" ident="att.dimensions"><desc versionDate="2007-08-05" xml:lang="en">provides attributes for describing the size of physical objects.</desc><desc versionDate="2007-12-20" xml:lang="ko">물리적 대상의 크기를 기술하는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供符合某種度量值的屬性值。</desc><desc versionDate="2008-04-05" xml:lang="ja">物理的対象の大きさを表す属性を示す． </desc><desc versionDate="2009-05-25" xml:lang="fr">fournit des attributs
   pour décrire la taille des objets    physiques</desc><desc versionDate="2007-11-06" xml:lang="it">assegna degli attributi che descrivono la grandezza di
     oggetti fisici</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona atributos que califican una determinata
     medición.</desc><classes><memberOf key="att.ranging"/></classes><attList><attDef ident="unit" usage="opt"><desc versionDate="2007-08-02" xml:lang="en">names the unit used for the measurement</desc><desc versionDate="2007-12-20" xml:lang="ko">측정 단위의 이름을 기술한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">度量單位的名稱。</desc><desc versionDate="2008-04-05" xml:lang="ja">当該大きさの単位を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">noms des unités utilisées pour la mesure.</desc><desc versionDate="2007-05-04" xml:lang="es">especifica las unidades usadas para la medición.</desc><desc versionDate="2007-01-21" xml:lang="it">specifica le unità usate per la misurazione</desc><datatype><dataRef key="teidata.enumerated"/></datatype><valList type="closed"><valItem ident="mm">
@@ -1165,7 +1165,7 @@ The MS. was lost in transmission by mail from <del rend="overstrike"><gap reason
           <height extent="half the page"/>
         </egXML>
       </exemplum>
-    </attDef></attList></classSpec><classSpec module="tei" type="atts" ident="att.datable.w3c" xml:id="DATABLEW3C">
+    </attDef></attList></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="atts" ident="att.datable.w3c" xml:id="DATABLEW3C">
   <desc versionDate="2013-11-22" xml:lang="en">provides attributes for normalization of elements that contain
   datable events  conforming to the W3C
   <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>.</desc>
@@ -1385,7 +1385,7 @@ The MS. was lost in transmission by mail from <del rend="overstrike"><gap reason
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4. Dates and Times</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.7. Dates and Times</ref>
   </listRef>
-</classSpec><classSpec rend="change" module="tei" type="atts" xml:id="DATABLE" ident="att.datable"><desc versionDate="2007-06-12" xml:lang="en">provides attributes for normalization of elements
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" xml:id="DATABLE" ident="att.datable"><desc versionDate="2007-06-12" xml:lang="en">provides attributes for normalization of elements
     that contain dates, times, or datable events.</desc><desc versionDate="2007-12-20" xml:lang="ko">날짜, 시간 또는 날짜 명기 사건을 포함하는 요소의 규격화에 대한 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供用於元素規格化的屬性， 這些元素包含日期明確的事件。</desc><desc versionDate="2008-04-05" xml:lang="ja">日付や時間または時間事象を含む要素の正規化手法を示す属性を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">fournit des attributs pour la normalisation
     d'éléments qui contiennent des mentions d'événements datés ou susceptibles de l'être</desc><desc versionDate="2007-05-04" xml:lang="es">atributos para registrar expresiones temporales
     normalizadas.</desc><desc versionDate="2007-01-21" xml:lang="it">assegna attributi per la normalizzazione di elementi
@@ -1428,7 +1428,7 @@ The MS. was lost in transmission by mail from <del rend="overstrike"><gap reason
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4. Dates and Times</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.7. Dates and Times</ref>
-  </listRef></classSpec><classSpec rend="change" module="tei" type="atts" ident="att.docStatus"><desc versionDate="2010-05-06" xml:lang="en">provides attributes for use on metadata elements
+  </listRef></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" ident="att.docStatus"><desc versionDate="2010-05-06" xml:lang="en">provides attributes for use on metadata elements
   describing the status of a document.</desc><desc xml:lang="ja" versionDate="2019-05-10">文書のステータスを記述するメタデータ要素用の属性を提供する．</desc><classes/><attList><attDef ident="status" usage="req"><desc versionDate="2010-05-06" xml:lang="en">describes the status of a document either currently or, when
 associated with a dated element, at the time indicated.</desc><desc versionDate="2019-05-10" xml:lang="ja">現在の、もしくは日時に関連づけられた要素にあっては、指定された時点における文書のステータスを記述する．</desc><datatype><dataRef key="teidata.enumerated"/></datatype><defaultVal>draft</defaultVal><valList type="closed"><valItem ident="draft">
                                         <desc>working draft</desc>
@@ -1444,7 +1444,7 @@ associated with a dated element, at the time indicated.</desc><desc versionDate=
         <change when="2010-03-01" status="draft" who="#LB"/>
       </revisionDesc>
     </egXML>
-  </exemplum></classSpec><classSpec module="tei" predeclare="true" type="atts" ident="att.global.responsibility">
+  </exemplum></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" predeclare="true" type="atts" ident="att.global.responsibility">
   <desc versionDate="2014-12-10" xml:lang="en">provides attributes indicating the agent
     responsible for some aspect of the text, the markup or 
     something asserted by the markup, and the degree of certainty 
@@ -1536,7 +1536,7 @@ associated with a dated element, at the time indicated.</desc><desc versionDate=
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/AI.html#AISP">17.3. Spans and Interpretations</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDATTSnr">13.1.1. Linking Names and Their Referents</ref>
   </listRef>
-</classSpec><classSpec rend="change" module="tei" type="atts" ident="att.editLike"><desc versionDate="2012-02-14" xml:lang="en">provides attributes describing the nature of an encoded scholarly intervention or
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" ident="att.editLike"><desc versionDate="2012-02-14" xml:lang="en">provides attributes describing the nature of an encoded scholarly intervention or
     interpretation of any kind.</desc><desc versionDate="2007-12-20" xml:lang="ko">어떤 유형의 부호화된 학문적 간섭 또는 해석의 특성을 기술하는 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供屬性，描述任何已標記的學者更正或詮釋的性質。</desc><desc xml:lang="ja" versionDate="2019-05-20">学術的調整・解釈の性質を表す属性を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">fournit des attributs décrivant la nature d'une
     intervention savante encodée ou de tout autre interprétation.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona atributos que describen la naturaleza de una
     intervención crítica codificada o una interpretación de cualquier tipo.</desc><desc versionDate="2007-01-21" xml:lang="it">assegna degli attributi che descrivono il carattere di un
@@ -1569,7 +1569,7 @@ associated with a dated element, at the time indicated.</desc><desc versionDate=
 <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msdates">10.3.1. Origination</ref>
 <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPERSE">13.3.2. The Person Element</ref>
 <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHCO">11.3.1.1. Core Elements for Transcriptional Work</ref>
-  </listRef></classSpec><classSpec rend="change" predeclare="true" xml:id="GBLSRC" module="tei" type="atts" ident="att.global.source"><desc versionDate="2016-02-15" xml:lang="en">provides an attribute used by elements to point to an
+  </listRef></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" predeclare="true" xml:id="GBLSRC" module="tei" type="atts" ident="att.global.source"><desc versionDate="2016-02-15" xml:lang="en">provides an attribute used by elements to point to an
     external source.</desc><desc versionDate="2019-09-18" xml:lang="ja">外部ソースを参照する要素によって用いられる属性を示す。</desc><classes/><attList><attDef ident="source" usage="opt">
       <desc versionDate="2010-05-09" xml:lang="en">specifies the source from which some aspect of
         this element is drawn.</desc>
@@ -1628,7 +1628,7 @@ associated with a dated element, at the time indicated.</desc><desc versionDate=
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGAso">1.3.1.1.4. Sources, certainty, and responsibility</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBAWR">8.3.4. Writing</ref>
-  </listRef></classSpec><classSpec rend="change" module="tei" xml:id="GLOBAL" type="atts" ident="att.global"><desc versionDate="2007-10-02" xml:lang="en">provides attributes common to all elements in the TEI encoding scheme.</desc><desc versionDate="2007-12-20" xml:lang="ko">TEI 부호화 스키마의 모든 요소에 공통 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供一組屬性，通用於TEI編碼標準中的所有元素。</desc><desc versionDate="2008-04-05" xml:lang="ja">TEI符号化スキーム中の全要素に共通する属性を示す． </desc><desc versionDate="2007-06-12" xml:lang="fr">fournit un jeu d'attributs communs à tous les éléments
+  </listRef></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" xml:id="GLOBAL" type="atts" ident="att.global"><desc versionDate="2007-10-02" xml:lang="en">provides attributes common to all elements in the TEI encoding scheme.</desc><desc versionDate="2007-12-20" xml:lang="ko">TEI 부호화 스키마의 모든 요소에 공통 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供一組屬性，通用於TEI編碼標準中的所有元素。</desc><desc versionDate="2008-04-05" xml:lang="ja">TEI符号化スキーム中の全要素に共通する属性を示す． </desc><desc versionDate="2007-06-12" xml:lang="fr">fournit un jeu d'attributs communs à tous les éléments
     dans le système de codage TEI.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona un conjunto de atributos común a todos los
     elementos del esquema de codificación TEI.</desc><desc versionDate="2007-01-21" xml:lang="it">stabilisce un insieme di attributi comuni a tutti gli
     elementi dello schema di codifica TEI</desc><classes><memberOf key="att.global.linking"/><memberOf key="att.global.responsibility"/><memberOf key="att.global.source"/></classes><attList><attDef ident="xml:id" usage="opt">
@@ -1903,14 +1903,14 @@ and that a single TEI document may contain texts in many languages.</p>
       </exemplum>-->
     </attDef></attList><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGA">1.3.1.1. Global Attributes</ref>
-  </listRef></classSpec><classSpec rend="change" module="tei" type="atts" ident="att.media"><desc versionDate="2013-01-11" xml:lang="en">provides attributes for specifying display and related properties of
+  </listRef></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" ident="att.media"><desc versionDate="2013-01-11" xml:lang="en">provides attributes for specifying display and related properties of
   external media.</desc><classes/><attList><attDef ident="width" usage="opt">
       <desc versionDate="2013-01-10" xml:lang="en">Where the media are displayed, indicates the  display width</desc>
       <datatype><dataRef key="teidata.outputMeasurement"/></datatype>
     </attDef><attDef ident="height" usage="opt">
       <desc versionDate="2013-01-10" xml:lang="en">Where the media are displayed, indicates the display height</desc>
       <datatype><dataRef key="teidata.outputMeasurement"/></datatype>
-    </attDef></attList></classSpec><classSpec module="tei" type="atts" ident="att.resourced">
+    </attDef></attList></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="atts" ident="att.resourced">
   <desc versionDate="2013-01-11" xml:lang="en">provides attributes by which a resource (such as an externally
   held media file) may be located.</desc>
   <attList>
@@ -1924,7 +1924,7 @@ and that a single TEI document may contain texts in many languages.</p>
       <datatype><dataRef key="teidata.pointer"/></datatype>
     </attDef>
   </attList>
-</classSpec><classSpec rend="change" module="tei" type="atts" xml:id="MEASUREMENT" ident="att.measurement"><desc versionDate="2006-01-05" xml:lang="en">provides attributes to represent a regularized or normalized measurement.</desc><desc versionDate="2007-12-20" xml:lang="ko">정상화 또는 규격화된 측정 방식을 표상하는 속성을 제시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供屬性，代表一般化或規格化的度量。</desc><desc versionDate="2008-04-05" xml:lang="ja">正規化単位を表す属性を示す．
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" xml:id="MEASUREMENT" ident="att.measurement"><desc versionDate="2006-01-05" xml:lang="en">provides attributes to represent a regularized or normalized measurement.</desc><desc versionDate="2007-12-20" xml:lang="ko">정상화 또는 규격화된 측정 방식을 표상하는 속성을 제시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供屬性，代表一般化或規格化的度量。</desc><desc versionDate="2008-04-05" xml:lang="ja">正規化単位を表す属性を示す．
 </desc><desc versionDate="2007-06-12" xml:lang="fr">donne des attributs pour représenter une mesure
       régularisée ou normalisée.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona atributos que representen una medición regularizada o normalizada.</desc><desc versionDate="2007-01-21" xml:lang="it">assegna degli attributi che rappresentano una misurazione regolarizzata o normalizzata</desc><classes/><constraintSpec ident="att-measurement-unitRef" scheme="schematron">
     <constraint>
@@ -2043,11 +2043,11 @@ baby?</l></egXML>
       けれども，符号化する人は，非公式な計測単位，例えば，
       <val>lines</val>や<val>characters</val>も使用してもよい．
     </p>
-  </remarks></classSpec><classSpec rend="change" module="tei" xml:id="NAMES" type="atts" ident="att.naming"><desc versionDate="2006-01-05" xml:lang="en">provides attributes common to elements which refer to named persons, places, organizations etc.</desc><desc versionDate="2007-12-20" xml:lang="ko">사람, 장소, 조직 등의 이름을 지시하는 요소에 공통적 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供屬性，通用於參照到人物、地點、組織等的元素。</desc><desc versionDate="2008-04-05" xml:lang="ja">名前，人物，場所，組織を示す要素に付与される属性を示す．</desc><desc versionDate="2009-05-28" xml:lang="fr">fournit des attributs communs aux éléments qui font référence à des personnes, lieux, organismes, etc., nommés.</desc><desc versionDate="2007-05-04" xml:lang="es">identifica los atributos comunes a los elementos que se refieren a personas, lugares, organizaciones, etc. indicados por nombre</desc><desc versionDate="2007-01-21" xml:lang="it">identifica degli attributi comuni a elementi che si riferiscono a persone, luoghi, organizzazioni, ecc. indicati per nome</desc><classes><memberOf key="att.canonical"/></classes><attList><attDef ident="role" usage="opt"><desc versionDate="2009-10-12" xml:lang="en">may be used to specify further information about the entity referenced by
+  </remarks></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" xml:id="NAMES" type="atts" ident="att.naming"><desc versionDate="2006-01-05" xml:lang="en">provides attributes common to elements which refer to named persons, places, organizations etc.</desc><desc versionDate="2007-12-20" xml:lang="ko">사람, 장소, 조직 등의 이름을 지시하는 요소에 공통적 속성을 제공한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">提供屬性，通用於參照到人物、地點、組織等的元素。</desc><desc versionDate="2008-04-05" xml:lang="ja">名前，人物，場所，組織を示す要素に付与される属性を示す．</desc><desc versionDate="2009-05-28" xml:lang="fr">fournit des attributs communs aux éléments qui font référence à des personnes, lieux, organismes, etc., nommés.</desc><desc versionDate="2007-05-04" xml:lang="es">identifica los atributos comunes a los elementos que se refieren a personas, lugares, organizaciones, etc. indicados por nombre</desc><desc versionDate="2007-01-21" xml:lang="it">identifica degli attributi comuni a elementi che si riferiscono a persone, luoghi, organizzazioni, ecc. indicati per nome</desc><classes><memberOf key="att.canonical"/></classes><attList><attDef ident="role" usage="opt"><desc versionDate="2009-10-12" xml:lang="en">may be used to specify further information about the entity referenced by
 this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</desc><datatype maxOccurs="unbounded"><dataRef key="teidata.enumerated"/></datatype><valList type="closed"><valItem ident="cataloguer"/><valItem ident="librarian"/><valItem ident="scribe"/></valList></attDef></attList><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONARS">3.5.1. Referring Strings</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDNYM">13.3.6. Names and Nyms</ref>
-  </listRef></classSpec><classSpec module="tei" type="atts" ident="att.placement">
+  </listRef></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="atts" ident="att.placement">
   <desc versionDate="2006-06-08" xml:lang="en">provides attributes for describing where on the source page or
   object a textual element appears.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">원본 페이지 또는 대상에서 텍스트 요소가 나타나는 위치를 기술하기 위한 속성을 제공한다.</desc>
@@ -2162,7 +2162,7 @@ this name in the form of a set of whitespace-separated values, for example the o
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COEDADD">3.4.3. Additions, Deletions, and Omissions</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHAD">11.3.1.4. Additions and Deletions</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="TYPED" type="atts" ident="att.typed">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="TYPED" type="atts" ident="att.typed">
   <desc versionDate="2007-10-02" xml:lang="en">provides attributes which can be used to classify or subclassify elements in any way.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">요소의 분류 또는 하위분류에서 사용될 수 있는 속성을 제공한다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">提供可依任何方法將元素分類或次要分類的一般屬性。</desc>
@@ -2273,7 +2273,7 @@ sub-classification for the element additional to that provided by its
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TS.html#TSBA">8.3. Elements Unique to Spoken Texts</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/USE.html#MDMDAL">23.3.1.3. Modification of Attribute and Attribute Value Lists</ref>
   </listRef>
-</classSpec><classSpec rend="change" module="tei" type="atts" ident="att.pointing"><desc versionDate="2016-01-15" xml:lang="en">provides a set of attributes used by all elements which point
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" ident="att.pointing"><desc versionDate="2016-01-15" xml:lang="en">provides a set of attributes used by all elements which point
   to other elements by means of one or more URI references.</desc><desc versionDate="2007-12-20" xml:lang="ko">하나 이상의 URI 참조를 통해서 다른 요소를 가리키는 모든 요소에 의해 사용된 속성 집합을 정의한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">定義一組與其他元素相連結的所有元素皆使用的屬性，連結是使用ㄧ個或多個統一資源識別符 (URI) 參照。</desc><desc versionDate="2008-04-05" xml:lang="ja">URIにより要素を参照する要素に共通して付与される属性を定義する．</desc><desc versionDate="2016-02-15" xml:lang="fr">fournit un ensemble d'attributs utilisés par tous les éléments qui pointent vers d'autres éléments au moyen d'une ou de plusieurs références URI.</desc><desc versionDate="2007-05-04" xml:lang="es">define un conjunto de atributos usados por todos los elementos que señalan a otros elementos a través de uno o más URI.</desc><desc versionDate="2007-01-21" xml:lang="it">definisce un insieme di attributi usati da tutti gli elementi che puntano ad altri elementi tramite uno o più URI</desc><classes/><attList><attDef ident="target" usage="opt">
       <desc versionDate="2010-05-02" xml:lang="en">specifies the destination of the reference by supplying one or more URI References</desc>
       <desc versionDate="2007-12-20" xml:lang="ko">하나 혹은 다수의 URI 참조를 제시하여 참조의 목적지를 명시한다.</desc>
@@ -2298,12 +2298,12 @@ sub-classification for the element additional to that provided by its
     </attDef></attList><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STGAla">1.3.1.1.2. Language Indicators</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6. Simple Links and Cross-References</ref>
-  </listRef></classSpec><classSpec rend="change" module="tei" type="atts" ident="att.citing"><desc versionDate="2014-01-10" xml:lang="en">provides attributes for specifying the specific part of a bibliographic item being cited.</desc><desc xml:lang="ja" versionDate="2019-01-04">引用された書誌の特定箇所を指示するための属性を提供する．</desc><classes/><attList><attDef ident="unit" usage="rec"><desc versionDate="2017-06-24" xml:lang="fr">identifie le type d'information
+  </listRef></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" module="tei" type="atts" ident="att.citing"><desc versionDate="2014-01-10" xml:lang="en">provides attributes for specifying the specific part of a bibliographic item being cited.</desc><desc xml:lang="ja" versionDate="2019-01-04">引用された書誌の特定箇所を指示するための属性を提供する．</desc><classes/><attList><attDef ident="unit" usage="rec"><desc versionDate="2017-06-24" xml:lang="fr">identifie le type d'information
       que transmet l'élément, par exemple <val>colonnes</val>, <val>pages</val>, <val>volume</val>, <val>inscription</val>, etc.</desc><desc versionDate="2012-12-17" xml:lang="en">identifies the unit of information conveyed by the element, e.g. <val>columns</val>, <val>pages</val>, <val>volume</val>, <val>entry</val>.</desc><desc xml:lang="ja" versionDate="2019-01-04">当該要素が伝える情報の単位を特定する．たとえば，カラム (<val>columns</val>)，頁 (<val>pages</val>)，巻 (<val>volume</val>)，エントリ (<val>entry</val>) 等。</desc><datatype><dataRef key="teidata.enumerated"/></datatype><valList type="closed"><valItem ident="volume"/><valItem ident="issue"/><valItem ident="page"/><valItem ident="footnote"/><valItem ident="line"/><valItem ident="chapter"/><valItem ident="column"/><valItem ident="folio"/><valItem ident="plate"/><valItem ident="number">
                                         <desc>Use e.g. for RGK numbers or ruling patterns i Leroy-Sautel</desc>
                                     </valItem></valList></attDef><attDef ident="from" usage="rec"><desc versionDate="2013-01-08" xml:lang="en">specifies the starting point of the range of units indicated by the <att>unit</att> attribute.</desc><desc xml:lang="ja" versionDate="2019-01-04"><att>unit</att>属性で指定された時間単位の幅における開始点を表す．</desc><datatype><dataRef key="teidata.word"/></datatype></attDef><attDef ident="to" usage="rec"><desc versionDate="2013-01-08" xml:lang="en">specifies the end-point of the range of units indicated by the <att>unit</att> attribute.</desc><desc xml:lang="ja" versionDate="2019-01-04"><att>unit</att>属性で指定された時間単位の幅における終点を表す．</desc><datatype><dataRef key="teidata.word"/></datatype></attDef></attList><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STECAT">1.3.1. Attribute Classes</ref>
-  </listRef></classSpec><classSpec module="tei" xml:id="AGENT" type="model" ident="model.nameLike.agent">
+  </listRef></classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="AGENT" type="model" ident="model.nameLike.agent">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements which contain names of individuals
 or corporate bodies.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">개인 또는 기업체의 이름을 포함하는 요소를 모아 놓는다.</desc>
@@ -2336,7 +2336,7 @@ or corporate bodies.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONA">3.5. Names, Numbers, Dates, Abbreviations, and Addresses</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.segLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.segLike">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements used for arbitrary segmentation.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">임의적 분할에 사용되는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集用於隨機分割的元素。</desc>
@@ -2373,7 +2373,7 @@ or corporate bodies.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SASE">16.3. Blocks, Segments, and Anchors</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/AI.html#AILC">17.1. Linguistic Segment Categories</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.hiLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.hiLike">
   <desc versionDate="2007-10-06" xml:lang="en">groups phrase-level elements which are typographically distinct but to which no specific
     function can be attributed.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인쇄상 구분되나 특정 기능이 없는 구 층위 요소를 모아 놓는다.</desc>
@@ -2393,7 +2393,7 @@ or corporate bodies.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.emphLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.emphLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements which are typographically
   distinct and to which a specific function can be attributed.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인쇄상 구분되며 특정 기능을 수행하는 구-층위 요소를 모아 놓는다.</desc>
@@ -2410,7 +2410,7 @@ or corporate bodies.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.highlighted">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.highlighted">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements which are typographically distinct.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인쇄상 구분되는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集與顯目標示相關的詞組層次元素。</desc>
@@ -2427,7 +2427,7 @@ or corporate bodies.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="CLDATE" type="model" ident="model.dateLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="CLDATE" type="model" ident="model.dateLike">
   <desc versionDate="2007-01-31" xml:lang="en">groups elements containing temporal expressions.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">시간 표현을 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含時間格式的元素。</desc>
@@ -2446,7 +2446,7 @@ or corporate bodies.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4. Dates and Times</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.7. Dates and Times</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.measureLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.measureLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which denote a number, a quantity, a measurement, or similar piece of text
     that conveys some numerical meaning.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">숫자, 양, 측정값 등 수치적 의미를 드러내는 텍스트 부분을 가리키는 요소를 모아 놓는다.</desc>
@@ -2465,7 +2465,7 @@ or corporate bodies.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONANU">3.5.3. Numbers and
 Measures</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.egLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.egLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements containing examples or illustrations.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">예 또는 실례를 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含範例的元素</desc>
@@ -2481,7 +2481,7 @@ Measures</ref>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TDphraseTE">22.1.1. Phrase Level Terms</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.graphicLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.graphicLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements containing images, formulae, and 
   similar objects.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">이미지, 수식, 그리고 유사 대상을 포함하는 요소를 모아 놓는다.</desc>
@@ -2497,7 +2497,7 @@ Measures</ref>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COGR">3.9. Graphics and Other Non-textual Components</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.offsetLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.offsetLike">
   <desc versionDate="2007-10-09" xml:lang="en">groups elements which can appear only as part of a place name.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">장소명의 부분으로서만 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-06" xml:lang="es">agrupa los elementos que pueden aparecer solamente como
@@ -2512,7 +2512,7 @@ Measures</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPLAC">13.2.3. Place Names</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.pPart.msdesc">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.pPart.msdesc">
   <desc versionDate="2007-10-18" xml:lang="en">groups phrase-level elements used in manuscript description.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">원고 기술에서 사용되는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集描述寫本的元素</desc>
@@ -2530,7 +2530,7 @@ Measures</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#MS">10. Manuscript Description</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.pPart.editorial">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.pPart.editorial">
   <desc versionDate="2007-10-18" xml:lang="en">groups phrase-level elements for simple editorial interventions that may be useful both
 in transcribing and in authoring.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">전사와 저작 모두에서 유용할 수 있는 간단한 편집 간섭에 대한 구-층위 요소를 모아 놓는다.</desc>
@@ -2549,7 +2549,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.pPart.transcriptional">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.pPart.transcriptional">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements used for editorial transcription of pre-existing source
     materials.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">앞서 존재하는 원본 자료의 편집상 전사에 사용되는 구-층위 요소를 모아 놓는다.</desc>
@@ -2567,7 +2567,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="EDIT" type="model" ident="model.pPart.edit">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="EDIT" type="model" ident="model.pPart.edit">
   <desc versionDate="2005-10-10" xml:lang="en">groups phrase-level elements for simple editorial correction and transcription.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">간단한 편집상 수정과 전사에 대한 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的詞組層次元素用於簡單的編輯更正或轉錄</desc>
@@ -2584,7 +2584,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COED">3.4. Simple Editorial Changes</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="CLLOC" type="model" ident="model.ptrLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="CLLOC" type="model" ident="model.ptrLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements used for purposes of location and reference.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">위치 및 참조에 대한 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素用於位置和參照</desc>
@@ -2603,7 +2603,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR">3.6. Simple Links and Cross-References</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="VEPHR" type="model" ident="model.lPart">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="VEPHR" type="model" ident="model.lPart">
   <desc versionDate="2005-11-26" xml:lang="en">groups phrase-level elements which may appear within verse only.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">운문 내에서만 나타날 수 있는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集僅可能出現於韻文內的詞組層次元素。</desc>
@@ -2620,7 +2620,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/VE.html#VESE">6.2. Components of the Verse Line</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="METADATA" type="model" ident="model.global.meta">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="METADATA" type="model" ident="model.global.meta">
   <desc versionDate="2007-10-03" xml:lang="en">groups globally available elements which describe the status of other elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">다른 요소의 상태를 기술하며, 전체적으로 이용가능한 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集描述其他元素狀態的空白元素，例如連結或抽象詮釋，或者提供正確度等，且空白元素可能出現於文件任一處。</desc>
@@ -2670,7 +2670,7 @@ in transcribing and in authoring.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="REFSYS" type="model" ident="model.milestoneLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="REFSYS" type="model" ident="model.milestoneLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups milestone-style
 elements used to represent reference systems.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">참조 체계를 표상하는 이정표 유형의 요소를 모아 놓는다.</desc>
@@ -2689,7 +2689,7 @@ elements used to represent reference systems.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CORS5">3.10.3. Milestone
 Elements</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.gLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.gLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements used to represent individual non-Unicode characters or glyphs.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">개별 비유니코드 문자 또는 그림문자를 표상하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素穿插於正規文本中，代表非統一碼項目。</desc>
@@ -2701,7 +2701,7 @@ Elements</ref>
     rapresentano oggetti non Unicode</desc>
 
 
-</classSpec><classSpec module="tei" type="model" xml:id="ODDDECL" ident="model.oddDecl">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" xml:id="ODDDECL" ident="model.oddDecl">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements which generate declarations in some markup language in ODD documents.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">ODD 문서에서 마크업 언어로 선언을 생성하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素使ODD文件內某些標記語言中產生宣告。</desc>
@@ -2716,7 +2716,7 @@ Elements</ref>
     
     <memberOf key="model.inter"/>
   </classes>
-</classSpec><classSpec module="tei" type="model" ident="model.phrase.xml">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.phrase.xml">
   <desc versionDate="2007-10-03" xml:lang="en">groups phrase-level elements used to encode XML constructs such as element names, attribute
     names, and attribute values</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">요소명, 속성명, 그리고 속성값과 같이 XML 구성물을 부호화하는 구-층위 요소를 모아 놓는다.</desc>
@@ -2736,7 +2736,7 @@ Elements</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TD">22. Documentation Elements</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.specDescLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.specDescLike">
   <desc versionDate="2007-10-22" xml:lang="en">groups elements for referring to specification elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">명시 요소를 참조하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素參照到細節元素</desc>
@@ -2751,7 +2751,7 @@ Elements</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TD.html#TD">22. Documentation Elements</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="CLBIBL" type="model" ident="model.biblLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="CLBIBL" type="model" ident="model.biblLike">
   <desc versionDate="2005-10-10" xml:lang="en">groups elements containing a bibliographic description.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">서지 기술을 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含書目描述的元素。</desc>
@@ -2769,7 +2769,7 @@ Elements</ref>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBI">3.11. Bibliographic Citations and References</ref>
   </listRef>
-</classSpec><classSpec ident="model.headLike" module="tei" type="model">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="model.headLike" module="tei" type="model">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements used to provide a title or heading at the start of a text
   division.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">텍스트 구역의 시작부에서 제목 또는 표제를 제시하는 요소를 모아 놓는다.</desc>
@@ -2781,7 +2781,7 @@ un intitulé au début d'une division de texte</desc>
   <classes>
       
   </classes>
-</classSpec><classSpec ident="model.labelLike" module="tei" type="model">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" ident="model.labelLike" module="tei" type="model">
   <desc versionDate="2007-06-13" xml:lang="en">groups elements used to gloss or explain other parts of a document.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">문서의 다른 부분을 해설 또는 설명하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-06" xml:lang="es">agrupa los elementos usados para glosar o para explicar otras partes de un documento.</desc>
@@ -2792,7 +2792,7 @@ expliquer d'autres parties d'un document.</desc>
   <classes>
     <memberOf key="model.inter"/>
   </classes>
-</classSpec><classSpec module="tei" xml:id="LISTS" type="model" ident="model.listLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="LISTS" type="model" ident="model.listLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups list-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">목록 같은 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集所有類似列表的元素</desc>
@@ -2808,7 +2808,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COLI">3.7. Lists</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="NOTES" type="model" ident="model.noteLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="NOTES" type="model" ident="model.noteLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups globally-available note-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">전체적으로 이용 가능한 주석 같은 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集所有類似註解的元素。</desc>
@@ -2824,7 +2824,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONO">3.8. Notes, Annotation, and Indexing</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" xml:id="CLLINES" ident="model.lLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" xml:id="CLLINES" ident="model.lLike">
   <desc versionDate="2005-11-08" xml:lang="en">groups elements representing metrical components such as verse lines.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">운문 행 같이 운율적 성분을 표상하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集代表韻律組件的元素，例如詩行。</desc>
@@ -2836,7 +2836,7 @@ expliquer d'autres parties d'un document.</desc>
   <classes>
       <memberOf key="model.divPart"/>
   </classes>
-</classSpec><classSpec module="tei" xml:id="PARAGRAPH" type="model" ident="model.pLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="PARAGRAPH" type="model" ident="model.pLike">
   <desc versionDate="2007-10-03" xml:lang="en">groups paragraph-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">문단 같은 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">該元素集是以交換資料為目的段落。</desc>
@@ -2850,7 +2850,7 @@ expliquer d'autres parties d'un document.</desc>
     <memberOf key="model.divPart"/>
     
   </classes>
-</classSpec><classSpec module="tei" xml:id="STAGEDIR" type="model" ident="model.stageLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="STAGEDIR" type="model" ident="model.stageLike">
   <desc versionDate="2007-08-29" xml:lang="en">groups elements containing stage directions or similar things defined by the module for
     performance texts.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">공연 텍스트의 모듈에 의해 정의된 무대 지시 또는 유사 내용을 포함하는 요소를 모아 놓는다.</desc>
@@ -2884,7 +2884,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html#DROTH">7.3. Other Types of Performance Text</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="EDITINCL" type="model" ident="model.global.edit">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="EDITINCL" type="model" ident="model.global.edit">
   <desc versionDate="2007-10-03" xml:lang="en">groups globally available elements which perform a specifically editorial function.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">명확한 편집 기능을 수행하며, 전체적으로 이용 가능한 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的空白元素有特殊的編輯功能，例如指出來源文件中一個文字段的附加、刪除、或缺漏的起始點。</desc>
@@ -2903,7 +2903,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="CHUNK" type="model" ident="model.divPart">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="CHUNK" type="model" ident="model.divPart">
   <desc versionDate="2011-12-12" xml:lang="en">groups paragraph-level elements appearing directly within divisions.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">구역 내에서 직접적으로 나타나는 문단-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集可出現於段落與其他區塊之間，而非出現於兩者之內的元素。</desc>
@@ -2934,7 +2934,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec predeclare="true" module="tei" xml:id="PLACPART" type="model" ident="model.placeNamePart">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" predeclare="true" module="tei" xml:id="PLACPART" type="model" ident="model.placeNamePart">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which form part of a place name.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">장소명의 부분을 형성하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集構成地點名稱部分的元素。</desc>
@@ -2951,7 +2951,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPLAC">13.2.3. Place Names</ref>
   </listRef>
-</classSpec><classSpec predeclare="true" module="tei" type="model" ident="model.placeStateLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" predeclare="true" module="tei" type="model" ident="model.placeStateLike">
   <desc versionDate="2007-10-09" xml:lang="en">groups elements which describe changing states of a place.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">장소의 변화하는 상태를 기술하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-06" xml:lang="es">agrupa los elementos que describen aspectos variables de
@@ -2963,7 +2963,7 @@ expliquer d'autres parties d'un document.</desc>
   <classes>
     <memberOf key="model.nameLike"/>
   </classes>
-</classSpec><classSpec module="tei" xml:id="QUOTELIKE" type="model" ident="model.quoteLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="QUOTELIKE" type="model" ident="model.quoteLike">
   <desc versionDate="2005-11-17" xml:lang="en">groups elements used to directly contain quotations.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인용을 직접 포함하는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集直接包含引言的元素。</desc>
@@ -2974,28 +2974,21 @@ expliquer d'autres parties d'un document.</desc>
   <desc versionDate="2007-01-21" xml:lang="it">raggruppa elementi che contengono direttamente le
     citazioni</desc>
   <classes>
-    <memberOf key="model.qLike"/>
+    <memberOf key="model.attributable"/>
     
   </classes>
-</classSpec><classSpec module="tei" xml:id="HQINTER" type="model" ident="model.qLike">
-  <desc versionDate="2005-10-10" xml:lang="en">groups elements related to highlighting which can appear either within or between
-    chunk-level elements.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">덩어리 층위 요소 내에서 또는 그 사이에서 나타날 수 있는 주요 부분과 관련된 요소를 모아 놓는다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集和顯目標示相關、且出現於方塊性層次元素內或之間的元素。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">塊レベル要素内または間で出現可能な，強調部分と関連する要素をまとめる．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">regroupe des éléments destinés à la mise en valeur, qui
-    peuvent apparaître à l'intérieur ou entre des éléments de niveau fragment.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">agrupa elementos relativos al evidenciado que aparece al
-    interno de o entre elementos a nivel de fragmentos de texto.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">raggruppa elementi relativi all'evidenziatura che
-    appaiono all'interno di o tra elementi a livello di porzioni di testo</desc>
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="HQINTER" type="model" ident="model.attributable">
+  <desc versionDate="2020-08-05" xml:lang="en">groups elements that contain a word or phrase that can be attributed to a source.</desc>
+  <desc versionDate="2020-08-14" xml:lang="de">gruppiert Elemente, die ein Wort oder eine Phrase enthalten, welche einer Quelle zugeschrieben werden können.</desc>
+ 
   <classes>
     <memberOf key="model.inter"/>
   </classes>
   <listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQ">3.3. Highlighting and Quotation</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COHQQ">3.3.3. Quotation</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html#DSFLT">4.3.2. Floating Texts</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.addressLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.addressLike">
   <desc versionDate="2007-10-02" xml:lang="en">groups elements used to represent a postal or email address.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">우편 또는 전자메일 주소를 나타내는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的詞組層次元素代表郵寄或電子郵件地址。</desc>
@@ -3013,7 +3006,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#ST">1. The TEI Infrastructure</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="NAMING" type="model" ident="model.nameLike">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="NAMING" type="model" ident="model.nameLike">
   <desc versionDate="2007-10-18" xml:lang="en">groups elements which name or refer to a person, place, or organization.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">인물, 장소, 또는 조직의 이름 또는 지시를 나타내는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的空白元素可出現於TEI文件內的任何位置。</desc>
@@ -3044,7 +3037,7 @@ expliquer d'autres parties d'un document.</desc>
   <remarks xml:lang="ja" versionDate="2008-04-05">
     <p> 日付欄，住所情報，責任表示等に現れる，名前を示す要素の親集合． </p>
   </remarks>
-</classSpec><classSpec module="tei" xml:id="GLOBINCL" type="model" ident="model.global">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="GLOBINCL" type="model" ident="model.global">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which may appear at any point within a TEI text.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">TEI 텍스트 내의 어떤 지점에서 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2008-04-05" xml:lang="ja">TEIデータ内のどこでも出現可能な要素をまとめる．</desc>
@@ -3057,7 +3050,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="DATA" type="model" ident="model.pPart.data">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="DATA" type="model" ident="model.pPart.data">
   <desc versionDate="2005-10-10" xml:lang="en">groups phrase-level elements containing names, dates, numbers, measures, and similar data.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">이름, 날짜, 수, 측정, 그리고 유사 데이터를 포함하는 구-층위 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集包含名稱、日期、數字、度量和類似數據的詞組層次元素。</desc>
@@ -3075,7 +3068,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONA">3.5. Names, Numbers, Dates, Abbreviations, and Addresses</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="INTER" type="model" ident="model.inter">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="INTER" type="model" ident="model.inter">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which can appear either within or between paragraph-like elements.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">문단 같은 요소 내에서 또는 그 사이에서 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集中間層次的元素：可出現於段落內與段落之間，或方塊性層次內與層次間。</desc>
@@ -3096,7 +3089,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec module="tei" xml:id="PHRASE" type="model" ident="model.phrase">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" xml:id="PHRASE" type="model" ident="model.phrase">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which can occur at the level of individual words or phrases.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">개별 단어 또는 구 층위에서 나타날 수 있는 요소를 모아 놓는다.</desc>
   <desc versionDate="2007-05-02" xml:lang="zh-TW">匯集的元素可出現於個人字詞層次上。</desc>
@@ -3124,7 +3117,7 @@ expliquer d'autres parties d'un document.</desc>
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
-</classSpec><classSpec module="tei" type="model" ident="model.limitedPhrase">
+</classSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" module="tei" type="model" ident="model.limitedPhrase">
   <desc versionDate="2008-02-23" xml:lang="en">groups phrase-level elements excluding those elements primarily intended for transcription
     of existing sources.</desc>
   <desc versionDate="2007-12-20" xml:lang="ko">존재하는 원본의 전사의 주요 목적에 해당하는 요소를 배제한 구 층위 요소를 모아 놓는다.</desc>
@@ -3140,17 +3133,17 @@ expliquer d'autres parties d'un document.</desc>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STEC">1.3. The TEI Class System</ref>
   </listRef>
 </classSpec><dataSpec module="tei" ident="teidata.certainty">
-  <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values expressing a degree of certainty.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">확실성 정도를 표현하는 속성 값의 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義表示正確度的屬性值範圍</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">確信度を示す属性値の程度を示す．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">Définit la gamme des valeurs d'attribut exprimant un
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-18" xml:lang="en">defines the range of attribute values expressing a degree of certainty.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">확실성 정도를 표현하는 속성 값의 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義表示正確度的屬性值範圍</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">確信度を示す属性値の程度を示す．</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">Définit la gamme des valeurs d'attribut exprimant un
     degré de certitude</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos que exprimen un
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos que exprimen un
     grado de certeza.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi che esprimono
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi che esprimono
     un grado di certezza</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
          <valList type="closed">
             <valItem ident="high"/>
             <valItem ident="medium"/>
@@ -3158,67 +3151,67 @@ expliquer d'autres parties d'un document.</desc>
             <valItem ident="unknown"/>
          </valList>
    </content>
-  <remarks versionDate="2011-02-26" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2011-02-26" xml:lang="en">
       <p>Certainty may be expressed by one of the predefined symbolic values <val>high</val>,
         <val>medium</val>, or <val>low</val>. The value
 	<val>unknown</val> should be used in cases where the encoder
 	does not wish to assert an opinion about the matter. 
 	</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
-      <p> 確信度は，<val>high</val>, <val>medium</val>, <val>low</val>のうち の1つが選択される．より詳細に示したい場合には， <ident type="datatype">data.probability</ident>を単独または追加と して使用することができる． </p>
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
+      <p> 確信度は，<val>high</val>, <val>medium</val>, <val>low</val>のうち の1つが選択される．より詳細に示したい場合には， <ident type="datatype">teidata.probability</ident>を単独または追加と して使用することができる． </p>
   </remarks>
-  <remarks versionDate="2009-05-25" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-05-25" xml:lang="fr">
       <p>Le degré de certitude peut être exprimé par l'une des valeurs symboliques prédéfinies
         <val>high</val>, <val>medium</val>, ou <val>low</val>. </p>
  </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.probability">
-  <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values expressing a probability.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">확률을 표현하는 속성 값의 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義表示可能性的屬性值範圍</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">出現度を示す属性値の範囲を定義する． </desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs d'attributs exprimant une
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-18" xml:lang="en">defines the range of attribute values expressing a probability.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">확률을 표현하는 속성 값의 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義表示可能性的屬性值範圍</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">出現度を示す属性値の範囲を定義する． </desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs d'attributs exprimant une
     probabilité.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos que exprimen un
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos que exprimen un
     grado de probabilida.d</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi che esprimono
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi che esprimono
     una probabilità</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef name="double"/>
    </content>
-  <remarks versionDate="2005-10-18" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2005-10-18" xml:lang="en">
       <p>Probability is expressed
        as a real number between 0 and 1;  0  representing <mentioned>certainly false</mentioned> and 1 representing <mentioned>certainly
         true</mentioned>.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p>出現度は，0から1までの実数で表現される．0は <mentioned>確実に偽</mentioned>，1は， <mentioned>確実に真</mentioned>を示す． </p>
   </remarks>
-  <remarks versionDate="2009-05-25" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-05-25" xml:lang="fr">
       <p>Le degré de probabilité est exprimé
        par un nombre réel entre 0 et 1 ;
      0       représentant <mentioned>certainement faux</mentioned> et 1 <mentioned>certainement
         vrai</mentioned>.</p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.numeric">
-  <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used for numeric values.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">수치에 사용되는 속성 값의 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義用於數值的屬性值範圍</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">数値をとる属性値の範囲を定義する． </desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs d'attributs utilisées pour
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used for numeric values.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">수치에 사용되는 속성 값의 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義用於數值的屬性值範圍</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">数値をとる属性値の範囲を定義する． </desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs d'attributs utilisées pour
     des valeurs numériques</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos para valores
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos para valores
     numéricos.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
     valori numerici</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <alternate>
          <dataRef name="double"/>
          <dataRef name="token" restriction="(\-?[\d]+/\-?[\d]+)"/>
          <dataRef name="decimal"/>
       </alternate>
    </content>
-  <remarks versionDate="2009-06-01" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-06-01" xml:lang="en">
       <p>Any numeric value, represented as a decimal number, in floating point format, or as a ratio.</p>
       <p>To represent a floating point number, expressed in scientific notation, <soCalled>E
       notation</soCalled>, a variant of <soCalled>exponential notation</soCalled>, may be used. In
@@ -3231,7 +3224,7 @@ expliquer d'autres parties d'un document.</desc>
       character. Thus, the value represented in decimal notation as 0.5 might be represented as a
       ratio by the string 1/2.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p> 10進数を作る数値． </p>
       <p> また，IEEE倍精度浮動小数点(64bit長)をとることもできる．例えば， ±10⁻³²³ から ±10³⁰⁸など． </p>
       <p> 科学的数値を評点する際，<soCalled>指数表現</soCalled>は，属性値と して記述される．
@@ -3253,7 +3246,7 @@ expliquer d'autres parties d'un document.</desc>
       <p> 仮数部と指数部を分ける記号は<mentioned>e</mentioned>または <mentioned>E</mentioned>のどちらでもよいが，当ガイドラインでは
         <mentioned>E</mentioned>を使うことを推奨する．これは，他の規格との 整合性を保ち，数学における定数との混同を避けるためである． </p>
   </remarks>
-  <remarks versionDate="2009-10-06" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-10-06" xml:lang="fr">
       <p> Toute valeur numérique, représentée en nombre décimal, notée en virgule flottante ou
       en fraction.</p>
       <p>Pour représenter un nombre en virgule flottante, exprimé en notation scientifique,
@@ -3269,43 +3262,43 @@ expliquer d'autres parties d'un document.</desc>
       représentée en fraction par la chaîne de caractères 1/2.</p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.count">
-  <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used for a non-negative
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used for a non-negative
 integer value used as a count.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">계산으로 사용된 음이 아닌 정수 값의 속성 값 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍，用於作為總數的非負整數值
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">계산으로 사용된 음이 아닌 정수 값의 속성 값 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍，用於作為總數的非負整數值
 </desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">非負整数値を採る属性値の範囲を定義する．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">非負整数値を採る属性値の範囲を定義する．</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme des
   valeurs des attributs exprimant une valeur entière et non négative  utilisé pour des calculs.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos para números enteros no negativos usados como un cálculo.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per un numero intero non negativo impiegato come computo</desc>
-  <content>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos para números enteros no negativos usados como un cálculo.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per un numero intero non negativo impiegato come computo</desc>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef name="nonNegativeInteger"/>
    </content>
-  <remarks versionDate="2016-12-01" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2016-12-01" xml:lang="en">
       <p>Any positive integer value or zero is permitted</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p>非負整数値のみが許される．</p>
   </remarks>
-  <remarks versionDate="2009-05-25" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-05-25" xml:lang="fr">
       <p>Seules des valeurs positives entières sont autorisées.</p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.temporal.w3c">
-  <desc versionDate="2007-04-08" xml:lang="en">defines the range of attribute values expressing a temporal
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-04-08" xml:lang="en">defines the range of attribute values expressing a temporal
   expression such as a date, a time, or a combination of them, that
   conform to the W3C <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>
   specification.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">날짜, 시간 또는 이들의 조합과 같은 시간 표현을 나타내는 속성 값 범위를 정의하며, 이는 W3C <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title> 명시를 따른다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義表示時間的屬性值範圍，如日期、時間或兩者的結合，依照W3C<title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>specification標準所定義。</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">日付や時間などの時間表現をとる属性値の範囲を定義する．これは，W3Cの
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">날짜, 시간 또는 이들의 조합과 같은 시간 표현을 나타내는 속성 값 범위를 정의하며, 이는 W3C <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title> 명시를 따른다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義表示時間的屬性值範圍，如日期、時間或兩者的結合，依照W3C<title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>specification標準所定義。</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">日付や時間などの時間表現をとる属性値の範囲を定義する．これは，W3Cの
   <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>に従ったものになる．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs d'attributs propre à
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme des valeurs d'attributs propre à
       exprimer une valeur temporelle comme une date, une période, ou une combinaison des deux
       conformément aux spécifications <title ref="#XSD2">XML Schema Part 2:
   Datatypes Second Edition</title> du W3C.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos que expresan un valor temporal del tipo fecha, hora, o combinación de ambas, de acuerdo con la especificación de W3C <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>.</desc>
-  <content>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos que expresan un valor temporal del tipo fecha, hora, o combinación de ambas, de acuerdo con la especificación de W3C <title ref="#XSD2">XML Schema Part 2: Datatypes Second Edition</title>.</desc>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <alternate>
          <dataRef name="date"/>
          <dataRef name="gYear"/>
@@ -3317,39 +3310,39 @@ integer value used as a count.</desc>
          <dataRef name="dateTime"/>
       </alternate>
    </content>
-  <remarks versionDate="2007-04-08" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-04-08" xml:lang="en">
       <p>If it is likely that the value used is to be compared with
     another, then a time zone indicator should always be included, and
     only the dateTime representation should be used.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p>
     当該属性値が他の値と比較される場合，時間帯は必ず示されるべきである．
     またはdateTimeを使うべきである(訳注：この文は修正されるかもしれな
     い)．
     </p>
   </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr" versionDate="2007-06-12">
       <p>S'il est probable que la valeur utilisée doive être comparée à 
       d’autres, alors une indication de fuseau horaire sera  toujours incluse, et 
       seule la représentation de dateTime sera employée.
     </p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.xTruthValue">
-  <gloss versionDate="2007-07-04" xml:lang="en">extended truth value</gloss>
-  <gloss versionDate="2007-12-20" xml:lang="ko">확장 진리값</gloss>
-  <gloss versionDate="2007-05-02" xml:lang="zh-TW"/>
-  <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used to express a truth value which may be unknown.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">알려지지 않을 수 있는 진리값을 표현하는 속성 값 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍表示一個可能未知的真實值</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">不明の場合もある真偽値をとる属性値の範囲を定義する． </desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des
+  <gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-07-04" xml:lang="en">extended truth value</gloss>
+  <gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">확장 진리값</gloss>
+  <gloss xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW"/>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used to express a truth value which may be unknown.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">알려지지 않을 수 있는 진리값을 표현하는 속성 값 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍表示一個可能未知的真實值</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">不明の場合もある真偽値をとる属性値の範囲を定義する． </desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme des
   valeurs d'attributs exprimant une vérité potentiellement inconnue.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos usados para
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos usados para
     expresar un valor cierto potencialmente desconocido.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
     esprimere un valore di verità potenzialmente sconosciuto</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <alternate>
          <dataRef name="boolean"/>
          <valList>
@@ -3358,31 +3351,31 @@ integer value used as a count.</desc>
          </valList>
       </alternate>
    </content>
-  <remarks versionDate="2010-10-29" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2010-10-29" xml:lang="en">
       <p>In cases where where uncertainty is inappropriate, use the
-    datatype <ident type="datatype">data.TruthValue</ident>.</p>
+    datatype <ident type="datatype">teidata.TruthValue</ident>.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
-      <p> 不明な場合がなければ，データ型data.TruthValueを使用する． </p>
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
+      <p> 不明な場合がなければ，データ型teidata.TruthValueを使用する． </p>
   </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr" versionDate="2007-06-12">
       <p>Dans le cas où l'incertitude n’est pas adaptée, employer plutot
-    le type de données <ident>data.TruthValue</ident>.</p>
+    le type de données <ident>teidata.TruthValue</ident>.</p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.language">
-  <desc versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used to identify a particular combination of human
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-18" xml:lang="en">defines the range of attribute values used to identify a particular combination of human
     language and writing system.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">인간의 언어와 문자 체계의 특별한 조합을 식별하는 속성 값 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍標明人類語言與寫作系統的特殊結合</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">自然言語を示す属性値の範囲を定義する．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">인간의 언어와 문자 체계의 특별한 조합을 식별하는 속성 값 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍標明人類語言與寫作系統的特殊結合</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">自然言語を示す属性値の範囲を定義する．</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme des
   valeurs d'attributs exprimant 
     une combinaison particulière du langage humain avec un système d'écriture.</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos usados para
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos usados para
     identificar una combinación determinada de lenguaje y escritura humanos.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per
     identificare una determinata combinazione di linguaggio e sistema di scrittura umani</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <alternate>
          <dataRef name="language"/>
          <valList>
@@ -3390,7 +3383,7 @@ integer value used as a count.</desc>
          </valList>
       </alternate>
    </content>
-  <remarks versionDate="2009-06-29" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-06-29" xml:lang="en">
       <p>The values for this attribute are language <soCalled>tags</soCalled> as defined in <ref target="https://tools.ietf.org/html/bcp47">BCP 47</ref>. Currently BCP 47 comprises RFC 5646
       and RFC 4647; over time, other IETF documents may succeed these as the best current practice.</p>
       <p>A <soCalled>language tag</soCalled>, per BCP 47, is assembled from a sequence of components
@@ -3474,7 +3467,7 @@ integer value used as a count.</desc>
       <p>The W3C Internationalization Activity has published a useful introduction to BCP 47, <ref target="http://www.w3.org/International/articles/language-tags/Overview.en.php">Language
         tags in HTML and XML</ref>.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p> 当該属性値は， <ref target="https://tools.ietf.org/html/bcp47">BCP 47</ref>
       で定義されている言語<soCalled>タグ</soCalled>になる． 現行のBCPには，RFC4646とRFC4647の内容が含まれている．
       今後は，他のIETF文書も採用されるかもしれない． </p>
@@ -3545,7 +3538,7 @@ integer value used as a count.</desc>
       <p> W3Cの国際化活動では，BCP 47の解説を以下に用意している． <ref target="http://www.w3.org/International/articles/language-tags/Overview.en.php">
         HTMLとXMLで使用される言語タグ</ref>. </p>
   </remarks>
-  <remarks versionDate="2009-10-06" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-10-06" xml:lang="fr">
       <p>Les valeurs pour cet attribut sont les <soCalled>étiquettes</soCalled> de langue définies
         dans la norme <ref target="https://tools.ietf.org/html/bcp47">BCP 47</ref>. Actuellement, la norme BCP 47
       intègre les normes RFC 4646 et RFC 4647 ; à l'avenir, d'autres documents de l'IETF pourront leur succéder en
@@ -3635,25 +3628,25 @@ integer value used as a count.</desc>
         tags in HTML and XML</ref>.</p>
       
   </remarks>
-  <listRef>
+  <listRef xmlns:xi="http://www.w3.org/2001/XInclude">
       <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CH.html#CHSH">6.1. Language Identification</ref>
   </listRef>
 </dataSpec><dataSpec module="tei" ident="teidata.outputMeasurement">
-  <desc versionDate="2013-03-26" xml:lang="en">defines a range of values for use in specifying the size of an object that is intended for
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2013-03-26" xml:lang="en">defines a range of values for use in specifying the size of an object that is intended for
     display.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">웹에서 디스플레이 목적의 대상 크기를 명시하는 값의 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍說明預定呈現在網路上之物件大小</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">webページ上で表示する際の大きさを定義する値の範囲を定義する．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme de valeurs exprimant
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">웹에서 디스플레이 목적의 대상 크기를 명시하는 값의 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍說明預定呈現在網路上之物件大小</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">webページ上で表示する際の大きさを定義する値の範囲を定義する．</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme de valeurs exprimant
     les dimensions d'un objet destiné à être affiché</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define una gama de valores para emplearlos en la
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define una gama de valores para emplearlos en la
     especificación de las dimensiones de un objeto que se ha de incluir in la red.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce una gamma di valori da impiegare nello
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce una gamma di valori da impiegare nello
     specificare le dimensioni di un oggetto da inserire in rete</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef name="token" restriction="[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|gd|rem|vw|vh|vm)"/>
    </content>
-  <exemplum xml:lang="en">
+  <exemplum xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <figure>
             <head>The TEI Logo</head>
@@ -3664,7 +3657,7 @@ integer value used as a count.</desc>
          </figure>
       </egXML>
   </exemplum>
-  <exemplum xml:lang="fr">
+  <exemplum xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
          <figure>
             <head>Le logo TEI</head>
@@ -3672,17 +3665,17 @@ integer value used as a count.</desc>
          </figure>
       </egXML>
   </exemplum>
-  <remarks versionDate="2008-01-05" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-01-05" xml:lang="en">
       <p> These values map directly onto the values used by XSL-FO and CSS. For definitions of the
       units see those specifications; at the time of this writing the most complete list is in the
         <ref target="http://www.w3.org/TR/2005/WD-css3-values-20050726/#numbers0">CSS3 working
       draft</ref>.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p> 当該値は，XSLFOやCSSで使用される値になる．詳細は各規格を参照のこと． 現時点で一番詳細なリストは， <ref target="http://www.w3.org/TR/2005/WD-css3-values-20050726/#numbers0"> CSS3 working
       draft</ref>になる． </p>
   </remarks>
-  <remarks versionDate="2009-05-25" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-05-25" xml:lang="fr">
       <p> Ces valeurs peuvent être reportées directement sur des valeurs utilisées par XSL-FO et CSS. Pour les
       définitions des unités, voir ces spécifications ; à ce jour la
       liste la plus complète est dans un
@@ -3691,21 +3684,21 @@ integer value used as a count.</desc>
   </remarks>
   
 </dataSpec><dataSpec module="tei" ident="teidata.pointer">
-  <desc versionDate="2013-01-19" xml:lang="en">defines the range of attribute values used to provide a single
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2013-01-19" xml:lang="en">defines the range of attribute values used to provide a single
   URI, absolute or relative, pointing to some other
 resource, either within the current document or elsewhere.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">현 문서 또는 다른 곳 어디서든 다른 자원에 대한 단일 포인터를 제공하는 속성 값 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍提供單一指標，連結到其他位於目前文件或他處的資源</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">他の資源へのポインタをとる属性値の範囲を定義する．</desc>
-  <desc versionDate="2009-05-29" xml:lang="fr">définit la gamme des valeurs d'attributs utilisées
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">현 문서 또는 다른 곳 어디서든 다른 자원에 대한 단일 포인터를 제공하는 속성 값 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍提供單一指標，連結到其他位於目前文件或他處的資源</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">他の資源へのポインタをとる属性値の範囲を定義する．</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-05-29" xml:lang="fr">définit la gamme des valeurs d'attributs utilisées
       pour fournir un pointeur URI unique sur une autre ressource, soit dans le document courant, soit
       dans un autre document</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define una gama de valores de atributos usados para proporcionar un indicador de cualquier recurso, bien en el documento corriente o en otro.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per indicare un unico puntatore rispetto a qualsiasi altra risorsa all'interno del documento corrente o altrove</desc>
-  <content>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define una gama de valores de atributos usados para proporcionar un indicador de cualquier recurso, bien en el documento corriente o en otro.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi usati per indicare un unico puntatore rispetto a qualsiasi altra risorsa all'interno del documento corrente o altrove</desc>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef name="anyURI"/>
    </content>
-  <remarks versionDate="2011-12-12" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2011-12-12" xml:lang="en">
       <p>The range of syntactically valid values is defined by
     <ref target="http://www.ietf.org/rfc/rfc3986.txt"> RFC 3986</ref>
          <title>Uniform Resource Identifier (URI): Generic
@@ -3720,7 +3713,7 @@ resource, either within the current document or elsewhere.</desc>
     <code>http://xn--4gbrim.xn----rmckbbajlc6dj7bxne2c.xn--wgbh1c/</code>
       </p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p>
     当該属性値は，
     <ref target="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986
@@ -3729,7 +3722,7 @@ resource, either within the current document or elsewhere.</desc>
     に定義されている．
     </p>
   </remarks>
-  <remarks versionDate="2009-05-25" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-05-25" xml:lang="fr">
       <p>La gamme des valeurs valides syntaxiquement est définie par<ref target="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986
       <title>Uniform Resource Identifier (URI): Generic
         Syntax</title>
@@ -3737,14 +3730,14 @@ resource, either within the current document or elsewhere.</desc>
       </p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.version">
-  <desc versionDate="2013-11-20" xml:lang="en">defines the range of attribute values which may be used to
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2013-11-20" xml:lang="en">defines the range of attribute values which may be used to
   specify a TEI or Unicode version number.</desc>
-  <desc xml:lang="fr" versionDate="2007-06-12">définit la gamme des valeurs d'attribut
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr" versionDate="2007-06-12">définit la gamme des valeurs d'attribut
   exprimant un numéro de version TEI.</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef name="token" restriction="[\d]+(\.[\d]+){0,2}"/>
    </content>
-  <remarks versionDate="2012-06-17" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2012-06-17" xml:lang="en">
       <p>The value of this attribute follows the pattern specified by
     the Unicode consortium for its version number (<ptr target="http://unicode.org/versions/"/>). A version number
     contains digits and fullstop characters only. The first number
@@ -3753,7 +3746,7 @@ resource, either within the current document or elsewhere.</desc>
     supplied.
 </p>
   </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr" versionDate="2007-06-12">
       <p>La valeur de cet attribut devrait suivre le format proposé par
     le Consortium Unicode pour identifier les versions (<ptr target="http://unicode.org/versions/"/>). Un numéro de version
     ne contient que des chiffres et des points. Le numéro
@@ -3763,12 +3756,12 @@ resource, either within the current document or elsewhere.</desc>
 </p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.xpath">
-<desc versionDate="2013-04-14" xml:lang="en">defines attribute values
+<desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2013-04-14" xml:lang="en">defines attribute values
 which contain an XPath expression.</desc>
-<content>
+<content xmlns:xi="http://www.w3.org/2001/XInclude">
   <textNode/>
 </content>
-<remarks versionDate="2013-04-14" xml:lang="en">
+<remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2013-04-14" xml:lang="en">
   <p>Any XPath expression using the syntax
   defined in <ptr target="#XSLT2"/>.</p>
   <p>When writing programs that evaluate XPath expressions,
@@ -3778,32 +3771,32 @@ which contain an XPath expression.</desc>
   OWASP</ref>.</p>
 </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.word">
-  <desc versionDate="2007-10-22" xml:lang="en">defines the range of attribute values expressed as a single
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-22" xml:lang="en">defines the range of attribute values expressed as a single
   word or token.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">단일 단어 또는 토큰으로 표현된 속성 값 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍表示一個單字或代號</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">いち単語またはトークンをとる属性値の範囲を定義する．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme des
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">단일 단어 또는 토큰으로 표현된 속성 값 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍表示一個單字或代號</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">いち単語またはトークンをとる属性値の範囲を定義する．</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme des
   valeurs d'attributs exprimant un seul mot ou signe</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define una gama de valores de atributos expresados como una única palabra o señal.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi espressi come singola parola o singolo token</desc>
-  <content>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define una gama de valores de atributos expresados como una única palabra o señal.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi espressi come singola parola o singolo token</desc>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef name="token" restriction="[^\p{C}\p{Z}]+"/>
    </content>
-  <remarks versionDate="2005-10-18" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2005-10-18" xml:lang="en">
       <p>Attributes using this datatype must contain a single
     <soCalled>word</soCalled> which contains only letters, digits,
     punctuation characters, or symbols: thus it cannot include
     whitespace.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p>
     当該データ型を使用する属性値は，ひとつの<soCalled>単語</soCalled>
     になる．単語とは，文字，数字，句読点などの記号から構成されている．
     空白文字は含むことができない．
     </p>
   </remarks>
-  <remarks xml:lang="fr" versionDate="2007-06-12">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr" versionDate="2007-06-12">
       <p>Les attributs employant ce type de données doivent contenir un 
       <soCalled>mot</soCalled> simple  ne contenant que des lettres, des chiffres, 
       des signes de ponctuation, ou des symboles : ils ne peuvent donc pas inclure 
@@ -3811,37 +3804,37 @@ which contain an XPath expression.</desc>
     </p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.text">
-  <desc versionDate="2012-06-17" xml:lang="en">defines the range of attribute values used to express some
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2012-06-17" xml:lang="en">defines the range of attribute values used to express some
   kind of identifying string as a single sequence
   of Unicode characters possibly including whitespace.</desc>
-  <desc xml:lang="fr" versionDate="2007-06-12">définit la gamme des valeurs d'attributs 
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr" versionDate="2007-06-12">définit la gamme des valeurs d'attributs 
       exprimant une chaine de caracteres Unicode, y compris des
   espaces blancs.</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef name="string"/>
    </content>
-  <remarks versionDate="2012-06-17" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2012-06-17" xml:lang="en">
       <p>Attributes using this datatype must contain a single
     <soCalled>token</soCalled> in which whitespace and other
     punctuation characters are permitted. </p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.enumerated">
-  <desc versionDate="2007-10-22" xml:lang="en">defines the range of attribute values expressed as a single XML name taken from a list of
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-22" xml:lang="en">defines the range of attribute values expressed as a single XML name taken from a list of
     documented possibilities.</desc>
-  <desc versionDate="2007-12-20" xml:lang="ko">기록된 확률의 목록으로부터 얻어진 단일 XML 이름으로 표현된 속성 값 범위를 정의한다.</desc>
-  <desc versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍以單字或代號呈現，該單字或代號出自於一份紀錄所有可能性的列表</desc>
-  <desc versionDate="2008-04-05" xml:lang="ja">符号化されている記述にある，ひつとのXML名前を示す属性値の範囲を定義する．</desc>
-  <desc versionDate="2007-06-12" xml:lang="fr">définit la gamme de
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-12-20" xml:lang="ko">기록된 확률의 목록으로부터 얻어진 단일 XML 이름으로 표현된 속성 값 범위를 정의한다.</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-02" xml:lang="zh-TW">定義的屬性值範圍以單字或代號呈現，該單字或代號出自於一份紀錄所有可能性的列表</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2008-04-05" xml:lang="ja">符号化されている記述にある，ひつとのXML名前を示す属性値の範囲を定義する．</desc>
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-06-12" xml:lang="fr">définit la gamme de
   valeurs des attributs exprimant un nom XML
     extrait d'une liste de possibilités documentées</desc>
-  <desc versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos expresados como
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-05-04" xml:lang="es">define la gama de valores de atributos expresados como
     una única palabra o señal tomada de una lista de posibilidades documentadas.</desc>
-  <desc versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi espressi come
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-01-21" xml:lang="it">definisce la gamma di valori di attributi espressi come
     singola parola o token tratto da una lista di possibilità attestate</desc>
-  <content>
+  <content xmlns:xi="http://www.w3.org/2001/XInclude">
       <dataRef key="teidata.word"/>
    </content>
-  <remarks versionDate="2016-12-01" xml:lang="en">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2016-12-01" xml:lang="en">
     <p>Attributes using this datatype must contain a single
       <soCalled>word</soCalled> which contains only letters, digits,
       punctuation characters, or symbols: thus it cannot include
@@ -3849,12 +3842,12 @@ which contain an XPath expression.</desc>
       <p>Typically, the list of documented possibilities will be provided (or exemplified) by a value
       list in the associated attribute specification, expressed with a <gi>valList</gi> element.</p>
   </remarks>
-  <remarks xml:lang="ja" versionDate="2008-04-05">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="ja" versionDate="2008-04-05">
       <p> 当該データ型は，妥当なXML名前 (詳細は<ptr target="http://www.w3.org/TR/REC-xml/#dt-name"/>
       を参照のこと)である単語でなくてはならない．例えば， 属性値として空白文字，または数値で始まる名前をとることはできない． </p>
       <p> 典型例は，可能な記述またはその例のリストが，要素<gi>valList</gi> 中に属性定義として示されている． </p>
   </remarks>
-  <remarks versionDate="2009-05-25" xml:lang="fr">
+  <remarks xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2009-05-25" xml:lang="fr">
       <p>Les attributs utilisant ce type de données doivent contenir un mot qui suit les règles de
       définition d'un nom XML valide (voir <ptr target="http://www.w3.org/TR/REC-xml/#dt-name"/>):
       par exemple ils ne peuvent pas contenir des blancs ni commencer par des chiffres. </p>
@@ -3863,8 +3856,8 @@ which contain an XPath expression.</desc>
       <gi>valList</gi>.</p>
   </remarks>
 </dataSpec><dataSpec module="tei" ident="teidata.probCert">
-  <desc versionDate="2007-10-18" xml:lang="en">defines a range of attribute values which can be expressed either as a numeric probability or as a coded certainty value.</desc>
-<content>  
+  <desc xmlns:xi="http://www.w3.org/2001/XInclude" versionDate="2007-10-18" xml:lang="en">defines a range of attribute values which can be expressed either as a numeric probability or as a coded certainty value.</desc>
+<content xmlns:xi="http://www.w3.org/2001/XInclude">  
   <alternate><dataRef key="teidata.probability"/>
   <dataRef key="teidata.certainty"/>
   </alternate>
@@ -4017,116 +4010,7 @@ which contain an XPath expression.</desc>
     per codificare estratti citati da fonti documentate.</desc><desc versionDate="2016-11-25" xml:lang="de">enthält Material, das vom umgebenden Text durch 
     Anführungszeichen oder ähnliche Methoden abgesetzt ist. Die Abhebung kann beliebige Gründe 
     haben, wie z. B. direkte Rede, wiedergegebene Gedanken, Fachbegriffe, Jargon, Distanzierung 
-    des Autors, Zitate aus anderen Texten, erwähnte aber nicht benutzte Passagen.</desc><classes><memberOf key="att.global"/><memberOf key="model.qLike"/></classes><content><textNode/></content><attList><attDef ident="xml:base" mode="delete"/><attDef ident="xml:id" mode="delete"/><attDef ident="xml:lang" mode="change" usage="req"/><attDef ident="n" mode="delete"/><attDef ident="sameAs" mode="delete"/><attDef ident="type" usage="opt">
-      <gloss versionDate="2016-11-25" xml:lang="de">Typ</gloss>
-      <desc versionDate="2007-07-18" xml:lang="en">may be used to indicate whether the offset passage is spoken or thought, or to
-        characterize it more finely.</desc>
-      <desc versionDate="2007-12-20" xml:lang="ko">표시된 단락이 대화인지 사고인지를 나타내거나, 더 자세하게 규정하는 데 사용될 수 있다.</desc>
-      <desc versionDate="2007-05-02" xml:lang="zh-TW">可用來指出引文內容為言詞或思想，或者做更詳細的引文描述。</desc>
-      <desc versionDate="2008-04-05" xml:lang="ja">当該部分が，発話されたものか，思考されたものかを示すため，または
-        より詳細に性質を示すために使われるかもしれない．</desc>
-      <desc versionDate="2008-12-09" xml:lang="fr">peut être utilisé pour indiquer si le passage cité
-        correspond à une parole ou à une pensée ou encore pour le caractériser plus finement.</desc>
-      <desc versionDate="2007-05-04" xml:lang="es">Puede usarse para indicar si el material citado es
-        hablado o pensado, o para caracterizarlo con más precisión.</desc>
-      <desc versionDate="2007-01-21" xml:lang="it">può essere usato per indicare se il brano citato è
-        parlato o pensato, oppure per caratterizzarlo con maggior precisione.</desc>
-      <desc versionDate="2016-11-25" xml:lang="de">kann verwendet werden, um anzuzeigen, ob die abgesetzte 
-        Textpassage gesprochen oder gedacht wird, oder um sie auf andere Weise detaillierter zu beschreiben.</desc>
-      <datatype><dataRef key="teidata.enumerated"/></datatype>
-      <valList type="semi">
-        <valItem ident="spoken">
-          <gloss versionDate="2016-11-25" xml:lang="de">gesprochen</gloss>
-          <desc versionDate="2007-07-18" xml:lang="en">representation of speech</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">대화의 표상</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">表示直接敘述，通常會標上引號。</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">発話．</desc>
-          <desc versionDate="2008-12-09" xml:lang="fr">notation du discours direct</desc>
-          <desc versionDate="2007-05-04" xml:lang="es">representación del estilo directo, normalmente
-            marcado mediante comillas.</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">rappresentazione del discorso diretto, di solito
-            segnalato dalle virgolette.</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Wiedergabe gesprochener Sprache</desc>
-        </valItem>
-        <valItem ident="thought">
-          <gloss versionDate="2016-11-25" xml:lang="de">gedacht</gloss>
-          <desc versionDate="2007-07-18" xml:lang="en">representation of thought, e.g. internal monologue</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">사고의 표상, 예를 들어, 내적 독백</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">表示思考內容，例如內心獨白。</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">思考．例えば，内的独白．</desc>
-          <desc versionDate="2008-12-09" xml:lang="fr">représentation de la pensée, par exemple un
-            monologue intérieur.</desc>
-          <desc versionDate="2007-05-04" xml:lang="es">representación de un pensamiento o reflexión,
-            p.ej. un monólogo interno.</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">rappresentazione del pensiero, ad esempio il
-            monologo interiore.</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Wiedergabe von Gedanken, z. B. eines inneren Monologes</desc>
-        </valItem>
-        <valItem ident="written">
-          <gloss versionDate="2016-11-25" xml:lang="de">geschrieben</gloss>
-          <desc versionDate="2007-07-18" xml:lang="en">quotation from a written source</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">문어 원본으로부터 인용</desc>
-          <desc versionDate="2007-05-02" xml:lang="zh-TW">引用自一份書面來源文件。</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">書かれた資料の引用．</desc>
-          <desc versionDate="2007-06-12" xml:lang="fr">citation d'une source écrite</desc>
-          <desc versionDate="2007-05-04" xml:lang="es">cita de una fuente escrita.</desc>
-          <desc versionDate="2007-01-21" xml:lang="it">citazione da una fonte scritta.</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Zitat aus einer schriftlichen Quelle</desc>
-        </valItem>
-        <valItem ident="soCalled">
-          <gloss versionDate="2016-11-25" xml:lang="de">sogenannt</gloss>
-          <desc versionDate="2007-07-18" xml:lang="en">authorial distance</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">작가의 거리두기</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">distancia autorial</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">著者による区別．</desc>
-          <desc versionDate="2008-12-09" xml:lang="fr">distance prise par rapport à l'auteur</desc>
-          <desc versionDate="2007-11-06" xml:lang="it">distanza dell'autore</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Distanzierung des Autors</desc>
-        </valItem>
-        <valItem ident="foreign">
-          <gloss versionDate="2016-11-25" xml:lang="de">fremdartig</gloss>
-          <desc versionDate="2008-04-06" xml:lang="es">palabras extranjeras</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">mots étrangers</desc>
-          <desc versionDate="2007-11-06" xml:lang="it">parole straniere</desc>
-        </valItem>
-        <valItem ident="distinct">
-          <gloss versionDate="2016-11-25" xml:lang="de">distinkt</gloss>
-          <desc versionDate="2013-03-18" xml:lang="en">linguistically distinct</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">lingüisticamente distinto</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">linguistiquement distinct</desc>
-          <desc versionDate="2007-11-06" xml:lang="it">linguisticamente distinto</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">linguistisch hervorgehoben</desc>
-        </valItem>
-        <valItem ident="term">
-          <desc versionDate="2013-03-18" xml:lang="en">technical term</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">término técnico</desc>
-          <desc versionDate="2008-03-30" xml:lang="fr">terme technique</desc>
-          <desc versionDate="2007-11-06" xml:lang="it">termine tecnico</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">Fachbegriff</desc>
-        </valItem>
-        <valItem ident="emph">
-          <gloss versionDate="2016-11-25" xml:lang="de">betont</gloss>
-          <desc versionDate="2013-03-18" xml:lang="en">rhetorically emphasized</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">énfasis retórico</desc>
-          <desc versionDate="2008-12-09" xml:lang="fr">mis en valeur par un procédé rhétorique.</desc>
-          <desc versionDate="2007-11-06" xml:lang="it">retoricamente marcato</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">rhetorische Emphase</desc>
-        </valItem>
-        <valItem ident="mentioned">
-          <gloss versionDate="2016-11-25" xml:lang="de">erwähnt</gloss>
-          <desc versionDate="2007-07-18" xml:lang="en">refering to itself, not its normal referent</desc>
-          <desc versionDate="2007-12-20" xml:lang="ko">일반적인 지시체가 아니라 그 자체를 가리킴</desc>
-          <desc versionDate="2008-04-06" xml:lang="es">se refiere a sí mismo, no a su referente habitual</desc>
-          <desc versionDate="2008-04-05" xml:lang="ja">一般的な指示対象ではないもの．</desc>
-          <desc versionDate="2008-12-09" xml:lang="fr">métalinguistic, i.e. faisant référence à lui-même et non à son
-            référent habituel.</desc>
-          <desc versionDate="2007-11-06" xml:lang="it">che si riferisce a se stesso e non al suo
-            referente abituale</desc>
-          <desc versionDate="2016-11-25" xml:lang="de">bezieht sich auf sich selbst, 
-            nicht auf den üblichen Bezugspunkt</desc>
-        </valItem>
-      </valList>
-    </attDef></attList><exemplum>
+    des Autors, Zitate aus anderen Texten, erwähnte aber nicht benutzte Passagen.</desc><classes><memberOf key="att.global"/><memberOf key="model.hiLike"/></classes><content><textNode/></content><attList><attDef ident="xml:base" mode="delete"/><attDef ident="xml:id" mode="delete"/><attDef ident="xml:lang" mode="change" usage="req"/><attDef ident="n" mode="delete"/><attDef ident="sameAs" mode="delete"/><attDef ident="type" mode="delete"/></attList><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <quote xml:lang="la">Theodorus samius primo clavem mostravit</quote>
                             </egXML>
@@ -4554,14 +4438,14 @@ usually each word will refer to a single cause.</p>
       </remarks></attDef><attDef ident="value" usage="req"><desc versionDate="2005-11-01" xml:lang="en">supplies the value of the number in standard form.</desc><desc versionDate="2007-12-20" xml:lang="ko">표준형의 숫자 값을 제시한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">用標準形式來說明該數字所代表的值。</desc><desc versionDate="2008-04-05" xml:lang="ja">標準的な形式で数値を示す．</desc><desc versionDate="2009-01-06" xml:lang="fr">fournit la valeur d'un nombre sous une forme
                 normalisée.</desc><desc versionDate="2007-05-04" xml:lang="es">proporciona el valor del número de forma
                 estándard.</desc><desc versionDate="2007-01-21" xml:lang="it">indica il valore del numero in formato standard</desc><desc versionDate="2016-11-25" xml:lang="de">beinhaltet den Zahlenwert in standardisierter Form.</desc><datatype><dataRef key="teidata.numeric"/></datatype><valDesc>a numeric value.</valDesc><valDesc xml:lang="fr">une valeur numérique.</valDesc><valDesc xml:lang="de">ein numerischer Wert</valDesc><remarks versionDate="2005-11-01" xml:lang="en">
-        <p>The standard form used is defined by the TEI datatype data.numeric.</p>
+        <p>The standard form used is defined by the TEI datatype <ident type="datatype">teidata.numeric</ident>.</p>
       </remarks><remarks xml:lang="fr" versionDate="2007-06-12">
         <p>La forme normalisée utilisée est définie par le type de données TEI
                 qui concerne les données numériques.</p>
       </remarks><remarks xml:lang="ja" versionDate="2008-04-05">
-        <p> 標準的な形式は，TEIデータ型data.numericで定義されている． </p>
+        <p> 標準的な形式は，TEIデータ型teidata.numericで定義されている． </p>
       </remarks><remarks xml:lang="de" versionDate="2016-11-25">
-          <p>Die benutzte standardisierte Form wird im TEI-Datentyp <ident type="datatype">data.numeric</ident> definiert.</p>
+          <p>Die benutzte standardisierte Form wird im TEI-Datentyp <ident type="datatype">teidata.numeric</ident> definiert.</p>
       </remarks></attDef></attList><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <num xml:lang="grc" type="cardinal" value="1">αʹ</num>
@@ -4658,7 +4542,7 @@ Measures</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDDATE">13.3.7. Dates and Times</ref>
   </listRef></elementSpec><elementSpec rend="change" module="core" ident="ref"><gloss versionDate="2007-07-04" xml:lang="en">reference</gloss><gloss versionDate="2007-12-20" xml:lang="ko">참조</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW"/><gloss versionDate="2008-04-06" xml:lang="es">referencia</gloss><gloss versionDate="2009-01-06" xml:lang="fr">référence</gloss><gloss versionDate="2007-11-06" xml:lang="it">riferimento</gloss><gloss versionDate="2016-11-25" xml:lang="de">Referenz</gloss><desc versionDate="2006-01-11" xml:lang="en">defines a reference to another location, possibly modified by additional text or comment.</desc><desc versionDate="2007-12-20" xml:lang="ko">부가적인 텍스트 또는 해설로 수정될 수 있는, 다른 위치로 참조를 정의한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">標明與其他位置互相參照的符號，或許包含附加的文字或註解。</desc><desc versionDate="2008-04-05" xml:lang="ja">他の場所への参照を定義する．多くは，追加テキストまたはコメントを含む．</desc><desc versionDate="2009-01-06" xml:lang="fr">définit une référence vers un autre emplacement, la référence étant éventuellement modifiée ou complétée par un texte ou un commentaire.</desc><desc versionDate="2007-05-04" xml:lang="es">define una referencia a otra localización, posiblemente
     modificada por un texto o comentario adicional.</desc><desc versionDate="2007-01-21" xml:lang="it">definisce un riferimento ad un'altra posizione, può
-    essere modificata da un commento o testo ulteriore</desc><desc versionDate="2016-11-25" xml:lang="de">definiert einen externen oder internen Verweis, der auch durch einen zusätzlichen Text oder Kommentar ergänzt werden kann.</desc><classes><memberOf key="model.ptrLike"/><memberOf key="att.pointing"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="bibl"/><elementRef key="date"/><elementRef key="idno"/><elementRef key="placeName"/><elementRef key="persName"/><elementRef key="watermark"/></alternate></content><constraintSpec ident="ref.content.check" scheme="schematron">
+    essere modificata da un commento o testo ulteriore</desc><desc versionDate="2016-11-25" xml:lang="de">definiert einen externen oder internen Verweis, der auch durch einen zusätzlichen Text oder Kommentar ergänzt werden kann.</desc><classes><memberOf key="att.pointing"/><memberOf key="model.ptrLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="bibl"/><elementRef key="date"/><elementRef key="idno"/><elementRef key="placeName"/><elementRef key="persName"/><elementRef key="watermark"/></alternate></content><constraintSpec ident="ref.content.check" scheme="schematron">
                             <desc versionDate="2014-09-25" xml:lang="en">checks that the <att>target</att> attribute in the <gi>ref</gi> element starts with # or http</desc>
                             <constraint>
                                 <sch:pattern>
@@ -5670,7 +5554,7 @@ définissant les droits d'utilisation.</desc><desc xml:lang="de" versionDate="20
                         </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD6">2.6. The Revision Description</ref>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD4C">2.4.1. Creation</ref>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PH-changes">11.7. Identifying Changes and Revisions</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PH-changes">11.6. Identifying Changes and Revisions</ref>
   </listRef></elementSpec><elementSpec rend="change" module="figures" ident="formula"><gloss versionDate="2007-06-12" xml:lang="fr">formule</gloss><gloss versionDate="2017-06-19" xml:lang="de">Formel</gloss><desc versionDate="2005-01-14" xml:lang="en">contains a mathematical or other formula.</desc><desc versionDate="2007-12-20" xml:lang="ko">수식 또는 다른 식을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含數學或其他方程式。</desc><desc versionDate="2008-04-05" xml:lang="ja">数式を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient une formule mathématique ou tout autre type de
     formule</desc><desc versionDate="2007-05-04" xml:lang="es">contiene una fórmula matemática o de otro tipo.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene una formula matematica o di altra natura.</desc><desc versionDate="2017-06-19" xml:lang="de">enthält eine mathematische oder andere Formel.</desc><classes><memberOf key="model.graphicLike"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="hi"/></alternate></content><attList><attDef ident="notation" mode="delete"/></attList><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5678,7 +5562,7 @@ définissant les droits d'utilisation.</desc><desc xml:lang="de" versionDate="20
                             </egXML>
                         </exemplum><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html#FTFOR">14.2. Formulæ and Mathematical Expressions</ref>
-  </listRef></elementSpec><classSpec rend="change" predeclare="true" module="linking" xml:id="CLLINK" type="atts" ident="att.global.linking"><desc versionDate="2016-02-16" xml:lang="en">provides a set of attributes for hypertextual linking.</desc><desc versionDate="2007-12-20" xml:lang="ko">하이퍼텍스트와 다른 연결에 대한 속성의 집합을 정의한다. 이것은 연결에 대한 부가적 태그 집합이 선택될 때 모든 요소에 가능해야 한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">定義一組用於超文字連結及其他連結的屬性，當連結的附加標籤組被選擇時，這些屬性可用於所有元素。</desc><desc versionDate="2019-07-21" xml:lang="ja">ハイパーテキストリンクの属性セットを提供する。</desc><desc versionDate="2016-02-16" xml:lang="fr">fournit un ensemble d'attributs pour décrire les
+  </listRef></elementSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" rend="change" predeclare="true" module="linking" xml:id="CLLINK" type="atts" ident="att.global.linking"><desc versionDate="2016-02-16" xml:lang="en">provides a set of attributes for hypertextual linking.</desc><desc versionDate="2007-12-20" xml:lang="ko">하이퍼텍스트와 다른 연결에 대한 속성의 집합을 정의한다. 이것은 연결에 대한 부가적 태그 집합이 선택될 때 모든 요소에 가능해야 한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">定義一組用於超文字連結及其他連結的屬性，當連結的附加標籤組被選擇時，這些屬性可用於所有元素。</desc><desc versionDate="2019-07-21" xml:lang="ja">ハイパーテキストリンクの属性セットを提供する。</desc><desc versionDate="2016-02-16" xml:lang="fr">fournit un ensemble d'attributs pour décrire les
       liens hypertextuels.</desc><desc versionDate="2007-05-04" xml:lang="es">define un conjunto de atributos para hipertexto u otro vínculo habilitado para todos los elementos cuando se selecciona la etiqueta adicional para los enlaces.</desc><desc versionDate="2007-01-21" xml:lang="it">definisce un insieme di attributi per ipertesto o altro legame abilitati per tutti gli elementi quando è selezionato il sottoinsieme di marcatori per i collegamenti</desc><classes/><attList><attDef ident="sameAs" usage="opt">
       <desc versionDate="2005-10-10" xml:lang="en">points to an element that is the same as the current
       element.</desc>
@@ -7215,7 +7099,7 @@ concerning a single identifiable episode during the history of a manuscript, man
 concerning the process by which a manuscript or manuscript part or other object entered the holding
 institution.</desc><desc versionDate="2007-12-20" xml:lang="ko">원고 또는 그 일부가 현 보유 기관에 입수된 과정에 관련한 기술적 또는 기타 정보를 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含任何描述性或其他資訊，關於手稿或手稿部分進入保管機構的過程。</desc><desc versionDate="2008-04-05" xml:lang="ja">当該手書き資料が入手された経緯についての情報を示す．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient des informations sur les modalités et
       circonstances de l'entrée du manuscrit ou de la partie du manuscrit dans l'institution qui le
-      détient</desc><desc versionDate="2007-05-04" xml:lang="es">contiene cualquier descripción u otra información concerniente al proceso de adquisición del manuscrito o de una de sus partes.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene informazioni relative al processo di acquisizione di un manoscritto o di una sua parte</desc><classes><memberOf key="att.global"/><memberOf key="att.datable"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="date" minOccurs="0" maxOccurs="unbounded"/><elementRef key="foreign" minOccurs="0" maxOccurs="unbounded"/><elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/><elementRef key="locus" minOccurs="0" maxOccurs="unbounded"/><elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/><elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/><elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/></alternate></content><attList><attDef ident="xml:base" mode="delete"/><attDef ident="xml:lang" mode="delete"/><attDef ident="xml:id" mode="delete"/><attDef ident="n" mode="delete"/><attDef ident="sameAs" mode="delete"/><attDef ident="cert" mode="delete"/></attList><exemplum>
+      détient</desc><desc versionDate="2007-05-04" xml:lang="es">contiene cualquier descripción u otra información concerniente al proceso de adquisición del manuscrito o de una de sus partes.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene informazioni relative al processo di acquisizione di un manoscritto o di una sua parte</desc><classes><memberOf key="att.global"/></classes><content><alternate minOccurs="0" maxOccurs="unbounded"><textNode/><elementRef key="date" minOccurs="0" maxOccurs="unbounded"/><elementRef key="foreign" minOccurs="0" maxOccurs="unbounded"/><elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/><elementRef key="locus" minOccurs="0" maxOccurs="unbounded"/><elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/><elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/><elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/></alternate></content><attList><attDef ident="xml:base" mode="delete"/><attDef ident="xml:lang" mode="delete"/><attDef ident="xml:id" mode="delete"/><attDef ident="n" mode="delete"/><attDef ident="sameAs" mode="delete"/><attDef ident="cert" mode="delete"/></attList><exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <acquisition>It was acquired there by <persName ref="#JohSpa"/>, who was staying in Venice <date from="1692" to="1693"> from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios"/>: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705"/>.</acquisition>
                             </egXML>
@@ -7348,7 +7232,7 @@ it, with curatorial or administrative information.</desc><desc versionDate="2007
                             <p/>
                         </remarks><listRef>
         <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#msfg">10.11. Manuscript Fragments</ref>
-    </listRef></elementSpec><classSpec predeclare="true" module="namesdates" xml:id="PERSPART" type="model" ident="model.persNamePart">
+    </listRef></elementSpec><classSpec xmlns:xi="http://www.w3.org/2001/XInclude" predeclare="true" module="namesdates" xml:id="PERSPART" type="model" ident="model.persNamePart">
   <desc versionDate="2007-10-03" xml:lang="en">groups elements which form part of a personal name.</desc>
   <desc versionDate="2009-05-27" xml:lang="fr">regroupe des éléments qui font partie d'un nom de
         personne</desc>
@@ -7365,7 +7249,7 @@ it, with curatorial or administrative information.</desc><desc versionDate="2007
   <listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPER">13.2.1. Personal Names</ref>
   </listRef>
-</classSpec><elementSpec rend="change" module="namesdates" ident="orgName"><gloss versionDate="2005-01-14" xml:lang="en">organization name</gloss><gloss versionDate="2007-12-20" xml:lang="ko">조직명</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">組織名稱</gloss><gloss versionDate="2008-12-09" xml:lang="fr">nom d'organisation</gloss><gloss versionDate="2007-05-04" xml:lang="es">nombre de una organización</gloss><gloss versionDate="2007-01-21" xml:lang="it">nome di organizzazione</gloss><desc versionDate="2005-01-14" xml:lang="en">contains an organizational name.</desc><desc versionDate="2007-12-20" xml:lang="ko">조직명을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含一個組織名稱。</desc><desc versionDate="2008-04-05" xml:lang="ja">組織の名前を示す．</desc><desc versionDate="2009-03-19" xml:lang="fr">contient le nom d'une organisation.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene el nombre de una organización.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene il nome proprio di un'organizzazione</desc><classes><memberOf key="att.global"/><memberOf key="model.nameLike.agent"/><memberOf key="att.personal"/></classes><content><textNode/></content><attList><attDef ident="n" mode="delete"/><attDef ident="xml:id" mode="delete"/><attDef ident="cert" mode="delete"/><attDef ident="resp" mode="delete"/><attDef ident="source" mode="delete"/><attDef ident="rend" mode="delete"/><attDef ident="role" mode="delete"/><attDef ident="key" mode="delete"/></attList><exemplum xml:lang="en">
+</classSpec><elementSpec rend="change" module="namesdates" ident="orgName"><gloss versionDate="2005-01-14" xml:lang="en">organization name</gloss><gloss versionDate="2007-12-20" xml:lang="ko">조직명</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">組織名稱</gloss><gloss versionDate="2008-12-09" xml:lang="fr">nom d'organisation</gloss><gloss versionDate="2007-05-04" xml:lang="es">nombre de una organización</gloss><gloss versionDate="2007-01-21" xml:lang="it">nome di organizzazione</gloss><desc versionDate="2005-01-14" xml:lang="en">contains an organizational name.</desc><desc versionDate="2007-12-20" xml:lang="ko">조직명을 포함한다.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含一個組織名稱。</desc><desc versionDate="2008-04-05" xml:lang="ja">組織の名前を示す．</desc><desc versionDate="2009-03-19" xml:lang="fr">contient le nom d'une organisation.</desc><desc versionDate="2007-05-04" xml:lang="es">contiene el nombre de una organización.</desc><desc versionDate="2007-01-21" xml:lang="it">contiene il nome proprio di un'organizzazione</desc><classes><memberOf key="att.global"/><memberOf key="model.nameLike.agent"/><memberOf key="att.personal"/></classes><content><textNode/></content><attList><attDef ident="xml:base" mode="delete"/><attDef ident="xml:id" mode="delete"/><attDef ident="n" mode="delete"/><attDef ident="cert" mode="delete"/><attDef ident="resp" mode="delete"/><attDef ident="source" mode="delete"/><attDef ident="rend" mode="delete"/><attDef ident="role" mode="delete"/><attDef ident="key" mode="delete"/></attList><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">About a year back, a question of considerable interest was agitated in the <orgName key="PAS1" type="voluntary"><placeName key="PEN">Pennsyla.</placeName> Abolition Society</orgName> [...]</egXML>
   </exemplum><exemplum versionDate="2008-04-06" xml:lang="fr">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -7494,18 +7378,21 @@ it, with curatorial or administrative information.</desc><desc versionDate="2007
     <p rend="dataDesc"> 属性typeは，特別な種類の組織を区別するために使われるかもしれない． </p>
   </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDORG">13.2.2. Organizational Names</ref>
-  </listRef></elementSpec><elementSpec rend="change" module="namesdates" ident="org"><gloss versionDate="2007-07-04" xml:lang="en">organization</gloss><gloss versionDate="2007-12-20" xml:lang="ko">조직</gloss><gloss versionDate="2008-04-06" xml:lang="es">organización</gloss><gloss versionDate="2008-12-09" xml:lang="fr">organisation</gloss><gloss versionDate="2007-11-06" xml:lang="it">organizzazione</gloss><desc versionDate="2007-06-14" xml:lang="en">provides information about an identifiable organization such as a business, a tribe, or
-        any other grouping of people.</desc><desc versionDate="2007-12-20" xml:lang="ko">업무, 종족, 또는 사람들의 다른 종류의 그룹과 같은 식별 가능한 조직에 대한 정보를 제공한다.</desc><desc versionDate="2008-04-06" xml:lang="es">proporciona a la información sobre una organización
-        identificable tal como un negocio, una tribu, o cualquier otro grupo de personas.</desc><desc versionDate="2008-04-05" xml:lang="ja">特定可能な団体の情報を示す．例えば，会社，集団など，人の集まり．</desc><desc versionDate="2008-12-09" xml:lang="fr">fournit des informations sur une organisation
-        identifiable, telle qu'une entreprise, une tribu ou tout autre groupement de personnes.</desc><desc versionDate="2007-11-06" xml:lang="it">fornisce informazioni relative a un'organizzazione
-        identificate come società, tribù, o qualsiasi altro raggruppamento di persone</desc><classes/><content><elementRef key="orgName" minOccurs="1" maxOccurs="unbounded"/><elementRef key="desc" minOccurs="0" maxOccurs="unbounded"/><elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/></content><attList><attDef ident="role" mode="delete"/></attList><exemplum xml:lang="en">
+  </listRef></elementSpec><elementSpec rend="change" module="namesdates" ident="org"><gloss versionDate="2007-07-04" xml:lang="en">organization</gloss><gloss versionDate="2007-12-20" xml:lang="ko">조직</gloss><gloss versionDate="2008-04-06" xml:lang="es">organización</gloss><gloss versionDate="2008-12-09" xml:lang="fr">organisation</gloss><gloss versionDate="2007-11-06" xml:lang="it">organizzazione</gloss><desc versionDate="2007-06-14" xml:lang="en">provides information
+  about an identifiable organization such as a business, a tribe, or
+  any other grouping of people.</desc><desc versionDate="2007-12-20" xml:lang="ko">업무, 종족, 또는 사람들의 다른 종류의 그룹과 같은 식별 가능한 조직에 대한 정보를 제공한다.</desc><desc versionDate="2008-04-06" xml:lang="es">proporciona a la
+  información sobre una organización identificable tal como un
+  negocio, una tribu, o cualquier otro grupo de personas.</desc><desc versionDate="2008-04-05" xml:lang="ja">特定可能な団体の情報を示す．例えば，会社，集団など，人の集まり．</desc><desc versionDate="2008-12-09" xml:lang="fr">fournit des
+  informations sur une organisation identifiable, telle qu'une
+  entreprise, une tribu ou tout autre groupement de personnes.</desc><desc versionDate="2007-11-06" xml:lang="it">fornisce informazioni
+  relative a un'organizzazione identificate come società, tribù, o
+  qualsiasi altro raggruppamento di persone</desc><classes/><content><elementRef key="orgName" minOccurs="1" maxOccurs="unbounded"/><elementRef key="desc" minOccurs="0" maxOccurs="unbounded"/><elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/></content><attList><attDef ident="role" mode="delete"/></attList><exemplum xml:lang="en">
     <egXML xmlns="http://www.tei-c.org/ns/Examples">
       <org xml:id="JAMs">
         <orgName>Justified Ancients of Mummu</orgName>
-        <desc>An underground anarchist collective spearheaded by <persName>Hagbard
-                    Celine</persName>, who fight the Illuminati from a golden submarine, the
-                        <name>Leif Ericson</name>
-            </desc>
+        <desc>An underground anarchist collective spearheaded by
+        <persName>Hagbard Celine</persName>, who fight the Illuminati
+        from a golden submarine, the <name>Leif Ericson</name></desc>
         <bibl>
           <author>Robert Shea</author>
           <author>Robert Anton Wilson</author>
@@ -7514,7 +7401,7 @@ it, with curatorial or administrative information.</desc><desc versionDate="2007
       </org>
     </egXML>
   </exemplum><listRef>
-    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDORG">13.2.2. Organizational Names</ref>
+    <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#ND-org">13.3.3. Organizational Data</ref>
   </listRef></elementSpec><elementSpec rend="change" module="textstructure" ident="TEI"><gloss versionDate="2005-12-24" xml:lang="en">TEI document</gloss><gloss versionDate="2007-12-20" xml:lang="ko">TEI 문서</gloss><gloss versionDate="2007-05-02" xml:lang="zh-TW">TEI文件</gloss><gloss versionDate="2007-06-12" xml:lang="fr">document TEI</gloss><gloss versionDate="2006-10-18" xml:lang="de">TEI-Dokument</gloss><gloss versionDate="2007-05-04" xml:lang="es">documento TEI</gloss><gloss versionDate="2007-01-21" xml:lang="it">documento TEI</gloss><gloss versionDate="2018-12-17" xml:lang="ja">TEI文書</gloss><desc versionDate="2019-06-27" xml:lang="en">contains a single TEI-conformant document, combining
     a single TEI header with one or more members of the <ident type="class">model.resource</ident> class. Multiple <gi>TEI</gi>
     elements may be combined within a <gi>TEI</gi> (or <gi>teiCorpus</gi>) element.</desc><desc versionDate="2007-12-20" xml:lang="ko">TEI 헤더와 텍스트로 구성된 단일 TEI 구조 문서를 포함한다. 독립 요소 또는 <gi>teiCorpus</gi> 요소의 부분.</desc><desc versionDate="2007-05-02" xml:lang="zh-TW">包含符合TEI標準的單一文件，由一個TEI標頭及一份文本組成，可單獨出現或是作為元素<gi>teiCorpus</gi>的一部分。</desc><desc versionDate="2018-12-17" xml:lang="ja">一つ以上の<ident type="class">model.resource</ident>クラスを持つ一つのTEIヘッダを持つ，単一のTEI準拠文書を含む．<gi>teiCorpus</gi>エレメントには複数の<gi>TEI</gi>要素が含まれてもよい．</desc><desc versionDate="2007-06-12" xml:lang="fr">contient un seul document conforme à la TEI, qui
@@ -7748,7 +7635,7 @@ celui-ci.</desc><desc versionDate="2007-11-06" xml:lang="it">definisce una super
                             <p/>
                         </remarks><listRef>
     <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html#PHDA">11.3.3.1. Damage, Illegibility, and Supplied Text</ref>
-  </listRef></elementSpec><moduleSpec n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:xi="http://www.w3.org/2001/XInclude" n="HD" xml:id="DHD" ident="header"/><moduleSpec n="FT" xml:id="DFTFF" ident="figures"/><moduleSpec n="SA" xml:id="DSA" ident="linking"/><moduleSpec n="MS" xml:id="DMSD2" ident="msdescription"/><moduleSpec n="ND" xml:id="DND" ident="namesdates"/><moduleSpec n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:xi="http://www.w3.org/2001/XInclude" n="PH" xml:id="DPH" ident="transcr"/></schemaSpec>
+  </listRef></elementSpec><moduleSpec xmlns:xi="http://www.w3.org/2001/XInclude" n="ST" xml:id="DSTTEI2" ident="tei" type="core"/><moduleSpec n="CO" xml:id="DCO" ident="core"/><moduleSpec xmlns:xi="http://www.w3.org/2001/XInclude" n="HD" xml:id="DHD" ident="header"/><moduleSpec n="FT" xml:id="DFTFF" ident="figures"/><moduleSpec xmlns:xi="http://www.w3.org/2001/XInclude" n="SA" xml:id="DSA" ident="linking"/><moduleSpec n="MS" xml:id="DMSD2" ident="msdescription"/><moduleSpec n="ND" xml:id="DND" ident="namesdates"/><moduleSpec n="DS" xml:id="DDS" ident="textstructure"/><moduleSpec xmlns:xi="http://www.w3.org/2001/XInclude" n="PH" xml:id="DPH" ident="transcr"/></schemaSpec>
             </div>
         </back>
     </text>

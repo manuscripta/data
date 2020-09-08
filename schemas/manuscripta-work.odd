@@ -35,13 +35,13 @@
                     <!-- Modules imported from manuscripta-master.odd -->
 
                     <moduleRef key="tei"/>
-                    <moduleRef key="core" include="date publisher resp respStmt textLang"/>
+                    <moduleRef key="core" include="publisher resp respStmt textLang"/>
                     <moduleRef key="header" include="availability change fileDesc funder licence publicationStmt revisionDesc sponsor teiHeader titleStmt"/>
                     <moduleRef key="textstructure" include="TEI text"/>
 
                     <!-- Modules for manuscripta-works.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
-                    <moduleRef key="core" include="author bibl editor note p quote title" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="core" include="date author bibl editor note p quote title" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="header" include="idno sourceDesc" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="msdescription" include="explicit incipit" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="namesdates" include="persName" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
@@ -102,6 +102,33 @@
                         <content>
                             <elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
+                    
+                    <elementSpec ident="date" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.canonical" mode="delete"/>
+                            <memberOf key="att.editLike" mode="delete"/>
+                            <memberOf key="att.dimensions" mode="delete"/>
+                            <memberOf key="att.ranging" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted in att.datable -->
+                            <attDef ident="notBefore" mode="delete"/>
+                            <attDef ident="notAfter" mode="delete"/>
+                            <attDef ident="from" mode="delete"/>
+                            <attDef ident="to" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
@@ -485,8 +512,6 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="xml:base" mode="delete"/>
-                            <attDef ident="xml:space" mode="delete"/>
                         </attList>
                     </classSpec>
                     <classSpec ident="att.global.analytic" module="tei" type="atts" mode="delete"/>

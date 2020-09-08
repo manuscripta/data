@@ -28,7 +28,7 @@
             <div xml:id="schema">
                 <head>Schema for the Manuscripta bibliography files</head>
 
-<!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
+                <!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
                 <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
@@ -36,16 +36,17 @@
                     <!-- Modules imported from manuscripta-master.odd -->
 
                     <moduleRef key="tei"/>
-                    <moduleRef key="core" include="date foreign head publisher resp respStmt textLang"/>
+                    <moduleRef key="core" include="foreign head publisher resp respStmt textLang"/>
                     <moduleRef key="header" include="availability change fileDesc funder licence publicationStmt revisionDesc sponsor teiHeader titleStmt"/>
+                    <moduleRef key="msdescription" include="institution msIdentifier repository"/>
                     <moduleRef key="namesdates" include="country settlement"/>
                     <moduleRef key="textstructure" include="TEI text"/>
 
                     <!-- Modules for manuscripta-bibl.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
-                    <moduleRef key="core" include="analytic author biblScope biblStruct editor imprint monogr p pubPlace q series title" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor imprint monogr p pubPlace q series title" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="header" include="edition idno sourceDesc" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="msdescription" include="institution msDesc msIdentifier objectDesc physDesc repository summary" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="msdescription" include="msDesc" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
                     <moduleRef key="textstructure" include="body" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
 
@@ -182,6 +183,31 @@
                             <p/>
                         </remarks>
                     </elementSpec>
+                    
+                    <elementSpec ident="date" module="core" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.canonical" mode="delete"/>
+                            <memberOf key="att.editLike" mode="delete"/>
+                            <memberOf key="att.dimensions" mode="delete"/>
+                            <memberOf key="att.ranging" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted in att.datable -->
+                            <attDef ident="notBefore" mode="delete"/>
+                            <attDef ident="notAfter" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
 
                     <elementSpec ident="edition" module="header" mode="change">
                         <content>
@@ -282,6 +308,7 @@
                                     <valItem ident="ISSN"/>
                                     <valItem ident="URI"/>
                                     <valItem ident="URN"/>
+                                    <valItem ident="shelfmark"/>
                                 </valList>
                             </attDef>
                             <attDef ident="subtype" mode="change" usage="opt">
@@ -323,6 +350,49 @@
                         <remarks>
                             <p/>
                         </remarks>
+                    </elementSpec>
+
+                    <elementSpec ident="msDesc" mode="change" module="msdescription">
+                        <classes mode="change">
+                            <memberOf key="att.typed" mode="delete"/>
+                            <memberOf key="att.docStatus" mode="delete"/>
+                        </classes>
+                        <content>
+                            <sequence>
+                                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="head" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="p" minOccurs="1" maxOccurs="1"/>
+                            </sequence>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="req"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes deleted in att.global.rendition -->
+                            <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.responsibility -->
+                            <attDef ident="resp" mode="change" usage="req"/>
+                            <attDef ident="cert" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <msDesc>
+                                    <msIdentifier>
+                                        <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
+                                        <settlement ref="https://www.manuscripta.se/place/100089">Uppsala</settlement>
+                                        <institution ref="https://www.manuscripta.se/place/100091">Uppsala University</institution>
+                                        <repository ref="https://www.manuscripta.se/place/100092">Uppsala University Library</repository>
+                                        <idno type="shelfmark">Gr. 27</idno>
+                                    </msIdentifier>
+                                    <head>Aelian, On Animals</head>
+                                    <!-- MS description -->
+                                </msDesc>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="nameLink" module="namesdates" mode="change">
@@ -531,6 +601,11 @@
 
                     <classSpec ident="att.editLike" module="tei" type="atts" mode="delete"/>
 
+                    <classSpec ident="att.global" module="tei" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="xml:base" mode="delete"/>
+                        </attList>
+                    </classSpec>
                     <classSpec ident="att.global.analytic" module="tei" type="atts" mode="delete"/>
                     <classSpec ident="att.global.facs" module="tei" type="atts" mode="delete"/>
                     <classSpec ident="att.global.linking" module="tei" type="atts" mode="delete"/>
@@ -550,7 +625,6 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="nymRef" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
