@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-09-08T09:02:54Z. .
+Schema generated from ODD source 2020-09-18T20:33:20Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -3889,6 +3889,9 @@ The element <name/> may appear once only
                <zeroOrMore>
                   <ref name="locus"/>
                </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="orgName"/>
+               </zeroOrMore>
                <ref name="origDate"/>
                <zeroOrMore>
                   <ref name="origPlace"/>
@@ -3928,6 +3931,9 @@ The element <name/> may appear once only
                   <ref name="locus"/>
                </zeroOrMore>
                <zeroOrMore>
+                  <ref name="orgName"/>
+               </zeroOrMore>
+               <zeroOrMore>
                   <ref name="persName"/>
                </zeroOrMore>
                <zeroOrMore>
@@ -3960,6 +3966,9 @@ The element <name/> may appear once only
                </zeroOrMore>
                <zeroOrMore>
                   <ref name="locus"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="orgName"/>
                </zeroOrMore>
                <zeroOrMore>
                   <ref name="persName"/>
@@ -4011,6 +4020,16 @@ The element <name/> may appear once only
             <ref name="history"/>
          </optional>
          <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="orgName">
+      <element name="orgName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organization name) contains an organizational name. [13.2.2. Organizational Names]</a:documentation>
+         <text/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.linking.attribute.sameAs"/>
+         <ref name="att.canonical.attribute.ref"/>
          <empty/>
       </element>
    </define>

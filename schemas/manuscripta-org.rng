@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-09-08T09:21:05Z. .
+Schema generated from ODD source 2020-09-18T20:18:12Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -552,6 +552,32 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <empty/>
       </element>
    </define>
+   <define name="placeName">
+      <element name="placeName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an absolute or relative place name. [13.2.3. Place Names]</a:documentation>
+         <text/>
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <sch:rule context="tei:placeName">
+               <sch:let name="placename-ref" value="substring-after(@ref, 'place/')"/>
+               <sch:let name="placename"
+                        value="doc(concat('../id/place/',$placename-ref,'.xml'))//tei:place/tei:placeName"/>
+               <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/place/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/place/</sch:assert>
+               <sch:assert test="$placename = text()">Placename mismatch</sch:assert>
+            </sch:rule>
+         </sch:pattern>
+         <attribute name="ref">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
    <define name="listOrg">
       <element name="listOrg">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list of organizations) contains a list of elements, each of which provides information about an identifiable organization. [13.2.2. Organizational Names]</a:documentation>
@@ -564,6 +590,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <oneOrMore>
             <ref name="orgName"/>
          </oneOrMore>
+         <zeroOrMore>
+            <ref name="placeName"/>
+         </zeroOrMore>
          <zeroOrMore>
             <ref name="desc"/>
          </zeroOrMore>
