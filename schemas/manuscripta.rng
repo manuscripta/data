@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-09-18T20:33:20Z. .
+Schema generated from ODD source 2020-10-12T12:02:00Z. .
 TEI Edition: 
 TEI Edition Location: http://www.tei-c.org/Vault/P5//
   
@@ -2607,7 +2607,7 @@ The element <name/> may appear once only
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:support//tei:material">
-               <sch:assert test="text()='Western paper' or text()='Western paper without watermarks' or text()='Arabic paper' or text()='Parchment'"> Permitted values are "Western paper", "Western paper without watermarks", "Arabic paper", or "Parchment".</sch:assert>
+               <sch:assert test="text()='Western paper' or text()='Western paper without watermarks' or text()='Arabic paper' or text()='Parchment' or text()='Papyrus'"> Permitted values are "Western paper", "Western paper without watermarks", "Arabic paper", "Parchment", or "Papyrus".</sch:assert>
             </sch:rule>
          </pattern>
       </element>
@@ -3523,6 +3523,8 @@ The element <name/> may appear once only
                   <value>parchment</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>mixed</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>papyrus</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
             </attribute>

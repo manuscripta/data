@@ -3064,10 +3064,10 @@
                             <textNode/>
                         </content>
                         <constraintSpec ident="support.material" scheme="schematron">
-                            <desc versionDate="2014-11-17">Check that <gi>material</gi> for <gi>support</gi> only contains the permitted values "Western paper", "Western paper without watermarks", "Arabic paper", or "Parchment".</desc>
+                            <desc versionDate="2014-11-17">Check that <gi>material</gi> for <gi>support</gi> only contains the permitted values "Western paper", "Western paper without watermarks", "Arabic paper", "Parchment", or "Papyrus".</desc>
                             <constraint>
                                 <sch:rule context="tei:support//tei:material">
-                                    <sch:assert test="text()='Western paper' or text()='Western paper without watermarks' or text()='Arabic paper' or text()='Parchment'"> Permitted values are "Western paper", "Western paper without watermarks", "Arabic paper", or "Parchment".</sch:assert>
+                                    <sch:assert test="text()='Western paper' or text()='Western paper without watermarks' or text()='Arabic paper' or text()='Parchment' or text()='Papyrus'"> Permitted values are "Western paper", "Western paper without watermarks", "Arabic paper", "Parchment", or "Papyrus".</sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -4753,6 +4753,7 @@
                                     <valItem ident="paper"/>
                                     <valItem ident="parchment"/>
                                     <valItem ident="mixed"/>
+                                    <valItem ident="papyrus"/>
                                 </valList>
                             </attDef>
                         </attList>
