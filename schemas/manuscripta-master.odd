@@ -1142,7 +1142,9 @@
 
                     <elementSpec ident="altIdentifier" module="msdescription" mode="change">
                         <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
@@ -1173,6 +1175,7 @@
                     <elementSpec ident="author" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.naming" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="persName"/>
@@ -2262,6 +2265,7 @@
                     <elementSpec ident="funder" mode="change" module="header">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
                             <textNode/>
@@ -2331,6 +2335,7 @@
                     <elementSpec ident="graphic" mode="change" module="core">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <rng:empty/>
@@ -2898,6 +2903,7 @@
                     <elementSpec ident="list" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="item" minOccurs="1" maxOccurs="unbounded"/>
@@ -2969,6 +2975,7 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.pointing" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <rng:empty/>
@@ -3061,6 +3068,7 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.canonical" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <textNode/>
@@ -3073,6 +3081,10 @@
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
+                        <attList>
+                            <attDef ident="function" mode="delete"/>
+                            <attDef ident="target" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <material>Western paper</material>
@@ -3086,6 +3098,7 @@
                     <elementSpec ident="measure" mode="change" module="core">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <textNode/>
@@ -3101,11 +3114,17 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <attDef ident="type" mode="change" usage="req">
+                            <attDef ident="type" mode="add" usage="req">
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="leftFlyleaves"/>
-                                    <valItem ident="rightFlyleaves"/>
-                                    <valItem ident="textblockLeaves"/>
+                                    <valItem ident="leftFlyleaves">
+                                        <desc>Left flyleaves</desc>
+                                    </valItem>
+                                    <valItem ident="rightFlyleaves">
+                                        <desc>Right flyleaves</desc>
+                                    </valItem>
+                                    <valItem ident="textblockLeaves">
+                                        <desc>Textblock leaves</desc>
+                                    </valItem>
                                     <valItem ident="laidLinesIn20mm">
                                         <desc>Number of laid lines in 20 mm</desc>
                                     </valItem>
@@ -3114,9 +3133,11 @@
                                     </valItem>
                                 </valList>
                             </attDef>
+                            <attDef ident="subtype" mode="delete"/>
                             <!-- Attributes changed in att.measurement -->
                             <attDef ident="unit" mode="change" usage="rec"/>
                             <attDef ident="quantity" mode="change" usage="rec"/>
+                            <attDef ident="unitRef" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3227,6 +3248,7 @@
                     <elementSpec ident="msFrag" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
@@ -3609,6 +3631,8 @@
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3620,6 +3644,7 @@
                     <elementSpec ident="msPart" mode="change" module="msdescription">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
@@ -3725,10 +3750,17 @@
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="xml:lang" mode="change" usage="req"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attributes deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes deleted in att.tpyed -->
+                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3851,6 +3883,8 @@
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking  -->
+                            <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                             <attDef ident="resp" mode="delete"/>
@@ -3939,6 +3973,8 @@
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.editLike" mode="delete"/>
                             <memberOf key="att.datable" mode="delete"/>
+                            <memberOf key="att.global.responsibility" mode="add"/>
+                            <memberOf key="att.global.source" mode="add"/>
                         </classes>
                         <content>
                             <alternate minOccurs="1" maxOccurs="unbounded">
@@ -3956,6 +3992,10 @@
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
+                        <attList>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>                            
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <origin>Probably written in the <origDate notBefore="1251" notAfter="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
@@ -4155,8 +4195,9 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
-                            <memberOf key="att.responsibility" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
                             <memberOf key="att.global.responsibility" mode="add"/>
+                            <memberOf key="att.global.source" mode="add"/>
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
@@ -4172,6 +4213,10 @@
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
+                        <attList>
+                            <!-- Attributes deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>                            
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <provenance>At sometime the volume came to <placeName ref="#Venice"/>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
@@ -4231,7 +4276,7 @@
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="q" mode="change" module="core">
+                    <elementSpec ident="q" mode="change" module="core">                        
                         <content>
                             <textNode/>
                         </content>
@@ -4243,14 +4288,14 @@
                             <attDef ident="n" mode="delete"/>
                             <!-- Attributes changed and deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
                             <!-- Attribute deleted  -->
                             <attDef ident="type" mode="delete"/>
                         </attList>
-                        <exemplum>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <quote xml:lang="la">Theodorus samius primo clavem mostravit</quote>
-                            </egXML>
-                        </exemplum>
                     </elementSpec>
 
                     <elementSpec ident="quote" mode="change" module="core">
@@ -4279,6 +4324,11 @@
                             <attDef ident="n" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.source -->
+                            <attDef ident="source" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
                         </attList>
@@ -4577,9 +4627,10 @@
                         </exemplum>
                     </elementSpec>
 
-                    <elementSpec ident="sponsor" mode="change" module="header">
+                    <elementSpec ident="sponsor" mode="change" module="header">                        
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
                             <textNode/>
@@ -5328,6 +5379,10 @@
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility  -->
+                            <attDef ident="cert" mode="delete"/>
+                            <!-- Attributes deleted in att.typed  -->
+                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5462,6 +5517,8 @@
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
+                            <!-- Attributes deleted in att.global.responsibility  -->
+                            <attDef ident="cert" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">

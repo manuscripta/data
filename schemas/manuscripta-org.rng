@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<grammar xmlns:xlink="http://www.w3.org/1999/xlink"
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:teix="http://www.tei-c.org/ns/Examples"
-         xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-09-18T20:18:12Z. .
+Schema generated from ODD source 2022-11-04T13:28:23Z. .
 TEI Edition: 
-TEI Edition Location: http://www.tei-c.org/Vault/P5//
+TEI Edition Location: https://www.tei-c.org/Vault/P5//
   
 --><!--[https://creativecommons.org/licenses/by/4.0/] Creative Commons Attribution 4.0 International-->
    <define name="att.canonical.attributes">
@@ -28,7 +28,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
             <list>
                <oneOrMore>
-                  <data type="anyURI"/>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
                </oneOrMore>
             </list>
          </attribute>
@@ -121,30 +123,30 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@when]">
          <sch:report test="@notBefore|@notAfter|@from|@to" role="nonfatal">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@from]">
          <sch:report test="@notBefore" role="nonfatal">The @from and @notBefore attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@to]">
          <sch:report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</sch:report>
       </sch:rule>
@@ -214,17 +216,17 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="manuscripta-org-att.typed-subtypeTyped-constraint-rule-4">
-      <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                xmlns="http://www.tei-c.org/ns/1.0"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@subtype]">
          <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
       </sch:rule>
    </pattern>
    <define name="respStmt">
       <element name="respStmt">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
          <oneOrMore>
             <ref name="resp"/>
          </oneOrMore>
@@ -233,7 +235,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="resp">
       <element name="resp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) contains a phrase describing the nature of a person's intellectual responsibility, or an organization's role in the production or distribution of a work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) contains a phrase describing the nature of a person's intellectual responsibility, or an organization's role in the production or distribution of a work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
          <empty/>
          <attribute name="key">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</a:documentation>
@@ -249,7 +251,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="publisher">
       <element name="publisher">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publisher) provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.12.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <text/>
       </element>
    </define>
@@ -258,30 +260,32 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [ ]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-p-abstractModel-structure-p-constraint-report-4">
+                  id="manuscripta-org-p-abstractModel-structure-p-in-ab-or-p-constraint-report-4">
             <rule context="tei:p">
-               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
+               <sch:report xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                           test="    (ancestor::tei:ab or ancestor::tei:p)                          and not( ancestor::tei:floatingText                                 |parent::tei:exemplum                                 |parent::tei:item                                 |parent::tei:note                                 |parent::tei:q                                 |parent::tei:quote                                 |parent::tei:remarks                                 |parent::tei:said                                 |parent::tei:sp                                 |parent::tei:stage                                 |parent::tei:cell                                 |parent::tei:figure                                )">
         Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
-      </report>
+      </sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="manuscripta-org-p-abstractModel-structure-l-constraint-report-5">
+                  id="manuscripta-org-p-abstractModel-structure-p-in-l-or-lg-constraint-report-5">
             <rule context="tei:p">
-               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                       test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
-        Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
-      </report>
+               <sch:report xmlns="http://www.tei-c.org/ns/1.0"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                           test="    (ancestor::tei:l or ancestor::tei:lg)                          and not( ancestor::tei:floatingText                                 |parent::tei:figure                                 |parent::tei:note                                )">
+        Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab, unless p is a child of figure or note, or is a descendant of floatingText.
+      </sch:report>
             </rule>
          </pattern>
       </element>
    </define>
    <define name="desc">
       <element name="desc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) contains a brief description of the object documented by its parent element, typically a documentation element or an entity. []</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) contains a short description of the purpose, function, or use of its parent element, or when the parent is a documentation element, describes or defines the object being documented.  []</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -307,7 +311,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="date">
       <element name="date">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [     ]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(date) contains a date in any format. [     ]</a:documentation>
          <text/>
          <ref name="att.datable.w3c.attribute.when"/>
          <empty/>
@@ -315,7 +319,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="title">
       <element name="title">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a title for any kind of work. [  ]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title) contains a title for any kind of work. [  ]</a:documentation>
          <text/>
       </element>
    </define>
@@ -326,28 +330,28 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          <ref name="revisionDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="manuscripta-org-teiHeader-greek.check-constraint-rule-6">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
                <sch:report test="text()[matches(., '\p{IsGreek}|\p{IsGreekExtended}')]"> Use the xml:lang="grc" for Ancient Greek text and xml:lang="el" for Modern Greek text </sch:report>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="manuscripta-org-teiHeader-latin.check-constraint-rule-7">
-            <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="//*[@xml:lang='grc' or @xml:lang='el']">
                <sch:report test="text()[matches(., '[(\p{N}|\p{L})-[\p{IsGreek}\p{IsGreekExtended}]]')]"> Only characters from Greek and Greek extended chart range are allowed in elements with the xml:lang="grc" or xml:lang="el".</sch:report>
             </sch:rule>
          </pattern>
-         <sch:pattern xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude">
             <sch:rule context="//*[(@xml:lang='grc' or @xml:lang='el')]">
                <sch:report test="contains(., 'Ϛ')"> Use Greek small letter stigma (U+03DB).</sch:report>
                <sch:report test="contains(., 'Ϟ')"> Use Greek small letter koppa (U+03DF).</sch:report>
@@ -366,26 +370,26 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
                <sch:report test="contains(., 'ΰ')"> Use Greek small letter upsilon with dialytika and tonos (U+03B0).</sch:report>
             </sch:rule>
          </sch:pattern>
-         <sch:pattern xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude">
             <sch:rule context="//*[not(@xml:lang='grc' or @xml:lang='el')]">
                <sch:assert test="not(contains(., &#34;'&#34;))"> Use the right single quotation mark (U+2019) for apostrophe.</sch:assert>
             </sch:rule>
          </sch:pattern>
-         <sch:pattern xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude">
             <sch:rule context="text()">
                <sch:assert test="not(contains(., '&#34;'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
             </sch:rule>
          </sch:pattern>
-         <sch:pattern xmlns:xi="http://www.w3.org/2001/XInclude"
-                      xmlns="http://www.tei-c.org/ns/1.0"
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude">
             <sch:rule context="text()">
                <sch:assert test="not(contains(., '‘'))"> The use of quotation marks is not allowed. Use the q element instead.</sch:assert>
             </sch:rule>
@@ -428,7 +432,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="sponsor">
       <element name="sponsor">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the name of a sponsoring organization or institution. [2.2.1. The Title Statement]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(sponsor) specifies the name of a sponsoring organization or institution. [2.2.1. The Title Statement]</a:documentation>
          <text/>
          <ref name="att.canonical.attribute.ref"/>
          <empty/>
@@ -457,10 +461,10 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="availability">
       <element name="availability">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(availability) supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="licence"/>
          <attribute name="status">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a code identifying the current availability of the text.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(status) supplies a code identifying the current availability of the text.</a:documentation>
             <choice>
                <value>free</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -477,7 +481,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the destination of the reference by supplying one or more URI References</a:documentation>
             <list>
                <oneOrMore>
-                  <data type="anyURI"/>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
                </oneOrMore>
             </list>
          </attribute>
@@ -506,13 +512,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="change">
       <element name="change">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.6. Identifying Changes and Revisions]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(change) documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]</a:documentation>
          <text/>
          <attribute name="who">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the person, or group of people, to whom the element content is ascribed.</a:documentation>
             <list>
                <oneOrMore>
-                  <data type="anyURI"/>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
                </oneOrMore>
             </list>
          </attribute>
@@ -554,11 +562,12 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="placeName">
       <element name="placeName">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an absolute or relative place name. [13.2.3. Place Names]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(place name) contains an absolute or relative place name. [13.2.3. Place Names]</a:documentation>
          <text/>
          <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:xi="http://www.w3.org/2001/XInclude">
             <sch:rule context="tei:placeName">
                <sch:let name="placename-ref" value="substring-after(@ref, 'place/')"/>
                <sch:let name="placename"
@@ -571,7 +580,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
             <list>
                <oneOrMore>
-                  <data type="anyURI"/>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
                </oneOrMore>
             </list>
          </attribute>
@@ -637,7 +648,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
    </define>
    <define name="text">
       <element name="text">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text) contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
          <ref name="body"/>
       </element>
    </define>
@@ -654,7 +665,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5//
          </attribute>
          <optional>
             <attribute name="subtype">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides a sub-categorization of the element, if needed</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed</a:documentation>
                <choice>
                   <value>Libris</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>

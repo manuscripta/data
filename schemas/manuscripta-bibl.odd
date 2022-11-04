@@ -27,9 +27,8 @@
         <back>
             <div xml:id="schema">
                 <head>Schema for the Manuscripta bibliography files</head>
-
-                <!--                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/Box Sync/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">-->
-                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/manuscripta-p5subset.xml">
+                
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
@@ -44,11 +43,11 @@
 
                     <!-- Modules for manuscripta-bibl.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
-                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor imprint monogr p pubPlace q series title" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="header" include="edition idno sourceDesc" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="msdescription" include="msDesc" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="textstructure" include="body" source="file:/C:/Users/Patrik/OneDrive/Manuscripta/manuscripta-2.0/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor imprint monogr p pubPlace q series title" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="header" include="edition idno sourceDesc" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="msdescription" include="msDesc" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="textstructure" include="body" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
@@ -98,6 +97,7 @@
                     <elementSpec ident="author" module="core" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
@@ -230,6 +230,7 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.naming" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
@@ -583,6 +584,25 @@
                             </alternate>
                         </content>
                         <attList>
+                            <attDef ident="type" mode="change" usage="opt">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="main">
+                                        <desc>main title</desc>
+                                    </valItem>
+                                    <valItem ident="sub">
+                                        <desc>(subordinate) subtitle, title of part</desc>
+                                    </valItem>
+                                    <valItem ident="alt">
+                                        <desc>(alternate) alternate title, often in another language, by which the work is also known</desc>
+                                    </valItem>
+                                    <valItem ident="short">
+                                        <desc>abbreviated form of title</desc>
+                                    </valItem>
+                                    <valItem ident="desc">
+                                        <desc>(descriptive) descriptive paraphrase of the work functioning as a title</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
                             <!-- Attributes deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                             <!-- Attributes deleted in att.typed -->
