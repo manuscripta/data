@@ -8,17 +8,21 @@
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101057</idno>
-                <date when="2022"/>
+                <date when="2024"/>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -36,35 +40,191 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="320" unit="mm"/>
+                                            <width quantity="245" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="0"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. </foliation>
+                                <collation>
+                                    <formula>1-2(8), 3(8, lacks 8), 4-6(6)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/671b6b32a04b4e0001880c5a/viewOnly">Viscoll collation</ref>
+                                    </p>
+                                    <signatures>Quire signatures in Roman numerals both at the end and beginning of a quire. </signatures>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Upper left corner, in black ink by a modern hand: <quote>Va. 1</quote>.; <quote>Kungl. Biblioteket. Stockholm</quote>; Upper part of page in pencil: <quote>Se. S. Dahlgren i Ymer 1885</quote>; below: National Library stamp.</note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Upper left corner, in black ink by a modern hand: <quote>Sparvenfeldt Ecl. no 8.</quote>; centre page, in black ink by a modern hand: <quote>Aethici (Ister) Cosmographia seu Descriptio totius orbis tripartitis Antonii Augusti Itinerarium Provinciarum Omnium Inprimis Prouinciae Africae</quote>; below, in ink: <quote>Hdskr. från IX eller X<hi rend="super">de</hi> århundradet</quote>; below, in pencil: <quote>Använd för den af A. Schott år 1600 i Köln tryckta uppl. af Itinerarium Antonini. Kom urspr. från ett kloster i närh. af Gent.</quote>; bottom of page: National Library stamp.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>19th century binding. Leather and paper over cardboard. </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="335" unit="mm"/>
+                                        <width quantity="260" unit="mm"/>
+                                        <depth quantity="25" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100111">France</placeName>
+                            </origPlace>, <origDate notBefore="0801" notAfter="0900">9th century</origDate>
+                        </origin>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107356" type="short">Dahlgren (1885)</title>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="40r" scheme="folios"/>
+                                <title type="desc">Geographical compendium</title>
+                                <msItem>
+                                    <locus to="14r" scheme="folios" from="1r"/>
+                                    <title type="desc">Description of the tripartite world</title>
+                                    <rubric>Incipit cosmographia aethici</rubric>
+                                    <incipit>Lectionum peruigili cura comperimus senatum populumque romanum totius mundi dominos dominatores orbis et praesules cum quicquid subiacet caelo pene trarent triumphis</incipit>
+                                    <explicit>Quae capit est orbis et domina senatus</explicit>
+                                    <finalRubric>Explicit descriptio totius orbis tripertiti </finalRubric>
+                                    <note>
+                                        <p>1r: introduction</p>
+                                        <p>1v: habet omnis terrae orbis: followed by a list of seas, islands etc.; Oceanus orieantalis habet maria + list of seas, then follows lists of cities and rivers.</p>
+                                        <p>2rc: hec sunt flumina oceani orientalis + narrative text on the rivers</p>
+                                        <p>3rc: Oceanus orentalis habet gentes + list of people; </p>
+                                        <p>3v: ocenaus occidentalis + lists</p>
+                                        <p>5ra: Haec sunt flumina oceani occidentalis famosa + narrative text on the rivers</p>
+                                        <p>6ra: oceanus occidentalis habet gentes+ list</p>
+                                        <p>6rc: Hic explicit oceani occidentalis continentia. Incipit situs oceanis septentrionalis + lists</p>
+                                        <p>7r: narrative text, then lists</p>
+                                        <p>8rb: Incipit continentia sinus meridiani + lists</p>
+                                        <p>9r: narrative text</p>
+                                        <p>9v: Incipit situs asiae prouinciae cum limitibus et populis suis</p>
+                                        <p>10r: Incipit situs europae cum limitibus et populis suis</p>
+                                        <p>12r: Africa situ</p>
+                                        <p>13r: nomina insularum per diuersa maria</p>
+                                        <p/>
+                                    </note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="14r" to="40r" scheme="folios"/>
+                                    <title type="desc">Itinerary</title>
+                                    <rubric>Incipit itinerarium prouinciarium omnium antonii augusti In primis prouinciae africae</rubric>
+                                    <incipit>Atingi mauretaniae id est ubi baccauates et macenites barbari morantur</incipit>
+                                    <note>
+                                        <p>Three lines of introduction, then lists of place names followed by distance (stadia + Roman numerals), organised in 1-4 columns. </p>
+                                        <p>39r: Nomina septem montium urbis rome (from Polemius Silvius)</p>
+                                    </note>
+                                </msItem>
+                                <note>
+                                    <p>Sök på början i google books. första frasen finns nämns i t.ex. Iter italicum. </p>
+                                    <p>9v: Orosius</p>
+                                    <p>39v: Polemius silvius</p>
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107355" type="short">Herren (2011)</title>
+                                </bibl>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc>
+                                <supportDesc material="parchment">
+                                    <support>
+                                        <p>
+                                            <locus from="SL2r" to="40v" scheme="folios"/>
+                                            <material>Parchment</material>
+                                            <dimensions type="leaf">
+                                                <height quantity="320" unit="mm"/>
+                                                <width quantity="245" unit="mm"/>
+                                            </dimensions>
+                                        </p>
+                                    </support>
                                     <extent>
-                                        <measure type="textblockLeaves" unit="folios"/>
+                                        <measure type="textblockLeaves" unit="folios" quantity="41"/>
                                     </extent>
+                                    <condition>Parchment worn and wrinkled. Some leaves stained, first and last leaes heavily stained (the manuscript may have been stored unbound). Several holes in the leaves, but no loss of text. Edges trimmed, with loss of text to the marignal additions. <locus from="22" to="22" scheme="folios"/>: leaf has been cut, only the top quarter remains, the following leaf has been cut away completely. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <dimensions type="written">
+                                            <height quantity="265" unit="mm"/>
+                                            <width quantity="210" unit="mm"/>
+                                        </dimensions>
+                                        <note>The text is a mixture of leaves with one column and 30 lines, and leaves with 2-3 columns. Blindruling and pricking in the margins. </note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Carolingian minuscule</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="SL2r" to="SL2r" scheme="folios"/>
+                                    <note>Top of page: one line of illegible text in faded brown ink by a contemporary hand; below, in black ink by an early modern hand: Ex musea? ill- March- - emit mantuae Carpent Ao 1690 d. 8 jan. J. G. Sparwenfeldt; bottom of page, in brown ink: <quote>Gracchurris urbis Hibera- regionis dicta a Graccho Sempronio que antea Uurcis nominabatur fictus</quote>; below: <quote>Socrates Scholsticus Historie Ecclesiastice libro v. ΓΑΡΟΥΝ ΣΥΜΒΟΛΗ ΠΕΡΙ ΤΟΝ ΠΟΤΑΜΟΝ ΤΟΝ ΚΑΛΟΥΜΕΝΟΝ ΦΡΙΓΙΔΟΝ</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top of page in brown ink by an early modern hand:<quote> 12. 4 8</quote> (the first two numbers are struck through); bottom of page in brown ink: <quote>8. 229</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="39v" scheme="folios"/>
+                                    <note>Marginal additions and corrections by a contemporary hand. The additions usually consist single words. </note>
+                                </p>
+                                <p>
+                                    <locus from="40v" to="40v" scheme="folios"/>
+                                    <note>In hoc corpore continetur chronica iordanis episcopi rauennatis ciuitatis de origine ac uocabulis gentis gotorum aedita ad castalum sumptaque ex auctoribus id est (Strabone cornelio claudio ptholemeo) 
+                                        column 1: senatore, ablabio, prisco, iosipo, lucano, pomponio, dione, pompeio trogo, uirgilio
+                                        column 2: dicineo, comosaco, salmoxe, zeuta, deuxippo, libio titio, simmacho, orosio paulo
+                                    </note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink, rubrics and capitals in orange-red. Some capitals touched in red. <locus from="11" to="11" scheme="folios"/> written in black ink. </p>
+                                <decoNote type="initials">Plain initials over 2-4 lines in red or brown.</decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft"><change who="https://www.manuscripta.se/person/100380" when="2022-06-23" status="draft">First draft</change>
-            
+        <revisionDesc status="draft">
+            <change who="https://www.manuscripta.se/person/100484" when="2024-11-01" status="draft"/>
+            <change who="https://www.manuscripta.se/person/100380" when="2024-10-24" status="published">First published</change>
+            <change who="https://www.manuscripta.se/person/100380" when="2022-06-23" status="draft">First draft</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -74,4 +234,358 @@
             </div>
         </body>
     </text>
+    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-101057/">
+        <surface xml:id="ms-101057_LCO">
+            <desc>Left cover, outside</desc>
+            <graphic url="ms-101057_0001.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_LCI">
+            <desc>Left cover, inside</desc>
+            <graphic url="ms-101057_0002.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_SL1r">
+            <desc>⟨f. Ir⟩</desc>
+            <graphic url="ms-101057_0003.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_SL1v">
+            <desc>⟨f. Iv⟩</desc>
+            <graphic url="ms-101057_0004.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_SL2r">
+            <desc>⟨f. IIr⟩</desc>
+            <graphic url="ms-101057_0005.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_SL2v">
+            <desc>⟨f. IIv⟩</desc>
+            <graphic url="ms-101057_0006.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_1r">
+            <desc>f. 1r</desc>
+            <graphic url="ms-101057_0007.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_1v">
+            <desc>f. 1v</desc>
+            <graphic url="ms-101057_0008.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_2r">
+            <desc>f. 2r</desc>
+            <graphic url="ms-101057_0009.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_2v">
+            <desc>f. 2v</desc>
+            <graphic url="ms-101057_0010.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_3r">
+            <desc>f. 3r</desc>
+            <graphic url="ms-101057_0011.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_3v">
+            <desc>f. 3v</desc>
+            <graphic url="ms-101057_0012.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_4r">
+            <desc>f. 4r</desc>
+            <graphic url="ms-101057_0013.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_4v">
+            <desc>f. 4v</desc>
+            <graphic url="ms-101057_0014.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_5r">
+            <desc>f. 5r</desc>
+            <graphic url="ms-101057_0015.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_5v">
+            <desc>f. 5v</desc>
+            <graphic url="ms-101057_0016.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_6r">
+            <desc>f. 6r</desc>
+            <graphic url="ms-101057_0017.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_6v">
+            <desc>f. 6v</desc>
+            <graphic url="ms-101057_0018.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_7r">
+            <desc>f. 7r</desc>
+            <graphic url="ms-101057_0019.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_7v">
+            <desc>f. 7v</desc>
+            <graphic url="ms-101057_0020.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_8r">
+            <desc>f. 8r</desc>
+            <graphic url="ms-101057_0021.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_8v">
+            <desc>f. 8v</desc>
+            <graphic url="ms-101057_0022.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_9r">
+            <desc>f. 9r</desc>
+            <graphic url="ms-101057_0023.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_9v">
+            <desc>f. 9v</desc>
+            <graphic url="ms-101057_0024.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_10r">
+            <desc>f. 10r</desc>
+            <graphic url="ms-101057_0025.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_10v">
+            <desc>f. 10v</desc>
+            <graphic url="ms-101057_0026.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_11r">
+            <desc>f. 11r</desc>
+            <graphic url="ms-101057_0027.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_11v">
+            <desc>f. 11v</desc>
+            <graphic url="ms-101057_0028.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_12r">
+            <desc>f. 12r</desc>
+            <graphic url="ms-101057_0029.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_12v">
+            <desc>f. 12v</desc>
+            <graphic url="ms-101057_0030.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_13r">
+            <desc>f. 13r</desc>
+            <graphic url="ms-101057_0031.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_13v">
+            <desc>f. 13v</desc>
+            <graphic url="ms-101057_0032.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_14r">
+            <desc>f. 14r</desc>
+            <graphic url="ms-101057_0033.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_14v">
+            <desc>f. 14v</desc>
+            <graphic url="ms-101057_0034.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_15r">
+            <desc>f. 15r</desc>
+            <graphic url="ms-101057_0035.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_15v">
+            <desc>f. 15v</desc>
+            <graphic url="ms-101057_0036.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_16r">
+            <desc>f. 16r</desc>
+            <graphic url="ms-101057_0037.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_16v">
+            <desc>f. 16v</desc>
+            <graphic url="ms-101057_0038.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_17r">
+            <desc>f. 17r</desc>
+            <graphic url="ms-101057_0039.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_17v">
+            <desc>f. 17v</desc>
+            <graphic url="ms-101057_0040.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_18r">
+            <desc>f. 18r</desc>
+            <graphic url="ms-101057_0041.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_18v">
+            <desc>f. 18v</desc>
+            <graphic url="ms-101057_0042.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_19r">
+            <desc>f. 19r</desc>
+            <graphic url="ms-101057_0043.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_19v">
+            <desc>f. 19v</desc>
+            <graphic url="ms-101057_0044.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_20r">
+            <desc>f. 20r</desc>
+            <graphic url="ms-101057_0045.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_20v">
+            <desc>f. 20v</desc>
+            <graphic url="ms-101057_0046.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_21r">
+            <desc>f. 21r</desc>
+            <graphic url="ms-101057_0047.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_21v">
+            <desc>f. 21v</desc>
+            <graphic url="ms-101057_0048.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_22r">
+            <desc>f. 22r</desc>
+            <graphic url="ms-101057_0049.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_22v">
+            <desc>f. 22v</desc>
+            <graphic url="ms-101057_0050.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_23r">
+            <desc>f. 23r</desc>
+            <graphic url="ms-101057_0051.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_23v">
+            <desc>f. 23v</desc>
+            <graphic url="ms-101057_0052.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_24r">
+            <desc>f. 24r</desc>
+            <graphic url="ms-101057_0053.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_24v">
+            <desc>f. 24v</desc>
+            <graphic url="ms-101057_0054.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_25r">
+            <desc>f. 25r</desc>
+            <graphic url="ms-101057_0055.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_25v">
+            <desc>f. 25v</desc>
+            <graphic url="ms-101057_0056.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_26r">
+            <desc>f. 26r</desc>
+            <graphic url="ms-101057_0057.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_26v">
+            <desc>f. 26v</desc>
+            <graphic url="ms-101057_0058.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_27r">
+            <desc>f. 27r</desc>
+            <graphic url="ms-101057_0059.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_27v">
+            <desc>f. 27v</desc>
+            <graphic url="ms-101057_0060.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_28r">
+            <desc>f. 28r</desc>
+            <graphic url="ms-101057_0061.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_28v">
+            <desc>f. 28v</desc>
+            <graphic url="ms-101057_0062.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_29r">
+            <desc>f. 29r</desc>
+            <graphic url="ms-101057_0063.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_29v">
+            <desc>f. 29v</desc>
+            <graphic url="ms-101057_0064.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_30r">
+            <desc>f. 30r</desc>
+            <graphic url="ms-101057_0065.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_30v">
+            <desc>f. 30v</desc>
+            <graphic url="ms-101057_0066.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_31r">
+            <desc>f. 31r</desc>
+            <graphic url="ms-101057_0067.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_31v">
+            <desc>f. 31v</desc>
+            <graphic url="ms-101057_0068.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_32r">
+            <desc>f. 32r</desc>
+            <graphic url="ms-101057_0069.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_32v">
+            <desc>f. 32v</desc>
+            <graphic url="ms-101057_0070.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_33r">
+            <desc>f. 33r</desc>
+            <graphic url="ms-101057_0071.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_33v">
+            <desc>f. 33v</desc>
+            <graphic url="ms-101057_0072.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_34r">
+            <desc>f. 34r</desc>
+            <graphic url="ms-101057_0073.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_34v">
+            <desc>f. 34v</desc>
+            <graphic url="ms-101057_0074.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_35r">
+            <desc>f. 35r</desc>
+            <graphic url="ms-101057_0075.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_35v">
+            <desc>f. 35v</desc>
+            <graphic url="ms-101057_0076.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_36r">
+            <desc>f. 36r</desc>
+            <graphic url="ms-101057_0077.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_36v">
+            <desc>f. 36v</desc>
+            <graphic url="ms-101057_0078.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_37r">
+            <desc>f. 37r</desc>
+            <graphic url="ms-101057_0079.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_37v">
+            <desc>f. 37v</desc>
+            <graphic url="ms-101057_0080.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_38r">
+            <desc>f. 38r</desc>
+            <graphic url="ms-101057_0081.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_38v">
+            <desc>f. 38v</desc>
+            <graphic url="ms-101057_0082.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_39r">
+            <desc>f. 39r</desc>
+            <graphic url="ms-101057_0083.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_39v">
+            <desc>f. 39v</desc>
+            <graphic url="ms-101057_0084.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_40r">
+            <desc>f. 40r</desc>
+            <graphic url="ms-101057_0085.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_40v">
+            <desc>f. 40v</desc>
+            <graphic url="ms-101057_0086.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_RCI">
+            <desc>Right cover, inside</desc>
+            <graphic url="ms-101057_0087.tif" width="3180px" height="4025px"/>
+        </surface>
+        <surface xml:id="ms-101057_RCO">
+            <desc>Right cover, outside</desc>
+            <graphic url="ms-101057_0088.tif" width="3180px" height="4025px"/>
+        </surface>
+    </facsimile>
 </TEI>
