@@ -25,7 +25,7 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/100131</idno>
                 <date when="2016"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -48,8 +48,22 @@
                     </msIdentifier>
                     <head>Fragment of lectionary with passages from the gospel of St. John</head>
                     <physDesc>
-                        <objectDesc form="fragment"/>
+                        <objectDesc form="fragment">
+                            <supportDesc>
+                                <extent>
+                                    <measure type="leftFlyleaves" unit="folios"/>
+                                    <measure type="rightFlyleaves" unit="folios"/>
+                                </extent>
+                            </supportDesc>
+                        </objectDesc>
                     </physDesc>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107236" type="short">Wasserman (2021)</title>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
@@ -86,6 +100,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="published">
+            <change who="https://www.manuscripta.se/person/100380" when="2023-09-15" status="published">Added bibl</change>
             <change status="published" when="2020-09-01" who="https://www.manuscripta.se/person/100380">Changing status from draft to published</change>
             <change status="draft" when="2019-06-28" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
