@@ -11,17 +11,21 @@
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101073</idno>
-                <date when="2022"/>
+                <date when="2023"/>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -58,22 +62,37 @@
                                     <measure type="leftFlyleaves" quantity="1" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
-                                <foliation>Paginated by a modern hand, 1-23 (pages 24-28 not paginated).</foliation>
+                                <foliation>
+                                    <locus from="1" to="23" scheme="pages"/>: Modern pagination on the recto side only  (<locus from="24" to="28" scheme="pages"/> not paginated).
+                                    <secFol>Incipiunt addiciones</secFol>
+                                </foliation>
+                                <collation>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/639720c316d2310001b444d7/viewOnly">VisColl collation</ref>
+                                    </p>
+                                    <formula>1(14) </formula>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
                         <additions>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
-                                <note>sign. A 45 i AntiqvitetsArkivet.</note>
+                                <note>
+                                    Top left corner: National Library book label. Top of page in black ink by a modern hand: <quote>sign. A 45 i AntiqvitetsArkivet.</quote>.
+                                </note>
                             </p>
                             <p>
-                                <locus from="SL1r" to="SL1v" scheme="folios"/>
-                                <note>Title, bibliographical note, and a note on the Capitulum generale of 1429.  Written in pen and ink in Swedish by G. Klemming. </note>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Middle of page in black ink by a modern hand: <quote>Constutiones seu Addiciones ad Regulam saluatoris per Petrum Olaui priorem monasterii de alwastro 1390 Confirmatae a Kanuto episcopo Linc. anno 1420.</quote>. <!--ska vara ett crux före 1390--></note>
+                            </p>
+                            <p>
+                                <locus from="SL1v" to="SL1v" scheme="folios"/>
+                                <note>Middle of page in pencil by <persName ref="https://www.manuscripta.se/person/100853"> G. Klemming:</persName> a note on the Capitulum generale of 1429 and a bibliographical note in Swedish. </note>
                             </p>
                         </additions>
                         <bindingDesc>
-                            <binding contemporary="false">
-                                <p>Binding from second part of the 19th century. Title label on the spine. Old sewing stations evidence of an earlier (contemporary?) binding.</p>
+                            <binding>
+                                <p>Modern marbled cardboard binding with leather on the spine. Rebound in 1882.  <locus from="LCO" to="LCO" scheme="other"/> , stamped in gold: <quote>A 45</quote>.  <locus from="Spine" to="Spine" scheme="other"/> , black ink on paper label: <quote>Addiciones ad regulam Salvatoris. 1420.</quote>. </p>
                                 <p>
                                     <dimensions type="binding">
                                         <height quantity="245" unit="mm"/>
@@ -81,6 +100,9 @@
                                         <depth quantity="15" unit="mm"/>
                                     </dimensions>
                                 </p>
+                                <condition>
+                                    <locus from="SR1r" to="SR1r" scheme="folios"/> : old sewing stations visible.
+                                </condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
@@ -88,14 +110,13 @@
                         <origin>
                             <origPlace>
                                 <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
-                            </origPlace>
-                            <origPlace>
                                 <placeName ref="https://www.manuscripta.se/place/100101">Vadstena</placeName>
                             </origPlace>
-                            <origDate>15th century</origDate>
+                            <origDate notBefore="1401" notAfter="1500">15th century</origDate>
                         </origin>
-                        <provenance>Antikvitetsarkivet. listed in the old handwritten catalogues/inventories as: "nr. 10", in brown ink on f. 14v (U 90:4, p. 66). Berch’s catalogue, shelfmark A 45 (current signum). </provenance>
-                        <acquisition>From Antikvitetsarkivet to the National Library. </acquisition>
+                        <provenance>The manuscript was probably transferred to <placeName ref="https://www.manuscripta.se/place/100078">Stockholm</placeName> and <placeName ref="https://www.manuscripta.se/place/100089">Uppsala</placeName> during the dissolution of the monasteries (finished in <date when="1619"/>) and finally ended up in the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>. </provenance>
+                        <provenance>There are two signa found in the manuscript, one on <locus from="1" to="1" scheme="pages"/> and another on <locus from="28" to="28" scheme="pages"/>. The older signum <quote>10</quote> is found in the inventory from the 1720s (U 90:4, p. 66). Current signum, ‘A 55’, first established in Helin’s catalogue from the 1720s (U 91:2:2).</provenance>
+                        <acquisition>From the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date when="1780"/>. </acquisition>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -105,32 +126,64 @@
                             <textLang mainLang="la"/>
                             <msItem>
                                 <locus from="1" to="2" scheme="pages"/>
-                                <title type="uniform">Letter of sanction for Petrus Olavi, Additions by Knut, bishop of Linköping, 1420.</title>
-                                <incipit>Kanutus dei gracia Episcopus Lyncopensis Religiosis personis et nobis in Christo sincere dilectis </incipit>
-                                <explicit defective="false">In premissorum autem testimonium cum sigillis dictorum conventuum in watzstenis et de consensu eorum unanimi sigillum nostrum presentibus est appensum Datum in opido watzstenensi Anno domini Millesimo Quadringentesimo Vicesimo fferia Quarta Infra Octavas corporis christi. </explicit>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102521">Knut Bosson (Natt och Dag)</persName>
+                                </author>
+                                <title type="desc">Letter of sanction for Petrus Olavi, 1420.</title>
+                                <incipit>Kanutus dei gracia Episcopus Lyncopensis Religiosis personis et nobis in christo sincere dilectis </incipit>
+                                <explicit defective="false">In premissorum autem testimonium cum sigillis dictorum conventuum in watzstenis et de consensu eorum vnanimi sigillum nostrum presentibus est appensum Datum in opido watzstenensi Anno domini Millesimo Quadringentesimo Vicesimo Feria Quarta Infra Octauas corporis christi. </explicit>
+                                <listBibl>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107125" type="short">SDHK</title>
+                                        <citedRange unit="number" from="19499" to="19499"/>
+                                    </bibl>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107152" type="short">Klemming (1883)</title>
+                                        <citedRange unit="page" from="53" to="54"/>
+                                    </bibl>
+                                </listBibl>
                             </msItem>
                             <msItem>
                                 <locus from="3" to="20" scheme="pages"/>
-                                <title type="uniform">Petrus Olavi, Additions to the rule of Saint Saviour </title>
-                                <rubric>Incipiunt addiciones domini prioris Petri ad regulam saluatoris Et primo de gradibus seu signis vere humilitatis Capitulum i:m</rubric>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100951">
+                                             Peter (Petrus)
+                                             Olsson (Olavi)
+                                         
+                                         
+                                    
+                                    </persName>
+                                </author>
+                                <title type="desc">Additions to the rule of Saint Saviour </title>
+                                <rubric>Incipiunt addiciones domini prioris Petri ad Regulam saluatoris Et primo de gradibus seu signis vere humilitatis Capitulum i:m</rubric>
                                 <incipit>Humilitas vera est timere deum omni hora non amare propriam voluntatem</incipit>
                                 <explicit defective="false">Sorores sepeliantur in ambitibus et in ecclesia infra crates Et similiter fratres.</explicit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107129" type="short">Nyberg (1972-1974)</title>
+                                    <citedRange unit="volume" from="2" to="2"/>
+                                    <citedRange unit="number" from="223" to="223"/>
+                                </bibl>
                             </msItem>
                             <msItem>
                                 <locus from="20" to="23" scheme="folios"/>
-                                <title type="uniform">Revelaciones extravagantes</title>
-                                <rubric>Sequuntur reuelaciones pertinentes ad statuta Et prima de organis non habendis in monasterio</rubric>
-                                <incipit>Christus loquitur ffilii Israel quia carnales erant multa habebant quibus ad deuocionem excitabantur </incipit>
+                                <title type="desc">Selected passages from Revelaciones extravagantes</title>
+                                <rubric>Sequuntur Reuelaciones pertinentes ad statuta Et prima de organis non habendis in monasterio</rubric>
+                                <incipit>Christus loquitur Filii Israel quia carnales erant multa habebant quibus ad deuocionem excitabantur </incipit>
                                 <explicit defective="false">Nec non obedienciam in manu abbatisse promittere in temporalibus Et confessori in spiritualibus. Explicit. </explicit>
                                 <note>
-                                    <locus from="24" to="28" scheme="pages"/> pages have guidelines but no text.
-                                
+                                         <locus from="24" to="28" scheme="pages"/>: guidelines but no text.
+                                     
+                                     
                                 </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107126" type="short">Hollman (1956)</title>
+                                    <citedRange unit="page" from="65" to="69"/>
+                                </bibl>
                             </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="parchment">
+                                <supportDesc>
                                     <support>
                                         <p>
                                             <locus from="1" to="28" scheme="pages"/>
@@ -144,11 +197,15 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="14" unit="folios"/>
                                     </extent>
-                                    <condition>Manuscript discoloured, probably from liquid spill. Upper right corner darkened which affects the end of lines 1-15 on all pages. Text darkened but mostly leggible. </condition>
+                                    <condition>Manuscript discoloured, probably from liquid. Upper right corner darkened which affects the end of lines 1-15 on all pages. Text darkened but mostly legible. <locus from="11" to="12" scheme="pages"/>: Paragraph crossed out in dark ink.</condition>
                                 </supportDesc>
                                 <layoutDesc>
+                                    <layout columns="1" writtenLines="24">
+                                        <locus from="1" to="2" scheme="pages"/>
+                                        <dimensions type="written"/>
+                                    </layout>
                                     <layout columns="1" writtenLines="33 35">
-                                        <locus from="1" to="28" scheme="pages"/>
+                                        <locus from="3" to="28" scheme="pages"/>
                                         <dimensions type="written">
                                             <height quantity="180" unit="mm"/>
                                             <width quantity="125" unit="mm"/>
@@ -158,12 +215,13 @@
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote xml:id="hand-1">Cursive by two scribes. Scribe 1: 1rv; Scribe 2: 2r-12r. </handNote>
+                                <handNote xml:id="hand-1"><locus from="1r" to="1v" scheme="folios"/>Gothic cursive</handNote>
+                                <handNote xml:id="hand-2"><locus from="2r" to="12r" scheme="folios"/>Gothic cursive</handNote>
                             </handDesc>
                             <additions>
                                 <p>
                                     <locus from="3" to="4" scheme="pages"/>
-                                    <note>Individual rules numbered in pencil by a modern hand in the margin.</note>
+                                    <note>The first five rules numbered in pencil by a modern hand in the margin.</note>
                                 </p>
                                 <p>
                                     <locus from="19" to="19" scheme="pages"/>
@@ -171,21 +229,24 @@
                                 </p>
                                 <p>
                                     <locus from="22" to="22" scheme="pages"/>
-                                    <note>Short addition in the margin by a contemporary hand.</note>
+                                    <note>Short addition with signes-de-renvoi in the outer margin by a contemporary hand.</note>
                                 </p>
                                 <p>
                                     <locus from="28" to="28" scheme="pages"/>
-                                    <note>What looks like number 10 written in black ink on the middle of the page. </note>
+                                    <note>Middle of the page in black ink by a modern hand: <quote>10</quote>. </note>
                                 </p>
                             </additions>
                             <decoDesc>
-                                <decoNote type="initials">in blue and red over 2-4 lines. </decoNote>
+                                <p>Main text in dark-brown ink, capitals touched in red, rubrics in red. </p>
+                                <decoNote type="initials">
+                                    <locus from="1" to="1" scheme="pages"/>: Opening plain initial K in same ink as main text over 2 lines (+ extending above the line).
+                                    <locus from="3" to="3" scheme="pages"/>: Opening plain initial H in blue over 4 lines.
+                                    <locus from="3" to="23" scheme="pages"/>: Plain initials in blue and red over 2 lines.
+                                </decoNote>
                             </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <placeName ref="https://www.manuscripta.se/place/100081">                                    Sweden                                                                </placeName>
-                            </origin>
+                            <origin/>
                         </history>
                     </msPart>
                 </msDesc>

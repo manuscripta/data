@@ -11,17 +11,21 @@
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101079</idno>
-                <date when="2022"/>
+                <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,30 +39,98 @@
                             <idno type="id" subtype="Regina">004840245</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Copia supplicacionis exhibende futuro Romano pontifici pro confirmatione regule beate Birgitte. Et omnium indultorum apostolicorum</head>
+                    <head>Copy of a supplication to the future pope regarding confirmation of the rule of St Birgitta (fragment)</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1r" to="SL1v" scheme="folios"/>
+                                            <locus from="SR1r" to="SR1v" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Western paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="415" unit="mm"/>
+                                            <width quantity="150" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="1" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil.
+                                    <secFol>liter committo ut</secFol>
+                                </foliation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner: National Library book label.
+                                    Top of page in ink by a modern hand: <quote xml:lang="sv">Från Antiqvitets Arkivet, utan sign</quote>.
+                                </note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Middle of the page in ink by a modern hand: <quote xml:lang="la">Copia supplicationis exhibende futuro Romano pontifici pro confirmatione regule beate Birgitte</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding>
+                                <p>Modern marbled cardboard binding with leather on the spine. Rebound in 1882. <locus from="LCO" to="LCO" scheme="other"/>, stamped in gold: <quote>A 59</quote>. <locus from="Spine" to="Spine" scheme="other"/>, brown ink on paper label: <quote>Supplicatio pro confirmatione Regula S. Birgittae.</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="420" unit="mm"/>
+                                        <width quantity="155" unit="mm"/>
+                                        <depth quantity="10" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origDate notBefore="1401" notAfter="1500">15th century</origDate>, 
+                        </origin>
+                        <provenance>Unknown provenance. The fragment belonged to the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> where it was stored without a signum. </provenance>
+                        <acquisition>From the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date when="1780"/>(?). </acquisition>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107141" type="short">Friedlander (1963)</title>
+                                <citedRange unit="page" from="86" to="144"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107142" type="short">Höjer (1905)</title>
+                                <citedRange unit="page" from="178" to="179"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="4v" scheme="folios"/>
+                                <title type="desc">Copy of a supplication to the future pope regarding confirmation of the rule of Saint Birgitta </title>
+                                <rubric>Copia supplicacionis Exhibende futuro Romano pontifici pro confirmacione regule beate Birgitte Et omnium indultorum Apostolicorum et cetera</rubric>
+                                <incipit>BEatissime pater Pro parte deuotissimorum filiorum</incipit>
+                                <explicit defective="unknown">Et concedere cum omnibus singulis clausulis necessariis et <sic>oprotunis</sic> non obstantibus contrariis quibus cumque et cetera</explicit>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="paper">
+                                <supportDesc>
                                     <support>
                                         <p>
-                                            <locus from="1r" to="3v" scheme="folios"/>
+                                            <locus from="1r" to="4v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="220" unit="mm"/>
@@ -69,13 +141,30 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="4" unit="folios"/>
                                     </extent>
+                                    <condition>Fragment in poor condition. Leaves torn and stained, but the text is still legible. Leaves mounted on modern paper. <locus from="4" to="4" scheme="folios"/> bottom half of leaf missing.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="55">
+                                        <locus from="1r" to="4v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="330" unit="mm"/>
+                                            <width quantity="80" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic cursive</handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <p>Main text in brown ink.</p>
+                                <decoNote type="initials">
+                                    <locus from="1r" to="1r" scheme="folios"/> Penwork B over 2 lines (+ extending above the line) in same ink as the main text. 
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <origDate notBefore="1401" notAfter="1500">15th century</origDate>
-                            </origin>
+                            <origin/>
                         </history>
                     </msPart>
                 </msDesc>

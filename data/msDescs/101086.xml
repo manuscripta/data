@@ -15,11 +15,13 @@
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101086</idno>
-                <date when="2023"/>
-                <availability status="free"/>
+                <date when="2024"/>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp=" https://www.manuscripta.se/person/100478">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -33,42 +35,96 @@
                             <idno type="id" subtype="Regina">004840418</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>St. Birgitta, Revelations; Simon of Cascia; Bernhardinus of Siena; Richard Rolle of Hampole, De emendatione peccatorum</head>
+                    <head>St Birgitta, Revelations; Simon of Cascia; Bernhardinus of Siena; Richard Rolle of Hampole, De emendatione peccatorum; Theological texts; Ars Moriendi QS</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
                                 <support>
                                     <p>
                                         <locusGrp>
-                                            <locus from="LCI" to="SL4v" scheme="folios"/>
-                                            <locus from="SR1" to="RC1" scheme="other"/>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <dimensions type="leaf">
+                                            <height quantity="305" unit="mm"/>
+                                            <width quantity="220" unit="mm"/>
+                                        </dimensions>
+                                        <locusGrp>
+                                            <locus from="SL1r" to="SL4v" scheme="folios"/>
+                                            <locus from="SR1r" to="SR4v" scheme="folios"/>
                                         </locusGrp>
                                         <material>Western paper</material>
-                                        <dimensions type="leaf"/>
+                                        <dimensions type="leaf">
+                                            <height quantity="305" unit="mm"/>
+                                            <width quantity="215" unit="mm"/>
+                                        </dimensions>
                                     </p>
                                 </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="4" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="4" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil <locus from="441r" to="447r" scheme="folios"/> </foliation>
+                                <collation>
+                                    <formula>Tentative collation according to Spahl, p.77: 1(2), 2(14), 3(12), 4-5(4), 6(14), 7(4+1?), 8-23(12), 24(10) </formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/649d282f1d299f00010d67ab/viewOnly">VisColl</ref>
+                                    </p>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="RCI" to="RCI" scheme="other"/>
+                                <note>Upper left corner, in pencil in a modern hand: illegible notes.</note>
+                            </p>
+                        </additions>
                         <bindingDesc>
-                            <binding>
-                                <p>Formerly bound in 16th-century covers, rebound in 1979. The old covers are kept in a separate box.</p>
+                            <binding contemporary="false">
+                                <p>Rebound with new flyleaves in 1979. Loose cover with broad support bands. Four raised bands on spine. </p>
                                 <p>
                                     <dimensions type="binding">
                                         <height quantity="325" unit="mm"/>
                                         <width quantity="220" unit="mm"/>
                                     </dimensions>
                                 </p>
+                                <condition>
+                                    <locus from="Spine" to="Spine" scheme="other"/> exposed. Black stamp visible on <locus from="tail" to="tail" scheme="other"/>.
+                                </condition>
+                            </binding>
+                            <binding contemporary="false">
+                                <p>16th-century covers, belonging to a work not related to the contents of the manuscript. Traces of a book plate on <locus from="LCI" to="LCI" scheme="other"/>. Top of <locus from="spine" to="spine" scheme="other"/>, in brown ink: illegible title. Below in brown ink: <quote>390</quote>. Bottom of <locus from="spine" to="spine" scheme="other"/>, stamped in gold: <quote>A 68</quote>. These covers are kept in a separate box. </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="320" unit="mm"/>
+                                        <width quantity="220" unit="mm"/>
+                                        <depth quantity="50" unit="mm"/>
+                                    </dimensions>
+                                </p>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin> <locus from="422v" to="422v" scheme="folios"/> "Feliciter finitum anno domini 1472" added by the scribe, later incorrectly changed to 1372.</origin>
-                        <acquisition>Purchased by the National Library on 14 February 1918 in Fritze's bookstore, Stockholm.</acquisition>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
+                            </origPlace> <origDate notBefore="1469" notAfter="1482">ca 1475</origDate> based on the dating of the watermarks.
+                        </origin>
+                        <provenance>Unknown.</provenance>
+                        <acquisition>Purchased by the <orgName>National Library</orgName> on 14 February <date when="1918"/> in <orgName ref="https://www.manuscripta.se/org/100153">Fritze's bookstore</orgName> in <placeName ref="https://www.manuscripta.se/place/100078">Stockholm</placeName>.</acquisition>
                     </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107196" type="short">Spahl (2009)</title>
+                                <citedRange unit="page" from="77" to="77"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107216" type="short">Allen (1927)</title>
+                                <citedRange unit="page" from="239" to="239"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
@@ -76,202 +132,207 @@
                         <msContents>
                             <textLang mainLang="la"/>
                             <msItem defective="false">
-                                <locus from="18r" to="426v" scheme="folios"/>
+                                <locus from="185ra" to="426vb" scheme="folios"/>
                                 <textLang mainLang="la"/>
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/100481">
-                                                                                                              Birgitta
-                                                                                                              Birgersdotter
-                                                                                                                                                         
-                                                                                                                                               
-                                                                                                                                                  
-                                                                                                                                                                                       
-                                                                                                                                                                             
-                                                                                                                                                                   
-                                                                                                                                                         
-                                                                                                                                               
-                                                                                                                                     
-                                                                                                                           
-                                                                                                                 
-                                                                                                                                                  
-                                                                                                                                                                        
-                                                                                                                                                              
-                                                                                                                                                    
-                                                                                                                                          
-                                                                                                                                
-                                                                                                                                                    
-                                                                                                                                                                             
-                                                                                                                                                                   
-                                                                                                                                                         
-                                                                                                                                               
-                                                                                                                                     
-                                                                                                                           
-                                                                                                                                                  
-                                                                                                                                                  
-                                                                                                                                                                             
-                                                                                                                                                                   
-                                                                                                                                                         
-                                                                                                                                               
-                                                                                                                                     
-                                                                                                                           
-                                                                                                                                                                   
-                                                                                                                                                         
-                                                                                                                                               
-                                                                                                                                     
-                                                                                                                                                                                            
-                                                                                                                                                                                  
-                                                                                                                                                                        
-                                                                                                                                                              
-                                                                                                                                                    
-                                                                                                                                          
-                                                                                                                                
-                                                                                                                      
-                                                                                                                                                       
-                                                                                                                                                       
-                                                                                                                                                                        
-                                                                                                                                                              
-                                                                                                                                                    
-                                                                                                                                          
-                                                                                                                                
-                                                                                                                                                                        
-                                                                                                                                                              
-                                                                                                                                                    
-                                                                                                                                          
-                                                                                                                                
-                                                                                                                                                  
-                                                                                                                                                              
-                                                                                                                                                    
-                                                                                                                                          
-                                                                                                                                                  
-                                                                                                                                                              
-                                                                                                                                                    
-                                                                                                                                          
-                                                                                                                                                  
-                                                                                                                                                    
-                                                                                                                                                                        
-                                                                                                                                                              
-                                                                                                                                                    
-                                                                                                                                          
-                                                                                                                                
-                                                                                                          
-                                                                                                          
-                                                                                                     
-                                                                                                     
-                                                                                                
-                                                                                                
-                                                                                           
-                                                                                           
-                                                                                      
-                                                                                      
-                                                                                 
-                                                                                 
-                                                                            
-                                                                            
-                                                                       
-                                                                       
-                                                                  
-                                                                  
-                                                             
-                                                             
-                                                        
-                                                        
-                                                   
-                                                   
-                                              
-                                              
-                                         
-                                         
+                                        Birgitta
+                                        Birgersdotter
                                     
                                     </persName>
                                 </author>
                                 <title type="uniform">Revelations</title>
                                 <msItem>
-                                    <locus from="18r" to="18v" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book I.20-22</title>
+                                    <locusGrp>
+                                        <locus from="185ra" to="185vb" scheme="folios"/>
+                                        <locus from="197ra" to="207va" scheme="folios"/>
+                                    </locusGrp>
+                                    <title type="desc">Revelations, Book 1:20-22; 1:45-60</title>
                                     <incipit defective="true">multis pro futuro Sicut enim surculus si inseritur trunco arido truncus incipit florere</incipit>
-                                    <explicit defective="true">quia licet predicator fere omnes vide[at malo]</explicit>
-                                </msItem>
-                                <msItem defective="true">
-                                    <locus from="197r" to="207v" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book I.45-60</title>
-                                    <incipit>homo Deinde loquebatur filius astante celesti exercitu</incipit>
-                                    <explicit defective="false">ad locum qui mihi placuerit</explicit>
+                                    <explicit defective="false">vsquequo veniant ad locum qui mihi placuerit</explicit>
+                                    <note>Several folios are missing in the beginning.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107143" type="short">Undhagen (1977)</title>
+                                        <citedRange unit="page" from="296" to="441"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="207v" to="229r" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book II</title>
+                                    <locus from="207vb" to="229rb" scheme="folios"/>
+                                    <title type="desc">Revelations, Book 2</title>
                                     <rubric>Verba beate brigitte ad christum quare non subtrahat malos antequam veniant ad peccatum. Secundus liber celestium reuelacionum beate brigitte</rubric>
                                     <incipit>Filius loquebatur ad sponsam dicens</incipit>
-                                    <explicit defective="false">non est licitum tibi scire sed cum tempus fuerit loquendi</explicit>
+                                    <explicit defective="false">non est licitum tibi scire Sed cum tempus fuerit loquendi</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107144" type="short">Undhagen (2001)</title>
+                                        <citedRange unit="page" from="27" to="124"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="229r" to="260v" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book VIII</title>
-                                    <incipit defective="true">Sepe infirma mundi eligit sibi </incipit>
-                                    <explicit defective="false">quod ego sum suauis et mitis</explicit>
-                                    <note>The rubric "Tercius liber" <locus from="230r" to="230r" scheme="folios"/> is incorrect. </note>
+                                    <locus from="229rb" to="229vb" scheme="folios"/>
+                                    <author>
+                                        <persName ref="https://www.manuscripta.se/person/102533">
+                                            Alfonso
+                                            Pecha
+                                        
+                                        </persName>
+                                    </author>
+                                    <title type="desc">Epistola solitarii ad reges, 1-3</title>
+                                    <incipit>Sepe infirma mundi eligit sibi </incipit>
+                                    <explicit defective="false">ne bonus sponsus castam coniugem et fidelem adultero illudendo exponit </explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107150" type="short">Aili (2002)</title>
+                                        <citedRange unit="page" to="58" from="50"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="260v" to="279r" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book III</title>
+                                    <locus from="230ra" to="260va" scheme="folios"/>
+                                    <title type="desc">Revelations, Book 8:8-58</title>
+                                    <incipit>Ad presentis quippe libri nunc iam materiam descendendo</incipit>
+                                    <explicit>quod ego sum suauis et mitis</explicit>
+                                    <note>The rubric <quote>Tercius liber</quote> <locus from="230r" to="230r" scheme="folios"/> is incorrect.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107150" type="short">Aili (2002)</title>
+                                        <citedRange unit="page" from="79" to="226"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="260vb" to="279ra" scheme="folios"/>
+                                    <title type="desc">Revelations, Book 3</title>
                                     <incipit>Ihesus christus deus et homo qui venit in terram assumere humanitatem</incipit>
                                     <explicit defective="false">ut verba Dei per illud diffundantur</explicit>
                                     <finalRubric>Tercius liber.</finalRubric>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107145" type="short">Jönsson (1998)</title>
+                                        <citedRange unit="page" from="84" to="190"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="279r" to="336r" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book IV</title>
-                                    <incipit defective="false">[A]pparuit sponse quedam persona hominis</incipit>
-                                    <explicit defective="true">qui cottidie festinanter appropinquant gracie et visioni maiestatis</explicit>
-                                    <note>
-                                        <p>On <locus from="329v" to="329v" scheme="folios"/> the words "Explicit quartus liber" followed by a note in pencil by Collijn.</p>
-                                    </note>
+                                    <locus from="279rb" to="336ra" scheme="folios"/>
+                                    <title type="desc">Revelations, Book 4</title>
+                                    <incipit defective="false">
+                                        <supplied reason="omitted">A</supplied>pparuit sponse quedam persona hominis
+                                    
+                                    </incipit>
+                                    <explicit defective="true">et visioni maiestatis</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107146" type="short">Aili (1992)</title>
+                                        <citedRange unit="page" from="59" to="401"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="336r" to="348v" scheme="folios"/>
-                                    <title type="uniform">Sermo Angelicus</title>
-                                    <incipit defective="false">Cum beata brigitta principissa regni Swecie</incipit>
-                                    <explicit defective="false">et regnat deus in secula seculorum. Amen</explicit>
+                                    <locus from="336ra" to="348va" scheme="folios"/>
+                                    <title type="desc">Sermo Angelicus</title>
+                                    <incipit defective="false">
+                                        CVm beata brigitta principissa regni swecie
+                                    
+                                    </incipit>
+                                    <explicit defective="false">et regnat deus in secula seculorum Amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107127" type="short">Eklund (1972)</title>
+                                        <citedRange unit="page" from="75" to="137"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="348v" to="363v" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book V</title>
+                                    <locus from="348vb" to="363vb" scheme="folios"/>
+                                    <title type="desc">Revelations, Book 5</title>
                                     <incipit>Incipit quintus liber celestium reuelacionum Christi ad beatam Brigittam.</incipit>
                                     <explicit defective="false">Itaque cum veneris ad ista loca ostendam tibi plura etc</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107147" type="short">Bergh (1971)</title>
+                                        <citedRange unit="page" from="97" to="175"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="364r" to="406r" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book VI</title>
-                                    <incipit>Mater Dei loquebatur ad sponsam dicens ego sum regina celi</incipit>
-                                    <explicit defective="false">Ideo dimittatur proprie voluntati, quia deo accepcius est in mundo iuste viuere et laborare manibus quam in heremo uel religione stare sine Dei caritate etc</explicit>
+                                    <locus from="364ra" to="406ra" scheme="folios"/>
+                                    <title type="desc">Revelations, Book 6:1-109</title>
+                                    <incipit>MAter dei loquebatur ad sponsam dicens Ego sum regina celi</incipit>
+                                    <explicit defective="false">Ideo dimittatur proprie voluntati, Quia deo accepcius est in mundo iuste viuere et laborare manibus quam in heremo uel religione stare sine dei caritate etc</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107148" type="short">Bergh (1991)</title>
+                                        <citedRange unit="page" from="59" to="270"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="406r" to="422v" scheme="folios"/>
-                                    <title type="uniform">Revelations, Book VII</title>
-                                    <incipit defective="false">Iste liber celestium reuelacionum est ultimus et has reuelaciones huius libri habuit domina Brigitta in Roma</incipit>
-                                    <explicit defective="false">Dicta vero missa et sacramentis perceptis cum maxima deuocione et reuerencia inter manus dictarum personarum emisit spiritum.</explicit>
-                                    <finalRubric>Feliciter finitum anno domini 1472</finalRubric>
+                                    <locus from="406rb" to="422va" scheme="folios"/>
+                                    <title type="desc">Revelations, Book 7</title>
+                                    <incipit defective="false">Iste liber celestium reuelacionum est ultimus</incipit>
+                                    <explicit defective="false">inter manus dictarum personarum emisit spiritum. </explicit>
+                                    <finalRubric>Feliciter finitum anno domini 1372.</finalRubric>
+                                    <note>
+                                        <p>The year <quote>1372 </quote>in the explicit corrected from <quote>1472</quote>.</p>
+                                        <p/>
+                                    </note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107149" type="short">Bergh (1967)</title>
+                                        <citedRange unit="page" from="113" to="215"/>
+                                    </bibl>
                                 </msItem>
                                 <msItem>
-                                    <locus from="422v" to="426r" scheme="folios"/>
-                                    <title type="uniform">Excerpts from the Revelations, books IV and VI</title>
-                                    <incipit defective="false">Filius dei loquitur </incipit>
+                                    <locus from="422va" to="426rb" scheme="folios"/>
+                                    <title type="desc">Excerpts from the Revelations, books 4, 6, 7 and the Revelationes extravagantes</title>
+                                    <incipit defective="false">Filius dei loquitur quid dixit tibi ille magniloquus et flabeullum ventorum</incipit>
                                     <explicit defective="false">Gloria tibi sancta trinitas</explicit>
+                                    <note>Excerpts from: Rev. 4:80; 129; 6:110; 113-120; Rev. Extr. 10; Rev. 4:52; 4:55; 7:11.</note>
+                                    <listBibl>
+                                        <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107146" type="short">Aili (1992)</title>
+                                        </bibl>
+                                        <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107149" type="short">Bergh (1967)</title>
+                                        </bibl>
+                                        <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107148" type="short">Bergh (1991)</title>
+                                        </bibl>
+                                        <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107126" type="short">Hollman (1956)</title>
+                                        </bibl>
+                                    </listBibl>
                                 </msItem>
-                                <note>The chapter numbers generally differ somewhat from modern editions. Notes in pencil by Isak Collijn throughout.</note>
+                                <note>Several folios are missing at the beginning of the codex. The chapter numbers generally differ somewhat from modern editions of Birgitta's texts. The different books of Birgitta's Revelations are not presented in order; for example, book 8 is inserted between book 2 and 3.</note>
                             </msItem>
                             <msItem>
-                                <locus from="426v" to="426v" scheme="folios"/>
-                                <title type="uniform">Excerpts from texts by Simon of Cascia and Bernardinus of Siena</title>
-                                <incipit>Collegerunt pontifices et pharisei concilium</incipit>
+                                <locus from="426va" to="426vb" scheme="folios"/>
+                                <title type="desc">Excerpts from texts by Simon of Cascia and Bernardinus of Siena</title>
+                                <incipit>Collegerunt pontifices et pharisei concilium et dicebant quod facimus quia hic homo etc</incipit>
                                 <explicit defective="false">qui autem in terra posuerit uel positum non leuauerit morte mulcetur</explicit>
                             </msItem>
                             <msItem>
-                                <locus from="427r" to="435v" scheme="folios"/>
-                                <title type="uniform">Richard Rolle of Hampole, De emendatione peccatorum</title>
+                                <locus from="427ra" to="435va" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102601">
+                                        Richard
+                                        Rolle of Hampole
+                                    
+                                    </persName>
+                                </author>
+                                <title type="desc">De emendatione peccatorum</title>
                                 <rubric>De conuersione capitulum primum</rubric>
-                                <incipit defective="false">Ne tardes conuerti et ne deferas de die in diem</incipit>
-                                <explicit defective="false">in secula seculorum Amen</explicit>
+                                <incipit defective="false">NE tardes conuerti ad dominum et ne deferas de die in diem</incipit>
+                                <explicit defective="false">Cui sit honor et gloria et graciarum actio in secula seculorum Amen</explicit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107196" type="short">Spahl (2009), De emendatione vitae</title>
+                                    <citedRange unit="page" from="162" to="236"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="436ra" to="444rb" scheme="folios"/>
+                                <title type="desc">Theological text (unidentified)</title>
+                                <incipit defective="false">An deum super omnia uel equali dilectione ei aliquod diligas uel creaturam propter eum</incipit>
+                                <explicit defective="false">in quo Christus cenauit cum discipulis</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="444va" to="447vb" scheme="folios"/>
+                                <title type="desc">Ars Moriendi QS</title>
+                                <rubric>De morte corporali</rubric>
+                                <incipit defective="false">
+                                    <supplied reason="omitted">Q</supplied>uamuis secundum philosophum 3o ethicorum omnium terribilium mors corporis sit terribilissima                                                                                                                                                                
+                                
+                                </incipit>
+                                <explicit defective="true">supplex inploro tuam clemenciam et</explicit>
+                                <note>This is the version called <quote>Ars Moriendi QS</quote> after the first words <quote xml:lang="la">Quamvis secundum</quote>. It ends on <locus from="447vb" to="447vb" scheme="folios"/> with a text rubricated <quote xml:lang="la">Oracio de passione</quote></note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107308" type="short">Campbell (1995)</title>
+                                </bibl>
                             </msItem>
                         </msContents>
                         <physDesc>
@@ -279,30 +340,97 @@
                                 <supportDesc>
                                     <support>
                                         <p>
-                                            <locus from="1r" to="253v" scheme="folios"/>
+                                            <locus from="185r" to="447v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="305" unit="mm"/>
                                                 <width quantity="210" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="200r" to="228v" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull's head with flower, similar to Briquet 14856.</term>
+                                            </watermark>
+                                            <watermark n="2">
+                                                <locusGrp>
+                                                    <locus from="229r" to="252v" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Two keys with cross, similar to Briquet 3883.</term>
+                                            </watermark>
+                                            <watermark n="3">
+                                                <locusGrp>
+                                                    <locus from="253" to="330" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull's head with flower, similar to Briquet 14857.</term>
+                                            </watermark>
+                                            <watermark n="4">
+                                                <locusGrp>
+                                                    <locus from="331r" to="390v" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull's head with crown and flower, similar to Piccard II:3, p. 737, nr 360.</term>
+                                            </watermark>
+                                            <watermark n="5">
+                                                <locusGrp>
+                                                    <locus from="391r" to="426v" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull's head with flower and snake, similar to Piccard II:3, p. 623, nr 649.</term>
+                                            </watermark>
+                                            <watermark n="6">
+                                                <locusGrp>
+                                                    <locus from="427r" to="447v" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull's head with flower, similar to Piccard II:3, p. 668, nr 213.</term>
+                                            </watermark>
+                                            <note>On watermarks in this manuscript, see <bibl>
+                                                    <title ref="https://www.manuscripta.se/bibl/107196" type="short">Spahl (2009), De emendatione vitae</title>
+                                                    <citedRange unit="page" from="77" to="77"/>
+                                                </bibl></note>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="253" unit="folios"/>
                                     </extent>
+                                    <foliation>Contemporary foliation <locus from="185r" to="440r" scheme="folios"/>. Several leaves are missing at the beginning of the book; the foliation starts at  <locus from="185r" to="185r" scheme="folios"/> , followed by  <locus from="197r" to="197r" scheme="folios"/> ;  <locus from="243r" to="243r" scheme="folios"/>  is doubled. </foliation>
+                                    <condition>Some folios are worn, especially at the beginning and at the end.</condition>
                                 </supportDesc>
                                 <layoutDesc>
-                                    <layout columns="2">
-                                        <dimensions type="written"/>
+                                    <layout columns="2" writtenLines="42">
+                                        <locus from="185r" to="447v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height min="230" max="230" unit="mm"/>
+                                            <width min="160" max="160" unit="mm"/>
+                                        </dimensions>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1"><locus from="185r" to="447v" scheme="folios"/> Gothic cursive. Possibly one folio <locus from="426v" to="426v" scheme="folios"/> written by another hand. </handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="185r" to="427r" scheme="folios"/>
+                                    <note>In pencil in a modern hand (possibly <persName role="librarian" ref="https://www.manuscripta.se/person/102502">Isak Collijn</persName>): several notes referring to chapters in Birgitta's Revelations.</note>
+                                </p>
+                                <p>
+                                    <locus from="217r" to="217r" scheme="folios"/>
+                                    <note>Upper left margin, in brown ink: pointing hand.</note>
+                                </p>
+                                <p>
+                                    <locus from="230r" to="230r" scheme="folios"/>
+                                    <note>In light red ink by a medieval hand, possibly the same as the main scribe: <quote>Tercius liber</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="244r" to="244r" scheme="folios"/>
+                                    <note>Bottom of page, in brown ink, in a medieval hand: <quote xml:lang="la">Oracio beate Brigitte</quote> and a pointing hand.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Capitals touched in red. Chapter numbers and some rubrics in lighter red ink.</p>
+                                <decoNote type="initials">Plain initials in red ink over 2 lines, some extended along the margin.</decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origDate notBefore="1451" notAfter="1500">15th century, second half (1472?)</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
@@ -328,44 +456,44 @@
             <desc>Left cover, inside</desc>
             <graphic url="ms-101086_0002.tif" width="6734px" height="9271px"/>
         </surface>
-        <surface xml:id="ms-101086_1">
-            <desc>p. 1</desc>
+        <surface xml:id="ms-101086_SL1r">
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="ms-101086_0003.tif" width="6677px" height="8867px"/>
         </surface>
-        <surface xml:id="ms-101086_2">
-            <desc>p. 2</desc>
+        <surface xml:id="ms-101086_SL1v">
+            <desc>⟨f. Iv⟩</desc>
             <graphic url="ms-101086_0004.tif" width="6502px" height="8522px"/>
         </surface>
-        <surface xml:id="ms-101086_3">
-            <desc>p. 3</desc>
+        <surface xml:id="ms-101086_SL2r">
+            <desc>⟨f. IIr⟩</desc>
             <graphic url="ms-101086_0005.tif" width="6713px" height="8816px"/>
         </surface>
-        <surface xml:id="ms-101086_4">
-            <desc>p. 4</desc>
+        <surface xml:id="ms-101086_SL2v">
+            <desc>⟨f. IIv⟩</desc>
             <graphic url="ms-101086_0006.tif" width="6502px" height="8522px"/>
         </surface>
-        <surface xml:id="ms-101086_5">
-            <desc>p. 5</desc>
+        <surface xml:id="ms-101086_SL3r">
+            <desc>⟨f. IIIr⟩</desc>
             <graphic url="ms-101086_0007.tif" width="6898px" height="8867px"/>
         </surface>
-        <surface xml:id="ms-101086_6">
-            <desc>p. 6</desc>
+        <surface xml:id="ms-101086_SL3v">
+            <desc>⟨f. IIIv⟩</desc>
             <graphic url="ms-101086_0008.tif" width="6502px" height="8522px"/>
         </surface>
-        <surface xml:id="ms-101086_7">
-            <desc>p. 7</desc>
+        <surface xml:id="ms-101086_SL4r">
+            <desc>⟨f. IVr⟩</desc>
             <graphic url="ms-101086_0009.tif" width="6898px" height="8867px"/>
         </surface>
-        <surface xml:id="ms-101086_8">
-            <desc>p. 8</desc>
+        <surface xml:id="ms-101086_SL4v">
+            <desc>⟨f. IVv⟩</desc>
             <graphic url="ms-101086_0010.tif" width="6502px" height="8522px"/>
         </surface>
         <surface xml:id="ms-101086_18r">
-            <desc>f. 18r</desc>
+            <desc>f. 185r</desc>
             <graphic url="ms-101086_0011.tif" width="6679px" height="8567px"/>
         </surface>
         <surface xml:id="ms-101086_18v">
-            <desc>f. 18v</desc>
+            <desc>f. 185v</desc>
             <graphic url="ms-101086_0012.tif" width="6502px" height="8522px"/>
         </surface>
         <surface xml:id="ms-101086_197r">
@@ -2384,36 +2512,36 @@
             <desc>f. 447v</desc>
             <graphic url="ms-101086_0516.tif" width="6800px" height="8733px"/>
         </surface>
-        <surface xml:id="ms-101086_9">
-            <desc>p. 9</desc>
+        <surface xml:id="ms-101086_SR1r">
+            <desc>⟨f. I´r⟩</desc>
             <graphic url="ms-101086_0517.tif" width="6318px" height="8867px"/>
         </surface>
-        <surface xml:id="ms-101086_10">
-            <desc>p. 10</desc>
+        <surface xml:id="ms-101086_SR1v">
+            <desc>⟨f. I´v⟩</desc>
             <graphic url="ms-101086_0518.tif" width="6800px" height="8733px"/>
         </surface>
-        <surface xml:id="ms-101086_11">
-            <desc>p. 11</desc>
+        <surface xml:id="ms-101086_SR2r">
+            <desc>⟨f. II´r⟩</desc>
             <graphic url="ms-101086_0519.tif" width="6318px" height="8867px"/>
         </surface>
-        <surface xml:id="ms-101086_12">
-            <desc>p. 12</desc>
+        <surface xml:id="ms-101086_SR2v">
+            <desc>⟨f. II´v⟩</desc>
             <graphic url="ms-101086_0520.tif" width="6734px" height="8941px"/>
         </surface>
-        <surface xml:id="ms-101086_13">
-            <desc>p. 13</desc>
+        <surface xml:id="ms-101086_SR3r">
+            <desc>⟨f. III´r⟩</desc>
             <graphic url="ms-101086_0521.tif" width="6318px" height="8867px"/>
         </surface>
-        <surface xml:id="ms-101086_14">
-            <desc>p. 14</desc>
+        <surface xml:id="ms-101086_SR3v">
+            <desc>⟨f. III´v⟩</desc>
             <graphic url="ms-101086_0522.tif" width="6734px" height="8941px"/>
         </surface>
-        <surface xml:id="ms-101086_15">
-            <desc>p. 15</desc>
+        <surface xml:id="ms-101086_SR4r">
+            <desc>⟨f. IV´r⟩</desc>
             <graphic url="ms-101086_0523.tif" width="6318px" height="8867px"/>
         </surface>
-        <surface xml:id="ms-101086_16">
-            <desc>p. 16</desc>
+        <surface xml:id="ms-101086_SR4v">
+            <desc>⟨f. IV´v⟩</desc>
             <graphic url="ms-101086_0524.tif" width="6734px" height="8941px"/>
         </surface>
         <surface xml:id="ms-101086_RCI">

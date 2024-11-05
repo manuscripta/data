@@ -19,7 +19,7 @@
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101081</idno>
-                <date when="2022"/>
+                <date when="2023"/>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
@@ -43,18 +43,79 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1r" to="SL1v" scheme="folios"/>
+                                            <locus from="SR1r" to="SR1v" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Western paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="295" unit="mm"/>
+                                            <width quantity="220" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="1" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in ink. 
+                                    <secFol>Indotationis dignitatem</secFol>
+                                </foliation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Upper left corner: National Library modern ex libris
+                                    Upper edge in ink by a modern hand: <quote xml:lang="la">Från Antiqvitets Arkivet, utan sign.</quote>
+                                </note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Middle of page in pencil by a modern hand: <quote xml:lang="sv">Thomas de Tuderto (Thuberto). Tractatus de arte sermocinandi ac etiam collationes faciendi. Skriven i Uppsala 1501 av Ericus Nicolai</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding>
+                                <p>Modern marbled cardboard binding with leather spine. Rebound in 1882. <locus from="LCO" to="LCO" scheme="other"/>, stamped in gold: <quote>A 63</quote>. <locus from="Spine" to="Spine" scheme="other"/>, brown ink on paper label: <quote>De modo colligendi sermones.</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="30" unit="mm"/>
+                                        <width quantity="225" unit="mm"/>
+                                        <depth quantity="10" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
+                                <placeName ref="https://www.manuscripta.se/place/100089">Uppsala</placeName>
+                            </origPlace>, <origDate when="1501">1501</origDate>
+                        </origin>
+                        <provenance>According to  the colophon on <locus from="8v" to="8v" scheme="folios"/> (and notes on <locus from="SL1r" to="SL1r" scheme="folios"/> and <locus from="Ir" to="Ir" scheme="folios"/>) the text was written by <persName ref="https://www.manuscripta.se/person/100672">Ericus Nicolai</persName> in <placeName ref="https://www.manuscripta.se/place/100089">Uppsala</placeName>. The fate of the text after this is unknown. The note on <locus from="LCI" to="LCI" scheme="other"/>  states that the manuscript belonged to the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>.</provenance>
+                        <acquisition>From the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date>1780(?)</date>.</acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/101301">Hedlund (1980)</title>
-                                <citedRange from="44" to="44" unit="page"/>
+                                <title ref="https://www.manuscripta.se/bibl/107158" type="short">Hedlund (1980)</title>
+                                <citedRange unit="page" from="44" to="44"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107164" type="short">Zumkeller (1966)</title>
+                                <citedRange unit="page" from="617" to="617"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107165" type="short">Caplan (1936)</title>
+                                <citedRange unit="page" from="4" to="4"/>
+                                <citedRange unit="page" from="8" to="8"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -64,13 +125,27 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="8v" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102512">Thomas de Tuderto</persName>
+                                </author>
+                                <title type="uniform">Tractatus de arte sermocinandi ac etiam collationes faciendi</title>
+                                <incipit>Ars sermocinandi ac eciam collaciones faciendi prima facie diuiduntur vii cola Capitulorum primum uersatur circa thematis diuisionem</incipit>
+                                <explicit defective="false">quod est saporis ergo incipiamus primum ibi qui cum <unclear unit="chars" quantity="5" reason="illegible"/> 2m  ibi me sequatur 3m ibi et ubi ego sum illic et cetera</explicit>
+                                <note>
+                                    <locus from="S9" to="S9" scheme="folios"/>: blank.
+                                
+                                </note>
+                                <colophon xml:lang="la"><locus from="8v" to="8v" scheme="folios"/>Explicit tractatus de modo colligendi sermones et collaciones scriptus upsalie per me ericum nicolai anno domini millesimo quingentesimo primo et finitus 2a feria post dominicam palmarum et cetera</colophon>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="paper">
+                                <supportDesc>
                                     <support>
                                         <p>
-                                            <locus from="1r" to="8v" scheme="folios"/>
+                                            <locus from="Ir" to="9v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="295" unit="mm"/>
@@ -79,18 +154,47 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="8" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="10" unit="folios"/>
                                     </extent>
+                                    <condition>Pages darkened, possibly due to liquid spill. Text still legible. Grey and brown spots on pages (grey possibly mold).</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="50 55">
+                                        <locus from="1r" to="8v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="205" unit="mm"/>
+                                            <width quantity="140" unit="mm"/>
+                                        </dimensions>
+                                        <note>Traces of guidelines visible.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic cursive</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="Ir" to="Ir" scheme="folios"/>
+                                    <note>Upper part of page in black ink by a modern hand: <quote xml:lang="la">?Ericus Nicolai? Tractatus de Methodo colligendi sermones et collaciones. Upsalie 1501.</quote></note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top margin in pencil by a modern hand: <quote>A 63</quote> (current signum).</note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="2v" scheme="folios"/>
+                                    <note>Outer margins in dark-brown and faded black ink (possibly by the same hand as the main text): chapter headings.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in dark brown ink, capitals touched in red or blue. <locus from="1r" to="2r" scheme="folios"/>: Words underlined in red.</p>
+                                <decoNote type="initials">
+                                    <locus from="1r" to="1r" scheme="folios"/>: plain A in red over 3 lines; <locus from="1v" to="1v" scheme="folios"/>: plain V in blue (outlined in ink) over 3 lines. <locus from="2v" to="8r" scheme="folios"/>: space reserved for initials. 
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/100089">Uppsala</placeName>
-                                </origPlace>, <origDate when="1501">1501</origDate>
-                            </origin>
+                            <provenance/>
                         </history>
                     </msPart>
                 </msDesc>
@@ -125,12 +229,12 @@
             <desc>⟨f. Iv⟩</desc>
             <graphic url="ms-101081_0004.tif" width="6099px" height="7907px"/>
         </surface>
-        <surface xml:id="ms-101081_">
-            <desc/>
+        <surface xml:id="ms-101081_L1r">
+            <desc>Ir</desc>
             <graphic url="ms-101081_0005.tif" width="6099px" height="7907px"/>
         </surface>
-        <surface xml:id="ms-101081_">
-            <desc/>
+        <surface xml:id="ms-101081_L1v">
+            <desc>Iv</desc>
             <graphic url="ms-101081_0006.tif" width="6099px" height="7907px"/>
         </surface>
         <surface xml:id="ms-101081_1r">
@@ -197,12 +301,12 @@
             <desc>f. 8v</desc>
             <graphic url="ms-101081_0022.tif" width="6099px" height="7907px"/>
         </surface>
-        <surface xml:id="ms-101081_">
-            <desc/>
+        <surface xml:id="ms-101081_S9r">
+            <desc>⟨f. 9r⟩</desc>
             <graphic url="ms-101081_0023.tif" width="6099px" height="7907px"/>
         </surface>
-        <surface xml:id="ms-101081_">
-            <desc/>
+        <surface xml:id="ms-101081_S9v">
+            <desc>⟨f. 9v⟩</desc>
             <graphic url="ms-101081_0024.tif" width="6099px" height="7907px"/>
         </surface>
         <surface xml:id="ms-101081_SR1r">

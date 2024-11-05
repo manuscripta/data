@@ -19,9 +19,9 @@
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101066</idno>
-                <date when="2022"/>
+                <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -49,7 +49,7 @@
                                             <locus from="LCI" to="LCI" scheme="folios"/>
                                             <locus from="SL1r" to="SL9v" scheme="folios"/>
                                             <locus from="SR1r" to="SR9v" scheme="folios"/>
-                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="folios"/>
                                         </locusGrp>
                                         <material>Western paper</material>
                                         <dimensions type="leaf">
@@ -62,12 +62,18 @@
                                     <measure type="leftFlyleaves" quantity="9" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="9" unit="folios"/>
                                 </extent>
-                                <foliation>Foliated in pencil by a modern hand.</foliation>
+                                <foliation>Modern foliation in pencil.</foliation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Midlde of page, pasted on note with text in black ink by a modern hand:  Information about the manuscript in Swedish. </note>
+                            </p>
+                        </additions>
                         <bindingDesc>
                             <binding>
-                                <p>Modern binding. Rebound in 1882 and 1976. Three paper leaves used in former binding containing poems were moved in 1949 to Vs 143: Aschaneus and one leaf to Biographica: Andreas Gylle. </p>
+                                <p>Modern parchment binding. Rebound in <date when="1882"/> and <date when="1976"/>. Three paper leaves from the previous binding containing poems by later authors were moved in <date when="1949"/> to the manuscript Kungliga Biblioteket, Vs 143: Aschaneus; and one leaf to Kungliga Biblioteket, Biografi: Andreas Gylle (in box Groth-Göös). </p>
                                 <p>
                                     <dimensions type="binding">
                                         <height quantity="310" unit="mm"/>
@@ -79,13 +85,23 @@
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin>Sweden, liturgical use, <placeName ref="https://www.manuscripta.se/place/100089">Uppsala diocese.</placeName> </origin>
-                        <provenance>Belonged to the church in <placeName ref="https://www.manuscripta.se/place/100203">Hammarby, Uppland</placeName> in <date when="1621"/>. 6v: "Nota bene. 1621. in jnventione Ecclesie Hammarbyensis annotate sunt In hoc lib. folia – 76. Nota Et nunc 1625 it idem 76 folia". </provenance>
-                        <provenance>Inscribed by <persName>Martin Aschaneus</persName> (1575-1641), a pastor of the church, who was appointed to antiquarian in 1630.</provenance>
-                        <provenance>Listed with the title Communis piusque modus Dedicationis et Consecrationis Ecclesia Dei in a list of books and manuscripts delivered from Martin Aschanaeus’ collection to the <placeName ref="https://www.manuscripta.se/place/100204">Antikvitetskollegiet</placeName> in <date when="1641"/>, ed. H. Lundström, Martin Aschaneus på 1640-talet till riksarkivet öfverlämnad samling böcker och handskrifter’, KÅ 7 (1906), 265, see also Gödel, p. 219-20. 
-                            <placeName ref="https://www.manuscripta.se/place/100202">Antikvitetsarkivet</placeName>, listed in the old handwritten catalogues/inventories as: "no. 11" (U 90:4, p. 65); "L 11" (U 91:1); "L 11" (U 91:2:1), but changed to "16" with the addition "af Aschanei Böcker". Berch’s catalogue shelf mark A 16 (current signum).
-                        </provenance>
-                        <acquisition>To the National Library from Antikvitetsarkivet. </acquisition>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
+                                <placeName ref="https://www.manuscripta.se/place/100113">Uppland</placeName>
+                            </origPlace>, <origDate notBefore="1301" notAfter="1400">14th century</origDate>,  
+                        </origin>
+                        <provenance>According to a note on <locus scheme="folios" from="6v" to="6v"/> the manuscript belonged to the church in <placeName ref="https://www.manuscripta.se/place/100203">Hammarby, Uppland</placeName> in <date when="1621"/>.  The note is probably by <persName ref="https://www.manuscripta.se/person/102552">Martin Aschaneus</persName> (1575-1641), a pastor of the church, who was appointed antiquarian in <date when="1630"/>.</provenance>
+                        <provenance>Listed as <quote xml:lang="la">Communis piusque modus Dedicationis et Consecrationis Ecclesia Dei</quote> in a list of books and manuscripts delivered from Martin Aschaneus’s collection to the <orgName ref="https://www.manuscripta.se/org/100156">College of Antiquities</orgName> (later <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>) in <date when="1641"/>, see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107134" type="short">Lundström (1906)</title>
+                                <citedRange unit="page" from="261" to="265"/>
+                            </bibl> and <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107135" type="short">Gödel (1916)</title>
+                                <citedRange unit="page" from="219" to="220"/>
+                            </bibl>. </provenance>
+                        <provenance>Current signum, <quote>A 16</quote>, first established in Helin’s catalogue from the 1720s (U 91:2:2).</provenance>
+                        <provenance>Also mentioned in the following catalogues and inventories: U 90:4, p. 65, <quote>no. 11</quote>; U 91:1,<quote> L 11</quote>.</provenance>
+                        <acquisition>From the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date when="1780"/>. </acquisition>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -95,31 +111,59 @@
                             <textLang mainLang="la"/>
                             <msItem>
                                 <locus from="1r" to="5v" scheme="folios"/>
-                                <title type="uniform">Antiphons for the feast In dedicatione ecclesiae</title>
+                                <title type="uniform">Dedicatio ecclesiae</title>
                                 <rubric>In festo dedicacionis ecclesie ad uesperas super psalmos antiphone</rubric>
                                 <incipit>Pax huic domui et omnibus habitantibus in ea</incipit>
-                                <explicit defective="false">hodie huic domui salus a deo facta est alleluya</explicit>
+                                <explicit defective="false">hodie huic domui salus a deo facta est alleluya psalmus canticum Magnificat</explicit>
                                 <note>
-                                    <p>Identified hymns AH 51, nr. 102, 103 (N.B. 103 starts at verse 5).</p>
-                                    <p>The antiphons of Lauds are not found in any other known Uppsala source, see Helander, Uppsalaliturgin, p. 169 with foot-note 317, p. 171; the division Hic salus aegris of hymn AH 51, nr. 103 is known only from Sweden, see Moberg, Lit. Hymnen, p. 271. </p>
-                                    <p>On <locus from="2rv" to="2rv" scheme="folios"/>, <locus from="4v" to="4v" scheme="folios"/>, and <locus from="5r" to="5r" scheme="folios"/> only the first line of the chant is written on the stave the rest is written as standard text on lines ruled in dark ink. </p>
+                                    <p>
+                                             The antiphons of Lauds are not found in any other known Uppsala source, see <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107114" type="short">Helander (2001)</title>
+                                            <citedRange unit="page" from="169" to="169"/>
+                                        </bibl>. 
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="2r" to="2v" scheme="folios"/>: <foreign xml:lang="la">Urbs beata Hierusalem</foreign>, <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107120" type="short">AH</title>
+                                            <citedRange unit="number" from="51:102" to="51:102"/>
+                                        </bibl>; <locus from="2v" to="2v" scheme="folios"/>: <foreign xml:lang="la">Christe cunctorum dominator</foreign>, <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107120" type="short">AH</title>
+                                            <citedRange unit="number" from="51:103" to="51:103"/>
+                                        </bibl> (str. 1, ending imperfect on account of missing pages; the division <foreign xml:lang="la">Hic salus aegris</foreign> of hymn AH 51:103 is known only from Sweden, see <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107115" type="short">Moberg (1947)</title>
+                                            <citedRange unit="page" from="271" to="271"/>
+                                        </bibl>; <locus from="4v" to="4v" scheme="folios"/>: <foreign xml:lang="la">Hic salus aegris</foreign> AH 51:103 (str. 5–12, reading <quote xml:lang="la">gaudia perdat</quote> for <quote xml:lang="la">sentiat ignem</quote> in str. 10,4).
+                                         
+                                         
+                                    </p>
+                                    <p/>
                                 </note>
                             </msItem>
                             <msItem>
                                 <locus from="5v" to="6v" scheme="folios"/>
-                                <title type="uniform">Oratio Jeremiae</title>
+                                <title type="uniform">Lamentations of Jeremiah</title>
                                 <rubric>leccio tercia die paraceues </rubric>
-                                <incipit>Oracio iheremie prophete Recordare domine quid acciderit nobis intuere et respice obprobrum nostrum</incipit>
+                                <incipit>Oracio iheremie prophete Recordare domine quid acciderit nobis intuere et respice obprobrium nostrum</incipit>
                                 <note>
-                                    <p>Notated reading of Jeremiah, Ier 5,1-10. </p>
-                                    <p>6r: Last two staves missing due to bottom part of page having been cut out. </p>
-                                    <p>6v: ruled, but no text.</p>
+                                    <p>
+                                             Notated reading of Jeremiah, Lam. 5:1-10. 
+                                         
+                                         
+                                    </p>
+                                    <p/>
+                                    <p>
+                                             <locus from="6v" to="6v" scheme="folios"/>: ruled for music and text, but no text.
+                                         
+                                         
+                                    </p>
                                 </note>
                             </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="parchment">
+                                <supportDesc>
                                     <support>
                                         <p>
                                             <locus from="1r" to="6v" scheme="folios"/>
@@ -133,7 +177,9 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="6" unit="folios"/>
                                     </extent>
-                                    <condition>A little retrimmed from tail. </condition>
+                                    <condition>
+                                        <locus from="6" to="6" scheme="folios"/>: lower third of page has been cut out with loss of text as a result. After <locus from="2" to="2" scheme="folios"/> several leves have been torn or cut out. 
+                                    </condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1">
@@ -142,7 +188,7 @@
                                             <height quantity="200" unit="mm"/>
                                             <width quantity="145" unit="mm"/>
                                         </dimensions>
-                                        <note>1 colum of 9 musical staves, each consisting of 4 lines ruled in red ink; pricking in the outer margins. </note>
+                                        <note>The basic layout consists of 1 column of 9 musical staves, each consisting of 4 lines ruled in red ink, but on several leaves only the first line of the chant is written on the stave the rest is written as standard text on lines ruled in dark ink. Pricking in the outer margins. </note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
@@ -151,21 +197,37 @@
                             </handDesc>
                             <additions>
                                 <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Upper margin in brown ink by a modern hand: <quote xml:lang="la">NB Salutatio Domini</quote></note>
+                                </p>
+                                <p>
+                                    <locus from="4r" to="4r" scheme="folios"/>
+                                    <note>Bottom margin in dark ink by a medieval hand: line of music with signe-de-renvoi.  </note>
+                                </p>
+                                <p>
+                                    <locus from="4v" to="4v" scheme="folios"/>
+                                    <note>Outer margin in brown ink by an early modern(?) hand: drawings of a poiting person and two poiting hands. Beneath this four short lines of text: <quote xml:lang="la">sanctu- et - - et - ora pro nobis </quote></note>
+                                </p>
+                                <p>
+                                    <locus from="6r" to="6r" scheme="folios"/>
+                                    <note>Upper margin in brown ink by an early modern(?) hand: drawings of two persons and a bird, and a few words that are mostly illeglible (text might be in Swedish). </note>
+                                </p>
+                                <p>
                                     <locus from="6v" to="6v" scheme="folios"/>
-                                    <note>Later addition on the original staves and in the margins.</note>
+                                    <note>Upper margin in brown ink by an early modern hand: <quote>Nota bene. 1621. in jnventione Ecclesie Hammarbyensis annotate sunt In hoc lib. folia – 76. Nota Et nunc 1625 it idem 76 folia</quote>. Later addition of notes on the original staves.</note>
                                 </p>
                             </additions>
                             <musicNotation>Square notation in 4-line staves.</musicNotation>
                             <decoDesc>
-                                <p>Red initials, pen-flourishing and faces in counter-spaces in brown ink added by a later hand that also drew marginal illustrations.</p>
+                                <p>Main text in black ink, capitals in red or touched in red, rubrics in red. </p>
+                                <decoNote type="initials">
+                                    <locus from="1r" to="1r" scheme="folios"/>: opening plain P over 2 staves in red with flourishes in brown ink, counter space filled with vegetative ornaments. 
+                                    <locus from="2r" to="5v" scheme="folios"/>: plain initials over 1 stave in red with flourishes in brown ink, counter space filled with vegetative ornaments or human faces (possibly later additions).
+                                </decoNote>
                             </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/100081">Sweden</placeName>
-                                </origPlace>, <origDate notBefore="1301" notAfter="1400">14th century</origDate>
-                            </origin>
+                            <origin/>
                         </history>
                     </msPart>
                 </msDesc>

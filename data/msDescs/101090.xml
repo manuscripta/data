@@ -11,17 +11,21 @@
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101090</idno>
-                <date when="2022"/>
+                <date when="2024"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -36,63 +40,543 @@
                         </altIdentifier>
                         <msName>Ericsbergshandskriften</msName>
                     </msIdentifier>
-                    <head>St. Birgitta, Revelationes I-VIII, Sermo angelicus, Quattuor orationes, Epistola solitarii ad reges</head>
+                    <head>St Birgitta, Revelations Book 1-8, Sermo angelicus, Quattuor orationes, Epistola solitarii ad reges</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Parchment</material>
+                                        <locus from="L1" to="L1" scheme="folios"/>
+                                        <material>Western paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="400" unit="mm"/>
+                                            <width quantity="280" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="1" unit="folios"/>
-                                    <measure type="rightFlyleaves" quantity="1" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
+                                <foliation>
+                                    <locus from="1r" to="246r" scheme="folios"/>: Modern foliation in pencil.
+                                </foliation>
+                                <collation>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/649413d41d299f00010d5b1a/viewOnly">VisColl collation</ref>
+                                    </p>
+                                    <formula>1(22), 2-3(20), 4(20+1), 5(24+1), 6(18), 7(22), 8-9(20), 10(22), 11(24), 12(22) </formula>
+                                    <signatures>Qurie signatures in the upper right corner of the beginning of quires 2 and 3</signatures>
+                                    <catchwords>Catchwords visible on quires 1-5.</catchwords>
+                                </collation>
+                                <condition>
+                                    <locus from="L1" to="L1" scheme="other"/> is torn and has been mounted on modern paper. Only the recto is visible. 
+                                </condition>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="L1r" to="L1r" scheme="folios"/>
+                                <note>Top of page in dark ink by a medieval hand: <quote xml:lang="la">Aue Birgitta sponsa christi vernans rosa mater egregia nos per tua suffragia sanctorum fer ad collegium Ora birgitta dominum ut post vite terminum aditus pateat celorum Collecta Deus qui beate Birgitte celorum secreta pandisti presta nobis eius meritis ut celorum secreta in agone videre mereamur per dominum nostrum ihesum christum filium tuum</quote>; further down the page: <quote xml:lang="la">? ordinis ipsius</quote> (the rest illegible on account of damage to the page). See <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107143" type="short">Undhagen (1978)</title>
+                                        <citedRange unit="page" from="190" to="190"/>
+                                        <citedRange unit="footnote" from="23" to="23"/>
+                                    </bibl>.</note>
+                            </p>
+                            <p>
+                                <locus from="RCI" to="RCI" scheme="other"/>
+                                <note>Top of page: 10 lines of text by a medieval hand in dark ink. Text difficult to read on account of damage to the page. The text might be by the same hand as the editorial notes in the main text and seems to consist of a summary of misplaced chapters and information about where they belong. Further down: traces of words written in red ink (or other red medium).    </note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <p>Medieval binding. White leather over wooden boards. 5 pairs of raised bands and endbands. Metal plates on <locus from="LCO" to="LCO" scheme="other"/> and <locus from="RCO" to="RCO" scheme="other"/> and remains of leather straps on <locus from="RCO" to="RCO" scheme="other"/>.  </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height min="425" max="425" unit="mm"/>
+                                        <width quantity="320" unit="mm"/>
+                                        <depth quantity="110" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <condition>Leather covering almost completley worn off. New, light brown leather added to spine. Boards visible. Boards cracked on <locus from="RCO" to="RCO" scheme="other"/>. Marks and holes after removed buckles in corners and centre of <locus from="LCO" to="LCO" scheme="other"/>. The manuscript was rebound in the 1950s. </condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
+                            </origPlace>, <origDate notBefore="1401" notAfter="1450">15th century, first half</origDate>
+                        </origin>
+                        <provenance>Early provenance unknown. The manuscript belonged to the library of <placeName ref="https://www.manuscripta.se/place/100219">Ericsberg Palace </placeName>(Ericsbergs slott). It is unknown when and from where the manuscripts was acquired and how long it was kept at Ericsberg. The manuscript was first brought to attention, described and analysed by <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107218" type="short">Nordenfalk (1961)</title>
+                            </bibl>, who examined the manuscript in the palace library.</provenance>
+                        <acquisition>Purchased from <placeName ref="https://www.manuscripta.se/place/100219">Ericsberg Palace</placeName>  with the help of the <orgName ref="https://www.manuscripta.se/org/100164">Birigtta Foundation</orgName> and financed by the <orgName ref="https://www.manuscripta.se/org/100165">Marianne and Marcus Wallenberg foundation</orgName> and the<orgName ref="https://www.manuscripta.se/org/100166"> Marcus and Amalia Wallenberg foundation</orgName>. Donated to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date when="1995"/>.</acquisition>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107143" type="short">Undhagen (1977)</title>
+                                <citedRange unit="page" from="187" to="191"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107274" type="short">Lindqvist Sandgren (2021)</title>
+                                <citedRange unit="page" from="123" to="123"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1ra" to="2va" scheme="folios"/>
+                                <title type="desc">Chapter rubrics for Book 1</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="3ra" to="4va" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102577">Magister Mathias</persName>
+                                </author>
+                                <title type="desc">Prologue</title>
+                                <incipit>STupor et mirabilia audita sunt in terra nostra </incipit>
+                                <explicit defective="unknown">Sextum est conuersio plurium magnatorum in regno qui tempore et loco una voce cordis sui <sic>monicionem</sic> in melius experti nisi ingrati fuerint christo ab ipso factam ad verba eis ab ipso missa fatebuntur  </explicit>
+                                <finalRubric>Explicit prologus in liber celestibus Reuelacionum dei beate brigide principisse Nerecie de regno Suecie diuinitus reuelatus</finalRubric>
+                                <note> For information about irregularities in the contemporary foliation see <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107143" type="short">Undhagen (1977)</title>
+                                        <citedRange unit="page" from="188" to="188"/>
+                                        <citedRange unit="footnote" from="5" to="5"/>
+                                    </bibl>.</note>
+                                <filiation>
+                                    <idno type="msRef"/>
+                                </filiation>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107143" type="short">Undhagen (1978)</title>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="4va" to="33va" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 1</title>
+                                <rubric>Incipit liber primus celestis reuelacionum dei beate Brigide principisse de regno Suecie diuinitus reuelatus. Verba domini nostri christi ad suam electam sponsam dilectissimam de certificacione sue excellentissme incarnacionis Et de inprobacione prophancionis et fraccionis fidei nostre et baptisimi Et qualiter ad sui dileccionem inuitat prefatam dilectam sponsam</rubric>
+                                <incipit>EGo sum creator celi et terre vnus in deitate cum patre et sancto spiritu </incipit>
+                                <explicit defective="false">et quasi artabunt se ad perfectionem vsque quo veniant ad locum qui michi placuerit</explicit>
+                                <finalRubric>Explicit liber primus celestis reuelacionum dei Beate Brigide principisse Nericie de regno Suecie diuinitus reuelatus</finalRubric>
+                                <note>
+                                         <locus from="18" to="18" scheme="folios"/>: blank, no interruption in the text between <locus from="17" to="17" scheme="folios"/> and <locus from="19" to="19" scheme="folios"/>.
+                                     
+                                     
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107143" type="short">Undhagen (1977)</title>
+                                    <citedRange from="241" to="441" unit="page"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="33vb" to="34va" scheme="folios"/>
+                                <title type="desc">Chapter rubrics for Book 2</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="34va" to="54vb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 2</title>
+                                <rubric>Incipit liber celestis Reuelacionum dei secundus. Informacione filii ad sponsam contra dyabolum et responsio filii ad sponsam quare non subtrahat malos antequam veniant in peccatum Et qualiter baptizatis morientibus infra annum discrecionis datur regnum celorum.</rubric>
+                                <incipit>FIlius loquebatur ad sponsam dicens Quando dyabolus</incipit>
+                                <explicit defective="false">Vtrum autem ipse est in inferno vel in purgatorio nondum est tibi licitum scire sed cum tempus fuerit loquendum</explicit>
+                                <finalRubric>Explicit liber secundus reuelacionum celestium dei beate Brigide diuinitus reuelatus</finalRubric>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107144" type="short">Undhagen (2001)</title>
+                                    <citedRange unit="page" from="27" to="124"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="55ra" to="56ra" scheme="folios"/>
+                                <title type="desc">Chapter rubrics for Book 3</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="56ra" to="73rb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 3</title>
+                                <rubric>Incipit liber tertius celestis reuelacionum dei beate Brigide principisse Nerecie de regno Suecie diuinitus reuelatus deo gracias. Monicio et informacio ad Episcopum de modo tenendo in victu et vestitu et oracione Et qualis se debeat habere ante mensam in mensam et post mensam et hoc idem de dormicione Et qualiter in omnibus exerceat officium Episcopale</rubric>
+                                <incipit>IHesus christus deus et homo qui venit in terram assumere humanitatem </incipit>
+                                <explicit defective="false">Corpus vero non interfici sed mundari per abstinenciam ut verba Dei per illud diffundantur </explicit>
+                                <finalRubric>Explicit liber celestis Tercius reuelacionum dei Beate Brigide diuinitus reuelatus</finalRubric>
+                                <note>72v: blank, 72r: full-page image</note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107145" type="short">Jönsson (1998)</title>
+                                    <citedRange unit="page" from="84" to="190"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="73va" to="75ra" scheme="folios"/>
+                                <title type="desc">Chapter rubrics for Book 5</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="75ra" to="88va" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 5 / Liber Questionum</title>
+                                <rubric>Incipit prologus quinti libri celestium Reuelacionum qui dicitur liber questionum</rubric>
+                                <incipit>Incipit quintus liber celestium Reuelacionum christi ad beatam Brigidam de 
+                                         regno Suecie 
+                                     
+                                     
+                                </incipit>
+                                <explicit defective="false">Ergo qui ad ista loca venerit mundus cum bona et perfecta voluntate habebit videre et gustare quam dulcis et suauis sum ego deus Itaque cum veneris ad ista loca ostendam tibi plura </explicit>
+                                <finalRubric>Explicit liber quintus questionum Reuelacionum a christo sponse sue beate Brigide principisse Nerecie de regno Suecie deo laus</finalRubric>
+                                <note>
+                                    <p>
+                                             <locus from="84rb" to="84vb" scheme="folios"/>: text crossed out with red ink.
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             From this point on the books of the Revelations are in the wrong order. This has been noted and commented upon by a contemporary or later editor. See Additions for more information. 
+                                         
+                                         
+                                    </p>
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107147" type="short">Bergh (1971)</title>
+                                    <citedRange unit="page" from="97" to="175"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="88va" to="97ra" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102533">
+                                             Alfonso
+                                             Pecha
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Epistula solitarii ad reges</title>
+                                <rubric>Incipit epistula Solitarii Ad Reges</rubric>
+                                <incipit>O Serenissimi reges et vtinam veri Reges in christo domini mei precarissimi</incipit>
+                                <explicit defective="false"> qui puro corde et iusto opere sperauerunt in eo qui rex est regum ac dominus dominancium in secula seculorum Amen</explicit>
+                                <note>
+                                         <locus from="96r" to="96r" scheme="folios"/>: blank; <locus from="96v" to="96v" scheme="folios"/>: full-page image
+                                     
+                                     
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107150" type="short">Hans Aili (2002)</title>
+                                    <citedRange unit="page" from="48" to="81"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="97rb" to="108vb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 8, 1-34:54</title>
+                                <rubric>liber celestis Imperatoris ad Reges Capitulum primum </rubric>
+                                <incipit>VIdi palacium grande incomprehensibile in magnitudine simile celo sereno</incipit>
+                                <explicit defective="true">Et ideo multi seculares laborant temporaliter sed non pro hiis coronantur quia laborant motu carnis </explicit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107150" type="short">Aili (2002)</title>
+                                    <citedRange unit="page" from="84" to="149"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="109ra" to="109vb" scheme="folios"/>
+                                <title type="uniform">Quattuor Oraciones, 3-4</title>
+                                <incipit>DOmine mi Ihesu christe Quamuis ego bene scio quod benedictum</incipit>
+                                <explicit defective="unknown">QUi viuis et Regnas cum patre et spiritu sancto in secula seculorum Amen</explicit>
+                                <note>
+                                    <p>
+                                             The rubric for this part of the Quattuor Oraciones has been striked out and a new one written by the same hand in the inner margin. 
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             This version corresponds to the Delta-text, §64-103.
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="110" to="126" scheme="folios"/>: blank but with contemporary foliation.
+                                         
+                                         
+                                    </p>
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107128" type="short">Eklund (1991)</title>
+                                    <citedRange unit="page" from="82" to="92"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="127ra" to="129vb" scheme="folios"/>
+                                <title type="desc">Chapter rubrics for Book 4</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="129vb" to="174rb" scheme="folios"/>
+                                <title type="desc">Revelations 4</title>
+                                <rubric>Verba Johannis ewangeliste ad sponsam qualiter nullum opus est sine renumeracione Et quomodo Biblia precellit omnes scripturas Et de rege predone et proditore et prodigo et cetera et de consilio ipi Regi a sancto Johanne dato Et qualiter debeat contempnere diuicias et honores propter deum. </rubric>
+                                <incipit>Apparuit sponse persona quedam cuius crines videbantur</incipit>
+                                <explicit defective="unknown">Et sepelietur et iudicabitur cum leprosis et non sedebit cum iudicantibus orbem </explicit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107146" type="short">Aili (1992)</title>
+                                    <citedRange unit="page" from="59" to="371"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="174va" to="176rb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="uniform">Quattuor Oraciones, 1-2</title>
+                                <incipit>BEnedicta et venerabilis sis tu domina mea virgo maria dei mater</incipit>
+                                <explicit defective="unknown">Et sic venturus es in die iudicii ad iudicandum animas omnium viuorum et mortuorum Qui viuis et regnas cum patre et spiritu sancto in secula seculorum amen </explicit>
+                                <note>This version corresponds to the Delta-text, §7-62.</note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107128" type="short">Eklund (1991)</title>
+                                    <citedRange unit="page" from="66" to="81"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="176rb" to="179ra" scheme="folios"/>
+                                <title type="desc">Chapter rubrics for Book 6</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="179ra" to="212rb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 6</title>
+                                <incipit>MAter dei loquebatur ad sponsam dicens Ego sum regina celi</incipit>
+                                <explicit defective="unknown">quia deo accepcius est in mundo iuste viuere et laborare manibus quam in heremo uel religione stare sine caritate dei</explicit>
+                                <note>The texts ends with Chapter CIX, which is the end of Alfonso's redaction. </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107148" type="short">Bergh (1991)</title>
+                                    <citedRange unit="page" from="59" to="270"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="212va" to="223va" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 7</title>
+                                <rubric>Reuelacio quam habuit domina Brygida in roma post annum Jubilei in quam Virgo Maria prenunciat ei quod itura esset iherusalem et Bethleem quando placuerit deo Promittens ei sibi tunc ostendere modum quo ipsa peperit tunc filium suum benedictum</rubric>
+                                <incipit>CVm esset in Roma domina brigida sponsa christi Et quadam vice oracioni vacaret </incipit>
+                                <explicit defective="false"> dicta vero missa et sacramentis perceptis cum maxima deuocione et reuerencia inter manus predictarum personarum emisit spiritum</explicit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107149" type="short">Bergh (1967)</title>
+                                    <citedRange unit="page" from="113" to="215"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="223va" to="235vb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Revelations 8, 34-57</title>
+                                <incipit>Qui quidem labor si esset preceptum dei nequaquam sic ferueret in laborando</incipit>
+                                <explicit defective="unknown">celebrando missam de sancta trinitate et colligant pauperes lauentque humiliter pedes eorum </explicit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107150" type="short">Aili (2002)</title>
+                                    <citedRange unit="page" from="149" to="224"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="235vb" to="237rb" scheme="folios"/>
+                                <title type="desc">Rubrics for Epistula solitarii ad reges</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="237va" to="246ra" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/100481">
+                                             Birgitta
+                                             Birgersdotter
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="uniform">Sermo angelicus</title>
+                                <rubric>Incipit prologus in Sermone Angelico de excellencia virginis</rubric>
+                                <incipit>CVm beata brigida principissa nericie de regno suecie per plures annos habitaret in roma</incipit>
+                                <explicit defective="false">Qui cum patre et spiritu sancto viuit et regnat per infinita secula seculorum amen</explicit>
+                                <finalRubric>Explicit sermo angelicus beate brigide per angelum diuinitus dictatus? in Romana vrbe Deo gracias</finalRubric>
+                                <note>
+                                         <locus from="246rb" to="254" scheme="folios"/>: blank
+                                     
+                                     
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107127" type="short">Eklund (1972)</title>
+                                    <citedRange unit="page" from="75" to="137"/>
+                                </bibl>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="mixed">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="255v" scheme="folios"/>
+                                            <locus from="1r" to="256v" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="410" unit="mm"/>
                                                 <width quantity="280" unit="mm"/>
                                             </dimensions>
-                                        </p>
-                                        <p>
-                                            <locus from="1r" to="255v" scheme="folios"/>
-                                            <material>Western paper</material>
-                                            <dimensions type="leaf">
-                                                <height quantity="410" unit="mm"/>
-                                                <width quantity="280" unit="mm"/>
-                                            </dimensions>
+                                            <note>The first and centre bifolium of every quire is parchment, everything else paper.</note>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="2" to="255" scheme="folios"/>
+                                                </locusGrp>
+                                                <note>Mountain with three tops with single line rod on top. Similar to <ref target="https://wzma.at/bildbrowser.php?id=005001001002001001">WZMA</ref>. and Piccard vol. XVI:1, II, nr 327.</note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="255" unit="folios"/>
                                     </extent>
+                                    <foliation>Contemporary foliation in brown ink, i-ccxlix.</foliation>
+                                    <condition>Leaves repaired throughout with paper patches. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="45 48">
+                                        <locus from="1r" to="246r" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="325" unit="mm"/>
+                                            <width quantity="220" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines in ink and lead (not visible on all pages).</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic cursive</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="246r" scheme="folios"/>
+                                    <note>Marginal additions (ranging from one word to several lines) by several contemporary and later medieval hands, as well as manicules and other marks. The additions consist of titles and summaries, corrections, glosses and short commentaries on the text. 
+                                        The manuscript also contains comprehensive editorial notes regarding the correct order of the books. The notes seem to be mainly written by one hand and is probably of a later date than the main text. The main editorial notes are found on: <locus from="10v" to="10v" scheme="folios"/>, <locus from="88v" to="88v" scheme="folios"/>, <locus from="97r" to="97r" scheme="folios"/>, <locus from="108v" to="108v" scheme="folios"/>, <locus from="109r" to="109r" scheme="folios"/>, <locus from="143v" to="143v" scheme="folios"/>, <locus from="144v" to="144v" scheme="folios"/>, <locus from="158r" to="158r" scheme="folios"/>, <locus from="174r" to="174r" scheme="folios"/>, <locus from="174v" to="174v" scheme="folios"/> (extensive), <locus from="184r" to="184r" scheme="folios"/>, <locus from="194v" to="194v" scheme="folios"/>, <locus from="235v" to="235v" scheme="folios"/>, <locus from="246r" to="246r" scheme="folios"/> (extensive).
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="3r" to="3r" scheme="folios"/>
+                                    <note>Upper margin in brown ink by a later hand: <quote>Prologus  Magistri Matthiae de suetia.</quote></note>
+                                </p>
+                                <p>
+                                    <locus from="12r" to="236r" scheme="folios"/>
+                                    <note>There are numerous ink drawings in the margins. These are drawn with the same type of ink as the main text and are similar in style to the heads and figures that decorate the initials. They are often filled in with one or several colours. These figures sometimes seem to give emphasis to different passages in the text. Motives: 
+                                        Monk's head <locusGrp>
+                                            <locus from="12r" to="12r" scheme="folios"/>
+                                            <locus from="26r" to="26r" scheme="folios"/>
+                                            <locus from="51r" to="51r" scheme="folios"/>
+                                            <locus from="55r" to="55r" scheme="folios"/>
+                                            <locus from="64r" to="64r" scheme="folios"/>
+                                            <locus from="152r" to="152r" scheme="folios"/>
+                                            <locus from="159r" to="159r" scheme="folios"/>
+                                            <locus from="207r" to="207r" scheme="folios"/>
+                                            <locus from="236r" to="236r" scheme="folios"/>
+                                        </locusGrp>;
+                                        Bishop's head <locus from="59r" to="59r" scheme="folios"/>, <locus from="171v" to="171v" scheme="folios"/>;
+                                        Money bag <locus from="31r" to="31r" scheme="folios"/>; 
+                                        Lion <locus from="36r" to="36r" scheme="folios"/>;
+                                        Agnus Dei <locus from="135v" to="135v" scheme="folios"/>;
+                                        Four arrows <locus from="163v" to="163v" scheme="folios"/>;
+                                        Man's head <locus from="179r" to="179r" scheme="folios"/>, <locus from="218r" to="218r" scheme="folios"/>;
+                                        Animal head <locus from="205r" to="205r" scheme="folios"/>;  
+                                        Bell <locus from="210r" to="210r" scheme="folios"/>;
+                                        Sword <locus from="229r" to="229r" scheme="folios"/>.
+                                    </note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>The images and historiated initials are discussed in <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107217" type="short">Aili (2003)</title>
+                                        <citedRange unit="page" from="109" to="111"/>
+                                    </bibl> and <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107218" type="short">Nordenfalk (1961)</title>
+                                        <citedRange unit="page" from="371" to="393"/>
+                                    </bibl> (the motif description of the historiated initials below are based on these works).The visual programme of the images is most recently discussed by <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107219" type="short">Oen (2019)</title>
+                                        <citedRange unit="page" from="186" to="222"/>
+                                    </bibl> (A 70b is briefly mentioned).</p>
+                                <p>Main text written in dark brown ink. Rubrics in red and capitals touched with red or yellow.  </p>
+                                <decoNote type="initials">Highly stylized historiated initials placed above or next to the text. The initials are shaped into a frame, the letter shape is often so abstract that it is difficult to identify. Besides the historiated feature the initials are also contain vegetative ornaments. Main colours: Yellow, red, blue, green, and black, sometimes also pink, purple, and gold. The initial is repeated as a plain initial in the actual text. <locus from="2v" to="2v" scheme="folios"/>: reversed S over 14 lines. The upper part of the S shows Birgitta receiving her revelations from heaven and the lower part shows Master Mathias lecturing to his students. Repeated initial in yellow and red over 12 lines. <locus from="34r" to="34r" scheme="folios"/>: F over 20 lines. In the lower counter space Birgitta and the Devil, in the upper Christ. Repeated initial in red over 8 lines. <locus from="56r" to="56r" scheme="folios"/>: I over 10 lines. The initial shows Christ giving a book to Birgitta, who hands it to a bishop. Repeated initial in red over 7 lines with flourishing and a human face in brown ink (perhaps later addition). <locus from="73r" to="73r" scheme="folios"/>: V over 13 lines. The counter space shows Birgitta kneeling and above her Christ and Mary. Repeated initial is found on <locus from="75v" to="75v" scheme="folios"/> and is a penwork initial in black and yellow over 4 lines (+ extending above the line). <locus from="88v" to="88v" scheme="folios"/>: O over 13 lines. The counterspace is divided into four panels. Top left shows Christ handing a book to Birgitta sitting at her desk. Birgitta then hands the book down to the bottom left panel to Alfonso who hands a letter to a kneeling messenger. In the bottom right panel the same messenger is walking and then handing the letter to a king in the top right panel. The king is sitting next to another king and a queen. This initial is not repeated. <locus from="97r" to="97r" scheme="folios"/>: V over 13 lines. The counter space shows Christ and Mary handing a book to Birgitta, beneath whom five kings and queens are sitting. Repeated initial in red over 4 lines. <locus from="130r" to="130r" scheme="folios"/>: A over 12 lines. The upper counter space shows John the Evangelist next to a cauldron surrounded by flames. The lower space shows Birgitta kneeling and looking towards the upper space. The initial is placed in the text and not repeated. <locus from="179r" to="179r" scheme="folios"/>: M over 13 lines. The counter space shows Mary and Christ in Heaven and below Mary Birgitta kneeling in prayer. Repeated inital in red and yellow over 3 lines. <locus from="212v" to="212v" scheme="folios"/>: C over 16 lines. The counter space shows Mary carried by angels and beneath her Birgitta kneeling in prayer. Repeated initial in red and yellow over 3 lines. <locus from="237r" to="237r" scheme="folios"/>: C over 16 lines. This initial is similar in style to the historiated initials but only has foliate decoration. Repeated initial in red over 3 lines.
+                                    <locus from="4v" to="4v" scheme="folios"/>, start of Book 1: Flourished initial in red, yellow and brown ink over 7 lines (+ extending above the line). <locus from="1r" to="245v" scheme="folios"/>: Paragraph or chapter initials in red over 2-3 lines (+ extending above and below the line). Counter space often filled in with yellow. Many of these initials are further elaborated with flourshing and/or pen drawings of human faces, grotesques and animals, e.g. <locus from="7v" to="10r" scheme="folios"/>. The descenders of letters on the bottom line are sometimes extended and flourished, e.g.  <locus from="3r" to="3r" scheme="folios"/>  and  <locus from="9v" to="9v" scheme="folios"/> . These are sometimes further elaborated with drawings of figures, e.g.  <locus from="20v" to="20v" scheme="folios"/> . Some of these features may be later additions. 
+                                </decoNote>
+                                <decoNote type="images">Full page images in watercolour and ink. Main colours: red, green, blue, yellow, brown, grey, and black. The three images are complex compositions. For a detailed discussion of them and their relationship to other Birgitta manuscripts see the literature mentioned above. The following are the central motives: <locus from="5r" to="5r" scheme="folios"/>: St Birgitta revealing her revelations in the monastery at Alvastra; <locus from="72v" to="72v" scheme="folios"/>: St Birgitta on horseback receives a vision; <locus from="96v" to="96v" scheme="folios"/>: St Birgitta passes on her revelations. The lower right corner of this image is damaged and has been replaced by a sketch in pencil.   </decoNote>
+                            </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
-                                </origPlace>, <origDate notBefore="1401" notAfter="1450">15th century, first half</origDate>
-                            </origin>
+                            <origin/>
                         </history>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published">
+            <change who="https://www.manuscripta.se/person/100484" when="2024-09-06" status="published"/>
+            <change who="https://www.manuscripta.se/person/100484" when="2024-05-27" status="draft"/>
+            <change who="https://www.manuscripta.se/person/100484" when="2024-05-20" status="published">Published 24-05-20</change>
+            <change who="https://www.manuscripta.se/person/100484" when="2023-06-27" status="draft"/>
+            <change who="https://www.manuscripta.se/person/100484" when="2023-06-26" status="published"/>
             <change who="https://www.manuscripta.se/person/100380" when="2023-01-11" status="draft">Added facsimile</change>
             <change status="draft" when="2023-01-11" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
@@ -113,12 +597,12 @@
             <desc>Left cover, inside</desc>
             <graphic url="ms-101090_0002.tif" width="5288px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_L1r">
+            <desc>Ir</desc>
             <graphic url="ms-101090_0003.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_L1v">
+            <desc>Iv</desc>
             <graphic url="ms-101090_0004.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_1r">
@@ -1117,1064 +1601,1064 @@
             <desc>f. 125r</desc>
             <graphic url="ms-101090_0253.tif" width="5576px" height="6989px"/>
         </surface>
+        <surface xml:id="ms-101090_fragment_1r">
+            <desc>fragment 1r</desc>
+            <graphic url="ms-101090_0254.tif" width="5288px" height="6989px"/>
+        </surface>
+        <surface xml:id="ms-101090_fragment_1v">
+            <desc>fragment 1v</desc>
+            <graphic url="ms-101090_0255.tif" width="5576px" height="6989px"/>
+        </surface>
         <surface xml:id="ms-101090_125v">
             <desc>f. 125v</desc>
-            <graphic url="ms-101090_0254.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0256.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_126r">
             <desc>f. 126r</desc>
-            <graphic url="ms-101090_0255.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0257.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_126v">
             <desc>f. 126v</desc>
-            <graphic url="ms-101090_0256.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0258.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_127r">
             <desc>f. 127r</desc>
-            <graphic url="ms-101090_0257.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0259.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_127v">
             <desc>f. 127v</desc>
-            <graphic url="ms-101090_0258.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0260.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_128r">
             <desc>f. 128r</desc>
-            <graphic url="ms-101090_0259.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0261.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_128v">
             <desc>f. 128v</desc>
-            <graphic url="ms-101090_0260.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0262.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_129r">
             <desc>f. 129r</desc>
-            <graphic url="ms-101090_0261.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0263.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_129v">
             <desc>f. 129v</desc>
-            <graphic url="ms-101090_0262.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0264.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_130r">
             <desc>f. 130r</desc>
-            <graphic url="ms-101090_0263.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0265.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_130v">
             <desc>f. 130v</desc>
-            <graphic url="ms-101090_0264.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0266.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_131r">
             <desc>f. 131r</desc>
-            <graphic url="ms-101090_0265.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0267.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_131v">
             <desc>f. 131v</desc>
-            <graphic url="ms-101090_0266.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0268.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_132r">
             <desc>f. 132r</desc>
-            <graphic url="ms-101090_0267.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0269.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_132v">
             <desc>f. 132v</desc>
-            <graphic url="ms-101090_0268.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0270.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_133r">
             <desc>f. 133r</desc>
-            <graphic url="ms-101090_0269.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0271.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_133v">
             <desc>f. 133v</desc>
-            <graphic url="ms-101090_0270.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0272.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_134r">
             <desc>f. 134r</desc>
-            <graphic url="ms-101090_0271.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0273.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_134v">
             <desc>f. 134v</desc>
-            <graphic url="ms-101090_0272.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0274.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_135r">
             <desc>f. 135r</desc>
-            <graphic url="ms-101090_0273.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0275.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_135v">
             <desc>f. 135v</desc>
-            <graphic url="ms-101090_0274.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0276.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_136r">
             <desc>f. 136r</desc>
-            <graphic url="ms-101090_0275.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0277.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_136v">
             <desc>f. 136v</desc>
-            <graphic url="ms-101090_0276.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0278.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_137r">
             <desc>f. 137r</desc>
-            <graphic url="ms-101090_0277.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0279.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_137v">
             <desc>f. 137v</desc>
-            <graphic url="ms-101090_0278.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0280.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_138r">
             <desc>f. 138r</desc>
-            <graphic url="ms-101090_0279.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0281.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_138v">
             <desc>f. 138v</desc>
-            <graphic url="ms-101090_0280.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0282.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_139r">
             <desc>f. 139r</desc>
-            <graphic url="ms-101090_0281.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0283.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_139v">
             <desc>f. 139v</desc>
-            <graphic url="ms-101090_0282.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0284.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_140r">
             <desc>f. 140r</desc>
-            <graphic url="ms-101090_0283.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0285.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_140v">
             <desc>f. 140v</desc>
-            <graphic url="ms-101090_0284.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0286.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_141r">
             <desc>f. 141r</desc>
-            <graphic url="ms-101090_0285.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0287.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_141v">
             <desc>f. 141v</desc>
-            <graphic url="ms-101090_0286.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0288.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_142r">
             <desc>f. 142r</desc>
-            <graphic url="ms-101090_0287.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0289.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_142v">
             <desc>f. 142v</desc>
-            <graphic url="ms-101090_0288.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0290.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_143r">
             <desc>f. 143r</desc>
-            <graphic url="ms-101090_0289.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0291.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_143v">
             <desc>f. 143v</desc>
-            <graphic url="ms-101090_0290.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0292.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_144r">
             <desc>f. 144r</desc>
-            <graphic url="ms-101090_0291.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0293.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_144v">
             <desc>f. 144v</desc>
-            <graphic url="ms-101090_0292.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0294.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_145r">
             <desc>f. 145r</desc>
-            <graphic url="ms-101090_0293.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0295.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_145v">
             <desc>f. 145v</desc>
-            <graphic url="ms-101090_0294.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0296.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_146r">
             <desc>f. 146r</desc>
-            <graphic url="ms-101090_0295.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0297.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_146v">
             <desc>f. 146v</desc>
-            <graphic url="ms-101090_0296.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0298.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_147r">
             <desc>f. 147r</desc>
-            <graphic url="ms-101090_0297.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0299.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_147v">
             <desc>f. 147v</desc>
-            <graphic url="ms-101090_0298.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0300.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_148r">
             <desc>f. 148r</desc>
-            <graphic url="ms-101090_0299.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0301.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_148v">
             <desc>f. 148v</desc>
-            <graphic url="ms-101090_0300.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0302.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_149r">
             <desc>f. 149r</desc>
-            <graphic url="ms-101090_0301.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0303.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_149v">
             <desc>f. 149v</desc>
-            <graphic url="ms-101090_0302.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0304.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_150r">
             <desc>f. 150r</desc>
-            <graphic url="ms-101090_0303.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0305.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_150v">
             <desc>f. 150v</desc>
-            <graphic url="ms-101090_0304.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0306.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_151r">
             <desc>f. 151r</desc>
-            <graphic url="ms-101090_0305.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0307.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_151v">
             <desc>f. 151v</desc>
-            <graphic url="ms-101090_0306.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0308.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_152r">
             <desc>f. 152r</desc>
-            <graphic url="ms-101090_0307.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0309.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_152v">
             <desc>f. 152v</desc>
-            <graphic url="ms-101090_0308.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0310.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_153r">
             <desc>f. 153r</desc>
-            <graphic url="ms-101090_0309.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0311.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_153v">
             <desc>f. 153v</desc>
-            <graphic url="ms-101090_0310.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0312.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_154r">
             <desc>f. 154r</desc>
-            <graphic url="ms-101090_0311.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0313.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_154v">
             <desc>f. 154v</desc>
-            <graphic url="ms-101090_0312.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0314.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_155r">
             <desc>f. 155r</desc>
-            <graphic url="ms-101090_0313.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0315.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_155v">
             <desc>f. 155v</desc>
-            <graphic url="ms-101090_0314.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0316.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_156r">
             <desc>f. 156r</desc>
-            <graphic url="ms-101090_0315.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0317.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_156v">
             <desc>f. 156v</desc>
-            <graphic url="ms-101090_0316.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0318.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_157r">
             <desc>f. 157r</desc>
-            <graphic url="ms-101090_0317.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0319.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_157v">
             <desc>f. 157v</desc>
-            <graphic url="ms-101090_0318.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0320.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_158r">
             <desc>f. 158r</desc>
-            <graphic url="ms-101090_0319.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0321.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_158v">
             <desc>f. 158v</desc>
-            <graphic url="ms-101090_0320.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0322.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_159r">
             <desc>f. 159r</desc>
-            <graphic url="ms-101090_0321.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0323.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_159v">
             <desc>f. 159v</desc>
-            <graphic url="ms-101090_0322.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0324.tif" width="5288px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_160r">
             <desc>f. 160r</desc>
-            <graphic url="ms-101090_0323.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0325.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_160v">
             <desc>f. 160v</desc>
-            <graphic url="ms-101090_0324.tif" width="5288px" height="6989px"/>
+            <graphic url="ms-101090_0326.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_161r">
             <desc>f. 161r</desc>
-            <graphic url="ms-101090_0325.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0327.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_161v">
             <desc>f. 161v</desc>
-            <graphic url="ms-101090_0326.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0328.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_162r">
             <desc>f. 162r</desc>
-            <graphic url="ms-101090_0327.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0329.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_162v">
             <desc>f. 162v</desc>
-            <graphic url="ms-101090_0328.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0330.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_163r">
             <desc>f. 163r</desc>
-            <graphic url="ms-101090_0329.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0331.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_163v">
             <desc>f. 163v</desc>
-            <graphic url="ms-101090_0330.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0332.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_164r">
             <desc>f. 164r</desc>
-            <graphic url="ms-101090_0331.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0333.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_164v">
             <desc>f. 164v</desc>
-            <graphic url="ms-101090_0332.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0334.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_165r">
             <desc>f. 165r</desc>
-            <graphic url="ms-101090_0333.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0335.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_165v">
             <desc>f. 165v</desc>
-            <graphic url="ms-101090_0334.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0336.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_166r">
             <desc>f. 166r</desc>
-            <graphic url="ms-101090_0335.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0337.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_166v">
             <desc>f. 166v</desc>
-            <graphic url="ms-101090_0336.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0338.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_167r">
             <desc>f. 167r</desc>
-            <graphic url="ms-101090_0337.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0339.tif" width="5576px" height="6970px"/>
         </surface>
         <surface xml:id="ms-101090_167v">
             <desc>f. 167v</desc>
-            <graphic url="ms-101090_0338.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0340.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_168r">
             <desc>f. 168r</desc>
-            <graphic url="ms-101090_0339.tif" width="5576px" height="6970px"/>
+            <graphic url="ms-101090_0341.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_168v">
             <desc>f. 168v</desc>
-            <graphic url="ms-101090_0340.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0342.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_169r">
             <desc>f. 169r</desc>
-            <graphic url="ms-101090_0341.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0343.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_169v">
             <desc>f. 169v</desc>
-            <graphic url="ms-101090_0342.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0344.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_170r">
             <desc>f. 170r</desc>
-            <graphic url="ms-101090_0343.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0345.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_170v">
             <desc>f. 170v</desc>
-            <graphic url="ms-101090_0344.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0346.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_171r">
             <desc>f. 171r</desc>
-            <graphic url="ms-101090_0345.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0347.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_171v">
             <desc>f. 171v</desc>
-            <graphic url="ms-101090_0346.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0348.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_172r">
             <desc>f. 172r</desc>
-            <graphic url="ms-101090_0347.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0349.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_172v">
             <desc>f. 172v</desc>
-            <graphic url="ms-101090_0348.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0350.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_173r">
             <desc>f. 173r</desc>
-            <graphic url="ms-101090_0349.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0351.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_173v">
             <desc>f. 173v</desc>
-            <graphic url="ms-101090_0350.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0352.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_174r">
             <desc>f. 174r</desc>
-            <graphic url="ms-101090_0351.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0353.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_174v">
             <desc>f. 174v</desc>
-            <graphic url="ms-101090_0352.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0354.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_175r">
             <desc>f. 175r</desc>
-            <graphic url="ms-101090_0353.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0355.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_175v">
             <desc>f. 175v</desc>
-            <graphic url="ms-101090_0354.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0356.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_176r">
             <desc>f. 176r</desc>
-            <graphic url="ms-101090_0355.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0357.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_176v">
             <desc>f. 176v</desc>
-            <graphic url="ms-101090_0356.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0358.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_177r">
             <desc>f. 177r</desc>
-            <graphic url="ms-101090_0357.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0359.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_177v">
             <desc>f. 177v</desc>
-            <graphic url="ms-101090_0358.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0360.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_178r">
             <desc>f. 178r</desc>
-            <graphic url="ms-101090_0359.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0361.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_178v">
             <desc>f. 178v</desc>
-            <graphic url="ms-101090_0360.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0362.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_179r">
             <desc>f. 179r</desc>
-            <graphic url="ms-101090_0361.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0363.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_179v">
             <desc>f. 179v</desc>
-            <graphic url="ms-101090_0362.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0364.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_180r">
             <desc>f. 180r</desc>
-            <graphic url="ms-101090_0363.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0365.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_180v">
             <desc>f. 180v</desc>
-            <graphic url="ms-101090_0364.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0366.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_181r">
             <desc>f. 181r</desc>
-            <graphic url="ms-101090_0365.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0367.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_181v">
             <desc>f. 181v</desc>
-            <graphic url="ms-101090_0366.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0368.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_182r">
             <desc>f. 182r</desc>
-            <graphic url="ms-101090_0367.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0369.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_182v">
             <desc>f. 182v</desc>
-            <graphic url="ms-101090_0368.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0370.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_183r">
             <desc>f. 183r</desc>
-            <graphic url="ms-101090_0369.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0371.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_183v">
             <desc>f. 183v</desc>
-            <graphic url="ms-101090_0370.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0372.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_184r">
             <desc>f. 184r</desc>
-            <graphic url="ms-101090_0371.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0373.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_184v">
             <desc>f. 184v</desc>
-            <graphic url="ms-101090_0372.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0374.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_185r">
             <desc>f. 185r</desc>
-            <graphic url="ms-101090_0373.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0375.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_185v">
             <desc>f. 185v</desc>
-            <graphic url="ms-101090_0374.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0376.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_186r">
             <desc>f. 186r</desc>
-            <graphic url="ms-101090_0375.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0377.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_186v">
             <desc>f. 186v</desc>
-            <graphic url="ms-101090_0376.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0378.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_187r">
             <desc>f. 187r</desc>
-            <graphic url="ms-101090_0377.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0379.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_187v">
             <desc>f. 187v</desc>
-            <graphic url="ms-101090_0378.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0380.tif" width="5330px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_188r">
             <desc>f. 188r</desc>
-            <graphic url="ms-101090_0379.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0381.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_188v">
             <desc>f. 188v</desc>
-            <graphic url="ms-101090_0380.tif" width="5330px" height="6989px"/>
+            <graphic url="ms-101090_0382.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_189r">
             <desc>f. 189r</desc>
-            <graphic url="ms-101090_0381.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0383.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_189v">
             <desc>f. 189v</desc>
-            <graphic url="ms-101090_0382.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0384.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_190r">
             <desc>f. 190r</desc>
-            <graphic url="ms-101090_0383.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0385.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_190v">
             <desc>f. 190v</desc>
-            <graphic url="ms-101090_0384.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0386.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_191r">
             <desc>f. 191r</desc>
-            <graphic url="ms-101090_0385.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0387.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_191v">
             <desc>f. 191v</desc>
-            <graphic url="ms-101090_0386.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0388.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_192r">
             <desc>f. 192r</desc>
-            <graphic url="ms-101090_0387.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0389.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_192v">
             <desc>f. 192v</desc>
-            <graphic url="ms-101090_0388.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0390.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_193r">
             <desc>f. 193r</desc>
-            <graphic url="ms-101090_0389.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0391.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_193v">
             <desc>f. 193v</desc>
-            <graphic url="ms-101090_0390.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0392.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_194r">
             <desc>f. 194r</desc>
-            <graphic url="ms-101090_0391.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0393.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_194v">
             <desc>f. 194v</desc>
-            <graphic url="ms-101090_0392.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0394.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_195r">
             <desc>f. 195r</desc>
-            <graphic url="ms-101090_0393.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0395.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_195v">
             <desc>f. 195v</desc>
-            <graphic url="ms-101090_0394.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0396.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_196r">
             <desc>f. 196r</desc>
-            <graphic url="ms-101090_0395.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0397.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_196v">
             <desc>f. 196v</desc>
-            <graphic url="ms-101090_0396.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0398.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_197r">
             <desc>f. 197r</desc>
-            <graphic url="ms-101090_0397.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0399.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_197v">
             <desc>f. 197v</desc>
-            <graphic url="ms-101090_0398.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0400.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_198r">
             <desc>f. 198r</desc>
-            <graphic url="ms-101090_0399.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0401.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_198v">
             <desc>f. 198v</desc>
-            <graphic url="ms-101090_0400.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0402.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_199r">
             <desc>f. 199r</desc>
-            <graphic url="ms-101090_0401.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0403.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_199v">
             <desc>f. 199v</desc>
-            <graphic url="ms-101090_0402.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0404.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_200r">
             <desc>f. 200r</desc>
-            <graphic url="ms-101090_0403.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0405.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_200v">
             <desc>f. 200v</desc>
-            <graphic url="ms-101090_0404.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0406.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_201r">
             <desc>f. 201r</desc>
-            <graphic url="ms-101090_0405.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0407.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_201v">
             <desc>f. 201v</desc>
-            <graphic url="ms-101090_0406.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0408.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_202r">
             <desc>f. 202r</desc>
-            <graphic url="ms-101090_0407.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0409.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_202v">
             <desc>f. 202v</desc>
-            <graphic url="ms-101090_0408.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0410.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_203r">
             <desc>f. 203r</desc>
-            <graphic url="ms-101090_0409.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0411.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_203v">
             <desc>f. 203v</desc>
-            <graphic url="ms-101090_0410.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0412.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_204r">
             <desc>f. 204r</desc>
-            <graphic url="ms-101090_0411.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0413.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_204v">
             <desc>f. 204v</desc>
-            <graphic url="ms-101090_0412.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0414.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_205r">
             <desc>f. 205r</desc>
-            <graphic url="ms-101090_0413.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0415.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_205v">
             <desc>f. 205v</desc>
-            <graphic url="ms-101090_0414.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0416.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_206r">
             <desc>f. 206r</desc>
-            <graphic url="ms-101090_0415.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0417.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_206v">
             <desc>f. 206v</desc>
-            <graphic url="ms-101090_0416.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0418.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_207r">
             <desc>f. 207r</desc>
-            <graphic url="ms-101090_0417.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0419.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_207v">
             <desc>f. 207v</desc>
-            <graphic url="ms-101090_0418.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0420.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_208r">
             <desc>f. 208r</desc>
-            <graphic url="ms-101090_0419.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0421.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_208v">
             <desc>f. 208v</desc>
-            <graphic url="ms-101090_0420.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0422.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_209r">
             <desc>f. 209r</desc>
-            <graphic url="ms-101090_0421.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0423.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_209v">
             <desc>f. 209v</desc>
-            <graphic url="ms-101090_0422.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0424.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_210r">
             <desc>f. 210r</desc>
-            <graphic url="ms-101090_0423.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0425.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_210v">
             <desc>f. 210v</desc>
-            <graphic url="ms-101090_0424.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0426.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_211r">
             <desc>f. 211r</desc>
-            <graphic url="ms-101090_0425.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0427.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_211v">
             <desc>f. 211v</desc>
-            <graphic url="ms-101090_0426.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0428.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_212r">
             <desc>f. 212r</desc>
-            <graphic url="ms-101090_0427.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0429.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_212v">
             <desc>f. 212v</desc>
-            <graphic url="ms-101090_0428.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0430.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_213r">
             <desc>f. 213r</desc>
-            <graphic url="ms-101090_0429.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0431.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_213v">
             <desc>f. 213v</desc>
-            <graphic url="ms-101090_0430.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0432.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_214r">
             <desc>f. 214r</desc>
-            <graphic url="ms-101090_0431.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0433.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_214v">
             <desc>f. 214v</desc>
-            <graphic url="ms-101090_0432.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0434.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_215r">
             <desc>f. 215r</desc>
-            <graphic url="ms-101090_0433.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0435.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_215v">
             <desc>f. 215v</desc>
-            <graphic url="ms-101090_0434.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0436.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_216r">
             <desc>f. 216r</desc>
-            <graphic url="ms-101090_0435.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0437.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_216v">
             <desc>f. 216v</desc>
-            <graphic url="ms-101090_0436.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0438.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_217r">
             <desc>f. 217r</desc>
-            <graphic url="ms-101090_0437.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0439.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_217v">
             <desc>f. 217v</desc>
-            <graphic url="ms-101090_0438.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0440.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_218r">
             <desc>f. 218r</desc>
-            <graphic url="ms-101090_0439.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0441.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_218v">
             <desc>f. 218v</desc>
-            <graphic url="ms-101090_0440.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0442.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_219r">
             <desc>f. 219r</desc>
-            <graphic url="ms-101090_0441.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0443.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_219v">
             <desc>f. 219v</desc>
-            <graphic url="ms-101090_0442.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0444.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_220r">
             <desc>f. 220r</desc>
-            <graphic url="ms-101090_0443.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0445.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_220v">
             <desc>f. 220v</desc>
-            <graphic url="ms-101090_0444.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0446.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_221r">
             <desc>f. 221r</desc>
-            <graphic url="ms-101090_0445.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0447.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_221v">
             <desc>f. 221v</desc>
-            <graphic url="ms-101090_0446.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0448.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_222r">
             <desc>f. 222r</desc>
-            <graphic url="ms-101090_0447.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0449.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_222v">
             <desc>f. 222v</desc>
-            <graphic url="ms-101090_0448.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0450.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_223r">
             <desc>f. 223r</desc>
-            <graphic url="ms-101090_0449.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0451.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_223v">
             <desc>f. 223v</desc>
-            <graphic url="ms-101090_0450.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0452.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_224r">
             <desc>f. 224r</desc>
-            <graphic url="ms-101090_0451.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0453.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_224v">
             <desc>f. 224v</desc>
-            <graphic url="ms-101090_0452.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0454.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_225r">
             <desc>f. 225r</desc>
-            <graphic url="ms-101090_0453.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0455.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_225v">
             <desc>f. 225v</desc>
-            <graphic url="ms-101090_0454.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0456.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_226r">
             <desc>f. 226r</desc>
-            <graphic url="ms-101090_0455.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0457.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_226v">
             <desc>f. 226v</desc>
-            <graphic url="ms-101090_0456.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0458.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_227r">
             <desc>f. 227r</desc>
-            <graphic url="ms-101090_0457.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0459.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_227v">
             <desc>f. 227v</desc>
-            <graphic url="ms-101090_0458.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0460.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_228r">
             <desc>f. 228r</desc>
-            <graphic url="ms-101090_0459.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0461.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_228v">
             <desc>f. 228v</desc>
-            <graphic url="ms-101090_0460.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0462.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_229r">
             <desc>f. 229r</desc>
-            <graphic url="ms-101090_0461.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0463.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_229v">
             <desc>f. 229v</desc>
-            <graphic url="ms-101090_0462.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0464.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_230r">
             <desc>f. 230r</desc>
-            <graphic url="ms-101090_0463.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0465.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_230v">
             <desc>f. 230v</desc>
-            <graphic url="ms-101090_0464.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0466.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_231r">
             <desc>f. 231r</desc>
-            <graphic url="ms-101090_0465.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0467.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_231v">
             <desc>f. 231v</desc>
-            <graphic url="ms-101090_0466.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0468.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_232r">
             <desc>f. 232r</desc>
-            <graphic url="ms-101090_0467.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0469.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_232v">
             <desc>f. 232v</desc>
-            <graphic url="ms-101090_0468.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0470.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_233r">
             <desc>f. 233r</desc>
-            <graphic url="ms-101090_0469.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0471.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_233v">
             <desc>f. 233v</desc>
-            <graphic url="ms-101090_0470.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0472.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_234r">
             <desc>f. 234r</desc>
-            <graphic url="ms-101090_0471.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0473.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_234v">
             <desc>f. 234v</desc>
-            <graphic url="ms-101090_0472.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0474.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_235r">
             <desc>f. 235r</desc>
-            <graphic url="ms-101090_0473.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0475.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_235v">
             <desc>f. 235v</desc>
-            <graphic url="ms-101090_0474.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0476.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_236r">
             <desc>f. 236r</desc>
-            <graphic url="ms-101090_0475.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0477.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_236v">
             <desc>f. 236v</desc>
-            <graphic url="ms-101090_0476.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0478.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_237r">
             <desc>f. 237r</desc>
-            <graphic url="ms-101090_0477.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0479.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_237v">
             <desc>f. 237v</desc>
-            <graphic url="ms-101090_0478.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0480.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_238r">
             <desc>f. 238r</desc>
-            <graphic url="ms-101090_0479.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0481.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_238v">
             <desc>f. 238v</desc>
-            <graphic url="ms-101090_0480.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0482.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_239r">
             <desc>f. 239r</desc>
-            <graphic url="ms-101090_0481.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0483.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_239v">
             <desc>f. 239v</desc>
-            <graphic url="ms-101090_0482.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0484.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_240r">
             <desc>f. 240r</desc>
-            <graphic url="ms-101090_0483.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0485.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_240v">
             <desc>f. 240v</desc>
-            <graphic url="ms-101090_0484.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0486.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_241r">
             <desc>f. 241r</desc>
-            <graphic url="ms-101090_0485.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0487.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_241v">
             <desc>f. 241v</desc>
-            <graphic url="ms-101090_0486.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0488.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_242r">
             <desc>f. 242r</desc>
-            <graphic url="ms-101090_0487.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0489.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_242v">
             <desc>f. 242v</desc>
-            <graphic url="ms-101090_0488.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0490.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_243r">
             <desc>f. 243r</desc>
-            <graphic url="ms-101090_0489.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0491.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_243v">
             <desc>f. 243v</desc>
-            <graphic url="ms-101090_0490.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0492.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_244r">
             <desc>f. 244r</desc>
-            <graphic url="ms-101090_0491.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0493.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_244v">
             <desc>f. 244v</desc>
-            <graphic url="ms-101090_0492.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0494.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_245r">
             <desc>f. 245r</desc>
-            <graphic url="ms-101090_0493.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0495.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_245v">
             <desc>f. 245v</desc>
-            <graphic url="ms-101090_0494.tif" width="5402px" height="6989px"/>
+            <graphic url="ms-101090_0496.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_246r">
             <desc>f. 246r</desc>
-            <graphic url="ms-101090_0495.tif" width="5576px" height="6989px"/>
+            <graphic url="ms-101090_0497.tif" width="5576px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_246v">
             <desc>f. 246v</desc>
-            <graphic url="ms-101090_0496.tif" width="5402px" height="6989px"/>
-        </surface>
-        <surface xml:id="ms-101090_247r">
-            <desc>f. 247r</desc>
-            <graphic url="ms-101090_0497.tif" width="5576px" height="6989px"/>
-        </surface>
-        <surface xml:id="ms-101090_247v">
-            <desc>f. 247v</desc>
             <graphic url="ms-101090_0498.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S247r">
+            <desc>⟨f. 247r⟩</desc>
             <graphic url="ms-101090_0499.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S247v">
+            <desc>⟨f. 247v⟩</desc>
             <graphic url="ms-101090_0500.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S248r">
+            <desc>⟨f. 248r⟩</desc>
             <graphic url="ms-101090_0501.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S248v">
+            <desc>⟨f. 248v⟩</desc>
             <graphic url="ms-101090_0502.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S249r">
+            <desc>⟨f. 249r⟩</desc>
             <graphic url="ms-101090_0503.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S249v">
+            <desc>⟨f. 249v⟩</desc>
             <graphic url="ms-101090_0504.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S250r">
+            <desc>⟨f. 250r⟩</desc>
             <graphic url="ms-101090_0505.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S250v">
+            <desc>⟨f. 250v⟩</desc>
             <graphic url="ms-101090_0506.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S251r">
+            <desc>⟨f. 251r⟩</desc>
             <graphic url="ms-101090_0507.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S251v">
+            <desc>⟨f. 251v⟩</desc>
             <graphic url="ms-101090_0508.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S252r">
+            <desc>⟨f. 252r⟩</desc>
             <graphic url="ms-101090_0509.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S252v">
+            <desc>⟨f. 252v⟩</desc>
             <graphic url="ms-101090_0510.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S253r">
+            <desc>⟨f. 253r⟩</desc>
             <graphic url="ms-101090_0511.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S253v">
+            <desc>⟨f. 253v⟩</desc>
             <graphic url="ms-101090_0512.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S254r">
+            <desc>⟨f. 254r⟩</desc>
             <graphic url="ms-101090_0513.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S254v">
+            <desc>⟨f. 254v⟩</desc>
             <graphic url="ms-101090_0514.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S255r">
+            <desc>⟨f. 255r⟩</desc>
             <graphic url="ms-101090_0515.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S255v">
+            <desc>⟨f. 255v⟩</desc>
             <graphic url="ms-101090_0516.tif" width="5402px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S256r">
+            <desc>⟨f. 256r⟩</desc>
             <graphic url="ms-101090_0517.tif" width="5576px" height="6989px"/>
         </surface>
-        <surface xml:id="ms-101090_">
-            <desc/>
+        <surface xml:id="ms-101090_S256v">
+            <desc>⟨f. 256v⟩</desc>
             <graphic url="ms-101090_0518.tif" width="5402px" height="6989px"/>
         </surface>
         <surface xml:id="ms-101090_RCI">

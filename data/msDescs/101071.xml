@@ -19,9 +19,9 @@
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101071</idno>
-                <date when="2022"/>
+                <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -39,7 +39,7 @@
                             <idno type="id" subtype="Regina">004833869</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Jacob Nielsen, Salutatio beatae Mariae virginis gloriosae</head>
+                    <head>Recommendatio parvula sive Salutatio beatae Mariae virginis gloriosae</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
@@ -57,17 +57,31 @@
                                     </p>
                                 </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" quantity="1" unit="folios"/>
-                                    <measure type="rightFlyleaves" quantity="1" unit="folios"/>
+                                    <measure type="leftFlyleaves" quantity="0" unit="folios"/>
+                                    <measure type="rightFlyleaves" quantity="0" unit="folios"/>
                                 </extent>
-                                <foliation>Foliated in pencil by a modern hand.</foliation>
+                                <foliation>Modern foliation in pencil.
+                                    <secFol>Salue mitis</secFol>
+                                </foliation>
+                                <collation>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/639724a016d2310001b44503/viewOnly">VisColl collation</ref>
+                                    </p>
+                                    <formula>1(1+10), 2(8) </formula>
+                                </collation>
                                 <condition>Flyleaves loose, board and attachment straps visible underneath. </condition>
                             </supportDesc>
                         </objectDesc>
                         <additions>
                             <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Upper left corner: National Library modern ex libris.
+                                    Lower right corner: remains of a red wax seal. 
+                                </note>
+                            </p>
+                            <p>
                                 <locus from="RCI" to="RCI" scheme="other"/>
-                                <note>pen-trials ("probacio penne", "salue mater")</note>
+                                <note>Middle of page in brown ink by a medieva hand: <quote xml:lang="la">probacio penne</quote>, <quote xml:lang="la">salue mater </quote>(pen-trials).</note>
                             </p>
                         </additions>
                         <decoDesc>
@@ -77,7 +91,12 @@
                         </decoDesc>
                         <bindingDesc>
                             <binding>
-                                <p>Contemporary, white (now dirty) torn skin (some losses) over oak boards; 3 double spinedbands; one endband lost; one strap and pin fastening, the pin at the lower cover; two nails at the upper edge of the lower cover as well as holes with traces of rust on the covering and outermost leaves are left after chain staples.</p>
+                                <p>
+                                    Contemporary binding. Brown or white leather over oak boards. 3 pairs of raised bands and endband. Strap and pin fastening, pin at the <locus from="RCO" to="RCO" scheme="other"/>. 
+                                </p>
+                                <p>
+                                    <locus from="LCO" to="LCO" scheme="other"/>, top in brown ink <quote>N 39</quote>; bottom stamped in gold: <quote>A 39</quote>; <locus from="Spine" to="Spine" scheme="other"/>, brown ink on paper label: <quote>A 39</quote>.
+                                </p>
                                 <p>
                                     <dimensions type="binding">
                                         <height quantity="205" unit="mm"/>
@@ -85,18 +104,44 @@
                                         <depth quantity="25" unit="mm"/>
                                     </dimensions>
                                 </p>
+                                <condition>Leather dirty and torn. Boards visible on all sides. Worm holes all over. Bottom endband missing. Traces of nails (from chain staples) and rust on upper part of <locus from="RCO" to="RCO" scheme="other"/>.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin>Denmark 14th/15th century</origin>
-                        <provenance>From the library of Stephanus Johannis Stephanius (1599-1650, Copenhagen and Sorø). The manuscript is quoted by Stephanius as his own in his edition of Sven Aagesøns Danmarkshistorie, see E. Jørgensen, ‘Fra svenske Bibliotheker’, Kirkehistoriske Samlinger 5. rk. (1909-11), 771-3 and idem, ‘Stephanus Johannis Stephanii manuskriptsamling’ NTBB 4 (1917), 19-20, 22.  
-                            Magnus Gabriel De la Gardie, his seal on the paste down inside upper cover, manuscript listed in C. Annerstedt, Upsala universitets historia intill år 1702, N.F. K. Vitterhets Historie och Antiqvitets Akademiens handlingar 12:2 (Stockholm, 1894), Bilaga 6:1, p. 96 ’Salutatio beatae Virginis Mariae glorisae. fol. 849’.
-                            Antikvitetsarkivet. Listed in the old handwritten catalogues/inventories as: ? (U 89, [3v], Inventory of the books from the library of Magnus Gabriel De la Gardie, 1686); "no. 202" (U 90:2, p. 14r); "no 27" (U 91:3); "no XXII" (U 91:5). Berch’s catalogue 1758, A 39 (current signum). 
-                        </provenance>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100102">Denmark</placeName>
+                            </origPlace>
+                            <origDate notBefore="1375" notAfter="1425">14th century, last quarter, or 15th century, first quarter</origDate>
+                        </origin>
+                        <provenance>The manuscript belonged the library of <persName ref="https://www.manuscripta.se/person/102535">Stephanus Johannis Stephanius</persName> (1599-1650). See <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107137" type="short">Jørgensen (1909-1911)</title>
+                                <citedRange unit="page" from="771" to="773"/>
+                            </bibl>and <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107138" type="short">Jørgensen (1917)</title>
+                                <citedRange unit="page" from="19" to="22"/>
+                            </bibl>. From there it was sold to <persName ref="https://www.manuscripta.se/person/102549">Magnus Gabriel De la Gardie</persName> (his seal is found on LCI) and from him to <orgName ref="https://www.manuscripta.se/org/100002">Uppsala University Library</orgName>. In <date when="1686"/> the manuscript was transferred to the <orgName ref="https://www.manuscripta.se/org/100156">College of Antiquities</orgName> (later the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>), see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107139" type="short">Annerstedt (1894)</title>
+                                <citedRange unit="page" from="96" to="96">Appendix 6:1</citedRange>
+                            </bibl>. </provenance>
+                        <provenance>Current signum, <quote>A 39</quote>, first established in Helin’s catalogue from the 1720s (U 91:2:2).</provenance>
+                        <provenance>Also mentioned in the following catalogues and inventories: U 89, 3v; U 90:2, p. 14r, <quote>no. 202</quote>; U 91:3, <quote>no. 27</quote>;  U 91:5, <quote>no XXII</quote>.</provenance>
                         <provenance/>
-                        <acquisition>From Antikvitetsarkivet to the National Library. </acquisition>
+                        <acquisition>From the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date when="1780"/>. </acquisition>
                     </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107136" type="short">Lehmann (1936)</title>
+                                <citedRange unit="page" from="35" to="36"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107140" type="short">Kabell (1967)</title>
+                                <citedRange unit="page" from="21" to="24">Regarding Jacob Nielsen (Jacobus Nicholai) as potential author. </citedRange>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
@@ -104,27 +149,45 @@
                         <msContents>
                             <textLang mainLang="la"/>
                             <msItem>
-                                <locus from="1r" to="19v" scheme="folios"/>
-                                <title type="uniform">Salutatio beatae Mariae</title>
-                                <rubric>Incipit recommendacio parula siue salutacio beate marie genitricis dei omnipotentis et virginis gloriose.</rubric>
+                                <locus from="2r" to="18v" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102550">Jacobus Nicholai de Dacia</persName>
+                                </author>
+                                <title type="uniform">Recommendatio parvula sive Salutatio beatae Mariae</title>
+                                <rubric>Salutacio beate marie uirginis gloriose</rubric>
                                 <incipit>Salue sancta parens dei. Salue mater noster spei.</incipit>
                                 <explicit defective="false">Et securos nos conducet. Lux que sine fine lucet Per suam clemenciam Amen.</explicit>
                                 <note>
                                     <p>
-                                             <locus from="18v" to="18v" scheme="folios"/> An addition by the scribe:
+                                                       <locus from="18v" to="18v" scheme="folios"/> An addition by the scribe:
+                                                   
+                                                   
+                                              
+                                              
                                          
                                          
                                     </p>
                                     <p>
-                                             Istud salve subscriptum stare debet in tercio folio precedenti ad tale signum quod sequitur (reference sign) + six lines of verse. The corresponding reference sign is found on <locus from="16r" to="16r" scheme="folios"/> where "in fine stat" has also been written in the margin. 
+                                                       <quote xml:lang="la">Istud salve subscriptum stare debet in tercio folio precedenti ad tale signum quod sequitur</quote> (reference sign) + six lines of verse. The corresponding reference sign is found on <locus from="16r" to="16r" scheme="folios"/> where <quote xml:lang="la">in fine stat</quote> has also been written in the margin. 
+                                                   
+                                                   
+                                              
+                                              
                                          
                                          
                                     </p>
+                                    <p/>
+                                    <p/>
                                     <p>
-                                             <locus from="19r" to="19v" scheme="folios"/>: A double lined frame with a x-shape within drawn in darkbrown ink. 
-                                             In the upper part of the frame the scribe or a contemporary hand has written: Salue sancta ? et omni cause
-                                             Below the lower part of the frame: sic deformetur per furtum ne rapiatur folium hoc
-                                             On the verso a similar frame filled with pen-trials (of which some are words and others just letters). Above the frame two lines have been written, but the text is too faded and damaged to make out. 
+                                                       According to <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107140" type="short">Kabell (1967)</title>
+                                            <citedRange unit="page" from="24" to="24"/>
+                                            <citedRange unit="footnote" from="40" to="40"/>
+                                        </bibl> one bifolium of the manuscript is probably missing since the original number of the double strophes should be 150. 
+                                                   
+                                                   
+                                              
+                                              
                                          
                                          
                                     </p>
@@ -133,7 +196,7 @@
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="parchment">
+                                <supportDesc>
                                     <support>
                                         <p>
                                             <locus from="1r" to="19v" scheme="folios"/>
@@ -148,9 +211,9 @@
                                         <measure type="textblockLeaves" quantity="19" unit="folios"/>
                                     </extent>
                                     <condition>
-                                        <locus from="1rv" to="1rv" scheme="folios"/> loose leaf, almost detached.
-                                        <locus from="4rv" to="4rv" scheme="folios"/> Circa 80% of the page cut out. Words or parts of words from 10 lines are visible on 4r, on 4v only two words. 
-                                        <locus from="1rv" to="1rv" scheme="folios"/> and <locus from="19rv" to="19rv" scheme="folios"/> dirty and with holes in the page.
+                                        <locus from="1" to="1" scheme="folios"/> loose leaf, almost detached.
+                                        <locus from="4" to="4" scheme="folios"/> Circa 80% of the page cut out. Words or parts of words from 10 lines are visible on 4r, on 4v only two words. 
+                                        <locus from="1" to="1" scheme="folios"/> and <locus from="19" to="19" scheme="folios"/> dirty and with holes in the page.
                                         Sewing loose in both quires.
                                     </condition>
                                 </supportDesc>
@@ -164,40 +227,57 @@
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Hybrida</handNote>
+                            </handDesc>
                             <additions>
                                 <p>
-                                    <locus from="2r" to="18v" scheme="folios"/>
-                                    <note>Scattered glossing in the margins by a contemporary hand.</note>
-                                </p>
-                                <p>
                                     <locus from="1r" to="1r" scheme="folios"/>
-                                    <note>Upper right corner in black ink: 18 Blad 1846</note>
+                                    <note>Upper right corner in black ink by a modern hand: <quote xml:lang="sv">18 Blad 1846.</quote></note>
                                 </p>
                                 <p>
                                     <locus from="1v" to="1v" scheme="folios"/>
-                                    <note>Below the title the same or a contemporary hand has written "probacio penne". 
-                                        Bottom of the page: Per quendam scolarem de regno dacie
-                                        Below this a pen-trial. 
+                                    <note>Upper part of page in brown ink (with capitals touched in red) by a medieval hand: <quote>Incipit recommendacio paruula siue salutacio beate marie genitricis dei omnipotentis et virginis gloriose</quote>.
+                                        Below the title  a contemporary hand has written: <quote xml:lang="la">probacio penne</quote>. 
+                                        Bottom of the page by the same hand that wrote the title: <quote xml:lang="la">Per quendam scolarem de regno dacie</quote>
+                                        Below this a pen-trial in faded brown ink. 
                                     </note>
                                 </p>
                                 <p>
+                                    <locus from="2r" to="2r" scheme="folios"/>
+                                    <note>Top of page in pencil/lead: <quote>27</quote>.</note>
+                                </p>
+                                <p>
                                     <locus from="5v" to="5v" scheme="folios"/>
-                                    <note>"Roskildis" written in a frame, probably by the scribe. </note>
+                                    <note>
+                                        Outer margin in brown ink within a frame by the scribe or a contemporary hand: <quote>Roskildis</quote>. 
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="5v" to="16r" scheme="folios"/>
+                                    <note>Short additions or corrections (one word or short phrases) by a contemporary hand in the margins. </note>
+                                </p>
+                                <p>
+                                    <locus from="19r" to="19r" scheme="folios"/>
+                                    <note>The entire page is covered by a double frame containing a x-shape drawn in darkbrown ink. 
+                                        In the upper part of the frame the scribe or a contemporary hand has written: <quote xml:lang="la">Salue sancta ? et omni cause</quote>
+                                        Below the lower part of the frame: <quote xml:lang="la">sic deformetur per furtum ne rapiatur folium hoc</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="19v" to="19v" scheme="folios"/>
+                                    <note>A similar frame to that on <locus from="19r" to="19r" scheme="folios"/> filled with pen-trials (of which some are words and others just letters). Above the frame two lines have been written, but the text is too faded and damaged to make out. </note>
                                 </p>
                             </additions>
                             <decoDesc>
-                                <p>Capitals touched with red.</p>
+                                <p>Main text in brown ink, capitals touched in red, </p>
                                 <decoNote type="initials">
-                                    <locus from="2r" to="2r" scheme="folios"/> 4-line blue initial with pen-flourishing in red 
+                                    <locus from="2r" to="2r" scheme="folios"/> Opening plain initial S over 2 lines (+ extending above and below the line) in blue with red flourishing.
                                 </decoNote>
                             </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/100102">Denmark</placeName>
-                                </origPlace>, <origDate notBefore="1351" notAfter="1400">14th century, first half</origDate>
-                            </origin>
+                            <origin/>
                         </history>
                     </msPart>
                 </msDesc>
