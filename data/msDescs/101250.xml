@@ -4,6 +4,9 @@
         <fileDesc>
             <titleStmt>
                 <title>National Library of Sweden, Isl. perg. fol. 1</title>
+                <sponsor ref="https://www.manuscripta.se/org/100152">Digitization of the West Norse Manuscripts in Swedish Collections</sponsor>
+                <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
+                <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
@@ -13,7 +16,9 @@
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101250</idno>
                 <date when="2022"/>
-                <availability status="free"/>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
@@ -86,7 +91,8 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="published"><change who="https://www.manuscripta.se/person/100380" when="2022-12-18" status="published">First published</change>
+        <revisionDesc status="published">
+            <change who="https://www.manuscripta.se/person/100380" when="2022-12-18" status="published">First published</change>
             <change who="https://www.manuscripta.se/person/100380" when="2022-12-18" status="draft">Added facsimile</change>
             <change status="draft" when="2022-12-18" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
@@ -98,11 +104,7 @@
             </div>
         </body>
     </text>
-    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-101250/">
-        <surface xml:id="ms-101250_Color-card">
-            <desc>Color-card</desc>
-            <graphic url="ms-101250_0000.tif" width="6964px" height="9286px"/>
-        </surface>
+    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-101250/">        
         <surface xml:id="ms-101250_LCO">
             <desc>Left cover, outside</desc>
             <graphic url="ms-101250_0001.tif" width="6964px" height="9286px"/>
@@ -111,8 +113,8 @@
             <desc>Left cover, inside</desc>
             <graphic url="ms-101250_0002.tif" width="6987px" height="9466px"/>
         </surface>
-        <surface xml:id="ms-101250_Note_ 1r">
-            <desc>Note  1r</desc>
+        <surface xml:id="ms-101250_Note_1r">
+            <desc>Note 1r</desc>
             <graphic url="ms-101250_0003.tif" width="7345px" height="9292px"/>
         </surface>
         <surface xml:id="ms-101250_Note_1v">
@@ -1826,6 +1828,10 @@
         <surface xml:id="ms-101250_Overview">
             <desc>Overview</desc>
             <graphic url="ms-101250_0431.tif" width="6995px" height="4842px"/>
+        </surface>
+        <surface xml:id="ms-101250_Color-card">
+            <desc>Color-card</desc>
+            <graphic url="ms-101250_0000.tif" width="6964px" height="9286px"/>
         </surface>
     </facsimile>
 </TEI>
