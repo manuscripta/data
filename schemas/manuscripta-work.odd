@@ -28,7 +28,7 @@
             <div xml:id="schema">
                 <head>Schema for the Manuscripta work files</head>
 
-                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/manuscripta-p5subset.xml">
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
@@ -41,11 +41,11 @@
 
                     <!-- Modules for manuscripta-works.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
-                    <moduleRef key="core" include="date author bibl editor note p quote title" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="header" include="idno sourceDesc" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="msdescription" include="explicit incipit" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="namesdates" include="persName" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="textstructure" include="body" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="core" include="date author bibl editor note p quote title" source="odd/p5subset.xml"/>
+                    <moduleRef key="header" include="idno sourceDesc" source="odd/p5subset.xml"/>
+                    <moduleRef key="msdescription" include="explicit incipit" source="odd/p5subset.xml"/>
+                    <moduleRef key="namesdates" include="persName" source="odd/p5subset.xml"/>
+                    <moduleRef key="textstructure" include="body" source="odd/p5subset.xml"/>
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
                     <elementSpec ident="author" module="core" mode="change">
@@ -57,6 +57,10 @@
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
+                        <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
@@ -147,6 +151,8 @@
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes changed and deleted in att.naming -->
                             <attDef ident="role" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
@@ -230,6 +236,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="id"/>
@@ -326,6 +334,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:space" mode="delete"/>
@@ -402,6 +412,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                             <!-- Attributes changed and deleted in att.typed -->
@@ -431,100 +443,25 @@
                             <p/>
                         </remarks>
                     </elementSpec>
-
+                    
+                    <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+                    
+                    <classSpec ident="att.calendarSystem" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.editLike" module="tei" type="atts" mode="delete"/>
-                    <classSpec ident="att.global" module="tei" type="atts" mode="change">
-                        <attList>
-                            <attDef ident="xml:lang" mode="change" usage="opt">
-                                <valList mode="replace" type="closed">
-                                    <valItem ident="da">
-                                        <gloss xml:lang="en">Danish</gloss>
-                                        <gloss xml:lang="sv">Danska</gloss>
-                                    </valItem>
-                                    <valItem ident="de">
-                                        <gloss xml:lang="en">German</gloss>
-                                        <gloss xml:lang="sv">Tyska</gloss>
-                                    </valItem>
-                                    <valItem ident="el">
-                                        <gloss xml:lang="en">Modern Greek</gloss>
-                                        <gloss xml:lang="sv">Nygrekiska</gloss>
-                                    </valItem>
-                                    <valItem ident="en">
-                                        <gloss xml:lang="en">English</gloss>
-                                        <gloss xml:lang="sv">Engelska</gloss>
-                                    </valItem>
-                                    <valItem ident="fi">
-                                        <gloss xml:lang="en">Finnish</gloss>
-                                        <gloss xml:lang="sv">Finska</gloss>
-                                    </valItem>
-                                    <valItem ident="fr">
-                                        <gloss xml:lang="en">French</gloss>
-                                        <gloss xml:lang="sv">Franska</gloss>
-                                    </valItem>
-                                    <valItem ident="grc">
-                                        <gloss xml:lang="en">Greek</gloss>
-                                        <desc xml:lang="en">Ancient and Medieval Greek</desc>
-                                        <gloss xml:lang="sv">Grekiska</gloss>
-                                        <desc xml:lang="sv">Antik och medeltida grekiska</desc>
-                                    </valItem>
-                                    <valItem ident="is">
-                                        <gloss xml:lang="en">Icelandic</gloss>
-                                        <gloss xml:lang="sv">Isländska</gloss>
-                                    </valItem>
-                                    <valItem ident="it">
-                                        <gloss xml:lang="en">Italian</gloss>
-                                        <gloss xml:lang="sv">Italienska</gloss>
-                                    </valItem>
-                                    <valItem ident="la">
-                                        <gloss xml:lang="en">Latin</gloss>
-                                        <gloss xml:lang="sv">Latin</gloss>
-                                    </valItem>
-                                    <valItem ident="nl">
-                                        <gloss xml:lang="en">Dutch</gloss>
-                                        <gloss xml:lang="sv">Nederländska</gloss>
-                                    </valItem>
-                                    <valItem ident="non-dan">
-                                        <gloss xml:lang="en">Old Danish</gloss>
-                                        <desc xml:lang="en">Old Danish of East Norse. LINGUIST List code standard (http://multitree.org/codes/non-dan).</desc>
-                                        <gloss xml:lang="sv">Forndanska</gloss>
-                                        <desc xml:lang="sv">LINGUIST List språkkod standard (http://multitree.org/codes/non-dan).</desc>
-                                    </valItem>
-                                    <valItem ident="non-gut">
-                                        <gloss xml:lang="en">Old Gutnish</gloss>
-                                        <desc xml:lang="en">Old Gutnish of East Norse. LINGUIST List code standard (http://multitree.org/codes/non-gut).</desc>
-                                        <gloss xml:lang="sv">Forngutniska</gloss>
-                                        <desc xml:lang="sv">LINGUIST List språkkod standard (http://multitree.org/codes/non-gut).</desc>
-                                    </valItem>
-                                    <valItem ident="non-swe">
-                                        <gloss xml:lang="en">Old Swedish</gloss>
-                                        <desc xml:lang="en">Old Swedish of East Norse. LINGUIST List code standard (http://multitree.org/codes/non-swe).</desc>
-                                        <gloss xml:lang="sv">Fornsvenska</gloss>
-                                        <desc xml:lang="sv">LINGUIST List språkkod standard (http://multitree.org/codes/non-swe).</desc>
-                                    </valItem>
-                                    <valItem ident="sp">
-                                        <gloss xml:lang="en">Spanish</gloss>
-                                        <gloss xml:lang="sv">Spanska</gloss>
-                                    </valItem>
-                                    <valItem ident="sv">
-                                        <gloss xml:lang="en">Swedish</gloss>
-                                        <gloss xml:lang="sv">Svenska</gloss>
-                                    </valItem>
-                                    <valItem ident="non-wes">
-                                        <gloss xml:lang="en">West Norse</gloss>
-                                        <desc xml:lang="en">LINGUIST List code standard (http://multitree.org/codes/non-wes).</desc>
-                                        <gloss xml:lang="sv">Fornnorska</gloss>
-                                        <desc xml:lang="sv">LINGUIST List språkkod standard (http://multitree.org/codes/non-wes).</desc>
-                                    </valItem>
-                                </valList>
-                            </attDef>
-                        </attList>
-                    </classSpec>
+                    
                     <classSpec ident="att.global.analytic" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.facs" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.linking" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.msExcerpt " module="msdescription" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.naming" module="tei" type="atts" mode="change">
                         <attList>
                             <attDef ident="nymRef" mode="delete"/>

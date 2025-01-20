@@ -28,7 +28,7 @@
             <div xml:id="schema">
                 <head>Schema for the Manuscripta msDescs</head>
                 
-                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/manuscripta-p5subset.xml">
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
@@ -39,13 +39,12 @@
                     <moduleRef key="header" include="availability change extent fileDesc funder handNote idno licence publicationStmt revisionDesc sourceDesc sponsor teiHeader titleStmt"/>
                     <moduleRef key="figures" include="formula"/>
                     <moduleRef key="linking" except="ab alt altGrp anchor annotation join joinGrp link linkGrp listAnnotation seg standOff timeline when"/>
-                    <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width"/>
+                    <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric secFol signatures summary support supportDesc watermark width"/>
                     <moduleRef key="namesdates" include="country orgName persName placeName settlement"/>
                     <moduleRef key="textstructure" include="body div TEI text"/>
                     <moduleRef key="transcr" include="ex facsimile supplied surface"/>
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
-
                 </schemaSpec>
             </div>
         </back>

@@ -92,6 +92,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="URI"/>
@@ -141,11 +143,10 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
-                            <!-- Attributes deleted in att.naming -->
-                            <attDef ident="nymRef" mode="delete"/>
-                            <attDef ident="role" mode="delete"/>
                         </attList>
                     </elementSpec>
 
@@ -172,7 +173,7 @@
                                     <valItem ident="monastery"/>
                                 </valList>
                             </attDef>     
-                            <attDef ident="subtype" mode="delete"/>                            
+                            <attDef ident="subtype" mode="delete"/>
                         </attList>
                     </elementSpec>
 
@@ -186,12 +187,12 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
                             <attDef ident="n" mode="delete"/>
-                            <!-- Attributes deleted in att.naming -->
-                            <attDef ident="role" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                             <attDef ident="ref" mode="delete"/>
@@ -234,6 +235,7 @@
                         </content>
                         <attList>
                             <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="level" mode="delete"/>
                         </attList>
                         <exemplum>
@@ -268,15 +270,25 @@
                             </attDef>
                         </attList>
                     </classSpec>
-
+                    
+                    <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+                    
+                    <classSpec ident="att.calendarSystem" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
-
+                    
                     <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="delete"/>
-
+                    
                     <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
-
+                    
+                    <classSpec ident="att.naming" module="tei" type="atts" mode="change">
+                        <attList>
+                            <attDef ident="role" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    
                     <classSpec ident="att.sortable" module="tei" type="atts" mode="delete"/>
-
+                    
                 </schemaSpec>
             </div>
         </back>

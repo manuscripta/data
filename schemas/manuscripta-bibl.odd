@@ -28,7 +28,7 @@
             <div xml:id="schema">
                 <head>Schema for the Manuscripta bibliography files</head>
                 
-                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/manuscripta-p5subset.xml">
+                <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="manuscripta-p5subset.xml">
 
                     <!--       MODULES USED BY THE SCHEMA       -->
 
@@ -43,11 +43,11 @@
 
                     <!-- Modules for manuscripta-bibl.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
-                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor imprint monogr p pubPlace q series title" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="header" include="edition idno sourceDesc" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="msdescription" include="msDesc" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
-                    <moduleRef key="textstructure" include="body" source="file:/C:/GitHub/PatrikGranholm/manuscripta/schemas/odd/p5subset.xml"/>
+                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor imprint monogr p pubPlace q series title" source="odd/p5subset.xml"/>
+                    <moduleRef key="header" include="edition idno sourceDesc" source="odd/p5subset.xml"/>
+                    <moduleRef key="msdescription" include="msDesc" source="odd/p5subset.xml"/>
+                    <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="odd/p5subset.xml"/>
+                    <moduleRef key="textstructure" include="body" source="odd/p5subset.xml"/>
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
 
@@ -103,6 +103,8 @@
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                             <attDef ident="ref" mode="delete"/>
@@ -235,6 +237,10 @@
                         <content>
                             <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
                         </content>
+                        <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
@@ -282,9 +288,11 @@
                             <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="pubPlace" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="publisher" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="date" minOccurs="1" maxOccurs="1"/>
+                            <sequence>
+                                <elementRef key="pubPlace" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="publisher" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="date" minOccurs="1" maxOccurs="1"/>
+                            </sequence>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
@@ -303,6 +311,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="ISBN"/>
@@ -448,6 +458,8 @@
                             </alternate>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                             <!-- Attributes deleted in att.naming -->
@@ -584,6 +596,8 @@
                             </alternate>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="type" mode="change" usage="opt">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="main">
@@ -618,20 +632,31 @@
                             <p/>
                         </remarks>
                     </elementSpec>
-
+                    
+                    <!-- DELETED AND MODIFIED GLOBAL ATTRIBUTES -->
+                    
+                    <classSpec ident="att.calendarSystem" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.editLike" module="tei" type="atts" mode="delete"/>
-
+                    
                     <classSpec ident="att.global" module="tei" type="atts" mode="change">
                         <attList>
                             <attDef ident="xml:base" mode="delete"/>
                         </attList>
                     </classSpec>
+                    
                     <classSpec ident="att.global.analytic" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.facs" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.linking" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.rendition" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.responsibility" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.global.source" module="tei" type="atts" mode="delete"/>
+                    
                     <classSpec ident="att.naming" module="tei" type="atts" mode="change">
                         <attList>
                             <!-- Closed value list for @role -->
@@ -653,7 +678,7 @@
                             <p/>
                         </remarks>
                     </classSpec>
-
+                    
                 </schemaSpec>
             </div>
         </back>

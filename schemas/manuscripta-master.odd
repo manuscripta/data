@@ -55,7 +55,7 @@
                                 <locus from="S128r" to="S129v" scheme="folios"/>
                             </locusGrp>
                         </egXML> For references to the spine and covers the <att>scheme</att> attribute with the value <val>other</val> should be used. Use the abbreviations LCO (= left cover outside), LCI (= left cover inside), RCI (= right cover inside), RCO (= right cover outside). <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <locus from="spine" to="spine" scheme="other"/>
+                            <locus from="Spine" to="Spine" scheme="other"/>
                         </egXML> In cases where it is necessary to use different values for the scheme <att>attribute</att>, e.g. when referring to the left or right inside covers and the flyleaves, use <gi>locusGrp</gi>. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <locusGrp>
                                 <locus from="SR1r" to="SR2v" scheme="folios"/>
@@ -977,7 +977,7 @@
                     <moduleRef key="header" include="availability change extent fileDesc funder handNote idno licence publicationStmt revisionDesc sourceDesc sponsor teiHeader titleStmt"/>
                     <moduleRef key="figures" include="formula"/>
                     <moduleRef key="linking" except="ab alt altGrp anchor annotation join joinGrp link linkGrp listAnnotation seg standOff timeline when"/>
-                    <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric signatures summary support supportDesc watermark width"/>
+                    <moduleRef key="msdescription" include="acquisition additional additions altIdentifier binding bindingDesc catchwords collation collection colophon condition decoDesc decoNote depth dimensions explicit filiation finalRubric foliation handDesc height history incipit institution layout layoutDesc locus locusGrp material msContents msDesc msFrag msIdentifier msItem msName msPart musicNotation objectDesc origDate origPlace origin physDesc provenance repository rubric secFol signatures summary support supportDesc watermark width"/>
                     <moduleRef key="namesdates" include="country listOrg org orgName persName placeName settlement"/>
                     <moduleRef key="textstructure" include="body div TEI text"/>
                     <moduleRef key="transcr" include="ex facsimile supplied surface"/>
@@ -991,6 +991,7 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
@@ -999,9 +1000,12 @@
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:lang" mode="delete"/>
@@ -1150,6 +1154,8 @@
                             <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -1181,6 +1187,8 @@
                             <elementRef key="persName"/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -1263,25 +1271,28 @@
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="title" minOccurs="1" maxOccurs="1"/>
-                            <!--<elementRef key="ref" minOccurs="1" maxOccurs="1" />-->
-                            <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded"/>
+                            <sequence>
+                                <elementRef key="title" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="citedRange" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="note" minOccurs="0" maxOccurs="1"/>
+                            </sequence>
                         </content>
-                        <!--<constraintSpec ident="bibl.check" scheme="schematron">
+                        <constraintSpec ident="bibl.check" scheme="schematron">
                             <desc versionDate="2017-02-23">Check that short title in bibl matches with the authority file.</desc>
                             <constraint>
                                 <sch:rule context="tei:bibl/tei:title">
                                     <sch:let name="bibl-ref" value="substring-after(@ref, 'bibl/')"/>
-                                    <sch:let name="short-title" value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:title[@type = 'short']"/>
-                                    <sch:let name="first-author-surname" value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[1][not(@role = 'origAuth')]/tei:persName/tei:surname"/>
-                                    <sch:let name="author-surname" value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[@role = 'critEd'][1]/tei:persName/tei:surname"/>
-                                    <sch:let name="date" value="doc(concat('../id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct/tei:monogr/tei:imprint/tei:date"/>
+                                    <sch:let name="short-title" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:title[@type = 'short']"/>
+                                    <sch:let name="first-author-surname" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[1][not(@role = 'origAuth')]/tei:persName/tei:surname[1]"/>
+                                    <sch:let name="author-surname" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[@role = 'critEd'][1]/tei:persName/tei:surname[1]"/>
+                                    <sch:let name="first-editor-surname" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:editor[1]/tei:persName/tei:surname[1]"/>
+                                    <sch:let name="date" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct/tei:monogr/tei:imprint/tei:date"/>
                                     <sch:let name="year" value="if($date[@when]) then $date/@when else concat($date/@from, '–', $date/@to)"/>
                                     <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/bibl/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/bibl/</sch:assert>
-                                    <sch:assert test="contains($short-title,.) or contains(concat($first-author-surname, ' (', $year, ')'),.) or contains(concat($author-surname, ' (', $year, ')'),.)">bibl mismatch</sch:assert>
+                                    <sch:assert test="contains($short-title,.) or contains(concat($first-author-surname, ' (', $year, ')'),.) or contains(concat($author-surname, ' (', $year, ')'),.) or contains(concat($first-editor-surname, ' (', $year, ')'),.)">bibl mismatch</sch:assert>
                                 </sch:rule>
                             </constraint>
-                        </constraintSpec>-->
+                        </constraintSpec>
                         <attList>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
@@ -1314,14 +1325,16 @@
                                 <elementRef key="condition" minOccurs="0" maxOccurs="1"/>
                             </sequence>
                         </content>
-                        <constraintSpec ident="binding.check" scheme="schematron">
+                        <!--<constraintSpec ident="binding.check" scheme="schematron">
                             <constraint>
                                 <sch:rule context="tei:binding">
                                     <sch:assert test="descendant::tei:dimensions"> The dimensions of the binding are missing </sch:assert>
                                 </sch:rule>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -1405,8 +1418,10 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
-                                <elementRef key="term"/>
+                                <elementRef key="foreign"/>
                                 <elementRef key="locus"/>
+                                <elementRef key="quote"/>
+                                <elementRef key="term"/>
                             </alternate>
                         </content>
                         <attList>
@@ -1436,6 +1451,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="target" mode="delete"/>
                             <!-- Attributes changed in att.ascribed -->
                             <attDef ident="who" mode="change" usage="req"/>
@@ -1490,12 +1507,14 @@
 
                     <elementSpec ident="collation" module="msdescription" mode="change">
                         <content>
-                            <sequence minOccurs="0" maxOccurs="unbounded">
-                                <elementRef key="formula" minOccurs="0" maxOccurs="1"/>
-                                <elementRef key="p" minOccurs="0" maxOccurs="1"/>
+                            <sequence>
+                                <sequence minOccurs="0" maxOccurs="unbounded">
+                                    <elementRef key="formula" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="p" minOccurs="0" maxOccurs="1"/>
+                                </sequence>
+                                <elementRef key="signatures" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="catchwords" minOccurs="0" maxOccurs="1"/>
                             </sequence>
-                            <elementRef key="signatures" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="catchwords" minOccurs="0" maxOccurs="1"/>
                         </content>
                         <constraintSpec ident="signatures.catchwords.check" scheme="schematron">
                             <desc versionDate="2014-12-03">Check that <gi>signatures</gi> and <gi>catchwords</gi> are used in <gi>collation</gi> for <gi>msPart</gi>.</desc>
@@ -1552,27 +1571,34 @@
 
                     <elementSpec ident="colophon" module="msdescription" mode="change">
                         <content>
-                            <alternate>
-                                <elementRef key="locus"/>
-                                <elementRef key="locusGrp"/>
-                            </alternate>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
-                                <elementRef key="ex"/>
-                                <elementRef key="foreign"/>
-                                <elementRef key="gap"/>
-                                <elementRef key="lb"/>
-                                <elementRef key="num"/>
-                                <elementRef key="sic"/>
-                                <elementRef key="supplied"/>
-                                <elementRef key="unclear"/>
-                            </alternate>
+                            <sequence>
+                                <alternate>
+                                    <elementRef key="locus"/>
+                                    <elementRef key="locusGrp"/>
+                                </alternate>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <textNode/>
+                                    <elementRef key="add"/>
+                                    <elementRef key="del"/>
+                                    <elementRef key="ex"/>
+                                    <elementRef key="foreign"/>
+                                    <elementRef key="gap"/>
+                                    <elementRef key="hi"/>
+                                    <elementRef key="lb"/>
+                                    <elementRef key="num"/>
+                                    <elementRef key="orgName"/>
+                                    <elementRef key="persName"/>
+                                    <elementRef key="sic"/>
+                                    <elementRef key="supplied"/>
+                                    <elementRef key="unclear"/>
+                                </alternate>
+                            </sequence>
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="xml:lang" mode="change" usage="req"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
@@ -1593,8 +1619,11 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
-                                <elementRef key="locus"/>
-                                <elementRef key="locusGrp"/>
+                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="locusGrp" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
                         <attList>
@@ -1625,6 +1654,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.naming -->
                             <attDef ident="role" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
@@ -1669,14 +1700,14 @@
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
-                        <constraintSpec ident="date.when.value" scheme="schematron">
+                        <!--<constraintSpec ident="date.when.value" scheme="schematron">
                             <desc versionDate="2014-08-04" xml:lang="en">checks that the <gi>date</gi> element is empty when using the <att>when</att> attribute.</desc>
                             <constraint>
                                 <sch:rule context="tei:date[@when]">
                                     <sch:report test="text()">The date element must be empty when using the when attribute.</sch:report>
                                 </sch:rule>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <attList>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
@@ -1685,8 +1716,6 @@
                             <attDef ident="n" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
-                            <!-- Attribute deleted in att.global.responsibility -->
-                            <attDef ident="cert" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1702,8 +1731,10 @@
 
                     <elementSpec ident="decoDesc" mode="change" module="msdescription">
                         <content>
-                            <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
+                            <sequence>
+                                <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="decoNote" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
@@ -1729,6 +1760,7 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="bibl"/>
                                 <elementRef key="date"/>
                                 <elementRef key="dimensions"/>
                                 <elementRef key="foreign"/>
@@ -1736,8 +1768,10 @@
                                 <elementRef key="locusGrp"/>
                                 <elementRef key="material"/>
                                 <elementRef key="measure"/>
+                                <elementRef key="orgName"/>
                                 <elementRef key="persName"/>
                                 <elementRef key="quote"/>
+                                <elementRef key="ref"/>
                                 <elementRef key="term"/>
                             </alternate>
                         </content>
@@ -1755,6 +1789,7 @@
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="bookmarks"/>
+                                    <valItem ident="clasps"/>
                                     <valItem ident="edges"/>
                                     <valItem ident="endbands"/>
                                     <valItem ident="illuminations"/>
@@ -1971,17 +2006,25 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="add"/>
+                                <elementRef key="del"/>
+                                <elementRef key="ex"/>
                                 <elementRef key="foreign"/>
                                 <elementRef key="gap"/>
+                                <elementRef key="hi"/>
+                                <elementRef key="lb"/>
                                 <elementRef key="locus"/>
-                                <elementRef key="supplied"/>
+                                <elementRef key="num"/>
+                                <elementRef key="orgName"/>
+                                <elementRef key="persName"/>
                                 <elementRef key="sic"/>
+                                <elementRef key="supplied"/>
                                 <elementRef key="unclear"/>
                             </alternate>
                         </content>
                         <attList>
                             <!-- Attribute changed in att.msExcerpt -->
-                            <attDef ident="defective" mode="change" usage="req"/>
+                            <attDef ident="defective" mode="change" usage="opt"/>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -2001,16 +2044,23 @@
 
                     <elementSpec ident="extent" mode="change" module="header">
                         <content>
-                            <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
+                            <alternate>
+                                <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
+                                <textNode/>
+                            </alternate>
                         </content>
                         <constraintSpec ident="extent.check" scheme="schematron">
-                            <desc versionDate="2014-10-03" xml:lang="en">checks that <gi>extent</gi> only contains <gi>measure</gi> with <att>type</att> value <val>textblockLeaves</val> for the codicological unit, and values <val>leftFlyleaves</val> and <val>rightFlyleaves</val> for the bookblock.</desc>
+                            <desc versionDate="2024-02-13" xml:lang="en">checks that <gi>extent</gi> only contains <gi>measure</gi> with <att>type</att> value <val>textblockLeaves</val> for the codicological unit, and values <val>leftFlyleaves</val> and <val>rightFlyleaves</val> for the bookblock, or if a free text description of the extent for the entire volume is provided that the measure elements are not used.</desc>
                             <constraint>
                                 <sch:pattern>
-                                    <sch:rule context="tei:msPart/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
+                                    <sch:rule context="tei:msDesc[tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent[not(text()[normalize-space()])]]/tei:msPart/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
                                         <sch:assert test="tei:measure[@type='textblockLeaves']"> Only the extent of the unit should be recorded here. The extent of the flyleaves should be recorded in the bookblock part.</sch:assert>
+                                        <sch:report test="tei:measure[@type='leftFlyleaves'] or tei:measure[@type='rightFlyleaves']"> Only the extent of the flyleaves should be recorded here. The extent of the textblock should be recorded under respective msPart.</sch:report>
                                     </sch:rule>
-                                    <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
+                                    <sch:rule context="tei:msDesc[tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent[text()[normalize-space()]]]/tei:msPart/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent">
+                                        <sch:report test="tei:measure[@type='textblockLeaves']"> The extent for the textblock should not be recorded here if using a free text description of the extent.</sch:report>
+                                    </sch:rule>
+                                    <sch:rule context="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:extent[not(text()[normalize-space()])]">
                                         <sch:assert test="tei:measure[@type='leftFlyleaves'][following-sibling::tei:measure[@type='rightFlyleaves']]"> Both the left and right flyleaves should be recorded here, even if there are none.</sch:assert>
                                         <sch:report test="tei:measure[@type='textblockLeaves']"> Only the extent of the flyleaves should be recorded here. The extent of the textblock should be recorded under respective msPart.</sch:report>
                                     </sch:rule>
@@ -2081,9 +2131,11 @@
                             <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="titleStmt"/>
-                            <elementRef key="publicationStmt"/>
-                            <elementRef key="sourceDesc"/>
+                            <sequence>
+                                <elementRef key="titleStmt"/>
+                                <elementRef key="publicationStmt"/>
+                                <elementRef key="sourceDesc"/>
+                            </sequence>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2101,15 +2153,17 @@
 
                     <elementSpec ident="filiation" mode="change" module="msdescription">
                         <content>
-                            <alternate>
-                                <elementRef key="ref" minOccurs="1" maxOccurs="1"/>
-                                <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
-                            </alternate>
-                            <alternate>
-                                <elementRef key="bibl" minOccurs="0" maxOccurs="1"/>
-                                <elementRef key="listBibl" minOccurs="0" maxOccurs="1"/>
-                            </alternate>
-                            <elementRef key="note" minOccurs="0" maxOccurs="1"/>
+                            <sequence>
+                                <alternate>
+                                    <elementRef key="ref" minOccurs="1" maxOccurs="1"/>
+                                    <elementRef key="idno" minOccurs="1" maxOccurs="unbounded"/>
+                                </alternate>
+                                <alternate>
+                                    <elementRef key="bibl" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="listBibl" minOccurs="0" maxOccurs="1"/>
+                                </alternate>
+                                <elementRef key="note" minOccurs="0" maxOccurs="1"/>
+                            </sequence>
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
@@ -2157,10 +2211,19 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="add"/>
+                                <elementRef key="del"/>
+                                <elementRef key="ex"/>
                                 <elementRef key="foreign"/>
                                 <elementRef key="gap"/>
-                                <elementRef key="supplied"/>
+                                <elementRef key="hi"/>
+                                <elementRef key="lb"/>
+                                <elementRef key="locus"/>
+                                <elementRef key="num"/>
+                                <elementRef key="orgName"/>
+                                <elementRef key="persName"/>
                                 <elementRef key="sic"/>
+                                <elementRef key="supplied"/>
                                 <elementRef key="unclear"/>
                             </alternate>
                         </content>
@@ -2190,7 +2253,11 @@
                                 <elementRef key="locus"/>
                                 <elementRef key="locusGrp"/>
                                 <elementRef key="num"/>
+                                <elementRef key="orgName"/>
                                 <elementRef key="persName"/>
+                                <elementRef key="quote"/>
+                                <elementRef key="ref"/>
+                                <elementRef key="secFol"/>
                                 <elementRef key="supplied"/>
                                 <elementRef key="term"/>
                             </alternate>
@@ -2219,9 +2286,20 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
-                                <elementRef key="ex" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="lb" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="unclear" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="add"/>
+                                <elementRef key="del"/>
+                                <elementRef key="ex"/>
+                                <elementRef key="foreign"/>
+                                <elementRef key="gap"/>
+                                <elementRef key="hi"/>
+                                <elementRef key="lb"/>
+                                <elementRef key="locus"/>
+                                <elementRef key="num"/>
+                                <elementRef key="orgName"/>
+                                <elementRef key="persName"/>
+                                <elementRef key="sic"/>
+                                <elementRef key="supplied"/>
+                                <elementRef key="unclear"/>
                             </alternate>
                         </content>
                         <attList>
@@ -2232,8 +2310,6 @@
                             <attDef ident="n" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
-                            <!-- Attributes deleted in att.global.rendition -->
-                            <attDef ident="rend" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
                         </attList>
@@ -2271,6 +2347,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attribute deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                         </attList>
@@ -2286,8 +2364,11 @@
                                     <valItem ident="damage">
                                         <desc>Physical damage in the manuscript</desc>
                                     </valItem>
-                                    <valItem ident="lacuna">
-                                        <desc>Gap left by the scribe in the manuscript</desc>
+                                    <valItem ident="editorial">
+                                        <desc>Text has been omitted for brevity</desc>
+                                    </valItem>
+                                    <valItem ident="space">
+                                        <desc>Space left by the scribe in the manuscript to be supplied at a later stage</desc>
                                     </valItem>
                                 </valList>
                             </attDef>
@@ -2302,7 +2383,7 @@
                             <attDef ident="hand" mode="delete"/>
                             <attDef ident="agent" mode="delete"/>
                             <!-- Attributes changed in att.dimensions -->
-                            <attDef ident="unit" mode="change" usage="req">
+                            <attDef ident="unit" mode="change" usage="opt">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="chars">
                                         <desc>characters</desc>
@@ -2311,7 +2392,7 @@
                                     <valItem ident="mm"/>
                                 </valList>
                             </attDef>
-                            <attDef ident="quantity" mode="change" usage="req"/>
+                            <attDef ident="quantity" mode="change" usage="opt"/>
                             <attDef ident="extent" mode="delete"/>
                             <!-- Attributes changed and deleted in att.ranging-->
                             <attDef ident="atLeast" mode="change" usage="opt"/>
@@ -2357,7 +2438,10 @@
 
                     <elementSpec ident="handDesc" mode="change" module="msdescription">
                         <content>
-                            <elementRef key="handNote" minOccurs="1" maxOccurs="unbounded"/>
+                            <sequence>
+                                <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="handNote" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
                         </content>
                         <attList>
                             <attDef ident="hands" mode="delete"/>
@@ -2397,9 +2481,13 @@
                                     <elementRef key="idno"/>
                                     <elementRef key="locus"/>
                                     <elementRef key="locusGrp"/>
-                                    <elementRef key="term"/>
+                                    <elementRef key="orgName"/>
                                     <elementRef key="persName"/>
+                                    <elementRef key="placeName"/>
                                     <elementRef key="quote"/>
+                                    <elementRef key="ref"/>
+                                    <elementRef key="term"/>
+                                    
                                 </alternate>
                             </sequence>
                         </content>
@@ -2600,6 +2688,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -2674,16 +2764,24 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="add"/>
+                                <elementRef key="del"/>
+                                <elementRef key="ex"/>
                                 <elementRef key="foreign"/>
                                 <elementRef key="gap"/>
+                                <elementRef key="hi"/>
+                                <elementRef key="lb"/>
                                 <elementRef key="locus"/>
-                                <elementRef key="supplied"/>
+                                <elementRef key="num"/>
+                                <elementRef key="orgName"/>
+                                <elementRef key="persName"/>
                                 <elementRef key="sic"/>
+                                <elementRef key="supplied"/>
                                 <elementRef key="unclear"/>
                             </alternate>
                         </content>
                         <attList>
-                            <attDef ident="defective" mode="change" usage="rec"/>
+                            <attDef ident="defective" mode="change" usage="opt"/>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -2768,7 +2866,7 @@
                     <elementSpec ident="layout" mode="change" module="msdescription">
                         <content>
                             <sequence>
-                                <alternate>
+                                <alternate minOccurs="0">
                                     <elementRef key="locus"/>
                                     <elementRef key="locusGrp"/>
                                 </alternate>
@@ -2882,6 +2980,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted  -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="target" mode="change" usage="req"/>
                         </attList>
                         <exemplum>
@@ -3005,7 +3105,7 @@
                                     <sch:report test="@from[matches(., 'lci')] or @to[matches(., 'lci')]"> Use LCI for left cover inside.</sch:report>
                                     <sch:report test="@from[matches(., 'rci')] or @to[matches(., 'rci')]"> Use RCI for right cover inside.</sch:report>
                                     <sch:report test="@from[matches(., 'rco')] or @to[matches(., 'rco')]"> Use RCO for right cover outside.</sch:report>
-                                    <sch:report test="@from[matches(., 'Spine')] or @to[matches(., 'Spine')]"> Use spine with lower-case.</sch:report>
+                                    <sch:report test="@from[matches(., 'spine')] or @to[matches(., 'spine')]"> Use spine with upper-case.</sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3022,7 +3122,7 @@
                             <desc versionDate="2014-11-17">Check that the <att>scheme</att> attribute has the value <val>other</val> when referring to the spine och covers.</desc>
                             <constraint>
                                 <sch:rule context="tei:locus[@scheme='folios' or @scheme='pages']">
-                                    <sch:report test="@from[matches(., 'spine')] or @from[matches(., 'LCO')] or @from[matches(., 'LCI')] or @to[matches(., 'spine')] or @to[matches(., 'RCO')] or @to[matches(., 'RCI')]"> Use the scheme attribute with the value other when referring to the spine or covers.</sch:report>
+                                    <sch:report test="@from[matches(., 'Spine')] or @from[matches(., 'LCO')] or @from[matches(., 'LCI')] or @to[matches(., 'Spine')] or @to[matches(., 'RCO')] or @to[matches(., 'RCI')]"> Use the scheme attribute with the value other when referring to the spine or covers.</sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3074,10 +3174,10 @@
                             <textNode/>
                         </content>
                         <constraintSpec ident="support.material" scheme="schematron">
-                            <desc versionDate="2014-11-17">Check that <gi>material</gi> for <gi>support</gi> only contains the permitted values "Western paper", "Western paper without watermarks", "Arabic paper", "Parchment", or "Papyrus".</desc>
+                            <desc versionDate="2024-03-14">Check that <gi>material</gi> for <gi>support</gi> only contains the permitted values "Paper", "Parchment", "Western paper", "Arabic paper", "Papper", "Pergament", "Papyrus".</desc>
                             <constraint>
                                 <sch:rule context="tei:support//tei:material">
-                                    <sch:assert test="text()='Western paper' or text()='Western paper without watermarks' or text()='Arabic paper' or text()='Parchment' or text()='Papyrus'"> Permitted values are "Western paper", "Western paper without watermarks", "Arabic paper", "Parchment", or "Papyrus".</sch:assert>
+                                    <sch:assert test="text()='Paper' or text()='Parchment' or text()='Western paper' or text()='Arabic paper' or text()='Papper' or text()='Pergament' or text()='Papyrus'"> Permitted values are "Paper", "Parchment", "Western paper", "Arabic paper", "Papper", "Pergament", "Papyrus".</sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3160,9 +3260,11 @@
                             <memberOf key="att.msExcerpt" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="textLang" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded"/>
+                            <sequence>
+                                <elementRef key="summary" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="textLang" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="msItem" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
                         </content>
                         <attList>
                             <attDef ident="class" mode="delete"/>
@@ -3192,18 +3294,20 @@
                             <memberOf key="att.docStatus" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="model.headLike" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="history" minOccurs="0" maxOccurs="1"/>
-                            <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
-                            <alternate>
-                                <elementRef key="msPart" minOccurs="1" maxOccurs="unbounded"/>
-                                <elementRef key="msFrag" minOccurs="1" maxOccurs="unbounded"/>
-                            </alternate>
+                            <sequence>
+                                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="model.headLike" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                                <alternate>
+                                    <elementRef key="msPart" minOccurs="1" maxOccurs="unbounded"/>
+                                    <elementRef key="msFrag" minOccurs="1" maxOccurs="unbounded"/>
+                                </alternate>
+                            </sequence>
                         </content>
-                        <constraintSpec ident="folio.ref.check" scheme="schematron">
+                        <!--<constraintSpec ident="folio.ref.check" scheme="schematron">
                             <desc versionDate="2014-09-26" xml:lang="en">Checks that folio and page references are only given in <gi>locus</gi> elements and not in the running text.</desc>
                             <constraint>
                                 <sch:pattern>
@@ -3213,7 +3317,7 @@
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <attList>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
@@ -3251,10 +3355,12 @@
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="msContents" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="physDesc" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                            <sequence>
+                                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="msContents" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="physDesc" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                            </sequence>
                         </content>
                         <remarks>
                             <p/>
@@ -3647,10 +3753,12 @@
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="msContents" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="physDesc" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                            <sequence>
+                                <elementRef key="msIdentifier" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="msContents" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="physDesc" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                            </sequence>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3677,6 +3785,9 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="locus"/>
+                                <elementRef key="locusGrp"/>
+                                <elementRef key="ref"/>
                                 <elementRef key="term"/>
                             </alternate>
                         </content>
@@ -3701,6 +3812,7 @@
                                 <elementRef key="list"/>
                                 <elementRef key="locus"/>
                                 <elementRef key="locusGrp"/>
+                                <elementRef key="orgName"/>
                                 <elementRef key="p"/>
                                 <elementRef key="persName"/>
                                 <elementRef key="placeName"/>
@@ -3748,7 +3860,7 @@
                             <!-- Changed and deleted attributes in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
-                            <attDef ident="xml:lang" mode="change" usage="req"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
                             <attDef ident="n" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
@@ -3859,10 +3971,12 @@
                             <memberOf key="att.editLike" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="orgName" minOccurs="1" maxOccurs="unbounded"/>
-                            <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="desc" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
+                            <sequence>
+                                <elementRef key="orgName" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="desc" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
                         </content>
                         <attList>
                             <attDef ident="role" mode="delete"/>
@@ -3879,6 +3993,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -3948,6 +4064,8 @@
                             <elementRef key="placeName" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -3990,11 +4108,14 @@
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
-                            <attDef ident="cert" mode="delete"/>                            
+                            <attDef ident="cert" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4018,6 +4139,7 @@
                                 <elementRef key="material"/>
                                 <elementRef key="measure"/>
                                 <elementRef key="note"/>
+                                <elementRef key="orgName"/>
                                 <elementRef key="persName"/>
                                 <elementRef key="placeName"/>
                                 <elementRef key="quote"/>
@@ -4075,6 +4197,8 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
                             <attDef ident="xml:id" mode="delete"/>
@@ -4163,7 +4287,7 @@
                                     <sch:rule context="tei:placeName">
                                         <!--<sch:let name="placename-ref" value="substring-after(@ref, 'https://www.manuscripta.se/place/')" />-->
                                         <sch:let name="placename-ref" value="substring-after(@ref, 'place/')"/>
-                                        <sch:let name="placename" value="doc(concat('../id/place/',$placename-ref,'.xml'))//tei:place/tei:placeName"/>
+                                        <sch:let name="placename" value="doc(concat('../temp/id/place/',$placename-ref,'.xml'))//tei:place/tei:placeName"/>
                                         <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/place/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/place/</sch:assert>
                                         <sch:assert test="$placename = text()">Placename mismatch</sch:assert>
                                     </sch:rule>
@@ -4171,6 +4295,8 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attribute deleted in att.naming -->
                             <attDef ident="role" mode="delete"/>
                             <!-- Attributes changed and deleted in att.canonical -->
@@ -4211,11 +4337,14 @@
                                 <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                             </alternate>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.global.responsibility -->
-                            <attDef ident="cert" mode="delete"/>                            
+                            <attDef ident="cert" mode="delete"/>
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4307,10 +4436,17 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="add"/>
+                                <elementRef key="del"/>
                                 <elementRef key="ex"/>
                                 <elementRef key="foreign"/>
+                                <elementRef key="gap"/>
                                 <elementRef key="hi"/>
                                 <elementRef key="lb"/>
+                                <elementRef key="locus"/>
+                                <elementRef key="num"/>
+                                <elementRef key="orgName"/>
+                                <elementRef key="persName"/>
                                 <elementRef key="sic"/>
                                 <elementRef key="supplied"/>
                                 <elementRef key="unclear"/>
@@ -4326,9 +4462,6 @@
                             <attDef ident="sameAs" mode="delete"/>
                             <!-- Attributes changed and deleted in att.global.responsibility -->
                             <attDef ident="cert" mode="delete"/>
-                            <attDef ident="resp" mode="delete"/>
-                            <!-- Attributes changed and deleted in att.global.source -->
-                            <attDef ident="source" mode="delete"/>
                             <!-- Attributes deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
                         </attList>
@@ -4350,6 +4483,7 @@
                                 <elementRef key="bibl"/>
                                 <elementRef key="date"/>
                                 <elementRef key="idno"/>
+                                <elementRef key="orgName"/>
                                 <elementRef key="placeName"/>
                                 <elementRef key="persName"/>
                                 <elementRef key="watermark"/>
@@ -4429,6 +4563,8 @@
                             <rng:empty/>
                         </content>
                         <attList>
+                            <!-- Attributes changed and deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="key" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="cataloguer"/>
@@ -4458,8 +4594,10 @@
                             <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="resp" minOccurs="1" maxOccurs="unbounded"/>
-                            <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
+                            <sequence>
+                                <elementRef key="resp" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
+                            </sequence>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4506,9 +4644,18 @@
                                 <textNode/>
                                 <elementRef key="add"/>
                                 <elementRef key="del"/>
+                                <elementRef key="ex"/>
+                                <elementRef key="foreign"/>
+                                <elementRef key="gap"/>
+                                <elementRef key="hi"/>
+                                <elementRef key="lb"/>
                                 <elementRef key="locus"/>
+                                <elementRef key="num"/>
+                                <elementRef key="orgName"/>
+                                <elementRef key="persName"/>
                                 <elementRef key="sic"/>
                                 <elementRef key="supplied"/>
+                                <elementRef key="unclear"/>
                             </alternate>
                         </content>
                         <attList>
@@ -4530,6 +4677,21 @@
                             </egXML>
                         </exemplum>
                     </elementSpec>
+                    
+                    <elementSpec ident="secFol" mode="change" module="msdescription">                        
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted from att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="change" usage="opt"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted from att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>                            
+                        </attList>
+                    </elementSpec>
 
                     <elementSpec ident="settlement" mode="change" module="namesdates">
                         <classes mode="change">
@@ -4541,6 +4703,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attributes deleted in att.naming -->
                             <attDef ident="role" mode="delete"/>
                             <!-- Attributes deleted in att.canonical -->
@@ -4592,10 +4756,12 @@
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
+                                <elementRef key="bibl"/>
+                                <elementRef key="foreign"/>
                                 <elementRef key="locus"/>
                                 <elementRef key="locusGrp"/>
                                 <elementRef key="num"/>
-                                <elementRef key="bibl"/>
+                                <elementRef key="quote"/>
                                 <elementRef key="term"/>
                             </alternate>
                         </content>
@@ -4636,6 +4802,8 @@
                             <textNode/>
                         </content>
                         <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <!-- Attribute deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                         </attList>
@@ -4692,10 +4860,7 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="support" mode="change" module="msdescription">
-                        <classes mode="change">
-                            <memberOf key="att.global" mode="delete"/>
-                        </classes>
+                    <elementSpec ident="support" mode="change" module="msdescription">                        
                         <content>
                             <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
@@ -4707,6 +4872,19 @@
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
+                        <attList>
+                            <!-- Attributes changed and deleted in att.global -->
+                            <attDef ident="xml:base" mode="delete"/>
+                            <attDef ident="xml:id" mode="delete"/>
+                            <attDef ident="xml:lang" mode="delete"/>
+                            <attDef ident="n" mode="delete"/>
+                            <!-- Attributes deleted in att.global.linking -->
+                            <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes changed and deleted in att.global.responsibility -->
+                            <attDef ident="cert" mode="delete"/>                            
+                            <!-- Attributes deleted in att.global.rendition -->
+                            <attDef ident="rend" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <support>
@@ -4782,7 +4960,7 @@
                         <content>
                             <sequence>
                                 <elementRef key="support" minOccurs="0" maxOccurs="1"/>
-                                <elementRef key="extent"/>
+                                <elementRef key="extent" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="foliation" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="collation" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="condition" minOccurs="0" maxOccurs="1"/>
@@ -4823,8 +5001,10 @@
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="desc"/>
-                            <elementRef key="graphic"/>
+                            <sequence>
+                                <elementRef key="desc"/>
+                                <elementRef key="graphic"/>
+                            </sequence>
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
@@ -4841,7 +5021,7 @@
                             <attDef ident="resp" mode="delete"/>
                             <!-- Attribute deleted in att.global.source -->
                             <attDef ident="source" mode="delete"/>
-                            <!-- Attributes deleted  -->
+                            <!-- Attributes deleted -->
                             <attDef ident="attachment" mode="delete"/>
                             <attDef ident="flipping" mode="delete"/>
                         </attList>
@@ -4863,9 +5043,11 @@
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="teiHeader"/>
-                            <elementRef key="text" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="facsimile" minOccurs="0" maxOccurs="1"/>
+                            <sequence>
+                                <elementRef key="teiHeader"/>
+                                <elementRef key="text" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="facsimile" minOccurs="0" maxOccurs="1"/>
+                            </sequence>
                         </content>
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
@@ -4922,8 +5104,10 @@
 
                     <elementSpec ident="teiHeader" mode="change" module="header">
                         <content>
-                            <elementRef key="fileDesc" source="manuscripta.odd#teiHeaderGroup"/>
-                            <elementRef key="revisionDesc" source="manuscripta.odd#teiHeaderGroup"/>
+                            <sequence>
+                                <elementRef key="fileDesc" source="manuscripta.odd#teiHeaderGroup"/>
+                                <elementRef key="revisionDesc" source="manuscripta.odd#teiHeaderGroup"/>
+                            </sequence>
                         </content>
                         <constraintSpec ident="greek.check" scheme="schematron">
                             <desc versionDate="2014-08-01">Check that <att>xml:lang</att> with <val>grc</val> is used for Greek characters</desc>
@@ -4965,7 +5149,7 @@
                                 </sch:pattern>
                             </constraint>
                         </constraintSpec>
-                        <constraintSpec ident="apostrophe.check" scheme="schematron">
+                        <!--<constraintSpec ident="apostrophe.check" scheme="schematron">
                             <desc versionDate="2014-08-01">Check for the apostrophe U+0027</desc>
                             <constraint>
                                 <sch:pattern>
@@ -4994,7 +5178,7 @@
                                     </sch:rule>
                                 </sch:pattern>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <attList>
                             <!-- Attributes changed and deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
@@ -5153,13 +5337,9 @@
                                         <gloss xml:lang="en">Danish</gloss>
                                         <gloss xml:lang="sv">Danska</gloss>
                                     </valItem>
-                                    <valItem ident="de">
-                                        <gloss xml:lang="en">German</gloss>
-                                        <gloss xml:lang="sv">Tyska</gloss>
-                                    </valItem>
-                                    <valItem ident="el">
-                                        <gloss xml:lang="en">Modern Greek</gloss>
-                                        <gloss xml:lang="sv">Nygrekiska</gloss>
+                                    <valItem ident="nl">
+                                        <gloss xml:lang="en">Dutch</gloss>
+                                        <gloss xml:lang="sv">Nederländska</gloss>
                                     </valItem>
                                     <valItem ident="en">
                                         <gloss xml:lang="en">English</gloss>
@@ -5173,6 +5353,10 @@
                                         <gloss xml:lang="en">French</gloss>
                                         <gloss xml:lang="sv">Franska</gloss>
                                     </valItem>
+                                    <valItem ident="de">
+                                        <gloss xml:lang="en">German</gloss>
+                                        <gloss xml:lang="sv">Tyska</gloss>
+                                    </valItem>  
                                     <valItem ident="grc">
                                         <gloss xml:lang="en">Greek</gloss>
                                         <desc xml:lang="en">Ancient Greek (to 1453)</desc>
@@ -5191,10 +5375,14 @@
                                         <gloss xml:lang="en">Latin</gloss>
                                         <gloss xml:lang="sv">Latin</gloss>
                                     </valItem>
-                                    <valItem ident="nl">
-                                        <gloss xml:lang="en">Dutch</gloss>
-                                        <gloss xml:lang="sv">Nederländska</gloss>
+                                    <valItem ident="el">
+                                        <gloss xml:lang="en">Modern Greek</gloss>
+                                        <gloss xml:lang="sv">Nygrekiska</gloss>
                                     </valItem>
+                                    <valItem ident="no">
+                                        <gloss xml:lang="en">Norwegian</gloss>
+                                        <gloss xml:lang="sv">Norska</gloss>
+                                    </valItem>                                     
                                     <valItem ident="non-dan">
                                         <gloss xml:lang="en">Old Danish</gloss>
                                         <desc xml:lang="en">Old Danish of East Norse. LINGUIST List code standard (http://multitree.org/codes/non-dan).</desc>
@@ -5235,13 +5423,9 @@
                                         <gloss xml:lang="en">Danish</gloss>
                                         <gloss xml:lang="sv">Danska</gloss>
                                     </valItem>
-                                    <valItem ident="de">
-                                        <gloss xml:lang="en">German</gloss>
-                                        <gloss xml:lang="sv">Tyska</gloss>
-                                    </valItem>
-                                    <valItem ident="el">
-                                        <gloss xml:lang="en">Modern Greek</gloss>
-                                        <gloss xml:lang="sv">Nygrekiska</gloss>
+                                    <valItem ident="nl">
+                                        <gloss xml:lang="en">Dutch</gloss>
+                                        <gloss xml:lang="sv">Nederländska</gloss>
                                     </valItem>
                                     <valItem ident="en">
                                         <gloss xml:lang="en">English</gloss>
@@ -5255,11 +5439,15 @@
                                         <gloss xml:lang="en">French</gloss>
                                         <gloss xml:lang="sv">Franska</gloss>
                                     </valItem>
+                                    <valItem ident="de">
+                                        <gloss xml:lang="en">German</gloss>
+                                        <gloss xml:lang="sv">Tyska</gloss>
+                                    </valItem>  
                                     <valItem ident="grc">
                                         <gloss xml:lang="en">Greek</gloss>
-                                        <desc xml:lang="en">Ancient and Medieval Greek</desc>
+                                        <desc xml:lang="en">Ancient Greek (to 1453)</desc>
                                         <gloss xml:lang="sv">Grekiska</gloss>
-                                        <desc xml:lang="sv">Antik och medeltida grekiska</desc>
+                                        <desc xml:lang="sv">Forngrekiska (till 1453)</desc>
                                     </valItem>
                                     <valItem ident="is">
                                         <gloss xml:lang="en">Icelandic</gloss>
@@ -5273,10 +5461,14 @@
                                         <gloss xml:lang="en">Latin</gloss>
                                         <gloss xml:lang="sv">Latin</gloss>
                                     </valItem>
-                                    <valItem ident="nl">
-                                        <gloss xml:lang="en">Dutch</gloss>
-                                        <gloss xml:lang="sv">Nederländska</gloss>
+                                    <valItem ident="el">
+                                        <gloss xml:lang="en">Modern Greek</gloss>
+                                        <gloss xml:lang="sv">Nygrekiska</gloss>
                                     </valItem>
+                                    <valItem ident="no">
+                                        <gloss xml:lang="en">Norwegian</gloss>
+                                        <gloss xml:lang="sv">Norska</gloss>
+                                    </valItem>                                     
                                     <valItem ident="non-dan">
                                         <gloss xml:lang="en">Old Danish</gloss>
                                         <desc xml:lang="en">Old Danish of East Norse. LINGUIST List code standard (http://multitree.org/codes/non-dan).</desc>
@@ -5327,8 +5519,10 @@
                             <alternate minOccurs="0" maxOccurs="unbounded">
                                 <textNode/>
                                 <elementRef key="foreign"/>
-                                <elementRef key="supplied"/>
+                                <elementRef key="orgName"/>
                                 <elementRef key="persName"/>
+                                <elementRef key="quote"/>
+                                <elementRef key="supplied"/>
                             </alternate>
                         </content>
                         <constraintSpec ident="msItem.title.key.check" scheme="schematron">
@@ -5348,6 +5542,8 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
+                            <!-- Attributes changed and deleted -->
+                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="type" mode="change" usage="opt">
                                 <defaultVal>uniform</defaultVal>
                                 <valList mode="replace" type="closed">
@@ -5396,10 +5592,12 @@
                             <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <elementRef key="title" minOccurs="1" maxOccurs="1"/>
-                            <elementRef key="sponsor" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="funder" minOccurs="0" maxOccurs="unbounded"/>
-                            <elementRef key="respStmt" minOccurs="1" maxOccurs="unbounded"/>
+                            <sequence>
+                                <elementRef key="title" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="sponsor" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="funder" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="respStmt" minOccurs="1" maxOccurs="unbounded"/>
+                            </sequence>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -5439,7 +5637,7 @@
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <attDef ident="reason" mode="change" usage="req">
+                            <attDef ident="reason" mode="change" usage="rec">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="illegible"/>
                                 </valList>
@@ -5599,6 +5797,8 @@
                     <classSpec ident="att.ascribed.directed" module="tei" type="atts" mode="delete"/>
 
                     <classSpec ident="att.breaking" module="tei" type="atts" mode="delete"/>
+                    
+                    <classSpec ident="att.calendarSystem" module="tei" type="atts" mode="delete"/>
 
                     <classSpec ident="att.citing" module="tei" type="atts" mode="change">
                         <attList>
@@ -5622,6 +5822,8 @@
                             </attDef>
                         </attList>
                     </classSpec>
+                    
+                    <classSpec ident="att.cmc" module="tei" type="atts" mode="delete"/>
 
                     <classSpec ident="att.coordinated" module="transcr" type="atts" mode="delete"/>
 
@@ -5638,7 +5840,6 @@
 
                     <classSpec ident="att.datable" module="tei" type="atts" mode="change">
                         <attList>
-                            <attDef ident="calendar" mode="delete"/>
                             <attDef ident="period" mode="delete"/>
                         </attList>
                     </classSpec>
@@ -5730,13 +5931,9 @@
                                         <gloss xml:lang="en">Danish</gloss>
                                         <gloss xml:lang="sv">Danska</gloss>
                                     </valItem>
-                                    <valItem ident="de">
-                                        <gloss xml:lang="en">German</gloss>
-                                        <gloss xml:lang="sv">Tyska</gloss>
-                                    </valItem>
-                                    <valItem ident="el">
-                                        <gloss xml:lang="en">Modern Greek</gloss>
-                                        <gloss xml:lang="sv">Nygrekiska</gloss>
+                                    <valItem ident="nl">
+                                        <gloss xml:lang="en">Dutch</gloss>
+                                        <gloss xml:lang="sv">Nederländska</gloss>
                                     </valItem>
                                     <valItem ident="en">
                                         <gloss xml:lang="en">English</gloss>
@@ -5750,11 +5947,15 @@
                                         <gloss xml:lang="en">French</gloss>
                                         <gloss xml:lang="sv">Franska</gloss>
                                     </valItem>
+                                    <valItem ident="de">
+                                        <gloss xml:lang="en">German</gloss>
+                                        <gloss xml:lang="sv">Tyska</gloss>
+                                    </valItem>  
                                     <valItem ident="grc">
                                         <gloss xml:lang="en">Greek</gloss>
-                                        <desc xml:lang="en">Ancient and Medieval Greek</desc>
+                                        <desc xml:lang="en">Ancient Greek (to 1453)</desc>
                                         <gloss xml:lang="sv">Grekiska</gloss>
-                                        <desc xml:lang="sv">Antik och medeltida grekiska</desc>
+                                        <desc xml:lang="sv">Forngrekiska (till 1453)</desc>
                                     </valItem>
                                     <valItem ident="is">
                                         <gloss xml:lang="en">Icelandic</gloss>
@@ -5768,9 +5969,13 @@
                                         <gloss xml:lang="en">Latin</gloss>
                                         <gloss xml:lang="sv">Latin</gloss>
                                     </valItem>
-                                    <valItem ident="nl">
-                                        <gloss xml:lang="en">Dutch</gloss>
-                                        <gloss xml:lang="sv">Nederländska</gloss>
+                                    <valItem ident="el">
+                                        <gloss xml:lang="en">Modern Greek</gloss>
+                                        <gloss xml:lang="sv">Nygrekiska</gloss>
+                                    </valItem>
+                                    <valItem ident="no">
+                                        <gloss xml:lang="en">Norwegian</gloss>
+                                        <gloss xml:lang="sv">Norska</gloss>
                                     </valItem>
                                     <valItem ident="non-dan">
                                         <gloss xml:lang="en">Old Danish</gloss>
@@ -5887,8 +6092,10 @@
                             <!-- Closed value list for @role -->
                             <attDef ident="role" mode="change">
                                 <valList mode="replace" type="closed">
+                                    <valItem ident="artist"/>
                                     <valItem ident="cataloguer"/>
                                     <valItem ident="librarian"/>
+                                    <valItem ident="owner"/>
                                     <valItem ident="scribe"/>
                                 </valList>
                             </attDef>
