@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101151</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100488">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,13 +43,69 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL2" scheme="folios"/>
+                                            <locus from="SR1" to="SR2" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="215" unit="mm"/>
+                                            <width quantity="150" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="2"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="2"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil, 1-417, sometimes corrected (e.g. <locus from="304r" to="304r" scheme="folios"/>). A second modern foliation appears intermittently in the bottom right corner, and sometimes in the bottom left corner of the verso (e.g. 147r), incorrect from <locus from="370r" to="370r" scheme="folios"/> ff. <secFol>mo audacia edisserunt</secFol></foliation>
+                                <collation>
+                                    <formula>1-4(12), 5(16), 6-15(12), 16(16), 17-25(12), 26(10), 27-31(12), 32(10), 33-34(12), 35(5)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67bf46909871430001959582/viewOnly">VisColl collation</ref>.
+                                    </p>
+                                    <signatures>Possible quire signature (<quote>19</quote>) on quire 16 (<locus from="200v" to="200v" scheme="folios"/>).</signatures>
+                                    <catchwords>Catchwords on quires 25 and 28.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner: National Library book label with the current signum; centre of page, book plate with the motto <quote>Nec temere nec timide</quote> and a coat of arms; bottom right corner, in ink by a modern hand: the year of and accession number: <quote>1945/34</quote>.</note>
+                            </p>
+                            <p>
+                                <locus from="SR2r" to="SR2r" scheme="folios"/>
+                                <note>Top left corner, in ink by a modern hand over 3 lines: <quote>uq.x.z Pickering 1849</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Early modern binding. Brown leather over cardboard. 4 double raised bands, 2 raised bands, and endbands. <locus from="Spine" to="Spine" scheme="other"/>, stamped in gold: <quote>BIBLIA SACRA</quote>; below, stamped in gold: <quote>MS CENT XIII</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="240" unit="mm"/>
+                                        <width quantity="180" unit="mm"/>
+                                        <depth quantity="80" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
+                                <placeName ref="https://www.manuscripta.se/place/">Florence?</placeName>
+                            </origPlace>, <origDate notBefore="1251" notAfter="1300">13th century, second half</origDate>. Date and origin based on the script and decoration (see <ref target="http://urn.kb.se/resolve?urn=urn:nbn:se:alvin:portal:record-472847">Lindqvist Sandgren</ref>).
+                        </origin>
+                        <provenance>Early provenance unknown. Neither the motto on <locus from="LCI" to="LCI" scheme="other"/> (<quote>Nec temere nec timide</quote>) nor the coat of arms have been identified. According to a former librarian's note, the manuscript was owned by Dr <persName ref="https://www.manuscripta.se/person/102668">O. Schmidt</persName> before entering into the possession of the <persName ref="https://www.manuscripta.se/person/102667">Adlercreutz</persName> family.</provenance>
+                        <acquisition>The manuscript was donated to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> by <persName ref="https://www.manuscripta.se/person/102667">Carl Johan Adlercreutz</persName> of Hensbacka (<placeName ref="https://www.manuscripta.se/place/100314">Munkedal</placeName>) in <date when="1945"/>.</acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
@@ -54,7 +114,7 @@
                                 <citedRange unit="number" from="72" to="72"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/101350">Illuminated Manuscripts</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/101350">Illuminated manuscripts (1963)</title>
                                 <citedRange from="12" to="12"/>
                             </bibl>
                         </listBibl>
@@ -65,6 +125,1269 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1ra" to="3ra" scheme="folios"/>
+                                <title type="desc">Prologue</title>
+                                <incipit>FRATER AMBROsius tua michi munuscula perferens detulit </incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="284" to="284"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem defective="true">
+                                <locus from="3ra" to="3va" scheme="folios"/>
+                                <title type="desc">Prologue to the Pentateuch</title>
+                                <incipit>DEsiderii mei desideratas accepi epistulas</incipit>
+                                <note>
+                                    <p>
+                                        <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                            <citedRange unit="number" from="285" to="285"/>
+                                        </bibl>. 
+                                    
+                                    </p>
+                                    <p/>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus to="18vb" scheme="folios" from="3va"/>
+                                <title type="desc">Genesis</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="18vb" to="31va" scheme="folios"/>
+                                <title type="desc">Exodus</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="31va" to="40rb" scheme="folios"/>
+                                <title type="desc">Leviticus</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="40rb" to="52va" scheme="folios"/>
+                                <title type="desc">Numbers</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="52va" to="63rb" scheme="folios"/>
+                                <title type="desc">Deuteronomy</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="63rb" to="63vb" scheme="folios"/>
+                                <title type="desc">Prologue to Josue</title>
+                                <incipit>EAndem finito pentatheuco moysi</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="311" to="311"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="63vb" to="71ra" scheme="folios"/>
+                                <title type="desc">Josue</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="71ra" to="79rb" scheme="folios"/>
+                                <title type="desc">Judges</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="79rb" to="80rb" scheme="folios"/>
+                                <title type="desc">Ruth</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="80rb" to="81ra" scheme="folios"/>
+                                <title type="desc">Prologue to Kings</title>
+                                <incipit>UIginti duas esse litteras apud hebreos</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="323" to="323"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="81ra" to="92va" scheme="folios"/>
+                                <title type="desc">1 Kings</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="92va" to="102ra" scheme="folios"/>
+                                <title type="desc">2 Kings</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="102ra" to="113va" scheme="folios"/>
+                                <title type="desc">3 Kings</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="113va" to="124ra" scheme="folios"/>
+                                <title type="desc">4 Kings</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="124ra" to="124va" scheme="folios"/>
+                                <title type="desc">Prologue to 1 Paralipomenon</title>
+                                <incipit>SI septuaginta interpretum pura</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="328" to="328"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="124va" to="134rb" scheme="folios"/>
+                                <title type="desc">1 Paralipomenon</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="134rb" to="134vb" scheme="folios"/>
+                                <title type="desc">Prologue to 2 Paralipomenon</title>
+                                <incipit>EVsebius ieronimus dominioni et rogatiano suis</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
+                                        <citedRange unit="volume" from="29" to="29"/>
+                                        <citedRange unit="column" from="401A" to="401A"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="134vb" to="147rb" scheme="folios"/>
+                                <title type="desc">2 Paralipomenon</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="147rb" to="147vb" scheme="folios"/>
+                                <title type="desc">Prologue to Esdras</title>
+                                <incipit>Utrum difficilius sit facere </incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="330" to="330"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="147vb" to="151ra" scheme="folios"/>
+                                <title type="desc">1 Esdras</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="151ra" to="155va" scheme="folios"/>
+                                <title type="desc">2 Esdras</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="155va" to="160rb" scheme="folios"/>
+                                <title type="desc">3 Esdras</title>
+                                <note>
+                                    <locus from="160v" to="160v" scheme="folios"/>: ruled but no text.
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="161ra" to="161ra" scheme="folios"/>
+                                <title type="desc">Prologue to Tobias</title>
+                                <incipit>CRomatio et elyodoro episcopis <gap reason="editorial"/> Mirari non desino</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="332" to="332"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="161ra" to="164ra" scheme="folios"/>
+                                <title type="desc">Tobias</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="164ra" to="164rb" scheme="folios"/>
+                                <title type="desc">Prologue to Judith</title>
+                                <incipit>APud hebreos liber iudit</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="335" to="335"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="164rb" to="168va" scheme="folios"/>
+                                <title type="desc">Judith</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="168va" to="168va" scheme="folios"/>
+                                <title type="desc">Prologue to Esther</title>
+                                <incipit>LIbrum hester uariis translationibus constat esse</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="341" to="341"/>
+                                    </bibl>.
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="168va" to="168va" scheme="folios"/>
+                                <title type="desc">Prologue to Esther</title>
+                                <incipit>RVrsum in libro hester</incipit>
+                            </msItem>
+                            <msItem>
+                                <locus from="168va" to="173ra" scheme="folios"/>
+                                <title type="desc">Esther</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="173ra" to="173ra" scheme="folios"/>
+                                <title type="desc">Prologue to Job</title>
+                                <incipit>IN terra quidem habitasse iob</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="349" to="349"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="173ra" to="173va" scheme="folios"/>
+                                <title type="desc">Prologue to Job</title>
+                                <incipit>COgor per singulos scripture diuine libros</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="344" to="344"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="173va" to="173vb" scheme="folios"/>
+                                <title type="desc">Prologue to Job</title>
+                                <incipit>SI aut fiscellam iunco texerem</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="357" to="357"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="173vb" to="180vb" scheme="folios"/>
+                                <title type="desc">Job</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="180vb" to="181ra" scheme="folios"/>
+                                <title type="desc">Prologue to Psalms</title>
+                                <incipit>DAuid filius iesse</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="10470" to="10470"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="181ra" to="181ra" scheme="folios"/>
+                                <title type="desc">Prologue to Psalms</title>
+                                <incipit>PSalterium dudum rome positus emendaueram</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="430" to="430"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="181ra" to="181rb" scheme="folios"/>
+                                <title type="desc">Prologue to Psalms</title>
+                                <incipit>EVsebius ieronimus <gap reason="editorial"/> Scio quosdam putare psalterium</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="443" to="443"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="181rb" to="200va" scheme="folios"/>
+                                <title type="desc">Psalms</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="201ra" to="201ra" scheme="folios"/>
+                                <title type="desc">Prologue to Proverbs</title>
+                                <incipit>HEliodoro et cromatio episcopis <gap reason="editorial"/> Iungat epistola quos iungit <sic>sacerdotioum</sic></incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="457" to="457"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="201ra" to="201rb" scheme="folios"/>
+                                <title type="desc">Prologue to Proverbs</title>
+                                <incipit>TRibus nominibus uocatum fuisse salomonem</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="456" to="456"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="201rb" to="201rb" scheme="folios"/>
+                                <title type="desc">Prologue to Proverbs</title>
+                                <incipit>TRES libros salomonis</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="455" to="455"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="201rb" to="207rb" scheme="folios"/>
+                                <title type="desc">Proverbs</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="207rb" to="207rb" scheme="folios"/>
+                                <title type="desc">Prologue to Ecclesiastes</title>
+                                <incipit>MEmini me ante hoc ferme quinquenium</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="462" to="462"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="207rb" to="209va" scheme="folios"/>
+                                <title type="desc">Ecclesiastes</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="209va" to="210va" scheme="folios"/>
+                                <title type="desc">Canticles</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="210va" to="210va" scheme="folios"/>
+                                <title type="desc">Prologue to Wisdom</title>
+                                <incipit>LIber sapientie aput hebreos </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="468" to="468"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus to="214rb" scheme="folios" from="210va"/>
+                                <title type="desc">Wisdom</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="214rb" to="214va" scheme="folios"/>
+                                <title type="desc">Prologue to Ecclesiasticus</title>
+                                <incipit>MVltorum nobis et magnorum per legem</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="26" to="26"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="214va" to="224vb" scheme="folios"/>
+                                <title type="desc">Ecclesiasticus</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="225ra" to="225ra" scheme="folios"/>
+                                <title type="desc">Prologue to Isaias</title>
+                                <incipit>NEmo cum prophetas uiderit</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="482" to="482"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="225ra" to="225rb" scheme="folios"/>
+                                <title type="desc">Prologue to Isaias</title>
+                                <incipit>YSaias in iherusalem nobili genere</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="480" to="480"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="225rb" to="240va" scheme="folios"/>
+                                <title type="desc">Isaias</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="240va" to="240va" scheme="folios"/>
+                                <title type="desc">Prologue to Jeremias</title>
+                                <incipit>IEremias propheta cui hic prologus scribitur</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="487" to="487"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="240va" to="240vb" scheme="folios"/>
+                                <title type="desc">Prologue to Jeremias</title>
+                                <incipit>IOachim filius iosye</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="490" to="490"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="240vb" to="240vb" scheme="folios"/>
+                                <title type="desc">Prologue to Jeremias</title>
+                                <incipit>IEremias anathothites qui est uiculus</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="486" to="486"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="240vb" to="258rb" scheme="folios"/>
+                                <title type="desc">Jeremias</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="258rb" to="258rb" scheme="folios"/>
+                                <title type="desc">Prologue to Lamentations</title>
+                                <incipit>ET factum est postquam</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
+                                        <citedRange unit="volume" from="29" to="29"/>
+                                        <citedRange unit="column" from="1011C" to="1011C"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="258rb" to="259vb" scheme="folios"/>
+                                <title type="desc">Lamentations</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="259vb" to="259vb" scheme="folios"/>
+                                <title type="desc">Prologue to Baruch</title>
+                                <incipit>LIber iste qui baruch nomine prenotatur</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="491" to="491"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="259vb" to="262ra" scheme="folios"/>
+                                <title type="desc">Baruch</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="262ra" to="262ra" scheme="folios"/>
+                                <title type="desc">Prologue to Ezechiel</title>
+                                <incipit>EZechiel propheta cum ioachim rege iude</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="492" to="492"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="262ra" to="279ra" scheme="folios"/>
+                                <title type="desc">Ezechiel</title>
+                            </msItem>
+                            <msItem defective="true">
+                                <locus from="279ra" to="279va" scheme="folios"/>
+                                <title type="desc">Prologue to Daniel</title>
+                                <incipit>DAnielem prophetam iuxta lxx interpretes </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="494" to="494"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="279va" to="279vb" scheme="folios"/>
+                                <title type="desc">Prologue to Daniel</title>
+                                <incipit>DAniel erat de tribu iuda de genere regali</incipit>
+                                <explicit>Et requieuit in pace beatus daniel in eisdem locis</explicit>
+                            </msItem>
+                            <msItem defective="true">
+                                <locus from="279vb" to="286va" scheme="folios"/>
+                                <title type="desc">Daniel</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="286va" to="286va" scheme="folios"/>
+                                <title type="desc">Prologue to the Twelve Prophets</title>
+                                <incipit>NOn idem ordo est</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="500" to="500"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="286va" to="286vb" scheme="folios"/>
+                                <title type="desc">Prologue to Osee</title>
+                                <incipit>TEmporibus ozie et ionathe achaz et ezechie </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="507" to="507"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="286vb" to="286vb" scheme="folios"/>
+                                <title type="desc">Prologue to the Minor Prophets</title>
+                                <incipit>REgule sunt <sic>haee</sic></incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="501" to="501"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="286vb" to="286vb" scheme="folios"/>
+                                <title type="desc">Prologue to Osee</title>
+                                <incipit>DVplex est apud hebreos</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="504" to="504"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="286vb" to="286vb" scheme="folios"/>
+                                <title type="desc">Prologue to Osee</title>
+                                <incipit>OSee crebro nominat effraym</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="506" to="506"/>
+                                    </bibl>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="286vb" to="289ra" scheme="folios"/>
+                                <title type="desc">Osee</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="289ra" to="289rb" scheme="folios"/>
+                                <title type="desc">Prologue to Joel</title>
+                                <incipit>SANCtus iohel apud hebreos <!--hur göra med versaler här då?--></incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="511" to="511"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="289rb" to="289rb" scheme="folios"/>
+                                <title type="desc">Prologue to Joel</title>
+                                <incipit>JOhel filius fatuel describit </incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="510" to="510"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="289rb" to="290rb" scheme="folios"/>
+                                <title type="desc">Joel</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="290rb" to="290va" scheme="folios"/>
+                                <title type="desc">Prologue to Amos</title>
+                                <incipit>OZias rex cum domini religionem sollicite emularetur</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="515" to="515"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="290va" to="290va" scheme="folios"/>
+                                <title type="desc">Prologue to Amos</title>
+                                <incipit>AMos pastor et rusticus</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="512" to="512"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem defective="false">
+                                <locus from="290va" to="290va" scheme="folios"/>
+                                <title type="desc">Prologue to Amos</title>
+                                <incipit>AMos interpretatur <sic>honustus</sic> </incipit>
+                                <explicit>Quasi tuba exalta uocem <sic>tua</sic> qui <sic>euagelizas</sic> iherusalem</explicit>
+                                <note>Prologue not identified.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="290va" to="292rb" scheme="folios"/>
+                                <title type="desc">Amos</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="292rb" to="292va" scheme="folios"/>
+                                <title type="desc">Prologue to Abdias</title>
+                                <incipit>IAcob patriarcha fratrem habuit</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="519" to="519"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="292va" to="292va" scheme="folios"/>
+                                <title type="desc">Prologue to Abdias</title>
+                                <incipit>ABdias qui interpretatur seruus dei</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="516" to="516"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="292va" to="293ra" scheme="folios"/>
+                                <title type="desc">Abdias</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="293ra" to="293ra" scheme="folios"/>
+                                <title type="desc">Prologue to Jonas</title>
+                                <incipit>IOnam sanctum hebrei affirmant</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="524" to="524"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="293ra" to="293ra" scheme="folios"/>
+                                <title type="desc">Prologue to Jonas</title>
+                                <incipit>IOna columba et dolens </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="521" to="521"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="293ra" to="293ra" scheme="folios"/>
+                                <title type="desc">Prologue to Jonas</title>
+                                <incipit>IOnas interpretatur columba pulcerrima</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="522" to="522"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="293ra" to="293vb" scheme="folios"/>
+                                <title type="desc">Jonas</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="293vb" to="293vb" scheme="folios"/>
+                                <title type="desc">Prologue to Micheas</title>
+                                <incipit>TEmporibus ioathan et achaz et ezechie regum iuda</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="526" to="526"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="293vb" to="293vb" scheme="folios"/>
+                                <title type="desc">Prologue to Micheas</title>
+                                <incipit>MIcheas de morastiten coheres christi</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="525" to="525"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="293vb" to="295rb" scheme="folios"/>
+                                <title type="desc">Micheas</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="295rb" to="295va" scheme="folios"/>
+                                <title type="desc">Prologue to Nahum</title>
+                                <incipit>NAum propheta ante aduentum regis </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="528" to="528"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="295va" to="295va" scheme="folios"/>
+                                <title type="desc">Prologue to Nahum</title>
+                                <incipit>NAum consolator orbis interpretatur</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="527" to="527"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="295va" to="296ra" scheme="folios"/>
+                                <title type="desc">Nahum</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="296ra" to="296rb" scheme="folios"/>
+                                <title type="desc">Prologue to Habacuc</title>
+                                <incipit>ABacuch propheta amplexans </incipit>
+                                <explicit>quod est nobis amicum et dulce nominare et predicare</explicit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="530" to="530"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="296rb" to="296rb" scheme="folios"/>
+                                <title type="desc">Prologue to Habacuc</title>
+                                <incipit>Abacuc luctator fortis</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="529" to="529"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="296rb" to="296va" scheme="folios"/>
+                                <title type="desc">Prologue to Habacuc</title>
+                                <incipit>QVatuor prophete in xii prophetarum uolumine sunt</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="531" to="531"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="296va" to="297rb" scheme="folios"/>
+                                <title type="desc">Habacuc</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="297rb" to="297va" scheme="folios"/>
+                                <title type="desc">Prologue to Sophonias</title>
+                                <incipit>TRadunt hebrei</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="534" to="534"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="297rb" to="297va" scheme="folios"/>
+                                <title type="desc">Prologue to Sophonias</title>
+                                <incipit>SOphonias speculator et archanorum domini</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="532" to="532"/>
+                                    </bibl>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="297va" to="298ra" scheme="folios"/>
+                                <title type="desc">Sophonias</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="298ra" to="298rb" scheme="folios"/>
+                                <title type="desc">Prologue to Aggeus</title>
+                                <incipit>IEremias propheta ob causam periurii</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="538" to="538"/>
+                                    </bibl>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="298rb" to="298va" scheme="folios"/>
+                                <title type="desc">Prologue to Aggeus</title>
+                                <incipit>AGgeus festiuus et letus</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="535" to="535"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="298va" to="299ra" scheme="folios"/>
+                                <title type="desc">Aggeus</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="299ra" to="299ra" scheme="folios"/>
+                                <title type="desc">Prologue to Zacharias</title>
+                                <incipit>SEcundo anno darii regis</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="539" to="539"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="299ra" to="299rb" scheme="folios"/>
+                                <title type="desc">Prologue to Zacharias</title>
+                                <incipit>ZAcharias memor domini </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="540" to="540"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="299rb" to="301vb" scheme="folios"/>
+                                <title type="desc">Zacharias</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="301vb" to="302ra" scheme="folios"/>
+                                <title type="desc">Prologue to Malachias</title>
+                                <incipit>DEUS per moysen preceperat </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="543" to="543"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="302ra" to="302ra" scheme="folios"/>
+                                <title type="desc">Prologue to Malachias</title>
+                                <incipit>MAlachias latine interpretatur angelus domini</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="545" to="545"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="302ra" to="302ra" scheme="folios"/>
+                                <title type="desc">Prologue to Malachias</title>
+                                <incipit>MAlachias aperte et in fine </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="544" to="544"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="302ra" to="302vb" scheme="folios"/>
+                                <title type="desc">Malachias</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="302vb" to="302vb" scheme="folios"/>
+                                <title type="desc">Prologue to Machabees</title>
+                                <incipit>MAchabeorum libri duo prenotant prelia</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="551" to="551"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="302vb" to="312rb" scheme="folios"/>
+                                <title type="desc">1 Machabees</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="312rb" to="318vb" scheme="folios"/>
+                                <title type="desc">2 Machabees</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="319ra" to="319ra" scheme="folios"/>
+                                <title type="desc">Prologue to Matthew</title>
+                                <incipit>MAtheus ex iudea sicut in ordine primus ponitur</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="590" to="590"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="319ra" to="329rb" scheme="folios"/>
+                                <title type="desc">Matthew</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="329rb" to="329va" scheme="folios"/>
+                                <title type="desc">Prologue to Mark</title>
+                                <incipit>MArchus euangelista dei <del>et petri</del> <add place="margin">electus</add> </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="607" to="607"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="329va" to="335vb" scheme="folios"/>
+                                <title type="desc">Mark</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="335vb" to="336ra" scheme="folios"/>
+                                <title type="desc">Prologue to Luke</title>
+                                <incipit>LVcas syrus natione antiochensis arte medicus </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="620" to="620"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="336ra" to="347ra" scheme="folios"/>
+                                <title type="desc">Luke</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="347ra" to="347rb" scheme="folios"/>
+                                <title type="desc">Prologue to John</title>
+                                <incipit>HIc est iohannes euangelista</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="624" to="624"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="347rb" to="355vb" scheme="folios"/>
+                                <title type="desc">John</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="355vb" to="356ra" scheme="folios"/>
+                                <title type="desc">Prologue to Romans</title>
+                                <incipit>ROmani sunt qui ex iudeis gentibusque crediderunt</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="6355" to="6355"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="356ra" to="356ra" scheme="folios"/>
+                                <title type="desc">Prologue to Romans</title>
+                                <incipit>Romani sunt in partes</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                    <citedRange unit="number" from="677" to="677"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="356ra" to="356ra" scheme="folios"/>
+                                <title type="desc">Prologue to Romans</title>
+                                <incipit>PAulus ex tribu beniamin</incipit>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
+                                    <citedRange unit="volume" from="23" to="23"/>
+                                    <citedRange unit="column" from="615A" to="617A"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="356ra" to="360rb" scheme="folios"/>
+                                <title type="desc">Romans</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="360rb" to="360rb" scheme="folios"/>
+                                <title type="desc">Prologue to 1 Corinthians</title>
+                                <incipit>AChaia uocabatur prouincia</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="685" to="685"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="360rb" to="364va" scheme="folios"/>
+                                <title type="desc">1 Corinthians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="364va" to="364va" scheme="folios"/>
+                                <title type="desc">Prologue to 2 Corinthians</title>
+                                <incipit>POst actam penitenciam</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="699" to="699"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="364va" to="367rb" scheme="folios"/>
+                                <title type="desc">2 Corinthians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="367rb" to="367rb" scheme="folios"/>
+                                <title type="desc">Prologue to Galatians</title>
+                                <incipit>GAlathe sunt greci</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="707" to="707"/>
+                                    </bibl>. 
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="367rb" to="368va" scheme="folios"/>
+                                <title type="desc">Galatians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="368va" to="368va" scheme="folios"/>
+                                <title type="desc">Prologue to Ephesians</title>
+                                <incipit>EPhesii sunt asyani</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="715" to="715"/>
+                                    </bibl> .</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="368va" to="370ra" scheme="folios"/>
+                                <title type="desc">Ephesians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="370ra" to="370ra" scheme="folios"/>
+                                <title type="desc">Prologue to Philippians</title>
+                                <incipit>PHilippenses sunt macedones</incipit>
+                                <note> The first part is <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="728" to="728"/>
+                                    </bibl>; the second part is <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="726" to="726"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="370ra" to="371ra" scheme="folios"/>
+                                <title type="desc">Philippians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="371ra" to="371ra" scheme="folios"/>
+                                <title type="desc">Prologue to Colossians</title>
+                                <incipit>COlosenses et hi sicut laodicenses</incipit>
+                                <note>The first part of the prologue is <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="736" to="736"/>
+                                    </bibl>; the second part is <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
+                                        <citedRange unit="volume" from="150" to="150"/>
+                                        <citedRange unit="column" from="319C" to="319C"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="371ra" to="372ra" scheme="folios"/>
+                                <title type="desc">Colossians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="372ra" to="372ra" scheme="folios"/>
+                                <title type="desc">Prologue to 1 Thessalonians</title>
+                                <incipit>THesalonicenses sunt macedones</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="747" to="747"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="372ra" to="373ra" scheme="folios"/>
+                                <title type="desc">1 Thessalonians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="373ra" to="373ra" scheme="folios"/>
+                                <title type="desc">Prologue to 2 Thessalonians</title>
+                                <incipit>Ad Thesalonicenses secundam </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="753" to="753"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="373ra" to="373va" scheme="folios"/>
+                                <title type="desc">2 Thessalonians</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="373va" to="373va" scheme="folios"/>
+                                <title type="desc">Prologue to 1 Timothy</title>
+                                <incipit>TImotheum instruit et docet</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="765" to="765"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="373va" to="374va" scheme="folios"/>
+                                <title type="desc">1 Timothy</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="374va" to="374va" scheme="folios"/>
+                                <title type="desc">Prologue to 2 Timothy</title>
+                                <incipit>TImotheo scribit de exortatione</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="772" to="772"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="374va" to="375va" scheme="folios"/>
+                                <title type="desc">2 Timothy</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="375va" to="375va" scheme="folios"/>
+                                <title type="desc">Prologue to Titus</title>
+                                <incipit>TItum commonefacit et instruit</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="6366" to="6366"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="375va" to="376ra" scheme="folios"/>
+                                <title type="desc">Titus</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="376ra" to="376ra" scheme="folios"/>
+                                <title type="desc">Prologue to Philemon</title>
+                                <incipit> PHilemoni familiares litteras mittit </incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="783" to="783"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="376ra" to="376rb" scheme="folios"/>
+                                <title type="desc">Philemon</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="376rb" to="376rb" scheme="folios"/>
+                                <title type="desc">Prologue to Hebrews</title>
+                                <incipit>IN primis dicendum est</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="793" to="793"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="376rb" to="379va" scheme="folios"/>
+                                <title type="desc">Hebrews</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="379va" to="379vb" scheme="folios"/>
+                                <title type="desc">Prologue to Acts</title>
+                                <incipit>LVcas syrus natione</incipit>
+                                <note>  <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="640" to="640"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="379vb" to="379vb" scheme="folios"/>
+                                <title type="desc">Prologue to Acts</title>
+                                <incipit>ACtus apostolorum nudam quidem sonare</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="631" to="631"/>
+                                    </bibl>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="379vb" to="391ra" scheme="folios"/>
+                                <title type="desc">Acts</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="391ra" to="391ra" scheme="folios"/>
+                                <title type="desc">Prologue to the Catholic Epistles</title>
+                                <incipit>NOn ita est ordo apud grecos</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="809" to="809"/>
+                                    </bibl>.
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="391ra" to="391ra" scheme="folios"/>
+                                <title type="desc">Prologue to James</title>
+                                <incipit>IAcobus apostolus sanctum</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="806" to="806"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="391ra" to="391rb" scheme="folios"/>
+                                <title type="desc">Prologue to James</title>
+                                <incipit>IAcobus petrus iohannes</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="807" to="807"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="391rb" to="392rb" scheme="folios"/>
+                                <title type="desc">James</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="392rb" to="392rb" scheme="folios"/>
+                                <title type="desc">Prologue to 1 Peter</title>
+                                <incipit>SYmon petrus filius iohannis</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="815" to="815"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="392rb" to="393va" scheme="folios"/>
+                                <title type="desc">1 Peter</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="393va" to="393va" scheme="folios"/>
+                                <title type="desc">Prologue to 2 Peter</title>
+                                <incipit>SYmon petrus per fidem huic mundo</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="818" to="818"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="393va" to="394vb" scheme="folios"/>
+                                <title type="desc">2 Peter</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="394rb" to="394rb" scheme="folios"/>
+                                <title type="desc">Prologue to 1 John</title>
+                                <incipit>RAtionem uerbi quod deus ipse sit</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="822" to="822"/>
+                                    </bibl>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="394vb" to="395va" scheme="folios"/>
+                                <title type="desc">1 John</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="395va" to="395va" scheme="folios"/>
+                                <title type="desc">Prologue to 2 John</title>
+                                <incipit>USque adeo ad sanctam feminam</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="823" to="823"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="395va" to="395va" scheme="folios"/>
+                                <title type="desc">2 John</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="395va" to="395vb" scheme="folios"/>
+                                <title type="desc">Prologue to 3 John</title>
+                                <incipit>GAium pietatis causa extollit</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="824" to="824"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="395vb" to="395vb" scheme="folios"/>
+                                <title type="desc">3 John</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="395vb" to="395vb" scheme="folios"/>
+                                <title type="desc">Prologue to Jude</title>
+                                <incipit>IVdas apostolus frater iacobi</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="825" to="825"/>
+                                    </bibl>  (cf. also <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="826" to="826"/>
+                                    </bibl>).</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="395vb" to="396rb" scheme="folios"/>
+                                <title type="desc">Jude</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="396rb" to="396rb" scheme="folios"/>
+                                <title type="desc">Prologue to Revelation</title>
+                                <incipit>IOhannes apostolus et euangelista a domino christo electus</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="835" to="835"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="396rb" to="396rb" scheme="folios"/>
+                                <title type="desc">Prologue to Revelation</title>
+                                <incipit>APocalipsis iohannis tot habet sacramenta</incipit>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="839" to="839"/>
+                                    </bibl>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="396rb" to="400vb" scheme="folios"/>
+                                <title type="desc">Revelation</title>
+                            </msItem>
+                            <msItem defective="true">
+                                <locus from="401ra" to="417vb" scheme="folios"/>
+                                <title type="desc">Interpretationes nominum hebraicorum</title>
+                                <explicit defective="true">SIlonite transferentes uel auellentes siue dimis</explicit>
+                                <note>
+                                    <p> <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                            <citedRange unit="number" from="7709" to="7709"/>
+                                        </bibl>.</p>
+                                    <p>The text is incomplete.</p>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -82,17 +1405,83 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="417" unit="folios"/>
                                     </extent>
+                                    <foliation>Running titles and chapter numbers.</foliation>
+                                    <condition>Numerous worm holes on the first few folios, and some on the last few, though not affecting the text. Occasional holes, stains and smudging (e.g. <locus from="123v" to="123v" scheme="folios"/>). The text affected by abrasive damage in several places (e.g. <locus from="18v" to="19r" scheme="folios"/>, <locus from="43v" to="44r" scheme="folios"/>, <locus from="299r" to="299r" scheme="folios"/>). <locus from="321" to="321" scheme="folios"/> and <locus from="327" to="327" scheme="folios"/> each have a cut in the outer margin.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" ruledLines="51">
+                                        <locus from="1r" to="400v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="100" unit="mm"/>
+                                            <width quantity="145" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guildelines and ruling in ink.</note>
+                                    </layout>
+                                    <layout columns="3" ruledLines="61">
+                                        <locus from="401r" to="417v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="115" unit="mm"/>
+                                            <width quantity="155" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in ink.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic textualis.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="3v" to="3v" scheme="folios"/>
+                                    <note>Bottom of page, in ink by a contemporary hand: <quote>opus secundum ferialiter et requie<supplied reason="damage">uit</supplied> die vii<hi rend="super">o</hi>
+                                                                                              
+                                                  
+                                                  
+                                             
+                                             
+                                        
+                                        </quote>.</note>
+                                </p>
+                                <p>
+                                    <locus to="399r" scheme="folios" from="4v"/>
+                                    <note>Marginal notations in ink by a contemporary hand - possibly more than one - marking the beginning (<quote>lec</quote>, <quote>proph</quote>, <quote>cant</quote>, <quote>ew</quote>) and end (<quote>f</quote>) of various readings and canticles.</note>
+                                </p>
+                                <p>
+                                    <locus from="20v" to="22r" scheme="folios"/>
+                                    <note>(Exodus) Roman numerals i-x at intervals in the margin.</note>
+                                </p>
+                                <p>
+                                    <locus from="62r" to="400v" scheme="folios"/>
+                                    <note>Marginal corrections in different contemporary hands.</note>
+                                </p>
+                                <p>
+                                    <locus from="86v" to="91v" scheme="folios"/>
+                                    <note>Additions/corrections of chapter numbers in ink by a contamporary hand.</note>
+                                </p>
+                                <p>
+                                    <locus from="200va" to="200va" scheme="folios"/>
+                                    <note>Below Ps. 150, in ink in a contemporary hand: a list of incipits and biblical references to the major canticles, <quote>Cantica Confitebor tibi ysaias 12 a Ego dixi in dimidio <gap reason="editorial"/>benedicite omia opera danielis 3 d</quote>.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in black and brown ink; rubrics in red; letters of chapter numbers alternating in blue and red; letters of running titles <!--lombards? -->alternating in blue and red sometimes with a small flourish in the contrasting colour.</p>
+                                <decoNote type="initials">
+                                    
+                                    <locus from="1ra" to="1ra" scheme="folios"/>: Inhabited foliate opening initial <quote>F</quote> in reds, blues, taupes and ochres, extending the length of the text column and ending in a dragon filling the lower margin.
+                                    <locus from="3va" to="3va" scheme="folios"/> (Genesis): historiated foliate initial <quote>I</quote> over 47 lines in reds, blues, mauves, taupes and ochres, ending in a dragon filling the lower margin.
+                                    <locus from="181va" to="181va" scheme="folios"/> (Ps. 1): historiated foliate initial <quote>B</quote> over 17 lines in reds, blues, mauves, taupes and ochres. The first line in in white display script on a blue background.
+                                    <locus from="19ra" to="396rb" scheme="folios"/>: text initials are foliate and historiated over 4-11 lines with letter bodies, backgrounds, and counterspaces alternating in a main colour scheme of blues, reds, ochres, and mauves (some green and black, e.g. <locus from="214va" to="214va" scheme="folios"/> and <locus from="168va" to="168va" scheme="folios"/>) with patterns in white, and letter bodies often ending in a stem or other vegetative or shape (e.g. <locus from="258rb" to="258rb" scheme="folios"/>) or a zoomorphic shape (e.g. <locus from="147vb" to="147vb" scheme="folios"/>)
+                                    <locus from="1rb" to="400vb" scheme="folios"/>: plain chapter initials over 2-3 lines alternating in blue and red with flourishing in the contrasting colour and extending into the margins.
+                                    <locus from="181va" to="200va" scheme="folios"/> (Psalms): capitals alternating in red and blue. 
+                                    <locus from="184rb" to="184rb" scheme="folios"/> (Ps. 26), <locus from="186rb" to="186rb" scheme="folios"/> (Ps. 38), <locus from="188ra" to="188ra" scheme="folios"/> (Ps. 52), <locus from="189vb" to="189vb" scheme="folios"/> (Ps. 68), <locus from="192ra" to="192ra" scheme="folios"/> (Ps. 80), <locus from="194ra" to="194ra" scheme="folios"/> (Ps. 97), <locus from="196rb" to="196rb" scheme="folios"/> (Ps. 109): decorated foliate initials over 7-9 lines in the same colour scheme as the opening initials, with patterns in white and foliage in the counterspace on a background of gold leaf outlined in colour.
+                                     <locus from="401ra" to="410ra" scheme="folios"/>: plain chapter initials over 3 lines alternating in blue and red with flourishing in the contrasting colour and extending into the margins.
+                                     <locus from="410vb" to="415ra" scheme="folios"/>: plain chapter initials over 3 lines alternating in blue and red.
+                                    For further discussion of the decoration, see <ref target="http://urn.kb.se/resolve?urn=urn:nbn:se:alvin:portal:record-472847">Lindqvist Sandgren</ref>.
+                                </decoNote>
+                                <decoNote type="edges">Gilded edges.</decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/">Florence?</placeName>
-                                </origPlace>, <origDate notBefore="1251" notAfter="1300">13th century, second half</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>

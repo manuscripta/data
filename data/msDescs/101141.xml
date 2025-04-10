@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101141</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,43 +43,239 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="285" unit="mm"/>
+                                            <width quantity="205" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" unit="folios"/>
                                     <measure type="rightFlyleaves" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. <secFol>declarauit et hoc est quod dicit</secFol></foliation>
+                                <collation>
+                                    <formula>1-5(16), 6(18), 7-12(16), 13(18)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67e6928ff060c60001cbaa6b/viewOnly">VisColl collation</ref>. Parchment guards with text visible on the insde. 
+                                    </p>
+                                    <catchwords>Catchwords at the end of each quire. </catchwords>
+                                </collation>
+                                <condition>
+                                    <locus from="LCI" to="LCI" scheme="other"/> and<locus from="RCI" to="RCI" scheme="other"/>have text on the verso vaguely visible through the parchment. The flyleaves have detached in the corners where some of the text is visible. The text has left an offprint on the boards.
+                                </condition>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner: National Library book label with current signum; top of page in brown ink by a medieval hand: <quote>Pertinet bernardus hannegren</quote> (?); below, in brown ink by a medieval hand: a table of contents; bottom of page: a glued on fragment from another document with text in Latin.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="unknown">
+                                <p>Medieval or early modern binding. Leather over cardboard. 3 double raised bands and endbands. <locus from="Spine" to="Spine" scheme="other"/>, four papers labels, three of which are pasted over older labels. From top to bottom: <quote>N. 18</quote>, <quote>56.</quote>, <quote>(155)</quote>; <quote>N<hi rend="super">o</hi> 16. Hic Lyrani commentarius in Epistolas Pauli et Apocalypin</quote>; stamped in gold: <quote>A 156</quote>; <quote>16</quote>; <quote>e 30. 3. 3.</quote>. <locus from="LCO" to="LCO" scheme="other"/>, traces of a label on the upper part of the cover. There are also traces of writing in black ink directly on the cover. </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="310" unit="mm"/>
+                                        <width quantity="220" unit="mm"/>
+                                        <depth quantity="65" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <condition>Leather extremley worn. Boards exposed in several places. Holes in covers after corner pieces or bosses and probably also clasps. </condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100208">Austria?</placeName>
+                            </origPlace>, <origDate notBefore="1325" notAfter="1375">14th century, middle of</origDate>. The place of origin and dating are tentatively based on the watermark. 
+                        </origin>
+                        <provenance>Early provenance unknown. On <locus from="LCI" to="LCI" scheme="other"/> a medieval hand states that the book belongs to one Bernardus Hannegren(?). The manuscript has been at the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> since at least the 17th century. Most of the signa on the spine correspond to older catalogues at the library. The manuscript is listed in Jaches's catalogue of of 1695 (U 118:10) as <quote>155</quote>, and in the catalogue of 1698 (U 122) as <quote>56</quote>; as <quote>16</quote>  in the catalogue of 1734 (U 125e); and as <quote>e. 30. 3. 3.</quote> in Hammarsköld's catalogue of the 19th century (U 133). The signum <quote>18</quote> has not been identified.</provenance>
+                    </history>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="3ra" to="67vb" scheme="folios"/>
+                                <title type="desc">Commentary on Acts of the Apostles</title>
+                                <rubric>Incipit postilla super actus apostolorum <sic>apostolorum</sic></rubric>
+                                <incipit>REpleti sunt omnes (Acts 2:4) <gap reason="editorial"/> Sicut lex euuangelica per christum deum et hominem fuit data</incipit>
+                                <explicit>ad quam nos perducat qui cum patre et spiritu sancto viuit <supplied reason="omitted">et</supplied> cetera</explicit>
+                                <finalRubric>Explicit postilla fratris N<supplied reason="omitted">icholai</supplied> de lira Sequitur actus apostolorum incipit eadem sequitur epistolas canonicas</finalRubric>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="5901" to="5901"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="68ra" to="114vb" scheme="folios"/>
+                                <title type="desc">Commentary on the Catholic epistles</title>
+                                <rubric>Incipit Rubrica in canonicales epistolas</rubric>
+                                <incipit>Quatuor sunt minima terre (Prov. 30:24) <gap reason="editorial"/> Septem epistole que canonice id est Regulares nuncupantur</incipit>
+                                <explicit>temporales tamen virtus diuina qua facit est eterna Amen</explicit>
+                                <finalRubric>Sequitur apocalipsis et cetera </finalRubric>
+                                <note>
+                                    <p>
+                                                            <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                            <citedRange unit="number" from="5916" to="5916"/>
+                                        </bibl>.
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </p>
+                                    <p/>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="115ra" to="172vb" scheme="folios"/>
+                                <title type="desc">Commentary on Revelation</title>
+                                <rubric>Incipit postilla super apocalipsim</rubric>
+                                <incipit>Oportet te iterum (Rev. 10:11) <gap reason="editorial"/> Sicut dixi in principio genesis vetus ac nouum testamentum </incipit>
+                                <explicit>gratia domini nostra ihesu christi cum omnibus nobis Amen (Rev. 22:21) Amen Amen Alleluia</explicit>
+                                <finalRubric>Explicit postilla fratris N<supplied reason="omitted">icholai</supplied> de lyra Super apocalipsim et <del>perg-</del> super nouum testamentum</finalRubric>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="5923" to="5923"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="172vb" to="191rb" scheme="folios"/>
+                                <title type="desc">Questio ad probandum Christi aduentum</title>
+                                <rubric>Sequitur quedam questio ad probandum primum christi aduentum per scripturas a iudeis receptas que quidam questio est ipsius N<supplied reason="omitted">icholai</supplied> de lyra </rubric>
+                                <incipit>QVeritur vtrum per scripturas a iudeis Receptas possit probari</incipit>
+                                <explicit>et plures iam baptizati ad vomitum Reuertuntur <unclear unit="chars" reason="illegible" quantity="12"/></explicit>
+                                <finalRubric>Explicit questio de probacione per scripturas a iudeis receptas quod misterium christi predictum a lege et prophetis sit impletum determinata a fratre Nicholao de lyra de ordine fratrum minorum </finalRubric>
+                                <note> <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="5982" to="5982"/>
+                                    </bibl>. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="191rb" to="211vb" scheme="folios"/>
+                                <title type="desc">Ad quendam Judeum</title>
+                                <rubric>Incipit Responsio fratris N<supplied reason="omitted">icholai</supplied> de lyra ad quendam iudeum ex uerbis eu<del>uangelis</del>uangelii secundum matheum contra christum nequiter arguentem </rubric>
+                                <incipit>Potens sit exhortari in doctrina sana et eos qui contradicunt arguere</incipit>
+                                <explicit>in aperto mendacio terminauit et cetera et explicit Responsio</explicit>
+                                <finalRubric>Explicit Responsio fratris N<supplied reason="omitted">icholai</supplied> de lyra ad quendam iudeum ex uerbis euuangelii secundum matheum contra christum nequiter arguentem Completum est autem protunc hoc opusculum anno domini m<hi rend="super">o</hi> ccc<hi rend="super">o</hi> xxxiiii<hi rend="super">o</hi> in vigilia johannis baptiste</finalRubric>
+                                <note>
+                                    <p>
+                                                            <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                            <citedRange unit="number" from="5980" to="5980"/>
+                                        </bibl>.
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                            <locus from="212" to="212" scheme="pages"/>: blank.
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="212v" scheme="folios"/>
+                                            <locus from="1" to="212" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="290" unit="mm"/>
                                                 <width quantity="205" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="1" to="212" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Two circles stricken through with a single line rod ending in a cross. </term>
+                                                <note>
+                                                    <locus from="1" to="15" scheme="folios"/> may have a different watermark. Only one circle is visible here. <locus from="16" to="212" scheme="folios"/>similar to <ref target="https://www.wasserzeichen-online.de/?ref=AT3800-PO-161702">Piccard online</ref>. Watermark visible on <locus from="212r" to="212r" scheme="folios"/>.
+                                                </note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="212" unit="folios"/>
                                     </extent>
+                                    <foliation>Running titles in black ink underlined in red. Chapters marked in the margin in red or black ink.</foliation>
+                                    <condition>Paper stained in many places; one large stain on <locus from="182r" to="182r" scheme="folios"/> affects legibilty somewhat. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="38">
+                                        <dimensions type="written">
+                                            <height quantity="210" unit="mm"/>
+                                            <width quantity="145" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines in lead visible on some leaves, e.g. <locus from="5v" to="5v" scheme="folios"/>.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic cursive. </handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top of page, in black ink by modern hand: <quote>Kongl. Bil. 1734 års Kat. Theol. in fol. No 16</quote>; centre page, by the same hand: <quote>Nicholai de Lyra Postilla super Actus Apostolorum, Epistolas Canonicalis et Apocalipsin. Eiusdem Quaestio ad probandum Christi aduentum. Responsio ad quendam Judeum</quote>; below: <quote>Mscr. de anno 1334.</quote>; bottom left corner, in pencil: <quote>N. 18.</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="3r" to="3r" scheme="folios"/>
+                                    <note>Top of page, in black ink by a late medieval or early modern hand: <quote>Commentarius in Epist. pau. cum Apocalip.</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="3r" to="209v" scheme="folios"/>
+                                    <note>Occasional marignal additions by the scribe or a contemporary hand and at least one other medieval hand. The additions consist of corrections and short comments and nota-marks, e.g. on <locus from="69v" to="69v" scheme="folios"/>. </note>
+                                </p>
+                                <p>
+                                    <locus from="212v" to="212v" scheme="folios"/>
+                                    <note>Top right corner, in brown ink by a late medieval or early moder hand: 3 short lines of text in an unidentified language. </note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in black ink, rubrics in red, capitals sometimes touched in red, lemmata underlined in red. </p>
+                                <decoNote type="initials">
+                                    <locus from="3r" to="3r" scheme="folios"/>: opening puzzle initial R over 6 lines in red and blue. 
+                                    <locus from="110r" to="110r" scheme="folios"/>, <locus from="172v" to="172v" scheme="folios"/>: new texts opened by plain inititials over 4 lines in red. 
+                                     <locus from="3v" to="211v" scheme="folios"/>: plain initials over 2-3 lines in red. 
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <origDate notBefore="1301" notAfter="1400">14th century</origDate>
-                            </origin>
+                            <origin/>
                         </history>
                     </msPart>
                 </msDesc>

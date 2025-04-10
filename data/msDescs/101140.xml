@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101140</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,22 +39,91 @@
                             <idno type="id" subtype="Regina">004846305</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Gregorius I, Dialogi. (Anon.) Vita et passio sancti Gengolfi. Expositio in cantica canticorum</head>
+                    <head>Gregory I, Dialogues and Commentary on Canticles; Life of St Gangulphus (anon.)</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="folios"/>
+                                            <locus from="SR1" to="SR1" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="290" unit="mm"/>
+                                            <width quantity="205" unit="mm"/>
+                                        </dimensions>
+                                        <watermark n="1">
+                                            <locusGrp>
+                                                <locus from="LCI" to="SL1" scheme="other"/>
+                                            </locusGrp>
+                                            <term type="watermarkMotif">Beehive TUMBA</term>
+                                        </watermark>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. Error in foliation: f. 1-141, 141a, 142-162.  <secFol>Quadam namque die</secFol></foliation>
+                                <collation>
+                                    <formula>1-6(10), 7(4), 8-16(10), 17(8+1)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67c974ee6c70ed00010c2f45/viewOnly">VisColl collation</ref>
+                                    </p>
+                                    <catchwords>Catchwords at the end of each quire, although many lost due to trimming. </catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Centre page: National Library stamp.</note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Top of page, in brown ink by a modern hand: <quote>Gregorii Papae Dyalogorum Libri IV. Vita et Passio sancti Gengolfi martyris. Gregorii Papae Exposicio super Cantica Canticorum.</quote>; below the same hand: <quote>MS de anno mcccxxxi</quote>; bottom of page: National Library stamp.</note>
+                            </p>
+                            <p>
+                                <locus from="RCI" to="RCI" scheme="other"/>
+                                <note>Centre page: National Library stamp.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Late medieval or early modern binding. Dark brown leather over wooden boards. 4 double raised bands and endbands. Originally two hooked clasps. <locus from="LCO" to="LCO" scheme="other"/>, upper part of cover in black ink by a medieval hand what appears to be the same text as on <locus from="1r" to="1r" scheme="folios"/>, but difficult to read. <locus from="Spine" to="Spine" scheme="other"/>, stamped in gold: <quote>A 155</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="310" unit="mm"/>
+                                        <width quantity="230" unit="mm"/>
+                                        <depth quantity="65" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <decoNote type="tooling">Complex blind tooled and stamped decoration consisting of panels filled with vegetative motifs. </decoNote>
+                                <condition>Leather heavily worn. Clasps missing. The board on the back cover appears cracked. Newer leather on spine, but this leather is also worn and the spine cracked. </condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100104">Germany?</placeName>
+                            </origPlace>, <origDate when="1331">1331</origDate>. Dating based on colophon on <locus from="162v" to="162v" scheme="folios"/>, where it is also stated that the manuscript was written in a monastery under the abbot <persName ref="https://www.manuscripta.se/person/102672">Hermannus</persName>. 
+                        </origin>
+                        <provenance>Early provenance unknown. A note in German on the <locus from="LCO" to="LCO" scheme="other"/> (and the same on <locus from="1r" to="1r" scheme="folios"/>) mentions that the manuscript is the property of the <quote>cantzlei</quote>, a chancery. This places the manuscript in the German realm, but unclear where. It may have been taken as war booty or purchased by Queen Christina, since it is listed in Vossius catalogue of 1649 (U 212:1, p. 54).The label attached to <locus from="1r" to="1r" scheme="folios"/> refers to the catalogue of 1734 (U 125e) where it is listed as:<quote> Theol. in fol. no 55</quote>. </provenance>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/101301">Hedlund (1980)</title>
                                 <citedRange from="12" to="12" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107155" type="short">Lehmann (1936)</title>
+                                <citedRange unit="page" from="22" to="22"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -60,13 +133,117 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1vb" to="107rb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102527">
+                                                                           Gregory I
+                                                                                                                           
+                                                                                                                 
+                                                                                                       
+                                                                                                               
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </persName>
+                                </author>
+                                <title type="desc">Dialogues</title>
+                                <rubric>Incipiunt capitula libri primi</rubric>
+                                <msItem>
+                                    <locus from="2ra" to="20vb" scheme="folios"/>
+                                    <title type="desc">Book 1</title>
+                                </msItem>
+                                <msItem>
+                                    <locus from="20vb" to="41vb" scheme="folios"/>
+                                    <title type="desc">Book 2</title>
+                                </msItem>
+                                <msItem>
+                                    <locus from="41vb" to="73vb" scheme="folios"/>
+                                    <title type="desc">Book 3</title>
+                                </msItem>
+                                <msItem>
+                                    <locus from="73vb" to="107rb" scheme="folios"/>
+                                    <title type="desc">Book 4</title>
+                                </msItem>
+                                <incipit>De honorato abbate monasterii fundensis</incipit>
+                                <explicit>quia salutari hostia post mortem non indigebimus si ante mortem deo hostia ipsi fuerimus </explicit>
+                                <finalRubric>Explicit liber quartus dyalogorum beati gregorii pape et scriptus in honore beate et gloriose semper virginis marie</finalRubric>
+                                <note>
+                                                                       <locus from="1v" to="1v" scheme="folios"/>: on the left side in red ink by the scribe a table of contents. Books 1, 2 and 4 are introduced by a list of chapters. 
+                                                                                                                   
+                                                                                                         
+                                                                                               
+                                                                                                       
+                                                                   
+                                                                   
+                                                              
+                                                              
+                                                         
+                                                         
+                                                    
+                                                    
+                                               
+                                               
+                                          
+                                          
+                                     
+                                     
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107410" type="short">de Vogüé (1978-1980)</title>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="107rb" to="115va" scheme="folios"/>
+                                <title type="desc">Life of St Gangulphus</title>
+                                <rubric>Incipit uita et passio sancti gengolfi martiris preciosi</rubric>
+                                <incipit>Humane uanitatis laudes lugubresque triumphi quibus presumptuose narratur</incipit>
+                                <explicit>se<add place="above">d</add> miram ineffabilemque dei karitatem meritis sui gengolfi queramus uidere </explicit>
+                                <finalRubric>Explicit vita et passio beati gengolfi martiris preciosi </finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="115va" to="162vb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102527">
+                                        Gregory I
+                                                                                             
+                                                                                   
+                                                                         
+                                                               
+                                                                            
+                                    
+                                    </persName>
+                                </author>
+                                <title type="desc">Commentary on Canticles</title>
+                                <rubric>Incipit exposicio super cantica canticorum ex cedis beati gregorii pape</rubric>
+                                <incipit>POstquam a paradysi gaudiis expulsum est genus humanum </incipit>
+                                <explicit>Qui uiuit et r<add place="above">e</add>gnat cum cum deo patre in unitate spiritus sancti deus per infinita secula seculorum AmeN</explicit>
+                                <finalRubric>Explicit exposicio super cantica canticorum ex cedis beati gregorii pape</finalRubric>
+                                <colophon><locus from="162v" to="162v" scheme="folios"/>Anno domini m<hi rend="super">o</hi> c<hi rend="super">o</hi>c<hi rend="super">o</hi>c<hi rend="super">o</hi> xxx<hi rend="super">o</hi>i comparatus fuit hic liber sub domino hermanno abbate</colophon>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
+                                    <citedRange unit="volume" from="79" to="79"/>
+                                    <citedRange unit="column" from="471" to="547"/>
+                                </bibl>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="162v" scheme="folios"/>
+                                            <locus from="1" to="162" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="290" unit="mm"/>
@@ -75,16 +252,62 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="162" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="163" unit="folios"/>
                                     </extent>
+                                    <foliation>Running titles in red ink. </foliation>
+                                    <condition>Parchment worn, dirty, and wrinkled in many places. A few holes and missing corners throughout, no loss of text. <locus from="1r" to="1r" scheme="folios"/>: a dark border along the edges, which may indicate this leaf was previously a pastedown. There is also a visible offprint at the very top of the leaf. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" ruledLines="30">
+                                        <dimensions type="written">
+                                            <height quantity="210" unit="mm"/>
+                                            <width quantity="150" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in ink. </note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic textualis. </handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top of page, in black ink: <quote>Dis buiech gehoret in die cantzlei</quote>; multiple places across the page, in brown ink by a medieval hand: a table of contents and pen trials (pater noster); bottom part of page: glued-on label from spine: <quote>N<hi rend="super">o</hi> 55 Vita et Passio beati Gengolfi</quote>; National Library stamp.</note>
+                                </p>
+                                <p>
+                                    <locus from="1v" to="1v" scheme="folios"/>
+                                    <note>Centre page, in ink: pen trials and a few lines of text which has been erased. </note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="162v" scheme="folios"/>
+                                    <note>Marginal additions by several medieval hands. The additions consist of short corrections, but also of longer additions with signes-de-renvoi, e.g. on <locus from="8v" to="8v" scheme="folios"/>. In the Dialogues there are also modern additions in pencil, which consist of references to an edition. </note>
+                                </p>
+                                <p>
+                                    <locus from="60r" to="60r" scheme="folios"/>
+                                    <note>Marginal addition in another language. The addition is either faded or partially erased. </note>
+                                </p>
+                                <p>
+                                    <locus from="115va" to="115va" scheme="folios"/>
+                                    <note>Part of a rubric has been erased.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink, rubrics in red, capitals touched in red. </p>
+                                <decoNote type="initials">
+                                    <locusGrp>
+                                        <locus from="2ra" to="2ra" scheme="folios"/>
+                                        <locus from="21rb" to="21rb" scheme="folios"/>
+                                        <locus from="41vb" to="41vb" scheme="folios"/>
+                                        <locus from="74ra" to="74ra" scheme="folios"/>
+                                        <locus from="107rb" to="107rb" scheme="folios"/>
+                                        <locus from="115va" to="115va" scheme="folios"/>
+                                    </locusGrp>: The individual books of the Dialogues and the two other texts are opened with plain initials with reserved interior space and some embelishment over 5-7 lines in red. The initals are partially outlined in brown ink. The counterspace is filled with acanthus leaves and geometric shapes in brown ink with red details. The commentary on Canticles also contains two smaller versions of these initials on <locus from="119ra" to="119ra" scheme="folios"/> and <locus from="157rb" to="157rb" scheme="folios"/>.
+                                    <locus from="2vb" to="162vb" scheme="folios"/>: paragraphs and some sentences opened with plain initials over 1-2 lines in red. 
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origDate when="1331">1331</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>

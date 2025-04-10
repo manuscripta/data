@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100488">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,20 +43,100 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL3" scheme="folios"/>
+                                            <locus from="SR1" to="SR2" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height unit="mm" min="165" max="165"/>
+                                            <width unit="mm" min="115" max="115"/>
+                                        </dimensions>
+                                        <watermark n="1">
+                                            <locusGrp>
+                                                <locus from="SR1" to="SR1" scheme="other"/>
+                                            </locusGrp>
+                                            <term type="watermarkMotif">The name: WUNNERLICH.</term>
+                                            <note>Similar to Piccard online <ref target="https://www.wasserzeichen-online.de/wzis/struktur.php?ref=DE3270-jurid387_III-wm1">DE3270-jurid387_III-wm1</ref>.</note>
+                                        </watermark>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="3"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="2"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil, 1-220. <secFol>Adesto domine suplicacionibus</secFol></foliation>
+                                <collation>
+                                    <formula>1(3), 2(12), 3-16(8), 17(4), 18-28(8), 29(1)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67a0a640f5e21a0001ad1631/viewOnly">VisColl collation</ref>.
+                                    </p>
+                                    <catchwords>Catchword on quire 23.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner, in red ink: <quote>D. B. IV. 5</quote>; below, <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> book label with the current signum, <quote>A229</quote>; bottom left corner, in ink: <quote>50</quote>.</note>
+                            </p>
+                            <p>
+                                <locus from="SL2r" to="SL2r" scheme="folios"/>
+                                <note>Dedication in Polish by Felix Biernacki to the countess von Engeström.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. Red leather over cardboard; a border of gilded leaves. 5 bands and endbands. <locus from="Spine" to="Spine" scheme="other"/>, stamped in gold: <quote>Manuscrit du XVme Siècle</quote>; below: the current signum <quote>A 229</quote>; below:<quote> avez des miniatures</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height min="170" max="170" unit="mm"/>
+                                        <width min="135" max="135" unit="mm"/>
+                                        <depth min="50" max="50" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <decoNote type="edges">Gilded floral pattern.</decoNote>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>
                             <origPlace>
                                 <placeName ref="https://www.manuscripta.se/place/100111">France</placeName>
                                 <placeName ref="https://www.manuscripta.se/place/100064">Paris</placeName>
-                            </origPlace>, <origDate notBefore="1426" notAfter="1475">15th century, middle</origDate>
+                            </origPlace>, <origDate notBefore="1426" notAfter="1475">15th century, middle</origDate>. The calendar agrees in large part with the books of hours typical of 15th century <placeName ref="https://www.manuscripta.se/place/100064">Paris </placeName>as presented by <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107394" type="short">Perdrizet (1933)</title>
+                            </bibl>, with one feast (occasionally two) observed for each day of the year (many of them Eastern; important feasts in gold) and with several of the same (mis)spellings, e.g. <quote>albaire </quote>for Balbine on March 31 (<locus from="6v" to="6v" scheme="folios"/>); <quote>profer(t)</quote> for Gobert (Godobertus of Anger) on April 10 (<locus from="7r" to="7r" scheme="folios"/>); <quote>gobert </quote> on April 21, possibly for Soter (<locus from="7v" to="7v" scheme="folios"/>; see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107394" type="short">Perdrizet (1933)</title>
+                                <citedRange unit="page" from="122" to="122"/>
+                            </bibl>), <quote>vandrille</quote> (Wandregisel of Fontenelle) on May 20 mistaken for Austregisilus of Bourges (<locus from="8v" to="8v" scheme="folios"/>; see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107394" type="short">Perdrizet (1933)</title>
+                                <citedRange unit="page" from="141" to="141"/>
+                            </bibl>); the unidentified <quote>pant(h)alin</quote> on June 2 (<locus from="9r" to="9r" scheme="folios"/>); <quote>proces</quote> on June 7, possibly for Procopius (<locus from="9r" to="9r" scheme="folios"/>; see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107394" type="short">Perdrizet (1933)</title>
+                                <citedRange unit="page" from="149" to="149"/>
+                            </bibl>); the unidentified <quote>osonans</quote> on August 5 (<locus from="11r" to="11r" scheme="folios"/>; see discussion in <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107394" type="short">Perdrizet (1933)</title>
+                                <citedRange unit="page" from="197" to="197"/>
+                            </bibl>); <quote>presme</quote> for Privatus on 28 September (<locus from="12v" to="12v" scheme="folios"/>); <quote>christine</quote> for Charitina (<locus from="13r" to="13r" scheme="folios"/>), and <quote>emille</quote> for Amon on December 20 (see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107394" type="short">Perdrizet (1933)</title>
+                                <citedRange unit="page" from="278" to="278"/>
+                            </bibl>).
+                            The style of the decorations and miniatures also place the manuscript in fifteenth-century Paris; Lindqvist Sandgren dates them to <date when="1450"/> at the latest (<ref target="https://www.alvin-portal.org/alvin/view.jsf?dswid=-9565&amp;searchType=EXTENDED&amp;query=229&amp;aq=%5B%5B%7B%22A_FQ%22%3A%22229%22%7D%5D%5D&amp;aqe=%5B%5D&amp;af=%5B%22ARCHIVE_ORG_ID_facet%3A23%22%5D&amp;pid=alvin-record%3A472898&amp;c=8#alvin-record%3A472898">Lindqvist Sandgren</ref>). She also believes that some of the miniatures may have been painted at a later date, among them, the portrait of Katherine de Brunfay found on <locus from="31v" to="31v" scheme="folios"/>, which Lindqvist Sandgren identifies as a later addition, Katherine's dress, for example, being of the 16th century fashion.
                         </origin>
+                        <provenance>For several decades at least, the manuscript was in the possession of the de Brunfay family, which seems to have had its origins around the area of <placeName ref="https://www.manuscripta.se/place/100292">Vieux-Campagne</placeName>, just southeast of Paris <!--they appear to have been lords of, among other places, Quincy and Fontenailles -->(see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107385">Annales de la Société historique &amp; archéologique du Gatinais: Tome 26</title>
+                                <citedRange unit="page" from="267" to="269"/>
+                            </bibl>). On <locus from="219r" to="220v" scheme="folios"/> is found a genealogy of the family written by a certain André de Brunfay. The earliest date he records is <date when="1530"/> (the birth of his (presumably) eldest son), and he signs his notes on July 14, <date when="1560"/> (<locus from="220v" to="220v" scheme="folios"/>: <quote>escript de ma mayn le dymenche xiiii de Juyllet C<hi rend="super">c</hi> lx</quote>). At least three later hands have added entries for <date>1562 </date> (the battle of Dreux; <locus from="219v" to="219v" scheme="folios"/>), <date when="1565"/>(the siege of Malta; <locus from="220r" to="220r" scheme="folios"/>), <date when="1598"/> (<locus from="219v" to="219v" scheme="folios"/>), <date when="1609"/> (<locus from="220r" to="220r" scheme="folios"/>), and <date when="1616"/> (<locus from="220v" to="220v" scheme="folios"/>). Katherine de Brunfay is not mentioned in the genealogy.</provenance>
+                        <provenance>An owner's note in a late medieval or early modern hand on <locus from="1r" to="1r" scheme="folios"/> states that the book belonged to a <quote>mademoyselle de cheurieres</quote>, probably <placeName ref="https://www.manuscripta.se/place/100302">Chevrières</placeName>. Next to it, an owner's note in a different hand gives the name <quote>Marguerit<supplied reason="damage">e</supplied> de Bielzuiais</quote>, probably <placeName ref="https://www.manuscripta.se/place/100303">Beauvais</placeName>.</provenance>
+                        <provenance>The watermark on <locus from="SR1" to="SR1" scheme="other"/>, added at rebinding, gives the name <quote>Wunnerlich</quote> (first initial(s) not visible); Piccard online identifies a similar watermark belonging to Johann Albrecht Wunnerlich, active in <placeName ref="https://www.manuscripta.se/place/100310">Hof</placeName> <date from="1746" to="1822">1746–1822</date> (see <ref target="https://www.wasserzeichen-online.de/wzis/struktur.php?ref=DE3270-jurid387_III-wm1">Piccard online</ref>). A line of Wunnerlichs appear as papermakers in <placeName ref="https://www.manuscripta.se/place/100311">Bavaria</placeName> (<placeName ref="https://www.manuscripta.se/place/100310">Hof</placeName>/<placeName ref="https://www.manuscripta.se/place/100309">Moschendorf</placeName>) between <date when="1693"/> and <date when="1856"/> (see <ref target="https://www.blogus.de/Pmnamen.html#W">blogus</ref>).</provenance>
+                        <provenance>A dedication in Polish on <locus from="SL2" to="SL2" scheme="other"/> reveals that the manuscript was given to the <persName ref="https://www.manuscripta.se/person/102658">countess von Engeström</persName> (Rosalie, née Drya-Chlapowska), wife of statesman <persName ref="https://www.manuscripta.se/person/101133">Lars von Engeström</persName> (<date from="1751" to="1826">1751–1826</date>), by <persName ref="https://www.manuscripta.se/person/102657">Felix Biernacki</persName>, a friend of the von Engeström family, with gratitude for meetings in <placeName ref="https://www.manuscripta.se/place/100078">Stockholm </placeName> and <placeName ref="https://www.manuscripta.se/place/100291">Warsaw</placeName>. </provenance>
+                        <provenance>The signa <quote>D. B. IV. 5</quote> and <quote>50</quote> on <locus from="LCI" to="LCI" scheme="other"/> have not been identified.</provenance>
+                        <acquisition>The manuscript was part of the donation to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> of <persName ref="https://www.manuscripta.se/person/101133"> Lars von Engeström</persName>'s personal library made in <date when="1864"/> by von Engeström's grandson (see <ref target="https://sok.riksarkivet.se/sbl/artikel/16158">SBL</ref>).</acquisition>
                     </history>
                     <additional>
                         <listBibl>
@@ -69,6 +153,277 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la" otherLangs="fr"/>
+                            <msItem>
+                                <locus from="1r" to="3v" scheme="folios"/>
+                                <title type="desc">Collection of prayers</title>
+                                <incipit>Spiritus sancti gracia illustret et illuminet cor tuum </incipit>
+                                <explicit>et potens ad vitam presentem et eternam introductio Per dominum nostrum Iesum etc</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="4r" to="15v" scheme="folios"/>
+                                <title type="desc">Calendar</title>
+                                <note>
+                                    <p>
+                                        Some notable feasts are:
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="4r" to="4r" scheme="folios"/>: St Genevieve (3 Jan.; in gold);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="4r" to="4r" scheme="folios"/>: St Frambald (7 Jan.); 
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="4v" to="4v" scheme="folios"/>: St Beatrice (30 Jan.); <!--finns i Grotefend på 29 jan. men 0 stift listade; Usu = 0 ; Heiligen = 0-->
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="4v" to="4v" scheme="folios"/>: St Metrannus (31 Jan.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="5v" to="5v" scheme="folios"/>: St Susanna (19 Feb.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="5v" to="5v" scheme="folios"/>: St Veronica (26 Feb.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="6r" to="6r" scheme="folios"/>: St Potentianus (8 March);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="6v" to="6v" scheme="folios"/>: St Blanchart (11 Mar.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="7r" to="7r" scheme="folios"/>: St Timothy (6 Apr.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="7r" to="7r" scheme="folios"/>: St Macarius (7 Apr.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="7r" to="7r" scheme="folios"/>: St Prochorus (as <quote>precor</quote>; 9 Apr.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="8r" to="8r" scheme="folios"/>: St Venantius Fortunatus (5 May); 
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="8v" to="8v" scheme="folios"/>: St Ambrose (17 May);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="9r" to="9r" scheme="folios"/>: St Landry (10 June);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="9r" to="9r" scheme="folios"/>: St Basil (as <quote>babille</quote>; 14 June);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="9r" to="9r" scheme="folios"/>: St Florus (15 June);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="9v" to="9v" scheme="folios"/>: St Marina (18 June);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="11r" to="11r" scheme="folios"/>: St Yon (Jonius) of Chartres (5 Aug.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="11v" to="11v" scheme="folios"/>: St Omer (Audomar; 16 Aug.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="11v" to="11v" scheme="folios"/>: St Mederic (as <quote>merri</quote>; 29 Aug.; in gold);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="12r" to="12r" scheme="folios"/>: St Chrodegang (3 Sep.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="12v" to="12v" scheme="folios"/>: St Leufred (<quote>lieffroy</quote>; 17 Sep.); 
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="13r" to="13r" scheme="folios"/>: St Charitina (as <quote>christine</quote>; 5 Oct.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="13r" to="13r" scheme="folios"/>: St Denis (9 Oct.; in gold);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="13r" to="13r" scheme="folios"/>: St Reginbald of Speyer (13 Oct.); 
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="13v" to="13v" scheme="folios"/>: St Cerbonius (17 Oct.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="14r" to="14r" scheme="folios"/>: St Faustus (15 Nov.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="14v" to="14v" scheme="folios"/>: St Genevieve (27 Nov.; in gold).
+                                    
+                                    </p>
+                                    <p/>
+                                    <p/>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="16r" to="22r" scheme="folios"/>
+                                <title type="desc">Gospel readings</title>
+                                <rubric>Secundum iohannem</rubric>
+                                <incipit>IN principio erat uerbum</incipit>
+                                <explicit>sermonem confirmante sequentibus signis Deo gracias</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="22r" to="25v" scheme="folios"/>
+                                <title type="desc">Obsecro te</title>
+                                <rubric xml:lang="fr">Deuote oraison a notre dame </rubric>
+                                <incipit>Obsecro te domina</incipit>
+                                <explicit>audias et exaudias me miserum dulcissima uirgo maria mater dei et misericordia amen <!--långt pga många olia varianter--></explicit>
+                                <note>The bifolium making up <locus from="25" to="25" scheme="folios"/>/ <locus from="30" to="30" scheme="folios"/> has been incorrectly placed in the sequence; it should come after the bifolium making up <locus from="26" to="26" scheme="folios"/> / <locus from="29" to="29" scheme="folios"/>; consequently, <locus from="26r" to="26v" scheme="folios"/> contain text belonging to <foreign xml:lang="la">Obsecro te</foreign>. An early modern hand has added signes-de-renvoi at the relevant places.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="25v" to="31r" scheme="folios"/>
+                                <title type="desc">O intemerata</title>
+                                <rubric xml:lang="fr">Aultre oraison a la uierge marie</rubric>
+                                <incipit>O Intemerata et in eternum benedicta</incipit>
+                                <explicit>ut michi parcat in alia uita concedens michi misericorditer <gap reason="editorial"/> secula seculorum amen <!--långt pga flera versioner--> </explicit>
+                                <note>
+                                    <p>Listed after the prayer are the incipits <quote>Pater noster </quote>and <quote>Aue maria</quote>.</p>
+                                    <p>The bifolium making up <locus from="25" to="25" scheme="folios"/>/ <locus from="30" to="30" scheme="folios"/> has been incorrectly placed in the sequence; it should come after the bifolium making up <locus from="26" to="26" scheme="folios"/> / <locus from="29" to="29" scheme="folios"/>; consequently, <locus from="26r" to="26v" scheme="folios"/> contain text belonging to <foreign xml:lang="la">Obsecro te</foreign>.</p>
+                                    <p> <locus from="31v" to="31v" scheme="folios"/>: full-page miniature: St Katherine with her attributes, a sword and a broken wheel; kneeling in prayer in front of her, the owner of the book, Katherine de Brunfay; below: a banner with her name, <quote>KATHERINE DE BRVNFAY</quote>.</p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="32r" to="107v" scheme="folios"/>
+                                <title type="desc">Hours of the Virgin</title>
+                                <incipit>Domine labia mea aperies (Ps. 50:17) <gap reason="editorial"/> Aue maria gracia plena <!--invitatorium--></incipit>
+                                <explicit>ad dona perueniat sempiterna <gap reason="editorial"/> Benedicamus domino Deo gracias</explicit>
+                                <note> <locus from="78v" to="78v" scheme="folios"/>, <locus from="93v" to="93v" scheme="folios"/>, <locus from="101v" to="101v" scheme="folios"/>: ruling but no text.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="107v" to="111v" scheme="folios"/>
+                                <title type="desc">Suffrages</title>
+                                <rubric>Memoria de sancto iohanne baptista antiphona</rubric>
+                                <incipit>Inter natos mulierum</incipit>
+                                <explicit>interuentio sit accepta pro nobis <gap reason="editorial"/> secula seculorum Amen</explicit>
+                                <note>
+                                    <p> <locus from="107v" to="107v" scheme="folios"/>: John the Baptist;</p>
+                                    <p> <locus from="108v" to="108v" scheme="folios"/>: St Stephen; </p>
+                                    <p> <locus from="109r" to="109r" scheme="folios"/>: St Eustace; </p>
+                                    <p> <locus from="109v" to="109v" scheme="folios"/>: St Lawrence;</p>
+                                    <p> <locus from="110v" to="110v" scheme="folios"/>: St Maurus;</p>
+                                    <p> <locus from="111r" to="111r" scheme="folios"/>: St Germanus. </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="112r" to="126v" scheme="folios"/>
+                                <title type="desc">The seven penitential psalms</title>
+                                <incipit>Domine ne in furore tuo arguas me (Ps. 6:2)</incipit>
+                                <explicit>ne in eternum irascaris nobis</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="126v" to="131r" scheme="folios"/>
+                                <title type="desc">Litanies and prayers</title>
+                                <incipit>Kyrieleyson Christeleyson</incipit>
+                                <explicit>piis supplicacionibus consequantur <gap reason="editorial"/> secula seculorum amen</explicit>
+                                <note>
+                                    <locus from="131v" to="131v" scheme="folios"/>: ruling but no text.
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="132r" to="141r" scheme="folios"/>
+                                <title type="desc">Hours of the Holy Cross</title>
+                                <incipit>Domine labia mea aperies (Ps. 50:17) <gap reason="editorial"/> Patris sapiencia ueritas diuina</incipit>
+                                <explicit>Sis michi solacium in mortis agone amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="141v" to="148v" scheme="folios"/>
+                                <title type="desc">Hours of the Holy Spirit</title>
+                                <incipit>Domine labia mea aperies (Ps. 50:17) <gap reason="editorial"/> Nobis sancti spiritus gracia <!--sit data--></incipit>
+                                <explicit>uiuamus iugiter celi regione Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="149r" to="198r" scheme="folios"/>
+                                <title type="desc">Office for the dead</title>
+                                <incipit>Antiphona Placebo Psalmus Dilexi quoniam exaudiet dominus</incipit>
+                                <explicit>Requiescant in pace Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="198r" to="204v" scheme="folios"/>
+                                <textLang mainLang="fr"/>
+                                <title type="desc">The Fifteen Joys of the Virgin</title>
+                                <rubric>Les xv ioies notre dame</rubric>
+                                <incipit>Doulce dame de misericorde mere de dieu</incipit>
+                                <explicit>pour tous pecheurs et pecherrelles quil ait mercy de nous Amen Aue maria gracia</explicit>
+                                <note>
+                                    <locus from="198v" to="198v" scheme="folios"/>: ruling but no text.
+                                
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/101506" type="short">Leroquais (1927)</title>
+                                    <citedRange unit="page" from="310" to="311"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="204v" to="207r" scheme="folios"/>
+                                <textLang mainLang="fr"/>
+                                <title type="desc">The Seven Requests to Our Lord</title>
+                                <incipit>Doulx dieu doulx pere sancte trinite</incipit>
+                                <explicit>huy seras auec moy en paradis Sire <gap reason="editorial"/> Pater noster</explicit>
+                                <note>The bifolium making up <locus from="206" to="206" scheme="folios"/> / <locus from="209" to="209" scheme="folios"/> has been incorrectly placed in the sequence; it should come after the bifolium making up <locus from="207" to="207" scheme="folios"/> / <locus from="208" to="208" scheme="folios"/>; consequently, the text comes in the incorrect order and <locus from="206v" to="206v" scheme="folios"/> contains text belonging to the rhymed prayer top the Holy Cross. An early modern hand has added signes-de-renvoi at the relevant places.</note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/101506" type="short">Leroquais (1927)</title>
+                                    <citedRange unit="page" from="309" to="310"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="206v" to="209r" scheme="folios"/>
+                                <textLang mainLang="fr"/>
+                                <title type="desc">Rhymed prayer to the Holy Cross</title>
+                                <incipit>Saincte uraye croiz aouree</incipit>
+                                <explicit>Que uray confes puisse mourir Amen</explicit>
+                                <note>The bifolium making up <locus from="206" to="206" scheme="folios"/>/ <locus from="209" to="209" scheme="folios"/> has been incorrectly placed in the sequence; it should come after the bifolium making up <locus from="207" to="207" scheme="folios"/> / <locus from="208" to="208" scheme="folios"/> and thus make up the centre of the quire; consequently, the text is interrupted after <locus from="206v" to="206v" scheme="folios"/> and continues on <locus from="209r" to="209r" scheme="folios"/>.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="208r" to="219v" scheme="folios"/>
+                                <title type="desc">Suffrages</title>
+                                <incipit>Uox de celis ad anthonium</incipit>
+                                <explicit>et incolumem me perficias <gap reason="editorial"/> Amen</explicit>
+                                <note>
+                                    <p> <locus from="208r" to="208r" scheme="folios"/>: St Anthony;</p>
+                                    <p> <locus from="208v" to="208v" scheme="folios"/>: St Sebastian (continues on <locus from="210r" to="210r" scheme="folios"/>);</p>
+                                    <p> <locus from="209r" to="209r" scheme="folios"/>: St Michael;</p>
+                                    <p> <locus from="210v" to="210v" scheme="folios"/>: St Christopher;</p>
+                                    <p> <locus from="212r" to="212r" scheme="folios"/>: St Dionysius;</p>
+                                    <p> <locus from="213r" to="213r" scheme="folios"/>: St Nicholas; </p>
+                                    <p> <locus from="213v" to="213v" scheme="folios"/>: St Katherine;</p>
+                                    <p> <locus from="214v" to="214v" scheme="folios"/>: St Barbara; </p>
+                                    <p> <locus from="215v" to="215v" scheme="folios"/>: St Margaret;</p>
+                                    <p> <locus from="216v" to="216v" scheme="folios"/>: St Genevieve;</p>
+                                    <p> <locus from="217r" to="217r" scheme="folios"/>: St Avoye (Aurea);</p>
+                                    <p> <locus from="217v" to="217v" scheme="folios"/>: St Apollonia.</p>
+                                    <p>The bifolium making up <locus from="206" to="206" scheme="folios"/> / <locus from="209" to="209" scheme="folios"/> has been incorrectly placed in the sequence; it should come after the bifolium making up <locus from="207" to="207" scheme="folios"/> / <locus from="208" to="208" scheme="folios"/>; consequently, <locus from="209r" to="209r" scheme="folios"/> contains text from the rhymed prayer to the Holy Cross and the suffrages come in the incorrect order; they should begin with St Michael (<locus from="209r" to="209r" scheme="folios"/>), and continue with St Anthony (<locus from="208r" to="208r" scheme="folios"/>). An early modern hand has added signes-de-renvoi at the relevant places.</p>
+                                    <p/>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -78,22 +433,118 @@
                                             <locus from="1r" to="220v" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
-                                                <height quantity="165" unit="mm"/>
-                                                <width quantity="120" unit="mm"/>
+                                                <height unit="mm" min="165" max="165"/>
+                                                <width unit="mm" min="115" max="115"/>
                                             </dimensions>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="220" unit="folios"/>
                                     </extent>
+                                    <condition>Edges trimmed with some loss of border decorations <!--hitta fol--> and text of the maginal notations.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="15">
+                                        <locusGrp>
+                                            <locus from="1r" to="3v" scheme="folios"/>
+                                            <locus from="16r" to="220v" scheme="folios"/>
+                                        </locusGrp>
+                                        <dimensions type="written">
+                                            <height unit="mm" min="90" max="90"/>
+                                            <width unit="mm" min="55" max="55"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in red ink.</note>
+                                    </layout>
+                                    <layout columns="6" ruledLines="17">
+                                        <locus from="4r" to="15v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height min="90" max="90" unit="mm"/>
+                                            <width min="60" max="60" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in red ink. Outer column for marginal decoration; no text lines ruled.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1"><locus from="1r" to="3v" scheme="folios"/>Later cursive.</handNote>
+                                <handNote xml:id="hand-2"><locus from="4r" to="219r" scheme="folios"/>Gothic textualis.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top of page, in a late medieval or early modern hand: owner's note, <quote>Ces putets heures appertiennent a mademoyselle de cheurieres</quote>.
+                                        Top right corner, in a late medieval or early modern hand: owner's note, <quote>Marguerit<supplied reason="damage">e</supplied> de Bielzuiais</quote>.
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="219r" to="220v" scheme="folios"/>
+                                    <note>Genealogy of the de Brunfay family (see Provenance).</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p/>
+                                <p>
+                                    Rubrics in red.
+                                </p>
+                                <p>
+                                    <locus from="1r" to="219r" scheme="folios"/>: border panels in the outer margin with floral motifs in reds, blues, greens, yellows, purples, and tendrils in black.
+                                </p>
+                                <p/>
+                                <decoNote type="initials"> <locus from="4r" to="15r" scheme="folios"/>: Opening foliate initials <quote>KL</quote> over 2 lines in blue and red (in alternating order) and outlined in black on a gold background outlined in black. Patterns in white inside letter bodies; foliage in red and blue in counterspace.
+                                    <locus from="16r" to="218v" scheme="folios"/>: foliate initials over 2-3 lines in red or blue and outlined in black on a gold background outlined in black. Patterns in white inside letter bodies; foliage in red and blue in counterspace.
+                                    <locus from="31r" to="210v" scheme="folios"/>: champ initials over 1 line in gold with black ouline on a red or blue background outlined in black. Counter space in red or blue with patterns in white.
+                                    <locus from="22r" to="216v" scheme="folios"/>: line fillers: bars outlined in blackand coloured in half red, half blue with patterns in white, and a golden disc outlined in black at the middle.
+                                </decoNote>
+                                <decoNote type="images">Miniatures:
+                                     <locus from="16r" to="16r" scheme="folios"/>: St John writing his Gospel;
+                                     <locus from="18r" to="18r" scheme="folios"/>: St Luke writing his Gospel;
+                                     <locus from="19v" to="19v" scheme="folios"/>: St Matthew writing his Gospel;
+                                     <locus from="21r" to="21r" scheme="folios"/>: St Mark writing his Gospel;
+                                     <locus from="22v" to="22v" scheme="folios"/>: the Virgin Mary with the Christ child;
+                                     <locus from="25v" to="25v" scheme="folios"/>: the Virgin Mary with the body of Christ (Pietà); 
+                                     <locus from="32r" to="32r" scheme="folios"/>: the Annunciation;
+                                     <locus from="60r" to="60r" scheme="folios"/>: the Visitation;
+                                     <locus from="72r" to="72r" scheme="folios"/>: the Nativity;
+                                     <locus from="79r" to="79r" scheme="folios"/>: the Annunciation to the shepherds;
+                                     <locus from="84r" to="84r" scheme="folios"/>: the Adoration of the Magi;
+                                     <locus from="88v" to="88v" scheme="folios"/>; the Presentation at the Temple;
+                                     <locus from="94r" to="94r" scheme="folios"/>: the Flight into Egypt; 
+                                     <locus from="102r" to="102r" scheme="folios"/>: the Coronation of the Virgin Mary; 
+                                     <locus from="108r" to="108r" scheme="folios"/>: St John the Baptist;
+                                     <locus from="108v" to="108v" scheme="folios"/>: St Stephen;
+                                     <locus from="109r" to="109r" scheme="folios"/>: St Eustace;
+                                     <locus from="110r" to="110r" scheme="folios"/>: St Lawrence; 
+                                     <locus from="110v" to="110v" scheme="folios"/>: St Maur;
+                                     <locus from="111r" to="111r" scheme="folios"/>: St Germain;
+                                     <locus from="112r" to="112r" scheme="folios"/>: King David;
+                                     <locus from="132r" to="132r" scheme="folios"/>: the Crucifixion;
+                                     <locus from="141v" to="141v" scheme="folios"/>: the Pentecost;
+                                     <locus from="149r" to="149r" scheme="folios"/>: funeral mass;
+                                     <locus from="199r" to="199r" scheme="folios"/>: Virgin Mary with the Christ child;
+                                     <locus from="205r" to="205r" scheme="folios"/>: the Trinity;
+                                     <locus from="208r" to="208r" scheme="folios"/>: St Anthony;
+                                     <locus from="208v" to="208v" scheme="folios"/>: St Sebastian;
+                                     <locus from="209r" to="209r" scheme="folios"/>: St Michael;
+                                     <locus from="210v" to="210v" scheme="folios"/>: St Christopher;
+                                     <locus from="212r" to="212r" scheme="folios"/>: St Denis;
+                                     <locus from="213r" to="213r" scheme="folios"/>: St Nicholas;
+                                     <locus from="213v" to="213v" scheme="folios"/>: St Katherine;
+                                     <locus from="214v" to="214v" scheme="folios"/>: St Barbara;
+                                     <locus from="215v" to="215v" scheme="folios"/>: St Margaret;
+                                     <locus from="216v" to="216v" scheme="folios"/>: St Genevieve;
+                                     <locus from="217r" to="217r" scheme="folios"/>: St Avoye; 
+                                     <locus from="218r" to="218r" scheme="folios"/>: St Apollonia.
+                                     <locus from="31v" to="31v" scheme="folios"/>: full-page miniature: St Katherine with her attributes, a sword and a broken wheel; kneeling in prayer in front of her, the owner of the book, Katherine de Brunfay; below: a banner with her name, <quote>KATHERINE DE BRVNFAY</quote>.
+                                    For further description of the decoration, see <ref target="https://www.alvin-portal.org/alvin/view.jsf?dswid=-9565&amp;searchType=EXTENDED&amp;query=229&amp;aq=%5B%5B%7B%22A_FQ%22%3A%22229%22%7D%5D%5D&amp;aqe=%5B%5D&amp;af=%5B%22ARCHIVE_ORG_ID_facet%3A23%22%5D&amp;pid=alvin-record%3A472898&amp;c=8#alvin-record%3A472898">Lindqvist Sandgren</ref>.
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft"><change who="https://www.manuscripta.se/person/100484" when="2024-01-25" status="draft"/>
+        <revisionDesc status="published"><change who="https://www.manuscripta.se/person/100484" when="2025-03-20" status="published"/>
+            <change who="https://www.manuscripta.se/person/100484" when="2024-01-25" status="draft"/>
             <change who="https://www.manuscripta.se/person/100484" when="2024-01-25" status="published"/>
             <change status="draft" when="2024-01-24" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>

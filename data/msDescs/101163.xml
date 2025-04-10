@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="editor"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100488">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,23 +39,69 @@
                             <idno type="id" subtype="Regina">004854236</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Psalter</head>
+                    <head>Psalter (Gallican)</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="120" unit="mm"/>
+                                            <width quantity="90" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" unit="folios"/>
                                     <measure type="rightFlyleaves" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil, 1-79, 78-79 (repeated), 80-123 (<locus from="54A" to="54A" scheme="folios"/> not foliated). 
+                                    <locus from="2r" to="114r" scheme="folios"/>: older foliation in ink, 8-123, partly trimmed in places and crossed out in pencil; the foliation continues in pencil on <locus from="115r" to="115r" scheme="folios"/>, 124-132, also crossed out. <secFol>iusta Cum exarserit</secFol>
+                                </foliation>
+                                <collation>
+                                    <p>The manuscript is too fragile to be fully collated. However, as the textblock is more or less entirely detached from the binding, the quires, sixteen in all, can be counted at the spine. The first six quires have catchwords at intervals of 8 leaves, indicating a structure of quaternions.</p>
+                                    <catchwords>Catchwords on quires 1-6.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner, in brown ink by an early modern hand: <quote>N<hi rend="super">o</hi> 10</quote>; below: <quote>Brocmanni</quote>; centre page, in brown ink by an early modern hand, a note identifying the elevation of the feast of St George to <foreign xml:lang="la">festum duplex</foreign> in November 1415: <quote>MCCCCXV in nov. Festivitas S. Georgii mart. ut duplex festum celebretur Stat. Seld. Tit. Hon. p. 574 ed. lat.</quote> Bottom of page, in brown ink by an early modern hand: <quote>Hunc librum dono mihi dedit pater carissimus <gap reason="damage" quantity="7" unit="chars"/>.</quote> <!--Skulle vilja identifiera referensen. Ej hittat. Men lägga in typ dictionay of National Biography?--></note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Early modern binding. White leather over cardboard. 3 raised bands and endbands, with the fastenings visible on the outside of the covers at the spine. <locus from="Spine" to="Spine" scheme="other"/>, in ink, barly legible: <quote>N<hi rend="super">o</hi> 10 Brocm</quote>; stamped in gold: <quote>A 182</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="125" unit="mm"/>
+                                        <width quantity="100" unit="mm"/>
+                                        <depth quantity="30" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <decoNote type="edges">Sprinkled in greenish blue and red.</decoNote>
+                                <condition>The textblock is almost entirely detached from the binding. The leather is cracked at the spine and the bottom left front corner is frayed.</condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>
                             <origPlace>
                                 <placeName ref="https://www.manuscripta.se/place/100215">England</placeName>
-                            </origPlace>, <origDate notBefore="1401" notAfter="1450">15th century, first half</origDate>
+                            </origPlace>, <origDate notBefore="1457" notAfter="1500">15th century, second half</origDate>. The feasts listed in the calendar place the origin of the psalter in England. In a letter to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> dated <date when="1967-08-22"/>, Dr <persName ref="https://www.manuscripta.se/person/102659">A. I. Doyle</persName> of the <orgName ref="https://www.manuscripta.se/org/100175">Durham University Library</orgName>, futhermore, identifies the gradings used in the calendar (<foreign xml:lang="la">prime dignitatis</foreign>, <foreign xml:lang="la">secunde dignitatis</foreign>) as those used by the Augustinian canons in England. Notable, therefore, is the celebration of the Augustinian St John of Bridlington as <foreign xml:lang="la">festum duplex</foreign> on October 12. The Dedication of the church is celebrated on October 7. Based on the calendar's inclusion of the feast of St Osmund, canonized in <date when="1456"/>, and the Transfiguration, instituted in <date when="1457"/>, Doyle dates the manuscript to the third or fourth quarter of the 15th century. <!--Based on its inclusion of St Winifred, whom, according to 
+                                Grotefend, was venerated in Salisbury alone, a former librarian suggests this as the place of origin. According to Grotefend, Salisbury celebrates its dedicatio ecclesie on the first Sunday of October; the calendar, however, lists it on Saturday October 7, the Saturday following Sunday October 1st, but the same librarian believes that the entry can be considered as pertaining to Sunday October 10 and that this, then, should count as the first Sunday of the month.
+Tror inte detta stämmer--> 
                         </origin>
+                        <provenance>Previously no. 10 in the collection of <persName>Nils Reinhold Brocman</persName>, book collector and librarian at the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> and <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>. Upon his death in <date when="1770"/>, a large part of his book collection was donated to the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> (<ref target="https://sok.riksarkivet.se/sbl/Presentation.aspx?id=16980">SBL</ref>). </provenance>
+                        <provenance>A former owner's note in an early modern hand on <locus from="LCI" to="LCI" scheme="other"/> states (in Latin) that <quote>the most beloved father <gap reason="damage" quantity="7" unit="chars"/> gave me this book</quote> with the name of the donor having been erased.</provenance>
+                        <provenance>On <locus from="123r" to="123r" scheme="folios"/>, an early modern hand has written in Swedish: <quote>Come Holy Spirit Lord God visit our hearts and give His Majesty's dutiful servant good spirits</quote> and a monogram, possibly <quote>RO</quote>.</provenance>
+                        <acquisition>Transferred to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> from the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>.</acquisition>
                     </history>
                     <additional>
                         <listBibl>
@@ -72,13 +122,138 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="105v" scheme="folios"/>
+                                <title type="desc">Psalms</title>
+                                <note>
+                                    <p>Psalms 1-150.</p>
+                                    <p>Beginning at Psalm 28 (<locus from="20r" to="20r" scheme="folios"/>) and continuing until Psalm 148 (<locus from="104v" to="104v" scheme="folios"/>), the psalms, or sequence of psalms, are headed by an antiphon written in smaller print in a similar hand, possibly that of the main scribe.</p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="105v" to="113r" scheme="folios"/>
+                                <title type="desc">Canticles</title>
+                                <note>
+                                    <p>
+                                             <locus from="105v" to="105v" scheme="folios"/>: Canticle of Isaias the Prophet (Isa. 12); 
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="105v" to="105v" scheme="folios"/>: Canticle of Ezechias (Isa. 38:10-20)
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="106v" to="106v" scheme="folios"/>: Canticle of Anna (1 Kings 2:1-10);
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="107r" to="107r" scheme="folios"/>: Canticle of Moses (Exod. 15:1-19);
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="108r" to="108r" scheme="folios"/>: Canticle of Habacuc (Hab. 3:2-19);
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="109r" to="109r" scheme="folios"/>: Canticle of Moses (Deut. 32:1-43);
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="111v" to="111v" scheme="folios"/>: Te deum;
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="112r" to="112r" scheme="folios"/>: Canticle of the Three Children (Dan. 3:57-88);
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="112v" to="112v" scheme="folios"/>: Canticle of Zachary / Benedictus (Luke 1:68-79);
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="113r" to="113r" scheme="folios"/>: Canticle of the Blessed Virgin Mary / Magnificat (Luke 1:46-55); 
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                             <locus from="113r" to="113r" scheme="folios"/>: Canticle of Simeon / Nunc dimittis (Luke 2:29-32).
+                                         
+                                         
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="113r" to="114v" scheme="folios"/>
+                                <title type="desc">The Athanasian Creed</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="114v" to="114v" scheme="folios"/>
+                                <title type="desc">Antiphon</title>
+                                <incipit>Ne reminiscaris</incipit>
+                            </msItem>
+                            <msItem>
+                                <locus from="114v" to="115v" scheme="folios"/>
+                                <title type="desc">Litany</title>
+                                <note>The leaf between <locus from="114" to="114" scheme="folios"/>and <locus from="115" to="115" scheme="folios"/>torn out.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="116r" to="116v" scheme="folios"/>
+                                <title type="desc">Collect prayers</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="117r" to="122v" scheme="folios"/>
+                                <title type="desc">Calendar</title>
+                                <note>
+                                    <p>Notable feasts:</p>
+                                    <p> <locus from="118r" to="118r" scheme="folios"/>: St David of Mynyw (1 Mar.);</p>
+                                    <p> <locus from="118r" to="118r" scheme="folios"/>: St Chad (2 Mar.);</p>
+                                    <p> <locus from="118v" to="118v" scheme="folios"/>: St Alfege (19 Apr.);</p>
+                                    <p> <locus from="119r" to="119r" scheme="folios"/>: St Dunstan (19 May);</p>
+                                    <p> <locus from="119v" to="119v" scheme="folios"/>: translation of St Edmund of Canterbury (9 June);</p>
+                                    <p> <locus from="119v" to="119v" scheme="folios"/>: translation of St Richard (16 June);</p>
+                                    <p> <locus from="119v" to="119v" scheme="folios"/>: St Botholf (17 June);</p>
+                                    <p> <locus from="119v" to="119v" scheme="folios"/>: St Etheldreda (23 June);</p>
+                                    <p> <locus from="120r" to="120r" scheme="folios"/>: translation of St Swithun (15 July);</p>
+                                    <p> <locus from="120r" to="120r" scheme="folios"/>: St Cucuphas (25 July);</p>
+                                    <p> <locus from="120v" to="120v" scheme="folios"/>: St Oswald (5 Aug.);</p>
+                                    <p> <locus from="120v" to="120v" scheme="folios"/>: St Philibert (20 Aug.)</p>
+                                    <p> <locus from="121v" to="121v" scheme="folios"/>: St John of Bridlington (12 Oct.)</p>
+                                    <p> <locus from="121v" to="121v" scheme="folios"/>: St Edward (13 Oct.);</p>
+                                    <p> <locus from="121v" to="121v" scheme="folios"/>: translation of St Etheldreda (17 Oct.);</p>
+                                    <p> <locus from="121v" to="121v" scheme="folios"/>: St Frithuswith (19 Oct.);</p>
+                                    <p> <locus from="122r" to="122r" scheme="folios"/>: St Winifred (3 Nov.);</p>
+                                    <p> <locus from="122r" to="122r" scheme="folios"/>: deposition of St Edmund (16 Nov.);</p>
+                                    <p> <locus from="122r" to="122r" scheme="folios"/>: St Edmund (20 Nov.);</p>
+                                    <p> <locus from="122v" to="122v" scheme="folios"/>: St Osmund (4 Dec.).</p>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="122v" scheme="folios"/>
+                                            <locus from="1r" to="123v" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="115" unit="mm"/>
@@ -87,10 +262,61 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="122" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="126" unit="folios"/>
                                     </extent>
+                                    <condition>The occasional hole. The folio between <locus from="114" to="114" scheme="folios"/> and <locus from="115" to="115" scheme="folios"/> torn out. On several folios (e.g. <locus from="103" to="103" scheme="folios"/> and <locus from="110" to="111" scheme="folios"/>), a section of the leaf  resembling the shape of a bookmark has been cut out.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="21 22">
+                                        <locus from="1r" to="116v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="85" unit="mm"/>
+                                            <width quantity="60" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in ink. Prickings intermittently visible.</note>
+                                    </layout>
+                                    <layout columns="5" ruledLines="32">
+                                        <locus from="117r" to="122v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="100" unit="mm"/>
+                                            <width quantity="70" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <p/>
+                                <handNote xml:id="hand-1">Gothic textualis.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="90r" scheme="folios"/>
+                                    <note>In the margins, psalm numbers in ink in an early modern or near contemporary hand. Psalm 39 erroneously numbered as <quote>29</quote> (<locus from="30r" to="30r" scheme="folios"/>). Psalm 108 erroneously numbered as <quote>107</quote> (<locus from="81v" to="81v" scheme="folios"/>), and from here until Psalm 118 the numbering is off by one. Psalm 118:17 is numbered as <quote>118</quote>, 118:33 as <quote>119</quote>, 118:49 as <quote>120</quote>, 118:65 as <quote>121</quote>, 118:81 as <quote>122</quote>, 118:97 as <quote>123</quote> (<locus from="87r" to="90r" scheme="folios"/>). After this, the numbering in ink disappears, but the numbering in pencil continues from Psalm 119 until the end.</note>
+                                </p>
+                                <p>
+                                    <locus to="105v" scheme="folios" from="81v"/>
+                                    <note>Corrections of the erroneous psalm numbers in pencil in parentheses beneath each incorrect number. From Ps. 119 ff. (<locus from="93r" to="93r" scheme="folios"/>), psalm numbers in pencil in square brackets.</note>
+                                </p>
+                                <p>
+                                    <locus from="123r" to="123r" scheme="folios"/>
+                                    <note>Covering the top half of the page, in black ink by and early modern hand: <quote>Kom Helige Ande Herre God besök wåra hiertan och gif Kongl.<hi rend="super">a</hi> Mai.<hi rend="super">tts</hi> tropliktig tienare godt mod</quote>; below, in the same ink and style, a large monogram: <quote>RO</quote>(?). Bottom right corner, in ink: a word, faded and difficult to make out.</note>
+                                </p>
+                                <p>
+                                    <locus from="123v" to="123v" scheme="folios"/>
+                                    <note>Pen trials in the same hand and style as the recto: <quote>Denna</quote> and two flourished <quote>R</quote>s (or <quote>K</quote>s?).</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink.</p>
+                                <decoNote type="initials">
+                                    The decoration scheme of the initials corresponds to the secular cursus, with larger, decorated initials at Ps. 1, 26, 38, 52, 68, 80, 97, 109.
+                                    <locus from="1r" to="1r" scheme="folios"/>: historiated and illuminated opening initial <quote>B</quote> over 9 lines in blues, greens, reds, yellows, and purples: a seated king David playing the harp surrounded by four men, one of whom is holding a sword. <!--Eman, Ethan, Asaph, and Idithun En har ett svärd; nåt med Goliat...? Ingen har instrument.-->A border of stalks with acanthus leaves and small flowers in the same colour scheme, also illuminated, extending around the textblock and filling the entire marginal space.
+                                    <locus from="18v" to="18v" scheme="folios"/>, <locus from="29r" to="29r" scheme="folios"/>, <locus from="39r" to="39r" scheme="folios"/>, <locus from="49r" to="49r" scheme="folios"/>, <locus from="61r" to="61r" scheme="folios"/>, <locus from="72v" to="72v" scheme="folios"/>, <locus from="82v" to="82v" scheme="folios"/>: psalm initials over 6-7 lines; letter bodies coloured in and blues and purples in a chequer-like pattern with white outlines and dots against a background of gold and filled with vegatative motifs mainly in blues and purples, but also some greens, reds, and yellows. A border of stalks with acanthus leaves and small flowers in the same colour scheme extending into and filling the left, upper, and lower margin.
+                                    <locus from="1v" to="116v" scheme="folios"/>: plain psalm or section initials over 2 lines in blue with flourishing in red extending into the left margin. 
+                                    <locus from="1v" to="116v" scheme="folios"/> plain initials over 1 line alternaing in red and blue.
+                                    <locus from="117r" to="122v" scheme="folios"/>: plain capital <quote>KL</quote> in blue with flourishing in red at the head of each month.
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>

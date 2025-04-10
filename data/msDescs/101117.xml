@@ -11,17 +11,21 @@
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101117</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100488">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -37,21 +41,126 @@
                     </msIdentifier>
                     <head>Fragments of a copy of Breviarium Lincopense 1493</head>
                     <physDesc>
-                        <objectDesc form="codex">
+                        <objectDesc form="fragment">
                             <supportDesc>
-                                <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
-                                </extent>
+                                <foliation>Modern foliation in pencil, 1-2.</foliation>
+                                <collation>
+                                    <formula>1-4(1).</formula>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCO" to="LCO" scheme="other"/>
+                                <note>Top left corner: in pencil by a modern hand, the current signum, <quote>A 127</quote>;
+                                    centre of page: in ink by a modern hand, <quote>Ur ett exemplar af Breviarium Lincopense 1493</quote>.
+                                </note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Leaves contained in a piece of folded modern paper.</p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            The note at the top of <locus from="3r" to="3r" scheme="folios"/> indcates a date of <origDate notBefore="1543">ca 1573</origDate>. <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
+                            </origPlace> as the place of origin is suggested by the translation into Swedish accompanying the hymn <foreign xml:lang="la">Puer natus est</foreign> on <locus from="1v" to="2r" scheme="folios"/>. According to a former librarian's note, the fragment is a copy of the <foreign xml:lang="la">Breviarium Lincopense</foreign> printed in <placeName ref="https://www.manuscripta.se/place/100286">Nuremberg</placeName>in 1493; this, however, has not been possible to confirm.
+                        </origin>
+                    </history>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem defective="true">
+                                <locus from="1r" to="1v" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102642">
+                                        Philip
+                                        Melanchthon
+                                    
+                                    </persName>
+                                </author>
+                                <title type="desc">Dicimus grates tibi (hymn)</title>
+                                <incipit>Interim sed nos tegit angelorum</incipit>
+                                <explicit>obsecramus pectore toto Amen</explicit>
+                                <note>
+                                    <p>
+                                        The manuscript transmits the five last stanzas of <persName ref="https://www.manuscripta.se/person/102642">Philip Melanchthon</persName>'s hymn <foreign xml:lang="la">Dicimus grates tibi</foreign>, first printed in 1543 (<bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107370" type="short">Melanchthon (1543)</title>
+                                        </bibl>); here, as printed in <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107369" type="uniform">Philippi Melanthonis Opera quae supersunt omnia</title>
+                                            <citedRange unit="column" from="586" to="586"/>
+                                        </bibl>.           
+                                    
+                                    </p>
+                                    <p/>
+                                    <p>
+                                        <!--Till den som katalogiserar detta fragment: Texten på f. 1r-a är strof 7-11 (av totalt 11 strofer) av Melanchtons hymn "Dicimus grates tibi". Melanchton levde mellan 1497-1560, vilket hjälper till att datera just denna del av det som finns skrivet.(Erika) Om Melancthon föddes 1497 kan ju inte hans hymn vara del av Brev. Linc. 1493... Varken item 1 el 2 finns med i index till Brev. Linc.-->
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="1v" to="2r" scheme="folios"/>
+                                <title type="desc">Puer natus in Bethlehem (hymn)</title>
+                                <incipit>Puer natus in Bethlehem in Bethlehem</incipit>
+                                <explicit xml:lang="sv">Laudetur sancta trinitas trinitas Deo dicamus gratias Haleluia
+                                    <lb/> thes wari pris i ewighett ewighett then heliga trefollighet haleluia
+                                
+                                </explicit>
+                                <note>
+                                    Latin hymn with the Swedish translation on alternating lines. The Latin hymn is known, in similar form, from the 14th century (<bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107372" type="short">Dreves (1886)</title>
+                                        <citedRange unit="page" from="164" to="164"/>
+                                        <citedRange unit="number" from="178" to="178"/>
+                                    </bibl>). The hymn with its Swedish translation was printed in <placeName ref="https://www.manuscripta.se/place/100078">Stockholm</placeName>in 1572 (<bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107374">Then swenska psalmeboken</title>
+                                        <citedRange unit="folio" from="69v" to="70v"/>
+                                    </bibl>).                                
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="2v" to="2v" scheme="folios"/>
+                                <title type="desc">Instruction for the singing of the Kyrie</title>
+                                <incipit>Sacratissima penthecostes die</incipit>
+                                <explicit>kyrie de sancto spiritu minus <unclear unit="chars" quantity="3" reason="illegible"/> Aleluia Aleluia</explicit>
+                                <note>
+                                    <p>
+                                        The folio transmits an instruction for which Kyrie to sing at which feast.
+                                    
+                                    </p>
+                                    <p>
+                                        <!--FInns det alltså olika: maius minus etc - Hittar inte Kyrie i index till Brev. Lic.-->
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem defective="true">
+                                <locus from="3r" to="3r" scheme="folios"/>
+                                <title type="desc">Instruction</title>
+                                <rubric>Anno domini 1573 fuit (?)</rubric>
+                                <incipit>
+                                    <unclear unit="chars" quantity="5" reason="illegible"/> hyems in <unclear unit="chars" quantity="7" reason="illegible"/>
+                                
+                                </incipit>
+                                <explicit>Vide de primavera in breviari</explicit>
+                                <note>The folio transmits an instruction for when to begin a <foreign xml:lang="la">historia</foreign> together with a note on which Sunday is to be counted as the first of the month. The fragment is mounted on a piece of modern paper and the verso is therefore covered.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="4r" to="4r" scheme="folios"/>
+                                <title type="desc">The monk who would not pray his hours</title>
+                                <rubric>De <unclear unit="chars" quantity="1"/>ndi Mona<supplied reason="damage">c</supplied>ho <!--Det är inte venerandi!--></rubric>
+                                <incipit>
+                                    <supplied reason="damage">E</supplied>rat olim quidam sacerdos in monaste<supplied reason="damage">rio</supplied>
+                                
+                                </incipit>
+                                <explicit>fac tibi horas canonicas</explicit>
+                                <note>The fragment is mounted on a piece of modern paper;  <locus from="4v" to="4v" scheme="folios"/> is therefore blank.</note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -69,19 +178,43 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="4" unit="folios"/>
                                     </extent>
+                                    <condition>
+                                        <locus from="3" to="4" scheme="folios"/> have been mounted on pieces of modern paper.
+                                    </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <dimensions type="written">
+                                            <height quantity="150" unit="mm"/>
+                                            <width unit="mm" min="100" max="110"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1"><locus from="1r" to="1r" scheme="folios"/>Secretary <!--? i'et och d'et - fast nej - för sen + g'et inga horn--> </handNote>
+                                <handNote xml:id="hand-2"><locus from="1v" to="2r" scheme="folios"/>Hybrida.</handNote>
+                                <handNote xml:id="hand-3"><locus from="2v" to="2v" scheme="folios"/>Hybrida.</handNote>
+                                <handNote xml:id="hand-4"><locus from="3r" to="3r" scheme="folios"/>Hybrida.</handNote>
+                                <handNote xml:id="hand-5"><locus from="4r" to="4r" scheme="folios"/>Hybrida.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="2v" to="2v" scheme="folios"/>
+                                    <note>Top of page: in brown ink by a medieval hand, <quote>Hymnus de sancto Laurentio</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="3r" to="3r" scheme="folios"/>
+                                    <note>Lower part of page: in red ink by a medieval hand, <quote>Vbi non est ordo ibi est confusio</quote>; below, in brown ink by a different medieval hand, <quote>Anton ? <unclear unit="chars" quantity="8" reason="illegible"/> duo solstitia</quote>.</note>
+                                </p>
+                            </additions>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origDate when="1493">1493</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published"><change who="https://www.manuscripta.se/person/100484" when="2025-03-20" status="published"/>
             <change status="draft" when="2023-10-17" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>

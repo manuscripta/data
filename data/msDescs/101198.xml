@@ -9,7 +9,12 @@
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
                     <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +22,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101198</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp=" https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,23 +44,101 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="1" to="1" scheme="folios"/>
+                                            <locus from="166" to="166" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Parchment</material>
+                                        <note>
+                                            <locus from="1" to="1" scheme="folios"/> and <locus from="166" to="166" scheme="folios"/> are flyleaves but have been foliated as part of the textblock.
+                                        </note>
+                                        <dimensions type="leaf">
+                                            <height quantity="220" unit="mm"/>
+                                            <width quantity="160" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
+                                <foliation>Modern/early modern foliation in dark ink written in the upper, inner corner. <secFol>Incipiunt hore de sancta trinitate</secFol></foliation>
+                                <collation>
+                                    <formula>1-3(8), 4(6), 5-6(8), 7(4, lacks 1), 8-10(8), 11(4), 12-15(8), 16(8, lacks 7-8), 17(8), 18-19(4), 20(8, lacks 8), 21-23(8), 24(2) </formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/677faa00f5e21a0001accb6f/viewOnly">Viscoll collation</ref>. The collation reflects the current state of the manuscript. Several quires seem to have been placed in the wrong order, several quires together with many singletons are missing. For a reconstruction of the original structure see <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107395" type="short">Testa (1992)</title>
+                                        </bibl>.
+                                    </p>
+                                    <signatures>Quire signatures in Arabics numerals by a modern hand in the beginning of every quire. </signatures>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top of page, in black ink by a modern hand: <quote>Drottningholms Bibl. Kat. N<hi rend="super">o</hi> 72</quote>.; <quote>1854 20/8</quote> (there also appears to be some erased writting in pencil next to this); centre page, in black ink by a modern hand: <quote>Från Kongl. Bibliotheket på Drottningholm till Kongl. Biblioteket</quote>; below: <quote>N<hi rend="super">o</hi> 76: Etthundrade sextiosex Blad</quote>; bottom left corner, National Library book label with current signum. </note>
+                            </p>
+                            <p>
+                                <locus from="1r" to="1r" scheme="folios"/>
+                                <note>Lower part of page: several lines of erased text in pencil by a modern or early modern hand. Text faintly visible, but not legible. </note>
+                            </p>
+                            <p>
+                                <locus from="RCI" to="RCI" scheme="other"/>
+                                <note>Bottom right corner, in pencil by a modern hand:<quote> omb. 1983 <unclear unit="chars" quantity="12" reason="illegible"/> </quote>. </note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. The manuscript was rebound in 1983. Green velvet over wooden boards. 6 pairs of raised bands and endbands. <locus from="Spine" to="Spine" scheme="other"/>, ink on a paperlabel: <quote>A 227</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="230" unit="mm"/>
+                                        <width quantity="175" unit="mm"/>
+                                        <depth quantity="50" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100240">Flanders</placeName>
+                            </origPlace>, <origDate notBefore="1501" notAfter="1525">16th century, first quarter</origDate>. The style of the decoration is Flemmish and has been ascribed to the workshop of <persName>Simon Bening</persName>. The manuscript is missing the calendar, which makes pinpointing the orgin of the intended user based on local saints dificult. The litany mentions St Gertrude (<locus from="125r" to="125r" scheme="folios"/>), which supports a Flemish origin. However, the inclusion of the prayer to St Sebald (<locus from="49" to="49" scheme="folios"/>), patron saint of Nuremberg, might contradict this. The masculine inflexions used in the prayers indicate that the manuscript was comissioned for a male user (<quote>ego sum facturus</quote> on <locus from="134r" to="134r" scheme="folios"/>;, <quote>mihi miserrimo peccatori</quote> on <locus from="136r" to="136r" scheme="folios"/>). 
+                        </origin>
+                        <provenance>Provenance unknown. </provenance>
+                        <acquisition>Transferred from the library at <placeName ref="https://www.manuscripta.se/place/100287">Drottningholm Palace</placeName> to the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> in <date when="1854"/>. </acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/107101">Gyllene böcker (1952)</title>
-                                <citedRange from="80" to="80" unit="page"/>
-                                <citedRange from="160" to="160" unit="number"/>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/107371">Wieselgren (1925)</title>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/101350">Illuminated Manuscripts</title>
-                                <citedRange from="14" to="14" unit="page"/>
+                                <title ref="https://www.manuscripta.se/bibl/107101" type="short">Gyllene böcker (1952)</title>
+                                <citedRange unit="page" from="80" to="80"/>
+                                <citedRange unit="number" from="160" to="160"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107396" type="short">Willers (1958)</title>
+                                <citedRange unit="page" from="15" to="15"/>
+                                <citedRange unit="page" from="28" to="28"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/101350" type="short">Illuminated manuscripts (1963)</title>
+                                <citedRange unit="page" from="14" to="14"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107397" type="short">Wolf (1981)</title>
+                                <citedRange unit="page" from="34" to="39"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107395" type="short">Testa (1992)</title>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -65,13 +148,299 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="2r" to="2v" scheme="folios"/>
+                                <title type="desc">Prayer</title>
+                                <rubric>Oratio ad faciem redemptoris nostri </rubric>
+                                <incipit>SAlue sancta facies</incipit>
+                                <explicit>securi uideamus te christum dominum nostrum Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="3r" to="54v" scheme="folios"/>
+                                <title type="desc">Hours for the week</title>
+                                <msItem>
+                                    <locus from="3r" to="6v" scheme="folios"/>
+                                    <title type="desc">Hours of the Trinity (Sundays)</title>
+                                    <rubric>Incipiunt hore de sancta trinitate pro diebus dominicis</rubric>
+                                    <incipit>Domine labia mea aperies [...] QUicumque vult animam suam</incipit>
+                                    <explicit>Faciat me credere hoc cum firmitate Amen Benedicamus domino Deo gratias</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="7r" to="10v" scheme="folios"/>
+                                    <title type="uniform">Hours for the dead (Mondays)</title>
+                                    <rubric>Incipiunt hore defuncotrum pro die lune </rubric>
+                                    <incipit>CIrcumdederunt me gemitus mortis</incipit>
+                                    <explicit>Effici glorificas tua satias uisione Requiescant in pace Amen </explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="11r" to="14v" scheme="folios"/>
+                                    <title type="desc">Hours of the Holy Spirit (Tuesdays)</title>
+                                    <rubric>Incipiunt hore de sancto spiritu pro die martis</rubric>
+                                    <incipit>DOmine labia mea aperies  <gap reason="editorial"/>  NObis sancti spiritus gracia sit data</incipit>
+                                    <explicit>Ut vivamus iugiter in celi regione Benedicamus domino Deo gratias</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="15r" to="17v" scheme="folios"/>
+                                    <title type="desc">Hours for all saints (Wednesdays)</title>
+                                    <rubric>Incipiunt hore de omnibus sanctis pro die mercurii</rubric>
+                                    <incipit>DOmine labia mea aperies <gap reason="editorial"/> SAncta dei genitrix</incipit>
+                                    <explicit>Rogetis absque aliqua intermissione Amen Benedicamus domino Deo gratias</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="18r" to="21r" scheme="folios"/>
+                                    <title type="desc">Hours of Corpus Christi (Thursdays)</title>
+                                    <rubric>Incipiunt hore de sanctissmo sacramento altaris pro die iouis </rubric>
+                                    <incipit>DOmine laba mea aperies <gap reason="editorial"/> COrporis misterium pange gloriosi</incipit>
+                                    <explicit>Ualeam te sumere cum deuotione Amen Benedicamus domino Deo gratias</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="22r" to="25r" scheme="folios"/>
+                                    <title type="desc">Hours of the Holy Cross (Fridays)</title>
+                                    <rubric>Incipiunt hore sancte crucis pro die veneris </rubric>
+                                    <incipit>DOmine labia mea aperies  <gap reason="editorial"/>  PAtris sapientia ueritas diuina</incipit>
+                                    <explicit>sic labori consonans consors sim corone Amen Benedicamus domino Deo gratias</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="26r" to="48v" scheme="folios"/>
+                                    <title type="desc">Instructions for mass and various offices</title>
+                                    <rubric>Qunado sacerdos offert hostiam super altare dicit hanc orationem</rubric>
+                                    <msItem>
+                                        <locus from="26r" to="34v" scheme="folios"/>
+                                        <title type="desc">Instructions for mass</title>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="35r" to="38v" scheme="folios"/>
+                                        <title type="desc">Office for the Virgin Mary for the entire year</title>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="39r" to="40v" scheme="folios"/>
+                                        <title type="desc">Office for the Trinity</title>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="41r" to="42v" scheme="folios"/>
+                                        <title type="desc">Office for All saints</title>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="43r" to="44v" scheme="folios"/>
+                                        <title type="uniform">Office for Corpus Christi</title>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="45r" to="46r" scheme="folios"/>
+                                        <title type="desc">Office for the Holy Cross</title>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="46v" to="47v" scheme="folios"/>
+                                        <title type="desc">Office for the dead</title>
+                                        <note>
+                                            <p>After f. 47  a leaf is missing with resulting loss of text.</p>
+                                            <p/>
+                                        </note>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="48r" to="48v" scheme="folios"/>
+                                        <title type="desc">O Beatissima virgo maria ego misserimus peccator</title>
+                                    </msItem>
+                                    <msItem>
+                                        <locus from="49r" to="49v" scheme="folios"/>
+                                        <title type="desc">Prayer for St Sebald</title>
+                                        <rubric>De sancto Sebaldo confessore</rubric>
+                                        <incipit>SSAncte sebalde qui ex regali stripe originem ducens</incipit>
+                                        <explicit>ac defensionem ad salutem corporis et anime consequamur Per dominum noster ihesum christum et cetera</explicit>
+                                        <note> f. 50 : ruled, but no text.</note>
+                                    </msItem>
+                                    <incipit>SUscipe sancte pater omnipotens </incipit>
+                                    <explicit>sit te miserante propitiabile Per christum dominum nostrum Amen</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="51r" to="54v" scheme="folios"/>
+                                    <title type="desc">Hours of the Virgin (Saturdays)</title>
+                                    <rubric>Incipiunt hore beatissime uirginis Marie pro diebus sabbatis</rubric>
+                                    <incipit>DOmine laba mea aperies  <gap reason="editorial"/>  DEus qui cunctum hominem de limo terr creauit</incipit>
+                                    <explicit>Precum suarum feruore ut in celum tecum simus Amen Bendicamus domino Deo gratias</explicit>
+                                </msItem>
+                            </msItem>
+                            <msItem>
+                                <locus from="55r" to="58v" scheme="folios"/>
+                                <title type="desc">Office for the Virgin Mary</title>
+                                <rubric>Incipiunt missa beate marie uirginis</rubric>
+                                <incipit>INtroibo ad altare dei</incipit>
+                                <explicit>qui tecum uiuit et regnat in vnitate spiritus sancti deus Per omnia secula seculorum Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="59r" to="64r" scheme="folios"/>
+                                <title type="desc">Readings from the Gospels</title>
+                                <rubric>Inicium sancti euangeli secundum iohannem</rubric>
+                                <incipit>In principio erat uerbum </incipit>
+                                <explicit>et sermonem confirmante sequentibus signis Deo gratias</explicit>
+                                <note>
+                                    <p>
+                                        <locus from="59r" to="59r" scheme="folios"/>: John;
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="60v" to="60v" scheme="folios"/>: Luke;
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="62r" to="62r" scheme="folios"/>: Matthew;
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="63v" to="63v" scheme="folios"/>: Mark;
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="64v" to="64v" scheme="folios"/> ruled, but no text.
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="65r" to="76v" scheme="folios"/>
+                                <title type="desc">Office for holy days</title>
+                                <rubric>In die sancto pasche ad missam introitus</rubric>
+                                <incipit>REsurrexi et adhuc tecum sum alleluya</incipit>
+                                <explicit>Qui tecum viuit et regnat in vnitate spiritus sancti deus per omnia secula seculorum Amen</explicit>
+                                <note>
+                                    <p>
+                                        <locus from="65r" to="65r" scheme="folios"/>: Easter;
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="69r" to="69r" scheme="folios"/>: Pentecost;
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="73r" to="73r" scheme="folios"/>: Christmas;
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="77" to="78" scheme="folios"/>: ruled, but no text.
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="79r" to="115v" scheme="folios"/>
+                                <title type="desc">Hours of the Virgin Mary, Use of Rome</title>
+                                <rubric>Incipiunt hore beate marie uirginis secundum cursum ecclesie romane </rubric>
+                                <incipit>DOmine laba mea aperies  <gap reason="editorial"/>  Aue maria gratia plena</incipit>
+                                <explicit>Domine exaudi oratione meam Et clamor meus ad te ueniat Benedicamus domino deo gratias Fidelium anime per misericordiam dei requiescant in pace Amen</explicit>
+                                <note>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="88v" to="88v" scheme="folios"/>
+                                            <locus from="95v" to="95v" scheme="folios"/>
+                                            <locus from="104v" to="104v" scheme="folios"/>
+                                            <locus from="107v" to="107v" scheme="folios"/>
+                                            <locus from="112v" to="112v" scheme="folios"/>
+                                            <locus from="116" to="116" scheme="folios"/>
+                                        </locusGrp>: ruled, but no text.
+                                    
+                                    </p>
+                                    <p>
+                                        After <locus from="116" to="116" scheme="folios"/> two leaves are missing. The preceeding text is complete and text on <locus from="117" to="117" scheme="folios"/>r is the start of The Seven Penitential psalms.
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="117r" to="123r" scheme="folios"/>
+                                <title type="desc">Seven penitential psalms</title>
+                                <rubric>Incipiunt septem psalmi pentenciales</rubric>
+                                <incipit>DOmine ne in furore tuo arguas</incipit>
+                                <explicit>neque vindictam sumas de peccatis nostris</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="123r" to="127v" scheme="folios"/>
+                                <title type="desc">Litany</title>
+                                <rubric>Letania</rubric>
+                                <incipit>KYrielesion Christeleison</incipit>
+                                <explicit>Qui viuis et regnas deus Per omnia secula seculorum Amen </explicit>
+                                <note>
+                                    <locus from="128" to="128" scheme="folios"/>: ruled, but no text.
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="129r" to="138v" scheme="folios"/>
+                                <title type="desc">Prayers to the Virgin Mary</title>
+                                <msItem>
+                                    <locus from="129r" to="130r" scheme="folios"/>
+                                    <title type="desc">Stabat mater </title>
+                                    <rubric>Planctus beate marie uirginis quem qui deuoto corde recitauerit consequitur septem annos indulgentiarum et xl carenas a bonifacio papa</rubric>
+                                    <incipit>STabat mater dolorosa</incipit>
+                                    <explicit>ubi regnas cum gloria in paradisi gaudia Amen</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="130r" to="130v" scheme="folios"/>
+                                    <title type="desc">Ave rosa sine spinis</title>
+                                    <rubric>Oratio aurea ad beatam uirginem mariam et matrem domini nostri ihesu christi</rubric>
+                                    <incipit>AUe rosa sine spinis</incipit>
+                                    <explicit>ube regnas cum gloria in paradisi gaudia Amen</explicit>
+                                    <note> <locus from="131" to="132" scheme="folios"/> : ruled, but no text.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="133r" to="135r" scheme="folios"/>
+                                    <title type="desc"> Obsecro te </title>
+                                    <rubric>Oratio deuote dicenda ad beatam gloriosam uirginem mariam </rubric>
+                                    <incipit>OBsecro te domina sancta</incipit>
+                                    <explicit>audi et exaudi me dulcissima uirgo maria mater dei et fons misericordie Amen </explicit>
+                                    <note>
+                                        <locus from="135v" to="135v" scheme="folios"/>: ruled, but no text.
+                                    
+                                    </note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="136r" to="137v" scheme="folios"/>
+                                    <title type="uniform">O intemerata</title>
+                                    <rubric>Alia oratio dicenda ad beatam et gloriosam uirginem mariam </rubric>
+                                    <incipit>O Intemerata et in eternum benedicta</incipit>
+                                    <explicit>et in eis coeternus uiuit et regnat omnipotens deus in secula seculorum Amen</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="138r" to="138v" scheme="folios"/>
+                                    <title type="desc">Verses of St Bernard</title>
+                                    <rubric>Octo uersus sancti bernardi abbatis clareuallis</rubric>
+                                    <incipit>ILlumina occulos meos </incipit>
+                                    <explicit>et gratiam et ueniam te miserante merear accipere Per christum dominum nostrum Amen</explicit>
+                                </msItem>
+                            </msItem>
+                            <msItem>
+                                <locus from="139r" to="139v" scheme="folios"/>
+                                <title type="desc">Prayer for St Anthony of Padua</title>
+                                <rubric>De sancto Antonio de padua antiphona</rubric>
+                                <incipit>O Proles hispanie</incipit>
+                                <explicit>et gaudiis perfrui mereatur eternis Per christum dominum nostrum Amen</explicit>
+                                <note>After <locus from="139" to="139" scheme="folios"/> a leaf is missing. The preceeding text is complete. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="140r" to="163v" scheme="folios"/>
+                                <title type="desc">Office for the dead</title>
+                                <rubric>Incipiunt uigilie mortuorum </rubric>
+                                <incipit>Antiphona Placebo Psalmus DIlexi quoniam exaudiet</incipit>
+                                <explicit>Qui viuis et regnas deus in secula seculorum Amen Requiescant in pace Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="164r" to="165r" scheme="folios"/>
+                                <title type="desc">Table of content</title>
+                                <rubric>INuentarum inclusorum </rubric>
+                                <note>The table of content includes the calender, which is lost, and also many prayers, which may never have been included. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="165v" to="165v" scheme="folios"/>
+                                <title type="desc">Prayers</title>
+                                <incipit>DEUs indulgentiarum domine da anime famuli tui </incipit>
+                                <explicit>quibus tui nominis dedisti confessionem cunctorum remissionem tribue peccatorum </explicit>
+                                <note>The prayer<quote> Deus indulgentiarum domine</quote> followed by <quote>Deus cuius misericordiae non est numerus</quote>.</note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="165v" scheme="folios"/>
+                                            <locus from="2" to="165" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="220" unit="mm"/>
@@ -80,21 +449,42 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="166" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="164" unit="folios"/>
                                     </extent>
+                                    <condition>Occasional stains on the parchment, does not affect the text. One leaf missing after <locus from="47" to="47" scheme="folios"/>, two after <locus from="116" to="116" scheme="folios"/>, and one after <locus from="139" to="139" scheme="folios"/>.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="20">
+                                        <dimensions type="written">
+                                            <height quantity="125" unit="mm"/>
+                                            <width quantity="85" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in purple ink. </note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic textualis formata. </handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="2" to="165" scheme="folios"/>
+                                    <note>Scattered throughout the manuscript are numbers written in pencil by a modern hand (most likely by the bookbinder), e.g. <locus from="57r" to="57r" scheme="folios"/> bottom left corner. It is unclear what they refer to. </note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <decoNote type="edges">Gilt edges with a x or diamond pattern pressed into the edges (most clearly visible on the <locus from="Head" to="Head" scheme="other"/>).</decoNote>
+                            </decoDesc>
                         </physDesc>
                         <history>
-                            <origin>
-                                <origDate notBefore="1501" notAfter="1525">16th century, first quarter</origDate>
-                            </origin>
+                            <origin/>
                         </history>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
+            <change who="https://www.manuscripta.se/person/100484" when="2025-01-14" status="draft"/>
             <change status="draft" when="2023-10-20" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>

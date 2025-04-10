@@ -9,7 +9,12 @@
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
                     <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +22,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101201</idno>
                 <date when="2022"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -29,27 +34,103 @@
                         <repository ref="https://www.manuscripta.se/place/100040">National Library of Sweden</repository>
                         <idno type="shelfmark">A 231</idno>
                     </msIdentifier>
-                    <head>Psalter</head>
+                    <head>Psalter (Gallican)</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="folios"/>
+                                            <locus from="SR1" to="SR1" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <locus from="SL2" to="SL3" scheme="other"/>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="245" unit="mm"/>
+                                            <width quantity="165" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="3" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. <secFol>Quare fremuerunt gentes</secFol></foliation>
+                                <collation>
+                                    <formula>1-18(10)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/677ff2d8f5e21a0001acd050/viewOnly">VisColl collation</ref>
+                                    </p>
+                                    <catchwords>Catchword partially visible on <locus from="50v" to="50v" scheme="folios"/>, the rest lost due to trimming.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner, National Library book label with current signum; in ink by a modern hand: <quote>Inköpt till Kongl. Bibliotheket i Maj 1759 från Sekreteraren Witte för 200 dlr. Beskrifven af Hammarsköld i Lyceum, 1811, andra häftet.</quote>; centre page: National library stamp.</note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Centre page: National Library stamp.</note>
+                            </p>
+                            <p>
+                                <locus from="SL2r" to="SL2r" scheme="folios"/>
+                                <note>Five parchment notes attached to the inner edge of the leaf. Two of them contain text, which is illegible due to damage. Possibly former spine liners. </note>
+                            </p>
+                            <p>
+                                <locus from="SL3v" to="SL3v" scheme="folios"/>
+                                <note>Top of page, in pencil by a modern hand: <quote>Vapnet liknar det som brukas av ätten deRossi i Verona (och Parma)</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. Green velvet over wooden boards. <locus from="Spine" to="Spine" scheme="other"/>, stamped in gold: <quote>A 231</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="250" unit="mm"/>
+                                        <width quantity="175" unit="mm"/>
+                                        <depth quantity="45" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
+                                <placeName ref="https://www.manuscripta.se/place/100058">Naples</placeName>
+                            </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century </origDate>. The origin and dating is based on art historical criteria, see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107375" type="short">Samek (1966)</title>
+                                <citedRange unit="number" from="64" to="64"/>
+                            </bibl>.
+                        </origin>
+                        <provenance>Early provenance unknown. Earlier librarians have speculated about the original owner based on the coat of arms on <locus from="1r" to="1r" scheme="folios"/>, and suggest the families de Rossi in <placeName ref="https://www.manuscripta.se/place/100285">Verona</placeName>, Baldovinetti in <placeName ref="https://www.manuscripta.se/place/100021">Florence</placeName>, or Leonardi in <placeName ref="https://www.manuscripta.se/place/100056">Milan</placeName>. The manuscript has been in Sweden since at least the 18th century when it seems to have belonged to a certain <quote>sekreterare Witte </quote>(perhaps <persName ref="https://www.manuscripta.se/person/102643">Carl Ulrik Witte</persName>, registered in the <orgName ref="https://www.manuscripta.se/org/100010">National Archives</orgName> as secretary during this period). </provenance>
+                        <acquisition>Purchased from Witte by the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> in <date when="1759"/>.</acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/7101">Gyllene böcker (1952)</title>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/107101">Gyllene böcker</title>
                                 <citedRange from="91" to="91" unit="page"/>
                                 <citedRange from="202" to="202" unit="number"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/101350">Illuminated Manuscripts</title>
-                                <citedRange from="15" to="15" unit="page"/>
+                                <title ref="https://www.manuscripta.se/bibl/107375" type="short">Samek (1966)</title>
+                                <citedRange unit="number" from="64" to="64"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107376" type="short">Hammarsköld (1811)</title>
+                                <citedRange unit="page" from="173" to="174"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/101350" type="short">Illuminated manuscripts (1963)</title>
+                                <citedRange unit="page" from="15" to="15"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -59,13 +140,300 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus to="168r" scheme="folios" from="1r"/>
+                                <title type="desc">Psalms</title>
+                                <note>
+                                    <p>Psalms 1-150. The following psalms are give emphasis by an illumination and/or a rubric in gold: 1, 26, 38, 52, 68, 80, 97, 109, 121, 126, 137, 143. The rubric to several of the psalms also contain information about which liturgical hour the psalm belongs to, e.g. Psalm 121 on <locus from="146v" to="146v" scheme="folios"/>: <quote>feria tertia Ad Vesperas</quote>.</p>
+                                    <p><locus from="42v" to="42v" scheme="folios"/>: blank. </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="168r" to="179v" scheme="folios"/>
+                                <title type="desc">Canticles</title>
+                                <note>
+                                    <p>
+                                                                                               <locus from="168r" to="168r" scheme="folios"/>: Canticle of Isaias (Isa. 12);
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                                                
+                                                                                                                      
+                                                                                                                                   
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                               <locus from="168v" to="168v" scheme="folios"/>: Canticle of Ezechias (Isa. 38:10-20);
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                                                
+                                                                                                                      
+                                                                                                                                   
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                               <locus from="169v" to="169v" scheme="folios"/>: Canticle of Anna (1 Kings 2:1-10);
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                               <locus from="170v" to="170v" scheme="folios"/>: Canticle of Moses (Exod. 15:1-19);
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                                                
+                                                                                                                      
+                                                                                                                                   
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                               <locus from="172r" to="172r" scheme="folios"/>: Canticle of Habacuc (Hab. 3:2-19);
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                                                
+                                                                                                                      
+                                                                                                                                   
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                               <locus from="173v" to="173v" scheme="folios"/>: Canticle of Moses (Deut. 32:1;
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                                                                     
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p/>
+                                    <p>
+                                                                                               <locus from="177r" to="177r" scheme="folios"/>: Canticle of the Three Children (Dan. 3:57-88);
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                                                
+                                                                                                                      
+                                                                                                                                   
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                               <locus from="178r" to="178r" scheme="folios"/>: Canticle of Zachary / Benedictus (Luke 1:68-79);
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                                                
+                                                                                                                      
+                                                                                                                                   
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                               <locus from="179r" to="179r" scheme="folios"/>: Canticle of the Blessed Virgin Mary / Magnificat (Luke 1:46-55).
+                                                                                                                                                    
+                                                                                                                                          
+                                                                                                 <locus from="180" to="180" scheme="folios"/>: ruled, but no text.                             
+                                                                                                                      
+                                                                                                                                   
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="179v" scheme="folios"/>
+                                            <locus from="1" to="180" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="245" unit="mm"/>
@@ -76,22 +444,54 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="180" unit="folios"/>
                                     </extent>
+                                    <condition>Parchment stained in places. The hair side of the parchment is noticeably darker and rougher than the flesh side. On some leaves, e.g. <locus from="65v" to="66r" scheme="folios"/>, this almost looks like a defect. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="19">
+                                        <dimensions type="written">
+                                            <height quantity="140" unit="mm"/>
+                                            <width quantity="85" unit="mm"/>
+                                        </dimensions>
+                                        <note>Blind ruling.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Humanist minuscule.</handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <p>Main text in black ink, rubrics in red or gold, capitals in blue, red or gold with flourishing in contrasting colours.</p>
+                                <decoNote type="images">
+                                    
+                                    <locusGrp>
+                                        <locus from="1r" to="1r" scheme="folios"/>
+                                        <locus from="26v" to="26v" scheme="folios"/>
+                                        <locus from="43r" to="43r" scheme="folios"/>
+                                        <locus from="58v" to="58v" scheme="folios"/>
+                                        <locus from="74r" to="74r" scheme="folios"/>
+                                        <locus from="110v" to="110v" scheme="folios"/>
+                                        <locus from="128v" to="128v" scheme="folios"/>
+                                        <locus from="146v" to="146v" scheme="folios"/>
+                                        <locus from="149r" to="149r" scheme="folios"/>
+                                        <locus from="151v" to="151v" scheme="folios"/>
+                                        <locus from="156r" to="156r" scheme="folios"/>
+                                        <locus from="162r" to="162r" scheme="folios"/>
+                                    </locusGrp>. 
+                                    The manuscript contains a series of twelve illuminations. All, except for the last, feature David in different poses and with different backgrounds. The last one portrays David and Goliath. The illuminations occupy half to three-quarters of the text block. They have a double frame, an outer in ink and an inner in gold. They feature a full colour palate with a heavy use of blue, purple, and gold, which is mirrored in the initals. The opening page also contains a full frame made up of geometric, elaborate floral, and architectonic shapes. The frame is inhabited by five putti and at the bottom a coat of arms, which consists of a lion on a red shield. 
+                                </decoNote>
+                                <decoNote type="initials">
+                                    <locus from="1r" to="162r" scheme="folios"/>: The major champ initials are paired with the illuminations. They are made of gold, extend over 2-4 lines, and are placed on a square background of blue and purple, usually with green for the counter space. The background is eloborated with flourishing or vegtative shapes in white and yellow. The major initials are always followed by the first word/-s capitalised in alternating gold and blue letters with flourishing in red and purple. 
+                                    <locus from="2r" to="179r" scheme="folios"/>: The psalms not introduced by major initals and the canticles feature a smaller, but otherwise similar champ initial over 2 lines. 
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/100058">Naples</placeName>
-                                </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="published">
+        <revisionDesc status="draft">
+            <change who="https://www.manuscripta.se/person/100484" when="2025-02-20" status="draft"/>
             <change who="https://www.manuscripta.se/person/100380" when="2022-12-21" status="published">First published</change>
             <change who="https://www.manuscripta.se/person/100380" when="2022-12-21" status="draft">Added facsimile</change>
             <change status="draft" when="2022-12-21" who="https://www.manuscripta.se/person/100380">First draft</change>
@@ -104,7 +504,7 @@
             </div>
         </body>
     </text>
-    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-101201/">        
+    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-101201/">
         <surface xml:id="ms-101201_LCO">
             <desc>Left cover, outside</desc>
             <graphic url="ms-101201_0001.tif" width="4621px" height="6434px"/>

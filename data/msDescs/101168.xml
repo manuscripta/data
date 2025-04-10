@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100488">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,17 +39,75 @@
                             <idno type="id" subtype="Regina">004845959</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Psalter</head>
+                    <head>Psalter (Gallican)</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="folios"/>
+                                            <locus from="SR1" to="SR1" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height min="150" max="150" unit="mm"/>
+                                            <width unit="mm" min="95" max="95"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil, 1-105. <secFol>mei et exaudi oraciones</secFol></foliation>
+                                <collation>
+                                    <formula>1(1), 2-9(12), 10(8)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67a3a1c1f5e21a0001ad25c8/viewOnly">VisColl collation</ref>.
+                                    </p>
+                                    <p>Parchment guards. The number <quote>89</quote> in bottom left corner of quire 9 (<locus from="97v" to="97v" scheme="folios"/>).</p>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner, in ink: <quote>12/14</quote>.</note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="other"/>
+                                <note>Top of page, in ink, a note on the acquisition of the manuscript by the National Library: <quote>Inköpt till Kongl. Biblioth. 4 (?) Sept. 1845 ifrån Gordons (f.d. Rosenblads) Biblioth</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. Sprinkled paper over cardboard, spine and corners enforced with leather. 3 double raised band and endbands. <locus from="Spine" to="Spine" scheme="other"/>, red leather label: <quote>PSALTEZS</quote>; stamped in gold on a leather label, <quote>A 187</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height min="155" max="155" unit="mm"/>
+                                        <width min="110" max="110" unit="mm"/>
+                                        <depth min="25" max="25" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <condition>
+                                    <locus from="Spine" to="Spine" scheme="other"/>: pieces of the previous binding, some containing signa, have been glued to the modern binding. <locus from="SL1" to="SL1" scheme="other"/> is mounted on a piece of modern paper. 
+                                </condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100211">Bohemia</placeName>
+                            </origPlace>, <origDate when="1472">1472</origDate>. The book was commissioned by <persName>Petrus Freytag</persName>, a brother of the Benedictine monastery of St Mary's at <placeName ref="https://www.manuscripta.se/place/100306">Třebíč</placeName> in modern day <placeName ref="https://www.manuscripta.se/place/100308">Czech Republic</placeName>. The scribe signs his name, <quote>Iohannes de Noua Plzna</quote> (<placeName ref="https://www.manuscripta.se/place/100307">Plzeň</placeName>), and the date, May 1, 1472, in the colophon on <locus from="102v" to="102v" scheme="folios"/>.
+                        </origin>
+                        <provenance>On <locus from="102v" to="102v" scheme="folios"/> is found the owner's note of <persName>Stanislav Bilek</persName> dated <date when="1602"/>: <quote>Ex libris Fratris Stanislaj bilconii Amen An<hi rend="super">o</hi> 1602</quote>. In a catalogue note dated <date when="1989-12-14"/>, an unidentified librarian or scholar identifies the family name as <quote>Bilek or Bilenberka, <gap reason="editorial" unit="chars" quantity="9"/> a knight family in Moravia and Bohemia</quote>. The word <quote>psaltezs</quote> on the label on the spine indicates that the manuscript remained in Czech possession into modern times.</provenance>
+                        <provenance/>
+                        <acquisition>A note in Swedish on <locus from="SL1" to="SL1" scheme="other"/> states that the manuscript was purchased by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in September <date when="1845"/> from the library of <persName ref="https://www.manuscripta.se/person/100749">George John Robert Gordon (of Ellon)</persName>, previously owned by <persName ref="https://www.manuscripta.se/person/101021">Bernhard Rosenblad</persName>.</acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
@@ -60,6 +122,289 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="2r" to="87v" scheme="folios"/>
+                                <title type="desc">Psalms</title>
+                                <note>
+                                    <p>Psalms 1-150.</p>
+                                    <p>Psalm rubrics (titles, divisions, or canonical hour) at end of line or in margin in Latin and somtimes also Czech or German.</p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="87v" to="102v" scheme="folios"/>
+                                <title type="desc">Canticles</title>
+                                <msItem>
+                                    <locus from="87v" to="87v" scheme="folios"/>
+                                    <title type="desc">Canticle of Isaias the Prophet (Isa. 12:1-6)</title>
+                                    <rubric>
+                                        <del>Canticum anne prophetisse</del>
+                                    </rubric>
+                                    <incipit>Confitebor tibi domine quoniam iratus es mihi</incipit>
+                                    <explicit>quia magnus in medio tui sanctus israhel</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="87v" to="88r" scheme="folios"/>
+                                    <title type="desc">Canticle of Ezechias (Isa. 38:10-20)</title>
+                                    <incipit>EGo dixi in dimidio dierum meorum</incipit>
+                                    <explicit>cunctis diebus vite nostre in domo domini</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="88r" to="88v" scheme="folios"/>
+                                    <title type="desc">Canticle of Anna (1 Kings 2:1-10)</title>
+                                    <rubric>canticum anne prophetisse </rubric>
+                                    <incipit>Exultauit cor meum in domino</incipit>
+                                    <explicit>et sublimabit cornu christi sui</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="88v" to="89v" scheme="folios"/>
+                                    <title type="desc">Canticle of Moses (Exod. 15:1-19)</title>
+                                    <rubric>canticum moysi</rubric>
+                                    <incipit>Kantemus domino gloriose enim honorificatus est</incipit>
+                                    <explicit>ambulauerunt per siccum in medio eius</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="89v" to="90r" scheme="folios"/>
+                                    <title type="desc">Canticle of Habacuc (Hab. 3:2-19)</title>
+                                    <incipit>Domine audiui audicionem tuam</incipit>
+                                    <explicit>deducet me victor in psalmis canentem</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="90r" to="92r" scheme="folios"/>
+                                    <title type="desc">Canticle of Moses (Deut. 32:1-43)</title>
+                                    <incipit>AVdite celi que loquar</incipit>
+                                    <explicit>et propicius erit terre populi sui et cetera</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="92r" to="92v" scheme="folios"/>
+                                    <title type="desc">Canticle of the Three Children (Dan. 3:57-88)</title>
+                                    <rubric>Canticum trium puerorum</rubric>
+                                    <incipit>Benedicite omnia opera domini</incipit>
+                                    <explicit>et superexaltatus in secula</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="92v" to="93r" scheme="folios"/>
+                                    <title type="desc">Canticle of Zachary / Benedictus (Luke 1:68-79)</title>
+                                    <rubric>Canticum zacharie</rubric>
+                                    <incipit>Benedictus dominus deus israhel</incipit>
+                                    <explicit>ad dirigendos pedes nostros in viam pacis</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="93r" to="94v" scheme="folios"/>
+                                    <title type="desc">The Athanasian Creed</title>
+                                    <incipit>QVicumque wlt saluus esse</incipit>
+                                    <explicit>saluus esse non poterit</explicit>
+                                    <note>
+                                        <locus from="93r" to="93r" scheme="folios"/>: <quote>Simbolum <sic>Anastasii</sic> patriarche allexandrini</quote> in red below last rule line.
+                                    
+                                    </note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="94v" to="95r" scheme="folios"/>
+                                    <title type="desc">Te Deum</title>
+                                    <rubric>Canticum augustini et ambrosii</rubric>
+                                    <incipit>Te deum laudamus te dominum confitemur</incipit>
+                                    <explicit>In te domine speraui non confundar in eternum etc</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="95r" to="95r" scheme="folios"/>
+                                    <title type="desc">Canticle of Simeon (Luke 2:29-32)</title>
+                                    <rubric>Canticum Symeonis</rubric>
+                                    <incipit>Nunc dimittis</incipit>
+                                    <explicit>et gloriam plebis tuae Israel <gap reason="editorial"/> spiritui sancto</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="95r" to="95r" scheme="folios"/>
+                                    <title type="desc">Canticle of the Blessed Virgin Mary (Luke 1:46-55)</title>
+                                    <rubric>Canticum Marie</rubric>
+                                    <incipit>Magnificat anima mea dominum et exultat</incipit>
+                                    <note>Incipit only. Rubric in margin.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="95r" to="95r" scheme="folios"/>
+                                    <title type="desc">Our Father</title>
+                                    <rubric>oratio dominica</rubric>
+                                    <incipit>Pater noster qui es in celis sanctificetur nomen</incipit>
+                                    <note>Incipit only. Rubric in margin.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="95r" to="95r" scheme="folios"/>
+                                    <title type="desc">Hail Mary</title>
+                                    <rubric>luce ii<hi rend="super">o</hi> <!--?--></rubric>
+                                    <incipit>AVe maria gracia plena dominus tecum benedicta</incipit>
+                                    <note>Incipit only. Rubric in margin.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="95r" to="95r" scheme="folios"/>
+                                    <title type="desc">The Apostles' Creed</title>
+                                    <rubric>Simbolum apostolorum</rubric>
+                                    <incipit>CRedo in deum patrem omnipotentem creatorem </incipit>
+                                    <note>Incipit only. Rubric on line below.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="95v" to="96r" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 33:2-18)</title>
+                                    <incipit>Domine miserere nostri te enim</incipit>
+                                    <explicit>cor tuum meditabitur timorem</explicit>
+                                    <note>First line in display script.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="96r" to="96r" scheme="folios"/>
+                                    <title type="desc">Canticle (Sir. 36:14-19)</title>
+                                    <incipit>Miserere domine plebi tue</incipit>
+                                    <explicit>tu es deus conspector seculorum</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="96r" to="96r" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 40:10-17)</title>
+                                    <rubric>ysaie xl</rubric>
+                                    <incipit>ECce dominus in fortitudine veniet</incipit>
+                                    <explicit>et quasi nichilum et inane reputate sunt ei</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="96v" to="97r" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 42:10-16)</title>
+                                    <incipit>CAntate domino canticum nouum laus eius</incipit>
+                                    <explicit>Ponam tenebras coram illis in lucem et praua in directa</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="97r" to="97v" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 49:7-13)</title>
+                                    <incipit>HEc dicit dominus <del>deus</del> redemptor israhel</incipit>
+                                    <explicit>et pauperum suorum miserebitur</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="97v" to="98r" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 9:2-7)</title>
+                                    <incipit>Populus qui amulabat in tenebris</incipit>
+                                    <explicit>Zelus domini exercituum faciet hoc</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="98r" to="98v" scheme="folios"/>
+                                    <title type="desc">Canticle</title>
+                                    <rubric>Canticum ysaie</rubric>
+                                    <incipit>LEtare iherusalem et diem festum agite</incipit>
+                                    <explicit>et in gladio eius omnis caro</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="98v" to="99r" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 26:1-12)</title>
+                                    <rubric>Canticum ysaie XXVI</rubric>
+                                    <incipit>URbs fortitudinis nostre syon</incipit>
+                                    <explicit>opera nostra operatus es nobis</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="99r" to="99r" scheme="folios"/>
+                                    <title type="desc">Canticle (Jer. 14:17-21)</title>
+                                    <rubric>Canticum ieremie</rubric>
+                                    <incipit>DEducant oculi mei lacrimas</incipit>
+                                    <explicit>ne irritum facias fedus tuum nobiscum</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="99r" to="99v" scheme="folios"/>
+                                    <title type="desc">Canticle (Lam. 5:1-21)</title>
+                                    <rubric>Canticum Trenorum</rubric>
+                                    <incipit>REcordare domine quid acciderit</incipit>
+                                    <explicit>innoua dies nostros sicut a principio</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="99v" to="100r" scheme="folios"/>
+                                    <title type="desc">Canticle (Ezek. 36:24-28)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>TOllam vos de gentibus</incipit>
+                                    <explicit>et ego ero vobis in deum</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="100r" to="100r" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 63:1-5)</title>
+                                    <rubric>Canticum ysaie</rubric>
+                                    <incipit>Qvis est iste qvi venit de Edom</incipit>
+                                    <explicit>et indignacio mea ipsa auxiliata est michi</explicit>
+                                    <note>First line in display script.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="100r" to="100v" scheme="folios"/>
+                                    <title type="desc">Canticle (Hos. 6:1-6)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>UEnite et reuertamur ad dominum</incipit>
+                                    <explicit>et scientiam dei plus quam holocaustum</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="100v" to="101r" scheme="folios"/>
+                                    <title type="desc">Canticle (Zeph. 3:8-13)</title>
+                                    <rubric>canticum canticum (?)</rubric>
+                                    <incipit>Expecta me dicit dominus</incipit>
+                                    <explicit>et non erit qui exterreat</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="101r" to="101r" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 61:6-9)</title>
+                                    <rubric>de pluribus appostolis martyribus et confessoribus</rubric>
+                                    <incipit>UOs sancti domini vocabimini ministri dei</incipit>
+                                    <explicit>quia isti sunt semen cui benedixit dominus</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="101r" to="101r" scheme="folios"/>
+                                    <title type="desc">Canticle (Wisd. 3:7-9)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>FVlgebunt iusti et tamquam scintille</incipit>
+                                    <explicit>et pax est electis dei</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="101r" to="101v" scheme="folios"/>
+                                    <title type="desc">Cantcile (Wisd. 10:17-20)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>REddet deus mercedem laborum suorum</incipit>
+                                    <explicit>manum tuam laudauerunt pariter domine deus noster</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="101v" to="101v" scheme="folios"/>
+                                    <title type="desc">Canticle (Sir. passim)</title>
+                                    <rubric>Secuntur cantica de vno apostolo de vno martyre de vno confessore</rubric>
+                                    <incipit>Beatus vir qui in sapiencia morabitur</incipit>
+                                    <explicit>Et nomine eterno hereditabit <del>eum</del> illum dominus deus noster</explicit>
+                                    <note>The canticle consists of Sirach 14:22, 15:3-4, and 15:6.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="101v" to="102r" scheme="folios"/>
+                                    <title type="desc">Canticle (Jer. 17:7-8)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>Benedictus vir qui confidit in domino</incipit>
+                                    <explicit>nec aliquando desinet facere fructum</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="102r" to="102r" scheme="folios"/>
+                                    <title type="desc">Canticle (Sir. 31:8-11)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>Beatus vir qui inventus est sine macula</incipit>
+                                    <explicit>elemosinas illius enarrabit omnis ecclesia sanctorum</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="102r" to="102r" scheme="folios"/>
+                                    <title type="desc">Canticle (Sir. 39:17-21)</title>
+                                    <rubric>Cantica de domina et de virginibus</rubric>
+                                    <incipit>AVdite me diuini fructus</incipit>
+                                    <explicit>opera domini vniuersa bona valde</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="102r" to="102v" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 61:10-11)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>GAudens gaudebo in domino</incipit>
+                                    <explicit>et laudem coram vniuersis gentibus</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="102v" to="102v" scheme="folios"/>
+                                    <title type="desc">Canticle (Isa. 62:4-4)</title>
+                                    <rubric>Canticum</rubric>
+                                    <incipit>NOn vocaberis vltra derelicta</incipit>
+                                    <explicit>et gaudebit super te dominus deus tuus <!--Intressant! I Cantus är 36, 37, 38 en enda hymn men 187 följer den bibliska textuppdelningen--></explicit>
+                                    <note>
+                                        <locus from="103r" to="105v" scheme="folios"/>: blank.
+                                    
+                                    </note>
+                                    <colophon><locus from="102v" to="102v" scheme="folios"/>Explicit psalterium cum Canticis ferialibus et Festiuis per manus cuiusdam Iohannis de Noua plzna ad comparacionem honorabilis et religiosi viri fratris petri freytag monachi professi monasterii sancte Marie virginis in Trebicz ordinis sancti Benedicti protunc temporis capellani domniorum in Slawkow vacante abbacia supratacti monasterii quarto anno post obualacionem Et hoc sub Anno domini Milesimo QuadringesimoSeptuagesimoSecundo Finitum xii kl kl Mayii Maii Scriptori pro mercede Angelicum dirige aue virgini marie dei genitrici pie Amen</colophon>
+                                </msItem>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -67,31 +412,110 @@
                                     <support>
                                         <p>
                                             <locus from="1r" to="105v" scheme="folios"/>
-                                            <material>Western paper</material>
+                                            <material>Paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="145" unit="mm"/>
                                                 <width quantity="100" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="14" to="105" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull's head with a rod ending in a flower extending above. </term>
+                                                <note>Similar to Piccard II:3, XII, 361.</note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="105" unit="folios"/>
                                     </extent>
+                                    <condition>Some water damage to the inner and bottom edge of <locus from="1" to="1" scheme="folios"/> and <locus from="2" to="2" scheme="folios"/>. A few worm holes, e.g. <locus from="90" to="95" scheme="folios"/>, though not affecting the text.
+                                        Edges trimmed with loss of some of the text of the marginal notations. <!--(e.g. 68r)-->
+                                    </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="24">
+                                        <locusGrp>
+                                            <locus from="1r" to="1v" scheme="folios"/>
+                                            <locus to="105v" scheme="folios" from="98r"/>
+                                        </locusGrp>
+                                        <dimensions type="written">
+                                            <height min="115" max="115" unit="mm"/>
+                                            <width min="70" max="70" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelies and ruling in ink.</note>
+                                    </layout>
+                                    <layout columns="1" writtenLines="24">
+                                        <locus from="2r" to="97v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height min="110" max="115" unit="mm"/>
+                                            <width min="65" max="70" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <p/>
+                                <handNote xml:id="hand-1">Hybrida.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Centre page, in ink by a modern hand: <quote>Psalterium cum Canticis Ferialibus et Festivis per manus Johannis de nova Plzna 1472</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="2r" scheme="folios"/>
+                                    <note>Top of page, in ink by an early modern hand: <quote>Psalterium Dauidis Regis</quote>. 
+                                        Bottom of page, in ink by a late medieval or early modern hand: <quote>per quiquagenos dauid canit ordine psalmos <gap reason="damage"/> sub bis mille sexcentos canit ille</quote>.
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="86v" scheme="folios"/>
+                                    <note>Psalm numbers in ink in the margin by a late medieval or early modern hand. The majority follow the Vulgate numbering; however, between Psalm 9:20(10) and 16(17) the numbering follows the Hebrew version. Psalm 17(18) is not numbered and psalm 18(19) is numbered as 18, in accordance with the Vulgate numbering. Ps. 67:20 is numbered as <quote>68</quote> and Ps. 68 as <quote>69</quote> and Ps 68:20 as <quote>70</quote> (<locus from="38r" to="40v" scheme="folios"/>). At Ps. 69 the erroneous number <quote>lxxi</quote> is crossed out, and Ps. 70 is not numbered. Psalm 104 is incorrectly numbered as <quote>103</quote> (<locus from="63r" to="63r" scheme="folios"/>). Below some of these psalm numbers, a modern hand has corrected (or added) the Vulgate number in pencil. <!--(5v, 10v, 87r).--></note>
+                                </p>
+                                <p>
+                                    <locus from="3r" to="3r" scheme="folios"/>
+                                    <note>Top of page, in ink by an early modern hand: a note in Czech.</note>
+                                </p>
+                                <p>
+                                    <locus from="3v" to="84r" scheme="folios"/>
+                                    <note>In the margin, at the penitential psalms, in ink by a contemporary hand: the ordinal number of the psalm in Czech (last two in Roman numerals).</note>
+                                </p>
+                                <p>
+                                    <locus from="25r" to="25r" scheme="folios"/>
+                                    <note>Right margin, in ink by an early modern hand (same as <locus from="2r" to="2r" scheme="folios"/>): a note in Czech (an ex libris?).</note>
+                                </p>
+                                <p>
+                                    <locus from="87v" to="101r" scheme="folios"/>
+                                    <note>Marginal references to the biblical passages in red by a contemporary hand. Above these, a modern hand has occasionally added the biblical book in pencil.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink; rubrics in red (possibly in more than one hand (c.f. <locus from="38r" to="38r" scheme="folios"/>, <locus from="64r" to="64r" scheme="folios"/>); first line in display script touched in red at Ps. 1 (<locus from="2r" to="2r" scheme="folios"/>), 20 (<locus from="11r" to="11r" scheme="folios"/>), 45 (<locus from="27r" to="27r" scheme="folios"/>), 51 (<locus from="30v" to="30v" scheme="folios"/>), 59 (<locus from="34r" to="34r" scheme="folios"/>), 68 (<locus from="39r" to="39r" scheme="folios"/>), 70 (<locus from="40v" to="40v" scheme="folios"/>), 73 (<locus from="43r" to="43r" scheme="folios"/>), 101 (<locus from="60v" to="60v" scheme="folios"/>), 109 (<locus from="68r" to="68r" scheme="folios"/>) 118 (<locus from="72r" to="72r" scheme="folios"/>; rubric in Czech, mid-psalm), and canticles on <locus from="95v" to="95v" scheme="folios"/> and <locus from="100r" to="100r" scheme="folios"/>. The display script exhibits a mix of Roman and Greek letters (e.g. <locus from="34r" to="34r" scheme="folios"/> and <locus from="72r" to="72r" scheme="folios"/>).</p>
+                                <decoNote type="initials">The decoration scheme of the initials corresponds in part with the monastic cursus, with larger, decorated initials at Ps. 1, 20, 32, 45, 
+                                    59, 73, 89, 101, and 109. Ps. 41, 50, 72, 85, 106, 118, and 119 do not, 
+                                    however, have an enlarged or decorated initial, but at Ps. 85 (<locus from="52r" to="52r" scheme="folios"/>) and 119 (<locus from="77r" to="77r" scheme="folios"/>), somone has elaborated on the decoration of the standard psalm initial. Guide letters visible.
+                                    <locus from="2r" to="2r" scheme="folios"/> (Ps. 1): opening puzzle initial <quote>B</quote> over 6 lines in red and brown with penwork extending into the margin.
+                                    <locus from="95v" to="95v" scheme="folios"/>, <locus from="101r" to="101r" scheme="folios"/>: puzzle initial over 6 lines in red and brown with penwork.
+                                    <locus from="11r" to="11r" scheme="folios"/> (Ps. 20), <locus from="17v" to="17v" scheme="folios"/> (Ps. 32), <locus from="27r" to="27r" scheme="folios"/> (Ps. 45), <locus from="30v" to="30v" scheme="folios"/> (Ps. 51), <locus from="34r" to="34r" scheme="folios"/> (Ps. 59), <locus from="43r" to="43r" scheme="folios"/> (Ps. 72), <locus from="55r" to="55r" scheme="folios"/> (Ps. 89), <locus from="60v" to="60v" scheme="folios"/> (Ps. 101), <locus from="91r" to="91r" scheme="folios"/>: puzzle 
+                                    initial over 3-4 lines in red and brown with flourishing.
+                                    <locus from="2r" to="102v" scheme="folios"/>: plain psalm initials over 2 lines in red.
+                                    <locus from="2r" to="102v" scheme="folios"/>: plain initials over 1 line in red.
+                                    
+                                    <locus from="68r" to="68r" scheme="folios"/> (Ps. 109): plain psalm initial over 3 lines with interior reserved shapes.
+                                    <locus from="94v" to="94v" scheme="folios"/>: plain canticle initial <quote>T</quote> over 2 lines in red on a green background possibly added later.
+                                    <locus from="21v" to="101v" scheme="folios"/>: initials (and some ascenders) on top line elongated and embellished with flourising in brown.
+                                    <locus from="74r" to="85v" scheme="folios"/> (quire 8): psalm initials touched in yellow; rubrics underlined in yellow.
+                                    <!--initial missing on 49v-->
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100223">Moravia</placeName>
-                                </origPlace>, <origDate when="1472">1472</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="published">
+        <revisionDesc status="published"><change who="https://www.manuscripta.se/person/100484" when="2025-03-20" status="published"/>
             <change status="draft" when="2023-10-22" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>

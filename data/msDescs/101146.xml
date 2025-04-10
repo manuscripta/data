@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101146</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,18 +43,73 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="folios"/>
+                                            <locus from="SR1" to="SR1" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf"/>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
+                                <foliation>Modern pagination in pencil (page number on every recto).<locus from="1" to="9" scheme="pages"/>: modern foliation in black ink in the bottom right corner. <secFol>Hoc inquit Fratres</secFol></foliation>
+                                <collation>
+                                    <formula>1-7(12), 8 (12, lacks 12?)</formula>
+                                    <catchwords>Catchwords at the end of each quire, except for quire 4.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top of page in pencil and red crayon by a modern hand: 18 ??; IOC; ? 18X CM; 10 4; in black ink by a modern hand: <quote>Inköpt från F. Butsch i Augsburg Juni 1870 för 3 fl. 30 kr Katal. LXVIII n. 222.</quote>; bottom left corner: National Library book label with current signum. </note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Centre page: National Library stamp. </note>
+                            </p>
+                            <p>
+                                <locus from="SR1r" to="SR1r" scheme="folios"/>
+                                <note>Bottom right corner in red crayon and pencil by a modern hand:  <quote>10 9 54</quote>, <quote>
+                                        <del>30. 3. 54</del>
+                                    </quote>, <quote>W J. Th</quote>, <quote>C. G?</quote>.</note>
+                            </p>
+                            <p>
+                                <locus from="RCI" to="RCI" scheme="other"/>
+                                <note>Bottom right corner in pencil by a modern hand: <quote>10/9/5h W 6 Y</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. Cloth and marbled paper over cardboard. <locus from="Spine" to="Spine" scheme="other"/>, ink on paper label: <quote>Suso Horologium aeternae Sapientiae</quote>; stamped in gold: <quote>A 162</quote>.</p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>Austria, 1395.</origin>
+                        <acquisition>Purchased by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> from <persName ref="https://www.manuscripta.se/person/102681">F. Butsch</persName> in <placeName ref="https://www.manuscripta.se/place/100004">Augsburg</placeName> in June <date when="1870"/>. </acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
                                 <title type="short" ref="https://www.manuscripta.se/bibl/101301">Hedlund (1980)</title>
                                 <citedRange from="15" to="15" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107426" type="short">Künzle (1977)</title>
+                                <citedRange unit="page" from="178" to="179"/>
+                                <note>Description of A 162.</note>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107421" type="short">Lehmann (1935)</title>
+                                <citedRange unit="page" from="125" to="126"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -60,13 +119,31 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1a" to="189a" scheme="pages"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102680">
+                                        Henry
+                                        Suso
+                                    
+                                    </persName>
+                                </author>
+                                <title type="desc">Horologium sapientiae</title>
+                                <rubric><supplied reason="damage">Inc</supplied>ipit prologus in ho<supplied reason="damage">rolo</supplied>gium Sapiencie <supplied reason="damage">ca</supplied>pitulum primum </rubric>
+                                <incipit>SEntite de domino in bonitate et in simplicitate cordis querite illum </incipit>
+                                <explicit>te regem glorie dominumque virtutum in decore suo conspicientes ihesum christum dominum nostrum qui cum patre et spiritu sancto viuit et regnat per omnia secula seculorum Amen</explicit>
+                                <colophon><locus from="189a" to="189a" scheme="pages"/>Explicit horologium Sapiencie Anno Domini Millesimo Trecentesimo nonagesimo Quinto Completum in Die Quatuor Coronatorum hora quasi Completorii vivat qui scripsit viuat qui scribere iussit <add place="below">per manus fratris Tilmanni pie memorie</add></colophon>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107426" type="short">Künzle (1977)</title>
+                                </bibl>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="95v" scheme="folios"/>
+                                            <locus from="1" to="190" scheme="pages"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="205" unit="mm"/>
@@ -78,15 +155,22 @@
                                         <measure type="textblockLeaves" quantity="95" unit="folios"/>
                                     </extent>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="36">
+                                        <dimensions type="written"/>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <p>Gothic cursive. </p>
+                            </handDesc>
+                            <decoDesc>
+                                <p>Main text in brown ink, rubrics in red, capitals touched in red. </p>
+                                <decoNote type="initials"><locus from="1a" to="1a" scheme="pages"/>: Opening plain initial S over 8 lines in red. 
+                                    <locus from="4a" to="187b" scheme="pages"/>: plain initials over 3-5 lines in red, some with interior reserved shapes. </decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100208101146.xml" cert="low">Austria</placeName>
-                                </origPlace>, <origDate when="1395">1395</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>

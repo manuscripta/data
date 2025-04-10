@@ -8,18 +8,24 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101212</idno>
                 <date when="2022"/>
-                <availability status="free"/>
+                <availability status="free">
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp=" https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -31,13 +37,81 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="L1" to="L1" scheme="folios"/>
+                                            <locus from="SR1" to="SR1" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="120" unit="mm"/>
+                                            <width quantity="85" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="1" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. Error in foliation: 1-230, 230, 231-234.</foliation>
+                                <collation>
+                                    <formula>1(12), 2-10(10), 11(1+10), 12(10), 13(8), 14(1+10), 15-16(10), 17(12+1), 18-23(10)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/679a3c6cf5e21a0001ad104c/viewOnly">Viscoll collation
+                                                                     
+                                                                 
+                                                                
+                                                            
+                                                           
+                                                       
+                                                      
+                                                  
+                                                 
+                                             
+                                            
+                                        </ref>
+                                    </p>
+                                    <catchwords>Catchwords by the scribe. </catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner, National Library book label. </note>
+                            </p>
+                            <p>
+                                <locus from="L1r" to="L1r" scheme="folios"/>
+                                <note>Upper part of page in black ink by a modern hand: <quote>Familjen Corsinis vapen i bordyren. Per Hierta</quote>; bottom of page: National Library stamp. </note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding in brown blind stamped leather. Clasp possibly of older date. </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="130" unit="mm"/>
+                                        <width quantity="95" unit="mm"/>
+                                        <depth quantity="35" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
+                                <placeName ref="https://www.manuscripta.se/place/100021">Florence</placeName>
+                            </origPlace>, <origDate notBefore="1457" notAfter="1500">15th century, second half. </origDate>The calendar mentions the feast of the Transfiguration of Christ (<locus from="8r" to="8r" scheme="folios"/>), which was instituted in 1457 and provided a terminus post quem for the manucript.
+                            The place of origin is based on the coat of arms on <locus from="13r" to="13r" scheme="folios"/>, which is believed to be that of the Florence-based Corsini family. Furthermore, saint Zenobius of Florence is listed in the calender and litany (<locus from="5v" to="5v" scheme="folios"/>, <locus from="121v" to="121v" scheme="folios"/>).
+                        </origin>
+                        <provenance>Early provenance unknown. At some point during the late 19th/early 20th century the manuscript was acquired by <persName ref="https://www.manuscripta.se/person/102522">Per Hierta</persName>. </provenance>
+                        <acquisition>Acquired by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> from the estae of <persName ref="https://www.manuscripta.se/person/102522">Per Hierta</persName> in <date when="1925"/>. </acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
@@ -57,13 +131,69 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="12v" scheme="folios"/>
+                                <title type="desc">Calendar</title>
+                                <note>
+                                    <p>
+                                        Notable feasts:
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="5v" to="5v" scheme="folios"/>: St Zenobius (25 May).
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="13r" to="103v" scheme="folios"/>
+                                <title type="desc">Hours of the Virgin</title>
+                                <rubric>Incipit officium beate Marie Virginis </rubric>
+                                <incipit>Ad matutinum Antiphonas DOMINE Labia mea aperies  </incipit>
+                                <explicit>Resurrexit sicut dixit alleluya Ora pro nobis deum alleluya</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="104r" to="119r" scheme="folios"/>
+                                <title type="desc">Seven penitential psalms</title>
+                                <rubric>Incipiunt septem psalmi penitentiales </rubric>
+                                <incipit>antiphonas Ne reminiscaris domine </incipit>
+                                <explicit>neque uindictam <sic>summas</sic> de peccatis meis</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="119r" to="132v" scheme="folios"/>
+                                <title type="desc">Litany</title>
+                                <rubric>Letanie</rubric>
+                                <incipit>Kyrieleyson christeleyson</incipit>
+                                <explicit>Exaudiat nos omnipotens et misericors dominus R Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="133r" to="165v" scheme="folios"/>
+                                <title type="desc">Major hours of the Holy Cross</title>
+                                <rubric>Incipit officium crucis Maius </rubric>
+                                <incipit>Ad mattutinum Per signum crucis de inimicis nostris libera nos deus noster </incipit>
+                                <explicit>Et clamor meus ad te ueniat V Benedicamus domino R Deo gratias</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="166r" to="228v" scheme="folios"/>
+                                <title type="desc">Office for the dead</title>
+                                <rubric>Incipit officium in agenda mortuorum </rubric>
+                                <incipit>ad uesperas antiphona placebo DILEXI Quoniam exaudiet</incipit>
+                                <explicit>Anime omnium fidelium defuncotrum per misericordiam dei requiescant in pace R Amen </explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="229r" to="234v" scheme="folios"/>
+                                <title type="desc">Minor hours of the Holy Cross</title>
+                                <rubric>Incipit officium crucis Minus </rubric>
+                                <incipit>Ad mattutinum Versus DOMINE Labia mea aperies</incipit>
+                                <explicit>Oratio Domine ihesu christe filii dei uiui? et cetera ut supra</explicit>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="234v" scheme="folios"/>
+                                            <locus from="1" to="234" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="120" unit="mm"/>
@@ -74,23 +204,25 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="235" unit="folios"/>
                                     </extent>
-                                    <!--f. 230 twice-->
+                                    <condition>Minor stains to the last leaves. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="12">
+                                        <note>Guidelines and ruling in brown ink. </note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic textualis formata. </handNote>
+                            </handDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/100021">Florence</placeName>
-                                </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="published"><change who="https://www.manuscripta.se/person/100380" when="2023-04-18" status="published">First published</change>
+        <revisionDesc status="published">
+            <change who="https://www.manuscripta.se/person/100380" when="2023-04-18" status="published">First published</change>
             <change who="https://www.manuscripta.se/person/100380" when="2023-04-18" status="draft">Added facsimile</change>
             <change status="draft" when="2023-04-18" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
@@ -111,12 +243,12 @@
             <desc>Left cover, inside</desc>
             <graphic url="ms-101212_0002.tif" width="3891px" height="4875px"/>
         </surface>
-        <surface xml:id="ms-101212_SL1r">
-            <desc>⟨f. Ir⟩</desc>
+        <surface xml:id="ms-101212_L1r">
+            <desc>f. Ir</desc>
             <graphic url="ms-101212_0003.tif" width="3755px" height="4875px"/>
         </surface>
-        <surface xml:id="ms-101212_SL1v">
-            <desc>⟨f. Iv⟩</desc>
+        <surface xml:id="ms-101212_L1v">
+            <desc>f. Iv</desc>
             <graphic url="ms-101212_0004.tif" width="3891px" height="4875px"/>
         </surface>
         <surface xml:id="ms-101212_1r">

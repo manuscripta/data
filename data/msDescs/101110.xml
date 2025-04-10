@@ -11,13 +11,17 @@
                     <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100483">Erika Kihlman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101110</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -39,19 +43,266 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="SL1" to="SL1" scheme="other"/>
+                                            <locus from="SR1" to="SR1" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Western paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="140" unit="mm"/>
+                                            <width quantity="95" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="8"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil: 1-109, 110a-110b, 111-236</foliation>
+                                <collation>
+                                    <formula>1(8), 2-9(12), 10(16), 11-17(12), 17(12), 18(16), 19(12+1), 20(10+3). </formula>
+                                    <p>The last leaf, without foliation, is folded around quires 19 and 20 and is visible as a stub onto which <locus from="212r" to="212r" scheme="folios"/> is added in quire 19. 
+                                        <ref target="https://vceditor.library.upenn.edu/project/67e2c54cf060c60001cba591/viewOnly">VisColl collation</ref>.
+                                    </p>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Note in Swedish regarding the acquisition of the book, in black ink by a ninetheenth-century-hand: <quote xml:lang="sv">Skänkt till Kongl. Bibliotheket af Ryttmästaren P. von Möller. 20 Oct. 1871. Har tillhört Lüdekes boksamling. är skrifvet i Sverige 1450-1500.</quote>
+                                    National Library book label with the current signum in black ink.
+                                </note>
+                            </p>
+                            <p>
+                                <locus from="RCI" to="RCI" scheme="other"/>
+                                <note>National Library stamp.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Nineteenth-century binding. </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="150" unit="mm"/>
+                                        <width quantity="110" unit="mm"/>
+                                        <depth quantity="40" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>Sweden?, 15th century, second half.</origin>
+                        <provenance>Early provenance unknown. On account of the saints in the litany, a former librarian suggests that it was produced for use in Västerås diocese, but this seems uncertain since both St Botvid and St Katarina of Vadstena are listed in the litany, both of whom not in the Västerås calendar. </provenance>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107115" type="short">Moberg (1947)</title>
+                                <citedRange unit="page" from="94" to="94"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107407" type="short">Schmid (1931)</title>
+                                <citedRange unit="page" from="270" to="270"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="21v" scheme="folios"/>
+                                <title type="desc">Ferial Psalter</title>
+                                <incipit defective="unknown">Indutus est dominus </incipit>
+                                <note>
+                                    <p>There may be parts missing from the beginning as the psalter only contains material for Sunday, Vespers for the weekdays and Compline.  </p>
+                                    <p>21v-22v: Major prayers</p>
+                                    <p>22v- : Various memorials beginning with the Trinity</p>
+                                    <p>f. 23r: De sancta cruce; sancta Maria; apostles; de sancto Iohanne; de apostolis;</p>
+                                    <p>f. 23v: de sancto david; reliquis, de omnibus sanctis; pro pace, in dominicis;</p>
+                                    <p>f. 24r: feria ii, feria iii, feria iiii, feria v</p>
+                                    <p>f. 24v: feria vi, nativitate?</p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="21v" to="22v" scheme="folios"/>
+                                <title type="desc">Memorials</title>
+                                <rubric>memorie? feriales? dominica? de sancta trinitate</rubric>
+                                <incipit>Te deum patrem ingenitum te filium vnigenitum</incipit>
+                                <note>
+                                    <p>f. 23r: De sancta cruce; sancta Maria; apostles; de sancto Iohanne; de apostolis;</p>
+                                    <p>f. 23v: de sancto david; reliquis, de omnibus sanctis; pro pace, in diversis/dominica?</p>
+                                    <p>f. 24r: feria ii, feria iii, feria iiii, feria v</p>
+                                    <p>f. 24v: feria vi, nativitate?</p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="25r" to="101v" scheme="folios"/>
+                                <title type="desc">Proper of time</title>
+                                <rubric>Dominica prima in aduentus</rubric>
+                                <incipit>Fratres scientes quia hora est iam </incipit>
+                                <explicit>distribuit discumbentibus similiter et ex piscibus quantum volebat</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="101v" to="102r" scheme="folios"/>
+                                <title type="desc">Three prayers</title>
+                                <incipit>Sancte et indiuidue trinitati ihesu christi crucifixi humanitati quinque wlneribus  </incipit>
+                                <explicit>veniam omni peccatorum nostrorum consequamur</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="102r" to="102r" scheme="folios"/>
+                                <title type="desc">Seven penitential psalms</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="106r" to="106r" scheme="folios"/>
+                                <title type="desc">Litany</title>
+                                <incipit>kyrieleyson christe</incipit>
+                                <note>
+                                    <p>Notable saints:</p>
+                                    <p>St Rimbert (Lund enl. Grotefend);</p>
+                                    <p>St Erik;</p>
+                                    <p>St Henrik;</p>
+                                    <p>St Olav;</p>
+                                    <p>St Eskil;</p>
+                                    <p>St Botvid; (ej Västerås enligt Grotefend);</p>
+                                    <p>St Sigfrid;</p>
+                                    <p>St David;</p>
+                                    <p>St Elin;</p>
+                                    <p>St Birgitta;</p>
+                                    <p>St Katarina of Vadstena (twice?).</p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="112r" to="190v" scheme="folios"/>
+                                <title type="desc">Proper of saints</title>
+                                <rubric>In vigilia andree antiphona</rubric>
+                                <incipit>Qui persequebatur</incipit>
+                                <explicit>accepit illum gaudens in domum suam alleluia hodie salus huic domui a deo facta est alleluia</explicit>
+                                <note>
+                                    <p>
+                                        The proper of saints begins with the vigil for St Andrew and ends with St Linus, followed by Dedicatio ecclesiae. Notable feasts:
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="115v" to="115v" scheme="folios"/>: St Lazarus (16 Dec.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="117r" to="117r" scheme="folios"/>: St Knut (7 Jan.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="117v" to="117v" scheme="folios"/>: St Joseph (15 Jan.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="119v" to="119v" scheme="folios"/>: St Henrik (19 Jan.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="126r" to="126r" scheme="folios"/>: St Ansgar (3 Feb.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="128r" to="128r" scheme="folios"/>: St Sigfrid (15 Feb.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="140r" to="140r" scheme="folios"/>: St Erik (18 May);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="142r" to="142r" scheme="folios"/>: St Botolph (17 May);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="144r" to="144r" scheme="folios"/>: St David (25 June);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="145v" to="145v" scheme="folios"/>: Sts John and Paul (26 June);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="151r" to="151r" scheme="folios"/>: De patronis (after Visitation);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="156r" to="156r" scheme="folios"/>: St Botvid (28 July);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="156r" to="156r" scheme="folios"/>: St Olav (29 July);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="157v" to="157v" scheme="folios"/>: St Elin (31 July);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="176v" to="176v" scheme="folios"/>: St Eskil (6 Oct.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="177v" to="177v" scheme="folios"/>: St Birgitta (7 Oct.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="185r" to="185r" scheme="folios"/>: St Edmund (confessor; 16 Nov.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="185v" to="185v" scheme="folios"/>: St Edmund (martyr; 20 Nov.);
+                                    
+                                    </p>
+                                    <p>
+                                        <locus from="188v" to="188v" scheme="folios"/>: Dedicatio ecclesiae.
+                                    
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="191r" to="191r" scheme="folios"/>
+                                <title type="desc">Prayers</title>
+                                <incipit>Ave capud coronatum spinis </incipit>
+                                <note>f. 191: Prayers on the wounds of Christ; f. 193v-Salutations for the limbs of Christ; Den sista Ave-texten börjar på 192 r.  Därpå böner inledda med rubriken Collecta. 193r bön som liknar Leroquais I, 152. NB i marginalen av tidigmodern hand. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="208v" to="212r" scheme="folios"/>
+                                <title type="desc">Collects</title>
+                                <rubric>Collecta</rubric>
+                                <incipit>OMnipotens sempiterne deus qui Ezechie regi iude cum lacrimis deprecanti vite spacium protendisti</incipit>
+                                <explicit>JOBBAR HÄR!! </explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="212r" to="220r" scheme="folios"/>
+                                <title type="desc">Vigiliae mortuorum</title>
+                                <incipit>Verba mea auribus percipe domine (Ps 5:2)</incipit>
+                                <explicit>Credo In terra? requiescant in Fidelium deus omnium</explicit>
+                                <note>
+                                    <locus from="220v" to="225r" scheme="folios"/>: blank
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="225v" to="225v" scheme="folios"/>
+                                <title type="desc">Prayer</title>
+                                <incipit>Aue ancilla trinitatis Aue sponsa spiritus sancti</incipit>
+                                <explicit>Rogo te ut </explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="226r" to="236v" scheme="folios"/>
+                                <title type="desc">Common offices</title>
+                                <rubric>In vigilia appostolorum</rubric>
+                                <incipit>Beatus vir qui inventus est sine macula</incipit>
+                                <explicit defective="true">Quia tu es solamen desolatorum spes et mater benigna orphanorum Responsorium Maria </explicit>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -61,16 +312,74 @@
                                             <locus from="1r" to="236v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
-                                                <height quantity="140" unit="mm"/>
-                                                <width quantity="100" unit="mm"/>
+                                                <height min="137" max="138" unit="mm"/>
+                                                <width quantity="95" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus to="p. 3" scheme="pages" from="p. 3"/>
+                                                    <locus from="217" to="220" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Unicorn? </term>
+                                            </watermark>
+                                            <watermark n="2">
+                                                <locusGrp>
+                                                    <locus from="1" to="55" scheme="folios"/>
+                                                    <locus from="114" to="121" scheme="pages"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">hand with flower on shaft, threedimensional cuff.</term>
+                                            </watermark>
+                                            <watermark n="3">
+                                                <locusGrp>
+                                                    <locus from="63" to="74" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">crown?</term>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="236" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="237" unit="folios"/>
                                     </extent>
+                                    <foliation>Modern foliation in pencil throughout. 
+                                        <secFol xml:lang="la">pulverem mortis</secFol>
+                                    </foliation>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="30 34">
+                                        <locus from="1r" to="236v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height min="95" max="105" unit="mm"/>
+                                            <width min="55" max="65" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <additions>
+                                <p>
+                                    <locus from="102r" to="102r" scheme="folios"/>
+                                    <note>A note in Swedish to the effect that the text marked by the black strokes here and on <locus from="110Ar" to="110Ar" scheme="folios"/> is identical to those in a book here referred to, <quote xml:lang="sv">Fernebo latinska bok</quote>, printed in 1525. In black ink by an eighteenth-century (?) hand: <quote xml:lang="sv">Från detta tvärstrek til nästa är det, hvad här emellan förekommer lika med art: Psalmi penitentianales i Fernebo latinska Bok Tryckt 1525</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="160v" to="160v" scheme="folios"/>
+                                    <note>A note in Swedish commenting on the fact that Katarina of Vadstena is present here but not (?) in the printed text, referred to in the previous addition. In black ink by an eighteenth-century hand: <quote xml:lang="sv">En Caterina de Wastenis är här mer än i den tryckta</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="107r" to="107r" scheme="folios"/>
+                                    <note>A note in Swedish on saints in the printed litany, not present here. In black ink by an eighteenth century hand: <quote xml:lang="sv">Uti den tryckta litanien äro införde: Erasm. Christoph.? Karlange? Brynolph och Praxedis hvilka här saknas, äfven Thomas</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="110Av" to="110Av" scheme="folios"/>
+                                    <note>A note in Swedish remarking on the textual similarity of the prayer here and in the printed volume referred to earlier. In black ink by an eighteenth-century hand: <quote xml:lang="sv">Denna Bön finnes och i den tryckta Boken med liten variation af ett och annat ord</quote>.  </note>
+                                </p>
+                                <p>
+                                    <locus from="220r" to="220r" scheme="folios"/>
+                                    <note>Information in Swedish to the effect that the texts on the preceding eight leaves are printed in a book with the title: Sequuntur nunc vigilie morturoum. In black ink by a modern hand: <quote xml:lang="sv">Alt hvad de föregående 8 Blad innehålla til slutet på denna sida, finnes med flere mellansatte sångstycken: antiph: Respons: och V. uti den Tryckta Boken under Tit: Sequuntur nunc vigilie mortuorum se Bl. Jvi Sid 2</quote>. </note>
+                                </p>
+                                <p>
+                                    <locus from="225v" to="225v" scheme="folios"/>
+                                    <note>Information in Swedish about the existence of a printed version of the preceding prayer. In black ink by a modern hand: <quote xml:lang="sv">Föregående Bön, kallas i den tryckta anonyma Fernebo Boken Oratio de Domina och finnes där utförligare</quote>.</note>
+                                </p>
+                            </additions>
                         </physDesc>
                         <history>
                             <origin>

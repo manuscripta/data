@@ -11,17 +11,21 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101202</idno>
                 <date when="2024"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100488">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,19 +43,68 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locus from="LCI" to="RCI" scheme="other"/>
+                                        <material>Textile</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="100" unit="mm"/>
+                                            <width quantity="70" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                    <p>
+                                        <locus from="SL1" to="SR1" scheme="folios"/>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="100" unit="mm"/>
+                                            <width quantity="65" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil (in lower left corner on folios with full-page miniatures), 1-137. Some folio numbers appear to have been corrected.</foliation>
+                                <collation>
+                                    <formula>1(8), 2(4), 3-16(8), 17(6, lacks 3 and 4), 18(7)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67bc4fabf5e21a0001ad5ee8/viewOnly">VisColl collation</ref>.
+                                    </p>
+                                    <catchwords>Catchwords on quires 3-17.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="SL1" to="SL1" scheme="other"/>
+                                <note>Top of page, in black ink by an ealy modern hand: <quote>Drottningholms Bibl. Kat. n<hi rend="super">o</hi> 96</quote>; below, in the same hand, the date <quote>8/20 1854</quote>. <!--Hur rendera?-->Centre of page, in black ink by a different early modern hand, a tally of the ornamental elements: <quote>136 skrifna blad 15 taflor med hela ramar och stora initialer 10 mindre ramstycken och 10 initialer 182 mindre initialer 826 små initialer 62 små rankor</quote>. Bottom of page, in pencil by a modern hand: <quote>Tillhör KB</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>18th-century binding. Red leather over cardboard. 4 double raised bands and endbands. <locus from="LCO" to="LCO" scheme="other"/>, stamped in gold at the centre: the coat of arms of <persName ref="https://www.manuscripta.se/person/102666">Queen Lovisa Ulrika of Sweden</persName>. <locus from="Spine" to="Spine" scheme="other"/>, stamped in gold: <quote>MANUSCRIPT</quote>; below, <quote>A 232</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="115" unit="mm"/>
+                                        <width quantity="80" unit="mm"/>
+                                        <depth quantity="30" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <condition>Leather worn at the edges.</condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>
                             <origPlace>
                                 <placeName ref="https://www.manuscripta.se/place/100111">France</placeName>
-                            </origPlace>, <origDate notBefore="1451" notAfter="1500">15th century, second half</origDate>
+                            </origPlace>, <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100313">Clermont</placeName>
+                            </origPlace>, <origDate notBefore="1451" notAfter="1500">15th century, second half</origDate>. The inclusion in the calendar of the feast of the Transfiguration (<locus from="8r" to="8r" scheme="folios"/>), instituted in 1457, gives a terminus post quem for the date of the manuscript. The inclusion of a large number of bishops, prelates, and martyrs of <placeName ref="https://www.manuscripta.se/place/100313">Clermont</placeName> (e.g. Austremonius, Antholianus, Trigidius, Bonitus, Genesius, as well as Agricola and Vitalis) points to this as the place of origin. A former librarian notes, however, that the miniatures are of Flemish style. 
                         </origin>
+                        <provenance>The manuscript belonged to <persName ref="https://www.manuscripta.se/person/102666">Lovisa Ulrika</persName>, Queen of Sweden <date from="1751" to="1771">1751-1771 </date>(her coat of arms on <locus from="LCO" to="LCO" scheme="other"/>). No 96 in the library catalogue of <placeName ref="https://www.manuscripta.se/place/100287">Drottningholm Palace</placeName>.</provenance>
+                        <acquisition>Transferred to the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> in <date when="1854"/>.</acquisition>
                     </history>
                     <additional>
                         <listBibl>
@@ -72,6 +125,343 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="12v" scheme="folios"/>
+                                <title type="desc">Calendar</title>
+                                <note>
+                                    <p>
+                                             Notable feasts:
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="1r" to="1r" scheme="folios"/>: St William of Bourges (10 Jan.);
+                                         
+                                         
+                                    </p>
+                                    <p/>
+                                    <p>
+                                             <locus from="1v" to="1v" scheme="folios"/>: St Bonitus of Clermont (15 Jan.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="1v" to="1v" scheme="folios"/>: St Venerandus of Clermont (18 Jan.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="1v" to="1v" scheme="folios"/>: St Preiectus of Clermont (26 Jan.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="2r" to="2r" scheme="folios"/>: St Antholianus (6 Feb.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="2r" to="2r" scheme="folios"/>: St Desideratus of Clermont (11 Feb.); 
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="2v" to="2v" scheme="folios"/>: St Trigidius of Clermont (16 Feb.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="4v" to="4v" scheme="folios"/>: St Robert of Auvergne (24 Apr.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="5r" to="5r" scheme="folios"/>: St Serenus of Billom (?) (2 May);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="5r" to="5r" scheme="folios"/>: translation of St William of Bourges (7 May);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="5v" to="5v" scheme="folios"/>: St Cassius of Clermont (15 May);
+                                         
+                                         
+                                    </p>
+                                    <p/>
+                                    <p>
+                                             <locus from="5v" to="5v" scheme="folios"/>: St Lupus of Limoges (22 May);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="6r" to="6r" scheme="folios"/>: St Florus of Lodève (1 June);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="6r" to="6r" scheme="folios"/>: St Genesius of Clermont (3 June);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="6r" to="6r" scheme="folios"/>: translation of St Bonitus (6 June);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="6v" to="6v" scheme="folios"/>: St Abraham of Clermont (15 June);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="7r" to="7r" scheme="folios"/>: St Gallus of Clermont (1 July);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="7r" to="7r" scheme="folios"/>: St Cyril (9 July);
+                                         
+                                         
+                                    </p>
+                                    <p/>
+                                    <p>
+                                             <locus from="9r" to="9r" scheme="folios"/>: St Frodoaldus (<quote>Fredaldus</quote>; 4 Sep.)
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="9v" to="9v" scheme="folios"/>: St Rusticus of Clermont (24 Sep.);
+                                         
+                                         
+                                    </p>
+                                    <p/>
+                                    <p>
+                                             <locus from="10v" to="10v" scheme="folios"/>: St Amabilis of Clermont (19 Oct.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="11r" to="11r" scheme="folios"/>: St Agricola and Vitalis (4 (Nov.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="11r" to="11r" scheme="folios"/>: St Amandinus of Clermont (<quote>Amandi</quote>; 7 Nov.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="11r" to="11r" scheme="folios"/>: St Austremonius (8 Nov.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="11r" to="11r" scheme="folios"/>: St Quintinianus of Clermont (10 Nov.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="11v" to="11v" scheme="folios"/>: translation of Agricola and Vitalis (27 Nov.);
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="12r" to="12r" scheme="folios"/>: St Nectarius of Auvergne (<quote>Necterei</quote>; 9 Dec.).
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="3r" to="3r" scheme="folios"/>: the ascender of the <quote>d</quote> in <quote>Benedicti</quote> is embellished with a scroll.
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             St Romanus is placed on August 8 rather than 9, and for the remainder of August, the feasts are early by one day (or two) compared to the common dates.
+                                         
+                                         
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="13r" to="37v" scheme="folios"/>
+                                <title type="desc">Hours of the Virgin</title>
+                                <incipit>DOmine labia mea aperies (Ps. 50:17) <gap reason="editorial"/> Aue maria gracia plena</incipit>
+                                <explicit>a presenti liberari tristicia et eterna perfrui leticia Per dominum</explicit>
+                                <note>13r, full page illustration, the Virgin Mary surrounded by four angels.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="37v" to="40v" scheme="folios"/>
+                                <title type="desc">Suffrages</title>
+                                <rubric>Commemoratio de sancto spiritu antiphona</rubric>
+                                <incipit>Accipite spiritum sanctum quorum remiseritis peccata</incipit>
+                                <note>
+                                    <p>
+                                             <locus from="37v" to="37v" scheme="folios"/>: the Holy Spirit;
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="37v" to="37v" scheme="folios"/>: St John the Evangelist; <!--samma som EBook-->
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="38r" to="38r" scheme="folios"/>: St Anthony; <!--samma som EBook-->
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="38v" to="38v" scheme="folios"/>: St Sebastian; <!--inte samma-->
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="39r" to="39r" scheme="folios"/>: St John the Baptist;
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="39v" to="39v" scheme="folios"/>: Sts Peter and Paul;
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                             <locus from="40r" to="40r" scheme="folios"/>: St Blasius.
+                                         
+                                         
+                                    </p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="40v" to="62v" scheme="folios"/>
+                                <title type="desc">Hours of the Virgin (continued)</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="62v" to="69v" scheme="folios"/>
+                                <title type="desc">Hours of the Virgin (Advent)</title>
+                                <rubric>Incipit officium beate marie in aduentu domini vt sequitur officium</rubric>
+                                <incipit>Domine labia mea aperies ... Regem uenturum dominum venite adoremus</incipit>
+                                <explicit>perfecta sunt omnia quae data sunt a domino Hodie</explicit>
+                                <note>41r, full-page illustration, nativity.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="69v" to="75v" scheme="folios"/>
+                                <title type="desc">Office for the Nativity ?</title>
+                                <rubric>Incipit officium natiuitatis domini sequitur</rubric>
+                                <incipit>Domine labia mea aperies (Ps. 50:17) ... Christus natus est nobis</incipit>
+                                <explicit>ueritatis lumen ostende Qui tecum uiuet et regnat</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="76r" to="105r" scheme="folios"/>
+                                <title type="desc">Hours for the dead</title>
+                                <incipit>REgem cui omnia viuunt Venite adoremus</incipit>
+                                <explicit>sanctorum tuorum iubeas esse consortes Per dominum</explicit>
+                                <note>76r, full-page image.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="105r" to="108v" scheme="folios"/>
+                                <title type="desc">Litany</title>
+                                <incipit>Kyrieleison Christeleison</incipit>
+                                <explicit>pro tui nominis misericorditer liberemur Per dominum noster
+                                         <!--Ingår bönen i litanian? Eller slutar litanian på 108r?-->
+                                     
+                                     
+                                </explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="109r" to="111v" scheme="folios"/>
+                                <title type="desc">Hours of the Cross</title>
+                                <incipit>Domine labia mea aperies (Ps. 50:17) <gap reason="editorial"/> Patris sapientia ueritas diuina</incipit>
+                                <explicit>sis mihi solacium in mortis agone Deo gloria</explicit>
+                                <note>109r, full-page image, crucifixion.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="112r" to="115r" scheme="folios"/>
+                                <title type="desc">Hours of the Holy Spirit</title>
+                                <incipit>Domine labia mea aperies (Ps. 50:17) ... NObis sancti spiritus gracia</incipit>
+                                <explicit>et me eterna illumines inspiracione amen</explicit>
+                                <note>112r, full-page imgae, teaching in the Temple ?</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="115r" to="118v" scheme="folios"/>
+                                <title type="desc">Hours of the Trinity</title>
+                                <rubric>Incipit officium de trinitate</rubric>
+                                <incipit>Aue maria Sit nomen dominum
+                                         115v Domine labia mea aperies (Ps. 50:17) ... Quicumque uult animam firmiter saluare
+                                     
+                                     
+                                </incipit>
+                                <explicit>hoc cum firmitate ... Oracio ut supra</explicit>
+                                <note>115v, full-page image, Trinity, (Christ, father, spirit), angels </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="119r" to="121v" scheme="folios"/>
+                                <title type="desc">Common of martyrs</title>
+                                <rubric>Plurimorum martirum</rubric>
+                                <incipit>Quocienscumque fratres karissimi sanctorum martirum
+                                         <!--Ps.-Augustine, Sermo 261, PL 39, col. 2222-2229
+Absterget deud omnem lacrimam (119v)
+Sed nos uolumus gaudere cum sanctis (120r)
+                                                                     -->
+                                     
+                                     
+                                </incipit>
+                                <note>119r: full-page imgae, the stoning of St Stephen (?).</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="122r" to="122r" scheme="folios"/>
+                                <title type="desc">Common of confessors <!--Hör dessa hemma här?--></title>
+                                <rubric>Plurimorum confessorum</rubric>
+                                <incipit>Beati sunt serui illi (Luke 12:38)</incipit>
+                                <explicit>Letamini in domino etc Que (quem ut vid.) ibi defficiencia supra in communi plurimorum martyrum</explicit>
+                                <note>122r: full-page image, bishop holding a Bible.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="125v" to="129v" scheme="folios"/>
+                                <title type="desc">Common of virgins</title>
+                                <rubric>de virginibus horae</rubric>
+                                <incipit>SEpe vos fratres karissimi ammoneo</incipit>
+                                <explicit>Sub tuum presidium confugimus dei genitris uirgo nostras deprecaciones Deus --- 
+                                         Fråga gruppen om sista ordet här
+                                     
+                                     
+                                </explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="130r" to="131v" scheme="folios"/>
+                                <title type="desc">Office of the Virgin Mary - VAD ÄR DETTA? Varför här?</title>
+                                <rubric>de beata maria</rubric>
+                                <incipit>Beata dei genitris uirgo maria</incipit>
+                                <explicit>ad resurrectionis glorias perducamur Per dominus</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="132r" to="135v" scheme="folios"/>
+                                <title type="desc">Obsecro te</title>
+                                <incipit>OBsecro te domina sancta maria</incipit>
+                                <explicit>exaudi domina dulcissima uirgo maria mater dei et misericordiae Amen</explicit>
+                                <note>132r: full-page image, post-crucufixion.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="135v" to="136r" scheme="folios"/>
+                                <title type="desc">Prayer</title>
+                                <incipit>Omnipotens sempiterne deus qui gloriose semperque virginis marie corpus</incipit>
+                                <explicit>a marte subbitanea liberemur Per dominum nostrum ihesum christum filium tuum Qui tecum vivit et</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="136r" to="136r" scheme="folios"/>
+                                <title type="desc">Prayer</title>
+                                <rubric>oracio</rubric>
+                                <incipit>GRaciam tuam quaesumus domine mentibus nostris</incipit>
+                                <explicit>ad resurectionis gloriam perducamur Per dominum nostrum Deo gracias --essonis ?</explicit>
+                                <note>
+                                    <p> <locus from="136v" to="136v" scheme="folios"/>: blank. </p>
+                                    <p> <locus from="137r" to="137r" scheme="folios"/>: ruled but no text.</p>
+                                    <p> <locus from="137v" to="137v" scheme="folios"/>: blank.</p>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -82,15 +472,61 @@
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="100" unit="mm"/>
-                                                <width quantity="70" unit="mm"/>
+                                                <width quantity="65" unit="mm"/>
                                             </dimensions>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="137" unit="folios"/>
                                     </extent>
+                                    <condition>Occasional stains throughout the manuscript, e.g. <locus from="1r" to="7r" scheme="folios"/> (possibly water damage), <locus from="54r" to="54r" scheme="folios"/>, <locus from="78v" to="79r" scheme="folios"/>. <locus from="1r" to="1r" scheme="folios"/>: imprint from a circular object. <locus from="113r" to="113r" scheme="folios"/>: text smudged.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout ruledLines="16" columns="3">
+                                        <locus from="1r" to="12v" scheme="folios"/>
+                                    </layout>
+                                    <layout columns="1" ruledLines="16">
+                                        <locus from="13v" to="137r" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="55" unit="mm"/>
+                                            <width quantity="35" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <p/>
+                                <handNote xml:id="hand-1">Hybrida.</handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <p>Main text in brown ink; rubrics in red; capitals touched in red.</p>
+                                <decoNote type="initials">
+                                    <locus from="13r" to="13r" scheme="folios"/>, <locus from="112r" to="112r" scheme="folios"/>: plain initial over 5 lines alternating, one in red, one in blue, with foliate patterns in gold on a blue or red background outlined in black and floral patterns in gold paint on the background and in the counterspace.
+                                    <locus from="41r" to="41r" scheme="folios"/>, <locus from="76r" to="76r" scheme="folios"/>, <locus from="115v" to="115v" scheme="folios"/>, <locus from="122r" to="122r" scheme="folios"/>, <locus from="125v" to="125v" scheme="folios"/>, <locus from="132r" to="132r" scheme="folios"/> plain initial over 4-5 lines in blue and red with patterns in white and outlined in black on a background of gold leaf outlined in black and vine stems with leaves in red, blue and mauve in the counterspace.
+                                    <locus from="52v" to="52v" scheme="folios"/>, <locus from="63v" to="63v" scheme="folios"/>, <locus from="70r" to="70r" scheme="folios"/>, <locus from="102r" to="102r" scheme="folios"/>, <locus from="109r" to="109r" scheme="folios"/>, <locus from="119r" to="119r" scheme="folios"/>, <locus from="130r" to="130r" scheme="folios"/> plain initial over 4-5 lines in blue and red with patterns in white and outlined in black on a background of gold leaf outlined in black and floral motifs in the style of the borde decoration on a yellow background in the counterspace.
+                                    <locus from="1r" to="136r" scheme="folios"/>: plain text initials over 2-3 lines in gold paint on a square background in blue or red outlined in black and floral patterns in gold paint in the counterspace.
+                                    <locus from="1r" to="130v" scheme="folios"/>: sentence initials over 1 line in gold paint on a square background in blue or red outlined in black and floral patterns in gold paint in the counterspace. Line fillers in the same style.
+                                </decoNote>
+                                <decoNote type="images">
+                                    <locus from="13r" to="13r" scheme="folios"/>: the Assumption;
+                                    <locus from="41r" to="41r" scheme="folios"/>: the Nativity;
+                                    <locus from="52v" to="52v" scheme="folios"/>: the Visitation;
+                                    <locus from="63v" to="63v" scheme="folios"/>: the Annunciation;
+                                    <locus from="70r" to="70r" scheme="folios"/>: Joachim and Anna meeting the the Golden Gate;
+                                    <locus from="76r" to="76r" scheme="folios"/>: Job;
+                                    <locus from="102r" to="102r" scheme="folios"/>: a funeral;
+                                    <locus from="109r" to="109r" scheme="folios"/>: the Crucifixion (Calvary);
+                                    <locus from="112r" to="112r" scheme="folios"/>: Pentecost;
+                                    <locus from="115v" to="115v" scheme="folios"/>: the Trinity;
+                                    <locus from="119r" to="119r" scheme="folios"/>: the stoning of St Stephen;
+                                    <locus from="122r" to="122r" scheme="folios"/>: a bishop;
+                                    <locus from="125v" to="125v" scheme="folios"/>: St Katherine piercing a regent (Maxentius?) with her sword;
+                                    <locus from="130r" to="130r" scheme="folios"/>: the Virgin Mary with the Christ Child and two angels;
+                                    <locus from="132r" to="132r" scheme="folios"/>: the Mourning of Christ / Pietà.
+                                    The miniatures are surrounded by border decoration with floral motifs in blue, green, red, pink, gold paint, some gold leaf, and tendrils in black. The opening of the individual hours are also accompanied by boder decorations in the same style, but mainly restricted to foliage in blue, yellow and green, in panels extending the length of the right margin and half of the upper and lower margin. According to a former librarian, the style of the decoration reveals Flemish influence. For further discussion of the decoration, see <ref target="http://urn.kb.se/resolve?urn=urn:nbn:se:alvin:portal:record-472874">Lindqvist Sandgren</ref>.
+                                </decoNote>
+                                <decoNote type="bookmarks">Two booksmarks of woven green slik thread.</decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>

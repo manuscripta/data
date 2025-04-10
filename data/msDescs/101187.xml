@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101187</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,27 +43,134 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="1" to="1" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <note>
+                                            <locus from="1" to="1" scheme="folios"/> is a flyleaf. Modern paper has been pasted on <locus from="LCI" to="LCI" scheme="other"/> and partially covers it. 
+                                        </note>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="260" unit="mm"/>
+                                            <width quantity="170" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
                                     <measure type="rightFlyleaves" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. <secFol>Recta necessaria quia </secFol></foliation>
+                                <collation>
+                                    <formula>1-7(8)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67d02a346c70ed00010c3a52/viewOnly">VisColl collation
+                                                                     
+                                                                 
+                                                                
+                                                            
+                                                           
+                                                       
+                                                      
+                                                  
+                                                 
+                                             
+                                            
+                                        </ref>
+                                    </p>
+                                    <signatures>Quire signatures in Arabic numerals at the beginning of quire 1-4.</signatures>
+                                    <catchwords>Catchwords at the end of each quire. </catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner: National Library book label with current signum. </note>
+                            </p>
+                            <p>
+                                <locus from="1r" to="1r" scheme="folios"/>
+                                <note>Four paragraphs of text by a medeival hand in a cursive script. The text concerns the content of the main text. </note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="unknown">
+                                <p>Medeival binding. Red leather over wooden boards. 5 double raised bands and 2 single raised bands. Corner and centre bosses in brass on both covers. 2 additional brass bosses or studs close to the edge on <locus from="RCO" to="RCO" scheme="other"/>, possibly originally part of a clasp. <locus from="LCO" to="LCO" scheme="other"/>, middle of the cover two bent metal nails. <locus from="Spine" to="Spine" scheme="other"/>, stamped in gold: <quote>A 212</quote>. </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="270" unit="mm"/>
+                                        <width quantity="190" unit="mm"/>
+                                        <depth quantity="50" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <condition>Leather heavily worn, boards exposed at edges, board attachements visible on <locus from="RCI" to="RCI" scheme="other"/>. New leather on spine. </condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin><origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
+                                <placeName ref="https://www.manuscripta.se/place/100320">Worms</placeName>
+                            </origPlace>, <origDate when="1427">1427</origDate>. Date based on first rubric and colophon. </origin>
+                        <provenance>In the early <date from="1630" to="1630">1635</date>'s Swedish troops occupied <placeName ref="https://www.manuscripta.se/place/100320">Worms</placeName>. It is believed that the manuscript was taken then, probably from the library of the bishop. The manuscript would then have been incorporated into <persName ref="https://www.manuscripta.se/person/100086">Queen Christina</persName>'s library and has remained at the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> ever since (<bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107131" type="short">Walde (1916–1920)</title>
+                                <citedRange unit="page" from="215" to="216"/>
+                            </bibl>). The former spine label attached to <locus from="2r" to="2r" scheme="folios"/> refers to the catalogue fo 1734 (U 125e) where the manuscript is listed as: <quote>Theol. in 4<hi rend="super">o </hi>N<hi rend="super">o</hi> 23</quote>. </provenance>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107416" type="short">Bauer (1981)</title>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="2r" to="57r" scheme="folios"/>
+                                <title type="desc">Verse dialogue on the Magnificat</title>
+                                <rubric>Incipit dyalogus nouus super magnificat metrorum Iocunditate nouiter editus pro laude benedicte et castissime virginis et matris dei ad instanciam venerabilis in christo patris ac domini domini frydryci wormaciensis episcopci compositus per magistrum Johannem de wetslaria Anno milleno C quater bis quoque deno Septimo in anno iuncto numero memorato Accidit ecce pia nouiter dictante maria Virgine matre dei spirante pneumante sacro</rubric>
+                                <explicit>En seruire tibi michi iam est summa uenustas Mundi saluatrix ualeas pietatis amatrix</explicit>
+                                <note>
+                                                                                 <locus from="57v" to="57v" scheme="folios"/>: ruled, but no text. 
+                                                                             
+                                                                             
+                                                                        
+                                                                        
+                                                                   
+                                                                   
+                                                              
+                                                              
+                                                         
+                                                         
+                                                    
+                                                    
+                                               
+                                               
+                                          
+                                          
+                                     
+                                     
+                                
+                                </note>
+                                <colophon><locus from="56v" to="56v" scheme="folios"/>finitur dyalogus nouus ad laudem benedicte et castissime uirginis matris Marie et ad peticionem Re- In christo patris et domini domini Frederici Episcopi wormaciensis per magistrum Johannem de wetslaria metrica iocundiate pl-e editus seu compositus Sub anno domini m<hi rend="super">o</hi> cccc<hi rend="super">o</hi> <add place="below">vicesimo</add> septimo in ciuitate wormaciensi et cetera?</colophon>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="paper">
+                                <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="57v" scheme="folios"/>
-                                            <material>Western paper</material>
+                                            <locus from="2" to="57" scheme="folios"/>
+                                            <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="260" unit="mm"/>
                                                 <width quantity="180" unit="mm"/>
@@ -67,16 +178,46 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="57" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="56" unit="folios"/>
                                     </extent>
+                                    <condition>Parchment stained in places. Several holes, some with contemporary repairs, e.g. <locus from="10r" to="10r" scheme="folios"/>. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="26">
+                                        <dimensions type="written">
+                                            <height quantity="180" unit="mm"/>
+                                            <width quantity="110" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in lead. Pricking in the margins. </note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic textualis. </handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top right corner: glued to the page title lable from spine with the text <quote>N<hi rend="super">o</hi> 23. Dialogus novus super Magnificat</quote>; bottom of page in brown ink by a medieval hand: <quote>Wetslariensis</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="2r" scheme="folios"/>
+                                    <note>Throughou the mention of bishop Frederic of Worms in the text is marked in the margin by the scribe with the word <quote>Episcopus</quote> in a red circle. Sometimes a second hand has repeated this note. e.g. on <locus from="3r" to="3r" scheme="folios"/>. Certain topics or chapter rubrics are mentioned in the same way, e.g. on <locus from="8r" to="8r" scheme="folios"/> and by a different hand on <locus from="20r" to="20r" scheme="folios"/>.  Elaborate manicules and four red or brown semicircles or dots which mark certain lines are found throughout the text, e.g. <locus from="10r" to="10r" scheme="folios"/>. </note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in black ink, rubrics in red, capitals touched in red. </p>
+                                <decoNote type="initials">
+                                    <locus from="2r" to="2r" scheme="folios"/>: The text is opened by two plain initials over 10 and 4 lines, one in blue, the other in red with flourishing in contrasting colour.
+                                    <locus from="2v" to="56r" scheme="folios"/>: paragraphs opened by plain initials over 2-3 lines alternating in blue and red with flourishing in red or purple ink. 
+                                </decoNote>
+                                <decoNote type="images">2r:
+                                    26r:
+                                    54r:
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origDate when="1427">1427</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
