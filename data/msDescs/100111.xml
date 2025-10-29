@@ -12,11 +12,11 @@
                     <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
                 </respStmt>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
                 </respStmt>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
             </titleStmt>
@@ -38,6 +38,9 @@
                         <idno type="shelfmark">Saml 24:19</idno>
                         <altIdentifier>
                             <idno type="id" subtype="Diktyon">38731</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno type="id" subtype="Alvin">alvin-record:265925</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <head>Homer, Iliad, a fragment</head>
@@ -98,7 +101,9 @@
                                                 <height unit="mm" quantity="230"/>
                                                 <width unit="mm" quantity="150"/>
                                             </dimensions>
-                                            <measure type="folding">Folio</measure> Parchment of medium thickness; the leaf was cut on two sides and folded in half for reuse as a flyleaf or wrapping for a document. The cut in the recto has removed the last few letters from each line of text, while the cut in the upper part of the leaf has removed the margin and the one whole line from the top, while partially also damaging the next line.</p>
+                                            <measure type="folding">Folio</measure>
+                                            <note>Parchment of medium thickness; the leaf was cut on two sides and folded in half for reuse as a flyleaf or wrapping for a document. The cut in the recto has removed the last few letters from each line of text, while the cut in the upper part of the leaf has removed the margin and the one whole line from the top, while partially also damaging the next line.</note>
+                                        </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="1" unit="folios"/>
@@ -137,6 +142,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="published">
+            <change status="published" when="2025-04-24" who="https://www.manuscripta.se/person/100380">Changed facsimile to Alvin endpoint</change>
             <change status="published" when="2020-09-01" who="https://www.manuscripta.se/person/100380">Changing status from draft to published</change>
             <change status="draft" when="2016-01-19" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
@@ -148,14 +154,14 @@
             </div>
         </body>
     </text>
-    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-100111/">
-        <surface xml:id="ms-100111_1r">
+    <facsimile xml:base="https://www.alvin-portal.org/iipsrv/iipsrv.fcgi?IIIF=/mnt/data/alvin/jp2/265000/900/">
+        <surface xml:id="ms-100111_0001_1r">
             <desc>f. 1r</desc>
-            <graphic url="lsb-saml-024-19_0001_001r.tif" height="6413px" width="5797px"/>
+            <graphic url="alvin-record_265925-ATTACHMENT-0001.jp2" height="6413px" width="5797px"/>
         </surface>
-        <surface xml:id="ms-100111_1v">
+        <surface xml:id="ms-100111_0002_1v">
             <desc>f. 1v</desc>
-            <graphic url="lsb-saml-024-19_0002_001v.tif" height="6413px" width="5821px"/>
+            <graphic url="alvin-record_265925-ATTACHMENT-0002.jp2" height="6413px" width="5821px"/>
         </surface>
     </facsimile>
 </TEI>

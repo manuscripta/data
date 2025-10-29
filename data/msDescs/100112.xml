@@ -12,11 +12,11 @@
                     <persName ref="https://www.manuscripta.se/person/100057">Barbara Crostini Lappin</persName>
                 </respStmt>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100143">Eva Nyström</persName>
                 </respStmt>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
             </titleStmt>
@@ -38,6 +38,9 @@
                         <idno type="shelfmark">Saml 24:26</idno>
                         <altIdentifier>
                             <idno type="id" subtype="Diktyon">38732</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno type="id" subtype="Alvin">alvin-record:265930</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <head>Gregory of Nazianzus, Or. 7, a fragment</head>
@@ -105,7 +108,9 @@
                                                 <height unit="mm" quantity="275"/>
                                                 <width unit="mm" quantity="155"/>
                                             </dimensions>
-                                            <measure type="folding">Folio</measure> Parchment, fairly supple; the recto is the hair side, yellow; the verso is the flesh side, ivory coloured. The leaf was trimmed on both sides, leaving the parallel external rulings of the first column of the recto, and no margin at all to the right of the second column. It was then also cut to a triangular point in the upper margin, from the fourth line of text, with loss of text in the beginning and end of the first lines. In order to be reused as a flyleaf in a binding, it was folded twice, creating a crease on the fourth and another on the eighteenth line of text. The edges of the parchment at top and sides have also curled onto themselves. </p>
+                                            <measure type="folding">Folio</measure>
+                                            <note>Parchment, fairly supple; the recto is the hair side, yellow; the verso is the flesh side, ivory coloured. The leaf was trimmed on both sides, leaving the parallel external rulings of the first column of the recto, and no margin at all to the right of the second column. It was then also cut to a triangular point in the upper margin, from the fourth line of text, with loss of text in the beginning and end of the first lines. In order to be reused as a flyleaf in a binding, it was folded twice, creating a crease on the fourth and another on the eighteenth line of text. The edges of the parchment at top and sides have also curled onto themselves.</note>
+                                        </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="1" unit="folios"/>
@@ -142,6 +147,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="published">
+            <change status="published" when="2025-04-24" who="https://www.manuscripta.se/person/100380">Changed facsimile to Alvin endpoint</change>
             <change status="published" when="2020-09-01" who="https://www.manuscripta.se/person/100380">Changing status from draft to published</change>
             <change status="draft" when="2016-01-19" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
@@ -153,14 +159,14 @@
             </div>
         </body>
     </text>
-    <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-100112/">
-        <surface xml:id="ms-100112_1r">
+    <facsimile xml:base="https://www.alvin-portal.org/iipsrv/iipsrv.fcgi?IIIF=/mnt/data/alvin/jp2/265000/900/">
+        <surface xml:id="ms-100112_0001_1r">
             <desc>f. 1r</desc>
-            <graphic url="lsb-saml-024-26_0001_001r.tif" height="7924px" width="5797px"/>
+            <graphic url="alvin-record_265930-ATTACHMENT-0001.jp2" height="7924px" width="5797px"/>
         </surface>
-        <surface xml:id="ms-100112_1v">
+        <surface xml:id="ms-100112_0002_1v">
             <desc>f. 1v</desc>
-            <graphic url="lsb-saml-024-26_0002_001v.tif" height="7925px" width="5780px"/>
+            <graphic url="alvin-record_265930-ATTACHMENT-0002.jp2" height="7925px" width="5780px"/>
         </surface>
     </facsimile>
 </TEI>
