@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101185</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,48 +39,534 @@
                             <idno type="id" subtype="Regina">004854247</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Thomas Ebendorfer, Tractatus de confessione</head>
+                    <head>Thomas Aquinas, Thomas Ebendorfer, papal indulgences.</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL3" scheme="folios"/>
+                                            <locus from="SR1" to="SR3" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="305" unit="mm"/>
+                                            <width quantity="210" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="3"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="3"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. <locus from="1r" to="26r" scheme="folios"/>: double foliation. Error in foliation: f. 1-266, 268-378.  <secFol>Ad secundum sic proceditur</secFol></foliation>
+                                <collation>
+                                    <formula>1-9(12), 10(1+10), 11-24(12), 25(24), 26-28(12), 29(12+2), 30(6), 31(12) </formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/6810bb67f060c60001cbf4dc/viewOnly">VisColl collation. </ref>The collation of the last three quires is tentative. Quires and leaves were misplaced when the manuscript was rebound. On <locus from="364v" to="364v" scheme="folios"/> a catchword refers to <locus from="359r" to="359r" scheme="folios"/>. Several leaves appear to be attached singletons. 
+                                    </p>
+                                    <catchwords>Catchwords by different hands in different places on most quires, see e.g. <locus from="48v" to="48v" scheme="folios"/> and <locus from="143v" to="143v" scheme="folios"/>.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner, National Library book label with current signum; bottom left corner in ink: <quote>1912/45</quote> (accession number). </note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. Leather and marbled paper over cardboard. <locus from="Spine" to="Spine" scheme="other"/>, stamped in gold: <quote>TH. DE HASELBACH COLLATIONES DE CONFESSIONE</quote>, <quote>A 210</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="315" unit="mm"/>
+                                        <width quantity="230" unit="mm"/>
+                                        <depth quantity="80" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin><p>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
+                            </origPlace>, <origDate notBefore="1425" notAfter="1475">15th century, middle of</origDate>. All watermarks seem to point to southern Germany or <placeName ref="https://www.manuscripta.se/place/100208">Austria</placeName> and the middle of the 15th century. The inclusion of a bull by Nicholas V (1397–1455) gives a terminus post quem for that particular text (which appears to be a later addition).
+                        </p></origin>
+                        <provenance><p>Provenance unknown. </p></provenance>
+                        <acquisition><p>Purchased by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> at the estate auction of <persName ref="https://www.manuscripta.se/person/102700">Christian Hammer</persName> in <placeName ref="https://www.manuscripta.se/place/100078">Stockholm</placeName> <date when="1912"/>. </p></acquisition>
+                    </history>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1ra" to="303rb" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102691">
+                                                                                          Thomas
+                                                                                          Aquinas
+                                                                                                                                     
+                                                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </persName>
+                                </author>
+                                <title type="desc">Summa theologiae II-II</title>
+                                <incipit>Post comunem consideracionem de virtutibus et viciis et aliis ad moralem materiam </incipit>
+                                <explicit>nisi forte quando pugiles sunt valde inpares uirtute et arte et cetera</explicit>
+                                <note>
+                                    <p>
+                                                                                          The text starts with ST II-II, prologue; ends with ST II-II q. 95, art. 10. <locus from="120ra" to="124ra" scheme="folios"/> are identical to <locus from="115va" to="119rb" scheme="folios"/>. This has been commented upon by a contemporary hand, which has marked the end of <locus from="119rb" to="119rb" scheme="folios"/> with <quote>sequitur quartus inmediate signo tali</quote> and a signe-de-renvoi, which is repated after line 11 on <locus from="124ra" to="124ra" scheme="folios"/>; in addition,  <locus from="120r" to="123v" scheme="folios"/> are marked in the top and bottom margin with the words <quote>vacat</quote> and <quote>superfluit</quote>.
+                                                                                                                                     
+                                                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                    <p>
+                                                                                          <locus from="303v" to="303v" scheme="folios"/>: guidelines, but no text. 
+                                                                                                                                     
+                                                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107449" type="short">Opera omnia</title>
+                                    <citedRange unit="volume" from="8" to="9"/>
+                                </bibl>
+                            </msItem>
+                            <msItem>
+                                <locus from="304rb" to="310va" scheme="folios"/>
+                                <title type="desc">List of headings</title>
+                                <note>List of headings covered by the previous text. On <locus from="310rb" to="310rb" scheme="folios"/> the final rubric reads: <quote>Tantum de registro illius prime partis secunda secunde sancti thome</quote>. However, on <locus from="310va" to="310va" scheme="folios"/> the list continues with the headings for ST q. 92-95. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="311ra" to="312rb" scheme="folios"/>
+                                <title type="desc">Sermon</title>
+                                <rubric>Assit in ?primo? sancta maria et cetera</rubric>
+                                <incipit>Auctoritates sacre scripture lucas 17 Cum omnia feceritis (Luke 17:10)</incipit>
+                                <explicit>Et in aue maria petimus quod domina nostra impetret nobis quod in pater noster orauimus Amen</explicit>
+                                <finalRubric>Deo gracias et cetera </finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locusGrp>
+                                    <locus from="312va" to="364vb" scheme="folios"/>
+                                    <locus from="369ra" to="376va" scheme="folios"/>
+                                </locusGrp>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102685">
+                                        Thomas
+                                        Ebendorfer
+                                                                                                            
+                                                                                                  
+                                                                                        
+                                                                              
+                                                                    
+                                                          
+                                                
+                                                                            
+                                    
+                                    </persName>
+                                </author>
+                                <title type="desc">Tractatus de confessione</title>
+                                <rubric>TRactatus de confessione</rubric>
+                                <incipit>Ecce nunc tempus acceptabile (2 Corinth. 6:2) dicit Apostolus 2<hi rend="super">a</hi> ad corinthos 6<hi rend="super">o </hi>Haymo exponens uerba premissa dicit</incipit>
+                                <explicit>Sapiens sibi uidetur diues pauper autem prudens scrutabitur eum et cetera Amen </explicit>
+                                <finalRubric>Expliciunt collaciones Reuerendi magistri necnon Egregii doctoris Thome de haselbach de confessione Et hoc de u<hi rend="super">e</hi> sensibus Deo gracias et cetera</finalRubric>
+                                <note>The final part of the text is in disorder due to faulty rebinding. The end of the text is found on <locus from="358va" to="358va" scheme="folios"/>. The correct order may be <locus from="369" to="376" scheme="folios"/>, <locus from="360" to="364" scheme="folios"/>, <locus from="359" to="359" scheme="folios"/>, and finally <locus from="358" to="358" scheme="folios"/>. However, this is not enitirely certain, sinc a comparison has only been made with other manuscripts containing the text, because of the lack of a modern edition.  </note>
+                            </msItem>
+                            <msItem>
+                                <locusGrp>
+                                    <locus from="358va" to="358vb" scheme="folios"/>
+                                    <locus from="365ra" to="368vb" scheme="folios"/>
+                                    <locus from="377ra" to="378va" scheme="folios"/>
+                                </locusGrp>
+                                <title type="desc">Indulgences and papal bulls</title>
+                                <rubric>Indulgencie</rubric>
+                                <incipit>Item dominus iohannes papa xxii diuinum cultum </incipit>
+                                <explicit>Sanctus thomas in scripto ?super? distinctio 22 pena non potest tolli manente culpa et cetera</explicit>
+                                <note>
+                                    <p>
+                                                                                                              Copies of different indulgences and bulls by the following popes:
+                                                                                                          
+                                                                                                          
+                                                                                                     
+                                                                                                     
+                                                                                                
+                                                                                                
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                                                                                              <locus from="358va" to="358va" scheme="folios"/>: John XXII;
+                                                                                                          
+                                                                                                          
+                                                                                                     
+                                                                                                     
+                                                                                                
+                                                                                                
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                                                                                              <locus from="365ra" to="365ra" scheme="folios"/>: Eugene IV;
+                                                                                                          
+                                                                                                          
+                                                                                                     
+                                                                                                     
+                                                                                                
+                                                                                                
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                                                                                              <locus from="365vb" to="365vb" scheme="folios"/>: Clement VI;
+                                                                                                          
+                                                                                                          
+                                                                                                     
+                                                                                                     
+                                                                                                
+                                                                                                
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                                                                                              <locus from="367va" to="367va" scheme="folios"/>: Nicholas V.
+                                                                                                          
+                                                                                                          
+                                                                                                     
+                                                                                                     
+                                                                                                
+                                                                                                
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </p>
+                                    <p>
+                                                                                                              The seven leaves containing these texts are disordered due to faulty rebinding. 
+                                                                                                          
+                                                                                                          
+                                                                                                     
+                                                                                                     
+                                                                                                
+                                                                                                
+                                                                                           
+                                                                                           
+                                                                                      
+                                                                                      
+                                                                                 
+                                                                                 
+                                                                            
+                                                                            
+                                                                       
+                                                                       
+                                                                  
+                                                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </p>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="378v" scheme="folios"/>
+                                            <locus from="1" to="378" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="305" unit="mm"/>
                                                 <width quantity="215" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="1" to="108" scheme="folios"/>
+                                                </locusGrp>
+                                                <locusGrp>
+                                                    <locus from="250" to="291" scheme="folios"/>
+                                                    <locus from="306" to="309" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Oxhead with eyes and ears, above double line rod (converging into a single line) ending in flower. </term>
+                                                <note>Similar to Piccard II:3, XIII, 59-62.</note>
+                                            </watermark>
+                                            <watermark n="2">
+                                                <locusGrp>
+                                                    <locus from="109" to="119" scheme="folios"/>
+                                                    <locus from="292" to="305" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Tower.</term>
+                                                <note>Similar to Piccard III, II, 333-350.</note>
+                                            </watermark>
+                                            <watermark n="3">
+                                                <locusGrp>
+                                                    <locus from="120" to="249" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Tower,</term>
+                                                <note>Similar to Piccard III, I, 318-319.</note>
+                                            </watermark>
+                                            <watermark n="4">
+                                                <locusGrp>
+                                                    <locus from="310" to="334" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Oxhead, above single line rod ending in cross with slanted bar.</term>
+                                                <note>Similar to Piccard II:2, V, 305-313.</note>
+                                            </watermark>
+                                            <watermark n="5">
+                                                <locusGrp>
+                                                    <locus from="335" to="378" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Oxhead with ears, above single line rod ending in star.</term>
+                                                <note>Similar to Piccard II:2, V, 636-637.</note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="378" unit="folios"/>
                                     </extent>
+                                    <foliation>
+                                        <locus from="1v" to="291r" scheme="folios"/>: chapter numbers in red ink, chaper headings in the upper margin in black ink underlined in red. 
+                                    </foliation>
+                                    <condition>Stained throughout. <locus from="358" to="358" scheme="folios"/> has been mounted on modern paper. The leaves at the end of the manuscript are disordered due to faulty rebinding.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="38 42">
+                                        <dimensions type="written">
+                                            <height min="200" max="230" unit="mm"/>
+                                            <width min="135" max="150" unit="mm"/>
+                                        </dimensions>
+                                        <note>The dimensions of the written area varies with the different hands, as does the use of inked guidelines. </note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <p>Many different scribes have contributed to the texts, especially to the first text, Summa theologiae. Here, six different hands seem to be involved.</p>
+                                <handNote xml:id="hand-1"><locus from="1r" to="12v" scheme="folios"/>Semihybrida. </handNote>
+                                <handNote xml:id="hand-2"><locus from="13r" to="97v" scheme="folios"/>Cursive or possibly semi-hybrida, some irregular looping. </handNote>
+                                <handNote xml:id="hand-3"><locus from="97v" to="119r" scheme="folios"/>Semihybrida. </handNote>
+                                <handNote xml:id="hand-4"><locus from="120r" to="249v" scheme="folios"/>Semihybrida. </handNote>
+                                <handNote xml:id="hand-5"><locus from="250r" to="291v" scheme="folios"/>Semihybrida. </handNote>
+                                <handNote xml:id="hand-6"><locus from="292r" to="303r" scheme="folios"/>Semihybrida.  </handNote>
+                                <handNote xml:id="hand-7"><locus from="304r" to="310v" scheme="folios"/>Semihybrida. </handNote>
+                                <handNote xml:id="hand-8"><locus from="311r" to="334v" scheme="folios"/>Semihybrida. </handNote>
+                                <handNote xml:id="hand-9"><locusGrp>
+                                        <locus from="335r" to="364v" scheme="folios"/>
+                                        <locus from="369r" to="376v" scheme="folios"/>
+                                    </locusGrp>Semihybrida. </handNote>
+                                <handNote xml:id="hand-10"><locusGrp>
+                                        <locus from="358v" to="358v" scheme="folios"/>
+                                        <locus from="365r" to="368v" scheme="folios"/>
+                                        <locus from="377r" to="378v" scheme="folios"/>
+                                    </locusGrp>Semihybrida. </handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="13v" to="337r" scheme="folios"/>
+                                    <note>Scattered additions in the margin by the scribe or a contemporary hand, and at least one additional hand. The marginal text consist of corrections, additions of omitted text keyed to the main text with signes-de-renvoi, and glossing; e.g. on <locus from="133v" to="133v" scheme="folios"/>, a refrence to another chapter or text. There are also some manicules and nota marks, e.g. on <locus from="80v" to="80v" scheme="folios"/>. On <locus from="290v" to="297r" scheme="folios"/> a modern hand has marked chapters in pencil. </note>
+                                </p>
+                                <p>
+                                    <locus from="24rb" to="24rb" scheme="folios"/>
+                                    <note>A red paragraph initial has been corrected from <quote>A</quote> to <quote>D</quote> in black ink. </note>
+                                </p>
+                                <p>
+                                    <locus from="119r" to="124r" scheme="folios"/>
+                                    <note>A medieval hand has marked the beginning and end of a section of superfluous text. </note>
+                                </p>
+                                <p>
+                                    <locus from="357v" to="370r" scheme="folios"/>
+                                    <note>Modern annotations in pencil in outer corners: <quote>a-ö.</quote></note>
+                                </p>
+                                <p>
+                                    <locus from="370v" to="378v" scheme="folios"/>
+                                    <note>Modern annotations in pencil in outer corners:  <quote>aa-qq</quote>. </note>
+                                </p>
+                                <p>
+                                    <locus from="372v" to="372v" scheme="folios"/>
+                                    <note>In the margin by a modern hand in pencil: <quote>m.cccc. cv.</quote> (the final <quote>c</quote> is possibly an <quote>L</quote>).</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in black or brown ink, capitals touched in red. </p>
+                                <decoNote type="initials"><p>
+                                    <locus from="1ra" to="1ra" scheme="folios"/>: opening historiated initial P over 18 lines in gold, outlined in red and black ink with flourishing in red. The counterspace contains an image of Thomas Aquinas seated at a lectern, which has an open book on it. At the master's feet are five seated monks, three of which have covered heads and are holding open books. On the master's shoulder sits a white dove and on his head a hat. The image is painted in thick opaque colours. The main colours are: yellow for the lectern, white and black for the clothes and a blue background. The initial extends into a 3/4 border of green acanthus leaves and with red and blue flowers. 
+                                    <locus from="1va" to="291rb" scheme="folios"/>: chapters are opened by plain initials over 2-6 lines in red. From <locus from="292ra" to="301vb" scheme="folios"/> there is spaced reserved for intitials, but no initials. 
+                                    <locus from="311ra" to="311ra" scheme="folios"/>, <locus from="312va" to="312va" scheme="folios"/>: texts opened by a plain initial over 3 lines in red. 
+                                    <locus from="313ra" to="375va" scheme="folios"/>: paragraphs opened by plain initials over 2-4 lines in red. 
+                                </p></decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origDate notBefore="1451" notAfter="1500">15th century, second half</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>

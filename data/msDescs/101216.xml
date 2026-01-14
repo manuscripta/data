@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101216</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="robibock">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,7 +39,7 @@
                             <idno type="id" subtype="Regina">004902314</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Registrum biblie</head>
+                    <head>Summarium Biblie</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
@@ -43,40 +47,96 @@
                                     <measure type="leftFlyleaves" unit="folios" quantity="0"/>
                                     <measure type="rightFlyleaves" unit="folios" quantity="0"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. </foliation>
+                                <collation>
+                                    <p>The fragment consist of 6 bifolia and 1 singleton (<locus from="2" to="2" scheme="folios"/>). The leaves are detached. </p>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>The fragment is stored in a modern cardboard folder. </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100104">Germany?</placeName>
+                                </origPlace>, <origDate notBefore="1451" notAfter="1500">15th century, second half</origDate>. Dating and origin based on watermarks. 
+                            </p>
+                        </origin>
+                        <provenance>
+                            <p>Provenance unknown. Found among the manuscripts and given current signum in <date when="1962"/>.</p>
+                        </provenance>
+                    </history>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="13v" scheme="folios"/>
+                                <title type="desc">Summarium Biblie</title>
+                                <incipit>Sunt genes ex le nu de Io iu ruth rg pal es ne</incipit>
+                                <explicit>flebunt ad cenam surgunt sponsam venio iam</explicit>
+                                <finalRubric>Explicit registrum biblie continens libros et capitula noui et ueteris testamenti </finalRubric>
+                                <note>
+                                    <p>The fragment contains text from the so-called Summarium Biblicum, for more information see <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107419" type="short">Doležalová (2013)</title>
+                                        </bibl> and the earlier version which includes an edition/transcription, <bibl>
+                                            <title type="short" ref="https://www.manuscripta.se/bibl/107532">Doležalová (2007)</title>
+                                            <citedRange unit="page" to="35" from="19"/>
+                                        </bibl>. <locus from="3" to="3" scheme="folios"/> in the fragment corresponds to the beginning of the edition.  </p>
+                                    <p/>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="13v" scheme="folios"/>
+                                            <locus from="1" to="13" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="215" unit="mm"/>
-                                                <width quantity="140" unit="mm"/>
+                                                <width quantity="145" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="1" to="13" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Oxhead with eyes, ears and nostrils; above, single line rod with star. </term>
+                                                <note>Similar to Piccard II:2, VII, 125-495. </note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="13" unit="folios"/>
                                     </extent>
+                                    <condition>Paper stained and worn. <locus from="1r" to="1r" scheme="folios"/>: ink blotches in upper left part of text with some loss of text as result. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="11">
+                                        <dimensions type="written">
+                                            <height quantity="165" unit="mm"/>
+                                            <width quantity="105" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in ink. </note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Upper left corner, in pencil by a modern hand: <quote>A 250</quote> (current signum); bottom of page: National Library stamp. </note>
+                                </p>
+                            </additions>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origDate notBefore="1451" notAfter="1500">15th century, second half</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>

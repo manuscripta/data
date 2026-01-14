@@ -21,7 +21,7 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101146</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -52,16 +52,27 @@
                                             <locus from="RCI" to="RCI" scheme="other"/>
                                         </locusGrp>
                                         <material>Paper</material>
-                                        <dimensions type="leaf"/>
+                                        <dimensions type="leaf">
+                                            <height quantity="205" unit="mm"/>
+                                            <width quantity="135" unit="mm"/>
+                                        </dimensions>
                                     </p>
                                 </support>
                                 <extent>
                                     <measure type="leftFlyleaves" unit="folios" quantity="1"/>
                                     <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
-                                <foliation>Modern pagination in pencil (page number on every recto).<locus from="1" to="9" scheme="pages"/>: modern foliation in black ink in the bottom right corner. <secFol>Hoc inquit Fratres</secFol></foliation>
+                                <foliation>Modern pagination in pencil (page number on every recto). <locus from="1" to="9" scheme="pages"/>: modern foliation in black ink in the bottom right corner. <secFol>Hoc inquit Fratres</secFol></foliation>
                                 <collation>
-                                    <formula>1-7(12), 8 (12, lacks 12?)</formula>
+                                    <formula>1-7(12), 8 (12, lacks 12)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67f8f718f060c60001cbd401/viewOnly">VisColl collation
+                                                  
+                                              
+                                             
+                                         
+                                        </ref>
+                                    </p>
                                     <catchwords>Catchwords at the end of each quire, except for quire 4.</catchwords>
                                 </collation>
                             </supportDesc>
@@ -69,7 +80,7 @@
                         <additions>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
-                                <note>Top of page in pencil and red crayon by a modern hand: 18 ??; IOC; ? 18X CM; 10 4; in black ink by a modern hand: <quote>Inköpt från F. Butsch i Augsburg Juni 1870 för 3 fl. 30 kr Katal. LXVIII n. 222.</quote>; bottom left corner: National Library book label with current signum. </note>
+                                <note>Top of page in pencil and red crayon by a modern hand: <quote>18 ??</quote>; <quote>7OC</quote>; <quote>?ü? 18X CM</quote>; <quote>10 4</quote>; in black ink by a modern hand: <quote>Inköpt från F. Butsch i Augsburg Juni 1870 för 3 fl. 30 kr Katal. LXVIII n. 222.</quote>; bottom left corner: National Library book label with current signum. </note>
                             </p>
                             <p>
                                 <locus from="SL1r" to="SL1r" scheme="folios"/>
@@ -89,12 +100,36 @@
                         <bindingDesc>
                             <binding contemporary="false">
                                 <p>Modern binding. Cloth and marbled paper over cardboard. <locus from="Spine" to="Spine" scheme="other"/>, ink on paper label: <quote>Suso Horologium aeternae Sapientiae</quote>; stamped in gold: <quote>A 162</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="210" unit="mm"/>
+                                        <width quantity="145" unit="mm"/>
+                                        <depth quantity="20" unit="mm"/>
+                                    </dimensions>
+                                </p>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin>Austria, 1395.</origin>
-                        <acquisition>Purchased by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> from <persName ref="https://www.manuscripta.se/person/102681">F. Butsch</persName> in <placeName ref="https://www.manuscripta.se/place/100004">Augsburg</placeName> in June <date when="1870"/>. </acquisition>
+                        <origin><p>
+                            <origPlace>
+                                <placeName ref="https://www.manuscripta.se/place/100208">Austria?</placeName>
+                            </origPlace>, <origDate when="1395">1395</origDate>. Dating based on colophon on <locus from="189" to="189" scheme="pages"/>. Künzle argues that the manuscript may stem from a Cistercian monastery in Austria (see <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107426" type="short">Künzle (1977)</title>
+                                <citedRange unit="page" from="178" to="178"/>
+                            </bibl>). Earlier Lehmann had argued that the manuscript might have been written in a Dominican monastery in <placeName ref="https://www.manuscripta.se/place/100322">Soest</placeName> (<bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107421" type="short">Lehmann (1935)</title>
+                                <citedRange unit="page" from="125" to="126"/>
+                            </bibl>). An addition to the colophon states that the text was written by <quote>brother Tilmann</quote>.
+                        </p></origin>
+                        <provenance><p>Provenance unknown. During the 19th century the manuscript belonged to the book dealer and collector <persName ref="https://www.manuscripta.se/person/102681">
+                                     Fidelis
+                                     Butsch
+                                 
+                                 
+                            
+                            </persName> in <placeName ref="https://www.manuscripta.se/place/100004">Augsburg</placeName>. </p></provenance>
+                        <acquisition><p>Purchased by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> from <persName ref="https://www.manuscripta.se/person/102681">F. Butsch</persName> in <placeName ref="https://www.manuscripta.se/place/100004">Augsburg</placeName> in June <date when="1870"/>. </p></acquisition>
                     </history>
                     <additional>
                         <listBibl>
@@ -125,14 +160,23 @@
                                     <persName ref="https://www.manuscripta.se/person/102680">
                                         Henry
                                         Suso
+                                                                                        
+                                                                              
+                                                                    
                                     
                                     </persName>
                                 </author>
                                 <title type="desc">Horologium sapientiae</title>
-                                <rubric><supplied reason="damage">Inc</supplied>ipit prologus in ho<supplied reason="damage">rolo</supplied>gium Sapiencie <supplied reason="damage">ca</supplied>pitulum primum </rubric>
+                                <rubric>
+                                    <supplied reason="damage">Inc</supplied>ipit prologus in ho<supplied reason="damage">rolo</supplied>gium Sapiencie <supplied reason="damage">ca</supplied>pitulum primum 
+                                                                                
+                                                                      
+                                                            
+                                
+                                </rubric>
                                 <incipit>SEntite de domino in bonitate et in simplicitate cordis querite illum </incipit>
                                 <explicit>te regem glorie dominumque virtutum in decore suo conspicientes ihesum christum dominum nostrum qui cum patre et spiritu sancto viuit et regnat per omnia secula seculorum Amen</explicit>
-                                <colophon><locus from="189a" to="189a" scheme="pages"/>Explicit horologium Sapiencie Anno Domini Millesimo Trecentesimo nonagesimo Quinto Completum in Die Quatuor Coronatorum hora quasi Completorii vivat qui scripsit viuat qui scribere iussit <add place="below">per manus fratris Tilmanni pie memorie</add></colophon>
+                                <colophon><locus from="189a" to="189a" scheme="pages"/>Explicit horologium Sapiencie Anno Domini Millesimo Trecentesimo nonagesimo Quinto Completum in Die Quatuor Coronatorum hora quasi Conpletorii vivat qui scripsit viuat qui scribere iussit <add place="below">per manus fratris Tilmanni pie memorie</add></colophon>
                                 <bibl>
                                     <title ref="https://www.manuscripta.se/bibl/107426" type="short">Künzle (1977)</title>
                                 </bibl>
@@ -149,25 +193,48 @@
                                                 <height quantity="205" unit="mm"/>
                                                 <width quantity="135" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="1" to="190" scheme="pages"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Oxhead with eyes, nostrils, and ears, above single line rod with star on top.</term>
+                                                <note>Similar to Piccard II:2, VII.</note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="95" unit="folios"/>
                                     </extent>
+                                    <condition>Paper stained throughout with some effect on legibility, e.g. <locus from="5" to="6" scheme="pages"/>. <locus from="1" to="1" scheme="pages"/>: dark and stained, which indicates the manuscript may have been stored without binding for some time. In the corners there are holes with rust stains, which partially bleeds through to <locus from="7" to="7" scheme="pages"/>. Edges trimmed, with some loss of marignal additions. <locus from="40" to="190" scheme="pages"/>: holes from bookworms. Leaves repaired and strengthened with paper strips in places, e.g. <locus from="2" to="2" scheme="pages"/> and <locus from="23" to="23" scheme="pages"/>.</condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="2" writtenLines="36">
-                                        <dimensions type="written"/>
+                                        <dimensions type="written">
+                                            <height quantity="155" unit="mm"/>
+                                            <width quantity="105" unit="mm"/>
+                                        </dimensions>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
                                 <p>Gothic cursive. </p>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus to="1r" scheme="folios" from="1r"/>
+                                    <note>Upper part of page, around the rubric: traces of writing by a later hand in dark ink; bottom of page: letters in red ink, only partially legible due to trimming.  </note>
+                                </p>
+                                <p>
+                                    <locus from="33" to="160" scheme="pages"/>
+                                    <note>Scattered corrections in the margin by the scribe and at least one other hand. Occasional manicules in the margin, e.g. on <locus from="72" to="72" scheme="pages"/>. </note>
+                                </p>
+                            </additions>
                             <decoDesc>
                                 <p>Main text in brown ink, rubrics in red, capitals touched in red. </p>
-                                <decoNote type="initials"><locus from="1a" to="1a" scheme="pages"/>: Opening plain initial S over 8 lines in red. 
-                                    <locus from="4a" to="187b" scheme="pages"/>: plain initials over 3-5 lines in red, some with interior reserved shapes. </decoNote>
+                                <decoNote type="initials"><p>
+                                    <locus from="1a" to="1a" scheme="pages"/>: opening plain initial S over 8 lines in red. 
+                                    <locus from="4a" to="187b" scheme="pages"/>: plain initials over 3-5 lines in red, some with interior reserved shapes. 
+                                </p></decoNote>
                             </decoDesc>
                         </physDesc>
                         <history/>

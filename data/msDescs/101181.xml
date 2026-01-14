@@ -21,7 +21,7 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101181</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -39,7 +39,7 @@
                             <idno type="id" subtype="Regina">004852455</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Bernard of Clairvaux, Sermons</head>
+                    <head>Theological miscellany (Bernard of Clairvaux, Lotharius dei Conti di Segni)</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
@@ -56,6 +56,13 @@
                                             <height unit="mm" min="290" max="296"/>
                                             <width min="200" max="205" unit="mm"/>
                                         </dimensions>
+                                        <watermark n="1">
+                                            <locusGrp>
+                                                <locus from="SL1" to="SL1" scheme="other"/>
+                                                <locus from="SR1" to="SR1" scheme="other"/>
+                                            </locusGrp>
+                                            <term type="watermarkMotif">The word TUMBA.</term>
+                                        </watermark>
                                     </p>
                                 </support>
                                 <extent>
@@ -63,12 +70,22 @@
                                     <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
                                 <foliation>Modern foliation in pencil, 1-278. <secFol>domine obsecro complaceat tibi</secFol></foliation>
+                                <collation>
+                                    <formula>1(12, lacks 12), 2(12+1, lacks 1 and 2), 3-16(12), 17(10), 18-23(12), 24(12, lacks 7-12)</formula>
+                                    <p>
+                                        The last leaf of quire 1 (<locus from="12" to="12" scheme="folios"/>) has been detached and subsequently glued to the first leaf of quire 2 (<locus from="13" to="13" scheme="folios"/>), while the stubs of the missing first two leaves of quire 2 are clearly visible. Consistently with this, there is a break in the text between <locus from="12v" to="12v" scheme="folios"/> and <locus from="13r" to="13r" scheme="folios"/>.
+                                    </p>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/67fe7aaaf060c60001cbd787/viewOnly">VisColl collation</ref>
+                                    </p>
+                                    <catchwords>Catchwords on quires 2-10, 13-16 (14 and 15 only partially visible due to trimming), and 22.</catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
                         <additions>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
-                                <note>Top of page, in ink by a conteporary hand over 5 lines, a table of contents: <quote>In isto volumine continetur tractatus infrascripti Primo Sermones Beatis Bernhardi de toto anno Item acta consilii Basilensis Item tractatus de arta moriendi Item tractatus de miseria humane condicionis</quote>; bottom right corner: National Library book label with the current signum.</note>
+                                <note>Top of page, in ink by a conteporary hand over 5 lines, a table of contents: <quote>In isto volumine continetur tractatus infrascripti Primo Sermones Beatis Bernhardi de toto anno Item acta consilii Basilensis Item tractatus de arte moriendi Item tractatus de miseria humane condicionis</quote>; bottom right corner: National Library book label with the current signum.</note>
                             </p>
                             <p>
                                 <locus from="SL1" to="SL1" scheme="folios"/>
@@ -77,7 +94,7 @@
                         </additions>
                         <bindingDesc>
                             <binding contemporary="true">
-                                <p>Medieval binding. Brown leather over wooden boards. 5 double raised bands and endbands. Hooked clasps with straps of green facbric. Decorated centre and corner bosses. Spine, in ink on a paper label: <quote>In hoc volumine contin. i Sermones beati Bernhardi 2 Acta concilii Basil. 3 Tract. de arte moriendi 4 ---- humanae miseria condicionis</quote> <!--svårt att avgöra exakt vad det står-->; in ink on a paper label: <quote>No 23 1. Sermones Bernhardi 2. Acta Concilii Basil. etc.</quote>; stamped in gold: the current signum, <quote>A 206</quote>; in ink on a paper label: <quote>Bernhardi sermones etc 23</quote>; in ink on a paper label, on top of the remnants of another paper label: <quote>e. 30. 3. 10.</quote>. </p>
+                                <p>Medieval binding. Brown leather over wooden boards. 5 double raised bands and endbands. Hooked clasps with straps of green fabric. Decorated centre and corner bosses. <locus from="Spine" to="Spine" scheme="other"/>, in ink on a paper label: <quote>In hoc volumine contin. 1 Sermones beati Bernhardi 2 Acta concilii Basil. 3 Tract. de arte moriendi 4 <unclear reason="illegible" unit="chars"/> m<supplied reason="damage">ise</supplied>r<supplied reason="damage">i</supplied>a human<supplied reason="damage">ae</supplied> condicionis</quote> and, on top of this, <quote>96</quote><!--svårt att avgöra exakt vad det står-->; in ink on a paper label: <quote>No 23 1. Sermones Bernhardi 2. Acta Concilii Basil. etc.</quote>; stamped in gold: the current signum, <quote>A 206</quote>; in ink on a paper label: <quote>BERNHARDI sermones etc 23</quote>; in ink on a paper label pasted on top of the remnants of another paper label: <quote>e. 30. 3. 10.</quote>. </p>
                                 <p>
                                     <dimensions type="binding">
                                         <height quantity="300" unit="mm"/>
@@ -85,16 +102,22 @@
                                         <depth quantity="90" unit="mm"/>
                                     </dimensions>
                                 </p>
-                                <decoNote type="tooling">Blind tooled panels with lozenge patterns inside on <locus from="LCO" to="LCO" scheme="other"/> and <locus from="RCO" to="RCO" scheme="other"/>.</decoNote>
-                                <condition>The leather is worn and, on <locus from="LCO" to="LCO" scheme="other"/>, cracked along the spine. One of the fabric straps has been replaced with modern leather.</condition>
+                                <decoNote type="tooling">
+                                    <p>Blind tooled panels with lozenge patterns inside on <locus from="LCO" to="LCO" scheme="other"/> and <locus from="RCO" to="RCO" scheme="other"/>.</p>
+                                </decoNote>
+                                <condition>The leather is worn and, on <locus from="LCO" to="LCO" scheme="other"/>, cracked along the spine with some of the bands partially exposed. One of the fabric straps has been replaced with modern leather.</condition>
                             </binding>
                         </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origDate notBefore="1401" notAfter="1500">15th century</origDate>. Origin and provenance unknown.
+                            <p>
+                                <origDate notBefore="1401" notAfter="1500">15th century</origDate>. Origin and provenance unknown. Three of the four watermarks found in Unit 2 (the two gloves and the bull) are similar to watermarks found in <placeName ref="https://www.manuscripta.se/place/100331">Basel</placeName> around <date when="1430"/> (cf. Piccard XVII, IV, 1216; Piccard XVII, IV, 1202; and Piccard XV, VI, 939).
+                            </p>
                         </origin>
-                        <provenance>The manuscript has been at the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> since at least the 18th century; it is listed in the catalogue of 1734 (U 125 e) as <quote>n<hi rend="super">o</hi> 23</quote>. and as <quote>e. 30. 3. 10.</quote> in Hammarskölds catalogue of the 19th century. The signum <quote>96</quote> on the spine has not been identified.</provenance>
+                        <acquisition>
+                            <p>Acquisition date unknown, but the manuscript has been at the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> since at least the 18th century; it is listed in the catalogue of 1734 (U 125 e) as <quote>n<hi rend="super">o</hi> 23</quote> and as <quote>e. 30. 3. 10.</quote> in Hammarsköld's catalogue of the 19th century. The signum <quote>96</quote> on the spine has not been identified.</p>
+                        </acquisition>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -106,14 +129,8 @@
                                 <locus from="1r" to="200v" scheme="folios"/>
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/102595">
-                                                                                Bernard
-                                                                                of Clairvaux
-                                                                            
-                                                                            
-                                                                       
-                                                                       
-                                                                  
-                                                                  
+                                                                 Bernard
+                                                                 of Clairvaux                           
                                                              
                                                              
                                                         
@@ -128,40 +145,1579 @@
                                 </author>
                                 <title type="desc">Sermons</title>
                                 <rubric>Incipiunt sermones beati Bernhardi abbatis de aduentu domini et de toto anno</rubric>
-                                <incipit>HOdie fratres celebramus aduentus domini</incipit>
-                                <explicit>aut eciam timor sit in finibus nostris sed graciarum accio et vox exultacionis sine fine amen</explicit>
+                                <msItem>
+                                    <locus from="1r" to="2v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in adventu Domini</title>
+                                    <incipit>HOdie fratres celebramus aduentus domini initium</incipit>
+                                    <explicit>magnum est exemplum mortalibus eundi et perueniendi ad ipsum qui est benedictus in secula amen</explicit>
+                                    <note>From the middle of <locus from="2r" to="2r" scheme="folios"/> (<quote>Considerate eciam ad quid venerit</quote>), the text of the manuscript differs from that of the edition.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="161" to="170"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="2v" to="3v" scheme="folios"/>
+                                    <title type="desc">Sermo sextus in adventu Domini</title>
+                                    <incipit>NOlo vos fratres ignorare tempus visitacionis</incipit>
+                                    <explicit>ab exspectatione nostra saluator quem exspectamus ihesus christus dominus noster qui est super omnia benedictus in secula amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="191" to="195"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="3v" to="5v" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in adventu Domini</title>
+                                    <incipit>IN aduentu domini quem hodie celebramus </incipit>
+                                    <explicit>et semper indignum se iudicet et inutilem</explicit>
+                                    <note>The upper outer corner of <locus from="4r" to="4r" scheme="folios"/> has been torn off resulting in loss of text.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="175" to="181"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="5v" to="6v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in adventu Domini</title>
+                                    <incipit>DIgnum est fratres vt tota cum deuotione celebremus aduentum domini</incipit>
+                                    <explicit>qui pro reconciliandis sibi peccatoribus tanta sustinuit</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="182" to="187"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="6v" to="7v" scheme="folios"/>
+                                    <title type="desc">Sermo quintus in adventu Domini</title>
+                                    <incipit>DIximus nuper hiis qui deargentauerunt pennas</incipit>
+                                    <explicit>Et alibi Prope est verbum in ore tuo et in corde tuo (Rom. 10:8)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="188" to="190"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="7v" to="8r" scheme="folios"/>
+                                    <title type="desc">Sermo XXXII de diversis</title>
+                                    <incipit>SIc nos existimet homo vt ministros christi</incipit>
+                                    <explicit>si vmquam racio perdiderit intencionis rectitudinem</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="218" to="221"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="8r" to="10v" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in vigilia nativitatis Domini</title>
+                                    <incipit>HOdie scietis quia veniet dominus et mane videbitis gloriam <gap reason="editorial"/> (Ex. 16:7) Vos qui in puluere estis</incipit>
+                                    <explicit>et in fide sanitas est quia qui crediderit saluus erit</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="211" to="219"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="10v" to="12v" scheme="folios"/>
+                                    <title type="desc">Sermo sextus in vigilia nativitatis Domini</title>
+                                    <incipit>AVditum audiuimus plenum gracia dignum accepcione </incipit>
+                                    <explicit defective="true">quod offerre incensum dignum</explicit>
+                                    <note>The first two leves of quire 2 are missing, resulting in the loss of the end of the sermon.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="234" to="244"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="13r" to="13r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in vigilia nativitatis Domini</title>
+                                    <incipit defective="true">nobis quoque estimacione faciat preciosam</incipit>
+                                    <explicit>et securus iam suscipe eum qui in bethlehem inde nascitur ihesum christum filium dei</explicit>
+                                    <note>The first two leves of quire 2 are missing, resulting the loss of the beginning of the sermon.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="197" to="202"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="13r" to="14v" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in nativitate Domini</title>
+                                    <incipit>DVo quedam rerum genera fratres in hac natiuitate domini considero</incipit>
+                                    <explicit>auertat hoc a seruis suis qui pro eorum salute dignatus est formam serui accipere vnigenitus dei <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="257" to="262"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="14v" to="15v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in nativitate Domini</title>
+                                    <incipit>AGnoscite dilectissimi quanta sit hodierna sollempnitas cui et dies breuis</incipit>
+                                    <explicit>magnificabit postmodum et glorificabit magnus et gloriosus aduentus ihesus christus</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="263" to="266"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="15v" to="16v" scheme="folios"/>
+                                    <title type="desc">Sermo quintus in nativitate Domini</title>
+                                    <incipit>BEnedictus deus et pater domini nostri ihesu christi pater misericordiarum et deus totius consolacionis</incipit>
+                                    <explicit>verus vtique dies ex die salutare dei ihesus christus dominus noster <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="266" to="270"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="16v" to="17v" scheme="folios"/>
+                                    <title type="desc">De festivitatibus sancti Stephani, sancti Ioannis, et Sanctorum innocentium</title>
+                                    <incipit>BEnedictus qui venit in nomine domini <gap reason="editorial"/> (Ps. 117:26) Benedictum nomen glorie eius</incipit>
+                                    <explicit>qui vnus cum eo verum est deus super omnia benedictus in secula</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="270" to="273"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="17v" to="19r" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in circumcisione Domini</title>
+                                    <incipit>POstquam consummati sunt dies octo <gap reason="editorial"/> (Gen. 17:12) Audiuimus paucis expressum</incipit>
+                                    <explicit>sicut ait apostolus Prouidentes bona non tantum coram deo sed eciam coram hominibus</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="277" to="281"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="19r" to="21v" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in circumcisione Domini</title>
+                                    <incipit>IN circumcisione domini fratres habemus quod amemus</incipit>
+                                    <explicit>vt nichil plus nichil minus nichil aliter quam imperatum sit faciatis</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="281" to="291"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="21v" to="24r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in epiphania Domini</title>
+                                    <incipit>APparuit benignitas <gap reason="editorial"/> (Tit. 3:4) Gracias deo per quem sic habundat consolacio</incipit>
+                                    <explicit>tot incentiuis inflammatur caritas nostra et cetera</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="291" to="300"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="24r" to="25r" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in epiphania Domini</title>
+                                    <incipit>TRes appariciones domini legimus vno quidem die</incipit>
+                                    <explicit>quale nobis expressit qui de eius corde processit</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="300" to="304"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="25r" to="27v" scheme="folios"/>
+                                    <title type="desc">In epiphania (Sermones varii)</title>
+                                    <incipit>TRiplicem huius festiuitatis racionem a sanctis patribus traditam esse</incipit>
+                                    <explicit>vbi nullus dolor sed sempiternus honor inhabitat</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="21" to="27"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="27v" to="28v" scheme="folios"/>
+                                    <title type="desc">In octava epiphaniae</title>
+                                    <incipit>POpulo dure ceruicis cultellus erat necessarius</incipit>
+                                    <explicit>haut dubium quin et leticia simul</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="310" to="313"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="28v" to="30r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in dominica prima post octavam epiphaniae</title>
+                                    <incipit>IN leccione ewangelii hodie fratres audiuimus quia dominus noster iuit ad nupcias</incipit>
+                                    <explicit>quia nec omnibus centuplum repromittitur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="314" to="318"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="30r" to="31v" scheme="folios"/>
+                                    <title type="desc">Sermo LV et LVI de diversis</title>
+                                    <incipit>ERant ibi sex ydrie <gap reason="editorial"/> (John 2:6) Intelligamus has sex ydrias</incipit>
+                                    <explicit>vt ex seruo proueharis in filium</explicit>
+                                    <note>Sermon 55 and 56 are presented as one text.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="280" to="286"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="31v" to="34r" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in dominica prima post octavam epiphaniae</title>
+                                    <incipit>IN operibus domini fratres et minus capaces animos exterior consideracio pascit</incipit>
+                                    <explicit>cum timor expellitur a caritate et implentur omnia feruore spiritus et iocunda deuocione</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="319" to="326"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="34r" to="36r" scheme="folios"/>
+                                    <title type="desc">In conversione sancti Pauli</title>
+                                    <incipit>MErito quidem dilectissimi conuersio doctoris gencium</incipit>
+                                    <explicit>mansuetudinem et humilitatem discentes a christo ihesu domino nostro cui est et sit honor et gloria in secula seculorum amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="327" to="334"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="36r" to="37r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in purificatione sanctae Mariae</title>
+                                    <incipit>HOdie templi dominum in templum domini virgo mater inducit</incipit>
+                                    <explicit>in corde loquitur pacem in plebem suam et super sanctos suos et in eos qui conuertuntur ad cor (Ps. 84:9)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="334" to="338"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="37r" to="38r" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in purificatione sanctae Mariae</title>
+                                    <incipit>GRacias agere debemus redemptori nostro qui tam copiose preuenit nos in benediccionibus</incipit>
+                                    <explicit>incessanter nos corrigere in melius inperfectum vero nostrum diuine misericordie obtutibus iugiter exponamus</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="338" to="340"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="38r" to="39v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in septuagesima</title>
+                                    <incipit>MAgna mihi consolacio est fratres mei in verbo illo domini</incipit>
+                                    <explicit>Vnde et recitetur interim alleluia solempne et humane transgressionis hystoria miserabilis ab exordio recensetur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="344" to="349"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="39v" to="41r" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in quadragesima</title>
+                                    <incipit>COnuertimini ad me in toto corde vestro <gap reason="editorial"/> (Joel 2:12) Quid sibi wlt dilectissimi</incipit>
+                                    <explicit>vt et ipsi misericordiam consequamur a domino nostro ihesu christo <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" to="364" from="359"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="41r" to="42v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in quadragesima</title>
+                                    <incipit>HOdie dilectissimi sacrum quadragesimale tempus <del>ni</del> ingredimur</incipit>
+                                    <explicit>vt sit eciam facies lota ab omni oleo p<supplied reason="omitted">e</supplied>cc<supplied reason="omitted">at</supplied>oris</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="353" to="358"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="42v" to="44r" scheme="folios"/>
+                                    <title type="desc">Sermo sextus in quadragesima</title>
+                                    <incipit>OBsecro vos tamquam aduenas <gap reason="editorial"/> (1 Pet. 2:11) Felices qui presenti seculo </incipit>
+                                    <explicit>vt magna quedam victoria regni nostro ad gloriam nobis proueniat ad salutem</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="377" to="380"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="44r" to="44v" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in quadragesima</title>
+                                    <incipit>ROgo vos dilectissimi tota deuotione suscipite quadragesime ieiunium</incipit>
+                                    <explicit>sicut scriptum est quia in diebus ieiuniorum vestrorum voluntates vestre inueniuntur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="364" to="367"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="44v" to="45v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in quadragesima</title>
+                                    <incipit>QVia ieiunium <del>tempus</del> quadragesimale tempus aduenit </incipit>
+                                    <explicit>Vnde certum est quod numquam vacua redire possit</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="368" to="371"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="45v" to="47v" scheme="folios"/>
+                                    <title type="desc">Sermo quintus in quadragesima</title>
+                                    <incipit>KAritas <del>nuper</del> qua pro nobis sollicitus sum</incipit>
+                                    <explicit>in omni humilitate presumentis de sola vt dignum est miseracione diuina</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="372" to="376"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="47v" to="49v" scheme="folios"/>
+                                    <title type="desc">Sermo XXV de diversis</title>
+                                    <incipit>QVatuor michi videntur orandi modos</incipit>
+                                    <explicit>et quia tuo precepto commonitus tua institucione formatus id presumo domine fons pietatis</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="187" to="193"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="49v" to="50r" scheme="folios"/>
+                                    <title type="desc">Sermo CVII de diversis</title>
+                                    <incipit>DIximus de generibus oracionum dicamus eciam qua puritate sit orandum</incipit>
+                                    <explicit>sicut testatur Petrus apostolus non est personarum acceptor <gap reason="editorial"/> acceptus est illi (Acts 10:34-35)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="379" to="381"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="50r" to="53r" scheme="folios"/>
+                                    <title type="desc">In natali sancti Benedicti</title>
+                                    <incipit>COnuenientibus uobis in vnum ad audiendum verbum salutis</incipit>
+                                    <explicit>temperanciam seminauerunt qui sic libidinem calcauerunt</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="1" to="12"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="53r" to="55v" scheme="folios"/>
+                                    <author>
+                                        <persName ref="https://www.manuscripta.se/person/102690">
+                                                                     Nicholas
+                                                                     of Clairvaux
+                                                                 
+                                                                 
+                                                            
+                                                            
+                                                       
+                                                       
+                                                  
+                                                  
+                                             
+                                             
+                                        </persName>
+                                    </author>
+                                    <title type="desc">Ad viros religiosos</title>
+                                    <incipit>DIxit symon petrus ad ihesum Ecce nos reliquimus omnia <gap reason="editorial"/> (Matt. 9:27) Verba leccionis huius</incipit>
+                                    <explicit>qui viuit vt vitam habeamus et habundanciam habeamus ihesus christus <gap reason="editorial"/> amen</explicit>
+                                    <note> <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107437" type="short">Schneyer (1972)</title>
+                                            <citedRange unit="page" from="250" to="250"/>
+                                            <citedRange unit="number" from="3" to="3"/>
+                                        </bibl>.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="55v" to="57r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in annuntiatione dominica</title>
+                                    <incipit>UT inhabitet gloria in terra nostra</incipit>
+                                    <explicit>docebat veritas regebat iusticia pax fouebat</explicit>
+                                    <note>The manuscript contains the text of the first six chapters of the edition.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="13" to="18"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="57r" to="58r" scheme="folios"/>
+                                    <title type="desc">In annuntiatione dominica</title>
+                                    <rubric>In annunciacione docet de nouem mensibus</rubric>
+                                    <incipit>MIssus est gabriel angelus (Luke 1:26) Gabriel missus est ad Mariam id est predicator ad peccatorem <gap reason="editorial"/> Concepcio autem fit a timore dei qui est principium boni</incipit>
+                                    <explicit>Ex deuocione bone operacionis procedit lac saturietatis ex dulcedine contemplacionis lac iocunditatis</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="58r" to="58v" scheme="folios"/>
+                                    <title type="desc">Sermo sextus in assumptione beatae Mariae</title>
+                                    <incipit>AVe gracia plena Non in sola virginitate</incipit>
+                                    <explicit>quod ex te nascetur sanctum vocabitur filius dei (Luke 1:35)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="260" to="261"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="58v" to="60r" scheme="folios"/>
+                                    <title type="desc">In annunciatione sanctae Mariae</title>
+                                    <rubric>In annunciacione sancte marie de verbis ysaie</rubric>
+                                    <incipit>ANgelus presumpsit similitudinem dei dicens</incipit>
+                                    <explicit>et sapienciam nostram vt sumenti possit esse proficium</explicit>
+                                    <note>Excerpt from <foreign xml:lang="la">Sententiarum series tertia</foreign>.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:2" to="6:2"/>
+                                        <citedRange unit="page" from="102" to="107"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="60r" to="61v" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in annuntiatione dominica</title>
+                                    <incipit>QVam diues es in misericordia</incipit>
+                                    <explicit>ne a ructantibus quidem poterunt fastidiri</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="34" to="42"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="61v" to="63v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in ramis palmarum</title>
+                                    <incipit>NEcesse est vt loquamur hodie breuius </incipit>
+                                    <explicit>sanctam ciuitatem ingredi mereamur cum ipso amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="46" to="51"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="63v" to="65r" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in ramis palmarum</title>
+                                    <incipit>CVm vniuersa fecerit deus</incipit>
+                                    <explicit>donec requiem resurreccio donec sabbatum pascha sequatur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="51" to="55"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="65r" to="69r" scheme="folios"/>
+                                    <title type="desc">Feria IV in hebdomadae sanctae</title>
+                                    <incipit>UIgilate fratres animo ne infructuose pertranseant vos</incipit>
+                                    <explicit>ad mensuram bonam et confertam et coagitatam quam dabis nobis in sinus nostros qui es in sinu patris <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="56" to="67"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="69r" to="70v" scheme="folios"/>
+                                    <title type="desc">In cena Domini</title>
+                                    <incipit>Hii sunt dies quos obseruare debemus</incipit>
+                                    <explicit>graciam non amittamus quam nobis tantopere et tam multifarie necessariam esse sentimus</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="67" to="72"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="70v" to="73v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in resurrectione Domini (alia recensio)</title>
+                                    <incipit>UIcit leo de tribu iuda <gap reason="editorial"/> (Rev. 5:5) Vbi modo sunt qui dicebant</incipit>
+                                    <explicit>vt ministracio mea et michi et nobis sit in salutem</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="73" to="92"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus to="78r" scheme="folios" from="73v"/>
+                                    <title type="desc">Sermo primus in resurrectione Domini</title>
+                                    <incipit>UIcit leo de tribu iuda (Rev. 5:5) Vicit maliciam sapiencia</incipit>
+                                    <explicit>et in galileam vocare dignatur vt se ipsum nobis ostendat qui est super omnia <gap reason="editorial"/> AMEN</explicit>
+                                    <note>The larger part of <locus from="76" to="76" scheme="folios"/> torn out.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" to="94" from="73"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="78v" to="81r" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in resurrectione Domini</title>
+                                    <incipit>Accepimus ab apostolo habitare christum per fidem</incipit>
+                                    <explicit>negligentiam suam prodens venite inquit et videte locum vbi positus erat dominus (Matt. 28:6)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="95" to="102"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="81r" to="83r" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in resurrectione Domini</title>
+                                    <incipit>SIcut in corporum medicina prius purgaciones adhibentur</incipit>
+                                    <explicit>Postquam vero coram eis ascendit ad patrem iam cepit sapiencia declarari</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="103" to="109"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="83r" to="83v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in resurrectione Domini</title>
+                                    <incipit>OMnia que de saluatore legimus</incipit>
+                                    <explicit>de communi aduersario triumpharent et conculcarent sathan sub pedibus suis</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="110" to="111"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="83v" to="85r" scheme="folios"/>
+                                    <title type="desc">Sermo CXI de diversis</title>
+                                    <incipit>ETernam celestis patrie ad quam nostra suspirat peregrinacio felicitatem</incipit>
+                                    <explicit>nos peducat dominus virtutum rex glorie qui est via veritas et vita ihesus christus dominus noster</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="385" to="389"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="85r" to="87r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in octava paschae</title>
+                                    <incipit>OMne quod <sic>notum</sic> est ex deo vincit mundum</incipit>
+                                    <explicit>eo miserante qui pro discipulis hoc ipsum orare dignatus est ihesu christo domino nostro</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="112" to="117"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="87r" to="88r" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in octava paschae</title>
+                                    <incipit>EPistola beati Iohannis hodie nobis est leccio recitata</incipit>
+                                    <explicit>si contines a peccatis si digne agis penitencie fructus et facis opera vite</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="118" to="121"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="88r" to="89v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in resurrectione Domini (excerpt)</title>
+                                    <incipit>DIcimus tamen breuiter</incipit>
+                                    <explicit>nos quoque post se trahere dignetur in celestem galileam qui viuit et regnat <gap reason="editorial"/> AMEN</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="91" to="94"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="89v" to="94r" scheme="folios"/>
+                                    <author>
+                                        <persName ref="https://www.manuscripta.se/person/102694">Pseudo-Bernard</persName>
+                                    </author>
+                                    <title type="desc">Sermo ad pastores in synodo congregatos</title>
+                                    <incipit>REuerendissimi patres et domini ecce lecta sunt verba</incipit>
+                                    <explicit defective="true">naciones et dominabuntur populis </explicit>
+                                    <note>The larger part of <locus from="94" to="94" scheme="folios"/> has been torn out and the last few lines of the sermon are completely missing.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
+                                        <citedRange unit="volume" from="184" to="184"/>
+                                        <citedRange unit="column" to="1096A" from="1085C"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="94v" to="95r" scheme="folios"/>
+                                    <title type="desc">In rogationibus</title>
+                                    <incipit defective="true">
+                                                                 <supplied reason="damage">qui diligit</supplied> iniquita<supplied reason="damage">tem</supplied> (Ps. 10:6)
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>vt diligam vt faciam voluntatem tuam Sic enim vivitur et in talibus vita spiritus mei (Isa. 38:16) dicente scriptura quoniam vita in voluntate eius (Ps. 29:6)</explicit>
+                                    <note>The larger part of  <locus from="94" to="94" scheme="folios"/> has been torn and everything but a few incomplete lines is missing.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="121" to="123"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="95r" to="96v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in ascensione Domini</title>
+                                    <incipit>SOlempnitas ista fratres karissimi gloriosa est</incipit>
+                                    <explicit>quia tu es christus filius dei viui qui es <gap reason="editorial"/> AMEN</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="126" to="131"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="96v" to="99r" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in ascensione Domini</title>
+                                    <incipit>HOdie celorum dominus celorum alta celesti potencia penetrauit</incipit>
+                                    <explicit>qui nos induat in omnem sicut dei promisit filius veritatem</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="131" to="137"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="99r" to="102v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in ascensione Domini</title>
+                                    <incipit>SI natiuitatis et resurreccionis dominice digna deuocione celebramus</incipit>
+                                    <explicit>absque te que preparasti diligentibus te (Isa. 64:4)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="137" to="148"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="102v" to="105v" scheme="folios"/>
+                                    <title type="desc">Sermo sextus in ascensione Domini</title>
+                                    <incipit>HOdie sedenti in throno continuo</incipit>
+                                    <explicit>vt una substancia sic et eadem nichilominus gloria in secula seculorum amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="150" to="160"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="105v" to="106v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in ascensione Domini</title>
+                                    <incipit>REcumbentibus vndecim discipulis <gap reason="editorial"/> (Mark 16:14) Multam enim fiduciam prestat</incipit>
+                                    <explicit>operibus bonis <supplied reason="damage"> operient et h</supplied>oc remedio curabuntur</explicit>
+                                    <note>The upper outer corner of <locus from="106" to="106" scheme="folios"/> has been torn off resulting in loss of text.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="123" to="126"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="106v" to="107v" scheme="folios"/>
+                                    <title type="desc">De cruce Christi et diaboli</title>
+                                    <rubric>In inuencione sancte crucis de cruce christi et cruce dyaboli</rubric>
+                                    <incipit>UOlumus scire vt sciamus</incipit>
+                                    <explicit>Diligere proximum mercedem gracie Diligere deum mercedem glorie</explicit>
+                                    <note>Excerpts from <foreign xml:lang="la">Sententiarum series tertia</foreign>.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:2" to="6:2"/>
+                                        <citedRange unit="page" from="112" to="115"/>
+                                        <citedRange unit="page" from="219" to="223"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="107v" to="109r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in die pentecostes</title>
+                                    <incipit>CElebramus hodie dilectissimi spiritus sancti solempnitatem</incipit>
+                                    <explicit>si tamen iuxta apostoli monita seminatum fuerit dum adhuc est animale</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="160" to="165"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="109r" to="113r" scheme="folios"/>
+                                    <author>
+                                        <persName ref="https://www.manuscripta.se/person/102694">Pseudo-Bernard</persName>
+                                    </author>
+                                    <title type="desc">In die pentecostes</title>
+                                    <incipit>COngregati estis fratres karissimi ad audiendum verbum dei</incipit>
+                                    <explicit>et vnitatis consiliarius non ignorat astucias eius</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="113r" to="115r" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in die pentecostes</title>
+                                    <incipit>QVam libenter vobis communicem</incipit>
+                                    <explicit>propter promissam stabilitatem ad laudem et gloriam sponsi domini nostri ihesu christi qui es <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="171" to="176"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="115r" to="116r" scheme="folios"/>
+                                    <title type="desc">Sermo XLV de diversis</title>
+                                    <incipit>BEata illa et sempiterna trinitas pater et filius et spiritus sanctus</incipit>
+                                    <explicit>Est caritas de corde puro conscia bona fide non ficta (1 Tim. 1:5)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="262" to="266"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="116r" to="116r" scheme="folios"/>
+                                    <title type="desc">Epilogus in sermone XLV</title>
+                                    <rubric>Item y epylogus supradictorum</rubric>
+                                    <incipit>Octo sunt trinitates</incipit>
+                                    <explicit>et sic habemus octo trinitates</explicit>
+                                    <note>Excerpt from <foreign xml:lang="la">Sententiarum series prima</foreign>.</note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:2" to="6:2"/>
+                                        <citedRange unit="page" from="15" to="16"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="116r" to="119r" scheme="folios"/>
+                                    <title type="desc">In nativitate sancti Ioannis baptistae</title>
+                                    <incipit>SIt procul ab hiis conuenientibus vel conuentibus</incipit>
+                                    <explicit>et volo illud in vase tucius quam in lampade possidere </explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="176" to="184"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="119r" to="120r" scheme="folios"/>
+                                    <title type="desc">In nativitate sancti Ioannis baptiste (excerpt)</title>
+                                    <incipit>GAudeamus dilectissimi in natiuitate beati Iohannis</incipit>
+                                    <explicit>et volo illud vase lampadis tucius possidere</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="181" to="184"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="120r" to="121r" scheme="folios"/>
+                                    <title type="desc">In vigilia apostolorum Petri et Pauli</title>
+                                    <incipit>IN sanctorum vigiliis necesse vigilare</incipit>
+                                    <explicit>vt ipsi nobis propicium suum reddant amicum iudicem nostrum qui est <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="185" to="187"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="121r" to="122v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in sollemnitate apostolorum Petri et Pauli</title>
+                                    <incipit>GLoriosa solempnitas nobis illuxit</incipit>
+                                    <explicit>et reliquerunt omnia propter te et nomen sanctum tuum</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="188" to="191"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="122v" to="124v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in sollemnitate apostolorum Petri et Pauli</title>
+                                    <incipit>SAncti isti quorum solempnitatis hodie passio celebratur</incipit>
+                                    <explicit>et hereditatem semen christi et apostolorum nepotes</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="191" to="197"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="124v" to="125r" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in sollemnitate apostolorum Petri et Pauli</title>
+                                    <incipit>MErito fratres apostolis sanctis attribuit mater ecclesia sancta</incipit>
+                                    <explicit>cum euanuit presumpta temeritas et cetera vt supra In sermone de verbo Isti sunt viri nomine</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="197" to="201"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="125r" to="126r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in dominica VI post pentecosten</title>
+                                    <incipit>MIsereor super turbam <gap reason="editorial"/> (Mark 8:2) Ewangelium fratres ob hoc scriptum est</incipit>
+                                    <explicit>panis est eucharistia quoniam inquit panem quem ego dabo caro mea est pro mundi vita (John 6:52)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="206"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="126r" to="127r" scheme="folios"/>
+                                    <title type="desc">De misericordiis</title>
+                                    <incipit>MIsericordias domini in eternum cantabo (Ps. 88:2) Ut quid enim mihi insipiens</incipit>
+                                    <explicit>de tua tociens experta bonitate vsque ad celestia</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="40" to="43"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="127r" to="128v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in dominica VI post pentecosten</title>
+                                    <incipit>SCitis quid fecerim septem nobis hodie misericordias</incipit>
+                                    <explicit>vsque ad conspectum glorie magni dei qui est benedictus in secula</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="209" to="213"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="128v" to="129v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in labore messis</title>
+                                    <incipit>
+                                                                 <sic>FAbor</sic> iste fratres exilii et paupertatis nostre
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>Heu michi quia incolatus meus prolongatus est </explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="220" to="222"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="129v" to="130v" scheme="folios"/>
+                                    <title type="desc">De altitudine et bassitudine cordis ex occasione praecedentis sermonis</title>
+                                    <incipit>DE eo quod nuperrime dictum est</incipit>
+                                    <explicit>quia si spiritu facta carnis mortificauerimus viuemus si vero secundum carnem vixerimus moriemur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="214" to="216"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="130v" to="131v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in assumptione beatae Mariae</title>
+                                    <incipit>UIrgo hodie gloriosa celos ascendens</incipit>
+                                    <explicit>sed et meliores edificentur ad profectum conuersacionis</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="228" to="231"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="131v" to="133v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in assumptione beatae Mariae</title>
+                                    <incipit>INtrauit ihesus <gap reason="editorial"/> (Luke 10:38) Quid est fratres quod e duobus sororibus tantum altera legitur dominum excepisse</incipit>
+                                    <explicit>ecce quem amas infirmatur et nos maneamus hic die isto</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="238" to="244"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="133v" to="135v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in assumptione beatae Mariae</title>
+                                    <incipit>TEmpus est loquendi fratres verbum cum assumitur verbi mater in celum</incipit>
+                                    <explicit>per te regina clemens gracie sue munera largiatur Ihesus christus <gap reason="editorial"/> in secula</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="244" to="250"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="135v" to="139r" scheme="folios"/>
+                                    <title type="desc">Sermo quintus in assumptione beatae Mariae</title>
+                                    <incipit>INtrauit Ihesus <gap reason="editorial"/> (Luke 10:38) Quod dominus ac saluator noster semel in vno loco</incipit>
+                                    <explicit>et ab aliis se diligi sine dubio credat</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="250" to="260"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="139r" to="143v" scheme="folios"/>
+                                    <title type="desc">Dominica infra octavam assumptionis</title>
+                                    <incipit>SIgnum magnum apparuit <gap reason="editorial"/> (Rev. 12:1) Vehementer quidem nobis dilectissimi</incipit>
+                                    <explicit>puella es preelecta et preparata altissimi filio qui es <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange to="274" from="262" unit="page"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="143v" to="148v" scheme="folios"/>
+                                    <title type="desc">In nativitate beatae Mariae</title>
+                                    <incipit>FEcunde virginitatis amplectitur celum</incipit>
+                                    <explicit>inter lilia non inuentum quidquid illud quod inter marie manus inuenerit</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="275" to="288"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="148v" to="150r" scheme="folios"/>
+                                    <title type="desc">Sermo XXIII de diversis</title>
+                                    <incipit>MAgister gentium paulus ex occasione ipsius spiritualis nature</incipit>
+                                    <explicit>ac spirituali materia mentes maioris <!--eller?--> longitudinem sermonis aliquatenus oneremus</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="178" to="183"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="150r" to="151r" scheme="folios"/>
+                                    <title type="desc">Sermo XXIV de diversis</title>
+                                    <incipit>TEnetis credo quemadmodum hesterno sermone</incipit>
+                                    <explicit>vbi necesse est aut potenter implere aut sustinere pacienter</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="183" to="187"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="151r" to="153r" scheme="folios"/>
+                                    <title type="desc">Sermo primus in commemoratione sancti Michaelis</title>
+                                    <incipit>ANgelorum hodie memoria celebratur</incipit>
+                                    <explicit>que poterit non inutilis fore si capitulum presens altero sermone sequamur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="294" to="298"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem defective="true">
+                                    <locus from="153r" to="157v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in festivitate omnium sanctorum</title>
+                                    <incipit>FEstiuitas omnium sanctorum hodie celebratur</incipit>
+                                    <explicit>ab omni dilacione percipitur Quod nobis largiri dignetur qui cum diues pro nobis pauper factus est vt nos sua ditaret inopia ihesus christus  <gap reason="editorial"/>  amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="327" to="341"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="157v" to="160v" scheme="folios"/>
+                                    <title type="desc">Sermo quintus in festivitate omnium sanctorum</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">F</supplied>Estiua nobis est dies hec
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>cum tam excelso capite membra concurrant et laudetur cum hereditate sua christus ihesus <gap reason="editorial"/> amen </explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="361" to="370"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="160v" to="162v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in festivitate omnium sanctorum</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">Q</supplied>Via sanctorum omnium festiuam hodie dilectissimi              
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>Quod ergo restat adhuc de eadem materia sermoni alteri reseruemus</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" to="348" from="342"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="162v" to="163v" scheme="folios"/>
+                                    <title type="desc">Sermo tertius in festivitate omnium sanctorum</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">A</supplied>Duertistis ni fallor ex hiis                                   
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>nec tamquam hospites et aduenas a secreta illa habitacione sua censeant repulsandos</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" to="352" from="349"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="163v" to="165v" scheme="folios"/>
+                                    <title type="desc">Sermo quartus in festivitate omnium sanctorum</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">C</supplied>Vm de altari illo celesti 
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>quasi sportas pro singulis panibus recipere mereamur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="354" to="360"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="165v" to="166v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in dominica in Kalendis novembris</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">U</supplied>idi dominum sedentem super solium
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>et ipsa consideracionem desiderare uidentur sufficiat hodie uel cepisse</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="304" to="306"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="166v" to="167v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in dominica in kalendis novembris</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">P</supplied>Lena erat omnis terra (Isa. 6:3) contemplator noster ait
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>quia gloriam contemplantur domini nostri ihesu christi <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="307" to="310"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="167v" to="172v" scheme="folios"/>
+                                    <title type="desc">In festivitate sancti Martini episcopi</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">P</supplied>
+                                                                 <sic>Vto</sic> sermonem hunc a nobis expetit
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>Desidero requiem sed non recuso laborem fiat uoluntas tua</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="399" to="412"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="172v" to="174r" scheme="folios"/>
+                                    <title type="desc">In natali sancti Clementis</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">P</supplied>Reciosa in conspectu domini mors sanctorum eius
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>terciam si ad eam peruenire merueris potat animam sicientem</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="412" to="417"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="174r" to="175r" scheme="folios"/>
+                                    <title type="desc">In vigilia sancti Andreae apostoli</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">S</supplied>Anctorum festa precipua 
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>thesaurus nobis repositus est in ea si fuerit qui fodiat et perscrutetur</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange to="426" unit="page" from="423"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="175r" to="177v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in natali sancti Andreae</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">C</supplied>Elebrantes hodie gloriosum triumphum
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>pericula oracione euadimus prestante domino nostro ihesu christo amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="427" to="433"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="177v" to="179v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in natali sancti Andreae</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">B</supplied>Eati Andree apostoli festiuitas hodie celebratur
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>quam pro ipsius nomine tulimus feliciter consumari qui est <gap reason="editorial"/> amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="434" to="440"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="179v" to="181r" scheme="folios"/>
+                                    <title type="desc">Sermo XVI de diversis</title>
+                                    <incipit>ET perpensius studium et cura vigilantior</incipit>
+                                    <explicit>meditacio cordis mei in conspectu tuo semper</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="144" to="149"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="181r" to="186r" scheme="folios"/>
+                                    <author>
+                                        <persName ref="https://www.manuscripta.se/person/102695">
+                                                                     Guibert 
+                                                                     of Nogent
+                                                                 
+                                                                 
+                                                            
+                                                            
+                                                       
+                                                       
+                                                  
+                                                  
+                                             
+                                             
+                                        </persName>
+                                    </author>
+                                    <title type="desc">Sermo in illud Sapientiae, VII, 30, 1: Sapientia vincit malitiam. Attingit ergo a fine usque ad finem fortiter, et disponit omnia suaviter</title>
+                                    <rubric>In die sancte lucis</rubric>
+                                    <incipit>
+                                                                 <supplied reason="omitted">S</supplied>Apiencia vincit maliciam (Wisd. 7:30) sicut sapiencia sapor boni                                      
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>Scimus quoniam diligentibus deum omnia cooperantur in bonum (Rom. 8:28)</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
+                                        <citedRange unit="volume" from="184" to="184"/>
+                                        <citedRange unit="column" from="1031C" to="1044A"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="186r" to="187v" scheme="folios"/>
+                                    <title type="desc">Sermo primus in dedicatione ecclesie</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">F</supplied>Estiuitas hodierna fratres tanto nobis debet
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>hinc alio sermone nobis tractandum erit quod dominus ipse donauerit</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="370" to="375"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="187v" to="188v" scheme="folios"/>
+                                    <title type="desc">Sermo secundus in dedicatione ecclesiae</title>
+                                    <incipit>OLym rex gloriosus</incipit>
+                                    <explicit>a quibus nos superna sua proteccione custodiat Qui est benedictus in secula amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="5" to="5"/>
+                                        <citedRange unit="page" from="375" to="378"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="188v" to="198r" scheme="folios"/>
+                                    <title type="desc">Ad clericos de conversione</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">A</supplied>d audiendum vt credimus verbum dei
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>non peribit in finem Ipsa goria et nunc et semper in secula seculorum amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="4" to="4"/>
+                                        <citedRange unit="page" from="69" to="116"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="198r" to="198v" scheme="folios"/>
+                                    <title type="desc">Sermo XXX de diversis</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">N</supplied>Vsquam securitas fratres neque in celo neque in paradiso
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>ut a quibus <del>de</del> disiuncti sunt opere disiungantur sermone</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="214" to="215"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="198v" to="199v" scheme="folios"/>
+                                    <title type="desc">Sermo XV de diversis</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">Q</supplied>Vid in hoc mundo facimus fratres
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>et corporalem scilicet et mundialem viriliter sustineat diuersitatem</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="140" to="143"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="199v" to="200v" scheme="folios"/>
+                                    <title type="desc">Sermo XXXIV de diversis</title>
+                                    <incipit>
+                                                                 <supplied reason="omitted">N</supplied>Ocere possunt vt vereor forte <sic>nonnullus</sic> verba
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
+                                              
+                                              
+                                         
+                                         
+                                    </incipit>
+                                    <explicit>sed graciarum accio et vox exultacionis sine fine amen</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107434">Sancti Bernardi opera</title>
+                                        <citedRange unit="volume" from="6:1" to="6:1"/>
+                                        <citedRange unit="page" from="228" to="233"/>
+                                    </bibl>
+                                </msItem>
                             </msItem>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc material="paper">
+                                    <support>
+                                        <p>
+                                            <locus from="1" to="200" scheme="folios"/>
+                                            <material>Paper</material>
+                                            <dimensions type="leaf">
+                                                <height quantity="300" unit="mm"/>
+                                                <width quantity="220" unit="mm"/>
+                                            </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="1" to="22" scheme="folios"/>
+                                                    <locus from="35" to="46" scheme="folios"/>
+                                                    <locus from="59" to="70" scheme="folios"/>
+                                                    <locus from="131" to="142" scheme="folios"/>
+                                                    <locus from="155" to="166" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Scale.</term>
+                                                <note>Similar to Piccard V, I, 182.</note>
+                                            </watermark>
+                                            <watermark n="2">
+                                                <locusGrp>
+                                                    <locus from="12" to="34" scheme="folios"/>
+                                                    <locus from="47" to="200" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Mount with three coupeaux, encircled with a flat base.</term>
+                                            </watermark>
+                                        </p>
+                                    </support>
+                                    <extent>
+                                        <measure type="textblockLeaves" quantity="200" unit="folios"/>
+                                    </extent>
+                                    <condition>Most of <locus from="76" to="76" scheme="folios"/> and <locus from="94" to="94" scheme="folios"/> and upper outer corner of <locus from="4" to="4" scheme="folios"/> and <locus from="106" to="106" scheme="folios"/> torn off. Stains from a spill of red ink on <locus from="179r" to="179r" scheme="folios"/> and <locus from="190v" to="190v" scheme="folios"/> (same bifolium). <locus from="195v" to="196r" scheme="folios"/>: stains from something having been crushed between the pages.</condition>
+                                </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="34 41">
+                                        <dimensions type="written">
+                                            <height quantity="135" unit="mm"/>
+                                            <width quantity="200" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines in lead.</note>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1"><locus from="1r" to="200v" scheme="folios"/>Gothic semi-textualis.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="2r" scheme="folios"/>
+                                    <note>Paragraph numbers 3-6 in the margin in pencil by a modern hand, finishing with a note on the deviation of the text of the manuscript from that of the edition.</note>
+                                </p>
+                                <p>
+                                    <locus from="2v" to="31v" scheme="folios"/>
+                                    <note>The the modern edition sermon number and/or title in pencil by the same modern hand at the beginning of each sermon.</note>
+                                </p>
+                                <p>
+                                    <locus from="9v" to="149v" scheme="folios"/>
+                                    <note>Occasional corrections, manicules, nota marks - some including comments - and signaling of topics in ink by several medieval hands.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink; rubrics in red; capitals touched in red. All rubrication ceases on <locus from="156v" to="156v" scheme="folios"/> ff. In several places, e.g. <locus from="55v" to="55v" scheme="folios"/> and <locus from="106v" to="106v" scheme="folios"/>, the rubrics are visible written perpendicularly in small script along the outer edge of the page as instructions for the rubricator; most of these have, however been trimmed off.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="1r" to="1r" scheme="folios"/>: opening puzzle initial <quote>h</quote> over 8 lines in brown, red, and yellow/ochre.
+                                        <locus from="2v" to="153r" scheme="folios"/>: plain initials over 3 lines in red ink.
+                                        <locus from="157v" to="199v" scheme="folios"/>: space provided, but initials missing.
+                                    </p>
+                                </decoNote>
+                            </decoDesc>
+                        </physDesc>
+                        <history/>
+                    </msPart>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicologicalUnit">2</idno>
+                        </msIdentifier>
+                        <msContents>
+                            <textLang mainLang="la"/>
                             <msItem>
                                 <locus from="201r" to="255v" scheme="folios"/>
-                                <title type="desc">Acts of the Council of Basel, 1431-1435</title>
+                                <title type="desc">Acts of the Council of Basel, 1431-1435 (Session 1-21)</title>
                                 <rubric>Acta Sacri basiliensis concilii</rubric>
                                 <incipit>IN nomine sancte et indiuidue trinitatis feliciter Amen Censetur utique dignum et congruum prout id singulariter exposcit nimium </incipit>
-                                <explicit>Omnes autem consuetudines statuta ac privilegia que hiis non conordant decretis nisi forte maiores adicerent penas esse irritas hec sancta sinodus decernit Datum in sessione publica maioris ecclesie basilensis Sollemiter celebrata dic<del>mense</del>ionis ix mense iunii Anno domini millesimo quadringentesimo tricesimo quinto etc</explicit>
-                                <note><locus from="214r" to="214r" scheme="folios"/>: blank.</note>
+                                <explicit>Omnes autem consuetudines statuta ac privilegia que hiis non conordant decretis nisi forte maiores adicerent penas esse irritas hec sancta sinodus decernit Datum in sessione publica maioris ecclesie basilensis Sollemiter celebrata dic<del>mense</del>ionis ix mense iunii Anno domini millesimo quadringentesimo tricesimo quinto et cetera</explicit>
+                                <note>
+                                                             <locus from="214r" to="214r" scheme="folios"/>: guidelines but no text.                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                         
+                                                         
+                                                    
+                                                    
+                                               
+                                               
+                                          
+                                          
+                                     
+                                     
+                                </note>
                                 <bibl>
-                                    <title ref="https://www.manuscripta.se/bibl/107425">Conciliorum Oecumenicorum Decreta</title>
-                                    <citedRange unit="page" from="455" to="492"/>
+                                    <title ref="https://www.manuscripta.se/bibl/107433" type="short">Lauritzen (2013)</title>
+                                    <citedRange unit="page" from="740" to="960"/>
                                 </bibl>
                             </msItem>
                             <msItem>
                                 <locus from="256r" to="263v" scheme="folios"/>
-                                <title type="desc">De arte moriendi</title>
-                                <rubric>Incipit tractatus de arte moriendi etc</rubric>
+                                <title type="desc">Tractatus artis bene moriendi</title>
+                                <rubric>Incipit tractatus de arte moriendi et cetera</rubric>
                                 <incipit>Cum de presentis miseria <del>trac</del> exilii mortis transitus propter moriendi impericiam</incipit>
-                                <explicit>Vnde vnicuique bene et secure mori volenti super omnia est necesse vt prius antequam mors occupet mori discat etc</explicit>
+                                <explicit>Vnde vnicuique bene et secure mori volenti super omnia est necesse vt prius antequam mors occupet mori discat et cetera</explicit>
                                 <finalRubric>Explicit tractatus de arte moriendi</finalRubric>
                             </msItem>
                             <msItem>
                                 <locus from="264r" to="277v" scheme="folios"/>
                                 <author>
                                     <persName ref="https://www.manuscripta.se/person/102676">
-                                                                                Lotario dei Conti di Segni (Innocent III)
-                                                                            
-                                                                            
-                                                                       
-                                                                       
-                                                                  
-                                                                  
+                                                                 Lotario dei Conti di Segni (Innocent III)
                                                              
                                                              
                                                         
@@ -177,13 +1733,7 @@
                                 <title type="desc">De miseria humanae conditionis</title>
                                 <rubric>Incipit liber lotharii dyaconi Cardinalis qui postea Innocentius papa iii<hi rend="super">us</hi> appellatus est de miseria humanae condicionis</rubric>
                                 <incipit>
-                                                                            <supplied reason="omitted">D</supplied>Omino patri Karissimo petro dei gracia portuensi Episcopo Lotharius indignus diaconus graciam in presenti et gloriam in futuro Modicum ocii 
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
+                                                             <supplied reason="omitted">D</supplied>Omino patri Karissimo petro dei gracia portuensi Episcopo Lotharius indignus diaconus graciam in presenti et gloriam in futuro Modicum ocii                             
                                                          
                                                          
                                                     
@@ -197,46 +1747,150 @@
                                 </incipit>
                                 <explicit>cauma sulphur et ignis ardens in secula seculorum Amen</explicit>
                                 <finalRubric>Explicit liber Lotharii Cardinalis de miseria conditionis humane</finalRubric>
+                                <note>
+                                                             <locus from="278r" to="278r" scheme="folios"/>: guidelines but no text.
+                                                         
+                                                         
+                                                    
+                                                    
+                                               
+                                               
+                                          
+                                          
+                                     
+                                     
+                                </note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107487" type="short">Lewis (1978)</title>
+                                </bibl>
                             </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
-                                <supportDesc material="paper">
+                                <supportDesc>
                                     <support>
                                         <p>
-                                            <locus from="1r" to="278v" scheme="folios"/>
-                                            <material>Western paper</material>
+                                            <locus from="201" to="278" scheme="folios"/>
+                                            <material>Paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="300" unit="mm"/>
                                                 <width quantity="220" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="201" to="236" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Glove with five-pointed star above.</term>
+                                                <note>Similar to Piccard XVII, IV, 1216.</note>
+                                            </watermark>
+                                            <watermark n="2">
+                                                <locusGrp>
+                                                    <locus from="237" to="248" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Glove with crescent moon above.</term>
+                                                <note>Similar to Piccard XVII, IV, 1202.</note>
+                                            </watermark>
+                                            <watermark n="3">
+                                                <locusGrp>
+                                                    <locus from="249" to="272" scheme="pages"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull.</term>
+                                                <note>Similar to Piccard XV, VI, 939.</note>
+                                            </watermark>
+                                            <watermark n="4">
+                                                <locusGrp>
+                                                    <locus from="273" to="278" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Bull's head.</term>
+                                                <note>Similar to Piccard II:2, I, 147/149.</note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="278" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="78" unit="folios"/>
                                     </extent>
-                                    <condition>Most of <locus from="76" to="76" scheme="folios"/> and <locus from="94" to="94" scheme="folios"/> and upper outer corner of <locus from="4" to="4" scheme="folios"/> and <locus from="106" to="106" scheme="folios"/> torn off; </condition>
+                                    <condition> <locus from="201" to="201" scheme="folios"/> : hole with minor loss of text.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="33 35">
+                                        <locus from="201r" to="247v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height unit="mm" min="215" max="220"/>
+                                            <width unit="mm" min="130" max="135"/>
+                                        </dimensions>
+                                        <note>Guidelines in ink.</note>
+                                    </layout>
+                                    <layout columns="1" writtenLines="33 42">
+                                        <locus from=" 248r" to=" 278r" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height quantity="220" unit="mm"/>
+                                            <width unit="mm" min="150" max="160"/>
+                                        </dimensions>
+                                        <note>Although not consistent with the extent of the quires, the guidelines change to dry point on <locus from="248r" to="248r" scheme="folios"/>. From this point on, the ruling is inconsistent - sometimes in dry point (e.g. <locus from="248r" to="248r" scheme="folios"/>), sometimes in lead (e.g. <locus from="255r" to="255r" scheme="folios"/>), and sometimes in ink (e.g. <locus from="269r" to="269r" scheme="folios"/>). On some folios, the last three lines have also been ruled in dry point (e.g. <locus from="256" to="256" scheme="folios"/>). In some places, no guidelines are visible (e.g. <locus from="252v" to="252v" scheme="folios"/>). Additionally, the layout of <locus from="254v" to="255r" scheme="folios"/> differs from the other folios in that the print is significantly smaller, so that <locus from="255r" to="255r" scheme="folios"/> has 53 lines of text.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote xml:id="hand-1"><locus from="1r" to="200v" scheme="folios"/>Semi-textualis  ? single comp a, unlooped l and b, f and s on line
-                                    Vad händer 185r?</handNote>
-                                <handNote xml:id="hand-2"><locus from="201r" to="247r" scheme="folios"/>Hybrida.</handNote>
+                                <handNote xml:id="hand-2"><locus from="201r" to="247r" scheme="folios"/>Gothic hybrida.</handNote>
                                 <handNote xml:id="hand-3"><locus from="247v" to="247v" scheme="folios"/>Gothic cursive.</handNote>
-                                <handNote xml:id="hand-4"><locus from="248r" to="254v" scheme="folios"/>Gothic cursive.</handNote>
-                                <handNote xml:id="hand-5"><locus from="254v" to="255v" scheme="folios"/>Gothic cursive.</handNote>
-                                <handNote xml:id="hand-6"><locus from="256r" to="256r" scheme="folios"/>Gothic cursive.</handNote>
+                                <handNote xml:id="hand-4"><locus from="248r" to="253v" scheme="folios"/>Gothic cursive.</handNote>
+                                <handNote xml:id="hand-5"><locus from="253v" to="254v" scheme="folios"/>Gothic cursive.</handNote>
+                                <handNote xml:id="hand-6"><locus from="254v" to="255v" scheme="folios"/>Gothic cursive.</handNote>
+                                <handNote xml:id="hand-7"><locus from="256r" to="262v" scheme="folios"/>Gothic cursive.</handNote>
+                                <handNote xml:id="hand-8"><locus from="263r" to="277v" scheme="folios"/>Gothic cursive. (Possibly two different hands; note the shape of capital D.)</handNote>
                             </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="201v" to="255v" scheme="folios"/>
+                                    <note>Numerous corrections, a few paragraph summaries, and nota marks in ink by at least two or three different medieval hands.</note>
+                                </p>
+                                <p>
+                                    <locusGrp>
+                                        <locus from="253v" to="253V" scheme="other"/>
+                                        <locus from="254v" to="254v" scheme="folios"/>
+                                        <locus from="255r" to="255r" scheme="folios"/>
+                                    </locusGrp>
+                                    <note>Manicule with the instruction <quote>legendum</quote>.</note>
+                                </p>
+                                <p>
+                                    <locusGrp>
+                                        <locus from="259v" to="259v" scheme="folios"/>
+                                        <locus from="262v" to="262v" scheme="folios"/>
+                                    </locusGrp>
+                                    <note>Text title in the margin in ink by a medieval hand.</note>
+                                </p>
+                                <p>
+                                    <locus from="264r" to="277v" scheme="folios"/>
+                                    <note>Chapter titles, biblical references and corrections in ink by at least two or three medieval hands. From <locus from="256v" to="256v" scheme="folios"/>, some of the chapter titles are written in the upper or lower margin and keyed to the beginning of the chapter by signes-de-renvoi.</note>
+                                </p>
+                                <p>
+                                    <locus from="278v" to="278v" scheme="folios"/>
+                                    <note>Astronomical tables for the years 1435-1437.</note>
+                                </p>
+                            </additions>
                             <decoDesc>
-                                <p>Main text in brown ink; capitals touched in red (1r-156r uppehåll 156v-178v) Även initialerna försvinner samtidigt. Intressant!</p>
+                                <p>Main text in brown ink; pilcrows in brown ink.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="201r" to="201r" scheme="folios"/>: plain initial <quote>I</quote> in outline over 6 lines in same ink as main text with minor penwork.
+                                        <locus from="201v" to="240v" scheme="folios"/>, <locus from="264r" to="264r" scheme="folios"/>: plain initials in outline over 2 lines in same ink as main text, with some penwork.
+                                        <locus from="241v" to="243r" scheme="folios"/>: space provided, but initials missing.
+                                        <locus from="247v" to="247v" scheme="folios"/>: plain initial <quote>S</quote> over 2 lines in same ink as main text with minimal penwork.
+                                        <locus from="248r" to="252v" scheme="folios"/>: plain initials in partial outline over 2 lines in same ink as main text and minor penwork.
+                                        <locus from="253v" to="255v" scheme="folios"/>: plain initials over 2 lines in same ink as main text and some penwork.
+                                        <locus from="201r" to="255v" scheme="folios"/>: slightly enlarged initials, 1.5-2 lines, in same ink as main text and minor penwork.
+                                        <locus from="256r" to="263v" scheme="folios"/>: slightly enlarged initials, 1-2 lines, in same ink as main text and some penwork.
+                                        <locus from="264r" to="277v" scheme="folios"/>: space provided and guide letters visible, but most of the initials missing. In some places, however, they are present and vary between the previous styles, e.g. <locus from="269v" to="269v" scheme="folios"/>.
+                                    </p>
+                                </decoNote>
                             </decoDesc>
                         </physDesc>
-                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published">
+            <change who="https://www.manuscripta.se/person/100488" when="2025-08-28" status="published">First published 20250828</change>
             <change status="draft" when="2023-12-04" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>

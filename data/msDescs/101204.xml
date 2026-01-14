@@ -11,17 +11,21 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100483">Erika Kihlman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101204</idno>
-                <date when="2024"/>
+                <date when="2025"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en">
+                <msDesc xml:lang="en" resp="erikkihl">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,25 +43,72 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf">
+                                            <height unit="mm" quantity="162"/>
+                                            <width quantity="115" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" unit="folios"/>
                                     <measure type="rightFlyleaves" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil 1-279 (145-149; 264-265; 267; 269-273; 275-279 corrected).</foliation>
+                                <collation>
+                                    <formula>1-17(12), 18(14), 19-22(12), 23(12+1) </formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/68a3097f7d16a900015840a6/viewOnly">VisColl collation</ref>
+                                    </p>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>In black ink by a nineteenth-century hand: <quote>Schürer von Waldheim. Kat. no 105</quote>.</note>
+                            </p>
+                        </additions>
+                        <musicNotation>
+                            <p>Five staffs of Hufnagel notation for the <quote xml:lang="la">Alleluia-verse O consolatrix pauperum Maria</quote>.</p>
+                        </musicNotation>
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <p>Late medieval binding. Brown leather over wooden boards. 3 double raised cords, 2 single cords. 2 catchplates for hooked clasps on <locus from="LCO" to="LCO" scheme="other"/>. On <locus from="Spine" to="Spine" scheme="other"/>, two paper labels. Of the upper only half remains, traces of an old signum can be seen; the lower one is the National Library book label with the current signum in ink. Parchment pastedowns with a mass formulary for the conception of Mary with the Alleluia verse <quote>O consolatrix pauperum</quote> and Hufnagelnotation.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height unit="mm" min="175" max="175"/>
+                                        <width unit="mm" min="130" max="130"/>
+                                        <depth unit="mm" min="65" max="65"/>
+                                    </dimensions>
+                                </p>
+                                <decoNote type="tooling"><p>3-line blind tooling. On <locus from="LCO" to="LCO" scheme="other"/>: a frame filled with a diamond pattern with a small five-petal flower where the lines cross. On <locus from="RCO" to="RCO" scheme="other"/>: a frame filled with a vertical and a diagonal cross.  </p></decoNote>
+                                <condition>Leather is scratched and worn, board showing at places on <locus from="RCO" to="RCO" scheme="other"/>, and is cracked between the covers and the <locus from="Spine" to="Spine" scheme="other"/>, leaving the cord joints between the spine and the covers visible. The three lower cords joining the spine to the <locus from="LCO" to="LCO" scheme="other"/> are broken. Clasps and leather straps are missing. Remnants of straps are still attached to the anchorplates on the <locus from="RCO" to="RCO" scheme="other"/>.   </condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin>
+                        <origin><p>
                             <origPlace>
                                 <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
                             </origPlace>, <origDate notBefore="1474" notAfter="1489">between 1474 and 1489</origDate>
-                        </origin>
+                        </p></origin>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/101301">Hedlund (1980)</title>
-                                <citedRange from="38" to="38" unit="page"/>
+                                <title ref="https://www.manuscripta.se/bibl/101301" type="short">Hedlund (1980)</title>
+                                <citedRange unit="page" from="38" to="38"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107294" type="short">Kurras (2001)</title>
+                                <citedRange unit="page" from="60" to="64"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -67,6 +118,15 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la" otherLangs="de"/>
+                            <msItem>
+                                <locus from="1r" to="8v" scheme="folios"/>
+                                <title type="desc">Disticha Catonis</title>
+                                <rubric>Catho</rubric>
+                                <incipit>SI deus est animus vt nobis carmina dicunt</incipit>
+                                <explicit>hoc breuitas fecit sensus coniungere <sic>binis</sic> </explicit>
+                                <finalRubric>Et sic est finis</finalRubric>
+                                <note>Below the text two additions in two different, contemporary or near-contemporary hands. The first one consists of four hexameter lines: <quote>Si vis seruare pacem simul hec tria serua / Non des consilium de quo te nemo requirit / Non inuestiges que nec te nec tua tangunt / Non rege que tibi non fuerunt commissa regenda / Ex historia troiana</quote>. The second one is an elegiac distich: <quote>Hoc scio pro recto si contra stercora certo / Vinco uel vincor semper ego maculor</quote>. (Walther 10595 KOLLA detta)</note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -76,15 +136,33 @@
                                             <locus from="1r" to="279v" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
-                                                <height quantity="160" unit="mm"/>
-                                                <width quantity="110" unit="mm"/>
+                                                <height unit="mm" min="160" max="165"/>
+                                                <width unit="mm" min="105" max="110"/>
                                             </dimensions>
+                                            <note>Five different oxhead watermarks, all with eyes, ears, and single-line rod with a quatrefoil: <locus from="1" to="36" scheme="folios"/> (also with nostrils); <locus from="37" to="180" scheme="folios"/>; <locus from="181" to="204" scheme="folios"/>; <locus from="205" to="230" scheme="folios"/> (oxhead and snake (?)); <locus from="231" to="278" scheme="folios"/>. </note>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="279" unit="folios"/>
                                     </extent>
+                                    <condition>Generally good condition overall. The fore-edge colouring has bled into some of the leaves, e.g. <locus from="64v" to="64v" scheme="folios"/>,  <locus from="267r" to="267r" scheme="folios"/>. </condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="19 20">
+                                        <locus from="1r" to="26v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height unit="mm" min="120" max="125"/>
+                                            <width min="170" max="185" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                    <layout columns="1" writtenLines="25 34">
+                                        <locus from="27r" to="278v" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height min="125" max="140" unit="mm"/>
+                                            <width min="75" max="90" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
                         </physDesc>
                     </msPart>
@@ -92,6 +170,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
+            <change who="https://www.manuscripta.se/person/100484" when="2025-07-02" status="published">Published for researcher</change>
             <change status="draft" when="2024-07-04" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>

@@ -21,7 +21,7 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101150</idno>
                 <date when="2024"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -46,8 +46,10 @@
                                 <support>
                                     <p>
                                         <locusGrp>
-                                            <locus from="LCI" to="SL3v" scheme="other"/>
-                                            <locus from="SR1r" to="RCI" scheme="other"/>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1r" to="SL3v" scheme="folios"/>
+                                            <locus from="SR1r" to="SR2v" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
                                         </locusGrp>
                                         <material>Paper</material>
                                         <dimensions type="leaf">
@@ -60,9 +62,9 @@
                                     <measure type="leftFlyleaves" unit="folios" quantity="3"/>
                                     <measure type="rightFlyleaves" unit="folios" quantity="2"/>
                                 </extent>
-                                <foliation>Modern foliation in pencil. Running titles in red and blue ink.</foliation>
+                                <foliation>Modern foliation in pencil. <secFol>hebraicam ueritatem</secFol></foliation>
                                 <collation>
-                                    <formula>Formula: 1(4), 2(11), 3-11(10), 12(8), 13-36(10), 37(10), 36(10, lacks 9 and 10).</formula>
+                                    <formula>1(4), 2(11), 3-11(10), 12(8), 13-36(10), 37(10), 36(10, lacks 9 and 10).</formula>
                                     <p>
                                         <ref target="https://vceditor.library.upenn.edu/project/67dd8071f060c60001cb941f/viewOnly">VisColl collation</ref>
                                     </p>
@@ -74,7 +76,7 @@
                         <additions>
                             <p>
                                 <locus from="SL1r" to="SL1r" scheme="folios"/>
-                                <note>Top of page, in dark brown ink by a modern hand: <quote>Kgl. Bibl. 1784 års Kat. Theol. in 4o no. 1.</quote> <quote>Biblia Sacra secundum versionem Sti Hieronymi.</quote> Below, in pencil: Synes ha tillhört Oliva Kloster, se ant. å sista bladet, v: <quote>anno Domini 1433 desolata est Oliua a Polonis Hussitis etc die Egidii.</quote></note>
+                                <note>Top of page, in dark brown ink by a modern hand: <quote>Kgl. Bibl. 1784 års Kat. Theol. in 4o no. 1.</quote> <quote>Biblia Sacra secundum versionem Sti Hieronymi.</quote> Below, in pencil: <quote>Synes ha tillhört Oliva Kloster, se ant. å sista bladet</quote>, v: <quote>anno Domini 1433 desolata est Oliua a Polonis Hussitis etc die Egidii.</quote></note>
                             </p>
                             <p>
                                 <locus from="SL3v" to="SL3v" scheme="folios"/>
@@ -87,7 +89,7 @@
                         </additions>
                         <bindingDesc>
                             <binding contemporary="false">
-                                <p>Early modern binding (16th or 17th century) in light yellow parchment with two cloth straps on <locus from="LCO" to="LCO" scheme="other"/> and <locus from="RCO" to="RCO" scheme="other"/>. 4 double raised bands and 2 endbands. <locus from="Head" to="Head" scheme="other"/>, <locus from="Tail" to="Tail" scheme="other"/> and <locus from="fore-edge" to="fore-edge" scheme="other"/> coloured in red.  <locus from="Spine" to="Spine" scheme="other"/>: Top, in brown ink: <quote>Biblia Latina</quote>. Middle, stamped in gold: current signum (<quote>A 167</quote>). Below this, older paper labels with the following signa: <quote>1</quote>, <quote>e.30.5.18</quote>. Bottom, in brown ink: <quote>127</quote>. Below this a paper label with the signum <quote>63</quote> and some illegible text. </p>
+                                <p>Early modern binding (16th or 17th century) in light yellow parchment with two cloth straps on <locus from="LCO" to="LCO" scheme="other"/> and <locus from="RCO" to="RCO" scheme="other"/>. 4 double raised bands and 2 endbands. <locus from="Head" to="Head" scheme="other"/>, <locus from="Tail" to="Tail" scheme="other"/> and <locus from="fore-edge" to="fore-edge" scheme="other"/> coloured in red. <locus from="Spine" to="Spine" scheme="other"/>: In brown ink: <quote>Biblia Latina</quote>. Stamped in gold: current signum (<quote>A 167</quote>). Older paper labels with the following signa: <quote>1</quote>, <quote>e.30.5.18</quote>. In brown ink: <quote>127</quote> and a paper label with the signum <quote>63</quote> and some illegible text. </p>
                                 <p>
                                     <dimensions type="binding">
                                         <height min="260" max="260" unit="mm"/>
@@ -100,11 +102,18 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
-                                <placeName ref="https://www.manuscripta.se/place/100111">France</placeName>
-                            </origPlace>, <origDate notBefore="1200" notAfter="1230">early 13th century</origDate>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100111">France</placeName>
+                                </origPlace>, <origDate notBefore="1200" notAfter="1230">early 13th century</origDate>
+                            </p>
                         </origin>
-                        <provenance>The manuscript probably belonged to the Cistercian monastery at <placeName ref="https://www.manuscripta.se/place/100304">Oliwa </placeName>(see note on <locus from="361v" to="361v" scheme="folios"/>) in the 15th century. Thereafter, it belonged to the Dietrichstein library in <placeName ref="https://www.manuscripta.se/place/100305">Mikulov</placeName> (source?) and was most likely brought to <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName> as war booty during the Thirty Years' War. In the catalogue of 1734 (U 125e, p. 43) listed as no 1 of the quarto manuscripts. </provenance>
+                        <provenance>
+                            <p>The manuscript probably belonged to the Cistercian monastery at <placeName ref="https://www.manuscripta.se/place/100304">Oliwa </placeName>(see note on <locus from="361v" to="361v" scheme="folios"/>) in the 15th century.</p>
+                        </provenance>
+                        <acquisition>
+                            <p>The volume was most likely taken as spoils of war during the Thirty Years' War. In the catalogue of 1734 (U 125e, p. 43) listed as no. 1 of the quarto manuscripts. </p>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
@@ -122,82 +131,84 @@
                             <textLang mainLang="la"/>
                             <msItem>
                                 <locus from="1r" to="1r" scheme="folios"/>
-                                <title type="uniform">Table of contents</title>
+                                <title type="desc">Table of contents</title>
                                 <note>
-                                         <locus from="1v" to="1v" scheme="folios"/> : Blank. 
-                                                                                                                   
-                                                                                                         
-                                                                                               
-                                                                                     
-                                                                           
-                                                                 
-                                                       
-                                             
-                                                                    
+                                              <locus from="1v" to="1v" scheme="folios"/> : Blank. 
+                                          
+                                          
                                      
                                      
+                                
                                 </note>
                             </msItem>
                             <msItem>
-                                <locus from="2r" to="5r" scheme="folios"/>
-                                <title type="desc">Summarium Biblicum</title>
-                                <incipit>Sex prohibet peccant abel enoch archa fit intrant</incipit>
-                                <note>Versified summaries of Bible books and chapters in the Old testament added by a 15th century hand. On the text, see further <bibl>
-                                        <title ref="https://www.manuscripta.se/bibl/107419" type="short">Doležalová (2013)</title>
-                                        <citedRange unit="page" from="163" to="184"/>
-                                    </bibl>.</note>
+                                <locus from="1r" to="5r" scheme="folios"/>
+                                <title type="desc">Mnemonic verses (later additions)</title>
+                                <msItem>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <title type="desc">On Bible readings for the liturgical year</title>
+                                    <incipit>disce per hoc scriptum quid sit vel quando legendum</incipit>
+                                    <explicit>post natalem sacrum recitat sacra leccio paulum</explicit>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/101543" type="short">Walther (1969)</title>
+                                        <citedRange unit="number" from="4536" to="4536"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="2r" to="2r" scheme="folios"/>
+                                    <title type="desc">On the order of the Biblical books</title>
+                                    <incipit>Sunt genes ex le nu deu Jo iu ruth rex pal es ne</incipit>
+                                    <explicit>docmata canonicus est apocalipsis et actus</explicit>
+                                    <note>On this verse, see <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107419" type="short">Doležalová (2013)</title>
+                                            <citedRange unit="page" from="167" to="167"/>
+                                        </bibl>. </note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="8616" to="8616"/>
+                                    </bibl>
+                                </msItem>
+                                <msItem>
+                                    <locus from="2r" to="5r" scheme="folios"/>
+                                    <title type="desc">Summarium Biblicum</title>
+                                    <incipit>Sex prohibet peccant abel enoch archa fit intrant</incipit>
+                                    <explicit>dragmas eupatoris fraus alchima mors nycanoris</explicit>
+                                    <note>On this text, see <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107419" type="short">Doležalová (2013)</title>
+                                            <citedRange unit="page" from="163" to="184"/>
+                                        </bibl>, and <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107532" type="short">Doležalová (2007).</title>
+                                        </bibl></note>
+                                </msItem>
                             </msItem>
                             <msItem>
                                 <locus from="5va" to="7rc" scheme="folios"/>
                                 <title type="desc">Prologue</title>
-                                <rubric>epistola sancti ieronimi ad paulinum presbiterum de omnibus diuinis historie libris</rubric>
+                                <rubric>epistola ieronimi ad paulinum presbiterum de omnibus diuinis historie libris</rubric>
                                 <incipit>FRATER ambrosius tua mihi munuscula perferens detulit</incipit>
                                 <note>
-                                         <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="284" to="284"/>
                                     </bibl>.
-                                                                                                              
-                                                                                                    
-                                                                                          
-                                                                                
-                                                                      
-                                                            
-                                                  
-                                                                              
-                                                                              
+                                          
+                                          
                                      
                                      
                                 
                                 </note>
                             </msItem>
                             <msItem defective="true">
-                                <locus from="7va" to="8rb" scheme="folios"/>
+                                <locus from="7va" to="7vb" scheme="folios"/>
                                 <title type="desc">Prologue to the Pentateuch</title>
                                 <rubric>Incipit prefatio iheronimi presbiteri in pentateucum</rubric>
                                 <incipit>Desiderii mei desideratas accepi epistolas</incipit>
                                 <note>
                                     <p>
-                                                                                          <bibl>
+                                                  <bibl>
                                             <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                             <citedRange unit="number" from="285" to="285"/>
                                         </bibl>.
-                                                                                      
-                                                                                      
-                                                                                 
-                                                                                 
-                                                                            
-                                                                            
-                                                                       
-                                                                       
-                                                                  
-                                                                  
-                                                             
-                                                             
-                                                        
-                                                        
-                                                   
-                                                   
                                               
                                               
                                          
@@ -208,8 +219,16 @@
                                 </note>
                             </msItem>
                             <msItem>
-                                <locus to="20rb" scheme="folios" from="8rb"/>
+                                <locus to="20rb" scheme="folios" from="7vb"/>
                                 <title type="desc">Genesis</title>
+                                <note>
+                                              <locus from="7vb" to="8vb" scheme="folios"/>: chapter summaries.
+                                          
+                                          
+                                     
+                                     
+                                
+                                </note>
                             </msItem>
                             <msItem>
                                 <locus from="21ra" to="31ra" scheme="folios"/>
@@ -220,23 +239,7 @@
                                 <locus from="31rc" to="38va" scheme="folios"/>
                                 <title type="desc">Leviticus</title>
                                 <note>
-                                                                                      <locus from="31ra" to="31rc" scheme="folios"/>: chapter summaries.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
+                                              <locus from="31ra" to="31rc" scheme="folios"/>: chapter summaries.
                                           
                                           
                                      
@@ -248,23 +251,7 @@
                                 <locus from="39rb" to="49va" scheme="folios"/>
                                 <title type="desc">Numbers</title>
                                 <note>
-                                                                                      <locus from="38va" to="39ra" scheme="folios"/>: chapter summaries.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
+                                              <locus from="38va" to="39ra" scheme="folios"/>: chapter summaries.
                                           
                                           
                                      
@@ -276,23 +263,7 @@
                                 <locus from="51ra" to="60rc" scheme="folios"/>
                                 <title type="desc">Deuteronomy</title>
                                 <note>
-                                                                                      <locus from="49va" to="50rb" scheme="folios"/>: Chapter summaries. <locus from="50v" to="50v" scheme="folios"/>: Blank.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
+                                              <locus from="49va" to="50rb" scheme="folios"/>: chapter summaries. <locus from="50v" to="50v" scheme="folios"/>: Blank.
                                           
                                           
                                      
@@ -305,26 +276,10 @@
                                 <title type="desc">Prologue to Josue</title>
                                 <incipit>Tandem finito pentateuco moysi</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="311" to="311"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -347,29 +302,13 @@
                             <msItem>
                                 <locus from="74vb" to="75rb" scheme="folios"/>
                                 <title type="desc">Prologue to Kings</title>
-                                <incipit>Uiginti et duas literas apud hebreos esse</incipit>
+                                <incipit>UIGINTI et duas litteras apud hebreos esse</incipit>
                                 <note>
                                     <p>
-                                                                                          <bibl>
+                                                  <bibl>
                                             <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                             <citedRange unit="number" from="323" to="323"/>
                                         </bibl>.
-                                                                                      
-                                                                                      
-                                                                                 
-                                                                                 
-                                                                            
-                                                                            
-                                                                       
-                                                                       
-                                                                  
-                                                                  
-                                                             
-                                                             
-                                                        
-                                                        
-                                                   
-                                                   
                                               
                                               
                                          
@@ -377,23 +316,7 @@
                                     
                                     </p>
                                     <p>
-                                                                                          <locus from="75v" to="75v" scheme="folios"/>: Blank.
-                                                                                      
-                                                                                      
-                                                                                 
-                                                                                 
-                                                                            
-                                                                            
-                                                                       
-                                                                       
-                                                                  
-                                                                  
-                                                             
-                                                             
-                                                        
-                                                        
-                                                   
-                                                   
+                                                  <locus from="75v" to="75v" scheme="folios"/>: Blank.
                                               
                                               
                                          
@@ -415,34 +338,18 @@
                                 <title type="desc">3 Kings</title>
                             </msItem>
                             <msItem>
-                                <locus from="101rb" to="109ra" scheme="folios"/>
+                                <locus from="101rb" to="109va" scheme="folios"/>
                                 <title type="desc">4 Kings</title>
                             </msItem>
                             <msItem>
-                                <locus from="109ra" to="109rc" scheme="folios"/>
+                                <locus from="109va" to="109rc" scheme="folios"/>
                                 <title type="desc">Prologue to 1 Paralipomenon</title>
                                 <incipit>SI SEPTVAGINTA interpretum pura</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="328" to="328"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -463,26 +370,10 @@
                                 <title type="desc">Prologue to Esdras</title>
                                 <incipit>UTRVM difficilius sit facere </incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="330" to="330"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -505,28 +396,12 @@
                             <msItem>
                                 <locus from="135ra" to="135rb" scheme="folios"/>
                                 <title type="desc">Prologue to Tobias</title>
-                                <incipit>CROMACIO et heliodoro episcopis iheronimus presbiter in domino salutem Mirari non desino</incipit>
+                                <incipit>CROMATIO et heliodoro episcopis iheronimus presbiter in domino salutem Mirari non desino</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="332" to="332"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -541,28 +416,12 @@
                             <msItem>
                                 <locus from="137va" to="137vb" scheme="folios"/>
                                 <title type="desc">Prologue to Judith</title>
-                                <incipit>APVD hebreos liber iudith</incipit>
+                                <incipit>APVD hebreos liber iudit</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="335" to="335"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -577,29 +436,13 @@
                             <msItem>
                                 <locus from="140vc" to="140vc" scheme="folios"/>
                                 <title type="desc">Prologue to Esther</title>
-                                <incipit>LIBRVM hester uariis translationibus constat</incipit>
+                                <incipit>LIBRVM hester uariis translatoribus constat</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107168" type="short">PL</title>
                                         <citedRange unit="volume" from="28" to="28"/>
                                         <citedRange unit="column" from="1433A" to="1436A"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -621,8 +464,22 @@
                                     </bibl> .</note>
                             </msItem>
                             <msItem>
-                                <locus from="144rb" to="150va" scheme="folios"/>
+                                <locus from="144rb" to="150rc" scheme="folios"/>
                                 <title type="desc">Job</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="150rc" to="150va" scheme="folios"/>
+                                <title type="desc">Prologue to Psalms</title>
+                                <incipit>Psalterium rome dudum postitus</incipit>
+                                <note>
+                                    <p>
+                                        <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
+                                            <citedRange unit="number" from="430" to="430"/>
+                                        </bibl>
+                                    </p>
+                                    <p/>
+                                </note>
                             </msItem>
                             <msItem>
                                 <locus from="150va" to="165rc" scheme="folios"/>
@@ -650,7 +507,7 @@
                                 <title type="desc">Canticles</title>
                             </msItem>
                             <msItem>
-                                <locus to="177vc" scheme="folios" from="173v"/>
+                                <locus to="177vc" scheme="folios" from="173vc"/>
                                 <title type="desc">Wisdom</title>
                             </msItem>
                             <msItem>
@@ -671,26 +528,10 @@
                                 <title type="uniform">Prologue to Isaias</title>
                                 <incipit>Esayas in iherusalem natus</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="480" to="480"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -733,26 +574,10 @@
                                 <title type="desc">Prologue to Baruch</title>
                                 <incipit>LIBer iste qui baruch nomine prenotatur</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="491" to="491"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -809,7 +634,7 @@
                                     </bibl> .</note>
                             </msItem>
                             <msItem>
-                                <locus from="237va" to="239ra" scheme="folios"/>
+                                <locus from="237va" to="239rc" scheme="folios"/>
                                 <title type="desc">Osee</title>
                             </msItem>
                             <msItem>
@@ -817,26 +642,10 @@
                                 <title type="desc">Prologue to Joel</title>
                                 <incipit>SANCTVS Iohel apud hebreos</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="511" to="511"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -853,26 +662,10 @@
                                 <title type="desc">Prologue to Amos</title>
                                 <incipit>OZIAS rex cum domini legem sollicite emularetur</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="515" to="515"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -1000,7 +793,7 @@
                                     </bibl> .</note>
                             </msItem>
                             <msItem>
-                                <locus from="249ra" to="250ra" scheme="folios"/>
+                                <locus from="249rc" to="250ra" scheme="folios"/>
                                 <title type="desc">Malachias</title>
                             </msItem>
                             <msItem>
@@ -1040,7 +833,7 @@
                             <msItem>
                                 <locus from="278rc" to="278va" scheme="folios"/>
                                 <title type="desc">Prologue to Luke</title>
-                                <incipit>LVCAS syrus natione antiochensis <sic>arce</sic> medicus </incipit>
+                                <incipit>LVCAS syrus natione antiocensis <sic>arce</sic> medicus </incipit>
                                 <note> <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="620" to="620"/>
@@ -1068,26 +861,10 @@
                                 <title type="desc">Prologue to Romans</title>
                                 <incipit>PRIMVM queritur quare post ewangelia</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB </title>
                                         <citedRange unit="number" from="670" to="670"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -1098,28 +875,12 @@
                             <msItem>
                                 <locus from="295va" to="295vc" scheme="folios"/>
                                 <title type="desc">Prologue to Romans</title>
-                                <incipit>Romani sunt qui ex iudeis</incipit>
+                                <incipit>ROMANI sunt qui ex iudeis</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="674" to="674"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -1132,26 +893,10 @@
                                 <title type="desc">Prologue to Romans</title>
                                 <incipit>Iam dudum Saulus procerum precepta secutus</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="654" to="654"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -1164,31 +909,25 @@
                                 <title type="desc">Prologue to Romans</title>
                                 <incipit>Causa hec est ecclesiam e duobus populis</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="651" to="651"/>
                                     </bibl>.                                                                      
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
                                      
                                 
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="296ra" to="296rb" scheme="folios"/>
+                                <incipit>Omnis textus uel numerus</incipit>
+                                <note>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
+                                        <citedRange unit="number" from="10426" to="10426"/>
+                                    </bibl>
                                 </note>
                             </msItem>
                             <msItem>
@@ -1214,7 +953,7 @@
                                     </bibl>.</note>
                             </msItem>
                             <msItem>
-                                <locus from="299v" to="303ra" scheme="folios"/>
+                                <locus from="299vb" to="303ra" scheme="folios"/>
                                 <title type="desc">1 Corinthians</title>
                             </msItem>
                             <msItem>
@@ -1235,26 +974,10 @@
                                 <title type="desc">Prologue to Galatians</title>
                                 <incipit>Galathe sunt greci</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="707" to="707"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -1332,11 +1055,11 @@
                                 <title type="desc">Colossians</title>
                             </msItem>
                             <msItem>
-                                <locus from="310vb" to="310vc" scheme="folios"/>
+                                <locus from="310vb" to="310vb" scheme="folios"/>
                                 <title type="desc">Laodiceans</title>
                             </msItem>
                             <msItem>
-                                <locus from="310vc" to="310vc" scheme="folios"/>
+                                <locus from="310vb" to="310vc" scheme="folios"/>
                                 <title type="desc">Prologue to 1 Timothy</title>
                                 <incipit>TIMOTHEUM instruit et docet</incipit>
                                 <note> <bibl>
@@ -1351,7 +1074,7 @@
                             <msItem>
                                 <locus from="311vb" to="311vb" scheme="folios"/>
                                 <title type="desc">Prologue to 2 Timothy</title>
-                                <incipit>ITEM Timotheo scribit</incipit>
+                                <incipit>ITEM timotheo scribit</incipit>
                                 <note> <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="772" to="772"/>
@@ -1364,7 +1087,7 @@
                             <msItem>
                                 <locus from="312rc" to="312rc" scheme="folios"/>
                                 <title type="desc">Prologue to Titus</title>
-                                <incipit>TITVM commonefacit et instruit</incipit>
+                                <incipit>TITVM conmonefacit et instruit</incipit>
                                 <note> <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
                                         <citedRange unit="number" from="780" to="780"/>
@@ -1378,23 +1101,7 @@
                                 <locus from="312vc" to="312vc" scheme="folios"/>
                                 <title type="desc">Prologue to Philemon</title>
                                 <incipit>
-                                                                                      Filemoni familiares litteras facit
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
+                                              Filemoni familiares litteras facit
                                           
                                           
                                      
@@ -1437,26 +1144,10 @@
                                 <title type="desc">Prologue to Acts</title>
                                 <incipit>CANIT psalmista</incipit>
                                 <note>
-                                                                                      <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="633" to="633"/>
                                     </bibl>.
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
                                           
                                           
                                      
@@ -1471,13 +1162,52 @@
                             <msItem>
                                 <locus from="324rb" to="324rc" scheme="folios"/>
                                 <title type="desc">Prologue to James</title>
-                                <incipit>NON ita est ordo apud grecos</incipit>
+                                <incipit>NON ita ordo est apud grecos</incipit>
                                 <note>
-                                    <p><bibl>
+                                    <p>
+                                                  <bibl>
                                             <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                             <citedRange unit="number" from="809" to="809"/>
-                                        </bibl>.</p>
+                                        </bibl>.
+                                              
+                                              
+                                         
+                                         
+                                    
+                                    </p>
                                     <p/>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="324rb" to="324rb" scheme="folios"/>
+                                <title type="uniform">Prologue to James</title>
+                                <incipit>Iacobus petrus iohannes</incipit>
+                                <note>
+                                              <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
+                                        <citedRange unit="number" from="807" to="807"/>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="342rb" to="324rc" scheme="folios"/>
+                                <title type="desc">Prologue to James</title>
+                                <incipit>Iacobus apostolus sanctum instruit clerum</incipit>
+                                <note>
+                                              <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
+                                        <citedRange unit="number" from="806" to="806"/>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1488,23 +1218,7 @@
                                 <locus from="325rb" to="325rb" scheme="folios"/>
                                 <title type="desc">Prologue to 1 Peter</title>
                                 <incipit>
-                                                                                      <sic>Discipulus</sic> saluatoris inuicti toto orbe diffusos
-                                                                                  
-                                                                                  
-                                                                             
-                                                                             
-                                                                        
-                                                                        
-                                                                   
-                                                                   
-                                                              
-                                                              
-                                                         
-                                                         
-                                                    
-                                                    
-                                               
-                                               
+                                              <sic>Discipulus</sic> saluatoris inuicti toto orbe diffusos
                                           
                                           
                                      
@@ -1512,10 +1226,15 @@
                                 
                                 </incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
-                                        <citedRange unit="number" from="812" to="812">number 812–812.</citedRange>
-                                    </bibl>
+                                        <citedRange unit="number" from="812" to="812"/>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1527,10 +1246,15 @@
                                 <title type="desc">Prologue to 2 Peter</title>
                                 <incipit>SYMON petrus per fidem</incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="818" to="818"/>
-                                    </bibl>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1542,10 +1266,15 @@
                                 <title type="desc">Prologue to 1 John</title>
                                 <incipit>Rationem uerbi et quod deus ipse sit</incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
-                                        <citedRange unit="number" from="822" to="822">number 822–822.</citedRange>
-                                    </bibl>
+                                        <citedRange unit="number" from="822" to="822"/>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1553,10 +1282,15 @@
                                 <title type="desc">Prologue to 1 John</title>
                                 <incipit>Hieronimus libro <sic>decatalago</sic> scriptorum</incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="804" to="804"/>
-                                    </bibl>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1568,10 +1302,15 @@
                                 <title type="desc">Prologue to 2 John</title>
                                 <incipit>USQVE adeo ad sanctam feminam</incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105" type="short">RB</title>
-                                        <citedRange unit="number" from="823" to="823">number 823–823.</citedRange>
-                                    </bibl>
+                                        <citedRange unit="number" from="823" to="823"/>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1583,10 +1322,15 @@
                                 <title type="desc">Prologue to 3 John</title>
                                 <incipit>GAIVM pietatis causa</incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="824" to="824"/>
-                                    </bibl>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1598,10 +1342,15 @@
                                 <title type="desc">Prologue to Jude</title>
                                 <incipit>IVDAS apostolus fratres</incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="825" to="825"/>
-                                    </bibl>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
@@ -1620,18 +1369,22 @@
                             <msItem>
                                 <locus from="328ra" to="328rb" scheme="folios"/>
                                 <title type="desc">Prologue to Revelation</title>
-                                <incipit>IOHANNES apostolis et ewangelista</incipit>
+                                <incipit>IOHANNES apostolus et ewangelista</incipit>
                                 <note>
-                                    <bibl>
+                                              <bibl>
                                         <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
                                         <citedRange unit="number" from="834" to="834"/>
-                                    </bibl>
+                                    </bibl>.
+                                          
+                                          
+                                     
+                                     
+                                
                                 </note>
                             </msItem>
                             <msItem>
-                                <locus from="328ra" to="332rb" scheme="folios"/>
+                                <locus from="328rb" to="332rb" scheme="folios"/>
                                 <title type="desc">Revelation</title>
-                                <note/>
                             </msItem>
                             <msItem>
                                 <locus from="332rb" to="359vc" scheme="folios"/>
@@ -1642,22 +1395,24 @@
                                     </bibl>.</note>
                             </msItem>
                             <msItem>
-                                <locus from="360r" to="361r" scheme="folios"/>
-                                <title type="uniform">The New Testament in verse</title>
-                                <incipit>Natus adoratur latim temptat docet orat</incipit>
-                                <explicit>flebunt ad cenam surgunt sponsam venio iam</explicit>
-                                <note>
+                                <locus from="360r" to="361v" scheme="folios"/>
+                                <title type="desc">Mnemonic verses (later additions)</title>
+                                <msItem>
+                                    <locus from="360r" to="361r" scheme="folios"/>
+                                    <title type="desc">The books of the New Testament</title>
+                                    <incipit>Natus adoratur lotum temptat docet orat</incipit>
+                                    <explicit>flebunt ad cenam surgunt sponsam venio iam</explicit>
                                     <bibl>
-                                        <title ref="https://www.manuscripta.se/bibl/101543">Walther</title>
+                                        <title ref="https://www.manuscripta.se/bibl/101543" type="short">Walther (1969)</title>
                                         <citedRange unit="number" from="11620" to="11620"/>
                                     </bibl>
-                                </note>
-                            </msItem>
-                            <msItem>
-                                <locus from="361v" to="361v" scheme="folios"/>
-                                <title type="desc">Contents of the Bible</title>
-                                <incipit>Biblia dicitur in testamentum vetus</incipit>
-                                <explicit>hec nicolaus de lyra</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="361v" to="361v" scheme="folios"/>
+                                    <title type="desc">Summary of the Bible</title>
+                                    <incipit>Biblia dicitur in testamentum vetus</incipit>
+                                    <explicit>hec nicolaus de lyra</explicit>
+                                </msItem>
                             </msItem>
                         </msContents>
                         <physDesc>
@@ -1676,74 +1431,76 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="361" unit="folios"/>
                                     </extent>
+                                    <foliation>Running titles in red and blue ink.</foliation>
                                     <condition>
-                                        Occasional holes, for example on 1r  <locus from="19r" to="19r" scheme="folios"/> and <locus from="21r" to="21r" scheme="folios"/>. Repairs on <locus from="228r" to="228r" scheme="folios"/>, <locus from="330r" to="330r" scheme="folios"/>, <locus from="253r" to="253r" scheme="folios"/>. On <locus from="329r" to="329r" scheme="folios"/>, a bit of the parchment has been cut out. Two leaves missing after <locus from="361v" to="361v" scheme="folios"/>. The edges have been trimmed, resulting in loss of text, but mostly concerning additions.
+                                        Occasional holes, for example on <locus from="1r" to="1r" scheme="folios"/>, <locus from="12r" to="12r" scheme="pages"/>, <locus from="19r" to="19r" scheme="folios"/>, <locus from="21r" to="21r" scheme="folios"/> and <locus from="335r" to="335r" scheme="folios"/>. Repairs on <locus from="228r" to="228r" scheme="folios"/>, <locus from="330r" to="330r" scheme="folios"/>, <locus from="253r" to="253r" scheme="folios"/>. On <locus from="329r" to="329r" scheme="folios"/>, a piece of the parchment has been cut out. Two leaves missing after <locus from="361v" to="361v" scheme="folios"/>. The edges have been trimmed, resulting in occasional loss of text.
                                     </condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="1" ruledLines="21">
-                                        <locusGrp>
-                                            <locus from="2r" to="5r" scheme="folios"/>
-                                            <locus from="360r" to="361r" scheme="folios"/>
-                                        </locusGrp>
+                                        <locus from="2r" to="5r" scheme="folios"/>
                                         <dimensions type="written">
                                             <height min="220" max="220" unit="mm"/>
                                             <width min="150" max="150" unit="mm"/>
                                         </dimensions>
+                                        <note>Guidelines and ruling in ink.</note>
                                     </layout>
                                     <layout columns="3" ruledLines="58">
-                                        <locus from="5v" to="359v" scheme="folios"/>
+                                        <locus from="5v" to="361v" scheme="folios"/>
                                         <dimensions type="written">
                                             <height min="200" max="200" unit="mm"/>
                                             <width min="140" max="140" unit="mm"/>
                                         </dimensions>
-                                        <note>Guidelines in ink. Pricking visible on some folios.</note>
+                                        <note>Guidelines and ruling in ink. Pricking visible on some folios.</note>
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote xml:id="hand-1">
-                                    <locus from="2r" to="2r" scheme="folios"/>
-                                </handNote>
-                                <handNote xml:id="hand-2"><locus from="2r" to="5r" scheme="folios"/>Hybrida, ca 15th century.</handNote>
-                                <handNote xml:id="hand-3">Protogothic. Writing over the top line.</handNote>
+                                <handNote xml:id="hand-1"><locus from="1r" to="1r" scheme="folios"/>Gothic cursive, ca 15th century (On Bible readings for the liturgical year)</handNote>
+                                <handNote xml:id="hand-2"><locus from="1r" to="1r" scheme="folios"/>Textualis  (Table of contents)</handNote>
+                                <handNote xml:id="hand-3"><locus from="2r" to="2r" scheme="folios"/>Semi-hybrida (On the order of the Biblical books)</handNote>
+                                <handNote xml:id="hand-4"><locus from="2r" to="5r" scheme="folios"/>Hybdrida, 15th century.</handNote>
+                                <handNote xml:id="hand-5"><locus from="5v" to="359v" scheme="folios"/>Protogothic, writing above top line.</handNote>
+                                <handNote xml:id="hand-6"><locus from="361v" to="361v" scheme="folios"/>Hybrida</handNote>
                             </handDesc>
                             <additions>
                                 <p>
-                                    <locus from="1r" to="1r" scheme="folios"/>
-                                    <note>In dark brown ink by a medieval hand: 15-line mnemonic verse, <quote>disce per hoc scriptum quid sit vel quando legendum</quote>, see Walther, Initia carminum 4536. Libris 655979</note>
-                                </p>
-                                <p>
-                                    <locus from="2r" to="2r" scheme="folios"/>
-                                    <note>In brown ink by a medieval hand: 8-line mnemonic verse about the books of the Bible, beginning <quote>Sunt genes ex le nu deu Jo iu ruth rex pal es ne</quote>, see <bibl>
-                                            <title ref="https://www.manuscripta.se/bibl/107105">RB</title>
-                                            <citedRange unit="number" from="8616" to="8616"/>
-                                        </bibl>.</note>
-                                </p>
-                                <p>
-                                    <locus from="34v" to="42r" scheme="folios"/>
-                                    <note>In the lower margin, in brown ink by a medieval hand: additions/corrections. </note>
+                                    <locus from="5v" to="332r" scheme="folios"/>
+                                    <note>In brown ink by a late medieval hand: annotations and corrections.</note>
                                 </p>
                                 <p>
                                     <locus from="127v" to="127v" scheme="folios"/>
-                                    <note>Middle column, in brown ink by a later medieval hand: <quote>verba nehemie filii helchie</quote></note>
+                                    <note>Middle column, in brown ink by a later medieval hand: <quote>verba nehemie filii helchie</quote>.</note>
                                 </p>
                                 <p>
                                     <locus from="216v" to="216v" scheme="folios"/>
-                                    <note>In the left margin, in pencil by a modern hand: <quote>[Valafrid Strabo]</quote></note>
+                                    <note>In the left margin, in pencil by a modern hand: <quote>[Valafrid Strabo]</quote>.</note>
                                 </p>
                                 <p>
                                     <locus from="361v" to="361v" scheme="folios"/>
                                     <note>In light brown ink by a late medieval hand: 
-                                        <quote>Quando fuit bellum te littera certificabit Anno domini m ccc lxx dominica Exurge quare Bellum in prusia commissum et amissum anno domini m cccc xo diuisione apostolorum Item ibi ceciderunt qui operantur iniquitatem etc Iuuenes tempore perditi belli ii annis adiunctis</quote>
-                                        Below this, in dark brown ink by a contemporary hand: 
-                                        <quote>Item anno domini m cccc xxxiii desolata est Oliua a Polonis, Hussitis etc die Egidii</quote>
+                                        <quote>Quando fuit bellum te littera certificabit Anno domini m ccc lxx dominica Exurge quare Bellum in prusia commissum et amissum anno domini m cccc xo diuisione apostolorum Item ibi ceciderunt qui operantur iniquitatem etc Iuuenes tempore perditi belli ii annis adiunctis</quote>.
+                                        Below this, in dark brown ink: 
+                                        <quote>Item anno domini m cccc xxxiii desolata est Oliua a Polonis, Hussitis etc die Egidii</quote>.
                                     </note>
                                 </p>
                             </additions>
                             <decoDesc>
-                                <p>Main text in brown ink. Puzzle initials in red and blue. Rubrics, incipits and explicits in red. Running titles in red and blue. Capitals touched in red.</p>
-                                <decoNote type="initials">5v 8r</decoNote>
+                                <p>Main text in brown ink. Plain initials of varying size in red and blue. Rubrics, incipits and explicits in red. Incipits in brown ink, touched in red. Running titles in red and blue. Chapter numbers in red and blue. Guideletters visible. For further description, see also <ref target="http://urn.kb.se/resolve?urn=urn:nbn:se:alvin:portal:record-472857">Lindqvist Sandgren</ref>.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="5v" to="5v" scheme="folios"/>: Puzzle initial <quote>F</quote> in red and blue over 34 lines, with pen-flourishing and marginal stem expanding over the whole page.
+                                        <locus from="8r" to="8r" scheme="folios"/>: Plain initial <quote>I</quote> in red and blue over 22 lines, with pen-flourishing marginal stem expanding to the lower margin.
+                                        
+                                        <locus from="76r" to="76r" scheme="folios"/>; <locus from="85r" to="85r" scheme="folios"/>:  Plain initials in red and blue over 13-19 lines, with pen-flourishing.
+                                        
+                                        <locus from="74v" to="74v" scheme="folios"/>; <locus from="92r" to="92r" scheme="folios"/>; <locus from="115r" to="115r" scheme="folios"/>; <locus from="101r" to="101r" scheme="folios"/>;  <locus from="109v" to="109v" scheme="folios"/>; <locus from="140v" to="140v" scheme="folios"/>; <locus from="150v" to="150v" scheme="folios"/>; <locus from="250r" to="250r" scheme="folios"/>; <locus from="258r" to="258r" scheme="folios"/>; <locus from="264r" to="264v" scheme="folios"/>; <locus from="273r" to="273r" scheme="folios"/>; <locus from="278r" to="278v" scheme="folios"/> and <locus from="288r" to="288r" scheme="folios"/> (with stems expanding over the page); <locus from="295r" to="295v" scheme="folios"/>; <locus from="296r" to="296r" scheme="folios"/>: Puzzle initials in red and blue over 8-12 lines.
+                                        
+                                        <locus from="31r" to="31r" scheme="folios"/>, <locus from="39r" to="39r" scheme="folios"/>, <locus from="51r" to="51r" scheme="folios"/>:  Plain intitials in red and blue over 8-9 lines, with pen-flourishing.
+                                        Plain initials in red, blue and brown ink with pen-flourishing over 2-3 lines throughout the volume.
+                                        <locus from="332rb" to="359vc" scheme="folios"/>: plain initials in blue and red over 1 line.
+                                    </p>
+                                </decoNote>
                             </decoDesc>
                         </physDesc>
                     </msPart>
@@ -4686,11 +4443,11 @@
             <desc>f. 361v</desc>
             <graphic url="ms-101150_0730.tif" width="6975px" height="8866px"/>
         </surface>
-        <surface xml:id="ms-101150_Stub_1r">
+        <surface xml:id="ms-101150_Stub1">
             <desc>Stub_1r</desc>
             <graphic url="ms-101150_0731.tif" width="6975px" height="8866px"/>
         </surface>
-        <surface xml:id="ms-101150_Stub_1v">
+        <surface xml:id="ms-101150_Stub2">
             <desc>Stub_1v</desc>
             <graphic url="ms-101150_0732.tif" width="6975px" height="8866px"/>
         </surface>

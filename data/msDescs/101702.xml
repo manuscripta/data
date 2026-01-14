@@ -11,17 +11,21 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101702</idno>
                 <date when="2024"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,17 +43,56 @@
                     <physDesc>
                         <objectDesc form="fragment">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="other"/>
+                                            <locus from="SR1" to="SR1" scheme="other"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="325" unit="mm"/>
+                                            <width quantity="210" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" quantity="1" unit="folios"/>
                                     <measure type="rightFlyleaves" quantity="1" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. </foliation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top of page, in pencil by a modern hand: <quote>A 919</quote>, <quote>efter A. 248: Stockholm</quote>, <quote>se katalogblad A 919</quote>; bottom of page, in pencil by a modern hand: <quote>Om? 1892 31 dec</quote>.</note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Top of page, in black ink by a modern hand: <quote>Canones ecclesiae Gallicanae 442-555. Uttaget från perg.blads depoten och rubricerade d. 31 Dec. 1892</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. Parchment and marbled paper over cardboard. <locus from="LCO" to="LCO" scheme="other"/>: National Library book label with current signum. </p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="330" unit="mm"/>
+                                        <width quantity="215" unit="mm"/>
+                                        <depth quantity="5" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin>
-                            <origDate notBefore="1301" notAfter="1400">14th century</origDate>
-                        </origin>
+                        <origin><p>
+                            <origDate notBefore="1001" notAfter="1200">11th or 12th century.</origDate> Dating based on paleographical criteria. 
+                        </p></origin>
+                        <provenance><p>Early provenance unknown. A note in Swedish on <locus from="1v" to="1v" scheme="folios"/> shows that the fragment was used as a cover for accounts or other documents in <date when="1582"/>. This means that the fragment or the manuscript it belonged to may have been extant in <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName> since the Middle Ages. According to a note on <locus from="SL1r" to="SL1r" scheme="folios"/>, the fragment was taken from a collection of uncatalogued parchment leaves at the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in December 31, <date when="1892"/> and bound in the current binding.</p></provenance>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -57,13 +100,32 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1ra" to="2vb" scheme="folios"/>
+                                <title type="desc">Canons of the Gallican church</title>
+                                <rubric>INcipit consilium uasense id est habitum era ccclxxx Incipiunt capitula</rubric>
+                                <incipit>vt gallicani episcopi in galliis non discutiantur </incipit>
+                                <explicit>quos studiosissime indicasse ostendit</explicit>
+                                <note>Contains canons from the council of Vaison in 442, the council of Orléans in 533, and the beginning of the council of Paris in 552. </note>
+                                <listBibl>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107455" type="short">Concilia Galliae a. 314-506</title>
+                                        <citedRange unit="page" from="94" to="104"/>
+                                    </bibl>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107456" type="short">Concilia Galliae a. 511-695</title>
+                                        <citedRange unit="page" from="98" to="103"/>
+                                        <citedRange unit="page" from="160" to="169"/>
+                                    </bibl>
+                                </listBibl>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="2v" scheme="folios"/>
+                                            <locus from="1" to="2" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="320" unit="mm"/>
@@ -74,8 +136,39 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="2" unit="folios"/>
                                     </extent>
+                                    <foliation>Running titles in brown ink. </foliation>
+                                    <condition>Parchment darkened, faded and spotted, which somewhat affects legibility.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="51">
+                                        <dimensions type="written">
+                                            <height quantity="265" unit="mm"/>
+                                            <width quantity="160" unit="mm"/>
+                                        </dimensions>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Pregothic minuscule. </handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top of page, in pencil by a modern hand: <quote>442.</quote>, <quote>Canones eccl. Gallicanae An. 442-555</quote>. </note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="2r" scheme="folios"/>
+                                    <note>Bottom of page, in brown ink by an early modern hand, written with the leaf turned upside down: Three lines in Swedish. </note>
+                                </p>
+                                <p>
+                                    <locus from="1r" to="2r" scheme="folios"/>
+                                    <note>Scattered notes in pencil and ink by a modern and an early modern hand. The notes by the modern hand provides dates for different paragraphs. </note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink, rubrics in red. </p>
+                                <decoNote type="initials"><p>Plain initials over 1-2 lines in red. </p></decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>

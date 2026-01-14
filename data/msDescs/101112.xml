@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101112</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="anniekma">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,19 +43,84 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="folios"/>
+                                            <locus from="SR1" to="SR1" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="185" unit="mm"/>
+                                            <width quantity="130" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="1"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil, 1-31. <secFol>oraciones super illos</secFol></foliation>
+                                <collation>
+                                    <formula>1(10, lacks 10), 2-3(10), 4-5(1)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/68e3a4347140d00001f7bcd1/viewOnly">VisColl collation</ref>
+                                    </p>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner: National Library book label with the current signum.</note>
+                            </p>
+                            <p>
+                                <locus from="SL1v" to="SL1v" scheme="folios"/>
+                                <note>Top right corner, in ink in <persName ref="https://www.manuscripta.se/person/100853">Klemming</persName>'s hand, a note regarding the former cover: <quote>På det gamla omslaget var med Brocmans hand skrifvet Manuale Membr. Diocesis Vpsalensis. Eljest intet märke</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>19th century binding. Marbled paper over cardboard; spine reinforced with leather. 3 double raised bands. <locus from="LCO" to="LCO" scheme="other"/>, stamped in gold: the current signum, <quote>A 104</quote>. <locus from="Spine" to="Spine" scheme="other"/>, in ink on a paper label: <quote>Manuale Fragm.</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="195" unit="mm"/>
+                                        <width quantity="140" unit="mm"/>
+                                        <depth quantity="20" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
-                                <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
-                            </origPlace>, <origDate notBefore="1451" notAfter="1500">15th century, second half</origDate>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
+                                </origPlace>, <origDate notBefore="1451" notAfter="1500">15th century, second half</origDate>.
+                            </p>
                         </origin>
+                        <provenance>
+                            <p>The manuscript belonged to 18th century book collector and librarian at the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> and <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> <persName ref="https://www.manuscripta.se/person/100536">
+                                                             Nils Reinhold
+                                                             Brocman
+                                                         
+                                                         
+                                                    
+                                                    
+                                               
+                                               
+                                          
+                                          
+                                     
+                                     
+                                </persName>, as evidenced by his hand on the former cover (see note on <locus from="SL1" to="SL1" scheme="folios"/> by <persName ref="https://www.manuscripta.se/person/100853">Klemming</persName>). According to Klemming's note, the former cover had no other marks of ownership. </p>
+                        </provenance>
+                        <acquisition>
+                            <p>Upon Brocman's death in <date when="1770"/>, a large part of his book collection was donated to the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>, and this manuscript may have been among those later transferred from there to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName>.</p>
+                        </acquisition>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -59,6 +128,55 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="31v" scheme="folios"/>
+                                <title type="desc">Manuale diocesis Upsalensis</title>
+                                <msItem>
+                                    <locus from="1r" to="3v" scheme="folios"/>
+                                    <title type="desc">Ordo ad faciendum sponsalia</title>
+                                    <incipit defective="true">ergo membra christi faciens</incipit>
+                                    <explicit>qui custodiant uos omnibus diebus uite Amen Benedicat uos pater et filius et spiritus sanctus Amen</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="3v" to="14v" scheme="folios"/>
+                                    <title type="desc">Ordo ad visitandum infirmum</title>
+                                    <rubric>Ordo ad uisitandum infirmum sacerdos in ueniendo dicat septem psalmos</rubric>
+                                    <incipit>Domine ne in furore tuo arguas me (Ps. 6:2)</incipit>
+                                    <explicit>Deinde signat infirmum dicens Et benedictio dei patris omnipotentis et filii et spiritus sancti descendat super te et maneat semper <sic>amne</sic></explicit>
+                                    <note>Loss of text between <locus from="9" to="9" scheme="folios"/> and <locus from="10" to="10" scheme="folios"/> due to missing leaves.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="14v" to="27r" scheme="folios"/>
+                                    <title type="desc">Commendatio anime</title>
+                                    <rubric>Cum egressa fuerit anima de corpore dicitur commendacio in hunc modum</rubric>
+                                    <incipit>Subuenite sancti dei </incipit>
+                                    <explicit>uitamque eternam habere mereatur in celis Per te ihesu christe saluator mundi</explicit>
+                                </msItem>
+                                <msItem>
+                                    <locus from="27r" to="31r" scheme="folios"/>
+                                    <title type="desc">Vigilie mortuorum</title>
+                                    <rubric>Incipiuntur uigilie</rubric>
+                                    <incipit>Placebo domino in regione uiuorum</incipit>
+                                    <explicit>oracionem dominus vobiscum Oremus legat collectam pro quibus tenet orare (?)</explicit>
+                                    <note>Loss of text between <locus from="30" to="30" scheme="folios"/> and <locus from="31" to="31" scheme="folios"/> due to missing leaves.</note>
+                                </msItem>
+                                <msItem>
+                                    <locus from="31r" to="31v" scheme="folios"/>
+                                    <title type="desc">Officium pro defunctis</title>
+                                    <rubric>Incipitur officium misse</rubric>
+                                    <incipit>Requiem eternam dona eis domine</incipit>
+                                    <explicit defective="true">Et lucis eterne beatitudine perfrui Secundum iohannem <supplied reason="damage">In il</supplied>lo tempore dixit martha ad ihesum domine si</explicit>
+                                </msItem>
+                                <listBibl>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107488" type="short">Collijn (1918)</title>
+                                    </bibl>
+                                    <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107253" type="short">Johansson (1951)</title>
+                                        <citedRange unit="page" from="125" to="128"/>
+                                    </bibl>
+                                </listBibl>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -68,16 +186,49 @@
                                             <locus from="1r" to="31v" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
-                                                <height quantity="185" unit="mm"/>
-                                                <width quantity="115" unit="mm"/>
+                                                <height unit="mm" min="180" max="185"/>
+                                                <width unit="mm" min="125" max="130"/>
                                             </dimensions>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="31" unit="folios"/>
                                     </extent>
+                                    <condition>A large number of leaves is missing, both at the beginning and end, resulting in loss of text. The parchment is stained, particularly the first folio, where the ink is also smudged, and around the edges of the first part of the textblock. Traces of glue from an earlier binding in the inner margin of the first and last page. Occasional holes, a couple circled in red (<locus from="5" to="5" scheme="folios"/>, <locus from="14" to="14" scheme="folios"/>). A small portion of the bottom corner of <locus from="19" to="19" scheme="folios"/> and a sizeable section of the bottom corner of <locus from="31" to="31" scheme="folios"/> have broken off or been cut out.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" ruledLines="19 20">
+                                        <dimensions type="written">
+                                            <height quantity="130" unit="mm"/>
+                                            <width quantity="90" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in ink.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1"><locus from="1r" to="13v" scheme="folios"/>Textualis.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus to="31v" scheme="folios" from="1v"/>
+                                    <note>Occasional marginal corrections in the scribal hand.</note>
+                                </p>
+                                <p>
+                                    <locus from="31r" to="31r" scheme="folios"/>
+                                    <note>The (incorrect) psalm number in pencil by a modern hand in the upper margin.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in black ink; rubrics and instructions in red; capitals touched in red. Guideletters visible.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="1r" to="31v" scheme="folios"/>: plain initials over 2-3 lines in red or green ink, some with interior reserved shapes. The initials on <locus from="21r" to="21r" scheme="folios"/>, <locus from="22r" to="22r" scheme="folios"/>, <locus from="22v" to="22v" scheme="folios"/>, <locus from="28v" to="28v" scheme="folios"/>, and <locus from="29r" to="29r" scheme="folios"/> have been decorated with modest flourishes in the contrasting colour.
+                                        <locus from="3v" to="9v" scheme="folios"/>, <locus from="10v" to="11r" scheme="folios"/>, <locus from="12r" to="12v" scheme="folios"/>, <locus from="15v" to="26r" scheme="folios"/>, <locus from="27r" to="29r" scheme="folios"/>, <locus from="30r" to="30v" scheme="folios"/>: capitals alternating in red and green or red and blue
+                                        <locus from="31r" to="31r" scheme="folios"/>: capitals in red.
+                                    </p>
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>

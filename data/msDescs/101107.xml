@@ -12,7 +12,7 @@
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
                 <respStmt>
-                    <resp key="editor"/>
+                    <resp key="cataloguer"/>
                     <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
                 </respStmt>
             </titleStmt>
@@ -21,7 +21,7 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101107</idno>
                 <date when="2024"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/"/>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -53,16 +53,16 @@
                                         </locusGrp>
                                         <material>Paper</material>
                                         <dimensions type="leaf">
-                                            <height unit="mm" min="180" max="180"/>
-                                            <width min="130" max="130" unit="mm"/>
+                                            <height unit="mm" quantity="180"/>
+                                            <width unit="mm" quantity="130"/>
                                         </dimensions>
-                                        <note>Text in Gothic textualis visible on the reverse side of <locus from="LCI" to="LCI" scheme="other"/> and <locus from="RCI" to="RCI" scheme="other"/>.</note>
+                                        <note>Text in textualis visible on the reverse side of <locus from="LCI" to="LCI" scheme="other"/> and <locus from="RCI" to="RCI" scheme="other"/>.</note>
                                         <watermark n="1">
                                             <locusGrp>
                                                 <locus from="1" to="119" scheme="folios"/>
-                                                <locus from="126" to="251" scheme="pages"/>
+                                                <locus from="126" to="251" scheme="folios"/>
                                             </locusGrp>
-                                            <term type="watermarkMotif">Bull's head with rod and star extending above.</term>
+                                            <term type="watermarkMotif">Bull's head with a rod ending in a star extending above.</term>
                                             <note>Similar to Piccard online, <ref target="https://www.wasserzeichen-online.de/wzis/struktur.php?ref=BE4905-PO-76602">76602</ref>.</note>
                                         </watermark>
                                         <watermark n="2">
@@ -81,7 +81,7 @@
                                 <collation>
                                     <formula>1-10(12), 11(6), 12(12+1), 13-14(12), 15(12+1), 16-20(12), 21(16), 22(1+1+1+1+1)</formula>
                                     <p>
-                                        <ref target="https://vceditor.library.upenn.edu/project/674f2c96f5e21a0001ac7267/viewOnly">VisColl collation</ref>.
+                                        <ref target="https://vceditor.library.upenn.edu/project/674f2c96f5e21a0001ac7267/viewOnly">VisColl collation</ref>
                                     </p>
                                     <catchwords>Catchwords on quires 1, 5-10, 14, 16-17.</catchwords>
                                 </collation>
@@ -90,11 +90,11 @@
                         <additions>
                             <p>
                                 <locus from="LCI" to="LCI" scheme="other"/>
-                                <note>Top left corner: National Library book label with the current signum. Top right corner in ink by a modern or early modern hand: <quote>Kongl. Bibliotheket 256 blad.</quote>. Below, in brown ink by an early modern hand: <quote>N<hi rend="super">o</hi> 122 Brocmanni</quote>.</note>
+                                <note>Top left corner: National Library book label with the current signum. Top right corner in ink by a modern or early modern hand: <quote>Kongl. Bibliotheket 256 blad.</quote>. Below, in ink by an early modern hand: <quote>N<hi rend="super">o</hi> 122 Brocmanni</quote>.</note>
                             </p>
                             <p>
-                                <locus from="SL1" scheme="other" to="SL1"/>
-                                <note>Middle of page in black ink in the hand of former librarian <persName ref="https://www.manuscripta.se/person/102622">Hyltén-Cavallius</persName>: <quote>Breviarium Upsalense. Mscr.</quote>.</note>
+                                <locus from="SL1r" scheme="folios" to="SL1r"/>
+                                <note>Middle of page, in black ink in the hand of former librarian <persName ref="https://www.manuscripta.se/person/102622">Hyltén-Cavallius</persName>: <quote>Breviarium Upsalense. MScr.</quote>.</note>
                             </p>
                         </additions>
                         <bindingDesc>
@@ -112,23 +112,30 @@
                     </physDesc>
                     <history>
                         <origin>
-                             <origDate notBefore="1426" notAfter="1500">15th century, middle</origDate>. Origin and early provanance unknown, but the breviary was intended for a church within the diocece of <origPlace>
-                                <placeName ref="https://www.manuscripta.se/place/100089">Uppsala</placeName>
-                            </origPlace> (<bibl>
-                                <title ref="https://www.manuscripta.se/bibl/107114">Helander</title>
-                                <citedRange unit="page" from="191" to="191"/>
-                                <citedRange unit="footnote" from="408" to="408"/>
-                            </bibl>). According to Moberg, the manuscript belongs to a group of breviaries which includes A 50 and A 100 of the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName>, and C 507 and W 63 of <orgName ref="https://www.manuscripta.se/org/100002">Uppsala University Library</orgName> (<bibl>
-                                <title ref="https://www.manuscripta.se/bibl/101394">Moberg</title>
-                                <citedRange unit="volume" from="1" to="1"/>
-                                <citedRange unit="page" from="93" to="93"/>
-                            </bibl>). 
-                            On <locus from="138r" to="138r" scheme="folios"/>, <locus from="154v" to="154v" scheme="folios"/>, and (presumably) <locus from="252v" to="252v" scheme="folios"/>(partly trimmed), an early modern hand has made marginal notations comparing the contents of the breviary to the <bibl>
-                                <title ref="https://www.manuscripta.se/bibl/107368" type="uniform">printed edition of 1496</title>
-                            </bibl>. 
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
+                                </origPlace>, <origDate notBefore="1426" notAfter="1500">15th century, middle</origDate>. Exact origin and early provanance unknown, but the breviary was intended for a church within the diocece of <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100089">Uppsala</placeName>
+                                </origPlace> (<bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107114">Helander</title>
+                                    <citedRange unit="page" from="191" to="191"/>
+                                    <citedRange unit="footnote" from="408" to="408"/>
+                                </bibl>). According to Moberg, the manuscript belongs to a group of breviaries which also includes A 50 and A 100 of the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName>, and C 507 and W 63 of <orgName ref="https://www.manuscripta.se/org/100002">Uppsala University Library</orgName> (<bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/101394">Moberg</title>
+                                    <citedRange unit="volume" from="1" to="1"/>
+                                    <citedRange unit="page" from="93" to="93"/>
+                                </bibl>). 
+                            </p>
                         </origin>
-                        <provenance>Previously no. 122 in the collection of <persName ref="https://www.manuscripta.se/person/100536">Nils Reinhold Brocman</persName>, book collector and librarian at the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> and <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>. Upon his death in 1770, a large part of his book collection was donated to the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName> (<ref target="https://sok.riksarkivet.se/sbl/Presentation.aspx?id=16980">SBL</ref>). </provenance>
-                        <acquisition>Transferred to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> from the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>.</acquisition>
+                        <provenance>
+                            <p>Previously no. 122 in the collection of <persName ref="https://www.manuscripta.se/person/100536">Nils Reinhold Brocman</persName>, book collector and librarian at the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> and <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>. Upon his death in <date when="1770"/>, a large part of his book collection was donated to the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>. Brocman's hand is found on <locus from="138r" to="138r" scheme="folios"/>, <locus from="154v" to="154v" scheme="folios"/>, and (presumably) <locus from="252v" to="252v" scheme="folios"/> (partly trimmed), comparing the contents of the breviary to the <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107368" type="uniform">printed edition of 1496</title>
+                                </bibl>. </p>
+                        </provenance>
+                        <acquisition>
+                            <p>Transferred to the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> from the <orgName ref="https://www.manuscripta.se/org/100059">Antiquities Archive</orgName>.</p>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
@@ -159,10 +166,80 @@
                                 <incipit>Fratres Scientes quia hora est</incipit>
                                 <explicit>hic vere propheta qui venturus est in mundum (John 6:14) psalmus magnificat et cetera</explicit>
                                 <note>
-                                    <p>The Proper of time begins with the First Sunday of Advent and ends with the Twenty-fifth Sunday after Trinity. After this, the collect for the Twenthy-sixth Sunday after Trinity, along with an instruction for the 22-27 Sundays after Trinity, is added by a different medieval hand (<locus from="138rb" to="138v" scheme="folios"/>). In the lower margin of <locus from="138r" to="138r" scheme="folios"/>, an early modern hand has made a note comparing the addition to the contents of the <bibl>
+                                    <p>The Proper of time begins with the First Sunday of Advent and ends with the Twenty-fifth Sunday after Trinity. After this, the collect for the Twenty-sixth Sunday after Trinity, along with an instruction for the 22-27 Sundays after Trinity, is added by a different medieval hand (<locus from="138rb" to="138v" scheme="folios"/>). In the lower margin of <locus from="138r" to="138r" scheme="folios"/>, <persName ref="https://www.manuscripta.se/person/100536">Brocman</persName> has made a note comparing the addition to the contents of the <bibl>
                                             <title ref="https://www.manuscripta.se/bibl/107368">printed edition of 1496</title>
                                         </bibl>: <quote>NB In impresso non extat Dominica XXVI sed eius loco <gap reason="damage" quantity="20" unit="chars"/>
-                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                    
                                                                                                                                                                                                                                                                                                                                                
                                                                                                                                                                                                                                                                                                                                                
                                                                                                                                                                                                                                                                                                                                           
@@ -281,6 +358,7 @@
                                                   
                                              
                                              
+                                        
                                         </quote>.</p>
                                     <p/>
                                 </note>
@@ -293,114 +371,210 @@
                                 <explicit defective="true">me praecipis munia tua devotus</explicit>
                                 <note>
                                     <p>
-                                                  The Proper of saints begins with the vigil of St Andrew (29 Nov.). After the feast of St Katherine (25 Nov.) follow the feasts of St Clement (23 Nov.), St Theodore (9 Nov.), and St Martin (10 Nov.).
+                                                                 The Proper of saints begins with the vigil of St Andrew (29 Nov.). After the feast of St Catherine (25 Nov.) follow the feasts of St Clement (23 Nov.), St Theodore (9 Nov.), and St Martin (10 Nov.).                                       
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  In the process of rebinding, the bifolium making up <locus from="164" to="164" scheme="folios"/>/<locus from="174" to="174" scheme="folios"/>has been misplaced; it should come after the bifolium making up <locus from="163" to="163" scheme="folios"/>/<locus from="175" to="175" scheme="folios"/>.
+                                                                 In the process of rebinding, the bifolium making up <locus from="164" to="164" scheme="folios"/>/<locus from="174" to="174" scheme="folios"/> has been misplaced; it should come after the bifolium making up <locus from="163" to="163" scheme="folios"/>/<locus from="175" to="175" scheme="folios"/>.                                     
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="166" to="166" scheme="folios"/> consists of a small paper note which has been inserted into the 
-                                                  manuscript. The recto transmits an excerpt from the life of St Ignatius. <!--from 
-Jean de Mailly's Abbreviatio in gestis et miraculis sanctorum - likt men olikt.-->
+                                                                 <locus from="166" to="166" scheme="folios"/> consists of a small paper note which has been inserted into the 
+                                                                 manuscript. The recto transmits an excerpt from the life of St Ignatius. <!--from 
+Jean de Mailly's Abbreviatio in gestis et miraculis sanctorum - likt men olikt.-->                                       
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  Notable feasts: 
+                                                                 Notable feasts:                                       
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="146ra" to="146ra" scheme="folios"/>: St Anne (9 Dec.);
+                                                                 <locus from="146ra" to="146ra" scheme="folios"/>: St Anne (9 Dec.);                                    
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="154rb" to="154rb" scheme="folios"/>: St Henrik (19 Jan.);
+                                                                 <locus from="154rb" to="154rb" scheme="folios"/>: St Henrik (19 Jan.);                                  
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="160va" to="160va" scheme="folios"/>: translation of St Erik (24 Jan.); <!--Ansgar saknas; cf. Helander s. 221-->
+                                                                 <locus from="160va" to="160va" scheme="folios"/>: translation of St Erik (24 Jan.); <!--Ansgar saknas; cf. Helander s. 221-->                               
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="171rb" to="171rb" scheme="folios"/>: St Sigfrid (15 Feb.);
+                                                                 <locus from="171rb" to="171rb" scheme="folios"/>: St Sigfrid (15 Feb.);                              
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="186va" to="186va" scheme="folios"/>: St Erik (18 May);
+                                                                 <locus from="186va" to="186va" scheme="folios"/>: St Erik (18 May);                            
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="188va" to="188va" scheme="folios"/>: St Eskil (12 June);
+                                                                 <locus from="188va" to="188va" scheme="folios"/>: St Eskil (12 June);                                   
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="190vb" to="190vb" scheme="folios"/>; St Botulf (17 June);
+                                                                 <locus from="190vb" to="190vb" scheme="folios"/>; St Botulf (17 June);                                     
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="207ra" to="207ra" scheme="folios"/>: St Olav (29 July);                                                                                                                                                                                                                                              
+                                                                 <locus from="207ra" to="207ra" scheme="folios"/>: St Olav (29 July);                                                                                                                                                                                                                                                                               
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="207rb" to="207rb" scheme="folios"/>; St Botvid (28 July);                                                                                                                                                                                                                                                                            
+                                                                 <locus from="207rb" to="207rb" scheme="folios"/>; St Botvid (28 July);                                                                                                                                                                                                                                                                                                                   
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="209ra" to="209ra" scheme="folios"/>: St Elin (30 July);
+                                                                 <locus from="209ra" to="209ra" scheme="folios"/>: St Elin (30 July);                                       
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="214v" to="214v" scheme="folios"/>: St Laurence (10 Aug.);
+                                                                 <locus from="214v" to="214v" scheme="folios"/>: St Laurence (10 Aug.);                               
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
                                          
                                     </p>
                                     <p>
-                                                  <locus from="241vb" to="241vb" scheme="folios"/>: St Birgitta (7 Oct.).
+                                                                 <locus from="241vb" to="241vb" scheme="folios"/>: St Birgitta (7 Oct.).
+                                                             
+                                                             
+                                                        
+                                                        
+                                                   
+                                                   
                                               
                                               
                                          
@@ -414,7 +588,7 @@ Jean de Mailly's Abbreviatio in gestis et miraculis sanctorum - likt men olikt.-
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="256v" scheme="folios"/>
+                                            <locus from="1" to="256" scheme="folios"/>
                                             <material>Western paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="180" unit="mm"/>
@@ -425,13 +599,13 @@ Jean de Mailly's Abbreviatio in gestis et miraculis sanctorum - likt men olikt.-
                                     <extent>
                                         <measure type="textblockLeaves" quantity="257" unit="folios"/>
                                     </extent>
-                                    <condition>The manuscript has been rebound and the edges trimmed. In the process of rebinding, the bifolium making up <locus from="164" to="164" scheme="folios"/>/<locus from="174" to="174" scheme="folios"/> has been misplaced; this bifolium should follow after <locus from="163" to="163" scheme="folios"/>/<locus from="175" to="175" scheme="folios"/>. Several edges and corners have been repaired with paper strips. Half of <locus from="144" to="144" scheme="folios"/> has been torn off and the remaining half replaced with a paper strip.</condition>
+                                    <condition>The manuscript has been rebound and the edges trimmed. In the process of rebinding, the bifolium making up <locus from="164" to="164" scheme="folios"/>/<locus from="174" to="174" scheme="folios"/> has been misplaced; this bifolium should follow after <locus from="163" to="163" scheme="folios"/>/<locus from="175" to="175" scheme="folios"/>. Several edges and corners have been repaired with paper strips. Half of <locus from="144" to="144" scheme="folios"/> has been torn off; the missing half has been replaced with a paper strip.</condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout columns="2" writtenLines="32 45">
                                         <dimensions type="written">
                                             <height min="150" max="160" unit="mm"/>
-                                            <width min="110" max="110" unit="mm"/>
+                                            <width unit="mm" quantity="110"/>
                                         </dimensions>
                                         <note>Guidelines in ink.</note>
                                     </layout>
@@ -452,38 +626,49 @@ Jean de Mailly's Abbreviatio in gestis et miraculis sanctorum - likt men olikt.-
                                         <locus from="126ra" to="150vb" scheme="folios"/>
                                         <locus from="223ra" to="256va" scheme="folios"/>
                                     </locusGrp>Gothic cursive with the occasional occurrence of unlooped ascenders. <!--18vb plenum, 25va loquendum, 35rb illuminat, 39ra exultat, 40rb nobilis--></handNote>
-                                <handNote sameAs="" xml:id="hand-3"><locus from="138r" to="138v" scheme="folios"/>Gothic cursive.</handNote>
+                                <handNote xml:id="hand-3"><locus from="138r" to="138v" scheme="folios"/>Gothic cursive.</handNote>
                                 <handNote xml:id="hand-4"><locus from="166r" to="166r" scheme="folios"/>Gothic cursive.</handNote>
                                 <handNote xml:id="hand-5" sameAs="hand-3"><locus from="256va" to="256vb" scheme="folios"/>Gothic cursive.</handNote>
                             </handDesc>
                             <additions>
                                 <p>
                                     <locus to="239r" scheme="folios" from="1v"/>
-                                    <note>Marginal annotations in at least two different hands - one of which appears to be identical to the main scribe - of additions of items, corrections, and instructions. In several places, the text of the additions has been lost due to trimming.</note>
+                                    <note>Marginal annotations in the form of additions, corrections, and instructions in at least two different hands, one of which appears to belong to the main scribe. In several places, the text of the additions has been lost due to trimming.</note>
                                 </p>
                                 <p>
                                     <locusGrp>
                                         <locus from="138r" to="138r" scheme="folios"/>
-                                        <locus from="154r" to="154v" scheme="folios"/>
+                                        <locus from="154r" to="154r" scheme="folios"/>
                                         <locus from="252v" to="252v" scheme="folios"/>
                                     </locusGrp>
-                                    <note>Notes in black ink by early modern hand recording differences from the printed <bibl>
-                                            <title ref="https://www.manuscripta.se/bibl/107368" type="desc">edition of 1496</title>
-                                        </bibl>.</note>
+                                    <note>Notes in black ink in <persName ref="https://www.manuscripta.se/person/100536">Brocman's</persName> hand recording differences from <bibl>
+                                            <title ref="https://www.manuscripta.se/bibl/107368" type="desc">the printed edition of 1496</title>
+                                        </bibl>. <!--jämfört d, G och I i A 106--></note>
                                 </p>
                                 <p>
-                                    <locus from="139v" to="235r" scheme="folios"/>
+                                    <locus from="139r" to="235r" scheme="folios"/>
                                     <note>Top of page, occasional annotations in a modern or early modern hand, noting the office / saint in question (<locus from="139r" to="139r" scheme="folios"/>: <quote>Pars secunda</quote>).</note>
                                 </p>
                             </additions>
                             <decoDesc>
                                 <p>Main text in brown ink; rubrics underlined in red; capitals touched in red.</p>
                                 <decoNote type="initials">
-                                    <locus from="1ra" to="256rv" scheme="folios"/>: plain initials over 2 lines alternating in red and green - a few in black or brown (e.g. <locus from="214rb" to="214rb" scheme="folios"/>, <locus from="245vb" to="245vb" scheme="folios"/>) - with penwork or florishing in green or red and ascenders and descenders extending into the margin.
-                                    <locus from="16va" to="16va" scheme="folios"/>: plain initial <quote>R</quote> over 6 lines with flourishing in brown.
-                                    <locus from="16va" to="248rb" scheme="folios"/>: plain initials over 1 line in red with penwork.
+                                    <p>
+                                        <locus from="1ra" to="1ra" scheme="folios"/>: opening initial <quote>F</quote> over 3 lines in red ink with the descender extending to the bottom of the page and ending in simple penwork in red and green.
+                                    </p>
+                                    <p>
+                                        <locus from="1ra" to="256r" scheme="folios"/>: plain initials over 2 lines alternating in red and green - a few in black or brown (e.g. <locus from="214rb" to="214rb" scheme="folios"/>, <locus from="245vb" to="245vb" scheme="folios"/>) - with penwork and ascenders / descenders extending into the margin, and some penwork in the contrasting colour.
+                                    </p>
+                                    <p>
+                                        <locus from="16va" to="16va" scheme="folios"/>: plain initial <quote>R</quote> over 6 lines with flourishing in brown.
+                                    </p>
+                                    <p>
+                                        <locus from="16va" to="248rb" scheme="folios"/>: plain initials over 1 line in red with penwork.
+                                    </p>
                                 </decoNote>
-                                <decoNote type="edges">Sprinkled in green and red.</decoNote>
+                                <decoNote type="edges">
+                                    <p>Sprinkled in green and red.</p>
+                                </decoNote>
                             </decoDesc>
                         </physDesc>
                     </msPart>

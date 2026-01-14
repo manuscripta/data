@@ -8,8 +8,12 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100488">Annika Ekman</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -17,11 +21,11 @@
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101114</idno>
                 <date when="2023"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100488">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,23 +39,73 @@
                             <idno type="id" subtype="Regina">004845436</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Homiliae in dominicae quadragesimae et sexagesimae</head>
+                    <head>Homilies for Lent</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="0"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="0"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil, 1-11.</foliation>
+                                <collation>
+                                    <p>The manuscript is a booklet consisting of five bifolia, the four innermost of which are half the size of the outermost. The outer bifolium has been folded vertically twice, with the first centre fold left uncut, so that the folding renders this bifolium as two leaves on the left side (<locus from="1" to="1" scheme="folios"/> and <locus from="2" to="2" scheme="folios"/>) and one double-layered (i.e. folded) leaf on the right (<locus from="11" to="11" scheme="folios"/>), resulting in a total of six leaves on the left side but only five on the right. The gutter exhibits three holes from a former binding, but the booklet is now held together by two small wads of paper stuck through the top and bottom hole respectively.</p>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>The booklet is stored in a folded piece of paper. <locus from="LCO" to="LCO" scheme="other"/>, top left corner in pencil, the current signum; mid page, in ink by a modern hand: <quote>Homiliae in dominica quadragesima et sexagesima</quote>.</p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100104">Germany?</placeName>
+                                </origPlace> <origDate notBefore="1476" notAfter="1525">15th century, last quarter, or 16th century, first quarter</origDate>. Origin and dating based on comparison of the watermarks to the similar designs recorded by <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107171" type="uniform">Piccard</title>
+                                    <citedRange unit="volume" from="XVI" to="XVI"/>
+                                    <citedRange unit="number" from="2" to="2"/>
+                                    <citedRange unit="chapter" from="VII" to="VII"/>
+                                    <citedRange unit="number" from="2443" to="2487"/>
+                                </bibl>, which all date from between 1493 to 1508 (nos. 2443-45 date to 1520/21) and occur in around 30 locations throughout a geographical swath stretching from <placeName ref="https://www.manuscripta.se/place/100330">Braunschweig </placeName>in the north to <placeName ref="https://www.manuscripta.se/place/100350">Montbéliard</placeName> in the southwest and <placeName ref="https://www.manuscripta.se/place/100351">Innsbruck</placeName> in the southeast.
+                            </p>
+                        </origin>
+                        <provenance>
+                            <p>Provenance unknown.</p>
+                        </provenance>
+                        <acquisition>
+                            <p>Acquisition date unknown.</p>
+                        </acquisition>
+                    </history>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="3r" scheme="folios"/>
+                                <title type="desc">Homily for Laetare Sunday </title>
+                                <rubric>Dominica in medio xl<hi rend="super">me</hi> </rubric>
+                                <incipit>Letare iherusalem et conuentum facite omnes qui diligitis eam ysaias vltimus In dominica septuagesime incipit mater nostra spiritualis agere memoriam </incipit>
+                                <explicit>Donet dominus deus vt obseruetis hec omnia in vitam eternam ingrediendo Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="3v" to="6r" scheme="folios"/>
+                                <title type="desc">Homily for Sexagesima Sunday</title>
+                                <rubric>Dominica lx<hi rend="super">me</hi> </rubric>
+                                <incipit>Exiit qui seminat semen suum lucas viii Videmus quod unus <add place="above">est</add> sol et tamen eius splendor vehemens super res huius mundi </incipit>
+                                <explicit>et seminet hic in lacrimis et penitencia vt in morte cum iustis in exultacione metet Quod nobis donare dignetur deus pater et filius et spiritus sanctus Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="6v" to="11r" scheme="folios"/>
+                                <title type="desc">Sermon</title>
+                                <incipit>In iudicio extremo faciet homo racionem de anima sua et eius potenciis Et de corpore et eius sensibus et vtriusque cogitationibus Locutionibus et Operibus </incipit>
+                                <explicit>3<hi rend="super">o</hi> peccator descendit et recedit a deo tamquam per gradus deorsum quando post mala verba et illicita venit ad opera peccati</explicit>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -59,29 +113,72 @@
                                     <support>
                                         <p>
                                             <locus from="1r" to="11v" scheme="folios"/>
-                                            <material>Western paper</material>
+                                            <material>Paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="320" unit="mm"/>
                                                 <width quantity="110" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="2" to="11" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Mount with three coupeaux, an extended cross above and a six-pointed star above the cross.</term>
+                                                <note>Similar to Piccard XVI:2, VII, 2547.</note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="11" unit="folios"/>
                                     </extent>
+                                    <condition>First and last leaf stained, indicating that the booklet has been stored without any covers.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="37 43">
+                                        <dimensions type="written">
+                                            <height quantity="260" unit="mm"/>
+                                            <width quantity="75" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines in ink.<!-- 7r = 37 rader, 1r = 43--></note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1"><locus from="1r" to="3r" scheme="folios"/>Semi-hybrida.</handNote>
+                                <handNote xml:id="hand-2"><locus from="3v" to="11r" scheme="folios"/>Hybrida with the very occasional looped ascender.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top of page in black in by an early modern hand: <quote>Homiliae in dominica quadragesima et Sexagesima.</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="10r" scheme="folios"/>
+                                    <note>Marginal notes indicating the contents in at least two, maybe three contemporary hands.</note>
+                                </p>
+                                <p>
+                                    <locus from="5r" to="5r" scheme="folios"/>
+                                    <note>Correction of an omission in the scribal hand.</note>
+                                </p>
+                                <p>
+                                    <locus from="10v" to="10v" scheme="folios"/>
+                                    <note>Manicule.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in black ink; rubrics and quotations underlined in red; capitals touched in red. Last two folios lack rubrication.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="6v" to="6v" scheme="folios"/>: initial <quote>I</quote> in outline over 2 lines in same ink as text with simple red flourishing in the counter space.
+                                    </p>
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin>
-                                <origDate notBefore="1426" notAfter="1475">15th century, middle</origDate>
-                            </origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published">
             <change status="draft" when="2023-10-17" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>
