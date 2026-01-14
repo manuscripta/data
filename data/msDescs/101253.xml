@@ -8,16 +8,16 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
-                    <resp key="cataloguer"/>
+                    <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
-                <publisher>Manuscripta.se: A Digital Catalogue of Manuscripts in Sweden</publisher>
+                <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <idno type="URI" subtype="Manuscripta">https://www.manuscripta.se/ms/101253</idno>
                 <date when="2022"/>
                 <availability status="free">
-                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
+                    <licence target="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -66,7 +66,7 @@
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="71v" scheme="folios"/>
+                                            <locus from="1" to="71" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="275" unit="mm"/>
@@ -81,11 +81,11 @@
                             </objectDesc>
                         </physDesc>
                         <history>
-                            <origin>
+                            <origin><p>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/100209">Iceland</placeName>
                                 </origPlace>, <origDate notBefore="1351" notAfter="1400">14th century, second half</origDate>
-                            </origin>
+                            </p></origin>
                         </history>
                     </msPart>
                 </msDesc>
@@ -105,11 +105,11 @@
     </text>
     <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-101253/">
         <surface xml:id="ms-101253_LCO">
-            <desc>left cover, outside</desc>
+            <desc>Left cover, outside</desc>
             <graphic url="ms-101253_0001.tif" width="6024px" height="7441px"/>
         </surface>
         <surface xml:id="ms-101253_LCI">
-            <desc>left cover, inside</desc>
+            <desc>Left cover, inside</desc>
             <graphic url="ms-101253_0002.tif" width="6024px" height="7441px"/>
         </surface>
         <surface xml:id="ms-101253_SL1r">
@@ -692,33 +692,41 @@
             <desc>⟨f. I´r⟩</desc>
             <graphic url="ms-101253_0147.tif" width="6024px" height="7441px"/>
         </surface>
+        <surface xml:id="ms-101253_SR1v">
+            <desc>⟨f. I´v⟩</desc>
+            <graphic url="ms-101253_0148.tif" width="6117px" height="7425px"/>
+        </surface>
+        <surface xml:id="ms-101253_RCI">
+            <desc>Right cover, inside</desc>
+            <graphic url="ms-101253_0149.tif" width="6087px" height="7424px"/>
+        </surface>
         <surface xml:id="ms-101253_RCO">
-            <desc>right cover, outside</desc>
-            <graphic url="ms-101253_0148.tif" width="6024px" height="7441px"/>
+            <desc>Right cover, outside</desc>
+            <graphic url="ms-101253_0150.tif" width="6024px" height="7426px"/>
         </surface>
         <surface xml:id="ms-101253_Head">
             <desc>Head</desc>
-            <graphic url="ms-101253_0149.tif" width="5695px" height="3289px"/>
+            <graphic url="ms-101253_0151.tif" width="5695px" height="3289px"/>
         </surface>
         <surface xml:id="ms-101253_Fore-edge">
             <desc>Fore-edge</desc>
-            <graphic url="ms-101253_0150.tif" width="5695px" height="3289px"/>
+            <graphic url="ms-101253_0152.tif" width="5695px" height="3289px"/>
         </surface>
         <surface xml:id="ms-101253_Tail">
             <desc>Tail</desc>
-            <graphic url="ms-101253_0151.tif" width="5695px" height="3289px"/>
+            <graphic url="ms-101253_0153.tif" width="5695px" height="3289px"/>
         </surface>
         <surface xml:id="ms-101253_Spine">
             <desc>Spine</desc>
-            <graphic url="ms-101253_0152.tif" width="5695px" height="3289px"/>
+            <graphic url="ms-101253_0154.tif" width="5695px" height="3289px"/>
         </surface>
         <surface xml:id="ms-101253_Overview">
             <desc>Overview</desc>
-            <graphic url="ms-101253_0153.tif" width="5695px" height="3289px"/>
+            <graphic url="ms-101253_0155.tif" width="5695px" height="3289px"/>
         </surface>
-        <surface xml:id="ms-101253_Color-card">
-            <desc>Color-card</desc>
-            <graphic url="ms-101253_0000.tif" width="6024px" height="7441px"/>
+        <surface xml:id="ms-101253_Color_card">
+            <desc>Color card</desc>
+            <graphic url="ms-101253_0156.tif" width="7441px" height="6024px"/>
         </surface>
     </facsimile>
 </TEI>
