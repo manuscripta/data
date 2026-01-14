@@ -3,11 +3,11 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Schema for the Manuscripta bibliography files</title>
+                <title>Schema for the manuscripta.se Bibliography Files</title>
                 <author xml:id="PG">Patrik Granholm</author>
             </titleStmt>
             <publicationStmt>
-                <publisher>Manuscripta</publisher>
+                <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
@@ -26,7 +26,7 @@
         </body>
         <back>
             <div xml:id="schema">
-                <head>Schema for the Manuscripta bibliography files</head>
+                <head>Schema</head>
                 
                 <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="manuscripta-p5subset.xml">
 
@@ -43,7 +43,7 @@
 
                     <!-- Modules for manuscripta-bibl.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
-                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor imprint monogr p pubPlace q series title" source="odd/p5subset.xml"/>
+                    <moduleRef key="core" include="analytic author biblScope biblStruct date editor imprint monogr p pubPlace q ref series title" source="odd/p5subset.xml"/>
                     <moduleRef key="header" include="edition idno sourceDesc" source="odd/p5subset.xml"/>
                     <moduleRef key="msdescription" include="msDesc" source="odd/p5subset.xml"/>
                     <moduleRef key="namesdates" include="addName forename genName nameLink persName roleName surname" source="odd/p5subset.xml"/>
@@ -157,6 +157,7 @@
                                     <elementRef key="monogr"/>
                                     <elementRef key="series" minOccurs="0" maxOccurs="unbounded"/>
                                 </sequence>
+                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
                         <exemplum>
@@ -315,11 +316,11 @@
                             <attDef ident="calendar" mode="delete"/>
                             <attDef ident="type" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
+                                    <valItem ident="DOI"/>
                                     <valItem ident="ISBN"/>
                                     <valItem ident="ISSN"/>
                                     <valItem ident="URI"/>
-                                    <valItem ident="URN"/>
-                                    <valItem ident="shelfmark"/>
+                                    
                                 </valList>
                             </attDef>
                             <attDef ident="subtype" mode="change" usage="opt">
@@ -347,6 +348,7 @@
                             <sequence>
                                 <elementRef key="author" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="editor" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
                                 <elementRef key="edition" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="textLang" minOccurs="0" maxOccurs="1"/>
@@ -515,6 +517,39 @@
                             <p/>
                         </remarks>
                     </elementSpec>
+                    
+                    <elementSpec ident="ref" mode="change" module="core">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <attDef ident="target" mode="change" usage="req"/>
+                            <!-- Attributes changed and deleted from att.typed -->
+                            <attDef ident="type" mode="change" usage="req">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="digital-facsimile"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="subtype" mode="change" usage="opt">
+                                <valList mode="replace" type="closed">
+                                    <valItem ident="manifest">
+                                        <desc>IIIF manifest</desc>
+                                    </valItem>
+                                    <valItem ident="pdf"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
 
                     <elementSpec ident="roleName" module="namesdates" mode="change">
                         <classes mode="change">
@@ -541,6 +576,7 @@
                             <sequence>
                                 <elementRef key="editor" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded"/>
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
                         </content>
