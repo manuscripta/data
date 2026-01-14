@@ -3,12 +3,12 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Master schema for Manuscripta</title>
+                <title>Master Schema and Guidelines for manuscripta.se</title>
                 <author xml:id="PG">Patrik Granholm</author>
                 <author xml:id="EN">Eva Nyström</author>
             </titleStmt>
             <publicationStmt>
-                <publisher>Manuscripta</publisher>
+                <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
@@ -149,7 +149,7 @@
                                 <specDesc key="sic"/>
                             </specList>
                         </p>
-                        <p>Additions should be recorded using the <gi>add</gi> element, with the <att>place</att> attribute (legal values: <val>above</val>, <val>below</val>, or <val>margin</val>), and deletions with the <gi>del</gi> element. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <p>Additions should be recorded using the <gi>add</gi> element, with the <att>place</att> attribute (legal values: <val>above</val>, <val>below</val>, <val>inline</val>, or <val>margin</val>), and deletions with the <gi>del</gi> element. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                 <rubric xml:lang="grc">
                                     <del xml:lang="grc">ἐπληρώθη τὸ τέταρτον</del>
                                     <add place="above" xml:lang="grc">Βίτωνος Μηχανικά</add>
@@ -989,19 +989,7 @@
                             <memberOf key="att.datable" mode="delete"/>
                         </classes>
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
-                                <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="orgName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
-                            </alternate>
+                            <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                         <attList>
                             <!-- Attributes deleted -->
@@ -1018,7 +1006,9 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <acquisition>It was acquired there by <persName ref="#JohSpa"/>, who was staying in Venice <date from="1692" to="1693"> from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios"/>: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705"/>.</acquisition>
+                                <acquisition>
+                                    <p>It was acquired there by <persName ref="#JohSpa"/>, who was staying in Venice <date from="1692" to="1693"> from November 1692 to February 1693 and again in October–December 1693</date>; cf. note on <locus from="L2r" to="L2r" scheme="folios"/>: <quote xml:lang="la">Joh. Chrysostomi homiliae in Acta apost. (absque principio) et in 14 Epist. Pauli. Codex de caetero magnae antiquitatis et aestimationis, Emptus Venetiis a J. G. Sparwenfeldt</quote>. Donated to Uppsala University Library in <date when="1705"/>.</p>
+                                </acquisition>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -1028,7 +1018,6 @@
                             <memberOf key="att.dimensions" mode="delete"/>
                             <memberOf key="att.ranging" mode="delete"/>
                             <memberOf key="att.responsibility" mode="delete"/>
-                            <memberOf key="att.transcriptional" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
@@ -1042,11 +1031,14 @@
                             <attDef ident="n" mode="delete"/>
                             <!-- Attributes deleted in att.global.linking -->
                             <attDef ident="sameAs" mode="delete"/>
+                            <!-- Attributes deleted in att.editLike -->
+                            <attDef ident="evidence" mode="delete"/>
                             <!-- Closed value list for @place -->
                             <attDef ident="place" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="above"/>
                                     <valItem ident="below"/>
+                                    <valItem ident="inline"/>
                                     <valItem ident="margin"/>
                                 </valList>
                             </attDef>
@@ -1267,6 +1259,7 @@
 
                     <elementSpec ident="bibl" module="core" mode="change">
                         <classes mode="change">
+                            <memberOf key="att.canonical" mode="delete"/>
                             <memberOf key="att.docStatus" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
@@ -1283,9 +1276,9 @@
                                 <sch:rule context="tei:bibl/tei:title">
                                     <sch:let name="bibl-ref" value="substring-after(@ref, 'bibl/')"/>
                                     <sch:let name="short-title" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:title[@type = 'short']"/>
-                                    <sch:let name="first-author-surname" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[1][not(@role = 'origAuth')]/tei:persName/tei:surname[1]"/>
-                                    <sch:let name="author-surname" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[@role = 'critEd'][1]/tei:persName/tei:surname[1]"/>
-                                    <sch:let name="first-editor-surname" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:editor[1]/tei:persName/tei:surname[1]"/>
+                                    <sch:let name="first-author-surname" value="string-join(doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[1][not(@role = 'origAuth')]/tei:persName[tei:surname]/(tei:nameLink, tei:surname)/normalize-space(), ' ')"/>
+                                    <sch:let name="author-surname" value="string-join(doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:author[@role = 'critEd'][1]/tei:persName[tei:surname]/(tei:nameLink, tei:surname)/normalize-space(), ' ')"/>
+                                    <sch:let name="first-editor-surname" value="string-join(doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct//tei:editor[1]/tei:persName[tei:surname]/(tei:nameLink, tei:surname)/normalize-space(), ' ')"/>
                                     <sch:let name="date" value="doc(concat('../temp/id/bibl/',$bibl-ref,'.xml'))//tei:biblStruct/tei:monogr/tei:imprint/tei:date"/>
                                     <sch:let name="year" value="if($date[@when]) then $date/@when else concat($date/@from, '–', $date/@to)"/>
                                     <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/bibl/')">A URI should be used in the ref attribute for placeName pointing to https://www.manuscripta.se/bibl/</sch:assert>
@@ -1516,7 +1509,7 @@
                                 <elementRef key="catchwords" minOccurs="0" maxOccurs="1"/>
                             </sequence>
                         </content>
-                        <constraintSpec ident="signatures.catchwords.check" scheme="schematron">
+                        <!--<constraintSpec ident="signatures.catchwords.check" scheme="schematron">
                             <desc versionDate="2014-12-03">Check that <gi>signatures</gi> and <gi>catchwords</gi> are used in <gi>collation</gi> for <gi>msPart</gi>.</desc>
                             <constraint>
                                 <sch:rule context="tei:msPart//tei:collation">
@@ -1524,7 +1517,7 @@
                                     <sch:assert test="tei:catchwords"> The catchwords element must be used in collation for msPart</sch:assert>
                                 </sch:rule>
                             </constraint>
-                        </constraintSpec>
+                        </constraintSpec>-->
                         <attList>
                             <!-- Attributes deleted in att.global -->
                             <attDef ident="xml:base" mode="delete"/>
@@ -1758,22 +1751,7 @@
 
                     <elementSpec ident="decoNote" mode="change" module="msdescription">
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
-                                <elementRef key="bibl"/>
-                                <elementRef key="date"/>
-                                <elementRef key="dimensions"/>
-                                <elementRef key="foreign"/>
-                                <elementRef key="locus"/>
-                                <elementRef key="locusGrp"/>
-                                <elementRef key="material"/>
-                                <elementRef key="measure"/>
-                                <elementRef key="orgName"/>
-                                <elementRef key="persName"/>
-                                <elementRef key="quote"/>
-                                <elementRef key="ref"/>
-                                <elementRef key="term"/>
-                            </alternate>
+                            <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                         <attList>
                             <!-- Attributes deleted in att.global -->
@@ -1952,6 +1930,7 @@
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
                             <memberOf key="att.divLike" mode="delete"/>
+                            <memberOf key="att.placement" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
@@ -2364,6 +2343,9 @@
                                     <valItem ident="damage">
                                         <desc>Physical damage in the manuscript</desc>
                                     </valItem>
+                                    <valItem ident="deleted">
+                                        <desc>Text has been deleted in the manuscript</desc>
+                                    </valItem>
                                     <valItem ident="editorial">
                                         <desc>Text has been omitted for brevity</desc>
                                     </valItem>
@@ -2732,11 +2714,16 @@
                             </attDef>
                             <attDef ident="subtype" mode="change" usage="opt">
                                 <valList mode="replace" type="closed">
-                                    <valItem ident="Diktyon"/>
-                                    <valItem ident="Manuscripta"/>
                                     <valItem ident="Access"/>
                                     <valItem ident="Alvin"/>
+                                    <valItem ident="Arkivsok"/>
                                     <valItem ident="Libris"/>
+                                    <valItem ident="Diktyon"/>
+                                    <valItem ident="Manuscripta"/>
+                                    <valItem ident="NAD"/>
+                                    <valItem ident="ONP">
+                                        <desc>Dictionary of Old Norse Prose</desc>
+                                    </valItem>
                                     <valItem ident="Regina"/>
                                 </valList>
                             </attDef>
@@ -3080,14 +3067,22 @@
                         <content>
                             <rng:empty/>
                         </content>
-                        <!--<constraintSpec ident="missing.locusGrp.check" scheme="schematron">                            
+                        <constraintSpec ident="missing.locusGrp.check" scheme="schematron">
                             <desc versionDate="2014-11-19">Check if <gi>locus</gi> is used more than once when not inside a <gi>locusGrp</gi></desc>
                             <constraint>
                                 <sch:rule context="tei:msDesc//*">
                                     <sch:report test="tei:locus[not(following-sibling::text()) and following-sibling::tei:locus][not(parent::tei:locusGrp)]"> Use locusGrp when grouping together more than one locus.</sch:report>
-                                    </sch:rule>                                
+                                    </sch:rule>
                             </constraint>
-                        </constraintSpec>-->
+                        </constraintSpec>
+                        <constraintSpec ident="missing.locusGrp.sequence.check" scheme="schematron">
+                            <desc versionDate="2025-10-31">Check if <gi>locus</gi> is used more than once in a sequence, separated by commas, when not inside a <gi>locusGrp</gi></desc>
+                            <constraint>
+                                <sch:rule context="tei:msDesc//*">
+                                    <sch:report test="tei:locus[following-sibling::text()[1] = ',' and following-sibling::tei:locus][not(parent::tei:locusGrp)]"> Use locusGrp when grouping together more than one locus.</sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
                         <constraintSpec ident="locus.count.check" scheme="schematron">
                             <desc versionDate="2014-11-19">Check if <gi>locus</gi> is used more than once when not inside a <gi>locusGrp</gi></desc>
                             <constraint>
@@ -3105,7 +3100,7 @@
                                     <sch:report test="@from[matches(., 'lci')] or @to[matches(., 'lci')]"> Use LCI for left cover inside.</sch:report>
                                     <sch:report test="@from[matches(., 'rci')] or @to[matches(., 'rci')]"> Use RCI for right cover inside.</sch:report>
                                     <sch:report test="@from[matches(., 'rco')] or @to[matches(., 'rco')]"> Use RCO for right cover outside.</sch:report>
-                                    <sch:report test="@from[matches(., 'spine')] or @to[matches(., 'spine')]"> Use spine with upper-case.</sch:report>
+                                    <sch:report test="@from[matches(., 'spine')] or @to[matches(., 'spine')]"> Use Spine with upper-case.</sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -3783,13 +3778,7 @@
                             <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
-                                <elementRef key="locus"/>
-                                <elementRef key="locusGrp"/>
-                                <elementRef key="ref"/>
-                                <elementRef key="term"/>
-                            </alternate>
+                            <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                     </elementSpec>
 
@@ -4008,8 +3997,8 @@
                             <attDef ident="source" mode="delete"/>
                             <!-- Attribute deleted in att.global.rendition -->
                             <attDef ident="rend" mode="delete"/>
-                            <!-- Attribute deleted in att.naming -->
-                            <attDef ident="role" mode="delete"/>
+                            <!-- Changed attribute in att.naming -->
+                            <attDef ident="role" mode="change" usage="opt"/>
                             <!-- Attribute deleted in att.canonical -->
                             <attDef ident="key" mode="delete"/>
                         </attList>
@@ -4095,21 +4084,7 @@
                             <memberOf key="att.global.source" mode="add"/>
                         </classes>
                         <content>
-                            <alternate minOccurs="1" maxOccurs="unbounded">
-                                <textNode/>
-                                <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="orgName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="origDate" minOccurs="1" maxOccurs="1"/>
-                                <elementRef key="origPlace" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
-                            </alternate>
+                            <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                         <attList>
                             <!-- Attributes deleted -->
@@ -4119,7 +4094,9 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <origin>Probably written in the <origDate notBefore="1251" notAfter="1300">second half of the thirteenth century</origDate>. Place unknown.</origin>
+                                <origin>
+                                    <p>Probably written in the <origDate notBefore="1251" notAfter="1300">second half of the thirteenth century</origDate>. Place unknown.</p>
+                                </origin>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -4134,17 +4111,21 @@
                                 <elementRef key="foreign"/>
                                 <elementRef key="idno"/>
                                 <elementRef key="lb"/>
+                                <elementRef key="list"/>
                                 <elementRef key="locus"/>
                                 <elementRef key="locusGrp"/>
                                 <elementRef key="material"/>
                                 <elementRef key="measure"/>
                                 <elementRef key="note"/>
                                 <elementRef key="orgName"/>
+                                <elementRef key="origDate"/>
+                                <elementRef key="origPlace"/>
                                 <elementRef key="persName"/>
                                 <elementRef key="placeName"/>
                                 <elementRef key="quote"/>
                                 <elementRef key="ref"/>
                                 <elementRef key="term"/>
+                                <elementRef key="title"/>
                                 <elementRef key="watermark"/>
                             </alternate>
                         </content>
@@ -4188,12 +4169,12 @@
                                 <sch:rule context="tei:persName[@evidence='external' or @evidence='conjecture']">
                                     <sch:assert test="@cert"> Use the cert attribute when the evidence attribute has the value external or conjecture. </sch:assert>
                                 </sch:rule>
-                                <!--<sch:rule context="tei:persName">
+                                <sch:rule context="tei:persName">
                                     <sch:let name="persname-ref" value="substring-after(@ref, 'person/')"/>
-                                    <sch:let name="persname" value="doc(concat('../id/person/',$persname-ref,'.xml'))//tei:person/tei:persName/normalize-space()"/>
+                                    <sch:let name="persname" value="doc(concat('../temp/id/person/',$persname-ref,'.xml'))//tei:person/tei:persName/normalize-space()"/>
                                     <sch:assert test="starts-with(@ref, 'https://www.manuscripta.se/person/')">A URI should be used in the ref attribute for persName pointing to https://www.manuscripta.se/person/</sch:assert>
                                     <sch:assert test="contains($persname,.)">persName mismatch</sch:assert>
-                                </sch:rule>-->
+                                </sch:rule>
                             </constraint>
                         </constraintSpec>
                         <attList>
@@ -4273,7 +4254,6 @@
                             <memberOf key="att.dimensions" mode="delete"/>
                             <memberOf key="att.ranging" mode="delete"/>
                             <memberOf key="att.responsibility" mode="delete"/>
-                            <!--<memberOf key="att.global" mode="delete"/>-->
                             <memberOf key="att.naming" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
@@ -4326,19 +4306,7 @@
                             <memberOf key="att.global.source" mode="add"/>
                         </classes>
                         <content>
-                            <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
-                                <elementRef key="bibl" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="foreign" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="locus" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="orgName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="persName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="quote" minOccurs="0" maxOccurs="unbounded"/>
-                                <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
-                            </alternate>
+                            <elementRef key="p" minOccurs="0" maxOccurs="unbounded"/>
                         </content>
                         <attList>
                             <!-- Attributes deleted -->
@@ -4348,7 +4316,9 @@
                         </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <provenance>At sometime the volume came to <placeName ref="#Venice"/>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</provenance>
+                                <provenance>
+                                    <p>At sometime the volume came to <placeName ref="#Venice"/>, where it came on the market in the <date notBefore="1692" notAfter="1694">late seventeenth century</date>.</p>
+                                </provenance>
                             </egXML>
                         </exemplum>
                     </elementSpec>
@@ -4568,7 +4538,10 @@
                             <attDef ident="key" mode="change" usage="req">
                                 <valList mode="replace" type="closed">
                                     <valItem ident="cataloguer"/>
+                                    <valItem ident="consultant"/>
+                                    <valItem ident="contributor"/>
                                     <valItem ident="editor"/>
+                                    <valItem ident="translator"/>
                                 </valList>
                             </attDef>
                             <!-- Attributes deleted from att.canonical -->
@@ -4814,7 +4787,7 @@
                             <memberOf key="att.global" mode="delete"/>
                         </classes>
                         <content>
-                            <textNode/>
+                            <elementRef key="p"/>
                         </content>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -4860,7 +4833,7 @@
                         </remarks>
                     </elementSpec>
 
-                    <elementSpec ident="support" mode="change" module="msdescription">                        
+                    <elementSpec ident="support" mode="change" module="msdescription">
                         <content>
                             <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
                         </content>
@@ -4868,7 +4841,7 @@
                             <desc versionDate="2014-12-10">Checks that <gi>support</gi> has <gi>material</gi></desc>
                             <constraint>
                                 <sch:rule context="tei:support/tei:p">
-                                    <sch:assert test="tei:locus[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']] or tei:locusGrp[following-sibling::tei:material][following-sibling::tei:dimensions[@type='leaf']]"> The locus, material, and dimensions elements must be used</sch:assert>
+                                    <sch:assert test="tei:material[following-sibling::tei:dimensions[@type='leaf']]"> The material and dimensions elements must be used</sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
@@ -5105,8 +5078,8 @@
                     <elementSpec ident="teiHeader" mode="change" module="header">
                         <content>
                             <sequence>
-                                <elementRef key="fileDesc" source="manuscripta.odd#teiHeaderGroup"/>
-                                <elementRef key="revisionDesc" source="manuscripta.odd#teiHeaderGroup"/>
+                                <elementRef key="fileDesc"/>
+                                <elementRef key="revisionDesc"/>
                             </sequence>
                         </content>
                         <constraintSpec ident="greek.check" scheme="schematron">
