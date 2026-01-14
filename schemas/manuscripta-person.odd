@@ -3,11 +3,11 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Schema for the Manuscripta person files</title>
+                <title>Schema for the manuscripta.se Person Authority Files</title>
                 <author xml:id="PG">Patrik Granholm</author>
             </titleStmt>
             <publicationStmt>
-                <publisher>Manuscripta</publisher>
+                <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
                 <availability status="free">
                     <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</licence>
                 </availability>
@@ -26,7 +26,7 @@
         </body>
         <back>
             <div xml:id="schema">
-                <head>Schema for the Manuscripta person files</head>
+                <head>Schema</head>
 
                 <schemaSpec ident="manuscripta-org" start="TEI" xml:lang="en" source="manuscripta-p5subset.xml">
 
@@ -40,11 +40,11 @@
                     <moduleRef key="namesdates" include="placeName"/>
                     <moduleRef key="textstructure" include="TEI text"/>
 
-                    <!-- Modules for bibliography-bibl.odd -->
+                    <!-- Modules for manuscripta-person.odd -->
                     <!-- Source: http://www.tei-c.org/release/xml/tei/odd/p5subset.xml-->
                     <moduleRef key="core" include="date note p title" source="odd/p5subset.xml"/>
                     <moduleRef key="header" include="idno sourceDesc" source="odd/p5subset.xml"/>
-                    <moduleRef key="namesdates" include="addName birth death forename genName listPerson nameLink persName person roleName surname" source="odd/p5subset.xml"/>
+                    <moduleRef key="namesdates" include="addName birth death floruit forename genName listPerson nameLink occupation persName person residence roleName surname" source="odd/p5subset.xml"/>
                     <moduleRef key="textstructure" include="body" source="odd/p5subset.xml"/>
 
                     <!--       ELEMENT SPECIFICATIONS, DELETED ATTRIBUTES, AND ATTRIBUTE VALUE CONSTRAINTS       -->
@@ -69,15 +69,13 @@
                     <elementSpec ident="birth" module="namesdates" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.editLike" mode="delete"/>
                             <memberOf key="att.dimensions" mode="delete"/>
-                            <memberOf key="att.ranging" mode="delete"/>
+                            <memberOf key="att.editLike" mode="delete"/>
                             <memberOf key="att.naming" mode="delete"/>
-                            <memberOf key="att.canonical" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <rng:empty/>
+                            <textNode/>
                         </content>
                         <attList>
                             <!-- Attributes deleted -->
@@ -137,15 +135,34 @@
                     <elementSpec ident="death" module="namesdates" mode="change">
                         <classes mode="change">
                             <memberOf key="att.global" mode="delete"/>
-                            <memberOf key="att.editLike" mode="delete"/>
                             <memberOf key="att.dimensions" mode="delete"/>
-                            <memberOf key="att.ranging" mode="delete"/>
+                            <memberOf key="att.editLike" mode="delete"/>
                             <memberOf key="att.naming" mode="delete"/>
-                            <memberOf key="att.canonical" mode="delete"/>
                             <memberOf key="att.typed" mode="delete"/>
                         </classes>
                         <content>
-                            <rng:empty/>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
+                    
+                    <elementSpec ident="floruit" module="namesdates" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.dimensions" mode="delete"/>
+                            <memberOf key="att.editLike" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
                         </content>
                         <attList>
                             <!-- Attributes deleted -->
@@ -303,6 +320,31 @@
                             <p/>
                         </remarks>
                     </elementSpec>
+                    
+                    <elementSpec ident="occupation" module="namesdates" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.datable" mode="delete"/>
+                            <memberOf key="att.editLike" mode="delete"/>
+                            <memberOf key="att.naming" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <textNode/>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
+                            <attDef ident="scheme" mode="delete"/>
+                            <attDef ident="code" mode="delete"/>
+                        </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
 
                     <elementSpec ident="p" module="core" mode="change">
                         <classes mode="change">
@@ -360,9 +402,12 @@
                         </classes>
                         <content>
                             <sequence>
-                                <elementRef key="birth" minOccurs="0" maxOccurs="1"/>
-                                <elementRef key="death" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="birth" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="floruit" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="death" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="occupation" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="residence" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="note" minOccurs="0" maxOccurs="1"/>
                                 <elementRef key="idno" minOccurs="0" maxOccurs="unbounded"/>
                             </sequence>
@@ -413,6 +458,33 @@
                                 <elementRef key="availability" minOccurs="1" maxOccurs="1"/>
                             </sequence>
                         </content>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+                        </exemplum>
+                        <remarks>
+                            <p/>
+                        </remarks>
+                    </elementSpec>
+                    
+                    <elementSpec ident="residence" module="namesdates" mode="change">
+                        <classes mode="change">
+                            <memberOf key="att.global" mode="delete"/>
+                            <memberOf key="att.editLike" mode="delete"/>
+                            <memberOf key="att.dimensions" mode="delete"/>
+                            <memberOf key="att.ranging" mode="delete"/>
+                            <memberOf key="att.naming" mode="delete"/>
+                            <memberOf key="att.typed" mode="delete"/>
+                        </classes>
+                        <content>
+                            <alternate>
+                                <textNode/>
+                                <elementRef key="placeName" minOccurs="0" maxOccurs="unbounded"/>
+                            </alternate>
+                        </content>
+                        <attList>
+                            <!-- Attributes deleted -->
+                            <attDef ident="calendar" mode="delete"/>
+                        </attList>
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
                         </exemplum>
