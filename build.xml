@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="xar" name="manuscripta-data">
+    <property name="build.dir" value="build"/>
+    <property name="project.version" value="1.0"/>
+    <property name="xar.file" value="${build.dir}/manuscripta-data-${project.version}.xar"/>
+
+    <target name="xar">
+        <mkdir dir="${build.dir}"/>
+        <zip destfile="${xar.file}">
+            <fileset file="expath-pkg.xml"/>
+            <fileset file="repo.xml"/>
+            <fileset file="post-install.xql"/>
+            <fileset dir="." includes="data/msDescs/**/*.xml data/id/**/*.xml"/>
+        </zip>
+    </target>
+</project>
