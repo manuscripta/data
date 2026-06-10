@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp=" https://www.manuscripta.se/person/100484">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,20 +43,68 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" to="LCI" scheme="other"/>
+                                            <locus from="SL1" to="SL1" scheme="folios"/>
+                                            <locus from="RCI" to="RCI" scheme="other"/>
+                                        </locusGrp>
+                                        <material>Paper</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="230" unit="mm"/>
+                                            <width quantity="160" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="0"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. <locus from="1" to="5" scheme="folios"/>: foliated in both upper and bottom left corner; <locus from="6" to="355" scheme="folios"/>: foliated in bottom left corner. Error in foliation: 1-182, 182bis, 183-221, 221bis, 222-355. <secFol>simulacrorum domini qui</secFol></foliation>
+                                <collation>
+                                    <formula>1(1+8), 2-4(8), 5(8, lacks 6), 9-41(8), 42(4+1), 43-45(8)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/69a020bd6e6f4a0001f9131b/viewOnly">VisColl collation</ref>.</p>
+                                    <signatures>Quire signatures in lead-point both at the beginning and end of each quire. </signatures>
+                                    <catchwords>Catchwords by a contemporary hand. Catchwords highly erratic. On some quires, e.g. quires 7, 11, 37, the catchwords repeat the last words of the current page and not the first words of the next page. On quire 26 what looks like a catchword is actually the end of the last sentence. On quire 14 the cathword does not refer to the next page. Catchwords missing on quires 1, 6, 10, 12-13, 15-20, 30, 34-35, 39-40. </catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top of page, in ink by a modern hand: <quote>Legenda seu vitae sanctorum.</quote>; bottom left corner: National Library book label with current signum.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern binding. Marbled paper over cardboard, spine covered in parchment. <locus from="Spine" to="Spine" scheme="other"/>, in ink: <quote>Legenda Seu vitae Sanctorum</quote>; in ink: <quote>A 236</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="240" unit="mm"/>
+                                        <width quantity="180" unit="mm"/>
+                                        <depth quantity="90" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin><p>
-                            <origPlace>
-                                <placeName ref="https://www.manuscripta.se/place/100111">France</placeName>
-                                <placeName ref="https://www.manuscripta.se/place/100064" cert="low">Paris</placeName>
-                            </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century</origDate>
-                        </p></origin>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100111">France</placeName>
+                                    <placeName ref="https://www.manuscripta.se/place/100064" cert="low">Paris</placeName>
+                                </origPlace>, . The attribution to Paris is based on the prominence of saints associated with the region, notably St Opportuna and her brother St Chrodegang of Séez (<locus from="104r" to="104r" scheme="folios"/>), St Landry of Paris (<locus from="122r" to="122r" scheme="folios"/>), St Marcellus of Paris (<locus from="132r" to="132r" scheme="folios"/>); St Genevieve (<locus from="134v" to="134v" scheme="folios"/>), St Aurea of Paris (<locus from="137r" to="137r" scheme="folios"/>), St Denis of Paris (<locus from="189r" to="189r" scheme="folios"/>), and St Maturinus (<locus from="311r" to="311r" scheme="folios"/>) (see Contents for more local saints). Of these saints particular prominence is given to Sts Opportuna and Chrodegang, St Denis, St Maturinus, as well as to St Catherine.</p>
+                            <p/>
+                        </origin>
+                        <provenance>
+                            <p>Provenance unknown.</p>
+                        </provenance>
+                        <acquisition>
+                            <p>Purchased from the notary <persName ref="https://www.manuscripta.se/person/102768">Birger Lundell</persName> by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date when="1921"/>.</p>
+                        </acquisition>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -60,13 +112,89 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="1v" scheme="folios"/>
+                                <title type="desc">Table of contents</title>
+                                <note>List of rubrics. The last item on the list, St Eustachius, does not seem to be included in the manuscript.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="2ra" to="355vb" scheme="folios"/>
+                                <title type="desc">Legendary</title>
+                                <rubric>Incipit uita symonis et iude</rubric>
+                                <incipit>Simon itaque chananeus et Iudas zelotes apostoli domini nostri ihesu christi </incipit>
+                                <explicit>que conuenerant audire uerbum domini tu autem <sic>Expliuiit</sic> actus <sic>apostorum</sic></explicit>
+                                <note>
+                                    <p>
+                                        This collection contains circa 100 saints' passions and vitae. It begins with Sts Simon and Jude (28 Oct.) on <locus from="2ra" to="2ra" scheme="folios"/>. The last saint mentioned is the legend of Mary Magdalene and St Maximinus of Aix on <locus from="337ra" to="337ra" scheme="folios"/>.</p>
+                                    <p/>
+                                    <p/>
+                                    <p>
+                                        Notable saints:</p>
+                                    <p>
+                                        <locus from="75r" to="77v" scheme="folios"/>: St Germanus of Auxerre (31 July);</p>
+                                    <p>
+                                        <locus from="104r" to="118r" scheme="folios"/>: St Opportuna (22 Apr.) and St Godegrand/Chrodegang of Séez (3 Sep.);</p>
+                                    <p>
+                                        <locus from="122r" to="123r" scheme="folios"/>: St Landry of Paris (10 June);</p>
+                                    <p>
+                                        <locus from="123r" to="129v" scheme="folios"/>: St Catherine (25 Nov.), legend and a short office;</p>
+                                    <p>
+                                        <locus from="130r" to="131r" scheme="folios"/>: St Turiaf of Dol (13 July);</p>
+                                    <p>
+                                        <locus from="132r" to="134v" scheme="folios"/>: St Marcellus of Paris (1 Nov.);</p>
+                                    <p>
+                                        <locus from="134v" to="136v" scheme="folios"/>: St Genevieve (3 Jan.);</p>
+                                    <p>
+                                        <locus from="137r" to="138r" scheme="folios"/>: St Aurea of Paris (4 Oct.);</p>
+                                    <p>
+                                        <locus from="139r" to="140r" scheme="folios"/>: St Magloire (24 Oct.);</p>
+                                    <p>
+                                        <locus from="189r" to="202r" scheme="folios"/>: St Denis of Paris, and Rusticus and Eleutherius (9 Oct.);</p>
+                                    <p>
+                                        <locus from="239r" to="243r" scheme="folios"/>: St Bathild (30 Jan.);</p>
+                                    <p>
+                                        <locus from="247v" to="248v" scheme="folios"/>: St Clodoald (7 Sep.);</p>
+                                    <p>
+                                        <locus from="311r" to="318r" scheme="folios"/>: St Maturinus (Nov. 1), includes vita, readings, translatio;</p>
+                                    <p/>
+                                    <p/>
+                                    <p/>
+                                    <p>
+                                        Besides the legends, the manuscript also contains the following texts:</p>
+                                    <p>
+                                        <locus from="18v" to="30r" scheme="folios"/>: Christmas: Bible readings, sermons, homlies;</p>
+                                    <p>
+                                        <locus from="86v" to="91v" scheme="folios"/>: Assumption of Mary: homilies;</p>
+                                    <p>
+                                        <locus from="98v" to="104r" scheme="folios"/>: Exaltation of the Holy Cross: readings, sermons;</p>
+                                    <p>
+                                        <locus from="143v" to="152v" scheme="folios"/>: Dedication of the Church: Bible readings, homilies;</p>
+                                    <p>
+                                        <locus from="152v" to="167v" scheme="folios"/>: Revelation;</p>
+                                    <p>
+                                        <locus from="167v" to="171r" scheme="folios"/>: Canticles;</p>
+                                    <p>
+                                        <locus from="248v" to="259r" scheme="folios"/>: Assumption of Mary: sermons;</p>
+                                    <p>
+                                        <locus from="259r" to="270v" scheme="folios"/>: Nativity of Mary: Bible readings, sermons;</p>
+                                    <p>
+                                        <locus from="338r" to="355v" scheme="folios"/>: Acts 1:1-16:13 (after which the text ends).</p>
+                                    <p/>
+                                    <p/>
+                                    <p/>
+                                    <p/>
+                                    <p/>
+                                    <p/>
+                                    <p/>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="355v" scheme="folios"/>
+                                            <locus from="1" to="355" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
                                                 <height quantity="230" unit="mm"/>
@@ -75,16 +203,55 @@
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="355" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="357" unit="folios"/>
                                     </extent>
+                                    <foliation>
+                                        <locus from="2r" to="60r" scheme="folios"/>: Foliation in Roman numerals in black ink in the upper right corner: <quote>i<hi rend="super">o</hi>-lix</quote>. </foliation>
+                                    <condition>Parchment damaged in many places, often with signs of contemporary repair, e.g. on <locus from="72" to="72" scheme="folios"/> and <locus from="74" to="74" scheme="folios"/>. In some places there are signs of water and fire damage, e.g. on <locus from="88" to="94" scheme="folios"/>. Occasional ink smudges, e.g. <locus from="221" to="221" scheme="folios"/>.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" ruledLines="29 41">
+                                        <dimensions type="written">
+                                            <height min="170" max="210" unit="mm"/>
+                                            <width unit="mm" min="120" max="150"/>
+                                        </dimensions>
+                                        <note>Guidelines and ruling in lead.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1v" scheme="folios" to="1v"/>
+                                    <note>Top of page, in ink by a modern hand: <quote>299</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="2r" scheme="folios"/>
+                                    <note>Upper margin, in pencil by a modern hand: <quote>9. 9?</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="2r" to="355r" scheme="folios"/>
+                                    <note>Interlinear and marginal corrections by the scribe or a contemporary hand. Occasionally, longer additions in the margins, e.g. on <locus from="36r" to="36r" scheme="folios"/>.</note>
+                                </p>
+                                <p>
+                                    <locus from="355v" to="355v" scheme="folios"/>
+                                    <note>Bottom margin, in pencil by a modern hand: <quote>T.o.m. XVI:13</quote>.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in black ink, rubrics in red, capitals touched in red (sometimes painted over completely).</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="2ra" to="355r" scheme="folios"/>: plain initials over 3-7 lines in red.</p>
+                                    <p>
+                                        <locus from="89r" to="91v" scheme="folios"/>, <locus from="105r" to="108r" scheme="folios"/>, <locus from="113r" to="116r" scheme="folios"/>: rubrics, capitals and plain intials painted in blue.</p>
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published"><change who="https://www.manuscripta.se/person/100484" when="2026-06-02" status="published">260602</change>
             <change status="draft" when="2024-01-24" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>

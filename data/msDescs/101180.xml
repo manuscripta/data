@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en">
+                <msDesc xml:lang="en" resp="robibock">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -47,11 +51,12 @@
                         </objectDesc>
                     </physDesc>
                     <history>
-                        <origin><p>
-                            <origPlace>
-                                <placeName ref="https://www.manuscripta.se/place/100081" cert="low">Sweden</placeName>
-                            </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century</origDate>
-                        </p></origin>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100081" cert="low">Sweden</placeName>
+                                </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century</origDate></p>
+                        </origin>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -59,6 +64,44 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1ra" to="49rb" scheme="folios"/>
+                                <title type="desc">Proper of saints</title>
+                                <note>First rubric 2v: St Thomas (21 Dec.)</note>
+                            </msItem>
+                            <msItem>
+                                <locus to="65ra" scheme="folios" from="49rb"/>
+                                <title type="desc">?</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="66ra" to="69va" scheme="folios"/>
+                                <title type="desc">Pauca miracula</title>
+                                <rubric>nota hic incipiunt pauca miarcula</rubric>
+                                <incipit>Miles quidam nomine balwinus adhuc </incipit>
+                                <explicit>ad laudem et gloriam nominis sui et ad -tatem tocius ecclesie catholice amen</explicit>
+                                <note>
+                                    <p>68vb-69va: St Birgitta.</p>
+                                    <p>70r-70v: guidelines, but no text.</p>
+                                </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="71ra" to="75rb" scheme="folios"/>
+                                <title type="desc">De fratribus minoribus/Saints' stories</title>
+                                <rubric>de fratribis minoribus</rubric>
+                                <incipit>Apud yconium quidam monachus magne </incipit>
+                                <explicit>et sic -he virtutem confessionis cum? a- notam confessoris</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="75va" scheme="folios" to="98va"/>
+                                <title type="desc">Proper of time/Sermons</title>
+                                <rubric>dominica prima adventus</rubric>
+                                <note>99rv: guidelines, no text. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="100ra" scheme="folios" to="100ra"/>
+                                <title type="desc">Excerpts from Nicholas of Lyra</title>
+                                <rubric>Excerpta de postilla fratris nicholai de lira</rubric>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>

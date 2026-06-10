@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100478">Elin Andersson</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="">
+                <msDesc xml:lang="en" resp=" https://www.manuscripta.se/person/100478">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -45,13 +49,61 @@
                                 </extent>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>Modern cardboard covers. <locus from="LCO" to="LCO" scheme="other"/>: Upper left corner, in pencil by a modern hand: <quote>A 132</quote>. In black ink by a modern hand: <quote>Officium Visitationis per Episcopum 1480. (Utskrift för Strengnäs stift?)</quote>. <locus from="LCI" to="LCI" scheme="other"/>: National Library book label with current signum.</p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
+                                </origPlace>
+                                <origDate notBefore="1476" notAfter="1500">15th century, last quarter</origDate>
+                            </p>
+                        </origin>
+                        <provenance>
+                            <p>Early provenance unknown. The diocese of Strängnäs is mentioned in a later addition, but not mentioned in the text proper.</p>
+                        </provenance>
+                        <provenance>
+                            <p>The fragment belonged to <persName ref="https://www.manuscripta.se/person/100536">Nils Reinhold Brocman</persName> (1731–1770), librarian at the <orgName>Royal Library</orgName> and antiquarian at the <orgName>Antiquities Archive</orgName> (see addition on <locus from="1r" to="1r" scheme="folios"/>). Brocman bequeathed his manuscripts to the Antiquities Archive in <date when="1770"/> (see transcription of his will in U 89). The fragment is not mentioned in the list of books, and has at some point probably been removed from either a manuscript or a printed volume.</p>
+                        </provenance>
+                        <acquisition>
+                            <p>From the <orgName>Antiquities Archive</orgName> to the <orgName>Royal Library</orgName>.</p>
+                        </acquisition>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/102430" type="short">Gummerus (1902)</title>
+                                <citedRange unit="page" from="23" to="24"/>
+                                <citedRange unit="page" from="94" to="98"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="1v" scheme="folios"/>
+                                <title type="desc">Customary of bishop's visitations</title>
+                                <rubric>Officium Visitacionis per Episcopum fiet hoc modo</rubric>
+                                <incipit xml:lang="la">In ecclesia primo habeatur missa solempniter coram ipso Episcopo</incipit>
+                                <explicit>quod fideliter agant et sibi absque dissimulacione et quouis pacto informent delinquentes</explicit>
+                                <note>See further <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/101639" type="short">Gummerus (1902)</title>
+                                        <citedRange unit="page" from="23" to="24"/>
+                                    </bibl></note>
+                                <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/101639" type="short">Gummerus (1902)</title>
+                                    <citedRange unit="page" from="94" to="98"/>
+                                </bibl>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -59,26 +111,47 @@
                                     <support>
                                         <p>
                                             <locus from="1r" to="1v" scheme="folios"/>
-                                            <material>Western paper</material>
+                                            <material>Paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="285" unit="mm"/>
                                                 <width quantity="200" unit="mm"/>
                                             </dimensions>
+                                            <note>No watermark visible.</note>
                                         </p>
                                     </support>
                                     <extent>
                                         <measure type="textblockLeaves" quantity="1" unit="folios"/>
                                     </extent>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="39 56">
+                                        <dimensions type="written">
+                                            <height min="240" max="240" unit="mm"/>
+                                            <width min="140" max="140" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines in ink.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Gothic cursive, with alternating looped and unlooped ascenders.</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Upper left corner, in pencil by a modern hand: <quote>Brocm. No 5 fol</quote>. Upper right corner, in brown ink by a modern hand (probably <persName ref="https://www.manuscripta.se/person/100536">Nils Reinhold Brocman</persName>): <quote>1480.</quote> Middle of page, left margin, in brown ink by a contemporary hand: <quote>li.vi.</quote> Bottom of page, left margin, in brown ink by a contemporary hand: <quote>baptismi</quote>
+                                    </note>
+                                </p>
+                                <p>
+                                    <locus from="1v" to="1v" scheme="folios"/>
+                                    <note>Bottom of the right column, in brown ink by <persName ref="https://www.manuscripta.se/person/100536">Nils Reinhold Brocman</persName>: <quote>In dioecesi Stregn. cum haec observata, tum Tractatus Magistri Joh. Gerson Cancellarii Parisiensis de visitatione praelatorum diligenter inspectus et praedicatus deprehendit circa 1480.</quote></note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Rubric on <locus from="1r" to="1r" scheme="folios"/> in red. Main text in brown ink. Underlinings in brown ink.</p>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin><p>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100081">Sweden</placeName>
-                                </origPlace>, <origDate notBefore="1476" notAfter="1500">15th century, last quarter</origDate>
-                            </p></origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>

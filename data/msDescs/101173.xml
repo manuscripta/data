@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en">
+                <msDesc xml:lang="en" resp="robibock">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,23 +39,71 @@
                             <idno type="id" subtype="Regina">004852453</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Tractatus de passione Domini</head>
+                    <head>Tractatus de passione Domini; miscellaneous theological texts</head>
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support>
+                                    <p>
+                                        <note>Flyleaves removed. A small fragment still visible in upper left corner of <locus from="RCI" to="RCI" scheme="other"/>.</note>
+                                    </p>
+                                </support>
                                 <extent>
                                     <measure type="leftFlyleaves" unit="folios"/>
                                     <measure type="rightFlyleaves" unit="folios"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil. The foliation on the majority of the leaves has been corrected, which sometimes has lead to further errors in the foliation: 1-228, 228bis, 229-240, 242, 242bis, 243-277.</foliation>
+                                <collation>
+                                    <formula>1-16(12), 17(12+2), 18(10), 19(12), 20(14), 21-23(12)</formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/697350cd7552230001633ff3/viewOnly">VisColl collation</ref>. Parchment guards with visible text.</p>
+                                    <signatures>
+                                        <locus from="207" to="266" scheme="folios"/>: quire singatures in Arabic numerals in red ink at the beginning of quires. </signatures>
+                                    <catchwords>
+                                        <locus from="12v" to="204v" scheme="folios"/>: Catchwords by one or several contemporary hands. </catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>Top left corner: National Library book label with current signum; top of page, in ink by a medieval hand: <quote>ccc x v i?</quote>. The inner cover is also covered with offprint, probably from a detached flyleaf.</note>
+                            </p>
+                            <p>
+                                <locus from="RCI" to="RCI" scheme="other"/>
+                                <note>There is some visible offprint on the inner cover, probably from a detached flyleaf.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <p>Medieval binding. Brown leather over wooden boards. 3 double raised band and endbands. Originally, 2 clasps on leather straps. Originally, centre and corner buckles on each cover. <locus from="LCO" to="LCO" scheme="other"/>, fragment of a label with illegbile text by a medieval hand. <locus from="Spine" to="Spine" scheme="other"/>, ink on paper label: <quote>Tractatus de Pass<supplied reason="omitted">ione</supplied> Domini cum aliis B 16</quote>; stamped in gold: <quote>A 197</quote>.</p>
+                                <p>
+                                    <dimensions type="binding">
+                                        <height quantity="230" unit="mm"/>
+                                        <width quantity="170" unit="mm"/>
+                                        <depth quantity="75" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <decoNote type="tooling">
+                                    <p>Both covers are decorated with geometrical patterns that seem to have been made in ink.</p>
+                                </decoNote>
+                                <condition>Leather worn and heavily damaged by bookworms. Buckles, clasps, and catch plates missing. Board attachments visible on <locus from="LCI" to="LCI" scheme="other"/> and <locus from="RCI" to="RCI" scheme="other"/>.</condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin><p>
-                            <origPlace>
-                                <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
-                            </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century</origDate>
-                        </p></origin>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
+                                </origPlace>, <origDate notBefore="1401" notAfter="1500">15th century</origDate>. The last two texts mention the dates <date when="1450"/> and <date when="1451"/> (<locus from="271vb" to="271vb" scheme="folios"/>, <locus from="275ra" to="275ra" scheme="folios"/>), the latter also concerns <placeName ref="https://www.manuscripta.se/place/100278">Salzburg</placeName>, which may point to an Austrian origin for the entire or part of the manuscripts. The watermark for the first part of the manuscript also indicates Bavaria or Austria. </p>
+                        </origin>
+                        <provenance>
+                            <p>Early provenance unknown. The signum <quote>B 16</quote> on the <locus from="Spine" to="Spine" scheme="other"/> has not been identified.</p>
+                        </provenance>
+                        <acquisition>
+                            <p>Purchased from the bookdealer <persName>F. Butsch</persName> in <placeName ref="https://www.manuscripta.se/place/100004">Augsburg</placeName> by the <orgName ref="https://www.manuscripta.se/org/100004">National Library</orgName> in <date when="1873"/>.</p>
+                        </acquisition>
                     </history>
                     <msPart>
                         <msIdentifier>
@@ -59,31 +111,269 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="2r" to="3v" scheme="folios"/>
+                                <title type="desc">List of chapters</title>
+                                <rubric>Registrum capitolorum et omnium illorum que in isto tractatu continentur in quolibet capitulo et ad quod numerum</rubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="3v" to="7r" scheme="folios"/>
+                                <title type="desc">Prologue</title>
+                                <rubric>Sequitur prologus primo in passionis christi</rubric>
+                                <incipit>UIdens vidisti domine affliccionem populi tui qui est in egipto (Acts 7:34) Et inlimasti celos tuos</incipit>
+                                <explicit>quam ad suam ymaginem creauit et similitudinem ut particeps fieres eius bonitatis et clemencia</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="7r" to="206v" scheme="folios"/>
+                                <author>
+                                    <persName ref="https://www.manuscripta.se/person/102767">Jordan of Quedlinburg</persName>
+                                </author>
+                                <title type="desc">Meditations on the suffering of Christ</title>
+                                <rubric>Sequitur prima meditacio passionis domini nostri ihesu christi ad primam Completo<add place="below">rium</add> siue die Dominico </rubric>
+                                <incipit>Septem sunt hore diei in quibus singulis diebus pre aliis horis et temporibus per septem horas canonicas regraciatur deo nostram momorando redempcionem</incipit>
+                                <explicit>et ad te letum cum plenitudine sensus mei transsire qui cum deo patre et spiritu sancto viuis ac regnas deus in secula seculorum Amen</explicit>
+                                <finalRubric>Et sic est finis Tractatulus passionis domini nostri ihesu christi <add place="margin">edita</add> Per venerabilem magistrum Iordanum laude deus in omnibus operibus suis </finalRubric>
+                                <note>After the final rubric by the scribe, in red ink: <quote>Sequitur secundus liber de passione</quote>; in brow ink: <quote>Inspice et fac secundum exemplar de istis</quote>.</note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="276v" scheme="folios"/>
-                                            <material>Western paper</material>
+                                            <locus from="1" to="206" scheme="folios"/>
+                                            <material>Paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="210" unit="mm"/>
                                                 <width quantity="150" unit="mm"/>
                                             </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="1" to="206" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Oxhead with eyes and ears; above, double line rod ending in cross.</term>
+                                                <note>Similar to Piccard II:3, XI, 93-114.</note>
+                                            </watermark>
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="276" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="206" unit="folios"/>
                                     </extent>
+                                    <foliation>Frequent use of keywords and titles in red ink in the margins by the scribe.</foliation>
+                                    <condition>Leaves stained and damaged by bookworms in places. Some leaves are damaged (possibly from a cut) in the inner margin, e.g. <locus from="18" to="18" scheme="folios"/>. <locus from="1r" to="1r" scheme="folios"/>: rust stains from nails on the cover.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="1" writtenLines="23 29">
+                                        <locus from="2" to="206" scheme="folios"/>
+                                        <dimensions type="written">
+                                            <height unit="mm" min="140" max="145"/>
+                                            <width unit="mm" min="80" max="85"/>
+                                        </dimensions>
+                                        <note>Guidelines in ink.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <p>The text is written by at least two, perhaps more, hands.</p>
+                                <handNote xml:id="hand-1"><locus from="2r" to="145v" scheme="folios"/>Semihybrida. </handNote>
+                                <handNote xml:id="hand-2"><locus from="146r" to="206v" scheme="folios"/>Semihybrida</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top left corner, in red ink in textualis: <quote>nasc</quote>; beneath in green and brown ink in gothic cursive: <quote>Honorabilis? domine</quote>; top of page, in brown ink by Klemming: <quote>Köpt till Kongl. Bibliotheket från F. Butsch Sohn i Augsburg för 15 floriner. ank. 3 Jan. 1873.</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="1v" to="1v" scheme="folios"/>
+                                    <note>Upper part of page, in ink by a medieval hand: a table of content of the entire manuscript. Next to the title<quote> Item disputacio corporis et anime in wlgari</quote> in pencil by a modern hand: <quote>575 vers NB</quote>.</note>
+                                </p>
+                                <p>
+                                    <locus from="2v" to="206v" scheme="folios"/>
+                                    <note>Occasional additions in the margins, sometimes also between lines. The additions are mainly corrections by the scribe or a contemporary hand, but there are also additions by at least one other hand, as well as manicules and nota-signs, e.g on <locus from="11r" to="11r" scheme="folios"/>. In places, e.g. on <locus from="181r" to="193r" scheme="folios"/>, more frequent corrections or editing seem to occur.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink, rubrics in red, capitals touched in red.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="2r" to="2r" scheme="folios"/>: Opening plain initial P over 4 lines (and extending below the line) in red. Flourishing in blue and penwork decoration in red.</p>
+                                    <p>
+                                        <locus from="2r" to="205v" scheme="folios"/>: plain initials over 2-4 lines in red. Penwork decoration on some of the inititals, e.g. <locus from="188r" to="188r" scheme="folios"/> or <locus from="195r" to="195r" scheme="folios"/>.</p>
+                                </decoNote>
+                            </decoDesc>
+                        </physDesc>
+                    </msPart>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicologicalUnit">2</idno>
+                        </msIdentifier>
+                        <msContents>
+                            <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="207ra" to="215vb" scheme="folios"/>
+                                <title type="desc">De cura prelatorum </title>
+                                <rubric>De cura prelatorum et regimine et cetera</rubric>
+                                <incipit>QVasi stella matutina in medio nebule (Eccl. 50:6) id est peccatorum proprietates stelle huius possunt referri ad quemlibet doctorem fidei</incipit>
+                                <explicit>sed tamen permittit eum nobis mala swadere In nostro autem arbitrio et velimus ei consentire ?ich?</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="215vb" to="223vb" scheme="folios"/>
+                                <title type="desc">Excerpta de regimine principium</title>
+                                <rubric>Excerpta de Regimine principum et vocatur libellus Fauum mellis</rubric>
+                                <incipit>
+                                    <sic>Ox</sic> regia ac sanctissima prosapia oriundo suo domino spirituali domino philippo</incipit>
+                                <explicit>quo apparent in eius medio nec putrescunt quia non potest intrare calidum Alienum</explicit>
+                                <finalRubric>item Ego dubio (dubito?) de fine huius Amen In die marie magdalene</finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="224ra" to="233vb" scheme="folios"/>
+                                <title type="desc">Ars moriendi</title>
+                                <incipit>Cvm de presentis exilii miseria mortis transitus </incipit>
+                                <explicit defective="true">se timet meruisse amorem ut vniatur tibi amore</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="234ra" to="238rb" scheme="folios"/>
+                                <title type="desc">Disputatio corporis et anime</title>
+                                <rubric>disputacio corporis et anime scripta per Gilbertum episcopum Linconiensem</rubric>
+                                <incipit>hie vor in ein wind zeit peschach ein jämerlich streit</incipit>
+                                <explicit>das wir frölich pey ym pesten vnd sprechen mit</explicit>
+                                <finalRubric>Andacht Amen das gesech</finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="238rb" to="242ra" scheme="folios"/>
+                                <title type="desc">Dialogue between a lamenting man and reason</title>
+                                <rubric>Ad honorem <sic>deus</sic> ac sanctorum apostolorum petri et pauli hanc exhortacionem scripsi </rubric>
+                                <incipit>hic introducuntur persone duorum videlicet deflentis hominis </incipit>
+                                <explicit>vide ne deinceps condempnas viuendo quod audis et? multis modis mouendo fiat fiat Amen</explicit>
+                                <note>
+                                    <locus from="242v" to="242v" scheme="folios"/>: blank.</note>
+                            </msItem>
+                            <msItem>
+                                <locus from="242bisr" to="243rb" scheme="folios"/>
+                                <title type="desc">Theological text (fragmented)</title>
+                                <incipit defective="true">improperando simplicibus fidelibus et dicendo Ecce quomodo viuunt qui meliores merit vos</incipit>
+                                <explicit>quia tunc cum magna suscipiet me Quod ipse <sic>prare</sic> (i.e. prestare) dignetur qui viuit et cetera </explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="243rb" to="253vb" scheme="folios"/>
+                                <title type="desc">Expositio canonis</title>
+                                <rubric>Exposicio canonis Breuis et vtilis sub bono Stilo <lb/> Exposicio Canonis Breuis et vtilis sub bono stilo iam sequitur</rubric>
+                                <incipit>DIcit apostolus Ephesiis vi Induite vos armaturam dei (Eph. 6:11) <gap reason="editorial"/> Hec armatura est vestis sacerdotalis</incipit>
+                                <explicit>et subsequitur hominem in bonis operibus et cetera</explicit>
+                                <finalRubric>Et sic finis</finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="254ra" to="259va" scheme="folios"/>
+                                <title type="desc">Sermon</title>
+                                <incipit>BErnhardus o homo quam fructum expectam in hoc seculo huius fructus ruina huius finis mors est</incipit>
+                                <explicit>Sanguinis in corpore anima in sangwine Spiritus in anima mens in spiritu et fides in corde christianus in fide hec ille item Amen</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="259vb" to="267rb" scheme="folios"/>
+                                <title type="desc">Casus in missa </title>
+                                <incipit>Qvia sunt casus aliqui qui occurunt in missa sacerdotibus in missa ideo ut de hiis videatur </incipit>
+                                <explicit>qui singulis subvenit necessitatibus sit benedictus in secula seculorum Amen </explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="267rb" to="269va" scheme="folios"/>
+                                <title type="desc">Nota de baptisma</title>
+                                <rubric>Nota de baptisma</rubric>
+                                <incipit>Consequentur dicenda sunt aliquam de baptismo que faciunt de baptismante </incipit>
+                                <explicit>que in illis seruanda est de quibus est que ponitur extra de baptismo et eius effectu item hec scripta per magistrum de dinchlspühel</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus to="271va" scheme="folios" from="269vb"/>
+                                <title type="desc">Treatise on mass</title>
+                                <incipit>Nota auctoritates misse et lege hanc tabulam et invenies qualiter missa precellit et est dignior ceteris oracionibus de audicione</incipit>
+                                <explicit>tunc est dare orandum quot annis receperunt vsuram tot annos xv pater noster</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="271vb" to="275ra" scheme="folios"/>
+                                <title type="desc">Excerpts from various papal bulls</title>
+                                <incipit>Pro declaracione Bulle Nycolai quinti de sacro Iubileo Anno domini 1450 proxime futuro sunt notanda </incipit>
+                                <explicit>et ad hanc indulgenciam consequendam et? que patet diligenti et cetera</explicit>
+                            </msItem>
+                            <msItem>
+                                <locus from="275ra" to="276vb" scheme="folios"/>
+                                <title type="desc">Notes from the Synod of Salzburg 1451</title>
+                                <incipit>
+                                    <supplied reason="omitted">S</supplied>Acra synodus que convenit in salzpurga Anno domini 1451 die tercia februarii </incipit>
+                                <explicit>quo eis <del>nl</del> nichil horribilius accidere poterit<del>t</del> et cetera</explicit>
+                            </msItem>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc material="paper">
+                                    <support>
+                                        <p>
+                                            <locus from="207" to="277" scheme="folios"/>
+                                            <material>Paper</material>
+                                            <dimensions type="leaf">
+                                                <height quantity="210" unit="mm"/>
+                                                <width quantity="150" unit="mm"/>
+                                            </dimensions>
+                                            <watermark n="1">
+                                                <locusGrp>
+                                                    <locus from="207" to="265" scheme="pages"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Unidentified geometrical or star-like shape. </term>
+                                            </watermark>
+                                            <watermark n="2">
+                                                <locusGrp>
+                                                    <locus from="266" to="277" scheme="folios"/>
+                                                </locusGrp>
+                                                <term type="watermarkMotif">Trimount</term>
+                                                <note>Watermark insufficiently distinct for further description.</note>
+                                            </watermark>
+                                        </p>
+                                    </support>
+                                    <extent>
+                                        <measure type="textblockLeaves" quantity="72" unit="folios"/>
+                                    </extent>
+                                    <condition>Miinor staining and damage from bookworms. <locus from="276" to="277r" scheme="folios"/>: rust stains from nails on the cover.</condition>
+                                </supportDesc>
+                                <layoutDesc>
+                                    <layout columns="2" writtenLines="33 38">
+                                        <locus from="207" to="276" scheme="pages"/>
+                                        <dimensions type="written">
+                                            <height quantity="165" unit="mm"/>
+                                            <width quantity="105" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines in ink.</note>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-3"><locus to="233vb" scheme="folios" from="207ra"/>Semihybrida</handNote>
+                                <handNote xml:id="hand-4"><locus from="234ra" to="238rb" scheme="folios"/>Semihybrida</handNote>
+                                <handNote xml:id="hand-5"><locus from="238rb" to="242ra" scheme="folios"/>Semihybrida</handNote>
+                                <handNote xml:id="hand-6"><locus from="242bisra" to="259va" scheme="folios"/>Semihybrida</handNote>
+                                <handNote xml:id="hand-7"><locus from="259vb" to="271va" scheme="folios"/>Semihybdrida</handNote>
+                                <handNote xml:id="hand-8"><locus from="271vb" to="276vb" scheme="folios"/>Semihybrida</handNote>
+                            </handDesc>
+                            <additions>
+                                <p>
+                                    <locus from="207ra" to="274rb" scheme="folios"/>
+                                    <note>Scattered additions in the margins, usually corrections, by several contemporary hands. On <locus from="224r" to="225r" scheme="folios"/> the additions are numerous and also made in the main text.</note>
+                                </p>
+                            </additions>
+                            <decoDesc>
+                                <p>Main text in brown ink, rubrics in red, capitals touched in red.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="207ra" to="259vb" scheme="folios"/>: plain initials over 1-3 lines in red.</p>
+                                    <p>
+                                        <locus from="254ra" to="254ra" scheme="folios"/>: plain initial over 2 lnes in yellowish brown.</p>
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published">
+            <change who="https://www.manuscripta.se/person/100484" when="2026-05-20" status="published">First published 260520</change>
+            <change who="https://www.manuscripta.se/person/100484" when="2026-05-20" status="published"/>
             <change status="draft" when="2024-05-27" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>
@@ -1935,108 +2225,108 @@
             <desc>f. 228v</desc>
             <graphic url="ms-101173_0460.tif" width="4839px" height="5719px"/>
         </surface>
+        <surface xml:id="ms-101173_228bisr">
+            <desc>228bisr</desc>
+            <graphic url="ms-101173_0461.tif" width="4279px" height="5720px"/>
+        </surface>
+        <surface xml:id="ms-101173_228bisv">
+            <desc>228bisv</desc>
+            <graphic url="ms-101173_0462.tif" width="4829px" height="5719px"/>
+        </surface>
         <surface xml:id="ms-101173_229r">
             <desc>f. 229r</desc>
-            <graphic url="ms-101173_0461.tif" width="4279px" height="5720px"/>
+            <graphic url="ms-101173_0463.tif" width="4226px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_229v">
             <desc>f. 229v</desc>
-            <graphic url="ms-101173_0462.tif" width="4829px" height="5719px"/>
+            <graphic url="ms-101173_0464.tif" width="4814px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_230r">
             <desc>f. 230r</desc>
-            <graphic url="ms-101173_0463.tif" width="4226px" height="5720px"/>
+            <graphic url="ms-101173_0465.tif" width="4251px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_230v">
             <desc>f. 230v</desc>
-            <graphic url="ms-101173_0464.tif" width="4814px" height="5719px"/>
+            <graphic url="ms-101173_0466.tif" width="4854px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_231r">
             <desc>f. 231r</desc>
-            <graphic url="ms-101173_0465.tif" width="4251px" height="5720px"/>
+            <graphic url="ms-101173_0467.tif" width="4260px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_231v">
             <desc>f. 231v</desc>
-            <graphic url="ms-101173_0466.tif" width="4854px" height="5719px"/>
+            <graphic url="ms-101173_0468.tif" width="4544px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_232r">
             <desc>f. 232r</desc>
-            <graphic url="ms-101173_0467.tif" width="4260px" height="5720px"/>
+            <graphic url="ms-101173_0469.tif" width="4258px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_232v">
             <desc>f. 232v</desc>
-            <graphic url="ms-101173_0468.tif" width="4544px" height="5720px"/>
+            <graphic url="ms-101173_0470.tif" width="4857px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_233r">
             <desc>f. 233r</desc>
-            <graphic url="ms-101173_0469.tif" width="4258px" height="5720px"/>
+            <graphic url="ms-101173_0471.tif" width="4291px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_233v">
             <desc>f. 233v</desc>
-            <graphic url="ms-101173_0470.tif" width="4857px" height="5719px"/>
+            <graphic url="ms-101173_0472.tif" width="4899px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_234r">
             <desc>f. 234r</desc>
-            <graphic url="ms-101173_0471.tif" width="4291px" height="5720px"/>
+            <graphic url="ms-101173_0473.tif" width="4235px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_234v">
             <desc>f. 234v</desc>
-            <graphic url="ms-101173_0472.tif" width="4899px" height="5719px"/>
+            <graphic url="ms-101173_0474.tif" width="4815px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_235r">
             <desc>f. 235r</desc>
-            <graphic url="ms-101173_0473.tif" width="4235px" height="5720px"/>
+            <graphic url="ms-101173_0475.tif" width="4235px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_235v">
             <desc>f. 235v</desc>
-            <graphic url="ms-101173_0474.tif" width="4815px" height="5719px"/>
+            <graphic url="ms-101173_0476.tif" width="4850px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_236r">
             <desc>f. 236r</desc>
-            <graphic url="ms-101173_0475.tif" width="4235px" height="5720px"/>
+            <graphic url="ms-101173_0477.tif" width="4240px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_236v">
             <desc>f. 236v</desc>
-            <graphic url="ms-101173_0476.tif" width="4850px" height="5719px"/>
+            <graphic url="ms-101173_0478.tif" width="4798px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_237r">
             <desc>f. 237r</desc>
-            <graphic url="ms-101173_0477.tif" width="4240px" height="5720px"/>
+            <graphic url="ms-101173_0479.tif" width="4257px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_237v">
             <desc>f. 237v</desc>
-            <graphic url="ms-101173_0478.tif" width="4798px" height="5719px"/>
+            <graphic url="ms-101173_0480.tif" width="4661px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_238r">
             <desc>f. 238r</desc>
-            <graphic url="ms-101173_0479.tif" width="4257px" height="5720px"/>
+            <graphic url="ms-101173_0481.tif" width="4246px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_238v">
             <desc>f. 238v</desc>
-            <graphic url="ms-101173_0480.tif" width="4661px" height="5719px"/>
+            <graphic url="ms-101173_0482.tif" width="4716px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_239r">
             <desc>f. 239r</desc>
-            <graphic url="ms-101173_0481.tif" width="4246px" height="5720px"/>
+            <graphic url="ms-101173_0483.tif" width="4243px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_239v">
             <desc>f. 239v</desc>
-            <graphic url="ms-101173_0482.tif" width="4716px" height="5719px"/>
+            <graphic url="ms-101173_0484.tif" width="4724px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_240r">
             <desc>f. 240r</desc>
-            <graphic url="ms-101173_0483.tif" width="4243px" height="5720px"/>
+            <graphic url="ms-101173_0485.tif" width="4235px" height="5720px"/>
         </surface>
         <surface xml:id="ms-101173_240v">
             <desc>f. 240v</desc>
-            <graphic url="ms-101173_0484.tif" width="4724px" height="5719px"/>
-        </surface>
-        <surface xml:id="ms-101173_241r">
-            <desc>f. 241r</desc>
-            <graphic url="ms-101173_0485.tif" width="4235px" height="5720px"/>
-        </surface>
-        <surface xml:id="ms-101173_241v">
-            <desc>f. 241v</desc>
             <graphic url="ms-101173_0486.tif" width="4708px" height="5719px"/>
         </surface>
         <surface xml:id="ms-101173_242r">

@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="">
+                <msDesc xml:lang="en" resp="robibock">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -35,7 +39,7 @@
                             <idno type="id" subtype="Regina">004841567</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <head>Sacramentary (fragment)</head>
+                    <head>Gelasian Sacramentary (fragment)</head>
                     <physDesc>
                         <objectDesc form="fragment">
                             <supportDesc>
@@ -45,17 +49,55 @@
                                 </extent>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>The fragment is mounted on cardboard (<locus from="Board" to="Board" scheme="folios"/>) and stored in a modern folder.</p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
+                                    <placeName ref="https://www.manuscripta.se/place/100361" cert="low">Ravenna</placeName>
+                                </origPlace>, <origDate notBefore="0700" notAfter="0725">8th century, first quarter</origDate>. Place of orgin and dating based on <bibl>
+                                    <title ref="https://www.manuscripta.se/bibl/107556" type="short">Gamber (1958)</title>
+                                </bibl>.</p>
+                        </origin>
+                        <provenance>
+                            <p>Early provenance unknown.</p>
+                        </provenance>
+                        <provenance>
+                            <p>The fragment is related to a fragment kept at the University Library of Wroclaw, <ref target="https://bibliotekacyfrowa.pl/publication/84013">Akc. 1955/3</ref>.</p>
+                        </provenance>
+                        <acquisition>
+                            <p>The fragment was once found in <ref target="https://regina.kb.se/permalink/f/18bmuqo/46KBS_ALEPH_DS001254496">Liber Canonis Avicenne (Venice 1507)</ref>, where it was discovered by <persName ref="https://www.manuscripta.se/person/102502">I. Collijn</persName>. However, this book has been rebound and contains no traces of previous owners.</p>
+                        </acquisition>
+                    </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/107101">Gyllene böcker (1952)</title>
-                                <citedRange from="23" to="23" unit="page"/>
-                                <citedRange from="7" to="7" unit="number"/>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/107187">Lehmann (1934)</title>
+                                <citedRange from="165" to="167" unit="page"/>
                             </bibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/101350">Illuminated Manuscripts</title>
-                                <citedRange from="8" to="8" unit="page"/>
+                                <title ref="https://www.manuscripta.se/bibl/107101" type="short">Gyllene böcker (1952)</title>
+                                <citedRange unit="page" from="23" to="23"/>
+                                <citedRange unit="number" from="7" to="7"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107556" type="short">Gamber (1958)</title>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107555" type="short">Eisenhöfer (1959)</title>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/101350" type="short">Illuminated manuscripts (1963)</title>
+                                <citedRange unit="page" from="8" to="8"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107554" type="short">Gamber (1989)</title>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -64,17 +106,33 @@
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
+                            <summary>
+                                <p>Fragment of a Gelasian sacramentary containing parts from the <quote>Missa tam vivorum quam defunctorum</quote>, <quote>Super oblata</quote>, <quote>Missa abbatis et congregationis sibi comissae</quote>, and<quote>Missa votiva communis viventium</quote>, as identified by <bibl>
+                                        <title ref="https://www.manuscripta.se/bibl/107187" type="short">Lehmann (1934)</title>
+                                        <citedRange unit="page" from="166" to="167">page 166–167.</citedRange>
+                                    </bibl></p>
+                            </summary>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="S1r" to="S1r" scheme="folios"/>
+                                <quote>Omnipotens sempiterne deus qui uiuorum dominaris simul <lb/>
+                                    <supplied reason="omitted">predesti</supplied>nationis Liber adsripta retineat p Postcommunio Purificent nos quesumus</quote>
+                            </msItem>
+                            <msItem>
+                                <locus from="S1v" to="S1v" scheme="folios"/>
+                                <quote>et ut in ueritate tibi conplaceant perpetuum eis rorem tue benedictionis <lb/>
+                                    <supplied reason="omitted">celes</supplied>ti protege benignus auxilium Per igitur obl<supplied reason="illegible">ation</supplied>em</quote>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="parchment">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="1v" scheme="folios"/>
+                                            <locus from="1" to="1" scheme="folios"/>
                                             <material>Parchment</material>
                                             <dimensions type="leaf">
-                                                <height quantity="35" unit="mm"/>
+                                                <height quantity="30" unit="mm"/>
                                                 <width quantity="200" unit="mm"/>
                                             </dimensions>
                                         </p>
@@ -84,15 +142,18 @@
                                     </extent>
                                 </supportDesc>
                             </objectDesc>
+                            <handDesc>
+                                <handNote xml:id="hand-1">Carolingian minuscule.</handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <p>Main text in brown ink.</p>
+                                <decoNote type="initials">
+                                    <p>
+                                        <locus from="S1r" to="S1r" scheme="folios"/>: decorated initial O over 3 lines. Outlined in ink, colours smudged, but appear to have been mainly green, red and gold. Counterspace filled with flower shape with six petals; decorated initial P over 2 lines. Outlined in ink, coloured with red, green, and gold.</p>
+                                </decoNote>
+                            </decoDesc>
                         </physDesc>
-                        <history>
-                            <origin><p>
-                                <origPlace>
-                                    <placeName ref="https://www.manuscripta.se/place/100036">Italy</placeName>
-                                    <placeName ref="https://www.manuscripta.se/place/">Ravenna?</placeName>
-                                </origPlace>, <origDate notBefore="0701" notAfter="0725">8th century, first quarter</origDate>
-                            </p></origin>
-                        </history>
+                        <history/>
                     </msPart>
                 </msDesc>
             </sourceDesc>
@@ -109,12 +170,12 @@
         </body>
     </text>
     <facsimile xml:base="https://iiif.manuscripta.se/iiif/ms-101123/">
-        <surface xml:id="ms-101123_0001_1r">
-            <desc>f. 1r</desc>
+        <surface xml:id="ms-101123_S1r">
+            <desc>⟨f. 1r⟩</desc>
             <graphic url="ms-101123_0001.tif" width="5151px" height="1189px"/>
         </surface>
-        <surface xml:id="ms-101123_0002_1v">
-            <desc>f. 1v</desc>
+        <surface xml:id="ms-101123_S1v">
+            <desc>⟨f. 1v⟩</desc>
             <graphic url="ms-101123_0002.tif" width="5151px" height="1189px"/>
         </surface>
         <surface xml:id="ms-101123_0003_Board">

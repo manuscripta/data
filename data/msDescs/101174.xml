@@ -11,6 +11,10 @@
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100484">Robin Böckerman</persName>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <publisher>manuscripta.se: A Digital Catalogue of Medieval and Early Modern Manuscripts in Sweden</publisher>
@@ -21,7 +25,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en">
+                <msDesc xml:lang="en" resp="robibock">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100078">Stockholm</settlement>
@@ -39,26 +43,90 @@
                     <physDesc>
                         <objectDesc form="codex">
                             <supportDesc>
+                                <support resp="https://www.manuscripta.se/person/100380">
+                                    <p>
+                                        <locusGrp>
+                                            <locus from="LCI" scheme="other" to="LCI"/>
+                                            <locus from="L1" to="L1" scheme="folios"/>
+                                        </locusGrp>
+                                        <material>Parchment</material>
+                                        <dimensions type="leaf">
+                                            <height quantity="155" unit="mm"/>
+                                            <width quantity="100" unit="mm"/>
+                                        </dimensions>
+                                    </p>
+                                </support>
                                 <extent>
-                                    <measure type="leftFlyleaves" unit="folios"/>
-                                    <measure type="rightFlyleaves" unit="folios"/>
+                                    <measure type="leftFlyleaves" unit="folios" quantity="1"/>
+                                    <measure type="rightFlyleaves" unit="folios" quantity="0"/>
                                 </extent>
+                                <foliation>Modern foliation in pencil: 1-128, 128a, 128b, 129-223. <secFol>Augustinus in tercio</secFol></foliation>
+                                <collation>
+                                    <formula>1(12, lacks 8-12), 2(14), 3(16), 4-8(12), 9-10(14), 11(12+3), 12(10), 13(14), 14(12), 15(12+1), 16-18(12) </formula>
+                                    <p>
+                                        <ref target="https://vceditor.library.upenn.edu/project/6a216f886e6f4a0001fa1584/viewOnly">VisColl collation
+                                                                                                                                                                                                                                    </ref>
+                                    </p>
+                                    <catchwords>
+                                        <locus from="187v" to="187v" scheme="folios"/>: catchword on added leaf. </catchwords>
+                                </collation>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" scheme="other" to="LCI"/>
+                                <note>Top of page, in pencil by a modern hand: <quote>223 bl</quote>,<quote> 217 ?</quote>; left edge, in pencil by a modern hand:<quote> A 198</quote>; in ink by a medieval hand: <quote>liber sancti petri in Erfordia</quote>; <quote>P 47</quote> (repeated on <locus from="1r" to="1r" scheme="folios"/>); <quote>In hoc libello continentur subsignata</quote> followed by a table of contents; below, one line of erased text (perhaps owner's signature), 3 lines of text in Latin (partially illegible). </note>
+                            </p>
+                            <p>
+                                <locus from="L1r" scheme="folios" to="L1r"/>
+                                <note>Top of page, in ink by a medieval hand:<quote> Liber Sanctorum Pewtri et pauli in erfordia</quote>; below: <quote>hermannus markreffe est nomen meum </quote>(beneath these two lines are 7 lines of erased, but partially legible text); centre page, in ink by a medieval hand: 22 lines of text beginning <quote>Ex peccato originali relinquantur</quote>.</note>
+                            </p>
+                            <p>
+                                <locus from="L1v" scheme="folios" to="L1v"/>
+                                <note>Top of page, in ink by a medieval hand: Assit ??? (partially erased); below, in ink by a modern hand: <quote>Till Kongl. Bibliotheket inköpt från G. Stephens 23/10 1848.</quote>.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <p>Medieval binding. Brown leather over wooden boards. 3 double raised bands and endbands. Orignally, one clasp with brass catchplate. <locus from="Spine" to="Spine" scheme="other"/>, in ink: <quote>4.</quote>; traces of a removed label; stamped in gold: <quote>A 198</quote>. </p>
+                                <p>
+                                    <dimensions type="binding" resp="https://www.manuscripta.se/person/100380">
+                                        <height quantity="170" unit="mm"/>
+                                        <width quantity="120" unit="mm"/>
+                                        <depth quantity="55" unit="mm"/>
+                                    </dimensions>
+                                </p>
+                                <decoNote type="tooling">
+                                    <p>Complex tooling consisting of tripple-line frames filled with stamped motifs, such as flowers and fleur-de-lis. </p>
+                                </decoNote>
+                                <condition>Leather worn and darkened. Clasp missing. Pastedown on <locus from="RCI" to="RCI" scheme="other"/>missing, board attachment visible. <locus from="RCO" to="RCO" scheme="other"/>, signs of repair at upper left corner. </condition>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
-                        <origin><p>
-                            <origPlace>
-                                <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
-                                <placeName ref="https://www.manuscripta.se/place/100224">Erfurt</placeName>
-                            </origPlace>, <origDate when="1460">1460</origDate>
-                        </p></origin>
+                        <origin>
+                            <p>
+                                <origPlace>
+                                    <placeName ref="https://www.manuscripta.se/place/100104">Germany</placeName>
+                                    <placeName ref="https://www.manuscripta.se/place/100224">Erfurt</placeName>
+                                </origPlace>, <origDate when="1460">1460</origDate>. The manuscript carries contemporary owner's signatures and what may be shelfmark from the <placeName ref="https://www.manuscripta.se/place/100220">monastery of St Peter and Paul </placeName>in Erfurt (<locus from="LCI" to="LCI" scheme="other"/>, <locus from="L1r" to="L1r" scheme="folios"/>; <quote>P47</quote> on <locus from="LCI" to="LCI" scheme="other"/> and <locus from="1r" to="1r" scheme="folios"/>). In addition, on <locus from="L1r" to="L1r" scheme="folios"/> a pesonal name is listed as a potential owner: <quote>hermannus markreffe</quote>. The text on <locus from="22r" to="37v" scheme="folios"/> has been provided with a colophon that states that the book was written in <date when="1460"/> by a <quote>confrater Wernherus</quote> for <quote>dominus Guntherus, alumnus claustri erforrdensis</quote>. </p>
+                        </origin>
+                        <provenance>
+                            <p>Provenance unknown, but like the other <placeName ref="https://www.manuscripta.se/place/100224">Erfurt</placeName> manuscripts in the <orgName ref="https://www.manuscripta.se/org/100004">National LIbrary</orgName>'s collection it is likely that the manuscript remained in the monastery unitl its dissolution, when it would have bought by a private book dealer or collector from whom it was acquired by <persName ref="https://www.manuscripta.se/person/101069">George Stephens</persName>. </p>
+                        </provenance>
+                        <acquisition>
+                            <p>Purchased by the <orgName ref="https://www.manuscripta.se/org/100004">National Librar</orgName>y from <persName ref="https://www.manuscripta.se/person/101069">George Stephens</persName> in 30 Oct., <date when="1848"/>.</p>
+                        </acquisition>
                     </history>
                     <additional>
                         <listBibl>
                             <bibl>
-                                <title type="short" ref="https://www.manuscripta.se/bibl/101301">Hedlund (1980)</title>
-                                <citedRange from="30" to="30" unit="page"/>
+                                <title type="short" ref="https://www.manuscripta.se/bibl/107582">Leclercq (1950)</title>
+                                <citedRange from="126" to="126" unit="page"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/101301" type="short">Hedlund (1980)</title>
+                                <citedRange unit="page" from="30" to="30"/>
                             </bibl>
                         </listBibl>
                     </additional>
@@ -68,22 +136,133 @@
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" scheme="folios" to="4r"/>
+                                <title type="desc">Seven rules</title>
+                                <rubric>Que sint legenda</rubric>
+                                <incipit>In principio conuersionis cuiuslibet legenda sun exempla bona</incipit>
+                                <explicit>Septima serpentis caput membraque reflectit</explicit>
+                                <note>
+                                    <locus from="4v" to="4v" scheme="folios"/>: blank. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="5r" scheme="folios" to="7r"/>
+                                <title type="desc">Visio Quedam facta anno liiio</title>
+                                <note>7v: blank. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="8r" to="10v" scheme="folios"/>
+                                <title type="desc">Sequitur alia eppistola ad modum exercicii</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="11r" to="13r" scheme="folios"/>
+                                <title type="desc">Oratio beati Bernhardi </title>
+                            </msItem>
+                            <msItem>
+                                <locus from="13v" scheme="folios" to="21v"/>
+                                <title type="desc">8 short texts</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="22r" to="37v" scheme="folios"/>
+                                <title type="desc">De gradibus humilitatis</title>
+                                <rubric>Incipit prologus in commentum beati bernhardi abbatis de xiii gradibus humilitatis </rubric>
+                                <incipit>IN hoc opusculo cum illud quod de evangelio? dominus ait</incipit>
+                                <explicit>tu in tuo corde quam in nostro codice leges Explicit Deo gracias</explicit>
+                                <note>The main text is followed by two lines from the hymn <quote>Gloria laus et honor</quote> and four additional lines.</note>
+                                <colophon><locus from="37v" scheme="folios" to="37v"/>Gunthero domino claustri erffordensis alumno confrater wernherus scriptor libri fuit huius Quorum christe bone crimina tolle pie Anno milleno domini cccc<hi rend="super">o</hi> et lx<hi rend="super">o</hi></colophon>
+                            </msItem>
+                            <msItem>
+                                <locus from="38r" to="64v" scheme="folios"/>
+                                <title type="desc">Alphabetum divini amoris</title>
+                                <incipit>Ad honorem omnipotentis dei aliquos modos et uias</incipit>
+                                <explicit>ut sit adiutor tuus protector director et finis? Amen</explicit>
+                                <finalRubric>Explicit alphabetum diuini amoris de eleuacione mentis in deum Deo gracias</finalRubric>
+                                <note>The text is followed by a brief excerpt from a vita of St Anthony and a text titled <quote>De mititate et manusuetudine</quote>, in total 15 lines. </note>
+                            </msItem>
+                            <msItem>
+                                <locus to="71r" scheme="folios" from="65r"/>
+                                <title type="desc">On the eucharist</title>
+                                <rubric>Quod significat transmutacio que sit in pane et vino </rubric>
+                                <incipit>ET quam in isto sacramento ipse res uisibiles</incipit>
+                                <explicit>ne deficerent ut possint peruenire ad suam propriam patriam </explicit>
+                                <finalRubric>Explicit de sacramento eucaristie </finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="74r" scheme="folios" to="83r"/>
+                                <title type="desc">Tractatus de moribus infantum et adoloescentum </title>
+                                <rubric>Tractatus beati bernhardi de moribus infantum et adoloescentum </rubric>
+                                <incipit>HOrtatur quid timidam mentis mee impericiam</incipit>
+                                <explicit>domino seruientes -im faciunt celo totisque iurbus sibi diripiunt illud ? et cetera </explicit>
+                                <finalRubric>Explicit libellus beati Bernhardi abbatis pulcher de moribus infatum seu adoloscentum nomine domini? Amen </finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="83r" scheme="folios" to="92r"/>
+                                <title type="desc">Tractatus de proficendo </title>
+                                <rubric>Sequitus tractatus optimus in seruicio dei proficere uolentibus </rubric>
+                                <incipit>Si uis in spiritu proficere et hoc esse propter quod </incipit>
+                                <explicit>non diligi indignum nec ullam ei reuerenciam exhiberi </explicit>
+                                <finalRubric>Explicit formula -te compendiosa </finalRubric>
+                            </msItem>
+                            <msItem>
+                                <locus from="92r" scheme="folios" to="98r"/>
+                                <title type="desc">Tractatus de</title>
+                                <note>98v: blank. </note>
+                            </msItem>
+                            <msItem>
+                                <locus from="99r" to="100v" scheme="folios"/>
+                                <title type="desc">Dicta pulchra/prayers</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="101r" scheme="folios" to="112v"/>
+                                <title type="desc">Exercicium spirituale</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="112v" scheme="folios" to="118r"/>
+                                <title type="desc">Tractatus de caritate</title>
+                            </msItem>
+                            <msItem>
+                                <locusGrp>
+                                    <locus from="118v" to="132r" scheme="folios"/>
+                                    <locus from="144r" to="149v" scheme="folios"/>
+                                </locusGrp>
+                                <title type="desc">Ps-Augustine, Manuale</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="132r" scheme="folios" to="144r"/>
+                                <title type="desc">St Bernard, two texts</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="149v" scheme="folios" to="169r"/>
+                                <title type="uniform">Varia</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="170r" scheme="folios" to="214v"/>
+                                <title type="desc">Comments on gradus humilitatis?</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="215r" to="215v" scheme="folios"/>
+                                <title type="desc">De lacrimis</title>
+                            </msItem>
+                            <msItem>
+                                <locus from="217r" scheme="folios" to="223r"/>
+                                <title type="desc">De confessione, de ieiunii et al. </title>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc material="paper">
                                     <support>
                                         <p>
-                                            <locus from="1r" to="223v" scheme="folios"/>
-                                            <material>Western paper</material>
+                                            <locus from="1" to="223" scheme="folios"/>
+                                            <material>Paper</material>
                                             <dimensions type="leaf">
                                                 <height quantity="155" unit="mm"/>
-                                                <width quantity="110" unit="mm"/>
+                                                <width quantity="105" unit="mm"/>
                                             </dimensions>
                                         </p>
                                     </support>
                                     <extent>
-                                        <measure type="textblockLeaves" quantity="223" unit="folios"/>
+                                        <measure type="textblockLeaves" quantity="222" unit="folios"/>
                                     </extent>
                                 </supportDesc>
                             </objectDesc>
@@ -92,7 +271,8 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="published"><change who="https://www.manuscripta.se/person/100484" when="2024-11-07" status="published"/>
+        <revisionDesc status="published">
+            <change who="https://www.manuscripta.se/person/100484" when="2024-11-07" status="published"/>
             <change status="draft" when="2024-05-28" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>
