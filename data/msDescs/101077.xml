@@ -8,6 +8,14 @@
                 <sponsor ref="https://www.manuscripta.se/org/100004">National Library of Sweden</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100003">Riksbankens jubileumsfond – The Swedish Foundation for Humanities and Social Sciences</funder>
                 <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100478">Elin Andersson</persName>
+                </respStmt>
+                <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100485">Anna Wolodarski</persName>
+                </respStmt>
+                <respStmt>
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
@@ -45,22 +53,56 @@
                                 </extent>
                             </supportDesc>
                         </objectDesc>
+                        <additions>
+                            <p>
+                                <locus from="LCI" to="LCI" scheme="other"/>
+                                <note>In black ink by a modern hand: <quote>A 53 i Antiqvitets Arkivet.</quote> National Library book label with current signum in black ink.</note>
+                            </p>
+                            <p>
+                                <locus from="SL1r" to="SL1r" scheme="folios"/>
+                                <note>Pasted parchment note, cut from the former cover, with the following text, written by <persName ref="https://www.manuscripta.se/person/102552">Martin Aschaneus</persName>: <quote>Scho Klösters Hymnale</quote>. In black ink by a modern hand: <quote>M.L. Aschanei handstil.</quote> In brown ink by a modern hand: <quote>20</quote>. Bottom of page: pasted paper (???) label with current signum in brown ink.</note>
+                            </p>
+                        </additions>
+                        <bindingDesc>
+                            <binding contemporary="false">
+                                <p>19th century covers with marbled paper. On <locus from="Spine" to="Spine" scheme="other"/>, a paper label with text in brown ink: <quote>Hymni et Sequentiae. </quote></p>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>
                             <p>
                                 <origPlace>
                                     <placeName ref="https://www.manuscripta.se/place/">England; Sweden</placeName>
-                                </origPlace>, <origDate notBefore="1301" notAfter="1500">13th century, late; 15th century</origDate>
-                            </p>
+                                </origPlace>, <origDate notBefore="1301" notAfter="1500">13th century, late; 15th century</origDate></p>
                         </origin>
+                        <acquisition>
+                            <p>From the <orgName ref="https://www.manuscripta.se/org/100059">Antiquties Archive</orgName> to the <orgName ref="https://www.manuscripta.se/org/100004">Royal Library</orgName> in <date when="1780"/>.</p>
+                        </acquisition>
                     </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/101394" type="short">Moberg (1947)</title>
+                                <citedRange unit="page" from="91" to="92"/>
+                                <citedRange unit="page" from="278" to="278"/>
+                            </bibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/101526" type="short">Moberg (1927)</title>
+                                <citedRange unit="page" from="24" to="24"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" to="18v" scheme="folios"/>
+                                <title type="desc">Hymnal</title>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -81,12 +123,30 @@
                                     </extent>
                                 </supportDesc>
                             </objectDesc>
+                            <additions>
+                                <p>
+                                    <locus from="1r" to="1r" scheme="folios"/>
+                                    <note>Top of page, in brown ink by an Early Modern hand: De Maria S<hi rend="super">a</hi> Matre Domini. In pencil by a modern hand: <quote>Sequentier Ave Maria gratia Plena ... cxvii.</quote> Bottom of page, in brown ink by <persName>Martin Aschaneus</persName>: <quote>Liber hymnifer cum Notulis. Catalogus [table of contents] M. Aschanei 1603.</quote></note>
+                                </p>
+                            </additions>
                         </physDesc>
+                    </msPart>
+                    <msPart>
+                        <msIdentifier>
+                            <idno type="codicologicalUnit">2</idno>
+                        </msIdentifier>
+                        <msContents>
+                            <textLang/>
+                            <msItem>
+                                <locus from="1r" to="3v" scheme="folios"/>
+                                <title type="desc">Ferial psalter</title>
+                            </msItem>
+                        </msContents>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="published">
+        <revisionDesc status="draft">
             <change who="https://www.manuscripta.se/person/100483" when="2025-10-14" status="published"/>
             <change status="draft" when="2024-01-24" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
