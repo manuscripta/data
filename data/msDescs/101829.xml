@@ -7,6 +7,10 @@
                 <sponsor ref="https://www.manuscripta.se/org/100009">Strängnäs Cathedral Parish</sponsor>
                 <funder ref="https://www.manuscripta.se/org/100009">Strängnäs Cathedral Parish</funder>
                 <respStmt>
+                    <resp key="cataloguer"/>
+                    <persName ref="https://www.manuscripta.se/person/100478">Elin Andersson</persName>
+                </respStmt>
+                <respStmt>
                     <resp key="editor"/>
                     <persName ref="https://www.manuscripta.se/person/100380">Patrik Granholm</persName>
                 </respStmt>
@@ -20,7 +24,7 @@
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100380">
+                <msDesc xml:lang="en" resp="https://www.manuscripta.se/person/100478">
                     <msIdentifier>
                         <country ref="https://www.manuscripta.se/place/100081">Sweden</country>
                         <settlement ref="https://www.manuscripta.se/place/100106">Strängnäs</settlement>
@@ -36,14 +40,69 @@
                     </msIdentifier>
                     <head>Catalogus Bibliothecae Stregnensis</head>
                     <physDesc>
-                        <objectDesc form="codex"/>
+                        <objectDesc form="codex">
+                            <supportDesc>
+                                <foliation>The manuscript lacks foliation.</foliation>
+                            </supportDesc>
+                        </objectDesc>
+                        <bindingDesc>
+                            <binding contemporary="true">
+                                <p>Contemporary parchment binding. <locus from="LCO" to="LCO" scheme="other"/>, stamped in black with traces of gold: <quote>Anno Christi M DC LXX IV</quote>; at the bottom: <quote>CATALOGVS BIBLIOTHECAE STREGNENSIS</quote>. Green ribbon remaining on <locus from="RCO" to="RCO" scheme="other"/>, remaining holes on <locus from="RCO" to="RCO" scheme="other"/> and <locus from="LCO" to="LCO" scheme="other"/>. <locus from="Spine" to="Spine" scheme="other"/>: four raised bands and endbands. A paper label with text in brown ink by a modern hand: <quote>1674</quote>.</p>
+                                <decoNote type="tooling">
+                                    <p><locus from="LCO" to="LCO" scheme="other"/> and <locus from="RCO" to="RCO" scheme="other"/>: Rectangular frame, flowers in the corners and a medallion in the centre. <locus from="Spine" to="Spine" scheme="other"/>: flowers.</p>
+                                </decoNote>
+                            </binding>
+                        </bindingDesc>
                     </physDesc>
+                    <history>
+                        <provenance>
+                            <p>Strängnäs Cathedral Library.</p>
+                        </provenance>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl>
+                                <title ref="https://www.manuscripta.se/bibl/107609" type="short">Andersson (2023)</title>
+                                <citedRange unit="page" from="250" to="251"/>
+                            </bibl>
+                        </listBibl>
+                    </additional>
                     <msPart>
                         <msIdentifier>
                             <idno type="codicologicalUnit">1</idno>
                         </msIdentifier>
                         <msContents>
                             <textLang mainLang="la"/>
+                            <msItem>
+                                <locus from="1r" scheme="folios" to="47v"/>
+                                <title type="desc">Catalogue of Strängnäs Cathdedral Library</title>
+                                <note>
+                                    <p>The catalogue lists books under the following categories:</p>
+                                    <p><locus from="1r" to="1v" scheme="folios"/> A. Biblia</p>
+                                    <p><locus from="2r" to="2v" scheme="folios"/> B. Interpretes et Commentarii biblici</p>
+                                    <p><locus from="3r" to="3r" scheme="folios"/> C. Concordantiae Biblicae</p>
+                                    <p><locus from="3v" to="4v" scheme="folios"/> D. Patres</p>
+                                    <p><locus from="5r" to="5v" scheme="folios"/> E. Acta Consiliorum et Synodorum</p>
+                                    <p><locus from="6r" to="10r" scheme="folios"/> F. Loci communes</p>
+                                    <p><locus from="10v" to="13v" scheme="folios"/> G. Polemici seu Authores controversiarum</p>
+                                    <p><locus from="14r" to="21r" scheme="folios"/> H. Postillae</p>
+                                    <p><locus from="21v" to="22r" scheme="folios"/> I. Philosophi</p>
+                                    <p><locus from="22v" to="24r" scheme="folios"/> K Historici</p>
+                                    <p><locus from="24v" to="24v" scheme="folios"/> L Chronographi</p>
+                                    <p><locus from="25r" to="26v" scheme="folios"/> M. Poetici</p>
+                                    <p><locus from="27r" to="28v" scheme="folios"/> N. Oratores et Epistolici</p>
+                                    <p><locus from="29r" to="29v" scheme="folios"/> O. (Politici)</p>
+                                    <p><locus from="30r" to="30r" scheme="folios"/> P. Medici</p>
+                                    <p><locus from="30v" to="31v" scheme="folios"/> Q. Iuridici</p>
+                                    <p><locus from="32r" to="32r" scheme="folios"/> R. Dialectici</p>
+                                    <p><locus from="32v" to="34r" scheme="folios"/> S. Grammatici</p>
+                                    <p><locus from="34v" to="35r" scheme="folios"/> T. Mathematici</p>
+                                    <p><locus from="35v" to="36r" scheme="folios"/> V. Libri rituum ecclesiastici</p>
+                                    <p><locus from="36v" to="40r" scheme="folios"/> X. Scholastici</p>
+                                    <p><locus from="41r" to="46v" scheme="folios"/> Selectior Bibliotheca ex liberalitate Doctoris Johannis Matthiae (...) apposita</p>
+                                    <p><locus from="47r" to="47v" scheme="folios"/> Auctarium Bibliothecae ex novis libris hii et alibi impressis</p>
+                                </note>
+                            </msItem>
                         </msContents>
                         <physDesc>
                             <objectDesc>
@@ -56,8 +115,24 @@
                                     <extent>
                                         <measure type="textblockLeaves" quantity="47" unit="folios"/>
                                     </extent>
+                                    <condition>Leaves have been cut out between <locus from="40r" to="40r" scheme="folios"/>and <locus from="41r" to="41r" scheme="folios"/> as well as after <locus from="47r" to="47r" scheme="folios"/>.</condition>
                                 </supportDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <dimensions type="written">
+                                            <height min="305" max="305" unit="mm"/>
+                                            <width min="160" max="160" unit="mm"/>
+                                        </dimensions>
+                                        <note>Guidelines in ink.</note>
+                                    </layout>
+                                </layoutDesc>
                             </objectDesc>
+                            <handDesc>
+                                <p>The same Early Modern hand throughout the whole volume. On <locus from="46v" to="47v" scheme="folios"/>, additions by one or more contemporary hands. </p>
+                            </handDesc>
+                            <decoDesc>
+                                <p>Main text in dark brown ink. No decoration.</p>
+                            </decoDesc>
                         </physDesc>
                         <history>
                             <origin>
@@ -70,7 +145,7 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="published">
             <change status="draft" when="2025-08-14" who="https://www.manuscripta.se/person/100380">First draft</change>
         </revisionDesc>
     </teiHeader>
@@ -90,388 +165,388 @@
             <desc>Left cover, inside</desc>
             <graphic url="ms-101829_0002.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0003_3">
-            <desc>3</desc>
+        <surface xml:id="ms-101829_0003_SL1r">
+            <desc>⟨f. Ir⟩</desc>
             <graphic url="ms-101829_0003.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0004_4">
-            <desc>4</desc>
+        <surface xml:id="ms-101829_0004_SL1v">
+            <desc>⟨f. Iv⟩</desc>
             <graphic url="ms-101829_0004.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0005_5">
-            <desc>5</desc>
+        <surface xml:id="ms-101829_0005_1r">
+            <desc>f. 1r</desc>
             <graphic url="ms-101829_0005.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0006_6">
-            <desc>6</desc>
+        <surface xml:id="ms-101829_0006_1v">
+            <desc>f. 1v</desc>
             <graphic url="ms-101829_0006.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0007_7">
-            <desc>7</desc>
+        <surface xml:id="ms-101829_0007_2r">
+            <desc>f. 2r</desc>
             <graphic url="ms-101829_0007.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0008_8">
-            <desc>8</desc>
+        <surface xml:id="ms-101829_0008_2v">
+            <desc>f. 2v</desc>
             <graphic url="ms-101829_0008.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0009_9">
-            <desc>9</desc>
+        <surface xml:id="ms-101829_0009_3r">
+            <desc>f. 3r</desc>
             <graphic url="ms-101829_0009.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0010_10">
-            <desc>10</desc>
+        <surface xml:id="ms-101829_0010_3v">
+            <desc>f. 3v</desc>
             <graphic url="ms-101829_0010.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0011_11">
-            <desc>11</desc>
+        <surface xml:id="ms-101829_0011_4r">
+            <desc>f. 4r</desc>
             <graphic url="ms-101829_0011.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0012_12">
-            <desc>12</desc>
+        <surface xml:id="ms-101829_0012_4v">
+            <desc>f. 4v</desc>
             <graphic url="ms-101829_0012.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0013_13">
-            <desc>13</desc>
+        <surface xml:id="ms-101829_0013_5r">
+            <desc>f. 5r</desc>
             <graphic url="ms-101829_0013.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0014_14">
-            <desc>14</desc>
+        <surface xml:id="ms-101829_0014_5v">
+            <desc>f. 5v</desc>
             <graphic url="ms-101829_0014.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0015_15">
-            <desc>15</desc>
+        <surface xml:id="ms-101829_0015_6r">
+            <desc>f. 6r</desc>
             <graphic url="ms-101829_0015.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0016_16">
-            <desc>16</desc>
+        <surface xml:id="ms-101829_0016_6v">
+            <desc>f. 6v</desc>
             <graphic url="ms-101829_0016.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0017_17">
-            <desc>17</desc>
+        <surface xml:id="ms-101829_0017_7r">
+            <desc>f. 7r</desc>
             <graphic url="ms-101829_0017.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0018_18">
-            <desc>18</desc>
+        <surface xml:id="ms-101829_0018_7v">
+            <desc>f. 7v</desc>
             <graphic url="ms-101829_0018.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0019_19">
-            <desc>19</desc>
+        <surface xml:id="ms-101829_0019_8r">
+            <desc>f. 8r</desc>
             <graphic url="ms-101829_0019.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0020_20">
-            <desc>20</desc>
+        <surface xml:id="ms-101829_0020_8v">
+            <desc>f. 8v</desc>
             <graphic url="ms-101829_0020.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0021_21">
-            <desc>21</desc>
+        <surface xml:id="ms-101829_0021_9r">
+            <desc>f. 9r</desc>
             <graphic url="ms-101829_0021.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0022_22">
-            <desc>22</desc>
+        <surface xml:id="ms-101829_0022_9v">
+            <desc>f. 9v</desc>
             <graphic url="ms-101829_0022.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0023_23">
-            <desc>23</desc>
+        <surface xml:id="ms-101829_0023_10r">
+            <desc>f. 10r</desc>
             <graphic url="ms-101829_0023.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0024_24">
-            <desc>24</desc>
+        <surface xml:id="ms-101829_0024_10v">
+            <desc>f. 10v</desc>
             <graphic url="ms-101829_0024.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0025_25">
-            <desc>25</desc>
+        <surface xml:id="ms-101829_0025_11r">
+            <desc>f. 11r</desc>
             <graphic url="ms-101829_0025.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0026_26">
-            <desc>26</desc>
+        <surface xml:id="ms-101829_0026_11v">
+            <desc>f. 11v</desc>
             <graphic url="ms-101829_0026.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0027_27">
-            <desc>27</desc>
+        <surface xml:id="ms-101829_0027_12r">
+            <desc>f. 12r</desc>
             <graphic url="ms-101829_0027.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0028_28">
-            <desc>28</desc>
+        <surface xml:id="ms-101829_0028_12v">
+            <desc>f. 12v</desc>
             <graphic url="ms-101829_0028.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0029_29">
-            <desc>29</desc>
+        <surface xml:id="ms-101829_0029_13r">
+            <desc>f. 13r</desc>
             <graphic url="ms-101829_0029.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0030_30">
-            <desc>30</desc>
+        <surface xml:id="ms-101829_0030_13v">
+            <desc>f. 13v</desc>
             <graphic url="ms-101829_0030.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0031_31">
-            <desc>31</desc>
+        <surface xml:id="ms-101829_0031_14r">
+            <desc>f. 14r</desc>
             <graphic url="ms-101829_0031.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0032_32">
-            <desc>32</desc>
+        <surface xml:id="ms-101829_0032_14v">
+            <desc>f. 14v</desc>
             <graphic url="ms-101829_0032.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0033_33">
-            <desc>33</desc>
+        <surface xml:id="ms-101829_0033_15r">
+            <desc>f. 15r</desc>
             <graphic url="ms-101829_0033.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0034_34">
-            <desc>34</desc>
+        <surface xml:id="ms-101829_0034_15v">
+            <desc>f. 15v</desc>
             <graphic url="ms-101829_0034.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0035_35">
-            <desc>35</desc>
+        <surface xml:id="ms-101829_0035_16r">
+            <desc>f. 16r</desc>
             <graphic url="ms-101829_0035.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0036_36">
-            <desc>36</desc>
+        <surface xml:id="ms-101829_0036_16v">
+            <desc>f. 16v</desc>
             <graphic url="ms-101829_0036.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0037_37">
-            <desc>37</desc>
+        <surface xml:id="ms-101829_0037_17r">
+            <desc>f. 17r</desc>
             <graphic url="ms-101829_0037.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0038_38">
-            <desc>38</desc>
+        <surface xml:id="ms-101829_0038_17v">
+            <desc>f. 17v</desc>
             <graphic url="ms-101829_0038.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0039_39">
-            <desc>39</desc>
+        <surface xml:id="ms-101829_0039_18r">
+            <desc>f. 18r</desc>
             <graphic url="ms-101829_0039.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0040_40">
-            <desc>40</desc>
+        <surface xml:id="ms-101829_0040_18v">
+            <desc>f. 18v</desc>
             <graphic url="ms-101829_0040.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0041_41">
-            <desc>41</desc>
+        <surface xml:id="ms-101829_0041_19r">
+            <desc>f. 19r</desc>
             <graphic url="ms-101829_0041.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0042_42">
-            <desc>42</desc>
+        <surface xml:id="ms-101829_0042_19v">
+            <desc>f. 19v</desc>
             <graphic url="ms-101829_0042.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0043_43">
-            <desc>43</desc>
+        <surface xml:id="ms-101829_0043_20r">
+            <desc>f. 20r</desc>
             <graphic url="ms-101829_0043.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0044_44">
-            <desc>44</desc>
+        <surface xml:id="ms-101829_0044_20v">
+            <desc>f. 20v</desc>
             <graphic url="ms-101829_0044.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0045_45">
-            <desc>45</desc>
+        <surface xml:id="ms-101829_0045_21r">
+            <desc>f. 21r</desc>
             <graphic url="ms-101829_0045.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0046_46">
-            <desc>46</desc>
+        <surface xml:id="ms-101829_0046_21v">
+            <desc>f. 21v</desc>
             <graphic url="ms-101829_0046.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0047_47">
-            <desc>47</desc>
+        <surface xml:id="ms-101829_0047_22r">
+            <desc>f. 22r</desc>
             <graphic url="ms-101829_0047.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0048_48">
-            <desc>48</desc>
+        <surface xml:id="ms-101829_0048_22v">
+            <desc>f. 22v</desc>
             <graphic url="ms-101829_0048.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0049_49">
-            <desc>49</desc>
+        <surface xml:id="ms-101829_0049_23r">
+            <desc>f. 23r</desc>
             <graphic url="ms-101829_0049.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0050_50">
-            <desc>50</desc>
+        <surface xml:id="ms-101829_0050_23v">
+            <desc>f. 23v</desc>
             <graphic url="ms-101829_0050.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0051_51">
-            <desc>51</desc>
+        <surface xml:id="ms-101829_0051_24r">
+            <desc>f. 24r</desc>
             <graphic url="ms-101829_0051.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0052_52">
-            <desc>52</desc>
+        <surface xml:id="ms-101829_0052_24v">
+            <desc>f. 24v</desc>
             <graphic url="ms-101829_0052.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0053_53">
-            <desc>53</desc>
+        <surface xml:id="ms-101829_0053_25r">
+            <desc>f. 25r</desc>
             <graphic url="ms-101829_0053.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0054_54">
-            <desc>54</desc>
+        <surface xml:id="ms-101829_0054_25v">
+            <desc>f. 25v</desc>
             <graphic url="ms-101829_0054.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0055_55">
-            <desc>55</desc>
+        <surface xml:id="ms-101829_0055_26r">
+            <desc>f. 26r</desc>
             <graphic url="ms-101829_0055.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0056_56">
-            <desc>56</desc>
+        <surface xml:id="ms-101829_0056_26v">
+            <desc>f. 26v</desc>
             <graphic url="ms-101829_0056.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0057_57">
-            <desc>57</desc>
+        <surface xml:id="ms-101829_0057_27r">
+            <desc>f. 27r</desc>
             <graphic url="ms-101829_0057.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0058_58">
-            <desc>58</desc>
+        <surface xml:id="ms-101829_0058_27v">
+            <desc>f. 27v</desc>
             <graphic url="ms-101829_0058.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0059_59">
-            <desc>59</desc>
+        <surface xml:id="ms-101829_0059_28r">
+            <desc>f. 28r</desc>
             <graphic url="ms-101829_0059.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0060_60">
-            <desc>60</desc>
+        <surface xml:id="ms-101829_0060_28v">
+            <desc>f. 28v</desc>
             <graphic url="ms-101829_0060.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0061_61">
-            <desc>61</desc>
+        <surface xml:id="ms-101829_0061_29r">
+            <desc>f. 29r</desc>
             <graphic url="ms-101829_0061.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0062_62">
-            <desc>62</desc>
+        <surface xml:id="ms-101829_0062_29v">
+            <desc>f. 29v</desc>
             <graphic url="ms-101829_0062.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0063_63">
-            <desc>63</desc>
+        <surface xml:id="ms-101829_0063_30r">
+            <desc>f. 30r</desc>
             <graphic url="ms-101829_0063.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0064_64">
-            <desc>64</desc>
+        <surface xml:id="ms-101829_0064_30v">
+            <desc>f. 30v</desc>
             <graphic url="ms-101829_0064.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0065_65">
-            <desc>65</desc>
+        <surface xml:id="ms-101829_0065_31r">
+            <desc>f. 31r</desc>
             <graphic url="ms-101829_0065.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0066_66">
-            <desc>66</desc>
+        <surface xml:id="ms-101829_0066_31v">
+            <desc>f. 31v</desc>
             <graphic url="ms-101829_0066.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0067_67">
-            <desc>67</desc>
+        <surface xml:id="ms-101829_0067_32r">
+            <desc>f. 32r</desc>
             <graphic url="ms-101829_0067.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0068_68">
-            <desc>68</desc>
+        <surface xml:id="ms-101829_0068_32v">
+            <desc>f. 32v</desc>
             <graphic url="ms-101829_0068.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0069_69">
-            <desc>69</desc>
+        <surface xml:id="ms-101829_0069_33r">
+            <desc>f. 33r</desc>
             <graphic url="ms-101829_0069.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0070_70">
-            <desc>70</desc>
+        <surface xml:id="ms-101829_0070_33v">
+            <desc>f. 33v</desc>
             <graphic url="ms-101829_0070.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0071_71">
-            <desc>71</desc>
+        <surface xml:id="ms-101829_0071_34r">
+            <desc>f. 34r</desc>
             <graphic url="ms-101829_0071.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0072_72">
-            <desc>72</desc>
+        <surface xml:id="ms-101829_0072_34v">
+            <desc>f. 34v</desc>
             <graphic url="ms-101829_0072.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0073_73">
-            <desc>73</desc>
+        <surface xml:id="ms-101829_0073_35r">
+            <desc>f. 35r</desc>
             <graphic url="ms-101829_0073.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0074_74">
-            <desc>74</desc>
+        <surface xml:id="ms-101829_0074_35v">
+            <desc>f. 35v</desc>
             <graphic url="ms-101829_0074.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0075_75">
-            <desc>75</desc>
+        <surface xml:id="ms-101829_0075_36r">
+            <desc>f. 36r</desc>
             <graphic url="ms-101829_0075.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0076_76">
-            <desc>76</desc>
+        <surface xml:id="ms-101829_0076_36v">
+            <desc>f. 36v</desc>
             <graphic url="ms-101829_0076.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0077_77">
-            <desc>77</desc>
+        <surface xml:id="ms-101829_0077_37r">
+            <desc>f. 37r</desc>
             <graphic url="ms-101829_0077.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0078_78">
-            <desc>78</desc>
+        <surface xml:id="ms-101829_0078_37v">
+            <desc>f. 37v</desc>
             <graphic url="ms-101829_0078.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0079_79">
-            <desc>79</desc>
+        <surface xml:id="ms-101829_0079_38r">
+            <desc>f. 38r</desc>
             <graphic url="ms-101829_0079.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0080_80">
-            <desc>80</desc>
+        <surface xml:id="ms-101829_0080_38v">
+            <desc>f. 38v</desc>
             <graphic url="ms-101829_0080.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0081_81">
-            <desc>81</desc>
+        <surface xml:id="ms-101829_0081_39r">
+            <desc>f. 39r</desc>
             <graphic url="ms-101829_0081.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0082_82">
-            <desc>82</desc>
+        <surface xml:id="ms-101829_0082_39v">
+            <desc>f. 39v</desc>
             <graphic url="ms-101829_0082.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0083_83">
-            <desc>83</desc>
+        <surface xml:id="ms-101829_0083_40r">
+            <desc>f. 40r</desc>
             <graphic url="ms-101829_0083.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0084_84">
-            <desc>84</desc>
+        <surface xml:id="ms-101829_0084_40v">
+            <desc>f. 40v</desc>
             <graphic url="ms-101829_0084.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0085_85">
-            <desc>85</desc>
+        <surface xml:id="ms-101829_0085_41r">
+            <desc>f. 41r</desc>
             <graphic url="ms-101829_0085.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0086_86">
-            <desc>86</desc>
+        <surface xml:id="ms-101829_0086_41v">
+            <desc>f. 41v</desc>
             <graphic url="ms-101829_0086.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0087_87">
-            <desc>87</desc>
+        <surface xml:id="ms-101829_0087_42r">
+            <desc>f. 42r</desc>
             <graphic url="ms-101829_0087.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0088_88">
-            <desc>88</desc>
+        <surface xml:id="ms-101829_0088_42v">
+            <desc>f. 42v</desc>
             <graphic url="ms-101829_0088.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0089_89">
-            <desc>89</desc>
+        <surface xml:id="ms-101829_0089_43r">
+            <desc>f. 43r</desc>
             <graphic url="ms-101829_0089.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0090_90">
-            <desc>90</desc>
+        <surface xml:id="ms-101829_0090_43v">
+            <desc>f. 43v</desc>
             <graphic url="ms-101829_0090.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0091_91">
-            <desc>91</desc>
+        <surface xml:id="ms-101829_0091_44r">
+            <desc>f. 44r</desc>
             <graphic url="ms-101829_0091.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0092_92">
-            <desc>92</desc>
+        <surface xml:id="ms-101829_0092_44v">
+            <desc>f. 44v</desc>
             <graphic url="ms-101829_0092.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0093_93">
-            <desc>93</desc>
+        <surface xml:id="ms-101829_0093_45r">
+            <desc>f. 45r</desc>
             <graphic url="ms-101829_0093.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0094_94">
-            <desc>94</desc>
+        <surface xml:id="ms-101829_0094_45v">
+            <desc>f. 45v</desc>
             <graphic url="ms-101829_0094.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0095_95">
-            <desc>95</desc>
+        <surface xml:id="ms-101829_0095_46r">
+            <desc>f. 46r</desc>
             <graphic url="ms-101829_0095.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0096_96">
-            <desc>96</desc>
+        <surface xml:id="ms-101829_0096_46v">
+            <desc>f. 46v</desc>
             <graphic url="ms-101829_0096.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0097_97">
-            <desc>97</desc>
+        <surface xml:id="ms-101829_0097_47r">
+            <desc>f. 47r</desc>
             <graphic url="ms-101829_0097.tif" width="5634px" height="8259px"/>
         </surface>
-        <surface xml:id="ms-101829_0098_98">
-            <desc>98</desc>
+        <surface xml:id="ms-101829_0098_47v">
+            <desc>f. 47v</desc>
             <graphic url="ms-101829_0098.tif" width="5634px" height="8259px"/>
         </surface>
         <surface xml:id="ms-101829_0099_RCI">
